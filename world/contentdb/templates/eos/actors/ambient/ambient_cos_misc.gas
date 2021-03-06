@@ -1,0 +1,80 @@
+[t:template,n:cos_crab]
+{
+	category_name = "1W_ambients";
+	doc = "crab";
+	specializes = actor_ambient;
+	[actor] { race=other; }
+	[aspect]
+	{
+		model=m_c_na_cb_pos_1;
+		is_selectable = false;
+		draw_shadow = false;
+		[textures]	{0=b_c_na_cbblk;}
+	}
+	[body]
+	{
+		avg_move_velocity = 0.400000;
+		[bone_translator]
+		{
+			body_anterior = bone01;
+			body_mid = bone01;
+			body_posterior = bone01;
+			kill_bone = bone01;
+			shield_bone = bone01;
+			weapon_bone = bone01;
+		}
+		[chore_dictionary]
+		{
+			chore_prefix = a_c_na_cb_fs;
+			[chore_attack]
+			{
+				chore_stances = 0;
+				skrit = select_attack;
+				[anim_files] { 00=wl; }
+			}
+			[chore_default]
+			{
+				chore_stances = 0;
+				skrit = infinite_loop;
+				[anim_files] { 00=ds; }
+			}
+			[chore_die]
+			{
+				chore_stances = 0;
+				skrit = select_transition;
+				[anim_files] { 00=di; }
+			}
+			[chore_fidget]
+			{
+				chore_stances = 0;
+				skrit = select_fidget;
+				[anim_files]
+				{
+					00 = dsf;
+					01 = dsf-02;
+					02 = dsf-03;
+				}
+			}
+			[chore_walk]
+			{
+				chore_stances = 0;
+				skrit = select_fidget;
+				[anim_files] { 00=wl; }
+			}
+		}
+	}
+	[common] { screen_name="Chalice Crab"; }
+	[mind]
+	{
+		flee_count = 1000;
+		on_enemy_spotted_alert_friends = false;
+		on_enemy_spotted_attack = false;
+		on_enemy_entered_ocz_flee = true;
+		on_friend_entered_ocz_flee = true;
+		inner_comfort_zone_range = 0.1;
+		melee_engage_range = 0.1;
+		outer_comfort_zone_range = 3;
+		personal_space_range = 0.4;
+		sight_range = 6;
+	}
+}
