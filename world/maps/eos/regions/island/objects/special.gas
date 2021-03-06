@@ -590,35 +590,6 @@
 	  p position = -1.31546,0.715263,-0.930298,0x942d6f49;
 	}
 }
-[t:trigger_change_mood_box,n:0x07900c44]
-{
-	[common]
-	{
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = mood_change("multiplayer_world_island_2_2");
-			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(2.200000,1.000000,0.500000,"on_every_enter");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  q orientation = 0,-5.96046e-008,0,1;
-	  p position = 1.80175,-2,-0.402954,0xbac6e554;
-	}
-}
 [t:trigger_change_mood_box,n:0x07900d79]
 {
 	[common]
@@ -675,6 +646,35 @@
 	{
 	  q orientation = 0,0.995185,0,0.0980174;
 	  p position = -1.64424,1.18509,1.82432,0x4de62696;
+	}
+}
+[t:trigger_change_mood_box,n:0x07900c44]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = mood_change("multiplayer_world_island_2_2");
+			  b can_self_destruct = true;
+				condition* = party_member_within_bounding_box(2.200000,1.000000,0.500000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,-5.96046e-008,0,1;
+	  p position = 1.80175,-2,-0.402954,0xbac6e554;
 	}
 }
 [t:trigger_change_mood_box,n:0x07900b1e]
@@ -845,44 +845,6 @@
 	{
 	  q orientation = 0,-4.09782e-007,0,1;
 	  p position = 1.04356,-11.1003,-9.56645,0x330118fd;
-	}
-}
-[t:use_point,n:0x079004f8]
-{
-	[placement]
-	{
-	  q orientation = 0,0.743145,0,-0.669131;
-	  p position = -1.37474,9.53674e-007,-0.302334,0x643a3fde;
-	}
-}
-[t:trigger_change_mood_box,n:0x0790050d]
-{
-	[common]
-	{
-		dev_instance_text = "PLAYER LOCATION";
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = set_player_world_location("island");
-			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(5.000000,2.000000,2.000000,"on_every_enter");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  q orientation = 0,0.702463,0,0.71172;
-	  p position = 0.069706,0,1.48199,0x3e6c4e93;
 	}
 }
 [t:trigger_change_mood_box,n:0x07900d6f]
