@@ -1,0 +1,421 @@
+[t:tutorial_tip,n:0x07f00045]
+{
+	[placement]
+	{
+	  p position = -1.30222,-7.5,0.039032,0xd14939a3;
+	}
+	[tip]
+	{
+		tip = "tip_3";
+	}
+}
+[t:trigger_generic,n:0x07f00046]
+{
+	[common]
+	{
+		dev_instance_text = "TIP TRIGGERS";
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_activate",0x07F00045,0f,"16386","party_member_within_sphere",0), doc("[*labelled condition (party_member_within_sphere)*]");
+			  b can_self_destruct = true;
+				condition* = party_member_within_sphere(11.000000,"on_unique_enter"), doc("[*one-shot check (trigger is one-shot)*]");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  p position = 0.00587082,-7.5,0.814406,0xd14939a3;
+	}
+}
+[t:trigger_generic,n:0x07f00076]
+{
+	[common]
+	{
+		dev_instance_text = "PLAYER LOCATION";
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = set_player_world_location("hub");
+			  b can_self_destruct = true;
+				condition* = party_member_within_sphere(11.000000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  p position = -0.0455389,-7.4065,-0.00227618,0xd14939a3;
+	}
+}
+[t:trigger_rec_msg_activate,n:0x07f0004f]
+{
+	[common]
+	{
+		dev_instance_text = "SCRIPTED EVENT";
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_activate",0x07F00050,0f,"default","",0), doc("make sure party member is in node before activating elevator");
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_req_activate",0,"on_every_message"), doc("someone pressed the button");
+				condition* = party_member_within_node(0x9E24A10A,7,-1,-1,"wait_for_every_message"), doc("[*message checker (trigger is non-pure )*]");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  p position = 0,2,0,0xfb248b43;
+	}
+}
+[t:use_point,n:0x07f0008a]
+{
+	[placement]
+	{
+	  p position = -0.446879,0.1,-1.16119,0xfb248b43;
+	}
+}
+[t:use_point,n:0x07f0008b]
+{
+	[placement]
+	{
+	  p position = 1.15052,0.1,0.421865,0xfb248b43;
+	}
+}
+[t:trigger_rec_msg_activate,n:0x07f0006e]
+{
+	[common]
+	{
+		dev_instance_text = "SCRIPTED EVENT";
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_activate",0x07F0003C,0f,"default","",0), doc("make sure party member is in node before activating elevator");
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_req_activate",0,"on_every_message"), doc("someone pressed the button");
+				condition* = party_member_within_node(0x9E24A10A,9,-1,-1,"wait_for_every_message"), doc("someone is one the plate[*message checker (trigger is non-pure )*]");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  p position = 0,2,0,0xb00ddb76;
+	}
+}
+[t:use_point,n:0x07f00086]
+{
+	[placement]
+	{
+	  p position = -0.43638,0.1,-1.29323,0xb00ddb76;
+	}
+}
+[t:use_point,n:0x07f00087]
+{
+	[placement]
+	{
+	  p position = 1.18686,0.1,0.485522,0xb00ddb76;
+	}
+}
+[t:trigger_rec_msg_activate,n:0x07f00048]
+{
+	[common]
+	{
+		dev_instance_text = "SCRIPTED EVENT";
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_activate",0x07F00063,0f,"default","",0), doc("make sure party member is in node before activating elevator");
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_req_activate",0,"on_every_message"), doc("someone pressed the button");
+				condition* = party_member_within_node(0x9E24A10A,5,-1,-1,"wait_for_every_message"), doc("[*message checker (trigger is non-pure )*]");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  p position = 0,2,0,0x3c74733a;
+	}
+}
+[t:use_point,n:0x07f00075]
+{
+	[placement]
+	{
+	  p position = -0.665701,0.1,-1.07796,0x3c74733a;
+	}
+}
+[t:use_point,n:0x07f00077]
+{
+	[placement]
+	{
+	  p position = 1.06488,0.1,0.78013,0x3c74733a;
+	}
+}
+[t:trigger_rec_msg_activate,n:0x07f0004a]
+{
+	[common]
+	{
+		dev_instance_text = "SCRIPTED EVENT";
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_activate",0x07F0003D,0f,"default","",0), doc("make sure party member is in node before activating elevator");
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_req_activate",0,"on_every_message"), doc("someone pressed the button");
+				condition* = party_member_within_node(0x9E24A10A,3,-1,-1,"wait_for_every_message"), doc("[*message checker (trigger is non-pure )*]");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  p position = 0,2,0,0x417efe22;
+	}
+}
+[t:use_point,n:0x07f00082]
+{
+	[placement]
+	{
+	  p position = -0.608927,0.1,-1.12611,0x417efe22;
+	}
+}
+[t:use_point,n:0x07f00083]
+{
+	[placement]
+	{
+	  p position = 1.10681,0.1,0.704657,0x417efe22;
+	}
+}
+[t:trigger_rec_msg_activate,n:0x07f00049]
+{
+	[common]
+	{
+		dev_instance_text = "SCRIPTED EVENT";
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_activate",0x07F00038,0f,"default","",0), doc("make sure party member is in node before activating elevator");
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_req_activate",0,"on_every_message"), doc("someone pressed the button");
+				condition* = party_member_within_node(0x9E24A10A,2,-1,-1,"wait_for_every_message"), doc("[*message checker (trigger is non-pure )*]");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  p position = 0,2,0,0xa9cab56d;
+	}
+}
+[t:use_point,n:0x07f00084]
+{
+	[placement]
+	{
+	  p position = 1.22437,0.1,0.315206,0xa9cab56d;
+	}
+}
+[t:use_point,n:0x07f00085]
+{
+	[placement]
+	{
+	  p position = -1.1991,0.1,0.318698,0xa9cab56d;
+	}
+}
+[t:trigger_rec_msg_activate,n:0x07f00054]
+{
+	[common]
+	{
+		dev_instance_text = "SCRIPTED EVENT";
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_activate",0x07F00040,0f,"default","",0), doc("make sure party member is in node before activating elevator");
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_req_activate",0,"on_every_message"), doc("someone pressed the button");
+				condition* = party_member_within_node(0x9E24A10A,8,-1,-1,"wait_for_every_message"), doc("[*message checker (trigger is non-pure )*]");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  p position = 0,2,0,0x0bf53f4e;
+	}
+}
+[t:use_point,n:0x07f00088]
+{
+	[placement]
+	{
+	  p position = 1.20103,0.1,0.52046,0x0bf53f4e;
+	}
+}
+[t:use_point,n:0x07f00089]
+{
+	[placement]
+	{
+	  p position = -1.15599,0.1,0.486596,0x0bf53f4e;
+	}
+}
+[t:trigger_rec_msg_activate,n:0x07f0004d]
+{
+	[common]
+	{
+		dev_instance_text = "SCRIPTED EVENT";
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_activate",0x07F00052,0f,"default","",0), doc("make sure party member is in node before activating elevator");
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_req_activate",0,"on_every_message"), doc("someone pressed the button");
+				condition* = party_member_within_node(0x9E24A10A,6,-1,-1,"wait_for_every_message"), doc("[*message checker (trigger is non-pure )*]");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  p position = 0,2,0,0xeacf22f6;
+	}
+}
+[t:use_point,n:0x07f00056]
+{
+	[placement]
+	{
+	  p position = 1.23151,0.1,0.298916,0xeacf22f6;
+	}
+}
+[t:use_point,n:0x07f00057]
+{
+	[placement]
+	{
+	  p position = -1.2891,0.1,0.311231,0xeacf22f6;
+	}
+}
+[t:trigger_rec_msg_activate,n:0x07f00047]
+{
+	[common]
+	{
+		dev_instance_text = "SCRIPTED EVENT";
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_activate",0x07F00065,0f,"default","",0), doc("make sure party member is in node before activating elevator");
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_req_activate",0,"on_every_message"), doc("someone pressed the button");
+				condition* = party_member_within_node(0x9E24A10A,4,-1,-1,"wait_for_every_message"), doc("[*message checker (trigger is non-pure )*]");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  p position = 0,2,0,0xc1b7a680;
+	}
+}
+[t:use_point,n:0x07f00080]
+{
+	[placement]
+	{
+	  p position = 1.32619,0.1,0.262089,0xc1b7a680;
+	}
+}
+[t:use_point,n:0x07f00081]
+{
+	[placement]
+	{
+	  p position = -1.26614,0.1,0.202792,0xc1b7a680;
+	}
+}
