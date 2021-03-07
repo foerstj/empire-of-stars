@@ -1153,3 +1153,39 @@
 	  p position = -1.70255,-2.05,-0.317863,0x6805c574;
 	}
 }
+[t:use_point,n:0x079001a5]
+{
+	[placement]
+	{
+	  p position = 0.90015,0.1,-0.840286,0x6ee8e4bf;
+	}
+}
+[t:trigger_generic,n:0x079001a6]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_activate",0x079000AB,0f,"default","every",0);
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_req_activate",0,"on_every_message");
+				condition* = has_go_in_inventory("local",0x00000000,"starstone_alphacentauri");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  p position = 17.3778,0.1,-0.0214974,0x8b89b809;
+	}
+}
