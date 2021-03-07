@@ -1,0 +1,43 @@
+[t:template,n:aunt_luna]
+{
+	category_name = "1W_character";
+	doc = "aunt luna";
+	specializes = base_pm_fg;
+	[actor]
+	{
+		portrait_icon = b_gui_ig_i_ic_c_yeldwyn;
+		[skills]
+		{
+			strength =   		0.18, 0, 10;
+			intelligence =  	0.29, 0, 10;
+			dexterity =   		0.76, 0, 10;
+            melee 	=  			1,0, 0;
+            ranged 	=  			1,0, 0;
+            nature_magic 	=  	1, 0, 0;
+            uber 			=  	1.24, 0, 0;
+
+		}
+		screen_class = "Scribe";
+	}
+	[aspect]
+	{
+		model = m_c_gah_fg_pos_a1;
+		[textures]
+		{
+			0 = b_c_gah_fg_skin_23;
+			1 = b_c_pos_a1_024;
+		}
+	}
+	[common]
+	{
+		screen_name = "Aunt Luna";
+	}
+	[inventory]
+	{
+		custom_head = m_c_gah_fg_hlmt_head-03;
+	}
+    [mind]
+    {
+		jat_talk 	= world\ai\jobs\common\job_talk.skrit;
+    }
+}
