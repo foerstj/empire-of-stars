@@ -172,6 +172,35 @@
 	  p position = -0.729584,-0.243035,-1.11583,0x8a5d599c;
 	}
 }
+[t:trigger_generic,n:0x079001a8]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = mood_change("multiplayer_world_island_2_2");
+				action* = change_quest_state("find_aunt_luna","active",0);
+			  b can_self_destruct = true;
+				condition* = party_member_within_sphere(10.000000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  p position = 0.136482,0,-0.284988,0xd02c87ab;
+	}
+}
 [t:trigger_change_mood_box,n:0x07900d77]
 {
 	[common]
@@ -694,6 +723,34 @@
 	[placement]
 	{
 	  p position = 17.3778,0.1,-0.0214974,0x8b89b809;
+	}
+}
+[t:trigger_generic,n:0x079001a9]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = change_quest_state("find_way_home","completed",0);
+			  b can_self_destruct = true;
+				condition* = party_member_within_sphere(10.000000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  p position = 0.83889,-0.542235,-0.117462,0x4f23cd2d;
 	}
 }
 [t:trigger_change_mood_box,n:0x07900d79]
@@ -1278,62 +1335,5 @@
 	{
 	  q orientation = 0,0.471396,0,0.881921;
 	  p position = -1.70255,-2.05,-0.317863,0x6805c574;
-	}
-}
-[t:trigger_generic,n:0x079001a8]
-{
-	[common]
-	{
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = mood_change("multiplayer_world_island_2_2");
-				action* = change_quest_state("find_aunt_luna","active",0);
-			  b can_self_destruct = true;
-				condition* = party_member_within_sphere(10.000000,"on_every_enter");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  p position = 0.136482,0,-0.284988,0xd02c87ab;
-	}
-}
-[t:trigger_generic,n:0x079001a9]
-{
-	[common]
-	{
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = change_quest_state("find_way_home","completed",0);
-			  b can_self_destruct = true;
-				condition* = party_member_within_sphere(10.000000,"on_every_enter");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  p position = 0.83889,-0.542235,-0.117462,0x4f23cd2d;
 	}
 }
