@@ -1,3 +1,13 @@
+[aunt_luna]
+{
+	[text*]
+	{
+		choice = potential_member;
+		complete_quest* = find_aunt_luna;
+		screen_text = "What took you so long?";
+	  f scroll_rate = 10.000000;
+	}
+}
 [pm_accept]
 {
 	[text*]
@@ -28,15 +38,6 @@
 	{
 		choice = potential_member;
 		screen_text = "No hard feelings dear... Wanna go together again?";
-	  f scroll_rate = 10.000000;
-	}
-}
-[aunt_luna]
-{
-	[text*]
-	{
-		choice = potential_member;
-		screen_text = "What took you so long?";
 	  f scroll_rate = 10.000000;
 	}
 }

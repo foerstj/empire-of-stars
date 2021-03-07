@@ -1,0 +1,28 @@
+[chapters]
+{
+}
+[quests]
+{
+	[find_aunt_luna]
+	{
+		screen_name = "Find Aunt Luna";
+		victory_sample = s_e_level_up_quest;
+		[*]
+		{
+			description = "After having received a letter informing you that your strange but beloved Aunt Luna has disappeared, you took the long journey to the place she was last seen. You hope to find her alive and well.";
+		  i order = 0;
+		  b required_update = true;
+		}
+	}
+	[find_way_home]
+	{
+		screen_name = "Find Way Home";
+		victory_sample = s_e_level_up_quest;
+		[*]
+		{
+			description = "Oh no, you went into the Stellar Hub without the right starstone to get back home! You need to find one... Maybe Aunt Luna has one... But where is she?";
+		  i order = 0;
+		  b required_update = true;
+		}
+	}
+}
