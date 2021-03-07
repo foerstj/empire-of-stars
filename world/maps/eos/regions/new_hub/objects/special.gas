@@ -1,3 +1,33 @@
+[t:trigger_generic,n:0x07f00001]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_activate",0x07F0003D,0f,"default","every",0);
+				action* = send_world_message("we_req_activate",0x079000AB,0f,"default","every",0);
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_req_activate",0,"on_every_message");
+				condition* = has_go_in_inventory("local",0x00000000,"starstone_aranna");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  p position = 4.11564,-9.25,4.18157,0xd14939a3;
+	}
+}
 [t:trigger_rec_msg_activate,n:0x07f0004f]
 {
 	[common]
@@ -128,36 +158,6 @@
 	[placement]
 	{
 	  p position = 1.06488,0.1,0.78013,0x3c74733a;
-	}
-}
-[t:trigger_rec_msg_activate,n:0x07f0004a]
-{
-	[common]
-	{
-		dev_instance_text = "SCRIPTED EVENT";
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = send_world_message("we_req_activate",0x07F0003D,0f,"default","",0), doc("make sure party member is in node before activating elevator");
-			  b can_self_destruct = true;
-				condition* = receive_world_message("we_req_activate",0,"on_every_message"), doc("someone pressed the button");
-				condition* = party_member_within_node(0x9E24A10A,3,-1,-1,"wait_for_every_message"), doc("[*message checker (trigger is non-pure )*]");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  p position = 0,2,0,0x417efe22;
 	}
 }
 [t:use_point,n:0x07f00082]
