@@ -2,9 +2,25 @@
 {
 	[text*]
 	{
-		choice = potential_member;
+		choice = more;
 		complete_quest* = find_aunt_luna;
+	  i order = 0;
 		screen_text = "What took you so long?";
+	  f scroll_rate = 10.000000;
+	}
+	[text*]
+	{
+		choice = more;
+	  i order = 1;
+		screen_text = "I'm actually so happy to see you, my dearest!
+See what I discovered here - the ancient Empire of Stars had contact with Beings from other actual stars! Extraterrestrials! It was an interstellar empire spanning across a whole eight star systems! It's truly incredible!";
+	  f scroll_rate = 10.000000;
+	}
+	[text*]
+	{
+		choice = potential_member;
+		screen_text = "Sadly all other teleporter pads are completely out of order.
+Let's go home, I'm hungry...";
 	  f scroll_rate = 10.000000;
 	}
 }
