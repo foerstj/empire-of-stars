@@ -1,0 +1,23 @@
+[t:template,n:galaxy_eos]
+{
+	category_name = "node";
+	doc = "eos_galaxy";
+	specializes = non_interactive_nonblocking;
+    [body]
+    {
+        initial_chore = chore_default;
+        [chore_dictionary]
+        {
+            [chore_default]
+            {
+                skrit = rotatey?rpm=-0.2;
+            }
+        }
+    }
+	[aspect]
+	{
+		lodfi_lower = 0;
+		lodfi_upper = 0;
+		model = m_i_glb_galaxy;
+	}
+}
