@@ -1,0 +1,66 @@
+[conversation_narrator]
+{
+	[text*]
+	{
+		order = 0;
+		sample = s_v_king_intro;
+		nis = true;
+		screen_text = "A long time ago, on the continent of Aranna,\nthe once-magnificent Empire of Stars had crumbled into oblivion...\nparalyzed by its own power-hungry Legions,\nand torn asunder by an ancient and merciless evil.\nBut the 10th Legion, the dying Empire's most valiant soldiers, and most trusted,\nwithdrew far to the west to a land called Ehb,\nseeking to preserve what their Empire had lost.\nHere, in the rugged mountains and rich valleys of their new home,\nthey founded the Kingdom of Ehb, a Kingdom that has embraced peace and freedom for 300 years.\nBut... there was a price.\nFew now remember the evil that opposed them. Fewer still recall\nthe dark sorceries cast to save them.\nAnd none could foretell that one humble farmer would stand between a vengeance from the past and the survival of the Kingdom.";
+		scroll_rate = 2.7;
+	}
+}
+[conversation_norick]
+{
+	[text*]
+	{
+		order = 0;
+		sample = s_v_fh_norick1;
+		nis = true;
+		screen_text = "The Krug are attacking! I couldn't hold them back...\nYou have long been my friend, but... you can do nothing more for old Norick.\nGo to Stonebridge. Find Gyorn. \nIf the Krug have elsewhere betrayed us, your bravery will be needed by the King.\nGo now!";
+        activate_quest* = Quest_for_Gyorn;
+		scroll_rate = 2.3;
+		quest_dialog = true;
+	}
+}
+[conversation_norick_multiplayer]
+{
+	[text*]
+	{
+		order = 0;
+		sample = s_v_fh_norick1;
+        screen_text = "The Krug are attacking! I couldn't hold them back... You have long been my friend, but... you can do nothing more for old Norick. Go to Stonebridge. Find Gyorn. If the Krug have elsewhere betrayed us, your bravery will be needed by the King. Go now!";
+        activate_quest* = Quest_for_Gyorn;
+		scroll_rate = 3.5;
+	}
+}
+[conversation_edgaar]
+{
+	[text*]
+	{
+		order = 0;
+		sample = s_v_fh_edgaar1.mp3;
+		screen_text = "I should have guessed you'd be cleaving your way to Stonebridge to find out what's got the Krug all stirred up. If you could spare a few minutes to help an old neighbor before you go, I've a favor to ask.";
+		choice = more;
+	}
+	[text*]
+	{
+		order = 1;
+		sample = s_v_fh_edgaar2.mp3;
+		screen_text = "When I realized that the Krug were actually attacking us, I tried to get to the safety of my cellar, but they had a little welcome party waiting for me. If you need any supplies for the long trek to Stonebridge, and wouldn't mind clearing out the remaining Krug downstairs, you can help yourself to whatever you need from my stores.";
+		activate_quest* = quest_edgaar_basement;
+		quest_dialog = true;
+	}
+	[text*]
+	{
+		sample = s_v_fh_edgaar3.mp3;
+		screen_text = "I didn't think they had it in them to raise a hand against us. I guess I was wrong. Don't worry about me. Once you've cleared the Krug out of my basement, I should be able to stay safe until this whole thing passes.";
+	}
+}
+[conversation_edgaar_quest_complete]
+{
+	[text*]
+	{
+		sample = s_v_fh_edgaar4.mp3;
+		screen_text = "My thanks for clearing out the Krug. If they're coming after farmers in our own homes, I don't doubt you'll battle many more on your journey to Stonebridge; you'd best be on your way. Watch out for yourself and don't worry about me; I've enough supplies in the cellar to keep me going until this blows over.";
+	}
+}

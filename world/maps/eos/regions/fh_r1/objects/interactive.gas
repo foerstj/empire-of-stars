@@ -1,0 +1,147 @@
+[t:generator_door_breakable_peasant,n:0x01c0021e]
+{
+	[aspect]
+	{
+	  b is_usable = true;
+	}
+	[generator_object_exploding]
+	{
+		child_template_name = "krug_scout";
+	  x initial_command = 0x01C0010C;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.173648,0,0.984808;
+	  p position = 1.2645,-3.75,-3.65371,0x76250af7;
+	}
+}
+[t:respawn_statue,n:0x01c00b19]
+{
+	[placement]
+	{
+	  q orientation = 0,0.92388,0,0.382683;
+	  p position = -2.36197,0,-0.56398,0xacf21c85;
+		use_point_scids = 0x01c008e8;
+	}
+}
+[t:door_grs_peasant_left,n:0x01c00b41]
+{
+	[door_basic]
+	{
+	  x msg_scid_opening = 0x01C007BD;
+		msg_type_opening = we_trigger_activate;
+	}
+	[placement]
+	{
+	  q orientation = 0,1,0,-2.5332e-007;
+	  p position = 1.70149,-3.65,-3.15504,0x32cab6b9;
+		use_point_scids = 0x01c00797,0x01c007c5;
+	}
+}
+[t:door_glb_stormdoor_01,n:0x01c00521]
+{
+	[aspect]
+	{
+	  f use_range = 0;
+	}
+	[body]
+	{
+		terrain_movement_permissions = lf_none;
+	}
+	[door_basic]
+	{
+	  b oneshot = true;
+	  x second_door = 0x01C00523;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.976296,-0.21644,0;
+	  p position = 2.17207,0.55251,1.37599,0x2696a253;
+		use_point_scids = 0x01c00b9d;
+	}
+}
+[t:door_glb_stormdoor_02,n:0x01c00523]
+{
+	[aspect]
+	{
+	  f use_range = 0;
+	}
+	[body]
+	{
+		terrain_movement_permissions = lf_none;
+	}
+	[door_basic]
+	{
+	  b oneshot = true;
+	  x second_door = 0x01C00521;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.976296,-0.21644,-1e-006;
+	  p position = 1.79209,0.54251,1.38599,0x2696a253;
+		use_point_scids = 0x01c00b9d;
+	}
+}
+[t:respawn_statue,n:0x01c00b1a]
+{
+	[placement]
+	{
+	  q orientation = 0,1,0,5.96046e-007;
+	  p position = 0.071167,0.304918,0.0901642,0x96e0f28b;
+		use_point_scids = 0x01c007a7;
+	}
+}
+[t:sign_glb_01,n:0x01c00db5]
+{
+	[common]
+	{
+		screen_name = "Town of Stonebridge";
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.707106,0,0.707107;
+	  p position = -3.99681,0,3.5032,0x286944bd;
+	}
+}
+[t:door_grs_farmhouse_breakable,n:0x01c00da3]
+{
+	[aspect]
+	{
+	  b does_block_path = false;
+	  f scale_multiplier = 1.5;
+	}
+	[common]
+	{
+		dev_instance_text = "SP ONLY";
+	  b is_multi_player = false;
+	}
+	[placement]
+	{
+	  q orientation = 0.495618,0.504344,0.504344,0.495618;
+	  p position = -5.92709,0.231637,-9.55208,0xd037f9ef;
+		use_point_scids = 0x01c00da2;
+	}
+}
+[t:door_grs_farmhouse,n:0x01c000ab]
+{
+	[door_basic]
+	{
+	  x msg_scid_opening = 0x01C0001C;
+		msg_type_opening = we_trigger_activate;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.92388,0,0.382682;
+	  p position = 1.25236,-2.25,-2.42625,0xf83a811c;
+	}
+}
+[t:bookcase_glb_gen_01,n:0x01c00ad1]
+{
+	[placement]
+	{
+		drop_point_scids = 0x01c00af1;
+	  q orientation = 0,1,0,-2.38419e-007;
+	  p position = -2.57706,-0.949999,3.6232,0x3be680e9;
+		use_point_scids = 0x01c00b10;
+	}
+}

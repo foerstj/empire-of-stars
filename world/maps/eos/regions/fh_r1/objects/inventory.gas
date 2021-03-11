@@ -1,0 +1,99 @@
+[t:potion_health_small,n:0x01c00241]
+{
+	[placement]
+	{
+	  q orientation = 0,0.707106,0,0.707107;
+	  p position = 0.730804,-2.87731,1.65397,0x76250af7;
+		use_point_scids = 0x01c00af7;
+	}
+}
+[t:pitchfork,n:0x01c00450]
+{
+	[placement]
+	{
+	  q orientation = 0.936865,0.0478507,0.28215,-0.200964;
+	  p position = -1.5769,0.356084,1.74635,0x44cf9baa;
+	}
+}
+[t:potion_mana_small,n:0x01c0007e]
+{
+	[placement]
+	{
+	  p position = 1.72588,-1e-006,-3.66589,0x5f824647;
+	}
+}
+[t:rake,n:0x01c00c60]
+{
+	[placement]
+	{
+	  q orientation = -0.382683,0,0,0.92388;
+	  p position = -2.14467,-1.78161,-1.31311,0x5026bc9a;
+		use_point_scids = 0x01c007a3;
+	}
+}
+[t:shovel,n:0x01c00c61]
+{
+	[placement]
+	{
+	  q orientation = -0.395409,0.586218,0.395409,0.586218;
+	  p position = -2.2983,-1.4836,-0.724594,0x5026bc9a;
+		use_point_scids = 0x01c007a3;
+	}
+}
+[t:pitchfork_dull,n:0x01c00c5f]
+{
+	[placement]
+	{
+	  q orientation = 0.568369,-0.460255,-0.530012,-0.429195;
+	  p position = -0.247711,1.20154,1.8628,0x2d1853aa;
+	}
+}
+[t:hoe,n:0x01c007c9]
+{
+	[placement]
+	{
+	  q orientation = 0,-0.707107,0,0.707107;
+	  p position = -1.82544,0,0.20072,0x536d99a7;
+	}
+}
+[t:potion_health_small,n:0x01c0044a]
+{
+	[placement]
+	{
+	  p position = 0.600372,0,0.347367,0xc5b6b032;
+	}
+}
+[t:spell_fireshot,n:0x01c00274]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_trigger_deactivate",0x01C00AFA,0f,"default","",0);
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_picked_up",0,"on_first_message"), doc("[*one-shot check (trigger is one-shot)*]");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = true;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  p position = -7.19988,-0.000892878,-11.4451,0xd037f9ef;
+	}
+}
+[t:spell_magic_armor,n:0x01c002a6]
+{
+	[placement]
+	{
+	  p position = -3.82425,-0.901311,-1.00964,0x3be680e9;
+	}
+}

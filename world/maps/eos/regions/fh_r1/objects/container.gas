@@ -1,0 +1,195 @@
+[t:barrel_glb_fh_r1,n:0x01c00008]
+{
+	[placement]
+	{
+	  q orientation = 0.258538,-0.681156,0.624164,0.282144;
+	  p position = -2.22214,0.26689,3.6438,0x863ac4b6;
+	}
+}
+[t:barrel_glb_fh_r1,n:0x01c00009]
+{
+	[placement]
+	{
+	  q orientation = 0.674507,-0.108101,0.100806,0.72332;
+	  p position = -2.34506,0.259812,1.12578,0x863ac4b6;
+	}
+}
+[t:crate_glb_fh_r1,n:0x01c0001d]
+{
+	[placement]
+	{
+	  p position = -2.50888,4.76837e-007,-0.539427,0x863ac4b6;
+	}
+}
+[t:barrel_glb_fh_r1,n:0x01c003f4]
+{
+	[placement]
+	{
+	  p position = -3.6683,1e-006,-1.88961,0x863ac4b6;
+	}
+}
+[t:barrel_glb_fh_r1,n:0x01c003f5]
+{
+	[placement]
+	{
+	  q orientation = 0.373908,0.439215,0.373908,0.726275;
+	  p position = -2.7018,4.76837e-007,2.12801,0x863ac4b6;
+	}
+}
+[t:barrel_glb_fh_r1,n:0x01c00427]
+{
+	[placement]
+	{
+	  p position = 1.33476,4.76837e-007,0.504017,0x863ac4b6;
+	}
+}
+[t:barrel_glb_fh_r1,n:0x01c00435]
+{
+	[placement]
+	{
+	  p position = -3.38557,-1.43051e-006,-1.36897,0x863ac4b6;
+	}
+}
+[t:barrel_glb_fh_r1,n:0x01c00440]
+{
+	[placement]
+	{
+	  q orientation = 0,0.707107,0,0.707107;
+	  p position = -3.64433,1e-006,-2.47442,0x863ac4b6;
+	}
+}
+[t:crate_glb_fh_r1,n:0x01c005ea]
+{
+	[placement]
+	{
+	  q orientation = 0,0.707107,0,0.707107;
+	  p position = 1.22063,0,0.282707,0x5c56b6d4;
+	}
+}
+[t:crate_glb_fh_r1,n:0x01c005eb]
+{
+	[placement]
+	{
+	  q orientation = 0,0.382684,0,0.923879;
+	  p position = 2.56323,0,0.662056,0x5c56b6d4;
+	}
+}
+[t:crate_glb_fh_r1,n:0x01c00204]
+{
+	[placement]
+	{
+	  p position = -1.14325,-3.6779,1.55233,0x80e8edf6;
+	}
+}
+[t:barrel_glb_fh_r1,n:0x01c00006]
+{
+	[placement]
+	{
+	  p position = 0.663344,-0.270793,-5.65732,0xd83975f6;
+	}
+}
+[t:barrel_glb_fh_r1,n:0x01c006b8]
+{
+	[placement]
+	{
+	  q orientation = 0,-0.681997,0,0.731353;
+	  p position = -0.469804,-0.270795,-5.75434,0xd83975f6;
+	}
+}
+[t:barrel_glb_fh_r1,n:0x01c00252]
+{
+	[placement]
+	{
+	  p position = -5.78709,-4.65,-4.57204,0x32cab6b9;
+	}
+}
+[t:crate_glb_fh_r1,n:0x01c0069d]
+{
+	[placement]
+	{
+	  p position = 0.486076,0,-0.093696,0x2c71564c;
+	}
+}
+[t:barrel_glb_fh_r1,n:0x01c00001]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_activate",0x01C00AFD,0f,"default","",0);
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_damaged",0,"on_every_message");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0.00872778,0.0349011,-0.000152644,0.999352;
+	  p position = -6.40335,-0.000891685,-11.5001,0xd037f9ef;
+	}
+}
+[t:barrel_glb_fh_r1,n:0x01c0000a]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_activate",0x01C00AFD,0f,"default","",0);
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_damaged",0,"on_first_message"), doc("[*one-shot check (trigger is one-shot)*]");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = true;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.700909,0,0.71325;
+	  p position = -6.46062,-0.000890732,-10.5271,0xd037f9ef;
+	}
+}
+[t:barrel_glb_fh_r1,n:0x01c006b6]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_activate",0x01C00AFD,0f,"default","",0);
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_damaged",0,"on_every_message");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  p position = -5.90581,-0.000894547,-12.4333,0xd037f9ef;
+	}
+}
