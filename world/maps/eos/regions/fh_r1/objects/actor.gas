@@ -940,29 +940,6 @@
 	  p position = 2.40134,6.19888e-006,-0.769167,0xcfb4c7fd;
 	}
 }
-[t:chicken_white,n:0x01c00600]
-{
-	[placement]
-	{
-	  q orientation = 0,1,0,0;
-	  p position = 4.4455,-0.500002,-5.56462,0xd83975f6;
-	}
-}
-[t:chicken_white,n:0x01c00602]
-{
-	[placement]
-	{
-	  p position = 1.42156,-0.476695,-5.6981,0xd83975f6;
-	}
-}
-[t:butterfly,n:0x01c00c36]
-{
-	[placement]
-	{
-	  q orientation = 0,0.422618,0,-0.906308;
-	  p position = 4.71626,-0.288004,-1.65847,0xd83975f6;
-	}
-}
 [t:chicken_white,n:0x01c005f8]
 {
 	[placement]
@@ -979,105 +956,12 @@
 	  p position = -0.0514644,0,2.06486,0xf0ac542f;
 	}
 }
-[t:chicken_white,n:0x01c00601]
-{
-	[placement]
-	{
-	  p position = 3.18877,-1.43051e-006,-0.639967,0x599b4d90;
-	}
-}
 [t:butterfly,n:0x01c00eab]
 {
 	[placement]
 	{
 	  q orientation = 0,0.983255,0,-0.182236;
 	  p position = 0.678497,5.72205e-006,1.2066,0xb4dc36a7;
-	}
-}
-[t:chicken_grey,n:0x01c00c29]
-{
-	[placement]
-	{
-	  q orientation = 0,0.309018,0,0.951056;
-	  p position = -2.43213,1.00136e-005,-1.05967,0x0c036695;
-	}
-}
-[t:chicken_white,n:0x01c00c2f]
-{
-	[placement]
-	{
-	  q orientation = 0,0.965926,0,-0.258819;
-	  p position = 0.0126038,5.24521e-006,-1.34701,0x0c036695;
-	}
-}
-[t:chicken_grey,n:0x01c00c28]
-{
-	[placement]
-	{
-	  q orientation = 0,0.984808,0,0.173648;
-	  p position = -0.0486832,-1.29999,-0.905685,0x5026bc9a;
-	}
-}
-[t:chicken_white,n:0x01c00c2a]
-{
-	[placement]
-	{
-	  q orientation = 0,-0.5,0,0.866026;
-	  p position = 2.04237,-2.29999,-2.27142,0x5026bc9a;
-	}
-}
-[t:chicken_white,n:0x01c00c2b]
-{
-	[placement]
-	{
-	  q orientation = 0,-0.573577,0,0.819152;
-	  p position = -1.35074,0,0.312729,0x4e998c42;
-	}
-}
-[t:chicken_grey,n:0x01c00eac]
-{
-	[placement]
-	{
-	  q orientation = 0,0.522499,0,0.85264;
-	  p position = -0.573435,3.8147e-006,1.41663,0x4e998c42;
-	}
-}
-[t:butterfly,n:0x01c00c34]
-{
-	[placement]
-	{
-	  q orientation = 0,0.983255,0,-0.182236;
-	  p position = 3.23769,-1.43051e-006,1.26331,0x9384b21f;
-	}
-}
-[t:dog_sleeping,n:0x01c0095b]
-{
-	[mind]
-	{
-	  b actor_auto_fidgets = false;
-	}
-	[placement]
-	{
-	  q orientation = 0,0.983255,0,-0.182237;
-	  p position = -2.30237,0,0.613815,0xb3e5f3e9;
-	}
-}
-[t:narrator,n:0x01c00dad]
-{
-	[common]
-	{
-		dev_instance_text = "INTRO SPEECH";
-	}
-	[conversation]
-	{
-		[conversations]
-		{
-			* = conversation_narrator;
-		}
-	}
-	[placement]
-	{
-	  p position = 0.496033,-2.86102e-006,-2.11674,0xfda44c13;
 	}
 }
 [t:chicken_white,n:0x01c005fa]
@@ -1416,62 +1300,6 @@
 	  p position = -0.211914,-0.000893116,-3.52626,0x327c89ae;
 	}
 }
-[t:krug_scavenger,n:0x01c005ca]
-{
-	[common]
-	{
-		dev_instance_text = "SP ONLY";
-	  b is_multi_player = false;
-	}
-	[inventory]
-	{
-		[equipment]
-		{
-			es_weapon_hand = torch_small;
-		}
-		[other]
-		{
-			il_main = spell_zap;
-		}
-	}
-	[mind]
-	{
-		jat_fidget = world\ai\jobs\common\job_fidget.skrit;
-	}
-	[placement]
-	{
-	  q orientation = 0,0.669131,0,0.743145;
-	  p position = -11.0519,0.113429,-8.28389,0xd037f9ef;
-	}
-}
-[t:krug_scavenger,n:0x01c00da4]
-{
-	[common]
-	{
-		dev_instance_text = "MP ONLY";
-	  b is_single_player = false;
-	}
-	[inventory]
-	{
-		[equipment]
-		{
-			es_weapon_hand = torch_small;
-		}
-		[other]
-		{
-			il_main = spell_zap;
-		}
-	}
-	[mind]
-	{
-		jat_fidget = world\ai\jobs\common\job_fidget.skrit;
-	}
-	[placement]
-	{
-	  q orientation = 0,0.669131,0,0.743145;
-	  p position = -0.163971,0.113429,-2.84516,0xd037f9ef;
-	}
-}
 [t:chicken_white,n:0x01c00603]
 {
 	[placement]
@@ -1479,115 +1307,12 @@
 	  p position = -2.27618,0,-0.577354,0xc2d5c0cc;
 	}
 }
-[t:norick,n:0x01c007c0]
-{
-	[common]
-	{
-		dev_instance_text = "SP Norick";
-	  b is_multi_player = false;
-	  b is_pcontent_allowed = false;
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = send_world_message("we_trigger_activate",0x01C00AF4,0f,"default","",0), doc("enable farmyard tooltip");
-			  b can_self_destruct = true;
-				condition* = receive_world_message("we_req_talk_end",0,"on_first_message"), doc("[*one-shot check (trigger is one-shot)*]");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = false;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = true;
-			  b start_active = true;
-			}
-		}
-	}
-	[conversation]
-	{
-		[conversations]
-		{
-			* = conversation_norick;
-		}
-	}
-	[mind]
-	{
-		jat_die = world\ai\jobs\common\job_die.skrit;
-		jat_talk = world\ai\jobs\actors\good\job_talk_norick.skrit;
-	}
-	[placement]
-	{
-	  q orientation = 0,-0.707107,0,0.707107;
-	  p position = 4.45821,0.430687,0.211343,0x5353287c;
-	}
-}
-[t:norick,n:0x01c00b48]
-{
-	[common]
-	{
-		dev_instance_text = "MP Norick";
-	  b is_single_player = false;
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = send_world_message("we_req_activate",0x01C00B39,0f,"default","",0), doc("kill myself!");
-				action* = send_world_message("we_req_activate",0x01C00BC5,0f,"default","every",0), doc("chapter title");
-			  b can_self_destruct = true;
-				condition* = receive_world_message("we_req_talk_end",0,"on_first_message"), doc("norick shuts up[*one-shot check (trigger is one-shot)*]");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = false;
-			  b single_shot = true;
-			  b start_active = true;
-			}
-			[*]
-			{
-				action* = send_world_message("we_req_activate",0x01C0075F,0f,"0x4003","every",0), doc("quest sound");
-			  b can_self_destruct = true;
-				condition* = receive_world_message("we_req_talk_begin",0,"on_first_message"), doc("[*converted to one-shot*]");
-				condition* = party_member_within_node(0xAAA10100,-1,-1,-1,"wait_for_every_message"), doc("[*message checker (trigger is non-pure )*]");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = false;
-			  b single_shot = true;
-			  b start_active = true;
-			}
-		}
-	}
-	[conversation]
-	{
-		[conversations]
-		{
-			* = conversation_norick_multiplayer;
-		}
-	}
-	[mind]
-	{
-		jat_die = world\ai\jobs\common\job_die.skrit;
-		jat_talk = world\ai\jobs\actors\good\job_talk_norick_mp.skrit;
-	}
-	[placement]
-	{
-	  q orientation = 0,-0.71934,0,0.694659;
-	  p position = 0.134811,0.946215,0.0665681,0x5353287c;
-	}
-}
 [t:chicken_white,n:0x01c005ff]
 {
 	[placement]
 	{
-	  p position = -1.14612,0,1.54919,0x18e906ec;
+	  q orientation = 0,0,0,1;
+	  p position = -1.56736,0,-0.123169,0x18e906ec;
 	}
 }
 [t:chicken_white,n:0x01c005fc]

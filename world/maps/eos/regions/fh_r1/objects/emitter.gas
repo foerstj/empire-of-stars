@@ -603,159 +603,6 @@
 	  i time_chunk = 1;
 	}
 }
-[t:emt_sound,n:0x01c00071]
-{
-	[placement]
-	{
-	  p position = -6.75191,-2.56359,-1.43844,0x7aa1b6bc;
-	}
-	[sound_emitter]
-	{
-	  b continual_loop = true;
-		event_sound = "env_waterwheel";
-	  f max_dist = 40;
-	}
-}
-[t:emt_particle,n:0x01c000cd]
-{
-	[particle_emitter]
-	{
-	  i count = 80;
-	  f end_radius_max = 15;
-	  f end_radius_min = 5;
-	  f fade = 0.4;
-	  f green = 0.4;
-	  f growth = 3;
-	  f particle_fit = 1;
-	  f particle_size = 1;
-	  f red = 0.6;
-	  f start_radius_max = 1;
-	  f yacc = 6;
-	  f zacc = -2;
-	  f zvel = 6;
-	}
-	[placement]
-	{
-	  q orientation = 0,1,0,0;
-	  p position = 1.78334,1.58254,-3.68503,0x7aa1b6bc;
-	}
-}
-[t:emt_sound,n:0x01c001ba]
-{
-	[common]
-	{
-		dev_instance_text = "SOUND- fire";
-	}
-	[placement]
-	{
-	  p position = 1.22041,0.011467,-5.78106,0x7aa1b6bc;
-	}
-	[sound_emitter]
-	{
-	  b continual_loop = true;
-		event_sound = "env_burning_large";
-	  f max_dist = 35;
-	}
-}
-[t:emt_particle,n:0x01c00263]
-{
-	[particle_emitter]
-	{
-	  i count = 80;
-	  f end_radius_max = 15;
-	  f end_radius_min = 5;
-	  f fade = 0.4;
-	  f green = 0.4;
-	  f growth = 3;
-	  f particle_fit = 1;
-	  f particle_size = 1;
-	  f red = 0.6;
-	  f start_radius_max = 1;
-	  f yacc = 6;
-	  f zacc = -2;
-	  f zvel = 6;
-	}
-	[placement]
-	{
-	  q orientation = 0,1,0,0;
-	  p position = 1.53401,-0.521956,-3.52528,0x7aa1b6bc;
-	}
-}
-[t:emt_particle,n:0x01c002bb]
-{
-	[particle_emitter]
-	{
-	  f blue = 0.1;
-	  i count = 50;
-	  b dark = true;
-	  f end_radius_max = 10;
-	  f end_radius_min = 8;
-	  f fade = 0.35;
-	  f green = 0.1;
-	  f growth = 2;
-	  f particle_fit = 1;
-	  f particle_size = 1.5;
-	  f red = 0.1;
-	  f yacc = 0;
-	  f zacc = -2;
-	  f zvel = 6;
-	}
-	[placement]
-	{
-	  q orientation = -0.707107,0,0,0.707107;
-	  p position = 1.86034,2.91602,-4.41909,0x7aa1b6bc;
-	}
-}
-[t:emt_particle,n:0x01c002bc]
-{
-	[particle_emitter]
-	{
-	  f blue = 0.2;
-	  i count = 100;
-	  b dark = true;
-	  f end_radius_max = 10;
-	  f end_radius_min = 8;
-	  f fade = 0.3;
-	  f green = 0.2;
-	  f growth = 7;
-	  f particle_fit = 1;
-	  f particle_size = 2;
-	  f red = 0.2;
-	  f yacc = 6;
-	  f zacc = -2;
-	  f zvel = 6;
-	}
-	[placement]
-	{
-	  q orientation = 0,1,0,0;
-	  p position = 0.615358,-0.073571,-3.71863,0x7aa1b6bc;
-	}
-}
-[t:emt_particle,n:0x01c002ff]
-{
-	[particle_emitter]
-	{
-	  f blue = 0.2;
-	  i count = 100;
-	  b dark = true;
-	  f end_radius_max = 10;
-	  f end_radius_min = 8;
-	  f fade = 0.3;
-	  f green = 0.2;
-	  f growth = 7;
-	  f particle_fit = 1;
-	  f particle_size = 2;
-	  f red = 0.2;
-	  f yacc = 6;
-	  f zacc = -2;
-	  f zvel = 6;
-	}
-	[placement]
-	{
-	  q orientation = 0,1,0,0;
-	  p position = 3.04884,-2.60393,-3.21855,0x7aa1b6bc;
-	}
-}
 [t:emt_sound,n:0x01c00b46]
 {
 	[common]
@@ -773,29 +620,6 @@
 		event_sound = "amb_wind_01b";
 	}
 }
-[t:emitter_grs_froth_01,n:0x01c0036e]
-{
-	[placement]
-	{
-	  q orientation = 0,0.999845,0,-0.017452;
-	  p position = 3.32933,0.633056,-0.561803,0xb8f9bfa9;
-	}
-}
-[t:emitter_grs_froth_02,n:0x01c0051b]
-{
-	[placement]
-	{
-	  q orientation = 0,-0.034899,0,0.99939;
-	  p position = 0.259585,0.745481,6.2606,0xb8f9bfa9;
-	}
-}
-[t:emitter_glb_smoke_01,n:0x01c003f7]
-{
-	[placement]
-	{
-	  p position = 2.43891,4.52455,2.62052,0xf83a811c;
-	}
-}
 [t:emt_sound,n:0x01c00581]
 {
 	[placement]
@@ -807,5 +631,21 @@
 	{
 	  b continual_loop = true;
 		event_sound = "amb_wind_01b";
+	}
+}
+[t:emitter_grs_froth_02,n:0x01c0051b]
+{
+	[placement]
+	{
+	  q orientation = 0,-0.0348991,0,0.999391;
+	  p position = 1.91074,0.645481,-1.18585,0xa08184cd;
+	}
+}
+[t:emitter_grs_froth_01,n:0x01c0036e]
+{
+	[placement]
+	{
+	  q orientation = 0,0.999848,0,-0.017452;
+	  p position = 1.79687,0.533056,0.727049,0x83ef9a9b;
 	}
 }
