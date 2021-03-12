@@ -1239,3 +1239,32 @@
 	  p position = -1.55525,-0.950001,2.44482,0x3be680e9;
 	}
 }
+[t:trigger_generic,n:0x01c00039]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = mood_change("map_world_fh_r1_1");
+			  b can_self_destruct = true;
+				condition* = party_member_within_sphere(10.000000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.932161,0,0.362045;
+	  p position = 3.15598,2,2.99307,0x141a3717;
+	}
+}
