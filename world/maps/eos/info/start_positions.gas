@@ -1,8 +1,31 @@
 [start_positions]
 {
-	[t:start_group,n:default]
+	[t:start_group,n:alpha_centauri]
 	{
 	  b default = true;
+		description = "Alpha Centauri";
+	  b dev_only = false;
+	  i id = 1698464;
+		screen_name = "Alpha Centauri";
+		[start_position]
+		{
+		  i id = 1;
+			position = -1.001064,0.000000,0.209614,0xEF773478;
+			[camera]
+			{
+			  f azimuth = 0.500000;
+			  f distance = 20.000000;
+			  f orbit = 0.000000;
+				position = -1.001064,0.000000,0.209614,0xEF773478;
+			}
+		}
+		[world_levels]
+		{
+		}
+	}
+	[t:start_group,n:default]
+	{
+	  b default = false;
 		description = "This is the default group.";
 	  b dev_only = false;
 	  i id = 0;

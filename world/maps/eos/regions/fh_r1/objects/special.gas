@@ -531,6 +531,124 @@
 	  p position = 1.19134,-0.991916,-2.97388,0xa6775069;
 	}
 }
+[t:trigger_change_mood_box,n:0x01c00b4a]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = mood_change("map_world_fh_r1_1");
+			  b can_self_destruct = true;
+				condition* = party_member_within_bounding_box(20.000000,2.000000,0.500000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,0.634393,0,0.77301;
+	  p position = -2.46906,0.0573583,2.59078,0x1b3d7dca;
+	}
+}
+[t:trigger_snd_msg_activate,n:0x01c00362]
+{
+	[common]
+	{
+		dev_instance_text = "GENERATOR";
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_activate",0x01C002D3,0f,"default","",0);
+			  b can_self_destruct = true;
+				condition* = party_member_within_sphere(5.000000,"on_first_enter"), doc("[*one-shot check (trigger is one-shot)*]");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = true;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.707107,0,0.707107;
+	  p position = 2.22308,7e-006,2.6298,0xa90c0155;
+	}
+}
+[t:trigger_change_mood_box,n:0x01c00b4e]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = mood_change("map_world_fh_r1_2");
+			  b can_self_destruct = true;
+				condition* = party_member_within_bounding_box(14.000000,2.000000,0.500000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.923879,0,0.382683;
+	  p position = -3.73077,0,-3.92175,0xa90c0155;
+	}
+}
+[t:trigger_generic,n:0x01c00d88]
+{
+	[common]
+	{
+		dev_instance_text = "AUTO SAVE TRIGGER";
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_activate",0x01C00B9F,0f,"default","",0), doc("auto save");
+			  b can_self_destruct = true;
+				condition* = party_member_within_bounding_box(1.000000,0.500000,10.000000,"on_first_enter"), doc("[*one-shot check (trigger is one-shot)*]");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = false;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = true;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,0.894935,0,0.446197;
+	  p position = -3.88158,0,-3.46488,0xa90c0155;
+	}
+}
 [t:trigger_generic,n:0x01c0000e]
 {
 	[common]
@@ -989,124 +1107,6 @@
 	{
 	  q orientation = 0,1,0,0;
 	  p position = 0.71286,-0.0256431,-0.539284,0x96e0f28b;
-	}
-}
-[t:trigger_snd_msg_activate,n:0x01c00362]
-{
-	[common]
-	{
-		dev_instance_text = "GENERATOR";
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = send_world_message("we_req_activate",0x01C002D3,0f,"default","",0);
-			  b can_self_destruct = true;
-				condition* = party_member_within_sphere(5.000000,"on_first_enter"), doc("[*one-shot check (trigger is one-shot)*]");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = true;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  q orientation = 0,-0.707107,0,0.707107;
-	  p position = 2.22308,7e-006,2.6298,0xa90c0155;
-	}
-}
-[t:trigger_change_mood_box,n:0x01c00b4e]
-{
-	[common]
-	{
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = mood_change("map_world_fh_r1_2");
-			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(14.000000,2.000000,0.500000,"on_every_enter");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  q orientation = 0,-0.923879,0,0.382683;
-	  p position = -3.73077,0,-3.92175,0xa90c0155;
-	}
-}
-[t:trigger_generic,n:0x01c00d88]
-{
-	[common]
-	{
-		dev_instance_text = "AUTO SAVE TRIGGER";
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = send_world_message("we_req_activate",0x01C00B9F,0f,"default","",0), doc("auto save");
-			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(1.000000,0.500000,10.000000,"on_first_enter"), doc("[*one-shot check (trigger is one-shot)*]");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = false;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = true;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  q orientation = 0,0.894935,0,0.446197;
-	  p position = -3.88158,0,-3.46488,0xa90c0155;
-	}
-}
-[t:trigger_change_mood_box,n:0x01c00b4a]
-{
-	[common]
-	{
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = mood_change("map_world_fh_r1_1");
-			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(20.000000,2.000000,0.500000,"on_every_enter");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  q orientation = 0,0.634393,0,0.77301;
-	  p position = -2.46906,0.0573583,2.59078,0x1b3d7dca;
 	}
 }
 [t:trigger_change_mood_box,n:0x01c0002b]
