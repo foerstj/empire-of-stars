@@ -6,13 +6,12 @@
 	  p position = 1.2645,-3.75,-3.65371,0x76250af7;
 	}
 }
-[t:respawn_statue,n:0x01c00b19]
+[t:door_grs_peasant_right,n:0x01c00096]
 {
 	[placement]
 	{
-	  q orientation = 0,0.92388,0,0.382683;
-	  p position = -2.36197,0,-0.56398,0xacf21c85;
-		use_point_scids = 0x01c008e8;
+	  q orientation = 0,0.156434,0,0.987688;
+	  p position = 1.28394,-3.65,-3.63803,0xe1cbfd2a;
 	}
 }
 [t:sign_glb_01,n:0x01c00db5]
@@ -27,18 +26,21 @@
 	  p position = -3.74889,0,3.55418,0x286944bd;
 	}
 }
-[t:door_grs_peasant_left,n:0x01c00b41]
+[t:respawn_statue,n:0x01c00b1a]
 {
-	[door_basic]
-	{
-	  x msg_scid_opening = 0x01C007BD;
-		msg_type_opening = we_trigger_activate;
-	}
 	[placement]
 	{
-	  q orientation = 0,1,0,-2.5332e-007;
-	  p position = 1.70149,-3.65,-3.15504,0x32cab6b9;
-		use_point_scids = 0x01c00797,0x01c007c5;
+	  q orientation = 0,1,0,5.96046e-007;
+	  p position = 0.071167,0.304918,0.0901642,0x96e0f28b;
+		use_point_scids = 0x01c007a7;
+	}
+}
+[t:door_grs_peasant_left,n:0x01c000e3]
+{
+	[placement]
+	{
+	  q orientation = 0,0.121869,0,-0.992546;
+	  p position = -0.364872,-3,-3.56424,0x4c62f5f9;
 	}
 }
 [t:door_glb_stormdoor_01,n:0x01c00521]
@@ -85,13 +87,27 @@
 		use_point_scids = 0x01c00b9d;
 	}
 }
-[t:respawn_statue,n:0x01c00b1a]
+[t:door_grs_peasant_left,n:0x01c00b41]
+{
+	[door_basic]
+	{
+	  x msg_scid_opening = 0x01C007BD;
+		msg_type_opening = we_trigger_activate;
+	}
+	[placement]
+	{
+	  q orientation = 0,1,0,-2.5332e-007;
+	  p position = 1.70149,-3.65,-3.15504,0x32cab6b9;
+		use_point_scids = 0x01c00797,0x01c007c5;
+	}
+}
+[t:respawn_statue,n:0x01c00b19]
 {
 	[placement]
 	{
-	  q orientation = 0,1,0,5.96046e-007;
-	  p position = 0.071167,0.304918,0.0901642,0x96e0f28b;
-		use_point_scids = 0x01c007a7;
+	  q orientation = 0,0.92388,0,0.382683;
+	  p position = -2.36197,0,-0.56398,0xacf21c85;
+		use_point_scids = 0x01c008e8;
 	}
 }
 [t:statue_cav_spin_02,n:0x01c0003f]
@@ -111,21 +127,5 @@
 	[placement]
 	{
 	  p position = 0.0402222,0.2,-0.0867863,0xa5ce3eb0;
-	}
-}
-[t:door_grs_peasant_right,n:0x01c00096]
-{
-	[placement]
-	{
-	  q orientation = 0,0.156434,0,0.987688;
-	  p position = 1.28394,-3.65,-3.63803,0xe1cbfd2a;
-	}
-}
-[t:door_grs_peasant_left,n:0x01c000e3]
-{
-	[placement]
-	{
-	  q orientation = 0,0.121869,0,-0.992546;
-	  p position = -0.364872,-3,-3.56424,0x4c62f5f9;
 	}
 }
