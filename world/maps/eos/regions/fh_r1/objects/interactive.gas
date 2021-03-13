@@ -1,20 +1,3 @@
-[t:generator_door_breakable_peasant,n:0x01c0021e]
-{
-	[aspect]
-	{
-	  b is_usable = true;
-	}
-	[generator_object_exploding]
-	{
-		child_template_name = "krug_scout";
-	  x initial_command = 0x01C0010C;
-	}
-	[placement]
-	{
-	  q orientation = 0,0.173648,0,0.984808;
-	  p position = 1.2645,-3.75,-3.65371,0x76250af7;
-	}
-}
 [t:respawn_statue,n:0x01c00b19]
 {
 	[placement]
@@ -122,13 +105,11 @@
 	  p position = 0.0402222,0.2,-0.0867863,0xa5ce3eb0;
 	}
 }
-[t:bookcase_glb_gen_01,n:0x01c00ad1]
+[t:door_grs_peasant_right,n:0x01c0021e]
 {
 	[placement]
 	{
-		drop_point_scids = 0x01c00af1;
-	  q orientation = 0,1,0,-2.38419e-007;
-	  p position = -2.57706,-0.949999,3.6232,0x3be680e9;
-		use_point_scids = 0x01c00b10;
+	  q orientation = 0,0.173648,0,0.984808;
+	  p position = 1.2645,-3.75,-3.65371,0x76250af7;
 	}
 }
