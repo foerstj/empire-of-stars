@@ -46,6 +46,10 @@
 }
 [t:starter_shop,n:0x01c00251]
 {
+	[common]
+	{
+		screen_name = "Mayor of Eddiloo";
+	}
 	[conversation]
 	{
 		[conversations]
@@ -101,6 +105,10 @@
 }
 [t:mp_peasant_male_01,n:0x01c000d5]
 {
+	[common]
+	{
+		screen_name = "Farmer";
+	}
 	[conversation]
 	{
 		[conversations]
@@ -129,6 +137,10 @@
 }
 [t:smithy_liorne,n:0x01c00037]
 {
+	[common]
+	{
+		screen_name = "Eduard";
+	}
 	[conversation]
 	{
 		[conversations]
@@ -136,6 +148,10 @@
 			* = mule_shop;
 			* = mule_shop_sold_out;
 		}
+	}
+	[mind]
+	{
+		jat_talk = world\ai\jobs\eos\job_talk_mule_shop.skrit;
 	}
 	[placement]
 	{
@@ -145,6 +161,16 @@
 }
 [t:mule_bt_r1,n:0x01c0003a]
 {
+	[aspect]
+	{
+	  i gold_value = 20;
+	  b is_selectable = true;
+	}
+	[common]
+	{
+	  b rollover_display = true;
+		screen_name = "Eberhardt";
+	}
 	[placement]
 	{
 	  q orientation = 0,0.760154,0,0.649743;
@@ -217,6 +243,10 @@
 }
 [t:mp_townfolk_f_06,n:0x01c000c1]
 {
+	[common]
+	{
+		screen_name = "Farmer";
+	}
 	[conversation]
 	{
 		[conversations]
@@ -240,15 +270,7 @@
 	[placement]
 	{
 	  q orientation = 0,0.987936,0,0.154862;
-	  p position = 0.249281,0.150144,-3.1391,0x94d66105;
-	}
-}
-[t:phrak,n:0x01c00350]
-{
-	[placement]
-	{
-	  q orientation = 0,1,0,0;
-	  p position = -2.16986,-0.3,3.14959,0x46a142f2;
+	  p position = 0.250584,0.149883,-2.93314,0x94d66105;
 	}
 }
 [t:cow_brown,n:0x01c0009f]
@@ -329,6 +351,14 @@
 	{
 	  q orientation = 0,-0.923879,0,-0.382683;
 	  p position = 0.264843,0,3.1239,0x102a84f2;
+	}
+}
+[t:phrak,n:0x01c00350]
+{
+	[placement]
+	{
+	  q orientation = 0,1,0,0;
+	  p position = -2.16986,-0.3,3.14959,0x46a142f2;
 	}
 }
 [t:phrak_piercer,n:0x01c00b32]
@@ -474,8 +504,13 @@
 {
 	[aspect]
 	{
+	  i gold_value = 100;
 	  f max_life = 49;
 	  f max_mana = 30;
+	}
+	[common]
+	{
+		screen_name = "Laura";
 	}
 	[conversation]
 	{
@@ -490,7 +525,7 @@
 	}
 	[mind]
 	{
-		jat_talk = world\ai\jobs\common\job_talk.skrit;
+		jat_talk = world\ai\jobs\eos\job_talk_ulora.skrit;
 	}
 	[placement]
 	{
@@ -1030,20 +1065,20 @@
 	  p position = 1.28694,-0.991923,-2.87769,0xec922d35;
 	}
 }
-[t:phrak_piercer,n:0x01c00b2d]
-{
-	[placement]
-	{
-	  q orientation = 0,1,0,2.98023e-008;
-	  p position = 1.59135,1,3.13005,0x75c09d09;
-	}
-}
 [t:phrak,n:0x01c0030d]
 {
 	[placement]
 	{
 	  q orientation = 0,1,0,0;
 	  p position = 0.075626,1.00808,2.80562,0x75c09d09;
+	}
+}
+[t:phrak_piercer,n:0x01c00b2d]
+{
+	[placement]
+	{
+	  q orientation = 0,1,0,2.98023e-008;
+	  p position = 1.59135,1,3.13005,0x75c09d09;
 	}
 }
 [t:snapper,n:0x01c00208]
