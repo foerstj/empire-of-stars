@@ -196,3 +196,31 @@
 	  f repeat_rate = 5;
 	}
 }
+[t:emt_sound_act,n:0x06000003]
+{
+	[placement]
+	{
+	  q orientation = 0,0.400032,0,0.916501;
+	  p position = 2.79736,0.45,2.30142,0xe23793d3;
+	}
+	[sound_emitter_act]
+	{
+		event_sound = "secret_found_2";
+	  b repeat = false;
+	  b start_on_creation = false;
+	}
+}
+[t:emt_sound_act,n:0x06000002]
+{
+	[placement]
+	{
+	  q orientation = 0,0.313273,0,0.949663;
+	  p position = 2.24356,0.450001,2.71457,0xe23793d3;
+	}
+	[sound_emitter_act]
+	{
+	  b continual_loop = true;
+		event_sound = "secret_nearby";
+	  b stop_instantly = true;
+	}
+}
