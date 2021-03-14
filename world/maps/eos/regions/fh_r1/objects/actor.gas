@@ -53,6 +53,10 @@
 			* = starter_shop;
 		}
 	}
+	[mind]
+	{
+		jat_talk = world\ai\jobs\common\job_talk.skrit;
+	}
 	[placement]
 	{
 	  q orientation = 0,0.622515,0,-0.782608;
@@ -97,6 +101,13 @@
 }
 [t:mp_peasant_male_01,n:0x01c000d5]
 {
+	[conversation]
+	{
+		[conversations]
+		{
+			* = farmer_man;
+		}
+	}
 	[inventory]
 	{
 		[equipment]
@@ -104,6 +115,11 @@
 			es_feet = bo_bo_le_light;
 			es_weapon_hand = hoe;
 		}
+	}
+	[mind]
+	{
+	  b actor_auto_fidgets = false;
+		jat_talk = world\ai\jobs\common\job_talk.skrit;
 	}
 	[placement]
 	{
@@ -113,6 +129,14 @@
 }
 [t:smithy_liorne,n:0x01c00037]
 {
+	[conversation]
+	{
+		[conversations]
+		{
+			* = mule_shop;
+			* = mule_shop_sold_out;
+		}
+	}
 	[placement]
 	{
 	  q orientation = 0,-0.902159,0,0.431404;
@@ -193,6 +217,13 @@
 }
 [t:mp_townfolk_f_06,n:0x01c000c1]
 {
+	[conversation]
+	{
+		[conversations]
+		{
+			* = farmer_woman;
+		}
+	}
 	[inventory]
 	{
 		[equipment]
@@ -201,17 +232,23 @@
 			es_weapon_hand = hoe;
 		}
 	}
+	[mind]
+	{
+	  b actor_auto_fidgets = false;
+		jat_talk = world\ai\jobs\common\job_talk.skrit;
+	}
 	[placement]
 	{
 	  q orientation = 0,0.987936,0,0.154862;
-	  p position = -0.292309,0.521716,-3.33379,0x94d66105;
+	  p position = 0.249281,0.150144,-3.1391,0x94d66105;
 	}
 }
 [t:phrak,n:0x01c00350]
 {
 	[placement]
 	{
-	  p position = 3.39692,-2e-006,2.0476,0x6b0e8d08;
+	  q orientation = 0,1,0,0;
+	  p position = -2.16986,-0.3,3.14959,0x46a142f2;
 	}
 }
 [t:cow_brown,n:0x01c0009f]
@@ -431,6 +468,34 @@
 	[placement]
 	{
 	  p position = -0.483058,-0.0316124,-0.788987,0xc8222cbb;
+	}
+}
+[t:eos_ulora,n:0x01c00028]
+{
+	[aspect]
+	{
+	  f max_life = 49;
+	  f max_mana = 30;
+	}
+	[conversation]
+	{
+		[conversations]
+		{
+			* = hire_ulora;
+			* = pm_accept;
+			* = pm_disband;
+			* = pm_reject;
+			* = pm_rejoin;
+		}
+	}
+	[mind]
+	{
+		jat_talk = world\ai\jobs\common\job_talk.skrit;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.893591,0,-0.448882;
+	  p position = -3.10318,0,1.97691,0x56d2c576;
 	}
 }
 [t:dog_sleeping,n:0x01c005b2]
@@ -969,7 +1034,8 @@
 {
 	[placement]
 	{
-	  p position = 2.9988,0,-1.49577,0x15c8fdde;
+	  q orientation = 0,1,0,2.98023e-008;
+	  p position = 1.59135,1,3.13005,0x75c09d09;
 	}
 }
 [t:phrak,n:0x01c0030d]
@@ -1467,29 +1533,5 @@
 	{
 	  q orientation = 0,0.130526,0,-0.991445;
 	  p position = -0.0514644,0,2.06486,0xf0ac542f;
-	}
-}
-[t:eos_ulora,n:0x01c00028]
-{
-	[aspect]
-	{
-	  f max_life = 49;
-	  f max_mana = 30;
-	}
-	[conversation]
-	{
-		[conversations]
-		{
-			* = hire_ulora;
-			* = pm_accept;
-			* = pm_disband;
-			* = pm_reject;
-			* = pm_rejoin;
-		}
-	}
-	[placement]
-	{
-	  q orientation = 0,0.893591,0,-0.448882;
-	  p position = -3.10318,0,1.97691,0x56d2c576;
 	}
 }

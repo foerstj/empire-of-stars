@@ -55,6 +55,40 @@ Let's go home, I'm hungry...";
 		screen_text = "My thanks for clearing out the Krug. If they're coming after farmers in our own homes, I don't doubt you'll battle many more on your journey to Stonebridge; you'd best be on your way. Watch out for yourself and don't worry about me; I've enough supplies in the cellar to keep me going until this blows over.";
 	}
 }
+[farmer_woman]
+{
+	[text*]
+	{
+		screen_text = "Hello I'm the farmer woman.";
+	  f scroll_rate = 10.000000;
+	}
+}
+[hire_ulora]
+{
+	[text*]
+	{
+		choice = potential_member;
+		screen_text = "Hire?";
+	  f scroll_rate = 10.000000;
+	}
+}
+[mule_shop]
+{
+	[text*]
+	{
+		choice = buy_packmule;
+		screen_text = "Mule?";
+	  f scroll_rate = 10.000000;
+	}
+}
+[mule_shop_sold_out]
+{
+	[text*]
+	{
+		screen_text = "Sold out!";
+	  f scroll_rate = 10.000000;
+	}
+}
 [pm_accept]
 {
 	[text*]
@@ -97,12 +131,11 @@ Let's go home, I'm hungry...";
 	  f scroll_rate = 10.000000;
 	}
 }
-[hire_ulora]
+[farmer_man]
 {
 	[text*]
 	{
-		choice = potential_member;
-		screen_text = "Hire?";
+		screen_text = "Hello I'm the farmer man.";
 	  f scroll_rate = 10.000000;
 	}
 }
