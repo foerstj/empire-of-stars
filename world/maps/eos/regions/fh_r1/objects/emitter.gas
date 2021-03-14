@@ -6,24 +6,6 @@
 	  p position = -3.73071,3.93953,2.06602,0x76250af7;
 	}
 }
-[t:emt_sound_act,n:0x01c00b24]
-{
-	[common]
-	{
-	  b is_multi_player = false;
-	}
-	[placement]
-	{
-	  q orientation = 0,0.999848,0,0.0174521;
-	  p position = 3.12829,3.03755,-1.39099,0x863ac4b6;
-	}
-	[sound_emitter_act]
-	{
-	  b continual_loop = true;
-		event_sound = "amb_rain_01";
-	  b start_on_creation = false;
-	}
-}
 [t:emt_sound,n:0x01c00b55]
 {
 	[common]
@@ -296,24 +278,6 @@
 	  i start_hour = 1;
 	  i stop_hour = 4;
 	  i time_chunk = 1;
-	}
-}
-[t:emt_sound_act,n:0x01c00b18]
-{
-	[common]
-	{
-	  b is_multi_player = false;
-	}
-	[placement]
-	{
-	  q orientation = 0,0.694659,0,0.71934;
-	  p position = 2.92772,2.27132,-1.1779,0x89d586d9;
-	}
-	[sound_emitter_act]
-	{
-	  b continual_loop = true;
-		event_sound = "amb_rain_01";
-	  b start_on_creation = false;
 	}
 }
 [t:emt_sound,n:0x01c00b56]
@@ -647,5 +611,21 @@
 	{
 	  b continual_loop = true;
 		event_sound = "amb_woods_01";
+	}
+}
+[t:emitter_glb_smoke_01,n:0x01c00039]
+{
+	[placement]
+	{
+	  q orientation = 0,0.707106,0,0.707107;
+	  p position = -3.74262,3.93953,2.07699,0xe1cbfd2a;
+	}
+}
+[t:emitter_glb_smoke_01,n:0x01c000da]
+{
+	[placement]
+	{
+	  q orientation = 0,-7.45058e-007,0,1;
+	  p position = 4.30445,4.7828,2.04498,0x4c62f5f9;
 	}
 }

@@ -2,6 +2,7 @@
 {
 	[common]
 	{
+		dev_instance_text = "FADES";
 		[instance_triggers]
 		{
 			[*]
@@ -32,6 +33,7 @@
 {
 	[common]
 	{
+		dev_instance_text = "FADES";
 		[instance_triggers]
 		{
 			[*]
@@ -61,14 +63,14 @@
 {
 	[common]
 	{
-		dev_instance_text = "INTEREST RADIUS";
+		dev_instance_text = "MOOD & MORE";
 		[instance_triggers]
 		{
 			[*]
 			{
 				action* = send_world_message("we_req_deactivate",0x01C00B24,0f,"default","",0);
 				action* = send_world_message("we_req_deactivate",0x01C00B18,0f,"default","",0);
-				action* = mood_change("map_world_fh_r1_4");
+				action* = mood_change("eos_alphacentauri_eddiloo");
 				action* = set_interest_radius(25f,"party_member_within_bounding_box");
 			  b can_self_destruct = true;
 				condition* = party_member_within_bounding_box(2.000000,2.000000,1.000000,"on_every_enter");
@@ -114,7 +116,7 @@
 		{
 			[*]
 			{
-				action* = mood_change("map_world_fh_r1_4");
+				action* = mood_change("eos_alphacentauri_eddiloo_indoor");
 			  b can_self_destruct = true;
 				condition* = party_member_within_bounding_box(1.500000,2.000000,0.500000,"on_every_enter");
 			  f delay = 0.000000;
@@ -154,11 +156,13 @@
 {
 	[common]
 	{
+		dev_instance_text = "FADE & MOOD";
 		[instance_triggers]
 		{
 			[*]
 			{
 				action* = fade_nodes(0xAAA10100,1,4,-1,"out:black");
+				action* = mood_change("eos_alphacentauri_eddiloo_indoor");
 			  b can_self_destruct = true;
 				condition* = party_member_within_bounding_box(0.500000,0.500000,1.000000,"on_every_enter");
 			  f delay = 0.000000;
@@ -183,11 +187,13 @@
 {
 	[common]
 	{
+		dev_instance_text = "FADE & MOOD";
 		[instance_triggers]
 		{
 			[*]
 			{
 				action* = fade_nodes(0xAAA10100,1,4,-1,"in");
+				action* = mood_change("eos_alphacentauri_eddiloo");
 			  b can_self_destruct = true;
 				condition* = party_member_within_bounding_box(1.000000,0.500000,1.500000,"on_every_enter");
 			  f delay = 0.000000;
@@ -522,11 +528,13 @@
 {
 	[common]
 	{
+		dev_instance_text = "FADE & MOOD";
 		[instance_triggers]
 		{
 			[*]
 			{
 				action* = fade_nodes(0xAAA10100,1,5,-1,"in");
+				action* = mood_change("eos_alphacentauri_eddiloo");
 			  b can_self_destruct = true;
 				condition* = party_member_within_bounding_box(0.500000,0.500000,1.000000,"on_every_enter");
 			  f delay = 0.000000;
@@ -551,11 +559,13 @@
 {
 	[common]
 	{
+		dev_instance_text = "FADE & MOOD";
 		[instance_triggers]
 		{
 			[*]
 			{
 				action* = fade_nodes(0xAAA10100,1,5,-1,"in");
+				action* = mood_change("eos_alphacentauri_eddiloo");
 			  b can_self_destruct = true;
 				condition* = party_member_within_bounding_box(0.500000,0.500000,1.000000,"on_every_enter");
 			  f delay = 0.000000;
@@ -580,11 +590,13 @@
 {
 	[common]
 	{
+		dev_instance_text = "FADE & MOOD";
 		[instance_triggers]
 		{
 			[*]
 			{
 				action* = fade_nodes(0xAAA10100,1,5,-1,"in");
+				action* = mood_change("eos_alphacentauri_eddiloo");
 			  b can_self_destruct = true;
 				condition* = party_member_within_bounding_box(0.500000,0.500000,1.000000,"on_every_enter");
 			  f delay = 0.000000;
@@ -609,11 +621,13 @@
 {
 	[common]
 	{
+		dev_instance_text = "FADE & MOOD";
 		[instance_triggers]
 		{
 			[*]
 			{
 				action* = fade_nodes(0xAAA10100,1,5,-1,"out:black");
+				action* = mood_change("eos_alphacentauri_eddiloo_indoor");
 			  b can_self_destruct = true;
 				condition* = party_member_within_bounding_box(0.500000,0.500000,1.000000,"on_every_enter");
 			  f delay = 0.000000;
@@ -638,6 +652,7 @@
 {
 	[common]
 	{
+		dev_instance_text = "MOOD";
 		[instance_triggers]
 		{
 			[*]
@@ -726,7 +741,7 @@
 {
 	[common]
 	{
-		dev_instance_text = "FADE";
+		dev_instance_text = "FADES & MOOD";
 		[instance_triggers]
 		{
 			[*]
@@ -922,6 +937,7 @@
 {
 	[common]
 	{
+		dev_instance_text = "MOOD & MORE";
 		[instance_triggers]
 		{
 			[*]
@@ -1052,7 +1068,7 @@
 {
 	[common]
 	{
-		dev_instance_text = "FADE";
+		dev_instance_text = "FADES & MOOD";
 		[instance_triggers]
 		{
 			[*]
@@ -1213,7 +1229,7 @@
 		{
 			[*]
 			{
-				action* = mood_change("map_world_fh_r1_4");
+				action* = mood_change("eos_alphacentauri_eddiloo");
 			  b can_self_destruct = true;
 				condition* = party_member_within_bounding_box(2.000000,2.000000,0.500000,"on_every_enter");
 			  f delay = 0.000000;
@@ -1265,11 +1281,12 @@
 {
 	[common]
 	{
+		dev_instance_text = "MOOD";
 		[instance_triggers]
 		{
 			[*]
 			{
-				action* = mood_change("map_world_fh_r1_4");
+				action* = mood_change("eos_alphacentauri_eddiloo");
 			  b can_self_destruct = true;
 				condition* = party_member_within_bounding_box(3.000000,0.500000,3.000000,"on_every_enter");
 			  f delay = 0.000000;
