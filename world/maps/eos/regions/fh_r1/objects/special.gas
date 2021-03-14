@@ -216,12 +216,13 @@
 {
 	[common]
 	{
+		dev_instance_text = "MOODS";
 		[instance_triggers]
 		{
 			[*]
 			{
 				action* = mood_change("map_world_bc_r1_1"), group(1);
-				action* = mood_change("map_world_fh_r1_3"), group(2);
+				action* = mood_change("eos_alphacentauri_eddiloo"), group(2);
 			  b can_self_destruct = true;
 				condition* = party_member_entered_trigger_group("fh_r1_bear_cave","on_every_enter"), group(1);
 				condition* = party_member_left_trigger_group("fh_r1_bear_cave","on_every_leave"), group(2);
