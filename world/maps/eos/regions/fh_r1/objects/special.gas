@@ -68,8 +68,6 @@
 		{
 			[*]
 			{
-				action* = send_world_message("we_req_deactivate",0x01C00B24,0f,"default","",0);
-				action* = send_world_message("we_req_deactivate",0x01C00B18,0f,"default","",0);
 				action* = mood_change("eos_alphacentauri_eddiloo");
 				action* = set_interest_radius(25f,"party_member_within_bounding_box");
 			  b can_self_destruct = true;
@@ -81,22 +79,6 @@
 				occupants_group = ;
 			  f reset_duration = 0.000000;
 			  b single_player = true;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-			[*]
-			{
-				action* = mood_change("map_world_fh_r1_3");
-				action* = set_interest_radius(25f,"party_member_within_bounding_box");
-			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(2.000000,2.000000,1.000000,"on_every_enter");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = false;
 			  b single_shot = false;
 			  b start_active = true;
 			}

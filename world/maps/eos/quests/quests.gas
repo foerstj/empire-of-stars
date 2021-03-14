@@ -1,10 +1,43 @@
 [chapters]
 {
+	[c1_eos]
+	{
+		screen_name = Empire of Stars;
+		[*]
+		{
+			description = Quests of the whole map;
+		  i order = 0;
+		}
+	}
+	[c2_alpha_centauri]
+	{
+		screen_name = Alpha Centauri;
+		[*]
+		{
+			description = Quests on Alpha Centauri;
+		  i order = 0;
+		}
+	}
 }
 [quests]
 {
+	[alphacentauri_crypt]
+	{
+		chapter = c2_alpha_centauri;
+		screen_name = The Crypt;
+		victory_sample = s_e_level_up_quest;
+		[*]
+		{
+			description = Look for Starstones in the Crypt;
+		  b is_consumable = true;
+		  i order = 0;
+		  b required = true;
+			speaker = ;
+		}
+	}
 	[find_aunt_luna]
 	{
+		chapter = c1_eos;
 		screen_name = "Find Aunt Luna";
 		victory_sample = s_e_level_up_quest;
 		[*]
@@ -16,13 +49,32 @@
 	}
 	[find_way_home]
 	{
+		chapter = c1_eos;
 		screen_name = "Find Way Home";
 		victory_sample = s_e_level_up_quest;
 		[*]
 		{
-			description = "Oh no, you went into the Stellar Hub without the right starstone to get back home! You need to find one... Maybe Aunt Luna has one... But where is she?";
+			description = "Oh no, you went into the Stellar Hub without the right starstone to get back home! You need to find an Aranna Starstone. Maybe Aunt Luna has one... But where is she?";
 		  i order = 0;
 		  b required_update = true;
+		}
+		[*]
+		{
+			description = "Oh no, you went into the Stellar Hub without the right starstone to get back home! You need to find an Aranna Starstone.";
+		  i order = 1;
+		  b required_update = false;
+		}
+	}
+	[quest_edgaar_basement]
+	{		
+		chapter			= c2_alpha_centauri;
+		screen_name		= "The Chapel";
+		victory_sample	= s_e_level_up_quest;
+		quest_image 	= b_gui_ig_mnu_jnl_quest_02;
+		[*]
+		{
+			order		= 0;
+			description     = "Clear the Krug from the Chapel's basement, and gather supplies for the way to the Crypt.";
 		}
 	}
 }
