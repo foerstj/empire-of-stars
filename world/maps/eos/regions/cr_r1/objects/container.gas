@@ -578,6 +578,7 @@
 			{
 				action* = send_world_message("we_req_deactivate",0x06000002,0f,"default","every",0);
 				action* = send_world_message("we_req_activate",0x06000003,0f,"default","every",0);
+				action* = change_quest_state("alphacentauri_crypt","completed",0);
 			  b can_self_destruct = true;
 				condition* = receive_world_message("we_req_use",0,"on_every_message");
 			  f delay = 0.000000;
