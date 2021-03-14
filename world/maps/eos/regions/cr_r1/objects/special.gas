@@ -3217,25 +3217,6 @@
 	  p position = -0.730682,-3.57628e-007,0.780495,0x3e6c718f;
 	}
 }
-[t:accumulate_trigger,n:0x0600024b]
-{
-	[common]
-	{
-		dev_instance_text = "SCRIPTED EVENT ULORA SMART WHEN KRUGS DIE";
-	  b is_multi_player = false;
-	}
-	[generic_accumtrigger]
-	{
-		message_when_active = we_trigger_activate;
-	  i num_til_send = 3;
-	  x send_to_scid = 0x06000312;
-	}
-	[placement]
-	{
-	  q orientation = 0,1,0,-3.81469e-008;
-	  p position = 0.36386,2.55184,-0.781536,0x2dd5498d;
-	}
-}
 [t:trigger_change_mood_box,n:0x06000265]
 {
 	[common]
@@ -3263,90 +3244,6 @@
 	{
 	  q orientation = 0,1,0,2.5434e-009;
 	  p position = -1.28248,-4.17233e-006,-0.60415,0x2dd5498d;
-	}
-}
-[t:trigger_generic,n:0x06000312]
-{
-	[common]
-	{
-		dev_instance_text = "SCRIPTED EVENT ULORA STANDS ";
-	  b is_multi_player = false;
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = send_world_message("we_req_deactivate",0x06000323,0f,"default","",0), doc("make ulora stand");
-			  b can_self_destruct = true;
-				condition* = party_member_within_sphere(6.000000,"on_first_enter"), doc("[*one-shot check (trigger is one-shot)*]");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = true;
-			  b start_active = false;
-			}
-		}
-	}
-	[placement]
-	{
-	  q orientation = 0,3.81469e-008,0,1;
-	  p position = -1.61857,-2.26498e-006,-1.29893,0x2dd5498d;
-	}
-}
-[t:accumulate_trigger,n:0x06000313]
-{
-	[common]
-	{
-	  b is_single_player = false;
-	}
-	[generic_accumtrigger]
-	{
-		message_when_active = we_trigger_activate;
-	  i num_til_send = 3;
-	  x send_to_scid = 0x06000324;
-	}
-	[placement]
-	{
-	  q orientation = 0,1,0,-3.81469e-008;
-	  p position = -0.820193,2.16266,1.89883,0x2dd5498d;
-	}
-}
-[t:trigger_generic,n:0x06000324]
-{
-	[common]
-	{
-		dev_instance_text = "SCRIPTED EVENT MP make ulora stand";
-	  b is_single_player = false;
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = send_world_message("we_req_deactivate",0x06000326,0f,"default","",0), doc("make ulora stand");
-			  b can_self_destruct = true;
-				condition* = party_member_within_sphere(4.000000,"on_first_enter"), doc("[*one-shot check (trigger is one-shot)*]");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = true;
-			  b start_active = false;
-			}
-		}
-	}
-	[gizmo]
-	{
-	  v diffuse_color = 0,0,1;
-	}
-	[placement]
-	{
-	  q orientation = 0,3.81469e-008,0,1;
-	  p position = -0.591429,1.07288e-006,0.12802,0x2dd5498d;
 	}
 }
 [t:use_point,n:0x0600038f]
