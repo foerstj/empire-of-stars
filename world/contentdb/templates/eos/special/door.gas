@@ -1,0 +1,44 @@
+[t:template,n:door_eos_crypt_use_toggle]
+{
+	specializes		= base_door;
+	doc				= "eos door crypt use-toggle";
+    category_name   = "use_toggle";
+
+    [aspect]
+    {
+    	model	= m_i_glb_door-crypt-01;
+    	[textures]	{0=b_i_glb_door-crypts-01;}
+    	material = stone;
+	}
+	[body]
+	{
+		[chore_dictionary]
+		{
+        	chore_prefix = a_i_glb;
+
+			[chore_open]
+			{
+				skrit			= transition;
+				anim_files: 00	= door-crypt-01-open;
+			}
+			[chore_close]
+			{
+				skrit			= transition;
+				anim_files: 00	= door-crypt-01-open;
+			}
+		}
+	}
+	[messages]
+	{
+		[locked]
+		{
+			screen_text = "This door appears to be locked.";
+		}
+	}
+	[door_basic]
+	{
+		use_toggle		= true;
+		oneshot 		= true;
+        delete_on_open	= true;
+	}
+}
