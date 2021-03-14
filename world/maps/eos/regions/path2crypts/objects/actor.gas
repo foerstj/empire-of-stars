@@ -1200,50 +1200,6 @@
 	  p position = 2.97813,1.43051e-006,-3.94401,0x5cd43f5f;
 	}
 }
-[t:skartis,n:0x05a0089a]
-{
-	[actor]
-	{
-		alignment = aa_neutral;
-	}
-	[common]
-	{
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = change_quest_state("quest_for_gyorn","active",1);
-			  b can_self_destruct = true;
-				condition* = receive_world_message("we_req_talk_end",0,"on_every_message");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-		}
-	}
-	[conversation]
-	{
-		[conversations]
-		{
-			* = conversation_skartis;
-		}
-	}
-	[mind]
-	{
-		jat_talk = world\ai\jobs\common\job_talk.skrit;
-	}
-	[placement]
-	{
-	  q orientation = 0,-0.707107,0,-0.707107;
-	  p position = 4.35871,11.95,2.44078,0xe05666b8;
-	}
-}
 [t:phrak,n:0x05a001af]
 {
 	[placement]
