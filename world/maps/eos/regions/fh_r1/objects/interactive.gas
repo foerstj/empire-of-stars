@@ -117,12 +117,8 @@
 		use_point_scids = 0x01c008e8;
 	}
 }
-[t:statue_cav_spin_02,n:0x01c0003f]
+[t:eos_teleport_statue_big,n:0x01c0003f]
 {
-	[aspect]
-	{
-	  f scale_multiplier = 0.5;
-	}
 	[on_off_lever]
 	{
 		off_message = we_req_activate;
@@ -131,8 +127,6 @@
 	  x off_scid_2 = 0x07F00049;
 	  x on_scid = 0x01C0018D;
 	  x on_scid_2 = 0x07F00049;
-	  f reset_time = 20;
-	  f reset_time_2 = 20;
 	}
 	[placement]
 	{
@@ -141,7 +135,7 @@
 		use_point_scids = 0x01c00188,0x01c00185;
 	}
 }
-[t:statue_cav_spin_02,n:0x01c00041]
+[t:eos_teleport_statue_small,n:0x01c00041]
 {
 	[on_off_lever]
 	{

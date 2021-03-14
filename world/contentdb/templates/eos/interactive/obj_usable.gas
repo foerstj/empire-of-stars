@@ -1,0 +1,94 @@
+[t:template,n:eos_teleport_statue_big]
+{
+	specializes 		= base_usable;
+	doc 				= "eos teleport statue big";
+    category_name       = "levers";
+
+	[aspect]
+	{
+		model 				= m_i_cav_statue-spin-01;
+		material    		= stone_statue;
+		[textures] 			{0 = b_i_cav_statue-01;}
+		bounding_volume_scale		= 1.00000;
+		does_block_path = false;
+		scale_multiplier = .5;
+	}
+
+	[body]
+	{
+		[chore_dictionary]
+		{
+            chore_prefix = a_i_cav;
+
+			[chore_open]
+			{
+				skrit				= transition;
+				anim_files: 00		= statue-spin-01;
+			}
+			[chore_close]
+			{
+				skrit				= transition;
+				anim_files: 00		= statue-spin-01;
+			}
+		}
+	}
+	[common] { screen_name = "Interstellar Teleporter (requires starstone)"; }
+    [on_off_lever]
+	{
+		off_message = we_req_activate;
+		off_message_2 = we_req_activate;
+	  f off_message_delay = 1;
+	  f off_message_delay_2 = 1;
+	  f on_message_delay = 1;
+	  f on_message_delay_2 = 1;
+	  f reset_time = 20;
+	  f reset_time_2 = 20;
+	}
+}
+[t:template,n:eos_teleport_statue_small]
+{
+	specializes 		= base_usable;
+	doc 				= "eos teleport statue big";
+    category_name       = "levers";
+
+	[aspect]
+	{
+		model 				= m_i_cav_statue-spin-01;
+		material    		= stone_statue;
+		[textures] 			{0 = b_i_cav_statue-01;}
+		bounding_volume_scale		= 1.00000;
+		does_block_path = false;
+		scale_multiplier = .3;
+	}
+
+	[body]
+	{
+		[chore_dictionary]
+		{
+            chore_prefix = a_i_cav;
+
+			[chore_open]
+			{
+				skrit				= transition;
+				anim_files: 00		= statue-spin-01;
+			}
+			[chore_close]
+			{
+				skrit				= transition;
+				anim_files: 00		= statue-spin-01;
+			}
+		}
+	}
+	[common] { screen_name = "Interplanetary Teleporter (requires system pass)"; }
+    [on_off_lever]
+	{
+		off_message = we_req_activate;
+		off_message_2 = we_req_activate;
+	  f off_message_delay = 0.5;
+	  f off_message_delay_2 = 0.5;
+	  f on_message_delay = 0.5;
+	  f on_message_delay_2 = 0.5;
+	  f reset_time = 20;
+	  f reset_time_2 = 20;
+	}
+}
