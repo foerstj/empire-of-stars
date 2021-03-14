@@ -1,0 +1,80 @@
+[t:emt_generic,n:0x06e00022]
+{
+	[generic_emitter]
+	{
+	  f rep_freq_max = 0.7;
+	  f rep_freq_min = 0.1;
+	  
+	  b water_wave = true;
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.707107,0,0.707107;
+	  p position = -0.0316696,-0.95069,-0.411392,0x7b4a930c;
+	}
+}
+[t:emt_sound,n:0x06e000f3]
+{
+	[placement]
+	{
+	  q orientation = 0,1,0,0;
+	  p position = -0.0816574,-0.580914,-0.0655603,0x7b4a930c;
+	}
+	[sound_emitter]
+	{
+	  b continual_loop = true;
+		event_sound = "env_pipe_liquid";
+	}
+}
+[t:emt_generic,n:0x06e00029]
+{
+	[generic_emitter]
+	{
+	  f rep_freq_max = 0.7;
+	  f rep_freq_min = 0.1;
+	  
+	  b water_wave = true;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.707107,0,0.707107;
+	  p position = 0.0433159,-0.941289,-0.411554,0x2496bc35;
+	}
+}
+[t:emt_sound,n:0x06e000ef]
+{
+	[placement]
+	{
+	  p position = -0.0376854,-0.580912,0.214413,0x2496bc35;
+	}
+	[sound_emitter]
+	{
+	  b continual_loop = true;
+		event_sound = "env_pipe_liquid";
+	}
+}
+[t:emt_sound,n:0x06e000ee]
+{
+	[placement]
+	{
+	  q orientation = 0,1,0,0;
+	  p position = -0.164101,0.656097,-0.525296,0x6d616064;
+	}
+	[sound_emitter]
+	{
+	  b continual_loop = true;
+		event_sound = "env_pipe_liquid";
+	}
+}
+[t:emt_sound,n:0x06e000f6]
+{
+	[placement]
+	{
+	  p position = 0.0657272,0.656097,-0.343736,0xd7296549;
+	}
+	[sound_emitter]
+	{
+	  b continual_loop = true;
+		event_sound = "env_pipe_liquid";
+	}
+}
