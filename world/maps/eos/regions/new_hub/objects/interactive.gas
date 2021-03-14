@@ -99,11 +99,12 @@
 	}
 	[on_off_lever]
 	{
-	  b initially_active = false;
-	  b initially_usable = false;
 		off_message = we_req_activate;
+		off_message_2 = we_req_activate;
 	  x off_scid = 0x07F00049;
+	  x off_scid_2 = 0x01C0018D;
 	  x on_scid = 0x07F00049;
+	  x on_scid_2 = 0x01C0018D;
 	  f reset_time = 20;
 	  f reset_time_2 = 20;
 	}
