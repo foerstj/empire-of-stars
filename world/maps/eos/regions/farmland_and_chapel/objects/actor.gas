@@ -1280,6 +1280,10 @@
 }
 [t:mp_guard_03,n:0x01c00269]
 {
+	[aspect]
+	{
+	  b is_collidable = false;
+	}
 	[check_level]
 	{
 	  b check_level = true;
@@ -1300,14 +1304,10 @@
 			* = conversation_guard_red;
 		}
 	}
-	[aspect]
-	{
-		b is_collidable = false;
-	}
 	[mind]
 	{
-		b actor_may_attack = false;
-	  	b actor_may_be_attacked = false;
+	  b actor_may_attack = false;
+	  b actor_may_be_attacked = false;
 		jat_talk = world\ai\jobs\common\job_talk_mp.skrit;
 	}
 	[placement]
