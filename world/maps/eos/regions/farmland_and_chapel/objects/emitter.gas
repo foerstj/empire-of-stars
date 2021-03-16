@@ -7,7 +7,7 @@
 	}
 	[sound_emitter]
 	{
-		event_sound = "amb_crickets";
+		event_sound = "amb_birds";
 	  f max_repeat_rate = 20;
 	  f repeat_rate = 3;
 	  i start_hour = 21;
@@ -23,99 +23,11 @@
 	}
 	[sound_emitter]
 	{
-		event_sound = "amb_crickets";
+		event_sound = "amb_birds1";
 	  f max_repeat_rate = 20;
 	  f repeat_rate = 3;
 	  i start_hour = 21;
 	  i stop_hour = 4;
-	}
-}
-[t:emt_sound,n:0x01c00a1c]
-{
-	[placement]
-	{
-	  q orientation = 0,0.906308,0,0.422618;
-	  p position = 1.69131,0.56907,1.34535,0x19495bab;
-	}
-	[sound_emitter]
-	{
-		event_sound = "amb_birds2";
-	  f max_repeat_rate = 20;
-	  f repeat_rate = 3;
-	  i start_hour = 5;
-	  i stop_hour = 21;
-	}
-}
-[t:emt_sound,n:0x01c00a20]
-{
-	[placement]
-	{
-	  q orientation = 0,-0.422618,0,0.906308;
-	  p position = -0.727508,0,1.93044,0x8c41725b;
-	}
-	[sound_emitter]
-	{
-		event_sound = "amb_crickets";
-	  f max_repeat_rate = 20;
-	  f repeat_rate = 3;
-	  i start_hour = 21;
-	  i stop_hour = 4;
-	}
-}
-[t:emt_sound_act,n:0x01c003e5]
-{
-	[placement]
-	{
-	  p position = 0.0113602,-1.21255,0.0335083,0x5dcf0cb0;
-	}
-	[sound_emitter_act]
-	{
-		event_sound = "env_shrine_health";
-	  b start_on_creation = false;
-	}
-}
-[t:emt_sound,n:0x01c00a1f]
-{
-	[placement]
-	{
-	  q orientation = 0,0.34202,0,0.939693;
-	  p position = -0.979263,0,-0.86142,0xaea331dd;
-	}
-	[sound_emitter]
-	{
-		event_sound = "amb_crickets";
-	  f max_repeat_rate = 20;
-	  f repeat_rate = 3;
-	  i start_hour = 21;
-	  i stop_hour = 4;
-	}
-}
-[t:emt_sound,n:0x01c00a22]
-{
-	[placement]
-	{
-	  q orientation = 0,0.34202,0,0.939693;
-	  p position = -0.316666,0,1.688,0xe51d08fa;
-	}
-	[sound_emitter]
-	{
-		event_sound = "amb_crickets";
-	  f max_repeat_rate = 20;
-	  f repeat_rate = 3;
-	  i start_hour = 21;
-	  i stop_hour = 4;
-	}
-}
-[t:emt_sound_act,n:0x01c003ef]
-{
-	[placement]
-	{
-	  p position = 0.047164,-0.749999,0.0109406,0xb32ba674;
-	}
-	[sound_emitter_act]
-	{
-		event_sound = "env_shrine_mana";
-	  b start_on_creation = false;
 	}
 }
 [t:emt_sound,n:0x01c00a18]
@@ -175,11 +87,83 @@
 	}
 	[sound_emitter]
 	{
-		event_sound = "amb_crickets";
+		event_sound = "amb_birds1";
 	  f max_repeat_rate = 20;
 	  f repeat_rate = 3;
 	  i start_hour = 21;
 	  i stop_hour = 4;
+	}
+}
+[t:emt_sound_act,n:0x01c003ef]
+{
+	[placement]
+	{
+	  p position = 0.047164,-0.749999,0.0109406,0xb32ba674;
+	}
+	[sound_emitter_act]
+	{
+		event_sound = "env_shrine_mana";
+	  b start_on_creation = false;
+	}
+}
+[t:emt_sound,n:0x01c00a22]
+{
+	[placement]
+	{
+	  q orientation = 0,0.34202,0,0.939693;
+	  p position = -0.316666,0,1.688,0xe51d08fa;
+	}
+	[sound_emitter]
+	{
+		event_sound = "amb_birds";
+	  f max_repeat_rate = 20;
+	  f repeat_rate = 3;
+	  i start_hour = 21;
+	  i stop_hour = 4;
+	}
+}
+[t:emt_sound,n:0x01c00a20]
+{
+	[placement]
+	{
+	  q orientation = 0,-0.422618,0,0.906308;
+	  p position = -0.727508,0,1.93044,0x8c41725b;
+	}
+	[sound_emitter]
+	{
+		event_sound = "amb_birds";
+	  f max_repeat_rate = 20;
+	  f repeat_rate = 3;
+	  i start_hour = 21;
+	  i stop_hour = 4;
+	}
+}
+[t:emt_sound_act,n:0x01c003e5]
+{
+	[placement]
+	{
+	  p position = 0.0113602,-1.21255,0.0335083,0x5dcf0cb0;
+	}
+	[sound_emitter_act]
+	{
+		event_sound = "env_shrine_health";
+	  b start_on_creation = false;
+	}
+}
+[t:emt_sound,n:0x01c00a1c]
+{
+	[placement]
+	{
+	  q orientation = 0,0.906308,0,0.422618;
+	  p position = 1.69131,0.56907,1.34535,0x19495bab;
+	}
+	[sound_emitter]
+	{
+		event_sound = "amb_birds2";
+	  f max_repeat_rate = 20;
+	  f repeat_rate = 3;
+	  i start_hour = 5;
+	  i stop_hour = 21;
 	}
 }
 [t:emt_sound,n:0x01c00a19]
@@ -191,7 +175,23 @@
 	}
 	[sound_emitter]
 	{
-		event_sound = "amb_crickets";
+		event_sound = "amb_birds";
+	  f max_repeat_rate = 20;
+	  f repeat_rate = 3;
+	  i start_hour = 21;
+	  i stop_hour = 4;
+	}
+}
+[t:emt_sound,n:0x01c00a1f]
+{
+	[placement]
+	{
+	  q orientation = 0,0.34202,0,0.939693;
+	  p position = -0.979263,0,-0.86142,0xaea331dd;
+	}
+	[sound_emitter]
+	{
+		event_sound = "amb_birds1";
 	  f max_repeat_rate = 20;
 	  f repeat_rate = 3;
 	  i start_hour = 21;

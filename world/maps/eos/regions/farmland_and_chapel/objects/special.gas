@@ -1,16 +1,15 @@
-
-[t:trigger_fade_node_box,n:0x01c0085f]
+[t:trigger_generic,n:0x01c00267]
 {
 	[common]
 	{
-		dev_instance_text = "MOOD";
 		[instance_triggers]
 		{
 			[*]
 			{
-				action* = mood_change("multiplayer_world_farmland_and_chapel_2");
+				action* = send_world_message("we_req_activate",0x01C002E4,0f,"default","every",0);
+				action* = send_world_message("we_req_activate",0x079000A0,0f,"default","every",0);
 			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(4.000000,2.000000,0.500000,"on_every_enter");
+				condition* = receive_world_message("we_req_activate",0,"on_every_message");
 			  f delay = 0.000000;
 			  b flip_flop = false;
 			  b multi_player = true;
@@ -25,196 +24,7 @@
 	}
 	[placement]
 	{
-	  p position = 1.03794,-1.36179,-1.86507,0x3705afb9;
-	}
-}
-[t:trigger_fade_node_box,n:0x01c00860]
-{
-	[common]
-	{
-		dev_instance_text = "MOOD";
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = mood_change("multiplayer_world_farmland_and_chapel_1");
-			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(0.500000,2.000000,4.000000,"on_every_enter");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  q orientation = 0,0.707106,0,0.707107;
-	  p position = 3.75161,0.833099,1.14338,0x3705afb9;
-	}
-}
-[t:trigger_fade_node_box,n:0x01c0085d]
-{
-	[common]
-	{
-		dev_instance_text = "MOOD";
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = mood_change("multiplayer_world_farmland_and_chapel_2");
-			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(4.000000,2.000000,0.500000,"on_every_enter");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  p position = -0.057312,-1.25777,-1.77807,0x80a63a8b;
-	}
-}
-[t:trigger_fade_node_box,n:0x01c0085e]
-{
-	[common]
-	{
-		dev_instance_text = "MOOD";
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = mood_change("multiplayer_world_farmland_and_chapel_1");
-			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(4.000000,2.000000,0.500000,"on_every_enter");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  p position = -0.103737,0.643452,1.69775,0x80a63a8b;
-	}
-}
-[t:use_point,n:0x01c00826]
-{
-	[aspect]
-	{
-	  f scale_multiplier = 1.02549;
-	}
-	[placement]
-	{
-	  q orientation = 0,0.999962,0,-0.00872665;
-	  p position = -3.26866,2,0.603071,0x61855045;
-	}
-}
-[t:life_shrine,n:0x01c003cb]
-{
-	[fountain]
-	{
-	  f heal_amount = 0.9;
-	  f health_left = 294;
-	  f health_regen = 0.078;
-	}
-	[placement]
-	{
-	  p position = 0.0309448,-0.453028,-0.0133896,0x5dcf0cb0;
-	}
-}
-[t:trigger_health_shrine,n:0x01c0081a]
-{
-	[common]
-	{
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = send_world_message("we_req_activate",0x01C003CB,0f,"16386","party_member_within_sphere",0), doc("[*labelled condition (party_member_within_sphere)*]");
-			  b can_self_destruct = true;
-				condition* = party_member_within_sphere(1.400000,"on_every_enter");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.100000;
-			  b single_player = true;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-			[*]
-			{
-				action* = when_false send_world_message("we_req_deactivate",0x01C003CB,0f,"default","",0);
-				action* = send_world_message("we_req_activate",0x01C003E5,0f,"default","",0);
-				action* = when_false send_world_message("we_req_deactivate",0x01C003E5,0f,"default","",0);
-			  b can_self_destruct = true;
-				condition* = party_member_within_sphere(1.400000,"while_inside");
-			  f delay = 0.000000;
-			  b flip_flop = true;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  p position = 0.052597,-1.23186,-0.00925445,0x5dcf0cb0;
-	}
-}
-[t:trigger_fade_node_box,n:0x01c003e8]
-{
-	[common]
-	{
-		dev_instance_text = "FADE, MOOD";
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = mood_change("multiplayer_world_farmland_and_chapel_1");
-				action* = fade_nodes(0xE0A672FE,2,-1,-1,"in"), doc("gd_r1_stairs");
-			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(35.000000,2.000000,0.500000,"on_every_enter");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  q orientation = 0,0.707106,0,0.707107;
-	  p position = 2.43619,0,-3.6878,0xbad71e9f;
+	  p position = -0.0412903,0.2,-1.62991,0x9e1225ff;
 	}
 }
 [t:trigger_fade_node_box,n:0x01c0085a]
@@ -333,6 +143,76 @@
 	  p position = 0.0336099,-0.75,-0.107735,0xb32ba674;
 	}
 }
+[t:trigger_fade_node_box,n:0x01c0085d]
+{
+	[common]
+	{
+		dev_instance_text = "MOOD";
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = mood_change("multiplayer_world_farmland_and_chapel_2");
+			  b can_self_destruct = true;
+				condition* = party_member_within_bounding_box(4.000000,2.000000,0.500000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  p position = -0.057312,-1.25777,-1.77807,0x80a63a8b;
+	}
+}
+[t:trigger_fade_node_box,n:0x01c0085e]
+{
+	[common]
+	{
+		dev_instance_text = "MOOD";
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = mood_change("multiplayer_world_farmland_and_chapel_1");
+			  b can_self_destruct = true;
+				condition* = party_member_within_bounding_box(4.000000,2.000000,0.500000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  p position = -0.103737,0.643452,1.69775,0x80a63a8b;
+	}
+}
+[t:use_point,n:0x01c00826]
+{
+	[aspect]
+	{
+	  f scale_multiplier = 1.02549;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.999962,0,-0.00872665;
+	  p position = -3.26866,2,0.603071,0x61855045;
+	}
+}
 [t:trigger_fade_node_box,n:0x01c00865]
 {
 	[common]
@@ -392,6 +272,123 @@
 	  p position = -3.23775,0,3.06204,0x41d66020;
 	}
 }
+[t:life_shrine,n:0x01c003cb]
+{
+	[fountain]
+	{
+	  f heal_amount = 0.9;
+	  f health_left = 294;
+	  f health_regen = 0.078;
+	}
+	[placement]
+	{
+	  p position = 0.0309448,-0.453028,-0.0133896,0x5dcf0cb0;
+	}
+}
+[t:trigger_health_shrine,n:0x01c0081a]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_activate",0x01C003CB,0f,"16386","party_member_within_sphere",0), doc("[*labelled condition (party_member_within_sphere)*]");
+			  b can_self_destruct = true;
+				condition* = party_member_within_sphere(1.400000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.100000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+			[*]
+			{
+				action* = when_false send_world_message("we_req_deactivate",0x01C003CB,0f,"default","",0);
+				action* = send_world_message("we_req_activate",0x01C003E5,0f,"default","",0);
+				action* = when_false send_world_message("we_req_deactivate",0x01C003E5,0f,"default","",0);
+			  b can_self_destruct = true;
+				condition* = party_member_within_sphere(1.400000,"while_inside");
+			  f delay = 0.000000;
+			  b flip_flop = true;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  p position = 0.052597,-1.23186,-0.00925445,0x5dcf0cb0;
+	}
+}
+[t:trigger_fade_node_box,n:0x01c0085f]
+{
+	[common]
+	{
+		dev_instance_text = "MOOD";
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = mood_change("multiplayer_world_farmland_and_chapel_2");
+			  b can_self_destruct = true;
+				condition* = party_member_within_bounding_box(4.000000,2.000000,0.500000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  p position = 1.03794,-1.36179,-1.86507,0x3705afb9;
+	}
+}
+[t:trigger_fade_node_box,n:0x01c00860]
+{
+	[common]
+	{
+		dev_instance_text = "MOOD";
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = mood_change("multiplayer_world_farmland_and_chapel_1");
+			  b can_self_destruct = true;
+				condition* = party_member_within_bounding_box(0.500000,2.000000,4.000000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,0.707106,0,0.707107;
+	  p position = 3.75161,0.833099,1.14338,0x3705afb9;
+	}
+}
 [t:trigger_fade_node_box,n:0x01c00094]
 {
 	[common]
@@ -421,6 +418,37 @@
 	{
 	  q orientation = 0,-0.707107,0,0.707106;
 	  p position = 7.48515,-17.75,-0.630218,0xed5cb0ad;
+	}
+}
+[t:trigger_fade_node_box,n:0x01c002c0]
+{
+	[common]
+	{
+		dev_instance_text = "FADE, MOOD";
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = mood_change("multiplayer_world_farmland_and_chapel_1");
+				action* = fade_nodes(0xE0A672FE,2,-1,-1,"in"), doc("gd_r1_stairs");
+			  b can_self_destruct = true;
+				condition* = party_member_within_bounding_box(35.000000,2.000000,0.500000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.707107,0,0.707106;
+	  p position = -3.29414,0,-1.51942,0x9df9aa6c;
 	}
 }
 [t:trigger_fade_node_box,n:0x01c00222]
@@ -454,7 +482,7 @@
 	  p position = -15.8595,1.89617e-006,-13.6044,0xbad71e9f;
 	}
 }
-[t:trigger_fade_node_box,n:0x01c002c0]
+[t:trigger_fade_node_box,n:0x01c003e8]
 {
 	[common]
 	{
@@ -481,7 +509,14 @@
 	}
 	[placement]
 	{
-	  q orientation = 0,-0.707107,0,0.707106;
-	  p position = -3.29414,0,-1.51942,0x9df9aa6c;
+	  q orientation = 0,0.707106,0,0.707107;
+	  p position = 2.43619,0,-3.6878,0xbad71e9f;
+	}
+}
+[t:use_point,n:0x01c000c2]
+{
+	[placement]
+	{
+	  p position = 0.518368,0.2,-0.523724,0xa6eeb1bb;
 	}
 }

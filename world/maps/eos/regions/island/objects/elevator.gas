@@ -32,3 +32,33 @@
 	  p position = 1.03562,0.0999985,-1.17592,0x6ee8e4bf;
 	}
 }
+[t:elevator_instant_4s_1c,n:0x079000a0]
+{
+	[elevator_instant_4s_1c]
+	{
+	  i connect_door_location1_level1 = 5;
+	  i connect_door_location1_level2 = 6;
+	  i connect_door_location2_level1 = 5;
+	  i connect_door_location2_level2 = 6;
+	  x connect_node_location1 = 0x8F9829C6;
+	  x connect_node_location2 = 0x9E1225FF;
+		down_effect = "displacer_plate_down";
+	  i e2_connect_door_location1_level1 = 5;
+	  i e2_connect_door_location1_level2 = 6;
+	  i e2_connect_door_location2_level1 = 5;
+	  i e2_connect_door_location2_level2 = 6;
+	  x e2_elevator_node = 0xA6EEB1BB;
+	  x elevator_node = 0x6E2471DE;
+		location1_moving_to_lv1_actioninfo = "eos_aranna_teleport";
+		location1_moving_to_lv2_actioninfo = "multiplayer_world_teleport";
+		location2_moving_to_lv1_actioninfo = "eos_aranna_moon_teleport";
+		location2_moving_to_lv2_actioninfo = "multiplayer_world_teleport";
+		material = "hub";
+	  x other_elevator = 0x01C002E4;
+		up_effect = "displacer_plate_up";
+	}
+	[placement]
+	{
+	  p position = 0.64201,0.2,0.532928,0x6e2471de;
+	}
+}
