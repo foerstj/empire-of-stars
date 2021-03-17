@@ -29,7 +29,7 @@
 	}
 	[placement]
 	{
-	  p position = 1.03562,0.0999985,-1.17592,0x6ee8e4bf;
+	  p position = 0,0.1,0,0x6ee8e4bf;
 	}
 }
 [t:elevator_instant_4s_1c,n:0x079000a0]
@@ -43,6 +43,8 @@
 	  x connect_node_location1 = 0x8F9829C6;
 	  x connect_node_location2 = 0x9E1225FF;
 		down_effect = "displacer_plate_down";
+	  f duration_location1_moving_to_lv1 = 16;
+	  f duration_location2_moving_to_lv1 = 16;
 	  i e2_connect_door_location1_level1 = 5;
 	  i e2_connect_door_location1_level2 = 6;
 	  i e2_connect_door_location2_level1 = 5;
@@ -59,6 +61,6 @@
 	}
 	[placement]
 	{
-	  p position = 0.64201,0.2,0.532928,0x6e2471de;
+	  p position = 0,0.2,0,0x6e2471de;
 	}
 }
