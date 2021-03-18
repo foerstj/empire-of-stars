@@ -11,6 +11,7 @@
 				action* = send_world_message("we_req_activate",0x079000A0,0f,"default","every",0);
 			  b can_self_destruct = true;
 				condition* = receive_world_message("we_req_activate",0,"on_every_message");
+				condition* = has_go_in_inventory("local",0x00000000,"starstone_aranna");
 			  f delay = 0.000000;
 			  b flip_flop = false;
 			  b multi_player = true;
@@ -280,6 +281,126 @@
 	  p position = -3.23775,0,3.06204,0x41d66020;
 	}
 }
+[t:trigger_generic,n:0x01d002e5]
+{
+	[common]
+	{
+		dev_instance_text = "TAVERN IN FADES & MOOD";
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = mood_change("eos_aranna_moon_tavern");
+				action* = fade_nodes(0xAAA10101,1,1,-1,"out:black");
+				action* = fade_nodes(0xAAA10101,1,2,-1,"out:black");
+			  b can_self_destruct = true;
+				condition* = party_member_within_bounding_box(1.000000,0.500000,1.000000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  p position = -6.33151,-1,-7.82157,0x8f0e1b2a;
+	}
+}
+[t:trigger_generic,n:0x01d002e7]
+{
+	[common]
+	{
+		dev_instance_text = "TAVERN OUT FADES & MOOD";
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = mood_change("eos_aranna_moon_2");
+				action* = fade_nodes(0xAAA10101,1,1,-1,"in");
+				action* = fade_nodes(0xAAA10101,1,2,-1,"in");
+			  b can_self_destruct = true;
+				condition* = party_member_within_bounding_box(2.000000,1.000000,2.000000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  p position = -6.49692,-2.77666,-10.8395,0x8f0e1b2a;
+	}
+}
+[t:trigger_generic,n:0x01d002e8]
+{
+	[common]
+	{
+		dev_instance_text = "TAVERN UP FADE";
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = fade_nodes(0xAAA10101,1,1,-1,"in");
+			  b can_self_destruct = true;
+				condition* = party_member_within_bounding_box(1.500000,0.500000,1.500000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  p position = 0.544487,3,-2.22381,0xf9e9d616;
+	}
+}
+[t:trigger_generic,n:0x01d002e9]
+{
+	[common]
+	{
+		dev_instance_text = "TAVERN DOWN FADE";
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = fade_nodes(0xAAA10101,1,1,-1,"out:black");
+			  b can_self_destruct = true;
+				condition* = party_member_within_bounding_box(1.500000,0.500000,1.500000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  p position = -1.32697,1.4,1.742,0xf9e9d616;
+	}
+}
 [t:life_shrine,n:0x01d003cb]
 {
 	[fountain]
@@ -519,125 +640,5 @@
 	{
 	  q orientation = 0,0.707106,0,0.707107;
 	  p position = 2.43619,0,-3.6878,0xbad71e9f;
-	}
-}
-[t:trigger_generic,n:0x01d002e5]
-{
-	[common]
-	{
-		dev_instance_text = "TAVERN IN FADES & MOOD";
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = mood_change("eos_aranna_moon_tavern");
-				action* = fade_nodes(0xAAA10101,1,1,-1,"out:black");
-				action* = fade_nodes(0xAAA10101,1,2,-1,"out:black");
-			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(1.000000,0.500000,1.000000,"on_every_enter");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  p position = -6.33151,-1,-7.82157,0x8f0e1b2a;
-	}
-}
-[t:trigger_generic,n:0x01d002e7]
-{
-	[common]
-	{
-		dev_instance_text = "TAVERN OUT FADES & MOOD";
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = mood_change("eos_aranna_moon_2");
-				action* = fade_nodes(0xAAA10101,1,1,-1,"in");
-				action* = fade_nodes(0xAAA10101,1,2,-1,"in");
-			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(2.000000,1.000000,2.000000,"on_every_enter");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  p position = -6.49692,-2.77666,-10.8395,0x8f0e1b2a;
-	}
-}
-[t:trigger_generic,n:0x01d002e8]
-{
-	[common]
-	{
-		dev_instance_text = "TAVERN UP FADE";
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = fade_nodes(0xAAA10101,1,1,-1,"in");
-			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(1.500000,0.500000,1.500000,"on_every_enter");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  p position = 0.544487,3,-2.22381,0xf9e9d616;
-	}
-}
-[t:trigger_generic,n:0x01d002e9]
-{
-	[common]
-	{
-		dev_instance_text = "TAVERN DOWN FADE";
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = fade_nodes(0xAAA10101,1,1,-1,"out:black");
-			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(1.500000,0.500000,1.500000,"on_every_enter");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  p position = -1.32697,1.4,1.742,0xf9e9d616;
 	}
 }

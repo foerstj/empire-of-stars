@@ -976,6 +976,7 @@
 {
 	[common]
 	{
+		dev_instance_text = "ARANNA MOON ELEVATOR";
 		[instance_triggers]
 		{
 			[*]
@@ -984,6 +985,7 @@
 				action* = send_world_message("we_req_activate",0x01D002E4,0f,"default","every",0);
 			  b can_self_destruct = true;
 				condition* = receive_world_message("we_req_activate",0,"on_every_message");
+				condition* = has_go_in_inventory("local",0x00000000,"starstone_aranna");
 			  f delay = 0.000000;
 			  b flip_flop = false;
 			  b multi_player = true;
