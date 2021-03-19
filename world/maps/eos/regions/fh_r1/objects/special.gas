@@ -134,6 +134,35 @@
 	  p position = 0.839523,-3.75,-2.70554,0x76250af7;
 	}
 }
+[t:trigger_generic,n:0x01c001a0]
+{
+	[common]
+	{
+		dev_instance_text = "STARTPOS MOOD";
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = mood_change("eos_alphacentauri_eddiloo");
+			  b can_self_destruct = true;
+				condition* = party_member_within_sphere(10.000000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  p position = 1.44883,-1.90735e-006,-1.79031,0xc4c683ed;
+	}
+}
 [t:trigger_generic,n:0x01c00036]
 {
 	[common]
@@ -1377,6 +1406,36 @@
 	  p position = 0.972374,0,0.966717,0xbc758e76;
 	}
 }
+[t:trigger_generic,n:0x01c001a6]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_activate",0x01C001A5,0f,"default","every",0);
+				action* = send_world_message("we_req_activate",0x08500007,0f,"default","every",0);
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_req_activate",0,"on_every_message");
+				condition* = has_go_in_inventory("local",0x00000000,"starstone_alphacentauri");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  p position = -0.0452271,0.2,1.50707,0xa8d61f26;
+	}
+}
 [t:trigger_generic,n:0x01c00106]
 {
 	[common]
@@ -1633,32 +1692,10 @@
 	  p position = 0.506984,-1.1,-1.88866,0x805bb097;
 	}
 }
-[t:trigger_generic,n:0x01c001a0]
+[t:use_point,n:0x01c001a7]
 {
-	[common]
-	{
-		dev_instance_text = "STARTPOS MOOD";
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = mood_change("eos_alphacentauri_eddiloo");
-			  b can_self_destruct = true;
-				condition* = party_member_within_sphere(10.000000,"on_every_enter");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-		}
-	}
 	[placement]
 	{
-	  p position = 1.44883,-1.90735e-006,-1.79031,0xc4c683ed;
+	  p position = -0.239899,0.2,0.381979,0xa5ce3eb0;
 	}
 }

@@ -1,0 +1,32 @@
+[t:elevator_instant_4s_1c,n:0x08500007]
+{
+	[elevator_instant_4s_1c]
+	{
+	  i connect_door_location1_level1 = 5;
+	  i connect_door_location1_level2 = 6;
+	  i connect_door_location2_level1 = 5;
+	  i connect_door_location2_level2 = 6;
+	  x connect_node_location1 = 0xAE47022D;
+	  x connect_node_location2 = 0xA8D61F26;
+		down_effect = "displacer_plate_down";
+	  f duration_location1_moving_to_lv1 = 16;
+	  f duration_location2_moving_to_lv1 = 16;
+	  i e2_connect_door_location1_level1 = 5;
+	  i e2_connect_door_location1_level2 = 6;
+	  i e2_connect_door_location2_level1 = 5;
+	  i e2_connect_door_location2_level2 = 6;
+	  x e2_elevator_node = 0xA5CE3EB0;
+	  x elevator_node = 0xCB85817F;
+		location1_moving_to_lv1_actioninfo = "eos_alphacentauri_moon_teleport";
+		location1_moving_to_lv2_actioninfo = "multiplayer_world_teleport";
+		location2_moving_to_lv1_actioninfo = "eos_alphacentauri_teleport";
+		location2_moving_to_lv2_actioninfo = "multiplayer_world_teleport";
+		material = "hub";
+	  x other_elevator = 0x01C001A5;
+		up_effect = "displacer_plate_up";
+	}
+	[placement]
+	{
+	  p position = 0.00170898,0.2,-0.0236206,0xcb85817f;
+	}
+}
