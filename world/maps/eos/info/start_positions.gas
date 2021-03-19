@@ -2,7 +2,7 @@
 {
 	[t:start_group,n:alpha_centauri]
 	{
-	  b default = true;
+	  b default = false;
 		description = "Alpha Centauri";
 	  b dev_only = false;
 	  i id = 1698464;
@@ -17,6 +17,29 @@
 			  f distance = 20.000000;
 			  f orbit = 0.000000;
 				position = 1.151451,0.000000,0.348421,0x7DC67F91;
+			}
+		}
+		[world_levels]
+		{
+		}
+	}
+	[t:start_group,n:alphacentauri_moon]
+	{
+	  b default = true;
+		description = "";
+	  b dev_only = false;
+	  i id = 1698464;
+		screen_name = "Alpha Centauri Moon";
+		[start_position]
+		{
+		  i id = 1;
+			position = 1.388062,0.000000,1.252193,0xCAC54C13;
+			[camera]
+			{
+			  f azimuth = 0.500000;
+			  f distance = 20.000000;
+			  f orbit = 0.000000;
+				position = 0.000000,0.000000,0.000000,0xCAC54C13;
 			}
 		}
 		[world_levels]
