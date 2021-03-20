@@ -464,8 +464,41 @@
 }
 [mood_setting*]
 {
-	mood_name				= eos_alphacentauri_moon_teleport;
-	transition_time			= 20.0f;
+  b interior = false;
+	mood_name = eos_alphacentauri_moon_teleport;
+  f transition_time = 20.000000;
+	[fog]
+	{
+	  x fog_color = 0xFFC0DCD9;
+	  f fog_density = 0.500000;
+	  f fog_far_dist = 45.000000;
+	  f fog_lowdetail_far_dist = 40.000000;
+	  f fog_lowdetail_near_dist = 21.000000;
+	  f fog_near_dist = 21.000000;
+	}
+	[frustum]
+	{
+	  f frustum_height = 60.000000;
+	  f frustum_width = 45.000000;
+	}
+	[music]
+	{
+	  f ambient_intro_delay = 0.000000;
+	  f ambient_repeat_delay = 0.000000;
+		ambient_track = "";
+	  f battle_intro_delay = 10.000000;
+	  f battle_repeat_delay = 10.000000;
+		battle_track = 10.000000;
+		room_type = rt_generic;
+	  f standard_intro_delay = 0.000000;
+	  f standard_repeat_delay = 10.000000;
+		standard_track = "s_m_DesertCanyons_02";
+	}
+}
+[mood_setting*]
+{
+	mood_name				= eos_alphacentauri_moon_1;
+	transition_time			= 7.0f;
 	interior				= false;
 
 	[fog]
@@ -474,14 +507,8 @@
 		fog_far_dist		= 45.0f;
 		fog_lowdetail_near_dist		= 21.0f;
 		fog_lowdetail_far_dist		= 40.0f;
-		fog_color			= 0xFFB49363; // old (brighter) value: 0xFFefC283;
+		fog_color			= 0xFFC0DCD9; // old (brighter) value: 0xFFefC283;
 		fog_density			= 0.5f;
-	}
-
-	[frustum]
-	{
-		frustum_height = 60.0f;
-		frustum_width = 45.0f;
 	}
 
 	[rain] {} // empty [rain] block for lightning manipulation
@@ -491,6 +518,84 @@
 		ambient_track		= "";
 		standard_repeat_delay	= 10.0f;
 		standard_track		= "s_m_DesertCanyons_02";
+		room_type			= rt_generic;
+	}
+}
+[mood_setting*]
+{
+	mood_name				= eos_alphacentauri_moon_2;
+	transition_time			= 7.0f;
+	interior				= false;
+
+	[fog]
+	{
+		fog_near_dist		= 35.0f;
+		fog_far_dist		= 50.0f;
+		fog_lowdetail_near_dist		= 35.0f;
+		fog_lowdetail_far_dist		= 45.0f;
+		fog_color			= 0xFFC0DCD9;
+		fog_density			= 0.5f;
+	}
+
+	[rain] {} // empty [rain] block for lightning manipulation
+
+	[music]
+	{
+		ambient_track		= "";
+		standard_repeat_delay	= 10.0f;
+		standard_track		= "s_m_ArcticCaverns_03";
+		room_type			= rt_generic;
+	}
+}
+[mood_setting*]
+{
+	mood_name				= eos_alphacentauri_moon_3;
+	transition_time			= 5.0f;
+	interior				= false;
+
+	[fog]
+	{
+		fog_near_dist		= 35.0f;
+		fog_far_dist		= 50.0f;
+		fog_lowdetail_near_dist		= 35.0f;
+		fog_lowdetail_far_dist		= 45.0f;
+		fog_color			= 0xFFC0DCD9;
+		fog_density			= 0.5f;
+	}
+
+	[rain] {} // empty [rain] block for lightning manipulation
+
+	[music]
+	{
+		ambient_track		= "";
+		standard_repeat_delay	= 10.0f;
+		standard_track		= "s_m_DesertCanyons_01";
+		room_type			= rt_generic;
+	}
+}
+[mood_setting*]
+{
+	mood_name				= eos_alphacentauri_moon_4;
+	transition_time			= 5.0f;
+	interior				= false;
+
+	[fog]
+	{
+		fog_near_dist		= 35.0f;
+		fog_far_dist		= 50.0f;
+		fog_lowdetail_near_dist		= 35.0f;
+		fog_lowdetail_far_dist		= 45.0f;
+		fog_color			= 0xFFC0DCD9;
+		fog_density			= 0.5f;
+	}
+
+	[rain] {} // empty [rain] block for lightning manipulation
+
+	[music]
+	{
+		ambient_track		= "";
+		standard_repeat_delay	= 10.0f;
+		standard_track		= "s_m_Misc_05";
 		room_type			= rt_generic;
 	}
 }
