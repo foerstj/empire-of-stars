@@ -53,7 +53,7 @@
 			[*]
 			{
 				action* = send_world_message("we_req_activate",0x06A00171,0f,"default","",0), doc("set bool true");
-				action* = change_quest_state("quest_edgaar_basement","completed",0);
+				action* = change_quest_state("alphacentauri_chapel","completed",0);
 			  b can_self_destruct = true;
 				condition* = receive_world_message("we_req_activate",0,"on_first_message"), doc("[*one-shot check (trigger is one-shot)*]");
 			  f delay = 0.000000;
