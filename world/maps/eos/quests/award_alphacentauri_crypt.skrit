@@ -2,7 +2,9 @@ owner = SkritObject;
 
 RewardQuest$( goid Recipient$ )
 {
-	float experience$ = 2000.0;  // Campaign quest. Some party member can get a raise.
+    // Campaign quest. Some party member can get a raise.
+    // Expecting party at level 3.
+	float experience$ = 2000.0;
 	
 	if( Recipient$.IsValid() ) 
 	{

@@ -2,7 +2,10 @@ owner = SkritObject;
 
 RewardQuest$( goid Recipient$ )
 {
-	float experience$ = 3*3000.0;  // Main quest. All party members deserve a raise. TODO raise when putting in higher-lvl region
+    // Main quest. All party members deserve a raise.
+    // Expecting 3 party members at level 4.
+    // TODO raise when putting in higher-lvl region
+	float experience$ = 3*3000.0;
 	
 	if( Recipient$.IsValid() ) 
 	{

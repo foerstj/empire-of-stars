@@ -2,7 +2,9 @@ owner = SkritObject;
 
 RewardQuest$( goid Recipient$ )
 {
-	float experience$ = 500.0;  // Side quest. Award some peanuts.
+    // Side quest. Award some peanuts.
+    // Expecting party at level 1.
+	float experience$ = 500.0;
 	
 	if( Recipient$.IsValid() ) 
 	{
