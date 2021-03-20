@@ -1,0 +1,46 @@
+owner = SkritObject;
+
+RewardQuest$( goid Recipient$ )
+{
+	float experience$ = 1000.0;  // Main quest. All party members deserve a raise. TODO raise when putting in higher-lvl region
+	
+	if( Recipient$.IsValid() ) 
+	{
+		// get the party
+		Go Party$ = Recipient$.Go.OwningParty;
+		if (Party$ != NULL)
+		{
+			GopColl partyMembers$ = Party$.Children;
+			
+			int i$ = 0;
+			Go temp$;
+			
+			if( partyMembers$.Size() > 0)
+			{
+				experience$ = experience$ / partyMembers$.Size();
+			}
+			
+			// iterate through all party members.
+			while( i$ < partyMembers$.Size() )
+			{
+				temp$ = partyMembers$.Get( i$ );
+				if (temp$.HasInventory() ) {
+			
+					// find each members active weapon and give them experience accordingly.
+	 				Go Weapon$ = NULL;
+	 				if( temp$.Inventory.IsMeleeWeaponSelected || temp$.Inventory.IsRangedWeaponSelected )
+	 				{
+	 					Weapon$ = temp$.Inventory.GetSelectedWeapon;
+	 				} else if ( temp$.Inventory.IsSpellSelected ) {
+	 					Weapon$ = temp$.Inventory.GetSelectedSpell;
+	 				}
+	 				
+	 				if (Weapon$ != NULL ) {
+	 					Rules.AwardExperience( temp$.goid, Weapon$.goid, experience$ );
+	 				} 
+	 			}
+				i$ += 1;
+			}
+		}
+	}
+}
