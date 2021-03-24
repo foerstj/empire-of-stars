@@ -184,6 +184,66 @@
 	  p position = 0.54701,-0.50798,-1.42803,0xb204aa66;
 	}
 }
+[t:trigger_generic,n:0x08500522]
+{
+	[common]
+	{
+		dev_instance_text = "MOOD";
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = mood_change("eos_alphacentauri_moon_4");
+			  b can_self_destruct = true;
+				condition* = party_member_within_bounding_box(3.000000,1.000000,1.000000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,0.707107,0,0.707107;
+	  p position = -0.577263,-0.394102,-0.58168,0x508083c6;
+	}
+}
+[t:trigger_generic,n:0x08500523]
+{
+	[common]
+	{
+		dev_instance_text = "MOOD";
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = mood_change("eos_alphacentauri_moon_3");
+			  b can_self_destruct = true;
+				condition* = party_member_within_bounding_box(3.000000,1.000000,1.000000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,0.707107,0,0.707107;
+	  p position = -4.44918,-2.68857,-1.1479,0x508083c6;
+	}
+}
 [t:trigger_generic,n:0x085008ee]
 {
 	[common]
@@ -429,66 +489,6 @@
 	{
 	  q orientation = 0,3.72529e-008,0,1;
 	  p position = -1.53526,1.29815,0.0949326,0x87b049e0;
-	}
-}
-[t:trigger_generic,n:0x08500522]
-{
-	[common]
-	{
-		dev_instance_text = "MOOD";
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = mood_change("eos_alphacentauri_moon_4");
-			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(3.000000,1.000000,1.000000,"on_every_enter");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  q orientation = 0,0.707107,0,0.707107;
-	  p position = -0.577263,-0.394102,-0.58168,0x508083c6;
-	}
-}
-[t:trigger_generic,n:0x08500523]
-{
-	[common]
-	{
-		dev_instance_text = "MOOD";
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = mood_change("eos_alphacentauri_moon_3");
-			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(3.000000,1.000000,1.000000,"on_every_enter");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  q orientation = 0,0.707107,0,0.707107;
-	  p position = -4.44918,-2.68857,-1.1479,0x508083c6;
 	}
 }
 [t:trigger_generic,n:0x08500518]

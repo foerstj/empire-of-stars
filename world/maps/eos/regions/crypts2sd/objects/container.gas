@@ -454,14 +454,6 @@
 	  p position = -1.99782,0,-0.163329,0x4006234e;
 	}
 }
-[t:crate_des_01_path2sd,n:0x08500820]
-{
-	[placement]
-	{
-	  q orientation = 0,0.97237,0,-0.233445;
-	  p position = -1.43507,2,-0.709472,0xec29dfef;
-	}
-}
 [t:crate_des_01_path2sd_a,n:0x08500816]
 {
 	[placement]
@@ -518,6 +510,22 @@
 	  p position = -0.855393,4,2.80798,0x147c7234;
 	}
 }
+[t:barrel_glb_path2sd,n:0x08500829]
+{
+	[placement]
+	{
+	  q orientation = 0,0.350207,0,0.936672;
+	  p position = 3.96431,1.90735e-006,0.161522,0x84fbb27b;
+	}
+}
+[t:barrel_glb_path2sd,n:0x0850082a]
+{
+	[placement]
+	{
+	  q orientation = 0,0.492423,0,-0.870356;
+	  p position = 3.63523,0,0.802762,0x84fbb27b;
+	}
+}
 [t:crate_des_01_path2sd,n:0x08500826]
 {
 	[placement]
@@ -542,28 +550,20 @@
 	  p position = 0.380619,1.90735e-006,0.194783,0x9a83a9a9;
 	}
 }
-[t:barrel_glb_path2sd,n:0x08500829]
-{
-	[placement]
-	{
-	  q orientation = 0,0.350207,0,0.936672;
-	  p position = 3.96431,1.90735e-006,0.161522,0x84fbb27b;
-	}
-}
-[t:barrel_glb_path2sd,n:0x0850082a]
-{
-	[placement]
-	{
-	  q orientation = 0,0.492423,0,-0.870356;
-	  p position = 3.63523,0,0.802762,0x84fbb27b;
-	}
-}
 [t:crate_des_01_path2sd,n:0x0850081f]
 {
 	[placement]
 	{
 	  q orientation = 0,0.995396,0,0.0958456;
 	  p position = -0.111307,1.90735e-006,1.25194,0xc64ef61d;
+	}
+}
+[t:crate_des_01_path2sd,n:0x08500820]
+{
+	[placement]
+	{
+	  q orientation = 0,0.97237,0,-0.233445;
+	  p position = -1.43507,2,-0.709472,0xec29dfef;
 	}
 }
 [t:barrel_glb_path2sd,n:0x08500824]
@@ -924,6 +924,21 @@
 	{
 	  q orientation = 0,0.948324,0,0.317305;
 	  p position = 1.54218,-1.90735e-006,-0.161476,0xbe517efd;
+	}
+}
+[t:chest_grs_02,n:0x08500009]
+{
+	[inventory]
+	{
+		[other]
+		{
+			il_main = eos_ring_health;
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.104528,0,-0.994522;
+	  p position = -1.27351,0.221238,1.72757,0xb6f4a30c;
 	}
 }
 [t:crate_des_01_path2sd,n:0x08500846]
@@ -1363,20 +1378,5 @@
 	{
 	  q orientation = 0,0.642787,0,-0.766045;
 	  p position = 2.68767,1.92574,3.80695,0xcd921a92;
-	}
-}
-[t:chest_grs_02,n:0x08500009]
-{
-	[inventory]
-	{
-		[other]
-		{
-			il_main = eos_ring_health;
-		}
-	}
-	[placement]
-	{
-	  q orientation = 0,-0.104528,0,-0.994522;
-	  p position = -1.27351,0.221238,1.72757,0xb6f4a30c;
 	}
 }
