@@ -1,4 +1,4 @@
-[t:template,n:aunt_luna]
+[t:template,n:aunt_luna_base]
 {
 	category_name = "1W_character";
 	doc = "aunt luna";
@@ -40,4 +40,30 @@
     {
 		jat_talk 	= world\ai\jobs\common\job_talk.skrit;
     }
+}
+[t:template,n:aunt_luna]
+{
+    specializes = aunt_luna_base;
+	[inventory]
+	{
+		selected_active_location = il_active_primary_spell;
+        [equipment]
+        {
+			es_chest = bd_ro_m_g_c_auntluna;
+            es_spellbook = book_glb_magic_01;
+        }
+        [other]
+        {
+            il_active_primary_spell = spell_zap;
+			il_active_secondary_spell = spell_healing_hands;
+
+			il_main = starstone_alphacentauri;
+			il_main = potion_health_small;
+			il_main = potion_mana_small;
+			il_main = potion_health_small;
+			il_main = dg_g_d_1h_fun;
+			il_main = spell_fireshot;
+            il_main = DSX_backpack_empty;
+        }
+	}
 }
