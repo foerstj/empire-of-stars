@@ -26,6 +26,8 @@
 		location2_moving_to_lv2_actioninfo = "multiplayer_world_teleport";
 		material = "hub";
 	  x other_elevator = 0x07F00038;
+		up_effect = "eos_hub_plate_up";
+		down_effect = "eos_hub_plate_down";
 	}
 	[placement]
 	{
@@ -43,7 +45,7 @@
 	  i connect_door_location2_level2 = 6;
 	  x connect_node_location1 = 0xA8D61F27;
 	  x connect_node_location2 = 0xAE47022E;
-		down_effect = "displacer_plate_down";
+		down_effect = "eos_displacer_plate_down";
 	  f duration_location1_moving_to_lv1 = 16;
 	  f duration_location2_moving_to_lv1 = 16;
 	  i e2_connect_door_location1_level1 = 5;
@@ -58,7 +60,7 @@
 		location2_moving_to_lv2_actioninfo = "multiplayer_world_teleport";
 		material = "hub";
 	  x other_elevator = 0x08500007;
-		up_effect = "displacer_plate_up";
+		up_effect = "eos_displacer_plate_up";
 	}
 	[placement]
 	{
