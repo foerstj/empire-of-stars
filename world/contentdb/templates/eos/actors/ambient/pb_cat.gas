@@ -1,0 +1,151 @@
+[t:template,n:pb_base_cat]
+{
+	doc = "Base Cat Template";
+	specializes = actor_ambient;
+	category_name = "1W_ambients";
+	[actor] { race=other; alignment = aa_neutral;}
+	[aspect]
+	{
+		model = m_c_na_cat_pos_1;
+		is_selectable = true;
+		life=10;
+		max_life=10;
+		[voice]
+		{
+			[die]			{ * = s_e_cat_die; }
+			[hit_critical]	{ * = s_e_cat; }
+			[hit_glance]	{ * = s_e_cat; }
+			[hit_solid]		{ * = s_e_cat; }
+		}
+	}
+	[body]
+	{
+		avg_move_velocity = 0.310000;
+		[bone_translator]
+		{
+			body_anterior = Bip01_Head;
+			body_mid = Bip01_Spine;
+			body_posterior = Bip01_Pelvis;
+			kill_bone = Bip01_Pelvis;
+			shield_bone = Bip01_Pelvis;
+			weapon_bone = Bip01_Pelvis;
+		}
+		[chore_dictionary]
+		{
+			chore_prefix = a_c_na_cat_fs;
+			[chore_attack]
+			{
+				chore_stances = 0;
+				skrit = select_attack;
+				[anim_files] { 00=dsf; }
+			}
+			[chore_default]
+			{
+				chore_stances = 0;
+				skrit = infinite_loop;
+				[anim_files] { 00=ds; }
+			}
+			[chore_die]
+			{
+				chore_stances = 0;
+				skrit = select_transition;
+				[anim_files]
+				{
+					00=di;
+				}
+			}
+			[chore_fidget]
+			{
+				chore_stances = 0;
+				skrit = select_fidget;
+				[anim_files]
+				{
+					00 = dsf;
+				}
+			}
+			[chore_walk]
+			{
+				chore_stances = 0;
+				skrit = select_walk;
+				[anim_files] { 00=wl; }
+			}
+		}
+	}
+	[common]
+	{
+		screen_name="Cat";
+		rollover_help_key = left_blank;
+		membership = cat,ambient;
+	}
+	[mind]
+	{
+		flee_count = 30;
+
+		on_enemy_spotted_alert_friends = false;
+		on_enemy_spotted_attack = false;
+		on_enemy_entered_ocz_flee = true;
+		on_friend_entered_ocz_flee = false;
+
+		melee_engage_range = 8;
+		personal_space_range = 0.7;
+		ranged_engage_range = 14.0;
+		sight_range = 14.0;
+		jat_fidget = world\ai\jobs\common\job_fidget.skrit
+			?social			= 0.8
+			&social_limit		= 2
+			&move_distance		= 3.00
+			&delay_min			= 4.0
+			&delay_max			= 10.0
+			&approach_dist		= 1.75
+			&still			= false;
+	}
+	[inventory]
+	{
+	}
+}
+
+[t:template,n:pb_cat_gray]
+{
+	doc = "Cat, Gray";
+	specializes = pb_base_cat;
+	[aspect]
+	{
+		[textures] { 0=b_c_na_cat-gray; }
+	}
+	[common]
+	{
+	}
+	[physics]
+	{
+	}
+}
+[t:template,n:pb_cat_black]
+{
+	doc = "Cat, Black";
+	specializes = pb_base_cat;
+	[aspect]
+	{
+		[textures] { 0=b_c_na_cat-black; }
+	}
+	[common]
+	{
+	}
+	[physics]
+	{
+	}
+}
+[t:template,n:pb_cat_calico]
+{
+	doc = "Cat, Calico";
+	specializes = pb_base_cat;
+	[aspect]
+	{
+		[textures] { 0=b_c_na_cat-calico; }
+	}
+	[common]
+	{
+	}
+	[physics]
+	{
+	}
+}
