@@ -1,0 +1,37 @@
+[t:template,n:emt_eos_hub_center]
+{
+	specializes	=	emitter_lightweight;
+    category_name = "emitter";
+	doc			=	"eos t_emt_hub_center";
+
+	[common]
+	{
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action*    = call_sfx_script("eos_hub_center");
+			}
+		}
+	}
+}
+
+[t:template,n:emt_eos_hub_pillar]
+{
+	specializes	=	emitter_lightweight;
+    category_name = "emitter";
+	doc			=	"eos t_emt_hub_pillar";
+
+	[common]
+	{
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action*    = call_sfx_script("eos_hub_pillar");
+			}
+		}
+	}
+}
