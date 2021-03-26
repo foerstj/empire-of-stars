@@ -39,18 +39,18 @@
 	[elevator_instant_4s_1c]
 	{
 	  i connect_door_location1_level1 = 5;
-	  i connect_door_location1_level2 = 6;
+	  i connect_door_location1_level2 = 8;
 	  i connect_door_location2_level1 = 5;
-	  i connect_door_location2_level2 = 6;
+	  i connect_door_location2_level2 = 8;
 	  x connect_node_location1 = 0x8F9829C7;
 	  x connect_node_location2 = 0x9E122600;
 		down_effect = "eos_displacer_plate_down";
 	  f duration_location1_moving_to_lv1 = 16;
 	  f duration_location2_moving_to_lv1 = 16;
 	  i e2_connect_door_location1_level1 = 5;
-	  i e2_connect_door_location1_level2 = 6;
+	  i e2_connect_door_location1_level2 = 8;
 	  i e2_connect_door_location2_level1 = 5;
-	  i e2_connect_door_location2_level2 = 6;
+	  i e2_connect_door_location2_level2 = 8;
 	  x e2_elevator_node = 0xA6EEB1BC;
 	  x elevator_node = 0x6E2471DF;
 		location1_moving_to_lv1_actioninfo = "eos_aranna_teleport";
@@ -60,6 +60,10 @@
 		material = "hub";
 	  x other_elevator = 0x01D002E4;
 		up_effect = "eos_displacer_plate_up";
+		location1_moving_to_lv1_hint = ah_yaxis_negative;
+		location1_moving_to_lv2_hint = ah_yaxis_positive;
+		location2_moving_to_lv1_hint = ah_yaxis_negative;
+		location2_moving_to_lv2_hint = ah_yaxis_positive;
 	}
 	[placement]
 	{

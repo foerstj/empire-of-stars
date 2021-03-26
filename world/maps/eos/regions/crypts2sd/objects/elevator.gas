@@ -3,18 +3,18 @@
 	[elevator_instant_4s_1c]
 	{
 	  i connect_door_location1_level1 = 5;
-	  i connect_door_location1_level2 = 6;
+	  i connect_door_location1_level2 = 8;
 	  i connect_door_location2_level1 = 5;
-	  i connect_door_location2_level2 = 6;
+	  i connect_door_location2_level2 = 8;
 	  x connect_node_location1 = 0xAE47022E;
 	  x connect_node_location2 = 0xA8D61F27;
 		down_effect = "eos_displacer_plate_down";
 	  f duration_location1_moving_to_lv1 = 16;
 	  f duration_location2_moving_to_lv1 = 16;
 	  i e2_connect_door_location1_level1 = 5;
-	  i e2_connect_door_location1_level2 = 6;
+	  i e2_connect_door_location1_level2 = 8;
 	  i e2_connect_door_location2_level1 = 5;
-	  i e2_connect_door_location2_level2 = 6;
+	  i e2_connect_door_location2_level2 = 8;
 	  x e2_elevator_node = 0xA5CE3EB1;
 	  x elevator_node = 0xCB858180;
 		location1_moving_to_lv1_actioninfo = "eos_alphacentauri_moon_teleport";
@@ -24,6 +24,10 @@
 		material = "hub";
 	  x other_elevator = 0x01C001A5;
 		up_effect = "eos_displacer_plate_up";
+		location1_moving_to_lv1_hint = ah_yaxis_negative;
+		location1_moving_to_lv2_hint = ah_yaxis_positive;
+		location2_moving_to_lv1_hint = ah_yaxis_negative;
+		location2_moving_to_lv2_hint = ah_yaxis_positive;
 	}
 	[placement]
 	{
