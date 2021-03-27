@@ -8,6 +8,7 @@
 	{
 		model = m_c_na_cat_pos_1;
 		is_selectable = true;
+        is_usable = true;
 		life=10;
 		max_life=10;
 		[voice]
@@ -114,6 +115,19 @@
 	}
 	[common]
 	{
+        [template_triggers]
+        {
+            [*]
+            {
+                condition* = receive_world_message("WE_FRIEND_ENTERED_INNER_COMFORT_ZONE");
+                action* = call_sfx_script("pb_cat_meow_maybe");
+            }
+            [*]
+            {
+                condition* = receive_world_message("WE_REQ_USE");
+                action* = call_sfx_script("pb_cat_meow");
+            }
+        }
 	}
 	[physics]
 	{
@@ -129,6 +143,19 @@
 	}
 	[common]
 	{
+        [template_triggers]
+        {
+            [*]
+            {
+                condition* = receive_world_message("WE_FRIEND_ENTERED_INNER_COMFORT_ZONE");
+                action* = call_sfx_script("pb_cat_meow_maybe");
+            }
+            [*]
+            {
+                condition* = receive_world_message("WE_REQ_USE");
+                action* = call_sfx_script("pb_cat_screech");
+            }
+        }
 	}
 	[physics]
 	{
@@ -144,6 +171,19 @@
 	}
 	[common]
 	{
+        [template_triggers]
+        {
+            [*]
+            {
+                condition* = receive_world_message("WE_FRIEND_ENTERED_INNER_COMFORT_ZONE");
+                action* = call_sfx_script("pb_cat_meow_maybe");
+            }
+            [*]
+            {
+                condition* = receive_world_message("WE_REQ_USE");
+                action* = call_sfx_script("pb_cat_meow");
+            }
+        }
 	}
 	[physics]
 	{
