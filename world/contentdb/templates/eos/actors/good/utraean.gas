@@ -1,15 +1,68 @@
-[t:template,n:eos_utraean_townfolk_male_02]
+[t:template,n:eos_utraean_townfolk_male_02_base]
 {
 	category_name = "1W_townsperson";
-	doc = "eos utraean_townfolk_male_02";
 	specializes = base_npc_fb_multiplayer;
 	[aspect]
 	{
 		model = m_c_gah_fb_pos_a2;
+	}
+	[inventory]
+	{
+		[equipment]
+		{
+            // delete the boots
+		}
+	}
+}
+[t:template,n:eos_utraean_townfolk_male_02a]
+{
+	doc = "eos utraean_townfolk_male_02a";
+	specializes = eos_utraean_townfolk_male_02_base;
+	[aspect]
+	{
 		[textures]
 		{
-			0 = b_c_gan_utraean_skin_eos_03;
-			1 = b_c_pos_a2_eos-utraean-03;
+			0 = b_c_gan_utraean_skin_eos_03a;
+			1 = b_c_pos_a2_eos-utraean-03a;
+		}
+	}
+}
+[t:template,n:eos_utraean_townfolk_male_02b]
+{
+	doc = "eos utraean_townfolk_male_02b";
+	specializes = eos_utraean_townfolk_male_02_base;
+	[aspect]
+	{
+		[textures]
+		{
+			0 = b_c_gan_utraean_skin_eos_03b;
+			1 = b_c_pos_a2_eos-utraean-03b;
+		}
+	}
+}
+[t:template,n:eos_utraean_townfolk_male_02c]
+{
+	doc = "eos utraean_townfolk_male_02c";
+	specializes = eos_utraean_townfolk_male_02_base;
+	[aspect]
+	{
+		[textures]
+		{
+			0 = b_c_gan_utraean_skin_eos_03c;
+			1 = b_c_pos_a2_eos-utraean-03c;
+		}
+	}
+}
+[t:template,n:eos_utraean_townfolk_male_02d]
+{
+	doc = "eos utraean_townfolk_male_02d";
+	specializes = eos_utraean_townfolk_male_02_base;
+	[aspect]
+	{
+		[textures]
+		{
+			0 = b_c_gan_utraean_skin_eos_03d;
+			1 = b_c_pos_a2_eos-utraean-03d;
 		}
 	}
 }
