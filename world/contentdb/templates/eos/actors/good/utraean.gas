@@ -13,6 +13,10 @@
             // delete the boots
 		}
 	}
+	[mind]
+	{
+        jat_talk = world\ai\jobs\common\job_talk.skrit;
+	}
 }
 [t:template,n:eos_utraean_townfolk_male_02a]
 {
@@ -63,6 +67,75 @@
 		{
 			0 = b_c_gan_utraean_skin_eos_03d;
 			1 = b_c_pos_a2_eos-utraean-03d;
+		}
+	}
+}
+
+[t:template,n:eos_utraean_townfolk_female_02_base]
+{
+	category_name = "1W_townsperson";
+	doc = "eos utraean_townfolk_female_02";
+	specializes = dsx_base_npc_fg_multiplayer;
+	[inventory]
+	{
+		[equipment]
+		{
+		}
+	}
+	[mind]
+	{
+        jat_talk = world\ai\jobs\common\job_talk.skrit;
+	}
+}
+[t:template,n:eos_utraean_townfolk_female_02a]
+{
+	doc = "eos utraean_townfolk_female_02a";
+	specializes = eos_utraean_townfolk_female_02_base;
+	[aspect]
+	{
+		[textures]
+		{
+			0 = b_c_gan_utraean_skin_eos_04a;
+			1 = b_c_pos_a1_eos-utraean-04a;
+		}
+	}
+}
+[t:template,n:eos_utraean_townfolk_female_02b]
+{
+	doc = "eos utraean_townfolk_female_02b";
+	specializes = eos_utraean_townfolk_female_02_base;
+	[aspect]
+	{
+		[textures]
+		{
+			0 = b_c_gan_utraean_skin_eos_04b;
+			1 = b_c_pos_a1_eos-utraean-04b;
+		}
+	}
+}
+[t:template,n:eos_utraean_townfolk_female_02c]
+{
+	doc = "eos utraean_townfolk_female_02c";
+	specializes = eos_utraean_townfolk_female_02_base;
+	[aspect]
+	{
+		[textures]
+		{
+			0 = b_c_gan_utraean_skin_eos_04c;
+			1 = b_c_pos_a1_eos-utraean-04c;
+		}
+	}
+}
+[t:template,n:eos_utraean_townfolk_female_02d]
+{
+	doc = "eos utraean_townfolk_female_02d";
+	specializes = eos_utraean_townfolk_female_02_base;
+	[aspect]
+	{
+		[textures]
+		{
+			0 = b_c_gan_utraean_skin_eos_04d;
+			1 = b_c_pos_a1_eos-utraean-04d;
 		}
 	}
 }
