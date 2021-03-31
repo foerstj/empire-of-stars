@@ -48,7 +48,7 @@
 	}
 	[t:start_group,n:aranna]
 	{
-	  b default = true;
+	  b default = false;
 		description = "This is the default group.";
 	  b dev_only = false;
 	  i id = 0;
@@ -86,6 +86,29 @@
 			  f distance = 20.000000;
 			  f orbit = 0.000000;
 				position = 0.102061,0.702265,1.113388,0xC5EDD8F8;
+			}
+		}
+		[world_levels]
+		{
+		}
+	}
+	[t:start_group,n:vega]
+	{
+	  b default = true;
+		description = "";
+	  b dev_only = false;
+	  i id = 1698464;
+		screen_name = "Vega";
+		[start_position]
+		{
+		  i id = 1;
+			position = -3.192410,0.000000,0.252614,0x18170003;
+			[camera]
+			{
+			  f azimuth = 0.500000;
+			  f distance = 20.000000;
+			  f orbit = 0.000000;
+				position = 0.000000,0.000000,0.000000,0x18170003;
 			}
 		}
 		[world_levels]
