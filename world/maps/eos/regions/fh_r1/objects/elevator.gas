@@ -8,6 +8,7 @@
 	  i connect_door_location2_level2 = 18;
 	  x connect_node_location1 = 0x6CC08EAE;
 	  x connect_node_location2 = 0xD14939A4;
+		down_effect = "eos_hub_plate_down";
 	  f duration_location1_moving_to_lv1 = 16;
 	  f duration_location2_moving_to_lv1 = 16;
 	  i e2_connect_door_location1_level1 = 10;
@@ -27,7 +28,6 @@
 		material = "hub";
 	  x other_elevator = 0x07F00038;
 		up_effect = "eos_hub_plate_up";
-		down_effect = "eos_hub_plate_down";
 	}
 	[placement]
 	{
@@ -55,16 +55,16 @@
 	  x e2_elevator_node = 0xCB858180;
 	  x elevator_node = 0xA5CE3EB1;
 		location1_moving_to_lv1_actioninfo = "eos_alphacentauri_teleport";
+		location1_moving_to_lv1_hint = ah_yaxis_negative;
 		location1_moving_to_lv2_actioninfo = "multiplayer_world_teleport";
+		location1_moving_to_lv2_hint = ah_yaxis_positive;
 		location2_moving_to_lv1_actioninfo = "eos_alphacentauri_moon_teleport";
+		location2_moving_to_lv1_hint = ah_yaxis_negative;
 		location2_moving_to_lv2_actioninfo = "multiplayer_world_teleport";
+		location2_moving_to_lv2_hint = ah_yaxis_positive;
 		material = "hub";
 	  x other_elevator = 0x08500007;
 		up_effect = "eos_displacer_plate_up";
-		location1_moving_to_lv1_hint = ah_yaxis_negative;
-		location1_moving_to_lv2_hint = ah_yaxis_positive;
-		location2_moving_to_lv1_hint = ah_yaxis_negative;
-		location2_moving_to_lv2_hint = ah_yaxis_positive;
 	}
 	[placement]
 	{
