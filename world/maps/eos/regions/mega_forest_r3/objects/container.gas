@@ -1172,3 +1172,40 @@
 	  p position = 0.894327,0,-0.9222,0x9e8b14cd;
 	}
 }
+[t:chest_csl_05,n:0x066027dd]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_deactivate",0x066027E0,0f,"default","every",0);
+				action* = send_world_message("we_req_activate",0x066027E1,0f,"default","every",0);
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_req_use",0,"on_every_message");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[inventory]
+	{
+		[other]
+		{
+			il_main = starstone_betelgeuse;
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,1,0,0;
+	  p position = -0.00538826,-1.6,-3.50362,0x386eba93;
+	}
+}
