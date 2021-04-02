@@ -1,0 +1,36 @@
+[t:elevator_instant_4s_1c,n:0x066027e6]
+{
+	[elevator_instant_4s_1c]
+	{
+	  i connect_door_location1_level1 = 9;
+	  i connect_door_location1_level2 = 11;
+	  i connect_door_location2_level1 = 32;
+	  i connect_door_location2_level2 = 30;
+	  x connect_node_location1 = 0x183ADD8E;
+	  x connect_node_location2 = 0xD14939A4;
+		down_effect = "eos_hub_plate_down";
+	  f duration_location1_moving_to_lv1 = 16;
+	  f duration_location2_moving_to_lv1 = 16;
+	  i e2_connect_door_location1_level1 = 10;
+	  i e2_connect_door_location1_level2 = 12;
+	  i e2_connect_door_location2_level1 = 31;
+	  i e2_connect_door_location2_level2 = 29;
+	  i e2_elevator_door_location1_level1 = 2;
+	  i e2_elevator_door_location1_level2 = 2;
+	  i e2_elevator_door_location2_level1 = 2;
+	  i e2_elevator_door_location2_level2 = 2;
+	  x e2_elevator_node = 0x3C74733B;
+	  x elevator_node = 0xF03EFE70;
+		location1_moving_to_lv1_actioninfo = "eos_vega_teleport";
+		location1_moving_to_lv2_actioninfo = "multiplayer_world_teleport";
+		location2_moving_to_lv1_actioninfo = "multiplayer_world_new_hub_teleport";
+		location2_moving_to_lv2_actioninfo = "multiplayer_world_teleport";
+		material = "hub";
+	  x other_elevator = 0x07F00063;
+		up_effect = "eos_hub_plate_up";
+	}
+	[placement]
+	{
+	  p position = 0,0.1,0,0xf03efe70;
+	}
+}

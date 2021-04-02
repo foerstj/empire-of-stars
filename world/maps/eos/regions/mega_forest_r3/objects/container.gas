@@ -22,6 +22,43 @@
 	  p position = -0.673132,0,-1.75389,0xeafca062;
 	}
 }
+[t:chest_csl_05,n:0x066027dd]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_deactivate",0x066027E0,0f,"default","every",0);
+				action* = send_world_message("we_req_activate",0x066027E1,0f,"default","every",0);
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_req_use",0,"on_every_message");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[inventory]
+	{
+		[other]
+		{
+			il_main = starstone_betelgeuse;
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,1,0,0;
+	  p position = -0.00538826,-1.6,-3.50362,0x386eba93;
+	}
+}
 [t:barrel_glb_path2crypts,n:0x0660019d]
 {
 	[placement]
@@ -396,38 +433,6 @@
 	{
 	  q orientation = 0,0.999391,0,0.0348994;
 	  p position = -2.85957,0,-3.79867,0x43c4b3b0;
-	}
-}
-[t:crate_glb_path2crypts,n:0x06600167]
-{
-	[placement]
-	{
-	  q orientation = 0,0.267238,0,-0.96363;
-	  p position = 3.11611,-3.8147e-006,0.551273,0xd8c77ad3;
-	}
-}
-[t:crate_glb_path2crypts,n:0x06600168]
-{
-	[placement]
-	{
-	  q orientation = 0,0.461748,0,-0.887011;
-	  p position = 1.45069,0,1.29864,0xd8c77ad3;
-	}
-}
-[t:crate_glb_path2crypts,n:0x06600169]
-{
-	[placement]
-	{
-	  q orientation = 0,0.878817,0,0.477159;
-	  p position = 2.32277,0,1.96457,0xd8c77ad3;
-	}
-}
-[t:barrel_glb_path2crypts,n:0x0660016a]
-{
-	[placement]
-	{
-	  q orientation = 0,0.754709,0,-0.656059;
-	  p position = 3.42274,-3.8147e-006,1.56006,0xd8c77ad3;
 	}
 }
 [t:barrel_glb_path2crypts,n:0x0660018e]
@@ -1053,6 +1058,38 @@
 	  p position = 0.54964,0,1.45561,0x0f1c7e75;
 	}
 }
+[t:crate_glb_path2crypts,n:0x06600167]
+{
+	[placement]
+	{
+	  q orientation = 0,0.267238,0,-0.96363;
+	  p position = 3.11611,-3.8147e-006,0.551273,0xd8c77ad3;
+	}
+}
+[t:crate_glb_path2crypts,n:0x06600168]
+{
+	[placement]
+	{
+	  q orientation = 0,0.461748,0,-0.887011;
+	  p position = 1.45069,0,1.29864,0xd8c77ad3;
+	}
+}
+[t:crate_glb_path2crypts,n:0x06600169]
+{
+	[placement]
+	{
+	  q orientation = 0,0.878817,0,0.477159;
+	  p position = 2.32277,0,1.96457,0xd8c77ad3;
+	}
+}
+[t:barrel_glb_path2crypts,n:0x0660016a]
+{
+	[placement]
+	{
+	  q orientation = 0,0.754709,0,-0.656059;
+	  p position = 3.42274,-3.8147e-006,1.56006,0xd8c77ad3;
+	}
+}
 [t:barrel_glb_path2crypts,n:0x066001c1]
 {
 	[placement]
@@ -1170,42 +1207,5 @@
 	{
 	  q orientation = 0,0.782608,0,-0.622515;
 	  p position = 0.894327,0,-0.9222,0x9e8b14cd;
-	}
-}
-[t:chest_csl_05,n:0x066027dd]
-{
-	[common]
-	{
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = send_world_message("we_req_deactivate",0x066027E0,0f,"default","every",0);
-				action* = send_world_message("we_req_activate",0x066027E1,0f,"default","every",0);
-			  b can_self_destruct = true;
-				condition* = receive_world_message("we_req_use",0,"on_every_message");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-		}
-	}
-	[inventory]
-	{
-		[other]
-		{
-			il_main = starstone_betelgeuse;
-		}
-	}
-	[placement]
-	{
-	  q orientation = 0,1,0,0;
-	  p position = -0.00538826,-1.6,-3.50362,0x386eba93;
 	}
 }

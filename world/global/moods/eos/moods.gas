@@ -599,3 +599,41 @@
 		room_type			= rt_generic;
 	}
 }
+[mood_setting*]
+{
+	mood_name				= eos_vega_teleport;
+	transition_time = 20.0f;
+	interior				= false;
+
+	[frustum]
+	{
+		frustum_width		= 45.0f;
+		frustum_height		= 60.0f;
+	}
+
+	[fog]
+	{
+		fog_near_dist		= 15.0f;
+		fog_far_dist		= 35.0f;
+		fog_lowdetail_near_dist		= 15.0f;
+		fog_lowdetail_far_dist		= 30.0f;
+		fog_color			= 0xff323f32;
+		fog_density			= 0.5f;
+	}
+
+	[wind]
+	{
+		wind_velocity		= 0.5f;
+		wind_direction		= 3.8f;
+	}
+
+	[rain] {} // empty [rain] block for lightning manipulation
+
+	[music]
+	{
+		ambient_track		= "s_e_ambient_woods_01";
+		standard_repeat_delay	= 15.0f;
+		standard_track		= "s_m_WaterDungeon_02";
+		room_type			= rt_generic;
+	}
+}

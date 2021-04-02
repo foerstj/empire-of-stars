@@ -62,14 +62,14 @@
 {
 	[common]
 	{
-		dev_instance_text = "ELEVATOR";
+		dev_instance_text = "CHECK + ELEVATORS BETELGEUSE";
 		[instance_triggers]
 		{
 			[*]
 			{
-				action* = send_world_message("we_req_activate",0x07F00065,0f,"default","",0), doc("make sure party member is in node before activating elevator");
+				action* = send_world_message("we_req_activate",0x07F00065,0f,"default","",0);
 			  b can_self_destruct = true;
-				condition* = receive_world_message("we_req_activate",0,"on_every_message"), doc("someone pressed the button");
+				condition* = receive_world_message("we_req_activate",0,"on_every_message");
 			  f delay = 0.000000;
 			  b flip_flop = false;
 			  b multi_player = true;
@@ -92,14 +92,16 @@
 {
 	[common]
 	{
-		dev_instance_text = "ELEVATOR";
+		dev_instance_text = "CHECK + ELEVATORS VEGA";
 		[instance_triggers]
 		{
 			[*]
 			{
-				action* = send_world_message("we_req_activate",0x07F00063,0f,"default","",0), doc("make sure party member is in node before activating elevator");
+				action* = send_world_message("we_req_activate",0x07F00063,0f,"default","",0);
+				action* = send_world_message("we_req_activate",0x066027E6,0f,"default","",0);
 			  b can_self_destruct = true;
-				condition* = receive_world_message("we_req_activate",0,"on_every_message"), doc("someone pressed the button");
+				condition* = receive_world_message("we_req_activate",0,"on_every_message");
+				condition* = has_go_in_inventory("local",0x00000000,"starstone_vega");
 			  f delay = 0.000000;
 			  b flip_flop = false;
 			  b multi_player = true;
@@ -126,10 +128,10 @@
 		{
 			[*]
 			{
-				action* = send_world_message("we_req_activate",0x07F00038,0f,"default","",0), doc("make sure party member is in node before activating elevator");
+				action* = send_world_message("we_req_activate",0x07F00038,0f,"default","",0);
 				action* = send_world_message("we_req_activate",0x01C0018A,0f,"default","every",0);
 			  b can_self_destruct = true;
-				condition* = receive_world_message("we_req_activate",0,"on_every_message"), doc("someone pressed the button");
+				condition* = receive_world_message("we_req_activate",0,"on_every_message");
 				condition* = has_go_in_inventory("local",0x00000000,"starstone_alphacentauri");
 			  f delay = 0.000000;
 			  b flip_flop = false;
@@ -152,14 +154,14 @@
 {
 	[common]
 	{
-		dev_instance_text = "ELEVATOR";
+		dev_instance_text = "CHECK + ELEVATORS ALDEBARAN";
 		[instance_triggers]
 		{
 			[*]
 			{
-				action* = send_world_message("we_req_activate",0x07F00052,0f,"default","",0), doc("make sure party member is in node before activating elevator");
+				action* = send_world_message("we_req_activate",0x07F00052,0f,"default","",0);
 			  b can_self_destruct = true;
-				condition* = receive_world_message("we_req_activate",0,"on_every_message"), doc("someone pressed the button");
+				condition* = receive_world_message("we_req_activate",0,"on_every_message");
 			  f delay = 0.000000;
 			  b flip_flop = false;
 			  b multi_player = true;
@@ -182,14 +184,14 @@
 {
 	[common]
 	{
-		dev_instance_text = "ELEVATOR";
+		dev_instance_text = "CHECK + ELEVATORS SIRIUS";
 		[instance_triggers]
 		{
 			[*]
 			{
-				action* = send_world_message("we_req_activate",0x07F00050,0f,"default","",0), doc("make sure party member is in node before activating elevator");
+				action* = send_world_message("we_req_activate",0x07F00050,0f,"default","",0);
 			  b can_self_destruct = true;
-				condition* = receive_world_message("we_req_activate",0,"on_every_message"), doc("someone pressed the button");
+				condition* = receive_world_message("we_req_activate",0,"on_every_message");
 			  f delay = 0.000000;
 			  b flip_flop = false;
 			  b multi_player = true;
@@ -212,14 +214,14 @@
 {
 	[common]
 	{
-		dev_instance_text = "ELEVATOR";
+		dev_instance_text = "CHECK + ELEVATORS RIGEL";
 		[instance_triggers]
 		{
 			[*]
 			{
-				action* = send_world_message("we_req_activate",0x07F00040,0f,"default","",0), doc("make sure party member is in node before activating elevator");
+				action* = send_world_message("we_req_activate",0x07F00040,0f,"default","",0);
 			  b can_self_destruct = true;
-				condition* = receive_world_message("we_req_activate",0,"on_every_message"), doc("someone pressed the button");
+				condition* = receive_world_message("we_req_activate",0,"on_every_message");
 			  f delay = 0.000000;
 			  b flip_flop = false;
 			  b multi_player = true;
@@ -242,14 +244,14 @@
 {
 	[common]
 	{
-		dev_instance_text = "ELEVATOR";
+		dev_instance_text = "CHECK + ELEVATORS ALTAIR";
 		[instance_triggers]
 		{
 			[*]
 			{
-				action* = send_world_message("we_req_activate",0x07F0003C,0f,"default","",0), doc("make sure party member is in node before activating elevator");
+				action* = send_world_message("we_req_activate",0x07F0003C,0f,"default","",0);
 			  b can_self_destruct = true;
-				condition* = receive_world_message("we_req_activate",0,"on_every_message"), doc("someone pressed the button");
+				condition* = receive_world_message("we_req_activate",0,"on_every_message");
 			  f delay = 0.000000;
 			  b flip_flop = false;
 			  b multi_player = true;
