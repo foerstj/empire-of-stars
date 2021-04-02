@@ -1,0 +1,33 @@
+[t:template,n:eos_phrak_vega]
+{
+	category_name = "1W_evil_d";
+	doc = "eos phrak vega";
+	specializes = base_phrak;
+
+    [aspect]
+    {
+		experience_value = 10;
+		life = 12;
+        max_life = 12;
+		scale_base = 0.8;
+		textures:0 = b_c_edm_ph-vg;
+    }
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 20;
+		damage_min = 12;
+	}
+	[common]
+	{
+		membership = phrak,monster;
+	}
+	[mind]
+	{
+		jat_brain						= world\ai\jobs\common\brain_hero.skrit
+			?actor_joins_existing_party		= true
+			&guard							= true
+			&friends						= phrak;
+	}
+
+}
