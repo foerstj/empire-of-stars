@@ -7,8 +7,34 @@
 	}
 	[placement]
 	{
-	  q orientation = 0,-0.195091,0,0.980785;
-	  p position = -0.876312,0.18524,0.951904,0x69074613;
+	  q orientation = 0,-0.83147,0,0.55557;
+	  p position = -1.14406,0,-2.5955,0x6f4bdea6;
+	}
+}
+[t:sign_glb_01,n:0x04c00486]
+{
+	[common]
+	{
+		dev_instance_text = "sign_1";
+		screen_name = "Town of Fallraen, 65";
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.707107,0,0.707107;
+	  p position = -0.913528,7.15256e-007,-1.83331,0x124a8d07;
+	}
+}
+[t:sign_glb_01,n:0x04c004ed]
+{
+	[common]
+	{
+		dev_instance_text = "sign_1";
+		screen_name = "Town of Crystwind, 52";
+	}
+	[placement]
+	{
+	  q orientation = 0,-5.96046e-008,0,-1;
+	  p position = -0.575592,-0.387724,-1.45789,0x124a8d07;
 	}
 }
 [t:respawn_statue,n:0x04c002ac]
@@ -43,6 +69,32 @@
 	{
 	  q orientation = 0,-0.707107,0,0.707107;
 	  p position = -3.86024,-0.276364,1.30014,0x571c606a;
+	}
+}
+[t:sign_glb_01,n:0x04c0048d]
+{
+	[common]
+	{
+		dev_instance_text = "sign_1";
+		screen_name = "Path to Fallraen, 49";
+	}
+	[placement]
+	{
+	  q orientation = 0,0.707107,0,0.707107;
+	  p position = 3.2342,2,3.73145,0xe800210f;
+	}
+}
+[t:sign_glb_01,n:0x04c004d2]
+{
+	[common]
+	{
+		dev_instance_text = "sign_1";
+		screen_name = "Town of Crystwind, 68";
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.382684,0,0.92388;
+	  p position = 2.63865,1.81345,3.79697,0xe800210f;
 	}
 }
 [t:sign_glb_01,n:0x04c0048a]
@@ -84,71 +136,6 @@
 	  p position = -3.58595,-0.249575,0.39592,0x42b8a034;
 	}
 }
-[t:sign_glb_01,n:0x04c0048d]
-{
-	[common]
-	{
-		dev_instance_text = "sign_1";
-		screen_name = "Path to Fallraen, 49";
-	}
-	[placement]
-	{
-	  q orientation = 0,0.707107,0,0.707107;
-	  p position = 3.2342,2,3.73145,0xe800210f;
-	}
-}
-[t:sign_glb_01,n:0x04c004d2]
-{
-	[common]
-	{
-		dev_instance_text = "sign_1";
-		screen_name = "Town of Crystwind, 68";
-	}
-	[placement]
-	{
-	  q orientation = 0,-0.382684,0,0.92388;
-	  p position = 2.63865,1.81345,3.79697,0xe800210f;
-	}
-}
-[t:sign_glb_01,n:0x04c00489]
-{
-	[common]
-	{
-		dev_instance_text = "sign_3";
-		screen_name = "Town of Fallraen, 55";
-	}
-	[placement]
-	{
-	  q orientation = 0,-0.195091,0,0.980785;
-	  p position = 1.91387,-1.90735e-006,0.543907,0xd2fed1ba;
-	}
-}
-[t:sign_glb_01,n:0x04c00486]
-{
-	[common]
-	{
-		dev_instance_text = "sign_1";
-		screen_name = "Town of Fallraen, 65";
-	}
-	[placement]
-	{
-	  q orientation = 0,-0.707107,0,0.707107;
-	  p position = -0.913528,7.15256e-007,-1.83331,0x124a8d07;
-	}
-}
-[t:sign_glb_01,n:0x04c004ed]
-{
-	[common]
-	{
-		dev_instance_text = "sign_1";
-		screen_name = "Town of Crystwind, 52";
-	}
-	[placement]
-	{
-	  q orientation = 0,-5.96046e-008,0,-1;
-	  p position = -0.575592,-0.387724,-1.45789,0x124a8d07;
-	}
-}
 [t:respawn_statue,n:0x04c00290]
 {
 	[placement]
@@ -182,5 +169,34 @@
 	{
 	  q orientation = 0,-5.96046e-008,0,-1;
 	  p position = 0.705254,-0.20718,-1.18488,0x6d79d203;
+	}
+}
+[t:sign_glb_01,n:0x04c00489]
+{
+	[common]
+	{
+		dev_instance_text = "sign_3";
+		screen_name = "Town of Fallraen, 55";
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.195091,0,0.980785;
+	  p position = 1.91387,-1.90735e-006,0.543907,0xd2fed1ba;
+	}
+}
+[t:eos_teleport_statue_big,n:0x04c00006]
+{
+	[on_off_lever]
+	{
+	  x off_scid = 0x04C00009;
+	  x off_scid_2 = 0x07F00047;
+	  x on_scid = 0x04C00009;
+	  x on_scid_2 = 0x07F00047;
+	}
+	[placement]
+	{
+	  q orientation = 0,1,0,-1.49012e-007;
+	  p position = -0.0103226,0.1,0.0463219,0x6acff026;
+		use_point_scids = 0x04c00007,0x04c00008;
 	}
 }
