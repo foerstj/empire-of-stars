@@ -1,3 +1,33 @@
+[t:trigger_generic,n:0x07406757]
+{
+	[common]
+	{
+		dev_instance_text = "PLAYER LOCATION";
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = set_player_world_location("great_northern_forest");
+			  b can_self_destruct = true;
+				condition* = party_member_within_bounding_box(3.000000,2.000000,6.000000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.707107,0,0.707107;
+	  p position = -3.55102,0.469973,0.505676,0x361025ed;
+	}
+}
 [t:trigger_change_mood_box,n:0x07405115]
 {
 	[common]
@@ -121,6 +151,36 @@
 	{
 	  q orientation = 0,1,0,-1.49012e-007;
 	  p position = -2.96382,0,1.32956,0x280defcf;
+	}
+}
+[t:trigger_generic,n:0x07406764]
+{
+	[common]
+	{
+		dev_instance_text = "PLAYER LOCATION";
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = set_player_world_location("great_northern_forest");
+			  b can_self_destruct = true;
+				condition* = party_member_within_bounding_box(3.000000,2.000000,6.000000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,1,0,-8.9407e-008;
+	  p position = 1.44854,-0.644411,-3.35635,0x9efd7f25;
 	}
 }
 [t:use_point,n:0x0740015f]
@@ -363,65 +423,5 @@
 	{
 	  q orientation = 0,0.707107,0,0.707107;
 	  p position = -0.104736,-0.307056,0.0856934,0x9b7255a3;
-	}
-}
-[t:trigger_generic,n:0x07406764]
-{
-	[common]
-	{
-		dev_instance_text = "PLAYER LOCATION";
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = set_player_world_location("great_northern_forest");
-			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(3.000000,2.000000,6.000000,"on_every_enter");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  q orientation = 0,1,0,-8.9407e-008;
-	  p position = 1.44854,-0.644411,-3.35635,0x9efd7f25;
-	}
-}
-[t:trigger_generic,n:0x07406757]
-{
-	[common]
-	{
-		dev_instance_text = "PLAYER LOCATION";
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = set_player_world_location("great_northern_forest");
-			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(3.000000,2.000000,6.000000,"on_every_enter");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  q orientation = 0,-0.707107,0,0.707107;
-	  p position = -3.55102,0.469973,0.505676,0x361025ed;
 	}
 }

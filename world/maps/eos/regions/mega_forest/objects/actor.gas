@@ -46,47 +46,6 @@
 	  p position = 3.30997,1.90735e-006,-0.891724,0x2ed12fda;
 	}
 }
-[t:mp_guard,n:0x074001b7]
-{
-	[aspect]
-	{
-	  b is_collidable = false;
-		model = m_c_gah_fb_pos_a2;
-	}
-	[common]
-	{
-		dev_instance_text = "Forest Protector";
-	}
-	[conversation]
-	{
-		[conversations]
-		{
-			* = conversation_protector;
-			* = conversation_protector_red;
-		}
-	}
-	[inventory]
-	{
-		[equipment]
-		{
-			es_chest = bd_sl_m_g_c_avg;
-			es_feet = bo_bo_ch_f_g_c_avg;
-			es_forearms = gl_gl_le_f_g_c_avg;
-			es_shield_hand = sh_m_g_c_r_s_avg;
-		}
-	}
-	[mind]
-	{
-	  b actor_may_attack = false;
-	  b actor_may_be_attacked = false;
-		jat_talk = world\ai\jobs\common\job_talk_mp.skrit;
-	}
-	[placement]
-	{
-	  q orientation = 0,-0.819152,0,0.573577;
-	  p position = -3.98843,0,0.98423,0x280defcf;
-	}
-}
 [t:skeleton,n:0x0740639f]
 {
 	[placement]
