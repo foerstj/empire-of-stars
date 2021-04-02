@@ -1,0 +1,54 @@
+
+
+
+[conversation_guard]
+{
+	[text*] 
+	{	
+	
+		screen_text = "Good day to you, friend. There's been a rock slide on the usual road to Fallraen, so we've been directing all travellers to follow the eastern path instead. You'll find it a bit longer, but the scenery is quite lovely.";
+	}
+
+}
+[conversation_guard_red]
+{
+	[text*]
+	{
+		screen_text = "What is that terrible stink? It's almost as if the entire world is a rotten egg being cracked open!!";
+	}
+}
+
+[conversation_jessa]
+{
+	[text*]
+	{
+		order = 0;
+		choice = shop;
+
+		screen_text = "I left Elddim to seek my fortune in the mountains, and what did I get? Frostbite, that's what. I've found mostly a load of junk I don't need, but I do have a few furs. If you want to buy any of it, be my guest.";
+	}
+	[text*]
+	{
+	        order = 1;
+		choice = shop;
+
+		screen_text = "At least food is plentiful. While I'm not too fond of wolf meat, it's better than nothing. Besides, the nasty creatures are everywhere in this area. I've never seen such large packs before!";
+	}
+
+	[text*]
+	{
+
+		choice = shop;
+
+		screen_text = "Is there no place for a bright girl to make a living in this land? I'd try my luck in Fallraen to the southeast, but there's a fearsome horde of Braak blocking the way just down the path. Those glitter balls they throw sting something awful, too.";
+	}
+
+}
+[conversation_jessa_red]
+{
+	[text*]
+	{
+		screen_text = "You have to admit, there's a certain beauty in watching a lightning show for the first few minutes. However, it's not so pretty anymore three days later.";
+		choice = shop;
+	}
+}
