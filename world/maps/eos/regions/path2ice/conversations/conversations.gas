@@ -1,3 +1,30 @@
+[aunt_luna]
+{
+	[text*]
+	{
+		activate_quest* = find_way_home,1;
+		choice = more;
+		complete_quest* = find_aunt_luna;
+	  i order = 0;
+		screen_text = "What took you so long?";
+	  f scroll_rate = 10.000000;
+	}
+	[text*]
+	{
+		choice = more;
+	  i order = 1;
+		screen_text = "I'm actually so happy to see you, my dearest!
+See what I discovered - the ancient Empire of Stars had contact with Beings from other actual stars! Extraterrestrials! It was an interstellar empire spanning across a whole eight star systems! It's truly incredible!";
+	  f scroll_rate = 10.000000;
+	}
+	[text*]
+	{
+		choice = potential_member;
+		screen_text = "What do you mean, you want to go HOME of all places?
+...Alright let's go then... But we need to find an Aranna Starstone first...";
+	  f scroll_rate = 10.000000;
+	}
+}
 [welcome2bg]
 {
 	[text*]
@@ -24,6 +51,57 @@
 	[text*]
 	{
 		screen_text = "Be our guest!";
+	  f scroll_rate = 10.000000;
+	}
+}
+[mule_shop]
+{
+	[text*]
+	{
+		choice = buy_packmule;
+		screen_text = "Blessings, stranger, welcome to Betelgeuse.
+Do you happen to be interested in a pack animal? Will come in handy when you go out and find more treasure than you can carry...";
+	  f scroll_rate = 10.000000;
+	}
+}
+[mule_shop_sold_out]
+{
+	[text*]
+	{
+		screen_text = "I hope Dingaling is doing well?";
+	  f scroll_rate = 10.000000;
+	}
+}
+[pm_accept]
+{
+	[text*]
+	{
+		screen_text = "Yay let's go!";
+	  f scroll_rate = 10.000000;
+	}
+}
+[pm_disband]
+{
+	[text*]
+	{
+		screen_text = "Wait, what?";
+	  f scroll_rate = 10.000000;
+	}
+}
+[pm_reject]
+{
+	[text*]
+	{
+		screen_text = "Pff then not!";
+	  f scroll_rate = 10.000000;
+	}
+}
+[pm_rejoin]
+{
+	[text*]
+	{
+		choice = potential_member;
+		screen_text = "No hard feelings mate... Wanna go together again?";
 	  f scroll_rate = 10.000000;
 	}
 }
