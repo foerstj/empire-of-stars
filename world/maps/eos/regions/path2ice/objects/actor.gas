@@ -22,6 +22,14 @@
 	  p position = 3.47787,0,0.630582,0x7e76722e;
 	}
 }
+[t:braak_magic_reveal,n:0x04c00310]
+{
+	[placement]
+	{
+	  q orientation = 0,-8.9407e-008,0,1;
+	  p position = 0.511852,0,-2.76773,0x6f4bdea6;
+	}
+}
 [t:furok,n:0x04c00442]
 {
 	[placement]
@@ -361,14 +369,6 @@
 	  p position = 1.31367,0,-2.92614,0xa939e928;
 	}
 }
-[t:braak_magic_reveal,n:0x04c00310]
-{
-	[placement]
-	{
-	  q orientation = 0,-8.9407e-008,0,1;
-	  p position = 0.511852,0,-2.76773,0x6f4bdea6;
-	}
-}
 [t:dsx_jhay,n:0x04c00091]
 {
 	[aspect]
@@ -432,6 +432,17 @@
 	{
 	  f max_life = 88.2;
 	  f max_mana = 109;
+	}
+	[conversation]
+	{
+		[conversations]
+		{
+			* = beetles;
+		}
+	}
+	[mind]
+	{
+		jat_talk = world\ai\jobs\common\job_talk.skrit;
 	}
 	[placement]
 	{
@@ -498,24 +509,6 @@
 	  p position = 2.42819,-0.05,-2.60698,0x92ad36d9;
 	}
 }
-[t:dsx_pack_animal,n:0x04c000a8]
-{
-	[aspect]
-	{
-	  f max_life = 66.5;
-	  f max_mana = 109;
-		model = m_c_na_pa_02;
-	}
-	[common]
-	{
-		screen_name = "Dingaling";
-	}
-	[placement]
-	{
-	  q orientation = 0,0.97144,0,0.237286;
-	  p position = -3.88702,0.3,-2.56718,0x9199edbf;
-	}
-}
 [t:dsx_pack_animal,n:0x04c000aa]
 {
 	[aspect]
@@ -557,6 +550,24 @@
 	{
 	  q orientation = 0,0.961032,0,-0.276437;
 	  p position = 2.65548,0.299999,-3.61633,0x9199edbf;
+	}
+}
+[t:dsx_pack_animal,n:0x04c000a8]
+{
+	[aspect]
+	{
+	  f max_life = 66.5;
+	  f max_mana = 109;
+		model = m_c_na_pa_02;
+	}
+	[common]
+	{
+		screen_name = "Dingaling";
+	}
+	[placement]
+	{
+	  q orientation = 0,0.97144,0,0.237286;
+	  p position = -3.88702,0.3,-2.56718,0x9199edbf;
 	}
 }
 [t:eos_beetle_female,n:0x04c0007d]
