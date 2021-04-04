@@ -1,0 +1,216 @@
+[t:template,n:eos_beetle_base]
+{
+	category_name = "1W_ambients";
+	specializes = dsx_chitterskrag_base;
+    [actor]
+    {
+        alignment = aa_neutral;
+    }
+    [mind]
+    {
+        jat_fidget				= world\ai\jobs\common\job_fidget.skrit
+        ?curious				= 0.1
+        &wander					= 0.1
+        &social					= 0.1
+        &interest				= interest
+        &delay_min				= 16
+        &delay_max				= 32
+        &still					= false;
+    }
+}
+
+[t:template,n:eos_beetle_male]
+{
+	doc = "eos_beetle_male";
+    specializes = eos_beetle_base;
+	[actor]
+	{
+		[skills]
+		{
+			strength =     14, 0;
+			intelligence = 8, 0;
+			dexterity =    10, 0;
+			melee =        12, 0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 406;
+		life             = 314;
+		max_life         = 314;
+		mana             = 50;
+		max_mana         = 50;
+		model = m_c_edm_chs_pos_1;
+		textures:0 = b_c_edm_chs;
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max 	= 77; 
+		damage_min 	= 66;
+	}
+	[common]
+	{
+		screen_name = "Beetle (male)";
+		membership = monster;
+	}
+	[defend] { defense = 154; }
+	[body]
+	{
+		avg_move_velocity = 1;
+	}
+}
+
+[t:template,n:eos_beetle_baby]
+{
+	doc = "eos_beetle_baby";
+    specializes = eos_beetle_base;
+	[actor]
+	{
+		[skills]
+		{
+			strength =     14, 0;
+			intelligence = 8, 0;
+			dexterity =    10, 0;
+			melee =        11, 0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 262;
+		life             = 157;
+		max_life         = 157;
+		mana             = 50;
+		max_mana         = 50;
+		model = m_c_edm_chs_pos_1;
+		scale_base = 0.35;
+		[voice]
+		{
+			[die]			{ priority = high;	* = s_e_die_baby_chitterskrag_SED;		}
+			[enemy_spotted]	{ priority = high; * = s_e_call_baby_chitterskrag_SED; }
+		}
+		textures:0 = b_c_edm_chs;
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 53;
+		damage_min = 47;
+	}
+	[common]
+	{
+		screen_name = "Beetle (baby)"; //--
+		membership = monster; //--
+	}
+	[defend] { defense = 90; }
+	[body]
+	{
+		avg_move_velocity = 2;
+	}
+}
+ 
+
+[t:template,n:eos_beetle_female]
+{
+	doc = "eos_beetle_female";
+    specializes = eos_beetle_base;
+	[actor]
+		{
+		[skills]
+		{
+			strength 		= 14, 0;
+			intelligence 	= 8, 0;
+			dexterity 		= 10, 0;
+			ranged 			= 11, 0;
+			combat_magic	= 11, 0;
+			nature_magic	= 11, 0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 406;
+		life             = 313;
+		max_life         = 313;
+		mana             = 50;
+		max_mana         = 50;
+		model = m_c_edm_chs_pos_2;
+		scale_base = 1.0;
+		textures:0 = b_c_edm_chs-03;
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 56; 
+		damage_min = 40;
+	}
+	[common]
+	{
+		screen_name = "Beetle (female)"; //--
+		membership = monster; //--
+	}
+	[defend] { defense = 105; }
+	[body]
+	{
+		avg_move_velocity = 1;
+		[chore_dictionary]
+		{
+			chore_prefix = a_c_edm_chs_fs;
+			[chore_attack]
+			{
+				chore_stances = 0;
+				skrit = select_attack;
+				[anim_files]
+				{
+					00 = at;
+					01 = at-02;
+				}
+			}
+			[chore_default]
+			{
+				chore_stances = 0;
+				skrit = infinite_loop;
+				[anim_files] { 00=ds; }
+			}
+			[chore_die]
+			{
+				chore_stances = 0;
+				skrit = select_transition;
+				[anim_files] { 00=di; }
+			}
+			[chore_fidget]
+			{
+				chore_stances = 0;
+				skrit = select_fidget;
+				[anim_files] { 00=dsf; }
+			}
+			[chore_walk]
+			{
+				chore_stances = 0;
+				skrit = select_walk;
+				[anim_files] 
+				{ 
+				00=rl; //alternate //01=wl;  
+				}
+			}
+			[chore_magic]
+			{
+				chore_stances = 0;
+				skrit = select_attack;
+				[anim_files]{ 00=mg; }
+			}
+		}
+	}
+	[mind]
+	{
+		jat_brain						= world\ai\jobs\common\brain_hero.skrit
+		?actor_joins_existing_party		= true;
+		
+		actor_weapon_preference			= WP_MAGIC;
+		actor_auto_switches_to_magic	= true;
+		actor_auto_switches_to_karate	= false;
+		actor_auto_switches_to_melee	= false;
+		
+		personal_space_range = 0.75;
+	}
+
+}
