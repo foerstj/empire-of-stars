@@ -102,21 +102,6 @@
 	  i stop_hour = 19;
 	}
 }
-[t:emt_sound,n:0x0370082e]
-{
-	[placement]
-	{
-	  q orientation = 0,-0.707107,0,0.707107;
-	  p position = 3.77634,3.99999,-1.97946,0x57452dcc;
-	}
-	[sound_emitter]
-	{
-	  b continual_loop = true;
-		event_sound = "amb_woods_01";
-	  i start_hour = 7;
-	  i stop_hour = 19;
-	}
-}
 [t:emt_sound,n:0x0370082c]
 {
 	[placement]
@@ -151,6 +136,21 @@
 	{
 	  q orientation = 0,1,0,0;
 	  p position = -0.635468,-1.95503e-005,1.58704,0x50bb3e94;
+	}
+	[sound_emitter]
+	{
+	  b continual_loop = true;
+		event_sound = "amb_woods_01";
+	  i start_hour = 7;
+	  i stop_hour = 19;
+	}
+}
+[t:emt_sound,n:0x0370082e]
+{
+	[placement]
+	{
+	  q orientation = 0,-0.707107,0,0.707107;
+	  p position = 3.77634,3.99999,-1.97946,0x57452dcc;
 	}
 	[sound_emitter]
 	{
