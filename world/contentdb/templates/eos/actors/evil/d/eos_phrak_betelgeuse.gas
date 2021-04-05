@@ -1,0 +1,66 @@
+[t:template,n:eos_phrak_betelgeuse]
+{
+	category_name = "1W_evil_d";
+	doc = "eos phrak betelgeuse";
+	specializes = base_phrak;
+	[actor]
+	{
+		[skills]
+		{
+			strength =  4, 0;
+			intelligence =  1, 0;
+			dexterity =  19, 0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 10;
+		life = 15;
+        max_life = 15;
+        mana = 2;
+		max_mana = 2;
+		scale_base = 0.55;
+		textures:0 = b_c_edm_ph-03;
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 6;
+		damage_min = 4;
+	}
+	[common]
+	{
+		membership = phrak,monster;
+		screen_name="Pink Phrak";
+	}
+	[defend] { defense=15; }
+	[inventory]
+	{
+		selected_active_location = il_active_primary_spell;
+		[other] { il_active_primary_spell=spell_phrak_dart; }
+	}
+
+	[mind]
+	{
+		actor_weapon_preference			= WP_MAGIC;
+		actor_auto_switches_to_magic	= true;
+		actor_auto_switches_to_karate	= false;
+		actor_auto_switches_to_melee	= false;
+
+		jat_brain							= world\ai\jobs\common\brain_hero.skrit
+			?actor_joins_existing_party		= true
+			&guard							= true
+			&friends						= phrak;
+	}
+	[physics]
+	{
+		[break_particulate]
+		{
+			frag_glb_phrak_piercer_01 = 1;
+			frag_glb_phrak_piercer_02 = 2;
+			frag_glb_phrak_piercer_03 = 2;
+			frag_glb_phrak_piercer_04 = 1;
+			frag_glb_phrak_piercer_05 = 2;
+		}
+	}
+}
