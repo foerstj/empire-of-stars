@@ -6,7 +6,7 @@
 		{
 			[*]
 			{
-				action* = mood_change("eos_betelgeuse_2");
+				action* = mood_change("eos_betelgeuse_1");
 			  b can_self_destruct = true;
 				condition* = party_member_within_bounding_box(12.000000,2.000000,1.000000,"on_every_enter");
 			  f delay = 0.000000;
@@ -54,35 +54,6 @@
 	  p position = 2.45717,0,0.206929,0xceb73cf5;
 	}
 }
-[t:trigger_change_mood_box,n:0x038000b2]
-{
-	[common]
-	{
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = mood_change("eos_betelgeuse_2");
-			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(4.000000,2.000000,0.500000,"on_every_enter");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  q orientation = 0,-0.026177,0,-0.999657;
-	  p position = 0.600501,-11.459,-11.4,0x0cfc0b37;
-	}
-}
 [t:trigger_change_mood_box,n:0x038000ad]
 {
 	[common]
@@ -109,7 +80,36 @@
 	[placement]
 	{
 	  q orientation = 0,8.9407e-008,0,1;
-	  p position = 0.712083,-11.6655,-4.67537,0x0cfc0b37;
+	  p position = 0.630267,-11.6936,-4.59399,0x0cfc0b37;
+	}
+}
+[t:trigger_change_mood_box,n:0x038000b2]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = mood_change("eos_betelgeuse_2_from_cave");
+			  b can_self_destruct = true;
+				condition* = party_member_within_bounding_box(4.000000,2.000000,0.500000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.026177,0,-0.999657;
+	  p position = 0.600501,-11.459,-11.4,0x0cfc0b37;
 	}
 }
 [t:use_point,n:0x03800059]
