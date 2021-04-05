@@ -1,0 +1,120 @@
+[t:template,n:eos_kikclaw]
+{
+    // values from yeti
+	category_name = "1W_evil_d";
+	doc = "eos kikclaw";
+	specializes = kikclaw_base;
+	
+  [actor]
+    {
+      [skills]
+	{
+	  strength =  8, 0;
+	  intelligence =  7, 0;
+	  dexterity =  7, 0;
+	  melee =  1,  0;
+	}
+    }
+	
+	[attack]
+	{
+		attack_range = 0.5;
+		
+      damage_max = 17;
+      damage_min = 7;
+	}
+	[defend] { defense = 18; }
+	[aspect] 
+	{
+      experience_value = 24;
+      life = 38;
+      max_life = 38;
+      mana = 0;
+      max_mana = 0;
+
+		model = m_c_edm_kc_pos_1; 
+		[voice]
+		{
+			[die]			{ priority = high; * = s_e_die_kikclaw;  }
+			[enemy_spotted]	{ priority = high; * = s_e_call_kikclaw_SED; }
+			[hit_critical]	{ priority = low; * = s_e_hit_kikclaw_SED;  }
+			[hit_glance]	{ priority = low; * = s_e_hit_kikclaw_SED;  }
+			[hit_solid]		{ priority = low; * = s_e_hit_kikclaw_SED;  }
+		}	
+		scale_base	= 0.7;
+	}
+	
+	[common] { screen_name = "Kikclaw"; }
+	
+	[guts_manager]
+	{
+		effect_name = melee_hit_2;
+	}
+}
+
+[t:template,n:eos_kikclaw_sm]
+{
+    // values from krug grunt
+	category_name = "1W_evil_d";
+	doc = "eos kikclaw sm";
+	specializes = kikclaw_base;
+	
+	[actor]
+	{
+		[skills]
+		{
+			  dexterity = 6, 0;
+			  intelligence = 4, 0;
+			  melee = 4,  0;
+			  strength = 9, 0;
+		}
+	}
+	
+	[aspect] 
+	{
+		textures: 0 = b_c_edm_klik-2;
+		scale_base	= 0.4;
+		
+		  experience_value = 19;
+		  life = 28;
+		  mana = 8;
+		  max_life = 28;
+		  max_mana = 8;
+		
+		[voice]
+		{
+			[die]			{ priority = high; * = s_e_die_kikclaw_baby;  }
+			[enemy_spotted]	{ priority = high; * = s_e_call_kikclaw_baby_SED; }
+			[hit_critical]	{ priority = low; * = s_e_hit_kikclaw__baby_SED;  }
+			[hit_glance]	{ priority = low; * = s_e_hit_kikclaw_baby_SED;  }
+			[hit_solid]		{ priority = low; * = s_e_hit_kikclaw_baby_SED;  }
+		}
+	}
+	
+	[attack]
+	{
+		attack_range = 0.5;
+		  damage_max = 17;
+		  damage_min = 15;
+	}
+	[body]
+	{
+		avg_move_velocity = 5.00000;
+	}
+	
+	[common] 
+	{ 
+		screen_name = "Kikling";
+	}
+	
+	[defend] { defense = 30; }
+
+	[mind]  
+	{  
+		jat_fidget                              = world\ai\jobs\common\job_fidget.skrit  
+		?social                                   = 0.5  
+		&delay_min                              = 4.0  
+		&delay_max                              = 10.0  
+		&still                                   = false;  
+	}
+}	
