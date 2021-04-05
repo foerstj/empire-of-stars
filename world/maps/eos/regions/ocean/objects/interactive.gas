@@ -1,64 +1,17 @@
-[t:sign_glb_inn_03,n:0x04d005bc]
+[t:sign_grs_meren,n:0x04d00638]
 {
-	[common]
-	{
-		screen_name = "Yeeful Ale House and Inn";
-	}
 	[placement]
 	{
-	  q orientation = 0,1,0,0;
-	  p position = -1.43166,0,-1.94649,0x3e5fa173;
+	  q orientation = 0,0.707107,0,0.707107;
+	  p position = 1.59628,-0.330335,-1.76794,0x8b69eb6a;
 	}
 }
-[t:sign_glb_01,n:0x04d0076e]
+[t:door_glb_woodfence_left_01,n:0x04d00629]
 {
-	[common]
-	{
-		dev_instance_text = "sign_1";
-		screen_name = "Town of Meren, 21";
-	}
 	[placement]
 	{
-	  q orientation = 0,-0.793353,0,0.608761;
-	  p position = 3.98199,1.90735e-006,0.50103,0xe093aaae;
-	}
-}
-[t:sign_glb_01,n:0x04d0076f]
-{
-	[common]
-	{
-		screen_name = "Town of Fallraen";
-	}
-	[placement]
-	{
-	  q orientation = 0,-0.793353,0,0.608762;
-	  p position = 1.84564,9.53674e-007,-0.941284,0x8835204a;
-	}
-}
-[t:sign_glb_01,n:0x04d005f9]
-{
-	[common]
-	{
-		dev_instance_text = "sign_3";
-		screen_name = "Town of Meren";
-	}
-	[placement]
-	{
-	  q orientation = 0,0.659345,0,0.75184;
-	  p position = 0.402985,0,0.228579,0x2a356c27;
-	}
-}
-[t:sign_glb_01,n:0x04d00771]
-{
-	[common]
-	{
-		dev_instance_text = "sign_2";
-		screen_name = "Town of Meren";
-	}
-	[placement]
-	{
-	  q orientation = 0,0.659345,0,0.75184;
-	  p position = -1.80341,1,0.20369,0xac137195;
+	  p position = 0.0311852,-0.95,1.01945,0xafbdaa34;
+		use_point_scids = 0x04d004d1,0x04d004c7;
 	}
 }
 [t:sign_glb_01,n:0x04d005fc]
@@ -72,31 +25,6 @@
 	{
 	  q orientation = 0,0.659345,0,0.75184;
 	  p position = -0.173359,0,1.85455,0x7a939401;
-	}
-}
-[t:door_glb_woodfence_left_01,n:0x04d00629]
-{
-	[placement]
-	{
-	  p position = 0.0311852,-0.95,1.01945,0xafbdaa34;
-		use_point_scids = 0x04d004d1,0x04d004c7;
-	}
-}
-[t:door_glb_woodfence_left_01,n:0x04d00627]
-{
-	[placement]
-	{
-	  q orientation = -1.49012e-008,-2.23517e-007,-3.10862e-015,1;
-	  p position = 0.000968933,-0.95,1.01009,0x387a8ad2;
-		use_point_scids = 0x04d004c5,0x04d004c6;
-	}
-}
-[t:sign_grs_meren,n:0x04d00638]
-{
-	[placement]
-	{
-	  q orientation = 0,0.707107,0,0.707107;
-	  p position = 1.59628,-0.330335,-1.76794,0x8b69eb6a;
 	}
 }
 [t:sign_glb_01,n:0x04d0061b]
@@ -148,5 +76,77 @@
 	{
 	  q orientation = 0,0.130526,0,0.991445;
 	  p position = -0.772276,-0.706205,-1.12302,0x59dfa1cf;
+	}
+}
+[t:sign_glb_inn_03,n:0x04d005bc]
+{
+	[common]
+	{
+		screen_name = "Yeeful Ale House and Inn";
+	}
+	[placement]
+	{
+	  q orientation = 0,1,0,0;
+	  p position = -1.43166,0,-1.94649,0x3e5fa173;
+	}
+}
+[t:sign_glb_01,n:0x04d005f9]
+{
+	[common]
+	{
+		dev_instance_text = "sign_3";
+		screen_name = "Town of Meren";
+	}
+	[placement]
+	{
+	  q orientation = 0,0.659345,0,0.75184;
+	  p position = 0.402985,0,0.228579,0x2a356c27;
+	}
+}
+[t:sign_glb_01,n:0x04d00771]
+{
+	[common]
+	{
+		dev_instance_text = "sign_2";
+		screen_name = "Town of Meren";
+	}
+	[placement]
+	{
+	  q orientation = 0,0.659345,0,0.75184;
+	  p position = -1.80341,1,0.20369,0xac137195;
+	}
+}
+[t:sign_glb_01,n:0x04d0076f]
+{
+	[common]
+	{
+		screen_name = "Town of Fallraen";
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.793353,0,0.608762;
+	  p position = 1.84564,9.53674e-007,-0.941284,0x8835204a;
+	}
+}
+[t:sign_glb_01,n:0x04d0076e]
+{
+	[common]
+	{
+		dev_instance_text = "sign_1";
+		screen_name = "Town of Meren, 21";
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.793353,0,0.608761;
+	  p position = 3.98199,1.90735e-006,0.50103,0xe093aaae;
+	}
+}
+[t:door_glb_woodfence_left_01,n:0x04d00627]
+{
+	[placement]
+	{
+	  q orientation = -1.49012e-008,-2.23517e-007,-3.10862e-015,1;
+	  p position = 0.000968933,-0.95,1.01009,0x387a8ad2;
+		use_point_scids = 0x04d004c5,0x04d004c6;
 	}
 }
