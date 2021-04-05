@@ -54,37 +54,6 @@
 	  p position = 2.45717,0,0.206929,0xceb73cf5;
 	}
 }
-[t:trigger_change_mood_box,n:0x038000ad]
-{
-	[common]
-	{
-		dev_instance_text = "MOOD   PLAYER LOCATION";
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = mood_change("multiplayer_world_ice_cave_1");
-				action* = set_player_world_location("frozen_rift");
-			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(4.000000,2.000000,4.500000,"on_every_enter");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = false;
-			  b start_active = false;
-			}
-		}
-	}
-	[placement]
-	{
-	  q orientation = 0,8.9407e-008,0,1;
-	  p position = 0.796489,-11.1101,-9.36272,0x0cfc0b37;
-	}
-}
 [t:trigger_change_mood_box,n:0x038000b2]
 {
 	[common]
@@ -114,6 +83,37 @@
 	{
 	  q orientation = 0,-0.0436191,0,0.999048;
 	  p position = -0.448202,0,-1.715,0x25dcc5b3;
+	}
+}
+[t:trigger_change_mood_box,n:0x038000ad]
+{
+	[common]
+	{
+		dev_instance_text = "MOOD   PLAYER LOCATION";
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = mood_change("multiplayer_world_ice_cave_1");
+				action* = set_player_world_location("frozen_rift");
+			  b can_self_destruct = true;
+				condition* = party_member_within_bounding_box(4.000000,2.000000,4.500000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = false;
+			}
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,8.9407e-008,0,1;
+	  p position = 0.796489,-11.1101,-9.36272,0x0cfc0b37;
 	}
 }
 [t:use_point,n:0x03800059]
