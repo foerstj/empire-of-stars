@@ -1,0 +1,535 @@
+[zconversation_directions]
+{
+	[text*]
+	{
+		screen_text = "I'll tell you how to get to the town of Lang from here, but I bet you won't stay there long. If you look along the southern cliff, you will find an old lift. Take that up to the top and follow the road. It winds south through the Cloud Forest for a goodly distance. There's an abandoned mining outpost you'll come across. Go through that and eventually you will come to Lang Mire. Follow the boardwalks and you'll reach Lang proper in good time.";
+	}
+}
+
+[conversation_wern]
+{
+	[text*]
+	{
+		order = 0;
+		choice = shop;
+
+		screen_text = "Good afternoon. Take your time looking around, and take care handling the blades - these aren't for pleasure duels, my friend.";
+		button_1_text = "Directions";
+       		button_1_value = d_0x04d004cb;
+	}
+	[text*]
+	{
+        order = 1;
+		choice = shop;
+
+		screen_text = "I see you have a connoisseur's eye for quality, friend. Allow me to show you some of my finer masterpieces? You won't find anything better in Meren, and you'll need the best if you're planning on pursuing passage to the town of Lang through the Cloud Forest.";
+		button_1_text = "Directions";
+       		button_1_value = d_0x04d004cb;
+	}
+
+    [text*]
+	{
+
+		choice = shop;
+
+		screen_text = "You'll find the best there is to offer in Meren, my friend, so take your time and let me know when you've made your choices.";
+		button_1_text = "Directions";
+       		button_1_value = d_0x04d004cb;
+	}
+
+}
+[conversation_wern_red]
+{
+	[text*]
+	{
+
+		screen_text = "Heh. Don't let the weather fool you. Meren is still the same place it always was, whether the sun is red, yellow, or purple. And I still stock only the best weapons that can be had in the Utraean Peninsula!";
+		choice = shop;
+		button_1_text = "Directions";
+       		button_1_value = d_0x04d004cb;
+	}
+}
+
+[conversation_lilyaire]
+{
+	[text*]
+	{
+		order = 0;
+		choice = shop;
+
+		screen_text = "Thy arrival was foretold, child. By the stars above, I welcome thee to Meren. How might I be of service?";
+		button_1_text = "Directions";
+       		button_1_value = d_0x04d004cc;
+	}
+	[text*]
+	{
+		choice = shop;
+
+		screen_text = "Thy wits are complete, even if thy heart's wavering is clear as the misty air. Thy path is never simple... but I sense great things ahead. Perhaps a magical draught will ease thy mind?";
+		button_1_text = "Directions";
+       		button_1_value = d_0x04d004cc;
+	}
+
+}
+[conversation_lilyaire_red]
+{
+	[text*]
+	{
+
+		screen_text = "The stars do nothing without reason, child. This too will pass.";
+		choice = shop;
+		button_1_text = "Directions";
+       		button_1_value = d_0x04d004cc;
+	}
+}
+[conversation_tas]
+{
+	[text*]             //no ring
+	{
+        order = 0;
+        choice = more;
+		screen_text = "You look like a resourceful sort of person. The Society might have need of one such as yourself, if you're ready for a challenge, interested?";
+		button_2_text = "Directions";
+       		button_2_value = d_0x04d005a5;
+	}
+
+    [text*]
+	{
+        order = 1;
+		screen_text = "Meren has need of a brave adventurer, but how do I know you won't just rob us blind? I'm not so good at reading people, myself. If you travel to Elddim, speak with Utraean Priestess Kelti in the Shrine of Passion there. She is seeking one with a strong soul and daring heart, and she is much better equipped to deal with those who...don't quite fit the mold.";
+        activate_quest* = goto_elddim;
+        button_1_text = "Directions";
+       		button_1_value = d_0x04d005a5;
+	}
+     [text*]
+	{
+
+		screen_text = "If Priestess Kelti deems you trustworthy, I may have something for you later.";
+		button_1_text = "Directions";
+       		button_1_value = d_0x04d005a5;
+	}
+}
+[conversation_tas_ring]
+{
+	[text*]                 //have ring, no quest
+	{
+        order = 0;
+        choice = more;
+		screen_text = "Have you ever looked at the sky on a clear night? The stars are beautiful...deep and lustrous like a newly polished blade. I know why all that's left of the Utraeans are dusty ruins and unknown artifacts. They went there, to the sky, to start a new life... And they left their keys behind for those wise enough to follow them.";
+        complete_quest* = goto_meren;
+        complete_quest* = goto_meren_b;
+        	button_2_text = "Directions";
+       		button_2_value = d_0x04d005a5;
+	}
+    [text*]
+	{
+        order = 1;
+        
+		screen_text = "We call them Townstones, but they are really just pieces of a puzzle. When assembled together in their natural state, in the ruined Circle in Hiroth, they will open the way to the ethereal realms of the Utraeans. I cannot leave this post until the time is ripe, but you, you are the One Who Gathers. You may enter the Sacred Temple of the Stars deep in the forest to the south. The Meren Fish Stone rests there upon the altar, take it and return to show me that you have it.";
+        activate_quest* = quest_meren;
+        activate_quest* = quest_townstones;
+        	button_1_text = "Directions";
+       		button_1_value = d_0x04d005a5;
+	}
+
+
+
+
+}
+[conversation_tas_quest]
+{                            //have ring and local quest
+	[text*]
+	{
+        
+		screen_text = "The Temple is in disrepair, yes, but we thought it a fitting testament to the Utraeans. We built it deep in the southern Cloud Forest to keep it safe from common passersby. It is a bit of a trek, aye, but you will find it with persistence.";
+		button_1_text = "Directions";
+       		button_1_value = d_0x04d005a5;
+		quest_dialog = true;
+	}
+     
+}
+[conversation_tas_complete]
+{
+	[text*]             //  ring and townstone and active local quest
+	{
+        order = 0;
+        
+		screen_text = "Aye, you have it safe and sound. 'Tis a wondrous piece of craftsmanship, is it not? They say it was carved from the entire skeleton of some ancient sea-faring creature. Very well then, you should find your way to Lang. Priestess Janeira will be waiting for you. She may have been a founding member of the Utraean Circle Society, but she is still a witch through and through, and will be watching you wherever you go.";
+        complete_quest* = quest_meren;
+        activate_quest* = goto_lang;
+        	button_1_text = "Directions";
+       		button_1_value = d_0x04d005a5;
+
+	}
+
+
+
+}
+[conversation_tas_stone]
+{
+	[text*]                  //ring AND stone AND NO local quest
+	{
+        order = 0;
+        choice = more;
+		screen_text = "Have you ever looked at the sky on a clear night? The stars are beautiful...deep and lustrous like a newly polished blade. I know why all that's left of the Utraeans are dusty ruins and unknown artifacts. They went there, to the sky, to start a new life... And they left their keys behind for those wise enough to follow them.";
+        complete_quest* = goto_meren_b;
+        complete_quest* = goto_meren;
+        	button_2_text = "Directions";
+       		button_2_value = d_0x04d005a5;
+	}
+
+    [text*]
+	{
+        order = 1;
+        choice = more;
+		screen_text = "Aye, I see you already have the Meren Fish Stone safe and sound. 'Tis a wondrous piece of craftsmanship, is it not? They say it was carved from the entire skeleton of some ancient sea-faring creature. Very well then, you should find your way to Lang. Priestess Janeira will be waiting for you. She may have been a founding member of the Utraean Circle Society, but she is still a witch through and through, and will be watching you wherever you go.";
+		button_2_text = "Directions";
+       		button_2_value = d_0x04d005a5;
+	}
+    [text*]
+	{                                 //GIVE REWARD HERE
+        order = 2;
+		screen_text = "Well, I suppose everyone who visits the seaside resort of Meren should have something to remember it by.";
+
+        activate_quest* = goto_lang;
+        	button_1_text = "Directions";
+       		button_1_value = d_0x04d005a5;
+	}
+}
+[conversation_tas_goto]
+{
+	[text*]           //active goto lang quest
+	{                  //GIVE REWARD HERE
+        order = 0;
+		screen_text = "Well, I suppose everyone who visits the seaside resort of Meren should have something to remember it by.";
+		button_1_text = "Directions";
+       		button_1_value = d_0x04d005a5;
+	}
+    [text*]
+    {
+           screen_text = "Priestess Janeira will have my head on a platter if you keep dallying. The sun hasn't come out in months; I could swear she's behind it. Blasted witch.";
+           button_1_text = "Directions";
+		quest_dialog = true;
+       		button_1_value = d_0x04d005a5;
+    }
+}
+[conversation_tas_red]
+{
+	[text*]
+	{
+
+		screen_text = "I have seen red tides, but never red skies! By all things Utrae, what have we done?";
+		button_1_text = "Directions";
+       		button_1_value = d_0x04d005a5;
+	}
+}
+[conversation_flessan_all_complete]
+{
+	[text*]
+	{
+		
+		screen_text = "You have done well, friend! Mayhaps you will have a career in the Society someday, eh?";
+		button_1_text = "Directions";
+       		button_1_value = d_0x04d005a5;
+	}
+}
+
+[conversation_eliar]
+{
+	[text*]
+	{
+		order = 0;
+
+		screen_text 	= "No, I'm not going to sell you one of my mules! What do you think this is, a livery stable? I ought to-- hey, check out that bush! I dare you to touch it.";
+		button_1_text = "Directions";
+       		button_1_value = d_0x04d005fe;
+		//activate_quest*  = quest_red_tree;
+	}
+	[text*]
+	{
+		screen_text = "Har har har! And did you know 'gullible' is a type of sea-bird? Har har!";
+		button_1_text = "Directions";
+       		button_1_value = d_0x04d005fe;
+	}
+}
+[conversation_eliar_red]
+{
+	[text*]
+	{
+
+		screen_text = "Harrumph. I knew there was something crooked about you when I first saw you. Don't try telling me you didn't bring this foul weather, old Eliar isn't as daft as he looks.";
+		button_1_text = "Directions";
+       		button_1_value = d_0x04d005fe;
+	}
+}
+
+[conversation_oktavian]
+{
+	[text*]
+	{
+
+		screen_text = "Only in Meren will you find a smile on every face. It's contagious, you know. If you don't leave smiling, then we haven't done our job.";
+		button_1_text = "Directions";
+       		button_1_value = d_0x04d005c2;
+	}
+}
+[conversation_oktavian_red]
+{
+	[text*]
+	{
+
+		screen_text = "Pish, what's a little red fog when there's plenty of ale for all?";
+		button_1_text = "Directions";
+       		button_1_value = d_0x04d005c2;
+	}
+}
+[conversation_salomo]
+{
+	[text*]
+	{
+		
+		screen_text = "I've been a fisherman all my life, and I've never seen such a bounty as those Manglers that have been cropping up over the last week. You better have your whacker good and ready when you land one though, I sometimes wonder who's reeling who.";
+		button_1_text = "Directions";
+       		button_1_value = d_0x04d005c6;
+	}
+	
+}
+[conversation_salomo_red]
+{
+	[text*]
+	{
+
+		screen_text = "I know my lore better'n most, and thar's nothing in the almanac 'bout the sky being red all the live long day!";
+		button_1_text = "Directions";
+       		button_1_value = d_0x04d005c6;
+	}
+}
+[conversation_grisanbar]
+{
+	[text*]
+	{
+
+		screen_text = "When the Legion withdrew to the west, they sold this tower to Oktavian and me to start up this inn. What with all the unrest in the Cloud Forest these days, I'd gladly give the Legion their tower back if they'd just come back and protect us!";
+		button_1_text = "Directions";
+       		button_1_value = d_0x04d005b6;
+	}
+}
+[conversation_grisanbar_red]
+{
+	[text*]
+	{
+
+		screen_text = "Och, the smell of this mist! I don't care who brought it or what it means, I just want it out of my tower!";
+		button_1_text = "Directions";
+       		button_1_value = d_0x04d005b6;
+	}
+}
+[conversation_beltak]
+{
+	[text*]
+	{
+		screen_text = "I've seen more bandits in the Cloud Forest than you could shake a stick at these past weeks, and I don't like it. Dirty creatures.";
+		button_1_text = "Directions";
+       		button_1_value = d_0x04d00595;
+	}
+	
+}
+[conversation_beltak_red]
+{
+	[text*]
+	{
+
+		screen_text = "S'pose them bandits in the Cloud Forest cast this on us to give them cover for an attack?";
+		button_1_text = "Directions";
+       		button_1_value = d_0x04d00595;
+	}
+}
+[conversation_cathilla]
+{
+	[text*]
+	{
+		
+        
+		screen_text = "Julla and I were planning to take Beltak to the Crystal Caverns for a picnic. It figures the Caverns would become unsafe soon as we settled on a time.";
+		button_1_text = "Directions";
+       		button_1_value = d_0x04d005fa;
+	}
+	
+}
+[conversation_cathilla_red]
+{
+	[text*]
+	{
+
+		screen_text = "Do you think this nasty mist has invaded the Crystal Caverns as well? There must be someplace we can go to get away from it!";
+		button_1_text = "Directions";
+       		button_1_value = d_0x04d005fa;
+	}
+}
+[conversation_julla]
+{
+	
+	
+	[text*]
+	{
+
+		screen_text = "I suggested that Beltak, Cathilla, and I should all go on a trip through the Cloud Forest to find that Temple of the Stars, which Priest Tas is always talking about, but of course now the woods are just crawling with bandits.";
+		button_1_text = "Directions";
+       		button_1_value = d_0x04d005f0;
+	}
+}
+[conversation_julla_red]
+{
+	[text*]
+	{
+
+		screen_text = "If this horrible stench is a bandit ploy, they can have all our wares! Augh!";
+		button_1_text = "Directions";
+       		button_1_value = d_0x04d005f0;
+	}
+}
+
+[conversation_almai]
+{
+	
+	[text*]
+	{
+		screen_text = "Don't tell Griselde, but Oktavian carved me a cup out of a seashell and inscribed 'wabe' on the bottom. What do you suppose that means?";
+		button_1_text = "Directions";
+       		button_1_value = d_0x04d00764;
+	}
+	
+}
+[conversation_almai_red]
+{
+	[text*]
+	{
+
+		screen_text = "My eyes haven't stopped watering since that awful stench started coming from the sky.";
+		button_1_text = "Directions";
+       		button_1_value = d_0x04d00764;
+	}
+}
+[conversation_mira]
+{
+	[text*]
+	{
+		screen_text = "Everyone else in Meren might be missing the sun, but it's a nice change to me! I used to live in Quillrabe where it never rains, and this is refreshing!";
+		button_1_text = "Directions";
+       		button_1_value = d_0x04d00765;
+	}
+	
+}
+[conversation_mira_red]
+{
+	[text*]
+	{
+
+		screen_text = "I can still shoot a bow as well as any Legionnaire. If any bandits try to attack us here, I'll be ready for them!";
+		button_1_text = "Directions";
+       		button_1_value = d_0x04d00765;
+	}
+}
+[conversation_scud]
+{
+	[text*]
+	{
+		screen_text = "I was sunning myself on the beach when a fish the size of a whale ran up out of the water! It's a rare day when your dinner walks right into your lap!";
+		button_1_text = "Directions";
+       		button_1_value = d_0x04d00766;
+	}
+	
+}
+[conversation_scud_red]
+{
+	[text*]
+	{
+
+		screen_text = "This stuff stings the eyes! If I didn't have to keep my guard up for the bandits, I would wrap my head in a wet cloth.";
+		button_1_text = "Directions";
+       		button_1_value = d_0x04d00766;
+	}
+}
+
+[conversation_ranger_lift]
+{
+	[text*]	//27 - 29
+	{
+
+		screen_text = "Take care journeying through the Cloud Forest, friend. There have been an unusual number of bandit raids on Meren of late, so best keep your eyes open.";
+		button_1_text = "Directions";
+       		button_1_value = d_0x04d00633;
+	}
+}
+[conversation_ranger_lift_low]
+{
+	[text*] //level 26 or lower
+	{
+
+		screen_text = "I've been around a fair bit and seen all sorts of folk, and I can tell just by looking at you that you won't last a minute out there.";
+		button_1_text = "Directions";
+       	button_1_value = d_0x04d00633;
+	}
+}
+[conversation_ranger_lift_high]
+{
+	[text*]	//level 30+
+	{
+
+		screen_text = "Such a pleasant sight it is to see an adventurer setting out for a walk. With your obvious expertise, it will be a mere walk, you know. Not much you need to be wary of around here!";
+		button_1_text = "Directions";
+       	button_1_value = d_0x04d00633;
+	}
+}
+[conversation_ranger_lift_red]
+{
+	[text*]
+	{
+		
+		screen_text = "I'm not sure whether to be more afraid of this weather or the sight of you running around as if you don't have a care in the world. Get yourself inside someplace safe!";
+		button_1_text = "Directions";
+       		button_1_value = d_0x04d00633;
+	}
+}
+
+[conversation_ranger_caves]
+{
+	[text*]	//22 - 24
+	{
+
+		screen_text = "It's not the most ideal of times to be exploring the Crystal Caverns, but you look well-suited for it even with all the vermin in there lately.";
+		button_1_text = "Directions";
+       		button_1_value = d_0x04d00635;
+	}
+}
+[conversation_ranger_caves_low]
+{
+	[text*] //level 21 or lower
+	{
+
+		screen_text = "I've been around a fair bit and seen all sorts of folk, and I can tell just by looking at you that you won't last a minute out there.";
+		button_1_text = "Directions";
+       	button_1_value = d_0x04d00635;
+	}
+}
+[conversation_ranger_caves_high]
+{
+	[text*]	//level 25+
+	{
+
+		screen_text = "Such a pleasant sight it is to see an adventurer setting out for a walk. With your obvious expertise, it will be a mere walk, you know. Not much you need to be wary of around here!";
+		button_1_text = "Directions";
+       	button_1_value = d_0x04d00635;
+	}
+}
+[conversation_ranger_caves_red]
+{
+	[text*]
+	{
+		
+		screen_text = "The only place I've seen that seems to be safe from this hell fog is deep within the Crystal Caverns, but they're so overrun with vermin I'm not sure if it'd be worse out here or confined in there!";
+		button_1_text = "Directions";
+       		button_1_value = d_0x04d00635;
+	}
+}
+
