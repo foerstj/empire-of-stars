@@ -2,6 +2,14 @@
 {
 	source_region_guid = 0xAAA30100;
 	source_region_name = path2ice_r2;
+	[t:stitch_editor,n:ice_cave]
+	{
+		dest_region = ice_cave;
+		[node_ids]
+		{
+			0x000000bb = 0x0CFC0B37,10;
+		}
+	}
 	[t:stitch_editor,n:path2ice]
 	{
 		dest_region = path2ice;
