@@ -714,3 +714,36 @@
 		wind_velocity = 1.0f;
 	}
 }
+[mood_setting*]
+{
+	interior = false;
+	mood_name = eos_betelgeuse_2;
+	transition_time = 5.0f;
+	[fog]
+	{
+	  x fog_color = 0xFFFEBEA9;
+	  f fog_density = 0.500000;
+	  f fog_far_dist = 60.000000;
+	  f fog_lowdetail_far_dist = 40.000000;
+	  f fog_lowdetail_near_dist = 20.000000;
+	  f fog_near_dist = 30.000000;
+	}
+	[music]
+	{
+	  f ambient_intro_delay = 0.000000;
+	  f ambient_repeat_delay = 0.000000;
+		ambient_track = "s_e_ambient_bird1";
+	  f battle_intro_delay = 10.000000;
+	  f battle_repeat_delay = 10.000000;
+		battle_track = 10.000000;
+		room_type = rt_generic;
+	  f standard_intro_delay = 0.000000;
+	  f standard_repeat_delay = 10.000000;
+		standard_track = "s_m_Path2Stonebridge_02";
+	}
+	[wind]
+	{
+		wind_direction = 0.0f;
+		wind_velocity = 1.0f;
+	}
+}
