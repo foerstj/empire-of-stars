@@ -482,12 +482,27 @@
 	  p position = 2.18209,0,1.14288,0x3e8a16a5;
 	}
 }
-[t:dsx_jhay,n:0x04c00081]
+[t:eos_bg_hire_m_r,n:0x04c00081]
 {
 	[aspect]
 	{
-	  f max_life = 88.2;
-	  f max_mana = 109;
+	  f max_life = 58.8;
+	  f max_mana = 34;
+	}
+	[conversation]
+	{
+		[conversations]
+		{
+			* = hire_bg_m_r;
+			* = pm_accept;
+			* = pm_disband;
+			* = pm_reject;
+			* = pm_rejoin;
+		}
+	}
+	[mind]
+	{
+		jat_talk = world\ai\jobs\eos\job_talk_bg_hire_m_r.skrit;
 	}
 	[placement]
 	{
@@ -545,6 +560,14 @@
 	{
 	  q orientation = 0,0.997691,0,0.0679159;
 	  p position = 5.26463,-0.05,0.727814,0x92ad36d9;
+	}
+}
+[t:eos_beetle_baby,n:0x04c000b5]
+{
+	[placement]
+	{
+	  q orientation = 0,0.995091,0,-0.0989608;
+	  p position = -7.00222,-0.05,-2.35954,0x92ad36d9;
 	}
 }
 [t:dsx_jhay,n:0x04c00088]
@@ -1311,25 +1334,19 @@
 	  p position = -0.946422,0,0.357688,0x417ae6f6;
 	}
 }
-[t:dsx_jharmaya,n:0x04c00090]
+[t:eos_bg_shop,n:0x04c00090]
 {
-	[aspect]
+	[conversation]
 	{
-	  f max_life = 196;
-	  f max_mana = 289;
+		[conversations]
+		{
+			* = shop;
+		}
 	}
 	[placement]
 	{
 	  q orientation = 0,0.952648,0,0.304075;
 	  p position = 2.99549,0.3,-3.7837,0x365a0833;
-	}
-}
-[t:eos_beetle_baby,n:0x04c000b5]
-{
-	[placement]
-	{
-	  q orientation = 0,0.995091,0,-0.0989608;
-	  p position = -7.00222,-0.05,-2.35954,0x92ad36d9;
 	}
 }
 [t:eos_beetle_female,n:0x04c00078]

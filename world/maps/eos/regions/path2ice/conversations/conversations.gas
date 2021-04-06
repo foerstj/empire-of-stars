@@ -25,6 +25,24 @@ See what I discovered - the ancient Empire of Stars had contact with Beings from
 	  f scroll_rate = 10.000000;
 	}
 }
+[beetles]
+{
+	[text*]
+	{
+		screen_text = "How do you like our Beetles? They're beautiful, aren't they?
+We keep them for the delicious Beetlejuice they secrete, of course. Fancy a glass?";
+	  f scroll_rate = 10.000000;
+	}
+}
+[hire_bg_m_r]
+{
+	[text*]
+	{
+		choice = potential_member;
+		screen_text = "Hire?";
+	  f scroll_rate = 10.000000;
+	}
+}
 [mule_shop]
 {
 	[text*]
@@ -107,12 +125,12 @@ Sorry, we need the other pack animals ourselves.";
 	  f scroll_rate = 10.000000;
 	}
 }
-[beetles]
+[shop]
 {
 	[text*]
 	{
-		screen_text = "How do you like our Beetles? They're beautiful, aren't they?
-We keep them for the delicious Beetlejuice they secrete, of course. Fancy a glass?";
+		choice = shop;
+		screen_text = "Shop?";
 	  f scroll_rate = 10.000000;
 	}
 }

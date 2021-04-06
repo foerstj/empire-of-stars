@@ -1,0 +1,114 @@
+[t:template,n:eos_bg_hire_m_r]
+{
+	category_name = "1W_character";
+	doc = "eos bg hire m r";
+	specializes = base_pm_fb;
+	[actor]
+	{
+		portrait_icon = b_gui_ig_i_ic_c_nardulo;
+        // Skills from Naidi
+		[skills]
+		{
+			strength 		=   0.75, 0, 10;
+			intelligence 	=  	0.39, 0, 10;
+			dexterity 		=   1.86, 0, 10;
+            Ranged 			= 	3, 0, 0;
+            uber 			= 	3, 0, 0;
+		}
+	}
+	[aspect]
+	{
+		model = m_c_gah_fb_pos_a1;
+		[textures]
+		{
+			0 = b_c_gan_utraean_skin_01;
+			1 = b_c_pos_a1_utraean-01;
+		}
+      [voice]
+	{
+	[die]		{ priority = high; * = s_v_nardulo_die; }
+//	[hit_critical]	{ priority = low; * = s_v_nardulo_hit_03_SED;  }
+//	[hit_glance]	{ priority = low; * = s_v_nardulo_hit_01_SED;  }
+//	[hit_solid]	{ priority = low; * = s_v_nardulo_hit_02_SED;  }
+}
+      [vo_voice]
+	{
+	  [select_char]
+	    { 
+	      priority = vo; 
+	      * = s_v_nardulo_select_01;
+	      * = s_v_nardulo_select_02;
+	      * = s_v_nardulo_select_03;
+	      * = s_v_nardulo_select_04;
+	      * = s_v_nardulo_select_05;
+	      * = s_v_nardulo_select_06;
+	      * = s_v_nardulo_select_07;
+	      * = s_v_nardulo_select_08;
+	      * = s_v_nardulo_select_09;
+	      * = s_v_nardulo_select_10;
+	      * = s_v_nardulo_select_11;
+	      * = s_v_nardulo_select_12;
+	      * = s_v_nardulo_select_13;
+	      * = s_v_nardulo_select_14;
+	      * = s_v_nardulo_select_15;
+	    }
+	  [order_move]
+	    {
+	      priority = vo; 
+	      * = s_v_nardulo_ack_01;
+	      * = s_v_nardulo_ack_02;
+	      * = s_v_nardulo_ack_03;
+	      * = s_v_nardulo_ack_04;
+	      * = s_v_nardulo_ack_05;
+	      * = s_v_nardulo_ack_06;
+	      * = s_v_nardulo_ack_07;
+	      * = s_v_nardulo_ack_08;
+	      * = s_v_nardulo_ack_09;
+	      * = s_v_nardulo_ack_10;
+	      * = s_v_nardulo_ack_11;
+	      * = s_v_nardulo_ack_12;
+	      * = s_v_nardulo_ack_13;
+	      * = s_v_nardulo_ack_14;
+	      * = s_v_nardulo_ack_15;
+	    }
+	  [order_attack]
+	    {
+	      priority = vo; 
+	      * = s_v_nardulo_attack_01;
+	      * = s_v_nardulo_attack_02;
+	      * = s_v_nardulo_attack_03;
+	      * = s_v_nardulo_attack_04;
+	      * = s_v_nardulo_attack_05;
+	      * = s_v_nardulo_attack_06;
+	      * = s_v_nardulo_attack_07;
+	      * = s_v_nardulo_attack_08;
+	      * = s_v_nardulo_attack_09;
+	      * = s_v_nardulo_attack_10;
+	      * = s_v_nardulo_attack_11;
+	      * = s_v_nardulo_attack_12;
+	      * = s_v_nardulo_attack_13;
+	      * = s_v_nardulo_attack_14;
+	      * = s_v_nardulo_attack_15;
+	    }
+	}
+    }
+	[common]
+	{
+		screen_name = "Hireable Utraean male ranged level 3";
+	}
+	
+	[conversation]{}
+	
+	[inventory]
+	{
+        // Inventory from Naidi adapted
+		[equipment]
+		{
+            es_feet = #boots/-no_mod/6-10;
+		}
+        [other]
+        {
+			il_main = bw_g_c_s_s_r_avg;
+        }
+	}
+}
