@@ -436,22 +436,6 @@
 	  p position = 2.61907,-1,-3.80982,0x59dfa1cf;
 	}
 }
-[t:dsx_angler,n:0x04d00118]
-{
-	[placement]
-	{
-	  q orientation = 0,0.11951,0,0.992833;
-	  p position = -5.49246,-13.2,-31.8696,0x07df9f41;
-	}
-}
-[t:dsx_angler,n:0x04d0011a]
-{
-	[placement]
-	{
-	  q orientation = 0,0.103847,0,0.994593;
-	  p position = -3.82769,-13.2156,-32.7093,0x07df9f41;
-	}
-}
 [t:dsx_angler,n:0x04d00121]
 {
 	[placement]
@@ -466,30 +450,6 @@
 	{
 	  q orientation = 0,0.939513,0,0.342512;
 	  p position = -9.99675,-13.2,-31.6941,0x34189118;
-	}
-}
-[t:dsx_angler,n:0x04d00113]
-{
-	[placement]
-	{
-	  q orientation = 0,-0.662683,0,0.7489;
-	  p position = -4.38713,-13.2,-32.0999,0x396febe4;
-	}
-}
-[t:dsx_angler,n:0x04d00114]
-{
-	[placement]
-	{
-	  q orientation = 0,-0.67738,0,0.735633;
-	  p position = -6.44307,-13.2838,-32.926,0x396febe4;
-	}
-}
-[t:dsx_angler,n:0x04d00115]
-{
-	[placement]
-	{
-	  q orientation = 0,0.990326,0,0.138759;
-	  p position = 2.03652,-13.2,-32.3425,0x396febe4;
 	}
 }
 [t:dsx_angler,n:0x04d00110]
@@ -1129,5 +1089,85 @@
 	{
 	  q orientation = 0,-0.707107,0,0.707107;
 	  p position = 0.801895,-9.53674e-007,-1.02925,0xd55057ac;
+	}
+}
+[t:dsx_jharmaya,n:0x04d00131]
+{
+	[aspect]
+	{
+	  f max_life = 196;
+	  f max_mana = 289;
+	}
+	[common]
+	{
+		screen_name = "Berry";
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.327146,0,0.944974;
+	  p position = -17.111,-14.2049,-42.5128,0x396febe4;
+	}
+}
+[t:dsx_jhay,n:0x04d00132]
+{
+	[aspect]
+	{
+	  f max_life = 88.2;
+	  f max_mana = 109;
+	}
+	[common]
+	{
+		screen_name = "Trevor";
+	}
+	[conversation]
+	{
+		[conversations]
+		{
+			* = hello;
+		}
+	}
+	[mind]
+	{
+	  b actor_auto_fidgets = false;
+		jat_talk = world\ai\jobs\common\job_talk.skrit;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.927404,0,-0.374061;
+	  p position = -14.2215,-14.2892,-44.1967,0x396febe4;
+	}
+}
+[t:dsx_jharmaya,n:0x04d00136]
+{
+	[aspect]
+	{
+	  f max_life = 196;
+	  f max_mana = 289;
+	}
+	[common]
+	{
+		screen_name = "Betty";
+	}
+	[placement]
+	{
+	  q orientation = 0,0.700335,0,0.713814;
+	  p position = 3.51106,9.53674e-007,1.75872,0x9529e2e6;
+	}
+}
+[t:dsx_jharmaya,n:0x04d00139]
+{
+	[aspect]
+	{
+	  f max_life = 196;
+	  f max_mana = 289;
+	}
+	[common]
+	{
+		screen_name = "Joan";
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.589267,0,0.807938;
+	  p position = -1.69566,0,1.28881,0x4003af0d;
 	}
 }
