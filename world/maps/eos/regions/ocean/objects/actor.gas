@@ -10,6 +10,7 @@
 {
 	[aspect]
 	{
+	  b is_selectable = true;
 	  f scale_multiplier = 1.43841;
 	}
 	[placement]
@@ -22,6 +23,7 @@
 {
 	[aspect]
 	{
+	  b is_selectable = true;
 	  f scale_multiplier = 1.14067;
 	}
 	[common]
@@ -44,6 +46,18 @@
 	[common]
 	{
 		screen_name = "Louise";
+	}
+	[conversation]
+	{
+		[conversations]
+		{
+			* = mule_shop;
+			* = mule_shop_sold_out;
+		}
+	}
+	[mind]
+	{
+		jat_talk = world\ai\jobs\eos\job_talk_mule_shop.skrit;
 	}
 	[placement]
 	{
@@ -104,6 +118,21 @@
 	{
 		screen_name = "Blaze";
 	}
+	[conversation]
+	{
+		[conversations]
+		{
+			* = hire_bg_f_nm;
+			* = pm_accept;
+			* = pm_disband;
+			* = pm_reject;
+			* = pm_rejoin;
+		}
+	}
+	[mind]
+	{
+		jat_talk = world\ai\jobs\eos\job_talk_bg_hire_f_nm.skrit;
+	}
 	[placement]
 	{
 	  q orientation = 0,0.995027,0,-0.0996055;
@@ -123,18 +152,6 @@
 	{
 	  q orientation = 0,-0.887233,0,0.461321;
 	  p position = -1.29541,0,-1.69122,0x80d81930;
-	}
-}
-[t:dsx_the_guardian,n:0x04d0012c]
-{
-	[common]
-	{
-		screen_name = "Old Wise Man";
-	}
-	[placement]
-	{
-	  q orientation = 0,-0.859333,0,0.511416;
-	  p position = -2.42109,-0.05,-3.45893,0x04521f77;
 	}
 }
 [t:eos_phrak_betelgeuse,n:0x04d00823]
@@ -1104,5 +1121,13 @@
 	{
 	  q orientation = 0,2.98023e-008,0,1;
 	  p position = 2.54655,0,1.3193,0x4763bfcd;
+	}
+}
+[t:utraean_male_old,n:0x04d0012c]
+{
+	[placement]
+	{
+	  q orientation = 0,-0.859333,0,0.511416;
+	  p position = -2.42109,-0.05,-3.45893,0x04521f77;
 	}
 }
