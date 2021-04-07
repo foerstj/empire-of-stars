@@ -18,23 +18,18 @@
 		  i order = 0;
 		}
 	}
+	[c3_betelgeuse]
+	{
+		screen_name = Betelgeuse;
+		[*]
+		{
+			description = Quests on Betelgeuse;
+		  i order = 0;
+		}
+	}
 }
 [quests]
 {
-	[alphacentauri_crypt]
-	{
-		chapter = c2_alpha_centauri;
-		screen_name = The Crypt;
-		victory_sample = s_e_level_up_quest;
-		[*]
-		{
-			description = Look for Starstones in the Crypt;
-		  b is_consumable = true;
-		  i order = 0;
-		  b required = true;
-			speaker = ;
-		}
-	}
 	[find_aunt_luna]
 	{
 		chapter = c1_eos;
@@ -75,6 +70,38 @@
 		{
 			order		= 0;
 			description     = "Clear the Krug from the Chapel's basement, and gather supplies for the way to the Crypt.";
+		}
+	}
+	[alphacentauri_crypt]
+	{
+		chapter = c2_alpha_centauri;
+		screen_name = The Crypt;
+		victory_sample = s_e_level_up_quest;
+		[*]
+		{
+			description = Look for Starstones in the Crypt;
+		  b is_consumable = true;
+		  i order = 0;
+		  b required = true;
+			speaker = ;
+		}
+	}
+	[betelgeuse_oldwiseman]
+	{
+		chapter = c1_eos;
+		screen_name = "Old Wise Man";
+		victory_sample = s_e_level_up_quest;
+		[*]
+		{
+			description = "See the Old Wise Man about starstones. He lives in the village of Wishy-Washy.";
+		  i order = 0;
+		  b required_update = true;
+		}
+		[*]
+		{
+			description = "Speak again with Anne back in Palim Palim about another starstone.";
+		  i order = 1;
+		  b required_update = true;
 		}
 	}
 }
