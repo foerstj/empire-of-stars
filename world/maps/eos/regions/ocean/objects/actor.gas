@@ -36,16 +36,16 @@
 	  p position = 1.12518,-0.949973,-1.47675,0xafbdaa34;
 	}
 }
-[t:dsx_jharmaya,n:0x04d005fe]
+[t:dsx_jhay,n:0x04d005fe]
 {
 	[aspect]
 	{
-	  f max_life = 196;
-	  f max_mana = 289;
+	  f max_life = 88.2;
+	  f max_mana = 109;
 	}
 	[common]
 	{
-		screen_name = "Louise";
+		screen_name = "Lou";
 	}
 	[conversation]
 	{
@@ -452,6 +452,98 @@
 	  p position = -9.99675,-13.2,-31.6941,0x34189118;
 	}
 }
+[t:dsx_jharmaya,n:0x04d00131]
+{
+	[aspect]
+	{
+	  f max_life = 196;
+	  f max_mana = 289;
+	}
+	[common]
+	{
+		screen_name = "Berry";
+	}
+	[mind]
+	{
+	  b actor_auto_fidgets = false;
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.327146,0,0.944974;
+	  p position = -17.111,-14.2049,-42.5128,0x396febe4;
+	}
+}
+[t:dsx_jhay,n:0x04d00132]
+{
+	[aspect]
+	{
+	  f max_life = 88.2;
+	  f max_mana = 109;
+	}
+	[common]
+	{
+		screen_name = "Trevor";
+	}
+	[conversation]
+	{
+		[conversations]
+		{
+			* = hello;
+		}
+	}
+	[mind]
+	{
+	  b actor_auto_fidgets = false;
+		jat_talk = world\ai\jobs\common\job_talk.skrit;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.927404,0,-0.374061;
+	  p position = -14.2215,-14.2892,-44.1967,0x396febe4;
+	}
+}
+[t:dsx_jharmaya,n:0x04d00139]
+{
+	[aspect]
+	{
+	  f max_life = 196;
+	  f max_mana = 289;
+	}
+	[common]
+	{
+		screen_name = "Joan";
+	}
+	[mind]
+	{
+	  b actor_auto_fidgets = false;
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.589267,0,0.807938;
+	  p position = -1.69566,0,1.28881,0x4003af0d;
+	}
+}
+[t:dsx_jharmaya,n:0x04d00136]
+{
+	[aspect]
+	{
+	  f max_life = 196;
+	  f max_mana = 289;
+	}
+	[common]
+	{
+		screen_name = "Betty";
+	}
+	[mind]
+	{
+	  b actor_auto_fidgets = false;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.700335,0,0.713814;
+	  p position = 3.51106,9.53674e-007,1.75872,0x9529e2e6;
+	}
+}
 [t:dsx_angler,n:0x04d00110]
 {
 	[placement]
@@ -577,6 +669,14 @@
 	{
 	  q orientation = 0,-0.963304,0,0.268414;
 	  p position = 1.342,0,-0.527203,0xdb5fc507;
+	}
+}
+[t:eos_moth,n:0x04d00224]
+{
+	[placement]
+	{
+	  q orientation = 0,-0.707107,0,0.707107;
+	  p position = 0.801895,-9.53674e-007,-1.02925,0xd55057ac;
 	}
 }
 [t:eos_phrak_betelgeuse,n:0x04d00647]
@@ -1081,93 +1181,5 @@
 	{
 	  q orientation = 0,2.98023e-008,0,1;
 	  p position = 2.54655,0,1.3193,0x4763bfcd;
-	}
-}
-[t:eos_moth,n:0x04d00224]
-{
-	[placement]
-	{
-	  q orientation = 0,-0.707107,0,0.707107;
-	  p position = 0.801895,-9.53674e-007,-1.02925,0xd55057ac;
-	}
-}
-[t:dsx_jharmaya,n:0x04d00131]
-{
-	[aspect]
-	{
-	  f max_life = 196;
-	  f max_mana = 289;
-	}
-	[common]
-	{
-		screen_name = "Berry";
-	}
-	[placement]
-	{
-	  q orientation = 0,-0.327146,0,0.944974;
-	  p position = -17.111,-14.2049,-42.5128,0x396febe4;
-	}
-}
-[t:dsx_jhay,n:0x04d00132]
-{
-	[aspect]
-	{
-	  f max_life = 88.2;
-	  f max_mana = 109;
-	}
-	[common]
-	{
-		screen_name = "Trevor";
-	}
-	[conversation]
-	{
-		[conversations]
-		{
-			* = hello;
-		}
-	}
-	[mind]
-	{
-	  b actor_auto_fidgets = false;
-		jat_talk = world\ai\jobs\common\job_talk.skrit;
-	}
-	[placement]
-	{
-	  q orientation = 0,0.927404,0,-0.374061;
-	  p position = -14.2215,-14.2892,-44.1967,0x396febe4;
-	}
-}
-[t:dsx_jharmaya,n:0x04d00136]
-{
-	[aspect]
-	{
-	  f max_life = 196;
-	  f max_mana = 289;
-	}
-	[common]
-	{
-		screen_name = "Betty";
-	}
-	[placement]
-	{
-	  q orientation = 0,0.700335,0,0.713814;
-	  p position = 3.51106,9.53674e-007,1.75872,0x9529e2e6;
-	}
-}
-[t:dsx_jharmaya,n:0x04d00139]
-{
-	[aspect]
-	{
-	  f max_life = 196;
-	  f max_mana = 289;
-	}
-	[common]
-	{
-		screen_name = "Joan";
-	}
-	[placement]
-	{
-	  q orientation = 0,-0.589267,0,0.807938;
-	  p position = -1.69566,0,1.28881,0x4003af0d;
 	}
 }
