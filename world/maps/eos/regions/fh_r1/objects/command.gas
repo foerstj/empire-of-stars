@@ -162,18 +162,6 @@
 	  p position = -2.34474,1.23569,1.28371,0xe022e642;
 	}
 }
-[t:cmd_auto_save,n:0x01c00b9f]
-{
-	[common]
-	{
-		dev_instance_text = "AUTO SAVE";
-	}
-	[placement]
-	{
-	  q orientation = 0,0.707107,0,0.707107;
-	  p position = -3.07041,-0.65,-3.15442,0x21e2011d;
-	}
-}
 [t:cmd_ai_c_patrol,n:0x01c005a2]
 {
 	[cmd_ai_dojob]
@@ -1233,5 +1221,34 @@
 	{
 	  q orientation = 0,-0.707107,0,0.707107;
 	  p position = 0.988828,3e-006,-1.15561,0x49a214b8;
+	}
+}
+[t:cmd_auto_save,n:0x01c001c4]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_activate",0x01C001C4,0f,"default","every",0);
+			  b can_self_destruct = true;
+				condition* = party_member_within_sphere(10.000000,"on_first_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.252144,0,0.96769;
+	  p position = 20.1613,0.1,-6.57994,0x6cc08eae;
 	}
 }

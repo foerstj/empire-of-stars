@@ -3067,37 +3067,6 @@
 	  p position = 1.62278,1.19209e-007,1.81373,0x2be23969;
 	}
 }
-[t:trigger_generic,n:0x060003c4]
-{
-	[common]
-	{
-		dev_instance_text = "AUTO SAVE";
-	  b is_multi_player = false;
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = send_world_message("we_req_activate",0x060003C6,0f,"default","",0);
-			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(1.000000,1.000000,3.000000,"on_first_enter");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = false;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = true;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  q orientation = 0,1,0,0;
-	  p position = 1.1151,0,0.117892,0xc84d31aa;
-	}
-}
 [t:use_point,n:0x060003e6]
 {
 	[placement]
