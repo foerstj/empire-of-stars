@@ -1,76 +1,3 @@
-[t:template,n:eos_utraean_townfolk_male_02_base]
-{
-	category_name = "1W_townsperson";
-	specializes = base_npc_fb_multiplayer;
-	[aspect]
-	{
-		model = m_c_gah_fb_pos_a2;
-	}
-	[inventory]
-	{
-		[equipment]
-		{
-            // delete the boots
-		}
-	}
-	[mind]
-	{
-        jat_talk = world\ai\jobs\common\job_talk.skrit;
-	}
-}
-[t:template,n:eos_utraean_townfolk_male_02a]
-{
-	doc = "eos utraean_townfolk_male_02a";
-	specializes = eos_utraean_townfolk_male_02_base;
-	[aspect]
-	{
-		[textures]
-		{
-			0 = b_c_gan_utraean_skin_eos_03a;
-			1 = b_c_pos_a2_eos-utraean-03a;
-		}
-	}
-}
-[t:template,n:eos_utraean_townfolk_male_02b]
-{
-	doc = "eos utraean_townfolk_male_02b";
-	specializes = eos_utraean_townfolk_male_02_base;
-	[aspect]
-	{
-		[textures]
-		{
-			0 = b_c_gan_utraean_skin_eos_03b;
-			1 = b_c_pos_a2_eos-utraean-03b;
-		}
-	}
-}
-[t:template,n:eos_utraean_townfolk_male_02c]
-{
-	doc = "eos utraean_townfolk_male_02c";
-	specializes = eos_utraean_townfolk_male_02_base;
-	[aspect]
-	{
-		[textures]
-		{
-			0 = b_c_gan_utraean_skin_eos_03c;
-			1 = b_c_pos_a2_eos-utraean-03c;
-		}
-	}
-}
-[t:template,n:eos_utraean_townfolk_male_02d]
-{
-	doc = "eos utraean_townfolk_male_02d";
-	specializes = eos_utraean_townfolk_male_02_base;
-	[aspect]
-	{
-		[textures]
-		{
-			0 = b_c_gan_utraean_skin_eos_03d;
-			1 = b_c_pos_a2_eos-utraean-03d;
-		}
-	}
-}
-
 [t:template,n:eos_utraean_townfolk_female_02_base]
 {
 	category_name = "1W_townsperson";
@@ -246,20 +173,34 @@
 	}
 }
 
-[t:template,n:eos_male_old]
+[t:template,n:eos_utraean_townfolk_female_01_base]
 {
-	category_name = "1W_character";
-	doc = "eos male_old";
-	specializes = base_npc_pmo;
+	category_name = "1W_townsperson";
+	specializes = dsx_base_npc_fg_multiplayer;
 	[aspect]
 	{
+		model = m_c_gah_fg_pos_a2;
 		[textures]
 		{
-			0 = b_c_gbn_pmo_eos-utraean-06d;
+			0 = b_c_gan_utraean_skin_05;
+			1 = b_c_pos_a2_eos-utraean-05;
 		}
 	}
-	[common]
+	[inventory]
 	{
-		screen_name = "Utraean old man";
+		custom_head = m_c_gah_fg_hlmt_head-04;
+		[equipment]
+		{
+			// remove boots
+		}
 	}
+	[mind]
+	{
+        jat_talk = world\ai\jobs\common\job_talk.skrit;
+	}	
+}
+[t:template,n:eos_utraean_townfolk_female_01]
+{
+	doc = "eos utraean_townfolk_female_01";
+	specializes = eos_utraean_townfolk_female_01_base;
 }
