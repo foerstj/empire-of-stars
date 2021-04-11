@@ -439,65 +439,6 @@
 	  p position = -3.30804,0,-0.0397606,0x1f977cf7;
 	}
 }
-[t:trigger_generic,n:0x04c0045e]
-{
-	[common]
-	{
-		dev_instance_text = "PLAYER LOCATION";
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = set_player_world_location("frozen_forest");
-			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(3.000000,2.000000,0.250000,"on_every_enter");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  q orientation = 0,0.0980172,0,0.995185;
-	  p position = 3.75885,1.59491,2.63585,0xb2fb5879;
-	}
-}
-[t:trigger_fade_nodes_node,n:0x04c000c9]
-{
-	[common]
-	{
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = fade_nodes(0x13C295ED,1,-1,-1,"in"), doc("mines2");
-			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(15.000000,0.500000,1.000000,"on_every_enter");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  q orientation = 0,2.98023e-008,0,1;
-	  p position = 2.86115,0,0.178772,0x35f9c9ae;
-	}
-}
 [t:trigger_change_mood_box,n:0x04c00388]
 {
 	[common]
@@ -567,7 +508,7 @@
 {
 	[common]
 	{
-		dev_instance_text = "FADE & MOOD   PLAYER LOCATION";
+		dev_instance_text = "FADE & MOOD";
 		[instance_triggers]
 		{
 			[*]
@@ -575,7 +516,6 @@
 				action* = mood_change("eos_betelgeuse_1");
 				action* = fade_nodes(0xADA20101,3,-1,-1,"in");
 				action* = fade_nodes(0xADA20101,4,-1,-1,"in");
-				action* = set_player_world_location("frozen_forest");
 			  b can_self_destruct = true;
 				condition* = party_member_within_bounding_box(6.000000,1.500000,0.250000,"on_every_enter");
 			  f delay = 0.000000;
