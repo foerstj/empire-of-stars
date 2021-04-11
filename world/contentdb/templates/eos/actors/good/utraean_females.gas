@@ -66,8 +66,11 @@
 		}
 	}
 }
+		// custom_head = m_c_gah_fg_hlmt_head-03;  // short
+		// custom_head = m_c_gah_fg_hlmt_head-04;  // bald
+		// custom_head = m_c_gah_fg_hlmt_head-05;  // bun
 
-[t:template,n:eos_utraean_female_a1_1a_nude]
+[t:template,n:eos_utraean_female_a1_1a_nude_base]
 {
 	doc = "eos utraean_female nude";
 	specializes = eos_utraean_female_a1_base;
@@ -79,6 +82,14 @@
 			1 = b_c_pos_a1_ba-utraean_eos_f1_l056;
 		}
 	}
+}
+[t:template,n:eos_utraean_female_a1_1a_nude_shorthair]
+{
+    specializes = eos_utraean_female_a1_1a_nude_base;
+    [inventory]
+    {
+		custom_head = m_c_gah_fg_hlmt_head-03;  // short
+    }
 }
 [t:template,n:eos_utraean_female_a1_1a_seminude]
 {
