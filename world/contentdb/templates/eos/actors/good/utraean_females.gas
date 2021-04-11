@@ -66,6 +66,7 @@
 		}
 	}
 }
+		// custom_head = m_c_gah_fg_hlmt_head-02;  // up
 		// custom_head = m_c_gah_fg_hlmt_head-03;  // short
 		// custom_head = m_c_gah_fg_hlmt_head-04;  // bald
 		// custom_head = m_c_gah_fg_hlmt_head-05;  // bun
@@ -91,7 +92,7 @@
 		custom_head = m_c_gah_fg_hlmt_head-03;  // short
     }
 }
-[t:template,n:eos_utraean_female_a1_1a_seminude]
+[t:template,n:eos_utraean_female_a1_1c_seminude]
 {
 	doc = "eos utraean_female seminude";
 	specializes = eos_utraean_female_a1_base;
@@ -99,10 +100,31 @@
 	{
 		[textures]
 		{
-			0 = b_c_gan_utraean_skin-eos_f1_ta;
-			1 = b_c_pos_a1_ba-utraean_eos_f1_l056topless;
+			0 = b_c_gan_utraean_skin-eos_f1_tc;
+			1 = b_c_pos_a1_ba-utraean_eos_f1_tc_l056topless;
 		}
 	}
+}
+[t:template,n:eos_utraean_female_a1_1b_nude_base]
+{
+	doc = "eos utraean_female nude";
+	specializes = eos_utraean_female_a1_base;
+	[aspect]
+	{
+		[textures]
+		{
+			0 = b_c_gan_utraean_skin-eos_f1_tb_barefeet;
+			1 = b_c_pos_a1_ba-utraean_eos_f1_tb_l056;
+		}
+	}
+}
+[t:template,n:eos_utraean_female_a1_1b_nude_bun]
+{
+    specializes = eos_utraean_female_a1_1b_nude_base;
+    [inventory]
+    {
+		custom_head = m_c_gah_fg_hlmt_head-05;  // bun
+    }
 }
 
 [t:template,n:eos_utraean_female_a1_1a_k008]
