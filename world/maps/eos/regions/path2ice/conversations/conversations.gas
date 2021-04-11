@@ -96,6 +96,26 @@ Sorry, we need the other pack animals ourselves.";
 	  f scroll_rate = 10.000000;
 	}
 }
+[quest_a_post]
+{
+	[text*]
+	{
+		complete_quest* = betelgeuse_oldwiseman;
+		screen_text = "You did it!";
+	  f scroll_rate = 10.000000;
+	}
+}
+[quest_a_pre]
+{
+	[text*]
+	{
+		activate_quest* = betelgeuse_oldwiseman,0;
+		screen_text = "Blessings, friend.
+If you are looking for ancient artifacts similar to yours, you should see the Old Wise Man about them. He lives over in a place called Wishy-Washy, at the Great Lake to the East.
+Greet him from me!";
+	  f scroll_rate = 10.000000;
+	}
+}
 [shop]
 {
 	[text*]
@@ -131,17 +151,6 @@ Sorry, we need the other pack animals ourselves.";
 	[text*]
 	{
 		screen_text = "Be our guest!";
-	  f scroll_rate = 10.000000;
-	}
-}
-[quest1]
-{
-	[text*]
-	{
-		activate_quest* = betelgeuse_oldwiseman,0;
-		screen_text = "Blessings, friend.
-If you are looking for ancient artifacts similar to yours, you should see the Old Wise Man about them. He lives over in a place called Wishy-Washy, at the Great Lake to the East.
-Greet him from me!";
 	  f scroll_rate = 10.000000;
 	}
 }

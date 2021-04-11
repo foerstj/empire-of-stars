@@ -1,0 +1,117 @@
+Go		m_Go$;
+GoMind	m_Mind$;
+GoBody  m_Body$;
+Job		m_Job$;
+Goid	m_Target$;
+
+#include "k_job_c_mcp_fidget_utils"
+#include "k_job_c_talk_utils"
+
+bool give_stone$( goid target$ )
+{
+	// see if the person we are tying to reward alread has the object in their inventory.
+	Go item$ = m_Target$.Go.Inventory.GetItemFromTemplate( "starstone_aranna" );
+	if( item$ == null )
+	{
+		SiegePos SpawnPos$;
+		GoCloneReq cloneReq$ = MakeGoCloneReq( "starstone_aranna" );
+		
+		SpawnPos$ = target$.go.placement.position;
+		cloneReq$.StartingPos	= SpawnPos$;
+	    
+		if( target$.Go.Hasmind )
+		{
+			if( AIQuery.FindSpotRelativeToSource( target$.Go, .25, .5, 2.0, target$.Go.Mind.TempPos1 ) )
+	   		{
+	   			cloneReq$.StartingPos = target$.Go.Mind.TempPos1;
+	   		}
+	   	}	
+		cloneReq$.SnapToTerrain = true;
+	    GoDb.SCloneGo( cloneReq$ );
+	    
+	    return true;
+	}
+	return false; 
+}
+
+startup state STARTUP$
+{
+}
+
+////////////////////////////////////////////////////////////////////////////////
+//	init
+event OnJobInitPointers$( Job job$ )
+{
+	m_Job$		= job$;
+	m_Go$		= job$.Go;
+	m_Mind$		= job$.Go.Mind;
+	m_Body$		= job$.Go.Body;
+}
+
+event OnJobInit$( Job job$ )
+{
+	OnJobInitPointers$( job$ );
+
+	m_Target$	= job$.GoalObject;
+
+	SetState Talk$;
+}
+
+////////////////////////////////////////////////////////////////////////////////
+//	blab blab away... pretend you're Lee on coffee
+state Talk$
+{
+	transition
+	{
+		-> Exiting$:	OnWorldMessage( WE_REQ_TALK_END ) = 
+		{
+			if( m_Go$.Mind.ActorAutoFidgets )
+			{
+				StartFidgetIfRequired$();
+			}
+		}
+		-> Exiting$:	OnWorldMessage( WE_ANIM_DONE ) =
+		{
+			if( m_Go$.Mind.ActorAutoFidgets )
+			{
+				StartFidgetIfRequired$();
+			}
+		}
+	}
+
+	event OnEnterState$
+	{
+		#only( game )
+		[[
+            if (!GameAuditor.GetDb.GetBool( "quest_bg_starstone_given" ))
+            {
+                m_Go$.GetConversation.RSSelectConversation("quest_b");
+
+				GameAuditor.GetDb.SetBool( "quest_bg_starstone_given", true );
+                // give starstone
+                if( m_Target$.IsValid() ) 
+                {	
+                    give_stone$( m_Target$ );
+                }
+            }
+            else
+            {
+                m_Go$.GetConversation.RSSelectConversation("quest_b_post");
+            }
+		]]		
+
+		TryAnim$('talk');
+		m_Go$.GetConversation.RSActivateDialogue();
+	}
+}
+
+
+////////////////////////////////////////////////////////////////////////////////
+//	finish blabbing
+state Exiting$
+{
+	event OnEnterState$
+	{
+		m_Job$.MarkForDeletion();
+	}
+}

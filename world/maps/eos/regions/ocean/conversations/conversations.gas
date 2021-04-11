@@ -53,6 +53,29 @@ Your story sounds amazing! Would you like me coming along? I can do some nature 
 	  f scroll_rate = 10.000000;
 	}
 }
+[intro]
+{
+	[text*]
+	{
+		choice = more;
+	  i order = 0;
+		screen_text = "Blessings, traveler. Excuse me, I'm a bit dizzy, I've had enough of Beetlejuice for today I guess...";
+	  f scroll_rate = 10.000000;
+	}
+	[text*]
+	{
+		choice = more;
+	  i order = 1;
+		screen_text = "So you're new to this planet? It's quite nice ah?
+Here we have all we could ever wish for - lots of flowers, a warm pink sun... and the Beetles, of course. Their meat is delicious, but the best thing of course is the Beetlejuice. It's the best of all possible worlds - except if you're afraid of spiders, I guess...";
+	  f scroll_rate = 10.000000;
+	}
+	[text*]
+	{
+		screen_text = "Have a wonderful day. Enjoy the sun!";
+	  f scroll_rate = 10.000000;
+	}
+}
 [mule_shop]
 {
 	[text*]
@@ -106,35 +129,29 @@ Sorry, we need the other pack animal ourselves.";
 	  f scroll_rate = 10.000000;
 	}
 }
+[quest_b]
+{
+	[text*]
+	{
+		activate_quest* = betelgeuse_oldwiseman,1;
+		screen_text = "Here you go.";
+	  f scroll_rate = 10.000000;
+	}
+}
+[quest_b_post]
+{
+	[text*]
+	{
+		screen_text = "Off you go.";
+	  f scroll_rate = 10.000000;
+	}
+}
 [shop]
 {
 	[text*]
 	{
 		choice = shop;
 		screen_text = "Blessings, stranger. I have some equipment here that you might be interested in, have a look... Glad if I can help!";
-	  f scroll_rate = 10.000000;
-	}
-}
-[intro]
-{
-	[text*]
-	{
-		choice = more;
-	  i order = 0;
-		screen_text = "Blessings, traveler. Excuse me, I'm a bit dizzy, I've had enough of Beetlejuice for today I guess...";
-	  f scroll_rate = 10.000000;
-	}
-	[text*]
-	{
-		choice = more;
-	  i order = 1;
-		screen_text = "So you're new to this planet? It's quite nice ah?
-Here we have all we could ever wish for - lots of flowers, a warm pink sun... and the Beetles, of course. Their meat is delicious, but the best thing of course is the Beetlejuice. It's the best of all possible worlds - except if you're afraid of spiders, I guess...";
-	  f scroll_rate = 10.000000;
-	}
-	[text*]
-	{
-		screen_text = "Have a wonderful day. Enjoy the sun!";
 	  f scroll_rate = 10.000000;
 	}
 }
