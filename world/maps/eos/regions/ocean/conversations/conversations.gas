@@ -1,9 +1,55 @@
+[bathing]
+{
+	[text*]
+	{
+		screen_text = "Bathing's the best, right?";
+	  f scroll_rate = 10.000000;
+	}
+	[text*]
+	{
+		screen_text = "Bathing's the best, man.";
+	  f scroll_rate = 10.000000;
+	}
+	[text*]
+	{
+		screen_text = "Come on in, the water is so nice!";
+	  f scroll_rate = 10.000000;
+	}
+}
+[bathing_shore]
+{
+	[text*]
+	{
+		screen_text = "The weather is just wonderful today! To be fair, it always is.";
+	  f scroll_rate = 10.000000;
+	}
+	[text*]
+	{
+		screen_text = "Such fresh air today... and such warm water. We are truly blessed on this planet!";
+	  f scroll_rate = 10.000000;
+	}
+	[text*]
+	{
+		screen_text = "Just enjoying the warm rays of our pink sun. Look at Her light on the water! It's so beautiful.";
+	  f scroll_rate = 10.000000;
+	}
+}
+[beetlejuice]
+{
+	[text*]
+	{
+		screen_text = "Bless-Bless!
+Have some Beetlejuice. Hahaha, you look funny. What are all these colors? Have some more Beetlejuice, I say!";
+	  f scroll_rate = 10.000000;
+	}
+}
 [hire_bg_f_nm]
 {
 	[text*]
 	{
 		choice = potential_member;
-		screen_text = "Hire?";
+		screen_text = "Bless you!
+Your story sounds amazing! Would you like me coming along? I can do some nature magic...";
 	  f scroll_rate = 10.000000;
 	}
 }
@@ -65,20 +111,30 @@ Sorry, we need the other pack animal ourselves.";
 	[text*]
 	{
 		choice = shop;
-		screen_text = "Shop?";
+		screen_text = "Blessings, stranger. I have some equipment here that you might be interested in, have a look... Glad if I can help!";
 	  f scroll_rate = 10.000000;
 	}
 }
-[bathing]
+[intro]
 {
 	[text*]
 	{
-		screen_text = "Bathing's the best, right?";
+		choice = more;
+	  i order = 0;
+		screen_text = "Blessings, traveler. Excuse me, I'm a bit dizzy, I've had enough of Beetlejuice for today I guess...";
 	  f scroll_rate = 10.000000;
 	}
 	[text*]
 	{
-		screen_text = "Bathing's the best, man.";
+		choice = more;
+	  i order = 1;
+		screen_text = "So you're new to this planet? It's quite nice ah?
+Here we have all we could ever wish for - lots of flowers, a warm pink sun... and the Beetles, of course. Their meat is delicious, but the best thing of course is the Beetlejuice. It's the best of all possible worlds - except if you're afraid of spiders, I guess...";
+	  f scroll_rate = 10.000000;
+	}
+	[text*]
+	{
+		screen_text = "Have a wonderful day. Enjoy the sun!";
 	  f scroll_rate = 10.000000;
 	}
 }
