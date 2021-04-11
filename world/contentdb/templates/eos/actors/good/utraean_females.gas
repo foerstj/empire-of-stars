@@ -2,7 +2,7 @@
 {
 	category_name = "1W_townsperson";
 	doc = "eos utraean_female_a1";
-	specializes = dsx_base_npc_fg_multiplayer;
+	specializes = base_pm_fg;  // derive from PM so chars have drinking animation
 	[inventory]
 	{
 		[equipment]
@@ -166,6 +166,19 @@
 		}
 	}
 }
+[t:template,n:eos_utraean_female_a1_21a_l026]
+{
+	doc = "eos utraean_female l026";
+	specializes = eos_utraean_female_a1_base;
+	[aspect]
+	{
+		[textures]
+		{
+			0 = b_c_gan_utraean_skin-eos_f2_ta;
+			1 = b_c_pos_a1_ba-utraean_eos_f1_l026;
+		}
+	}
+}
 [t:template,n:eos_utraean_female_a1_1a_l027]
 {
 	doc = "eos utraean_female l027";
@@ -215,7 +228,7 @@
 		model = m_c_gah_fg_pos_a2;
 		[textures]
 		{
-			0 = b_c_gan_utraean_skin_05;
+			0 = b_c_gan_utraean_skin-eos_f2;
 			1 = b_c_pos_a2_ba-utraean_eos_f2;
 		}
 	}
@@ -235,8 +248,21 @@
 {
 	doc = "eos utraean_female_a2";
 	specializes = eos_utraean_female_a2_base;
+}
+[t:template,n:eos_utraean_female_a2_2_bald]
+{
+	doc = "eos utraean_female_a2";
+	specializes = eos_utraean_female_a2_base;
+	[aspect]
+	{
+		[textures]
+		{
+			0 = b_c_gan_utraean_skin-eos_f2_bald;
+			1 = b_c_pos_a2_ba-utraean_eos_f2;
+		}
+	}
 	[inventory]
 	{
-		custom_head = m_c_gah_fg_hlmt_head-04;
+		custom_head = m_c_gah_fg_hlmt_head-04;  // bald
     }
 }
