@@ -38,8 +38,18 @@ We keep them for the delicious Beetlejuice, of course. Fancy a glass?";
 {
 	[text*]
 	{
+		choice = more;
+	  i order = 0;
+		screen_text = "Blessings to you!
+So you come from the stars? Dope.
+You know, this place is a paradise for us. Except if you're afraid of spiders, I guess...
+Unrelatedly, ...";
+	  f scroll_rate = 10.000000;
+	}
+	[text*]
+	{
 		choice = potential_member;
-		screen_text = "Hire?";
+		screen_text = "Would you like me to join you? I'd love to see the stars and stuff... I'm not bad with a bow, which might come in handy. So what do you think?";
 	  f scroll_rate = 10.000000;
 	}
 }
@@ -101,7 +111,15 @@ Sorry, we need the other pack animals ourselves.";
 	[text*]
 	{
 		complete_quest* = betelgeuse_oldwiseman;
+	  i order = 0;
 		screen_text = "You did it!";
+	  f scroll_rate = 10.000000;
+	}
+	[text*]
+	{
+		screen_text = "I pray for your safe and happy return home.
+And whenever you want, come visit us, you'll always be welcome here!
+Go with the blessings of the Great Mother.";
 	  f scroll_rate = 10.000000;
 	}
 }
@@ -121,7 +139,8 @@ Greet him from me!";
 	[text*]
 	{
 		choice = shop;
-		screen_text = "Shop?";
+		screen_text = "Blessings, my friend.
+I have a few things here that might be useful for you. Come have a look!";
 	  f scroll_rate = 10.000000;
 	}
 }

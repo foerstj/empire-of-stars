@@ -134,7 +134,11 @@ Sorry, we need the other pack animal ourselves.";
 	[text*]
 	{
 		activate_quest* = betelgeuse_oldwiseman,1;
-		screen_text = "Here you go.";
+		choice = more;
+	  i order = 0;
+		screen_text = "Welcome, youngling. May the blessings of the Great Mother never stop shining upon you.
+I sense a great fate on you. No surprise for someone who discovered the old way to the stars, of course.
+I also sense that I am destined to give this artifact here to you. May it guide you in your endeavors, and may you use it to mend what has been broken for a millennium.";
 	  f scroll_rate = 10.000000;
 	}
 }
@@ -142,7 +146,24 @@ Sorry, we need the other pack animal ourselves.";
 {
 	[text*]
 	{
-		screen_text = "Off you go.";
+		choice = more;
+	  i order = 0;
+		screen_text = "Our history books tell about the ancient empires. The Utraean Empire and the Empire of Stars were neighbors, and in many ways like siblings - at times allies, at other times rivals. In the end they both crumbled, of course.
+Nobody knows how it came that Utraeans live on this planet now - it belonged to the Empire of Stars, of course, not the Utraean Empire. It maybe was fated. It sure is a blessing. I just hope the history behind it wasn't too bloody, hehe.
+";
+	  f scroll_rate = 10.000000;
+	}
+	[text*]
+	{
+		choice = more;
+	  i order = 1;
+		screen_text = "There are Utraeans living on your home world as well?
+Do greet them from us and send the blessings of the Great Mother. If She wills, we will meet these long-lost siblings one day!";
+	  f scroll_rate = 10.000000;
+	}
+	[text*]
+	{
+		screen_text = "May the blessings of the Great Mother always shine upon you wherever you go.";
 	  f scroll_rate = 10.000000;
 	}
 }
