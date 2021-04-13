@@ -54,6 +54,42 @@
 	  p position = 2.45717,0,0.206929,0xceb73cf6;
 	}
 }
+[t:check_quest,n:0x03800014]
+{
+	[check_quest]
+	{
+	  b check_state_greater_than = true;
+		quest_name = "betelgeuse_wiseoldman";
+	  i quest_state = 0;
+	  x send_to_scid = 0x03800018;
+	}
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_activate",0x03800014,0f,"default","every",0);
+			  b can_self_destruct = true;
+				condition* = party_member_within_sphere(30.000000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.999886,0,0.0151158;
+	  p position = -2.65837,0,-0.291252,0x25dcc5b4;
+	}
+}
 [t:trigger_change_mood_box,n:0x038000ad]
 {
 	[common]
@@ -117,5 +153,35 @@
 	[placement]
 	{
 	  p position = 1.89701,0,-1.63243,0x56d90b14;
+	}
+}
+[t:trigger_generic,n:0x03800018]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_activate",0x03800017,0f,"default","every",0);
+				action* = send_world_message("we_req_use",0x0380000B,0f,"default","every",0);
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_req_activate",0,"on_every_message");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,0.42454,0,0.905409;
+	  p position = -1.66605,0,-1.16956,0x25dcc5b4;
 	}
 }
