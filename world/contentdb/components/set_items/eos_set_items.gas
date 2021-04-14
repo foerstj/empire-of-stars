@@ -1,0 +1,39 @@
+[robe_of_stars]
+{
+	[modifier*]
+	{
+		[enchantments]
+		{
+			[*]
+			{
+				is_set_item = true;
+				alteration = ALTER_ARMOR;
+				duration = #infinite;
+
+				value = 16*((#itemsequipped)-1) + ((#itemsequipped) -2)*((#itemsequipped)-3)*((#itemsequipped)-4)*(-0.166666666666);  // taken from arhoks_leather
+				description = "Adds <ALTER_ARMOR> to Armor";
+			}
+			
+		}
+		// the number of set_items that need to be equipped before this comes into effect
+		set_item_requirement = 1;
+	}
+	
+	[modifier*]
+	{
+		[enchantments]
+		{
+			[*]
+			{
+				is_set_item = true;
+				alteration = ALTER_INTELLIGENCE;
+				duration = #infinite;
+
+				value = (#itemsequipped);  // taken from demlocks_ring
+				description = "Adds <ALTER_INTELLIGENCE> to Intelligence";
+			}
+		}
+		// the number of set_items that need to be equipped before this comes into effect
+		set_item_requirement = 1;
+	}	
+}
