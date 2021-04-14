@@ -7,9 +7,9 @@
 			[*]
 			{
 				is_set_item = true;
-				alteration = ALTER_ARMOR;
 				duration = #infinite;
 
+				alteration = ALTER_ARMOR;
 				value = 16*((#itemsequipped)-1) + ((#itemsequipped) -2)*((#itemsequipped)-3)*((#itemsequipped)-4)*(-0.166666666666);  // taken from arhoks_leather
 				description = "Adds <ALTER_ARMOR> to Armor";
 			}
@@ -26,9 +26,9 @@
 			[*]
 			{
 				is_set_item = true;
-				alteration = ALTER_INTELLIGENCE;
 				duration = #infinite;
 
+				alteration = ALTER_INTELLIGENCE;
 				value = (#itemsequipped);  // taken from demlocks_ring
 				description = "Adds <ALTER_INTELLIGENCE> to Intelligence";
 			}
@@ -36,4 +36,76 @@
 		// the number of set_items that need to be equipped before this comes into effect
 		set_item_requirement = 1;
 	}	
+}
+
+[fear_ring_of_stars]
+{
+    [modifier*]
+    {
+        [enchantments]
+        {
+            [*]
+            {
+                is_set_item = true;
+                duration = #infinite;
+
+                alteration = ALTER_CUSTOM_DAMAGE_CHANCE_MELEE;
+                custom_damage = flee;
+                value = (#itemsequipped) * 5;
+                description = "+<ALTER_CUSTOM_DAMAGE_CHANCE_MELEE>% Chance To Flee And";
+            }
+            [custom_damage]
+            {
+                is_set_item = true;
+                duration = #infinite;
+                is_permanent = true;
+                is_single_instance = false;
+                
+                alteration = ALTER_CUSTOM_DAMAGE_MELEE;
+                custom_damage = flee;
+                value = 3*(2**(#itemsequipped));  // from guiseppi_bow "spidersilk bow" (poison)
+                custom_damage_skrit = world\global\skrits\weapon_flee.skrit;
+                effect_script_equip = dsx_modifier_blustering_melee;
+                effect_script_hit = dsx_modifier_blustering_hit;
+                description = "Adds <ALTER_CUSTOM_DAMAGE_MELEE> Fear Damage";
+            }
+        }
+        set_item_requirement = 1;
+    }
+}
+
+[poison_ring_of_stars]
+{
+    [modifier*]
+    {
+        [enchantments]
+        {
+            [*]
+            {
+                is_set_item = true;
+                duration = #infinite;
+
+                alteration = ALTER_CUSTOM_DAMAGE_CHANCE_MELEE;
+                custom_damage = poison;
+                value = (#itemsequipped) * 5;
+                description = "+<ALTER_CUSTOM_DAMAGE_CHANCE_MELEE>% Chance To Poison And";
+            }
+			[custom_damage]
+            {
+                is_set_item = true;
+                duration = #infinite;
+                is_permanent = true;
+                is_single_instance = false;
+
+                alteration = ALTER_CUSTOM_DAMAGE_MELEE;
+                value = 3*(2**(#itemsequipped));  // from guiseppi_bow "spidersilk bow"
+                custom_damage = poison;
+                custom_damage_skrit = world\global\skrits\weapon_poison.skrit?duration=4;
+                effect_script_equip = dam_poison_7_wh;
+                effect_script_hit = hit_flash_10_lbl;
+                description = "Adds <ALTER_CUSTOM_DAMAGE_MELEE> Poison Damage";
+            }
+        }
+        set_item_requirement = 1;
+    }
 }
