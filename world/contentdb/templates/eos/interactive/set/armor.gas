@@ -1,0 +1,34 @@
+[t:template,n:bd_br_r_g_c_avg_thessic_set_eos]
+{
+	doc = "eos set armor";
+	specializes = dsx_base_body_armor_plate;
+	[common]
+	{
+      b allow_modifiers = false;
+		screen_name = "Hard Armor of Stars";
+        is_pcontent_allowed = false;
+	}
+	[defend]
+	{
+        armor_style = 242;
+        armor_type = a8;
+        f defense = 24;
+	}
+	[gui]
+	{
+        inventory_icon = b_gui_ig_i_a_pos_a8_242;
+        inventory_height = 2;
+        inventory_width = 2;
+	}
+	[magic]
+    {
+    }
+	[set_item]
+    {
+        set_name = "The Astral Set";
+        set_compare_name = eos;
+        modifier_file = "armor_of_stars";
+        number_items_in_set = 6;
+        item_power_modifier = 4;
+    }
+}

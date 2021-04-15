@@ -105,7 +105,129 @@
                 effect_script_hit = hit_flash_10_lbl;
                 description = "Adds <ALTER_CUSTOM_DAMAGE_MELEE> Poison Damage";
             }
+            
+            // same for ranged
+            [*]
+            {
+                is_set_item = true;
+                duration = #infinite;
+
+                alteration = ALTER_CUSTOM_DAMAGE_CHANCE_RANGED;
+                custom_damage = poison;
+                value = (#itemsequipped) * 5;
+            }
+			[custom_damage]
+            {
+                is_set_item = true;
+                duration = #infinite;
+                is_permanent = true;
+                is_single_instance = false;
+
+                alteration = ALTER_CUSTOM_DAMAGE_RANGED;
+                value = 3*(2**(#itemsequipped));  // from guiseppi_bow "spidersilk bow"
+                custom_damage = poison;
+                custom_damage_skrit = world\global\skrits\weapon_poison.skrit?duration=4;
+                effect_script_equip = dam_poison_7_wh;
+                effect_script_hit = hit_flash_10_lbl;
+            }
         }
         set_item_requirement = 1;
+    }
+}
+
+[armor_of_stars]
+{
+	[modifier*]
+	{
+		[enchantments]
+		{
+			[*]
+			{
+				is_set_item = true;
+				duration = #infinite;
+				
+				alteration = ALTER_ARMOR;
+				value = 1.5*16*((#itemsequipped)-1) + ((#itemsequipped) -2)*((#itemsequipped)-3)*((#itemsequipped)-4)*(-0.166666666666);  // 1.5 * arhoks_leather
+				description = "Adds <ALTER_ARMOR> to Armor";
+			}
+			
+		}
+		// the number of set_items that need to be equipped before this comes into effect
+		set_item_requirement = 1;
+	}
+}
+
+[gloves_of_stars]
+{
+    [modifier*]
+    {
+        [enchantments]
+        {
+            [*]
+            {
+				is_set_item = true;
+				duration = #infinite;
+				
+				alteration = ALTER_REFLECT_DAMAGE;
+				value = 5*(#itemsequipped);
+				description = "<ALTER_REFLECT_DAMAGE>% of Damage Reflected to Enemy";
+            }
+        }
+		// the number of set_items that need to be equipped before this comes into effect
+		set_item_requirement = 1;
+    }
+}
+
+[spellbook_of_stars]
+{
+    [modifier*]
+    {
+        [enchantments]
+        {
+            [*]
+            {
+                is_set_item = true;
+                duration = #infinite;
+                is_permanent = true;
+                is_single_instance = false;
+
+                alteration = ALTER_SPELL_DAMAGE;
+                imbued_spell_group = spells_ice;
+                is_imbued = true;
+                multiply_value = true;
+                value = 5 * (#itemsequipped);
+                description = "Increase the damage of Cold spells in this spellbook by <ALTER_SPELL_DAMAGE>%";
+            }
+            [*]
+            {
+                is_set_item = true;
+                duration = #infinite;
+                is_permanent = true;
+                is_single_instance = false;
+
+                alteration = ALTER_SPELL_DAMAGE;
+                imbued_spell_group = spells_fire;
+                is_imbued = true;
+                multiply_value = true;
+                value = 5 * (#itemsequipped);
+                description = "Increase the damage of Fire spells in this spellbook by <ALTER_SPELL_DAMAGE>%";
+            }
+            [*]
+            {
+                is_set_item = true;
+                duration = #infinite;
+                is_permanent = true;
+                is_single_instance = false;
+
+                alteration = ALTER_SPELL_DAMAGE;
+                imbued_spell_group = spells_electric;
+                is_imbued = true;
+                multiply_value = true;
+                value = 5 * (#itemsequipped);
+                description = "Increase the damage of electric spells in this spellbook by <ALTER_SPELL_DAMAGE>%";
+            }
+        }
+		// the number of set_items that need to be equipped before this comes into effect
+		set_item_requirement = 1;
     }
 }
