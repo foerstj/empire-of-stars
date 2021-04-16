@@ -33,6 +33,23 @@
 		event_sound = "env_lava_falls";
 	}
 }
+[t:emt_sound,n:0x07b0005b]
+{
+	[common]
+	{
+		dev_instance_text = "SOUND- lava bubbling";
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.707107,0,0.707107;
+	  p position = -3.07774,6.2167,1.87637,0x62ec7874;
+	}
+	[sound_emitter]
+	{
+	  b continual_loop = true;
+		event_sound = "env_lava_bubbling";
+	}
+}
 [t:emt_generic_act,n:0x07b003ed]
 {
 	[generic_emitter_act]
@@ -47,22 +64,6 @@
 	{
 	  q orientation = 0,5.96046e-008,0,1;
 	  p position = -0.0226822,0.108002,0.0648909,0x62ec7874;
-	}
-}
-[t:emt_generic_act,n:0x07b003ee]
-{
-	[generic_emitter_act]
-	{
-		event_sound = "env_geyser_lava";
-	  b geyser_red = true;
-	  f rep_freq_max = 80;
-	  f rep_freq_min = 30;
-	  b start_on_creation = true;
-	}
-	[placement]
-	{
-	  q orientation = 0,1.49012e-008,0,1;
-	  p position = 0.116417,0.381783,0.0463963,0xa63b438a;
 	}
 }
 [t:emt_sound,n:0x07b00078]
@@ -86,63 +87,23 @@
 	  f max_repeat_rate = 20;
 	}
 }
-[t:emt_sound,n:0x07b00217]
+[t:emt_generic_act,n:0x07b00074]
 {
-	[common]
+	[generic_emitter_act]
 	{
-		dev_instance_text = "SOUND- Lava falls";
-	}
-	[gizmo]
-	{
-	  v diffuse_color = 1,1,0;
-	}
-	[placement]
-	{
-	  p position = -2.78552,0.408566,5.27994,0x212351a9;
-	}
-	[sound_emitter]
-	{
-		event_sound = "env_lava_falls";
-	}
-}
-[t:emt_sound,n:0x07b000f2]
-{
-	[common]
-	{
-		dev_instance_text = "SOUND- Lava falls";
-	}
-	[gizmo]
-	{
-	  v diffuse_color = 1,1,0;
-	}
-	[placement]
-	{
-	  q orientation = 0,-0.707107,0,0.707107;
-	  p position = 2.92059,0.45,2.31458,0xe516d190;
-	}
-	[sound_emitter]
-	{
-		event_sound = "env_lava_falls";
-	}
-}
-[t:emt_sound,n:0x07b00058]
-{
-	[common]
-	{
-		dev_instance_text = "SOUND- lava bubbling";
+		event_sound = "env_geyser_lava";
+	  b geyser_red = true;
+	  f rep_freq_max = 80;
+	  f rep_freq_min = 30;
+	  b start_on_creation = true;
 	}
 	[placement]
 	{
 	  q orientation = 0,0.707107,0,0.707107;
-	  p position = 1.01202,12.4911,-8.11587,0x55a4fe41;
-	}
-	[sound_emitter]
-	{
-	  b continual_loop = true;
-		event_sound = "env_lava_bubbling";
+	  p position = 0.112762,0.332634,0.0174713,0x0b3955a8;
 	}
 }
-[t:emt_sound,n:0x07b00077]
+[t:emt_sound,n:0x07b00076]
 {
 	[common]
 	{
@@ -154,8 +115,7 @@
 	}
 	[placement]
 	{
-	  q orientation = 0,1,0,0;
-	  p position = 3.20603,-2.52092,-6.22123,0xe113ab51;
+	  p position = -0.48465,6.79472,0.49501,0x0b3955a8;
 	}
 	[sound_emitter]
 	{
@@ -184,11 +144,11 @@
 	  f max_repeat_rate = 20;
 	}
 }
-[t:emt_sound,n:0x07b00071]
+[t:emt_sound,n:0x07b00218]
 {
 	[common]
 	{
-		dev_instance_text = "SOUND- singe";
+		dev_instance_text = "SOUND- Lava falls";
 	}
 	[gizmo]
 	{
@@ -196,37 +156,14 @@
 	}
 	[placement]
 	{
-	  q orientation = 0,1,0,0;
-	  p position = -1.66489,1.00001,-3.20073,0x86da9ccf;
+	  p position = -6.99523,-16,-12.5176,0xa5ad110b;
 	}
 	[sound_emitter]
 	{
-		event_sound = "env_singe_ambient";
-	  f max_repeat_rate = 20;
+		event_sound = "env_lava_falls";
 	}
 }
-[t:emt_sound,n:0x07b00070]
-{
-	[common]
-	{
-		dev_instance_text = "SOUND- singe";
-	}
-	[gizmo]
-	{
-	  v diffuse_color = 1,1,0;
-	}
-	[placement]
-	{
-	  q orientation = 0,0.707107,0,0.707107;
-	  p position = 0.661682,1.00002,-1.33186,0x660bc143;
-	}
-	[sound_emitter]
-	{
-		event_sound = "env_singe_ambient";
-	  f max_repeat_rate = 20;
-	}
-}
-[t:emt_sound,n:0x07b0004d]
+[t:emt_sound,n:0x07b0004f]
 {
 	[common]
 	{
@@ -235,7 +172,7 @@
 	[placement]
 	{
 	  q orientation = 0,1,0,0;
-	  p position = 1.65555,0.999905,-1.73807,0xb7778a9a;
+	  p position = -0.806656,0.99992,-0.539238,0x0be076dc;
 	}
 	[sound_emitter]
 	{
@@ -243,24 +180,7 @@
 		event_sound = "env_lava_bubbling";
 	}
 }
-[t:emt_sound,n:0x07b00042]
-{
-	[common]
-	{
-		dev_instance_text = "SOUND- lava bubbling";
-	}
-	[placement]
-	{
-	  q orientation = 0,-0.707107,0,0.707107;
-	  p position = -1.83147,1.9999,0.206177,0xbe5a8cde;
-	}
-	[sound_emitter]
-	{
-	  b continual_loop = true;
-		event_sound = "env_lava_bubbling";
-	}
-}
-[t:emt_sound,n:0x07b00222]
+[t:emt_sound,n:0x07b0021d]
 {
 	[common]
 	{
@@ -273,68 +193,11 @@
 	[placement]
 	{
 	  q orientation = 0,-0.707107,0,0.707107;
-	  p position = -8.23759,1.90735e-006,0.656036,0xe481d7da;
+	  p position = -0.0821228,0,1.91766,0xb4c9cd6b;
 	}
 	[sound_emitter]
 	{
 		event_sound = "env_lava_falls";
-	}
-}
-[t:emt_sound,n:0x07b0021f]
-{
-	[common]
-	{
-		dev_instance_text = "SOUND- Lava falls";
-	}
-	[gizmo]
-	{
-	  v diffuse_color = 1,1,0;
-	}
-	[placement]
-	{
-	  p position = -11.2068,-0.973328,-3.78436,0x017184c2;
-	}
-	[sound_emitter]
-	{
-		event_sound = "env_lava_falls";
-	}
-}
-[t:emt_sound,n:0x07b00069]
-{
-	[common]
-	{
-		dev_instance_text = "SOUND- singe";
-	}
-	[gizmo]
-	{
-	  v diffuse_color = 1,1,0;
-	}
-	[placement]
-	{
-	  q orientation = 0,1,0,0;
-	  p position = 1.58072,2.00003,1.97519,0xa3b4dbde;
-	}
-	[sound_emitter]
-	{
-		event_sound = "env_singe_ambient";
-	  f max_repeat_rate = 20;
-	}
-}
-[t:emt_sound,n:0x07b001c4]
-{
-	[common]
-	{
-		dev_instance_text = "SOUND- lava bubbling";
-	}
-	[placement]
-	{
-	  q orientation = 0,-0.707107,0,0.707107;
-	  p position = 1.57179,0.999905,-0.996567,0x8e1e339e;
-	}
-	[sound_emitter]
-	{
-	  b continual_loop = true;
-		event_sound = "env_lava_bubbling";
 	}
 }
 [t:emt_sound,n:0x07b0006a]
@@ -394,22 +257,6 @@
 		event_sound = "env_lava_falls";
 	}
 }
-[t:emt_sound,n:0x07b0003e]
-{
-	[common]
-	{
-		dev_instance_text = "SOUND- lava bubbling";
-	}
-	[placement]
-	{
-	  p position = 0.0938721,0.999989,-0.395012,0x3b0a7dda;
-	}
-	[sound_emitter]
-	{
-	  b continual_loop = true;
-		event_sound = "env_lava_bubbling";
-	}
-}
 [t:emt_sound,n:0x07b00049]
 {
 	[common]
@@ -427,7 +274,7 @@
 		event_sound = "env_lava_bubbling";
 	}
 }
-[t:emt_sound,n:0x07b0003c]
+[t:emt_sound,n:0x07b0003e]
 {
 	[common]
 	{
@@ -435,8 +282,7 @@
 	}
 	[placement]
 	{
-	  q orientation = 0,1,0,0;
-	  p position = 1.57281,1,-2.89058,0xcab5b487;
+	  p position = 0.0938721,0.999989,-0.395012,0x3b0a7dda;
 	}
 	[sound_emitter]
 	{
@@ -481,6 +327,42 @@
 		event_sound = "env_lava_falls";
 	}
 }
+[t:emt_sound,n:0x07b0003c]
+{
+	[common]
+	{
+		dev_instance_text = "SOUND- lava bubbling";
+	}
+	[placement]
+	{
+	  q orientation = 0,1,0,0;
+	  p position = 1.57281,1,-2.89058,0xcab5b487;
+	}
+	[sound_emitter]
+	{
+	  b continual_loop = true;
+		event_sound = "env_lava_bubbling";
+	}
+}
+[t:emt_sound,n:0x07b0021f]
+{
+	[common]
+	{
+		dev_instance_text = "SOUND- Lava falls";
+	}
+	[gizmo]
+	{
+	  v diffuse_color = 1,1,0;
+	}
+	[placement]
+	{
+	  p position = -11.2068,-0.973328,-3.78436,0x017184c2;
+	}
+	[sound_emitter]
+	{
+		event_sound = "env_lava_falls";
+	}
+}
 [t:emt_sound,n:0x07b00040]
 {
 	[common]
@@ -497,7 +379,7 @@
 		event_sound = "env_lava_bubbling";
 	}
 }
-[t:emt_sound,n:0x07b00068]
+[t:emt_sound,n:0x07b00069]
 {
 	[common]
 	{
@@ -510,7 +392,7 @@
 	[placement]
 	{
 	  q orientation = 0,1,0,0;
-	  p position = -2.95692,1.00003,-0.348204,0x306e04ea;
+	  p position = 1.58072,2.00003,1.97519,0xa3b4dbde;
 	}
 	[sound_emitter]
 	{
@@ -518,7 +400,7 @@
 	  f max_repeat_rate = 20;
 	}
 }
-[t:emt_sound,n:0x07b0003d]
+[t:emt_sound,n:0x07b001c4]
 {
 	[common]
 	{
@@ -526,8 +408,8 @@
 	}
 	[placement]
 	{
-	  q orientation = 0,1,0,0;
-	  p position = -0.0418091,1.99996,0.707054,0xbee86a17;
+	  q orientation = 0,-0.707107,0,0.707107;
+	  p position = 1.57179,0.999905,-0.996567,0x8e1e339e;
 	}
 	[sound_emitter]
 	{
@@ -535,64 +417,7 @@
 		event_sound = "env_lava_bubbling";
 	}
 }
-[t:emt_sound,n:0x07b00048]
-{
-	[common]
-	{
-		dev_instance_text = "SOUND- lava bubbling";
-	}
-	[placement]
-	{
-	  q orientation = 0,1,0,0;
-	  p position = -0.0418091,1.99996,0.707054,0xbee86a17;
-	}
-	[sound_emitter]
-	{
-	  b continual_loop = true;
-		event_sound = "env_lava_bubbling";
-	}
-}
-[t:emt_sound,n:0x07b00221]
-{
-	[common]
-	{
-		dev_instance_text = "SOUND- Lava falls";
-	}
-	[gizmo]
-	{
-	  v diffuse_color = 1,1,0;
-	}
-	[placement]
-	{
-	  q orientation = 0,-0.707107,0,0.707107;
-	  p position = -1.26532,0,-8.32053,0x64b5e4b7;
-	}
-	[sound_emitter]
-	{
-		event_sound = "env_lava_falls";
-	}
-}
-[t:emt_sound,n:0x07b0021d]
-{
-	[common]
-	{
-		dev_instance_text = "SOUND- Lava falls";
-	}
-	[gizmo]
-	{
-	  v diffuse_color = 1,1,0;
-	}
-	[placement]
-	{
-	  q orientation = 0,-0.707107,0,0.707107;
-	  p position = -0.0821228,0,1.91766,0xb4c9cd6b;
-	}
-	[sound_emitter]
-	{
-		event_sound = "env_lava_falls";
-	}
-}
-[t:emt_sound,n:0x07b0006c]
+[t:emt_sound,n:0x07b00071]
 {
 	[common]
 	{
@@ -604,8 +429,8 @@
 	}
 	[placement]
 	{
-	  q orientation = 0,-0.707107,0,0.707107;
-	  p position = 0.0153046,2.00002,-1.0599,0x25718b94;
+	  q orientation = 0,1,0,0;
+	  p position = -1.66489,1.00001,-3.20073,0x86da9ccf;
 	}
 	[sound_emitter]
 	{
@@ -613,59 +438,7 @@
 	  f max_repeat_rate = 20;
 	}
 }
-[t:emt_sound,n:0x07b0004f]
-{
-	[common]
-	{
-		dev_instance_text = "SOUND- lava bubbling";
-	}
-	[placement]
-	{
-	  q orientation = 0,1,0,0;
-	  p position = -0.806656,0.99992,-0.539238,0x0be076dc;
-	}
-	[sound_emitter]
-	{
-	  b continual_loop = true;
-		event_sound = "env_lava_bubbling";
-	}
-}
-[t:emt_generic_act,n:0x07b0003b]
-{
-	[generic_emitter_act]
-	{
-		event_sound = "env_geyser_lava";
-	  b geyser_red = true;
-	  f rep_freq_max = 80;
-	  f rep_freq_min = 30;
-	  b start_on_creation = true;
-	}
-	[placement]
-	{
-	  q orientation = 0,0,0,1;
-	  p position = 0.115051,0.127941,0.10051,0x277fb6f6;
-	}
-}
-[t:emt_sound,n:0x07b00218]
-{
-	[common]
-	{
-		dev_instance_text = "SOUND- Lava falls";
-	}
-	[gizmo]
-	{
-	  v diffuse_color = 1,1,0;
-	}
-	[placement]
-	{
-	  p position = -6.99523,-16,-12.5176,0xa5ad110b;
-	}
-	[sound_emitter]
-	{
-		event_sound = "env_lava_falls";
-	}
-}
-[t:emt_sound,n:0x07b00041]
+[t:emt_sound,n:0x07b00051]
 {
 	[common]
 	{
@@ -674,24 +447,7 @@
 	[placement]
 	{
 	  q orientation = 0,-0.707107,0,0.707107;
-	  p position = 1.96769,0.999901,-0.222366,0x8d73bc75;
-	}
-	[sound_emitter]
-	{
-	  b continual_loop = true;
-		event_sound = "env_lava_bubbling";
-	}
-}
-[t:emt_sound,n:0x07b0004c]
-{
-	[common]
-	{
-		dev_instance_text = "SOUND- lava bubbling";
-	}
-	[placement]
-	{
-	  q orientation = 0,-0.707107,0,0.707107;
-	  p position = 0.220444,0.999901,-0.423935,0x8d73bc75;
+	  p position = 0.664978,0.999901,1.61545,0xa5fc166e;
 	}
 	[sound_emitter]
 	{
@@ -720,7 +476,7 @@
 	  f max_repeat_rate = 20;
 	}
 }
-[t:emt_sound,n:0x07b00051]
+[t:emt_sound,n:0x07b00042]
 {
 	[common]
 	{
@@ -729,12 +485,32 @@
 	[placement]
 	{
 	  q orientation = 0,-0.707107,0,0.707107;
-	  p position = 0.664978,0.999901,1.61545,0xa5fc166e;
+	  p position = -1.83147,1.9999,0.206177,0xbe5a8cde;
 	}
 	[sound_emitter]
 	{
 	  b continual_loop = true;
 		event_sound = "env_lava_bubbling";
+	}
+}
+[t:emt_sound,n:0x07b00222]
+{
+	[common]
+	{
+		dev_instance_text = "SOUND- Lava falls";
+	}
+	[gizmo]
+	{
+	  v diffuse_color = 1,1,0;
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.707107,0,0.707107;
+	  p position = -8.23759,1.90735e-006,0.656036,0xe481d7da;
+	}
+	[sound_emitter]
+	{
+		event_sound = "env_lava_falls";
 	}
 }
 [t:emt_sound,n:0x07b00226]
@@ -757,6 +533,60 @@
 		event_sound = "env_lava_falls";
 	}
 }
+[t:emt_sound,n:0x07b0004d]
+{
+	[common]
+	{
+		dev_instance_text = "SOUND- lava bubbling";
+	}
+	[placement]
+	{
+	  q orientation = 0,1,0,0;
+	  p position = 1.65555,0.999905,-1.73807,0xb7778a9a;
+	}
+	[sound_emitter]
+	{
+	  b continual_loop = true;
+		event_sound = "env_lava_bubbling";
+	}
+}
+[t:emt_sound,n:0x07b00070]
+{
+	[common]
+	{
+		dev_instance_text = "SOUND- singe";
+	}
+	[gizmo]
+	{
+	  v diffuse_color = 1,1,0;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.707107,0,0.707107;
+	  p position = 0.661682,1.00002,-1.33186,0x660bc143;
+	}
+	[sound_emitter]
+	{
+		event_sound = "env_singe_ambient";
+	  f max_repeat_rate = 20;
+	}
+}
+[t:emt_generic_act,n:0x07b00046]
+{
+	[generic_emitter_act]
+	{
+		event_sound = "env_geyser_lava";
+	  b geyser_red = true;
+	  f rep_freq_max = 80;
+	  f rep_freq_min = 30;
+	  b start_on_creation = true;
+	}
+	[placement]
+	{
+	  q orientation = 0,5.96046e-008,0,1;
+	  p position = -0.0226898,0.108002,0.198547,0x3b89de2d;
+	}
+}
 [t:emt_sound,n:0x07b00055]
 {
 	[common]
@@ -772,48 +602,6 @@
 	{
 	  b continual_loop = true;
 		event_sound = "env_lava_bubbling";
-	}
-}
-[t:emt_sound,n:0x07b00072]
-{
-	[common]
-	{
-		dev_instance_text = "SOUND- singe";
-	}
-	[gizmo]
-	{
-	  v diffuse_color = 1,1,0;
-	}
-	[placement]
-	{
-	  q orientation = 0,-0.707107,0,0.707107;
-	  p position = 0.301758,1.00002,-0.960922,0x7e577514;
-	}
-	[sound_emitter]
-	{
-		event_sound = "env_singe_ambient";
-	  f max_repeat_rate = 20;
-	}
-}
-[t:emt_sound,n:0x07b00063]
-{
-	[common]
-	{
-		dev_instance_text = "SOUND- singe";
-	}
-	[gizmo]
-	{
-	  v diffuse_color = 1,1,0;
-	}
-	[placement]
-	{
-	  q orientation = 0,-0.707107,0,0.707107;
-	  p position = -1.35851,1.00001,-2.48993,0xbda09584;
-	}
-	[sound_emitter]
-	{
-		event_sound = "env_singe_ambient";
-	  f max_repeat_rate = 20;
 	}
 }
 [t:emt_sound,n:0x07b00227]
@@ -852,6 +640,27 @@
 		event_sound = "env_lava_bubbling";
 	}
 }
+[t:emt_sound,n:0x07b00072]
+{
+	[common]
+	{
+		dev_instance_text = "SOUND- singe";
+	}
+	[gizmo]
+	{
+	  v diffuse_color = 1,1,0;
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.707107,0,0.707107;
+	  p position = 0.301758,1.00002,-0.960922,0x7e577514;
+	}
+	[sound_emitter]
+	{
+		event_sound = "env_singe_ambient";
+	  f max_repeat_rate = 20;
+	}
+}
 [t:emt_sound,n:0x07b00067]
 {
 	[common]
@@ -871,6 +680,41 @@
 	{
 		event_sound = "env_singe_ambient";
 	  f max_repeat_rate = 20;
+	}
+}
+[t:emt_generic_act,n:0x07b00057]
+{
+	[generic_emitter_act]
+	{
+		event_sound = "env_geyser_lava";
+	  b geyser_red = true;
+	  f rep_freq_max = 80;
+	  f rep_freq_min = 30;
+	  b start_on_creation = true;
+	}
+	[placement]
+	{
+	  q orientation = 0,5.96046e-008,0,1;
+	  p position = 0.041687,0.108002,0.00608826,0xbf45cf38;
+	}
+}
+[t:emt_sound,n:0x07b00228]
+{
+	[common]
+	{
+		dev_instance_text = "SOUND- Lava falls";
+	}
+	[gizmo]
+	{
+	  v diffuse_color = 1,1,0;
+	}
+	[placement]
+	{
+	  p position = -4.38664,-0.722267,1.28105,0x37a875d3;
+	}
+	[sound_emitter]
+	{
+		event_sound = "env_lava_falls";
 	}
 }
 [t:emt_generic_act,n:0x07b0004e]
@@ -905,27 +749,11 @@
 	  p position = 0.048584,0.108002,0.242264,0xf358df99;
 	}
 }
-[t:emt_generic_act,n:0x07b00046]
-{
-	[generic_emitter_act]
-	{
-		event_sound = "env_geyser_lava";
-	  b geyser_red = true;
-	  f rep_freq_max = 80;
-	  f rep_freq_min = 30;
-	  b start_on_creation = true;
-	}
-	[placement]
-	{
-	  q orientation = 0,5.96046e-008,0,1;
-	  p position = -0.0226898,0.108002,0.198547,0x3b89de2d;
-	}
-}
-[t:emt_sound,n:0x07b00228]
+[t:emt_sound,n:0x07b00063]
 {
 	[common]
 	{
-		dev_instance_text = "SOUND- Lava falls";
+		dev_instance_text = "SOUND- singe";
 	}
 	[gizmo]
 	{
@@ -933,27 +761,13 @@
 	}
 	[placement]
 	{
-	  p position = -4.38664,-0.722267,1.28105,0x37a875d3;
+	  q orientation = 0,-0.707107,0,0.707107;
+	  p position = -1.35851,1.00001,-2.48993,0xbda09584;
 	}
 	[sound_emitter]
 	{
-		event_sound = "env_lava_falls";
-	}
-}
-[t:emt_generic_act,n:0x07b00057]
-{
-	[generic_emitter_act]
-	{
-		event_sound = "env_geyser_lava";
-	  b geyser_red = true;
-	  f rep_freq_max = 80;
-	  f rep_freq_min = 30;
-	  b start_on_creation = true;
-	}
-	[placement]
-	{
-	  q orientation = 0,5.96046e-008,0,1;
-	  p position = 0.041687,0.108002,0.00608826,0xbf45cf38;
+		event_sound = "env_singe_ambient";
+	  f max_repeat_rate = 20;
 	}
 }
 [t:emt_sound,n:0x07b00054]
@@ -973,6 +787,59 @@
 		event_sound = "env_lava_bubbling";
 	}
 }
+[t:emt_sound,n:0x07b0006c]
+{
+	[common]
+	{
+		dev_instance_text = "SOUND- singe";
+	}
+	[gizmo]
+	{
+	  v diffuse_color = 1,1,0;
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.707107,0,0.707107;
+	  p position = 0.0153046,2.00002,-1.0599,0x25718b94;
+	}
+	[sound_emitter]
+	{
+		event_sound = "env_singe_ambient";
+	  f max_repeat_rate = 20;
+	}
+}
+[t:emt_generic_act,n:0x07b0003b]
+{
+	[generic_emitter_act]
+	{
+		event_sound = "env_geyser_lava";
+	  b geyser_red = true;
+	  f rep_freq_max = 80;
+	  f rep_freq_min = 30;
+	  b start_on_creation = true;
+	}
+	[placement]
+	{
+	  p position = 0.115051,0.127941,0.10051,0x277fb6f6;
+	}
+}
+[t:emt_sound,n:0x07b00044]
+{
+	[common]
+	{
+		dev_instance_text = "SOUND- lava bubbling";
+	}
+	[placement]
+	{
+	  q orientation = 0,1,0,0;
+	  p position = 0.956322,-0.103514,-2.56348,0xe3f00692;
+	}
+	[sound_emitter]
+	{
+	  b continual_loop = true;
+		event_sound = "env_lava_bubbling";
+	}
+}
 [t:emt_sound_act,n:0x07b001bc]
 {
 	[placement]
@@ -985,24 +852,7 @@
 	  b start_on_creation = false;
 	}
 }
-[t:emt_sound,n:0x07b0005b]
-{
-	[common]
-	{
-		dev_instance_text = "SOUND- lava bubbling";
-	}
-	[placement]
-	{
-	  q orientation = 0,-0.707107,0,0.707107;
-	  p position = -3.07774,6.2167,1.87637,0x62ec7874;
-	}
-	[sound_emitter]
-	{
-	  b continual_loop = true;
-		event_sound = "env_lava_bubbling";
-	}
-}
-[t:emt_sound,n:0x07b00079]
+[t:emt_sound,n:0x07b00080]
 {
 	[common]
 	{
@@ -1014,8 +864,8 @@
 	}
 	[placement]
 	{
-	  q orientation = 0,-0.707107,0,0.707107;
-	  p position = 0.96172,16.6681,-1.08301,0x5d9e85f0;
+	  q orientation = 0,1,0,0;
+	  p position = -2.25702,-0.384705,-1.31021,0x36412338;
 	}
 	[sound_emitter]
 	{
@@ -1023,7 +873,60 @@
 	  f max_repeat_rate = 20;
 	}
 }
-[t:emt_sound,n:0x07b0005c]
+[t:emt_sound,n:0x07b0007f]
+{
+	[common]
+	{
+		dev_instance_text = "SOUND- singe";
+	}
+	[gizmo]
+	{
+	  v diffuse_color = 1,1,0;
+	}
+	[placement]
+	{
+	  p position = 8.12791,-5.3847,-1.48463,0x2e4fc1bd;
+	}
+	[sound_emitter]
+	{
+		event_sound = "env_singe_ambient";
+	  f max_repeat_rate = 20;
+	}
+}
+[t:emt_sound_act,n:0x07b001b1]
+{
+	[placement]
+	{
+	  p position = -0.00396727,-1.25082,0.024559,0xb884386c;
+	}
+	[sound_emitter_act]
+	{
+		event_sound = "env_shrine_health";
+	  b start_on_creation = false;
+	}
+}
+[t:emt_sound,n:0x07b00081]
+{
+	[common]
+	{
+		dev_instance_text = "SOUND- singe";
+	}
+	[gizmo]
+	{
+	  v diffuse_color = 1,1,0;
+	}
+	[placement]
+	{
+	  q orientation = 0,1,0,0;
+	  p position = 2.29884,-4.38471,-1.98999,0x85b2f804;
+	}
+	[sound_emitter]
+	{
+		event_sound = "env_singe_ambient";
+	  f max_repeat_rate = 20;
+	}
+}
+[t:emt_sound,n:0x07b00065]
 {
 	[common]
 	{
@@ -1031,8 +934,8 @@
 	}
 	[placement]
 	{
-	  q orientation = 0,0.707107,0,0.707107;
-	  p position = -7.37397,-0.891768,-6.16449,0x9b273129;
+	  q orientation = 0,-0.707107,0,0.707107;
+	  p position = -6.50036,-17.3559,-3.03073,0xb73a018a;
 	}
 	[sound_emitter]
 	{
@@ -1040,7 +943,83 @@
 		event_sound = "env_lava_bubbling";
 	}
 }
-[t:emt_sound,n:0x07b0007a]
+[t:emt_sound,n:0x07b00066]
+{
+	[common]
+	{
+		dev_instance_text = "SOUND- lava bubbling";
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.707107,0,0.707107;
+	  p position = -50.2805,-17.3559,4.47974,0xb73a018a;
+	}
+	[sound_emitter]
+	{
+	  b continual_loop = true;
+		event_sound = "env_lava_bubbling";
+	}
+}
+[t:emt_sound,n:0x07b0007d]
+{
+	[common]
+	{
+		dev_instance_text = "SOUND- singe";
+	}
+	[gizmo]
+	{
+	  v diffuse_color = 1,1,0;
+	}
+	[placement]
+	{
+	  q orientation = 0,1,0,0;
+	  p position = 1.44465,18.6682,-0.758476,0x757a76fa;
+	}
+	[sound_emitter]
+	{
+		event_sound = "env_singe_ambient";
+	  f max_repeat_rate = 20;
+	}
+}
+[t:emt_sound,n:0x07b00082]
+{
+	[common]
+	{
+		dev_instance_text = "SOUND- singe";
+	}
+	[gizmo]
+	{
+	  v diffuse_color = 1,1,0;
+	}
+	[placement]
+	{
+	  q orientation = 0,1,0,0;
+	  p position = 2.63049,-0.384705,-1.60856,0x5462e374;
+	}
+	[sound_emitter]
+	{
+		event_sound = "env_singe_ambient";
+	  f max_repeat_rate = 20;
+	}
+}
+[t:emt_sound,n:0x07b00064]
+{
+	[common]
+	{
+		dev_instance_text = "SOUND- lava bubbling";
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.707107,0,0.707107;
+	  p position = -2.89677,31.0941,-2.73651,0xc47f8115;
+	}
+	[sound_emitter]
+	{
+	  b continual_loop = true;
+		event_sound = "env_lava_bubbling";
+	}
+}
+[t:emt_sound,n:0x07b0007b]
 {
 	[common]
 	{
@@ -1053,7 +1032,7 @@
 	[placement]
 	{
 	  q orientation = 0,0.707107,0,0.707107;
-	  p position = 0.852859,16.6681,-1.30114,0xf83c7372;
+	  p position = 2.50642,18.2182,-3.06346,0xa75fa9e7;
 	}
 	[sound_emitter]
 	{
@@ -1071,6 +1050,23 @@
 	{
 	  q orientation = 0,-0.707107,0,0.707107;
 	  p position = -0.587406,1.9,2.103,0x2671f200;
+	}
+	[sound_emitter]
+	{
+	  b continual_loop = true;
+		event_sound = "env_lava_bubbling";
+	}
+}
+[t:emt_sound,n:0x07b0005f]
+{
+	[common]
+	{
+		dev_instance_text = "SOUND- lava bubbling";
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.707107,0,0.707107;
+	  p position = -1.83523,19.1941,-3.21839,0x46e429a4;
 	}
 	[sound_emitter]
 	{
@@ -1099,24 +1095,7 @@
 	  f max_repeat_rate = 20;
 	}
 }
-[t:emt_sound,n:0x07b0005f]
-{
-	[common]
-	{
-		dev_instance_text = "SOUND- lava bubbling";
-	}
-	[placement]
-	{
-	  q orientation = 0,-0.707107,0,0.707107;
-	  p position = -1.83523,19.1941,-3.21839,0x46e429a4;
-	}
-	[sound_emitter]
-	{
-	  b continual_loop = true;
-		event_sound = "env_lava_bubbling";
-	}
-}
-[t:emt_sound,n:0x07b0007b]
+[t:emt_sound,n:0x07b0007a]
 {
 	[common]
 	{
@@ -1129,7 +1108,7 @@
 	[placement]
 	{
 	  q orientation = 0,0.707107,0,0.707107;
-	  p position = 2.50642,18.2182,-3.06346,0xa75fa9e7;
+	  p position = 0.852859,16.6681,-1.30114,0xf83c7372;
 	}
 	[sound_emitter]
 	{
@@ -1193,41 +1172,7 @@
 		event_sound = "env_lava_falls";
 	}
 }
-[t:emt_sound,n:0x07b00065]
-{
-	[common]
-	{
-		dev_instance_text = "SOUND- lava bubbling";
-	}
-	[placement]
-	{
-	  q orientation = 0,-0.707107,0,0.707107;
-	  p position = -6.50036,-17.3559,-3.03073,0xb73a018a;
-	}
-	[sound_emitter]
-	{
-	  b continual_loop = true;
-		event_sound = "env_lava_bubbling";
-	}
-}
-[t:emt_sound,n:0x07b00066]
-{
-	[common]
-	{
-		dev_instance_text = "SOUND- lava bubbling";
-	}
-	[placement]
-	{
-	  q orientation = 0,-0.707107,0,0.707107;
-	  p position = -50.2805,-17.3559,4.47974,0xb73a018a;
-	}
-	[sound_emitter]
-	{
-	  b continual_loop = true;
-		event_sound = "env_lava_bubbling";
-	}
-}
-[t:emt_sound,n:0x07b00081]
+[t:emt_sound,n:0x07b0007e]
 {
 	[common]
 	{
@@ -1239,8 +1184,8 @@
 	}
 	[placement]
 	{
-	  q orientation = 0,1,0,0;
-	  p position = 2.29884,-4.38471,-1.98999,0x85b2f804;
+	  q orientation = 0,-0.707107,0,0.707107;
+	  p position = -2.32327,3.66817,-1.00928,0x6238326a;
 	}
 	[sound_emitter]
 	{
@@ -1248,28 +1193,7 @@
 	  f max_repeat_rate = 20;
 	}
 }
-[t:emt_sound,n:0x07b0007d]
-{
-	[common]
-	{
-		dev_instance_text = "SOUND- singe";
-	}
-	[gizmo]
-	{
-	  v diffuse_color = 1,1,0;
-	}
-	[placement]
-	{
-	  q orientation = 0,1,0,0;
-	  p position = 1.44465,18.6682,-0.758476,0x757a76fa;
-	}
-	[sound_emitter]
-	{
-		event_sound = "env_singe_ambient";
-	  f max_repeat_rate = 20;
-	}
-}
-[t:emt_sound,n:0x07b00064]
+[t:emt_sound,n:0x07b00088]
 {
 	[common]
 	{
@@ -1277,115 +1201,8 @@
 	}
 	[placement]
 	{
-	  q orientation = 0,-0.707107,0,0.707107;
-	  p position = -2.89677,31.0941,-2.73651,0xc47f8115;
-	}
-	[sound_emitter]
-	{
-	  b continual_loop = true;
-		event_sound = "env_lava_bubbling";
-	}
-}
-[t:emt_sound,n:0x07b00211]
-{
-	[common]
-	{
-		dev_instance_text = "SOUND- Lava falls";
-	}
-	[gizmo]
-	{
-	  v diffuse_color = 1,1,0;
-	}
-	[placement]
-	{
-	  q orientation = 0,1,0,0;
-	  p position = -3.9044,-5.94262,-12.5019,0x63b0463f;
-	}
-	[sound_emitter]
-	{
-		event_sound = "env_lava_falls";
-	}
-}
-[t:emt_sound,n:0x07b00083]
-{
-	[common]
-	{
-		dev_instance_text = "SOUND- singe";
-	}
-	[gizmo]
-	{
-	  v diffuse_color = 1,1,0;
-	}
-	[placement]
-	{
-	  p position = 3.88742,-0.384706,0.21904,0x9245267d;
-	}
-	[sound_emitter]
-	{
-		event_sound = "env_singe_ambient";
-	  f max_repeat_rate = 20;
-	}
-}
-[t:emt_sound,n:0x07b00082]
-{
-	[common]
-	{
-		dev_instance_text = "SOUND- singe";
-	}
-	[gizmo]
-	{
-	  v diffuse_color = 1,1,0;
-	}
-	[placement]
-	{
-	  q orientation = 0,1,0,0;
-	  p position = 2.63049,-0.384705,-1.60856,0x5462e374;
-	}
-	[sound_emitter]
-	{
-		event_sound = "env_singe_ambient";
-	  f max_repeat_rate = 20;
-	}
-}
-[t:emt_sound_act,n:0x07b001b1]
-{
-	[placement]
-	{
-	  p position = -0.00396727,-1.25082,0.024559,0xb884386c;
-	}
-	[sound_emitter_act]
-	{
-		event_sound = "env_shrine_health";
-	  b start_on_creation = false;
-	}
-}
-[t:emt_sound,n:0x07b00062]
-{
-	[common]
-	{
-		dev_instance_text = "SOUND- lava bubbling";
-	}
-	[placement]
-	{
-	  q orientation = 0,-0.707107,0,0.707107;
-	  p position = -15.8733,-9.55037,0.758659,0x0ed5d398;
-	}
-	[sound_emitter]
-	{
-	  b continual_loop = true;
-		event_sound = "env_lava_bubbling";
-	}
-}
-[t:emt_sound,n:0x07b0008c]
-{
-	[common]
-	{
-		dev_instance_text = "SOUND- lava bubbling";
-	}
-	[placement]
-	{
-	  q orientation = 0,-0.707107,0,0.707107;
-	  p position = -0.769043,-9.55036,-1.66204,0x0ed5d398;
+	  q orientation = 0,0.707107,0,0.707107;
+	  p position = 0.826553,1.6938,1.83789,0x8dc8078c;
 	}
 	[sound_emitter]
 	{
@@ -1463,44 +1280,6 @@
 		event_sound = "env_lava_bubbling";
 	}
 }
-[t:emt_sound,n:0x07b0007e]
-{
-	[common]
-	{
-		dev_instance_text = "SOUND- singe";
-	}
-	[gizmo]
-	{
-	  v diffuse_color = 1,1,0;
-	}
-	[placement]
-	{
-	  q orientation = 0,-0.707107,0,0.707107;
-	  p position = -2.32327,3.66817,-1.00928,0x6238326a;
-	}
-	[sound_emitter]
-	{
-		event_sound = "env_singe_ambient";
-	  f max_repeat_rate = 20;
-	}
-}
-[t:emt_sound,n:0x07b00088]
-{
-	[common]
-	{
-		dev_instance_text = "SOUND- lava bubbling";
-	}
-	[placement]
-	{
-	  q orientation = 0,0.707107,0,0.707107;
-	  p position = 0.826553,1.6938,1.83789,0x8dc8078c;
-	}
-	[sound_emitter]
-	{
-	  b continual_loop = true;
-		event_sound = "env_lava_bubbling";
-	}
-}
 [t:emt_sound,n:0x07b00216]
 {
 	[common]
@@ -1520,7 +1299,58 @@
 		event_sound = "env_lava_falls";
 	}
 }
-[t:emt_sound,n:0x07b00080]
+[t:emt_sound,n:0x07b00062]
+{
+	[common]
+	{
+		dev_instance_text = "SOUND- lava bubbling";
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.707107,0,0.707107;
+	  p position = -15.8733,-9.55037,0.758659,0x0ed5d398;
+	}
+	[sound_emitter]
+	{
+	  b continual_loop = true;
+		event_sound = "env_lava_bubbling";
+	}
+}
+[t:emt_sound,n:0x07b0008c]
+{
+	[common]
+	{
+		dev_instance_text = "SOUND- lava bubbling";
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.707107,0,0.707107;
+	  p position = -0.769043,-9.55036,-1.66204,0x0ed5d398;
+	}
+	[sound_emitter]
+	{
+	  b continual_loop = true;
+		event_sound = "env_lava_bubbling";
+	}
+}
+[t:emt_sound,n:0x07b00058]
+{
+	[common]
+	{
+		dev_instance_text = "SOUND- lava bubbling";
+	}
+	[placement]
+	{
+	  q orientation = 0,0.707107,0,0.707107;
+	  p position = 1.01202,12.4911,-8.11587,0x55a4fe41;
+	}
+	[sound_emitter]
+	{
+	  b continual_loop = true;
+		event_sound = "env_lava_bubbling";
+	}
+}
+[t:emt_sound,n:0x07b00077]
 {
 	[common]
 	{
@@ -1533,7 +1363,7 @@
 	[placement]
 	{
 	  q orientation = 0,1,0,0;
-	  p position = -2.25702,-0.384705,-1.31021,0x36412338;
+	  p position = 3.20603,-2.52092,-6.22123,0xe113ab51;
 	}
 	[sound_emitter]
 	{
@@ -1541,7 +1371,7 @@
 	  f max_repeat_rate = 20;
 	}
 }
-[t:emt_sound,n:0x07b0007f]
+[t:emt_sound,n:0x07b00079]
 {
 	[common]
 	{
@@ -1553,7 +1383,8 @@
 	}
 	[placement]
 	{
-	  p position = 8.12791,-5.3847,-1.48463,0x2e4fc1bd;
+	  q orientation = 0,-0.707107,0,0.707107;
+	  p position = 0.96172,16.6681,-1.08301,0x5d9e85f0;
 	}
 	[sound_emitter]
 	{
@@ -1561,7 +1392,139 @@
 	  f max_repeat_rate = 20;
 	}
 }
-[t:emt_sound,n:0x07b00044]
+[t:emt_sound,n:0x07b0005c]
+{
+	[common]
+	{
+		dev_instance_text = "SOUND- lava bubbling";
+	}
+	[placement]
+	{
+	  q orientation = 0,0.707107,0,0.707107;
+	  p position = -7.37397,-0.891768,-6.16449,0x9b273129;
+	}
+	[sound_emitter]
+	{
+	  b continual_loop = true;
+		event_sound = "env_lava_bubbling";
+	}
+}
+[t:emt_sound,n:0x07b00083]
+{
+	[common]
+	{
+		dev_instance_text = "SOUND- singe";
+	}
+	[gizmo]
+	{
+	  v diffuse_color = 1,1,0;
+	}
+	[placement]
+	{
+	  p position = 3.88742,-0.384706,0.21904,0x9245267d;
+	}
+	[sound_emitter]
+	{
+		event_sound = "env_singe_ambient";
+	  f max_repeat_rate = 20;
+	}
+}
+[t:emt_sound,n:0x07b00211]
+{
+	[common]
+	{
+		dev_instance_text = "SOUND- Lava falls";
+	}
+	[gizmo]
+	{
+	  v diffuse_color = 1,1,0;
+	}
+	[placement]
+	{
+	  q orientation = 0,1,0,0;
+	  p position = -3.9044,-5.94262,-12.5019,0x63b0463f;
+	}
+	[sound_emitter]
+	{
+		event_sound = "env_lava_falls";
+	}
+}
+[t:emt_sound,n:0x07b00041]
+{
+	[common]
+	{
+		dev_instance_text = "SOUND- lava bubbling";
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.707107,0,0.707107;
+	  p position = 1.96769,0.999901,-0.222366,0x8d73bc75;
+	}
+	[sound_emitter]
+	{
+	  b continual_loop = true;
+		event_sound = "env_lava_bubbling";
+	}
+}
+[t:emt_sound,n:0x07b0004c]
+{
+	[common]
+	{
+		dev_instance_text = "SOUND- lava bubbling";
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.707107,0,0.707107;
+	  p position = 0.220444,0.999901,-0.423935,0x8d73bc75;
+	}
+	[sound_emitter]
+	{
+	  b continual_loop = true;
+		event_sound = "env_lava_bubbling";
+	}
+}
+[t:emt_sound,n:0x07b00068]
+{
+	[common]
+	{
+		dev_instance_text = "SOUND- singe";
+	}
+	[gizmo]
+	{
+	  v diffuse_color = 1,1,0;
+	}
+	[placement]
+	{
+	  q orientation = 0,1,0,0;
+	  p position = -2.95692,1.00003,-0.348204,0x306e04ea;
+	}
+	[sound_emitter]
+	{
+		event_sound = "env_singe_ambient";
+	  f max_repeat_rate = 20;
+	}
+}
+[t:emt_sound,n:0x07b00221]
+{
+	[common]
+	{
+		dev_instance_text = "SOUND- Lava falls";
+	}
+	[gizmo]
+	{
+	  v diffuse_color = 1,1,0;
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.707107,0,0.707107;
+	  p position = -1.26532,0,-8.32053,0x64b5e4b7;
+	}
+	[sound_emitter]
+	{
+		event_sound = "env_lava_falls";
+	}
+}
+[t:emt_sound,n:0x07b0003d]
 {
 	[common]
 	{
@@ -1570,7 +1533,7 @@
 	[placement]
 	{
 	  q orientation = 0,1,0,0;
-	  p position = 0.956322,-0.103514,-2.56348,0xe3f00692;
+	  p position = -0.0418091,1.99996,0.707054,0xbee86a17;
 	}
 	[sound_emitter]
 	{
@@ -1578,11 +1541,28 @@
 		event_sound = "env_lava_bubbling";
 	}
 }
-[t:emt_sound,n:0x07b00076]
+[t:emt_sound,n:0x07b00048]
 {
 	[common]
 	{
-		dev_instance_text = "SOUND- singe";
+		dev_instance_text = "SOUND- lava bubbling";
+	}
+	[placement]
+	{
+	  q orientation = 0,1,0,0;
+	  p position = -0.0418091,1.99996,0.707054,0xbee86a17;
+	}
+	[sound_emitter]
+	{
+	  b continual_loop = true;
+		event_sound = "env_lava_bubbling";
+	}
+}
+[t:emt_sound,n:0x07b000f2]
+{
+	[common]
+	{
+		dev_instance_text = "SOUND- Lava falls";
 	}
 	[gizmo]
 	{
@@ -1590,15 +1570,34 @@
 	}
 	[placement]
 	{
-	  p position = -0.48465,6.79472,0.49501,0x0b3955a8;
+	  q orientation = 0,-0.707107,0,0.707107;
+	  p position = 2.92059,0.45,2.31458,0xe516d190;
 	}
 	[sound_emitter]
 	{
-		event_sound = "env_singe_ambient";
-	  f max_repeat_rate = 20;
+		event_sound = "env_lava_falls";
 	}
 }
-[t:emt_generic_act,n:0x07b00074]
+[t:emt_sound,n:0x07b00217]
+{
+	[common]
+	{
+		dev_instance_text = "SOUND- Lava falls";
+	}
+	[gizmo]
+	{
+	  v diffuse_color = 1,1,0;
+	}
+	[placement]
+	{
+	  p position = -2.78552,0.408566,5.27994,0x212351a9;
+	}
+	[sound_emitter]
+	{
+		event_sound = "env_lava_falls";
+	}
+}
+[t:emt_generic_act,n:0x07b003ee]
 {
 	[generic_emitter_act]
 	{
@@ -1610,7 +1609,7 @@
 	}
 	[placement]
 	{
-	  q orientation = 0,0.707107,0,0.707107;
-	  p position = 0.112762,0.332634,0.0174713,0x0b3955a8;
+	  q orientation = 0,1.49012e-008,0,1;
+	  p position = 0.116417,0.381783,0.0463963,0xa63b438a;
 	}
 }

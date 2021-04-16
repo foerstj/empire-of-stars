@@ -2,17 +2,11 @@
 {
 	[common]
 	{
-		dev_instance_text = "MOOD, PLAYER LOCATION, FADE";
 		[instance_triggers]
 		{
 			[*]
 			{
-				action* = mood_change("multiplayer_world_hades_1");
-				action* = set_player_world_location("lava_caverns");
-				action* = fade_nodes(0xEA1CCCA8,1,-1,-1,"out:black"), doc("dunes");
-				action* = fade_nodes(0xA6495190,1,-1,-1,"out:black"), doc("dunes2hades");
-				action* = fade_nodes(0xA6495190,2,-1,-1,"out:black"), doc("dunes2hades entrance");
-				action* = fade_nodes(0xEA1CCCA8,3,-1,-1,"out:black"), doc("dunes entrance");
+				action* = mood_change("eos_betelgeuse_moon_1");
 			  b can_self_destruct = true;
 				condition* = party_member_within_bounding_box(1.000000,2.000000,6.000000,"on_every_enter");
 			  f delay = 0.000000;
@@ -37,13 +31,11 @@
 {
 	[common]
 	{
-		dev_instance_text = "MOOD, PLAYER LOCATION";
 		[instance_triggers]
 		{
 			[*]
 			{
-				action* = mood_change("multiplayer_world_hades_2");
-				action* = set_player_world_location("lava_caverns");
+				action* = mood_change("eos_betelgeuse_moon_2");
 			  b can_self_destruct = true;
 				condition* = party_member_within_bounding_box(1.000000,2.000000,6.000000,"on_every_enter");
 			  f delay = 0.000000;
@@ -64,58 +56,6 @@
 	  p position = -1.2105,0,-1.17296,0xb15168eb;
 	}
 }
-[t:use_point,n:0x07b0019f]
-{
-	[placement]
-	{
-	  p position = -2.04635,9.53674e-007,0.413025,0x4bbb64c7;
-	}
-}
-[t:use_point,n:0x07b001c5]
-{
-	[placement]
-	{
-	  p position = -1.21107,0.400002,1.40549,0x189fc8ce;
-	}
-}
-[t:use_point,n:0x07b00152]
-{
-	[placement]
-	{
-	  p position = -0.103667,1,2.59201,0xb1c52cdb;
-	}
-}
-[t:trigger_change_mood_box,n:0x07b003ef]
-{
-	[common]
-	{
-		dev_instance_text = "PLAYER LOCATION";
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = set_player_world_location("lava_caverns");
-				action* = mood_change("multiplayer_world_hades_5");
-			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(1.000000,3.000000,11.000000,"on_every_enter");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  q orientation = 0,0.55557,0,0.83147;
-	  p position = 0.56823,-0.950518,-3.38147,0x50a01b9d;
-	}
-}
 [t:trigger_change_mood_box,n:0x07b0023c]
 {
 	[common]
@@ -124,7 +64,7 @@
 		{
 			[*]
 			{
-				action* = mood_change("multiplayer_world_hades_5");
+				action* = mood_change("eos_betelgeuse_moon_5");
 			  b can_self_destruct = true;
 				condition* = party_member_within_bounding_box(1.000000,2.000000,8.000000,"on_every_enter");
 			  f delay = 0.000000;
@@ -145,6 +85,35 @@
 	  p position = 0.430061,-0.0369678,-0.735565,0x7c1bf71f;
 	}
 }
+[t:trigger_change_mood_box,n:0x07b0023d]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = mood_change("eos_betelgeuse_moon_6");
+			  b can_self_destruct = true;
+				condition* = party_member_within_bounding_box(0.250000,2.000000,6.000000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.471397,0,0.881921;
+	  p position = -0.797623,0,1.7878,0xd216a478;
+	}
+}
 [t:trigger_change_mood_box,n:0x07b001b9]
 {
 	[common]
@@ -153,7 +122,7 @@
 		{
 			[*]
 			{
-				action* = mood_change("multiplayer_world_hades_3");
+				action* = mood_change("eos_betelgeuse_moon_3");
 			  b can_self_destruct = true;
 				condition* = party_member_within_bounding_box(1.000000,1.000000,6.000000,"on_every_enter");
 			  f delay = 0.000000;
@@ -181,7 +150,7 @@
 		{
 			[*]
 			{
-				action* = mood_change("multiplayer_world_hades_5");
+				action* = mood_change("eos_betelgeuse_moon_5");
 			  b can_self_destruct = true;
 				condition* = party_member_within_bounding_box(1.000000,1.000000,6.000000,"on_every_enter");
 			  f delay = 0.000000;
@@ -202,7 +171,14 @@
 	  p position = 0.383347,-1.65761,-2.10776,0x0fbf65ca;
 	}
 }
-[t:trigger_change_mood_box,n:0x07b0023d]
+[t:use_point,n:0x07b00152]
+{
+	[placement]
+	{
+	  p position = -0.103667,1,2.59201,0xb1c52cdb;
+	}
+}
+[t:trigger_change_mood_box,n:0x07b003ef]
 {
 	[common]
 	{
@@ -210,9 +186,9 @@
 		{
 			[*]
 			{
-				action* = mood_change("multiplayer_world_hades_6");
+				action* = mood_change("eos_betelgeuse_moon_5");
 			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(0.250000,2.000000,6.000000,"on_every_enter");
+				condition* = party_member_within_bounding_box(1.000000,3.000000,11.000000,"on_every_enter");
 			  f delay = 0.000000;
 			  b flip_flop = false;
 			  b multi_player = true;
@@ -227,15 +203,15 @@
 	}
 	[placement]
 	{
-	  q orientation = 0,-0.471397,0,0.881921;
-	  p position = -0.797623,0,1.7878,0xd216a478;
+	  q orientation = 0,0.55557,0,0.83147;
+	  p position = 0.56823,-0.950518,-3.38147,0x50a01b9d;
 	}
 }
-[t:use_point,n:0x07b001c6]
+[t:use_point,n:0x07b001c5]
 {
 	[placement]
 	{
-	  p position = -2.07237,-12,-5.55394,0x496075c6;
+	  p position = -1.21107,0.400002,1.40549,0x189fc8ce;
 	}
 }
 [t:use_point,n:0x07b001c7]
@@ -245,17 +221,22 @@
 	  p position = -1.52077,0.400002,1.48398,0xd11034a0;
 	}
 }
+[t:use_point,n:0x07b001c6]
+{
+	[placement]
+	{
+	  p position = -2.07237,-12,-5.55394,0x496075c6;
+	}
+}
 [t:trigger_change_mood_box,n:0x07b0023a]
 {
 	[common]
 	{
-		dev_instance_text = "MOOD, PLAYER LOCATION";
 		[instance_triggers]
 		{
 			[*]
 			{
-				action* = mood_change("multiplayer_world_hades_2");
-				action* = set_player_world_location("lava_caverns");
+				action* = mood_change("eos_betelgeuse_moon_2");
 			  b can_self_destruct = true;
 				condition* = party_member_within_bounding_box(1.000000,2.000000,6.000000,"on_every_enter");
 			  f delay = 0.000000;
@@ -334,126 +315,18 @@
 	  p position = 0.0126094,-0.750001,-0.107498,0x7cabf405;
 	}
 }
-[t:use_point,n:0x07b001c8]
+[t:use_point,n:0x07b00210]
 {
 	[placement]
 	{
-	  p position = -2.05894,-1.90735e-006,-0.889503,0xcd10d827;
+	  p position = 1.53112,0,-0.038269,0xda19bfa8;
 	}
 }
-[t:trigger_generic,n:0x07b0000a]
-{
-	[common]
-	{
-		dev_instance_text = "BG MOON ELEVATOR";
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = send_world_message("we_req_activate",0x07B0000B,0f,"default","every",0);
-				action* = send_world_message("we_req_activate",0x04C002D6,0f,"default","every",0);
-			  b can_self_destruct = true;
-				condition* = receive_world_message("we_req_activate",0,"on_every_message");
-				condition* = has_go_in_inventory("local",0x00000000,"starstone_betelgeuse");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  p position = -0.0624591,0.2,-1.51678,0xde092b62;
-	}
-}
-[t:use_point,n:0x07b0019e]
+[t:use_point,n:0x07b001c9]
 {
 	[placement]
 	{
-	  p position = -0.898293,4.76837e-007,0.702633,0x533847c6;
-	}
-}
-[t:trigger_change_mood_box,n:0x07b00239]
-{
-	[common]
-	{
-		dev_instance_text = "MOOD, PLAYER LOCATION";
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = mood_change("multiplayer_world_hades_1");
-				action* = set_player_world_location("lava_caverns");
-			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(1.000000,2.000000,6.000000,"on_every_enter");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  q orientation = 0,0.707107,0,0.707107;
-	  p position = -0.32061,0.309043,1.22158,0x517ee7d0;
-	}
-}
-[t:use_point,n:0x07b00194]
-{
-	[placement]
-	{
-	  p position = -0.558268,0,-0.225096,0x7e0b678f;
-	}
-}
-[t:trigger_change_mood_box,n:0x07b00053]
-{
-	[common]
-	{
-		dev_instance_text = "MOOD, FADE";
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = mood_change("multiplayer_world_hades_4");
-				action* = fade_nodes(0xEA1CCCA8,1,-1,-1,"in"), doc("dunes");
-				action* = fade_nodes(0xA6495190,2,-1,-1,"in"), doc("dunes2hades entrance");
-				action* = fade_nodes(0xEA1CCCA8,3,-1,-1,"in"), doc("dunes entrance");
-			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(1.000000,2.000000,4.000000,"on_every_enter");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  p position = -3.42561,0,-0.123498,0x6786ee54;
-	}
-}
-[t:use_point,n:0x07b00178]
-{
-	[placement]
-	{
-	  p position = 0.9128,0,2.62487,0x041c4a63;
+	  p position = 1.1498,0,0.052063,0x4af44336;
 	}
 }
 [t:trigger_health_shrine,n:0x07b001b0]
@@ -514,11 +387,99 @@
 	  p position = 0.0346298,-0.471631,0.0103378,0xb884386c;
 	}
 }
-[t:use_point,n:0x07b001c9]
+[t:use_point,n:0x07b00194]
 {
 	[placement]
 	{
-	  p position = 1.1498,0,0.052063,0x4af44336;
+	  p position = -0.558268,0,-0.225096,0x7e0b678f;
+	}
+}
+[t:use_point,n:0x07b0019e]
+{
+	[placement]
+	{
+	  p position = -0.898293,4.76837e-007,0.702633,0x533847c6;
+	}
+}
+[t:use_point,n:0x07b003f8]
+{
+	[placement]
+	{
+	  q orientation = 0,1,0,0;
+	  p position = -3.11196,0.0403318,-1.99075,0x669a1abf;
+	}
+}
+[t:trigger_change_mood_box,n:0x07b001b8]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = mood_change("eos_betelgeuse_moon_3");
+			  b can_self_destruct = true;
+				condition* = party_member_within_bounding_box(1.000000,1.000000,6.000000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  p position = 3.38928,0,1.90821,0xd7224a24;
+	}
+}
+[t:use_point,n:0x07b00008]
+{
+	[placement]
+	{
+	  p position = -0.478531,0.2,-0.354424,0x1a8dc31b;
+	}
+}
+[t:trigger_generic,n:0x07b0000a]
+{
+	[common]
+	{
+		dev_instance_text = "BG MOON ELEVATOR";
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_activate",0x07B0000B,0f,"default","every",0);
+				action* = send_world_message("we_req_activate",0x04C002D6,0f,"default","every",0);
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_req_activate",0,"on_every_message");
+				condition* = has_go_in_inventory("local",0x00000000,"starstone_betelgeuse");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  p position = -0.0624591,0.2,-1.51678,0xde092b62;
+	}
+}
+[t:use_point,n:0x07b0017e]
+{
+	[placement]
+	{
+	  p position = 0.540308,0,-0.566422,0x0278d7df;
 	}
 }
 [t:trigger_change_mood_box,n:0x07b001b3]
@@ -529,7 +490,7 @@
 		{
 			[*]
 			{
-				action* = mood_change("multiplayer_world_hades_1");
+				action* = mood_change("eos_betelgeuse_moon_1");
 			  b can_self_destruct = true;
 				condition* = party_member_within_bounding_box(1.000000,1.000000,4.000000,"on_every_enter");
 			  f delay = 0.000000;
@@ -550,60 +511,15 @@
 	  p position = -0.98455,0.67572,-0.915649,0xd10016a3;
 	}
 }
-[t:use_point,n:0x07b003f8]
-{
-	[placement]
-	{
-	  q orientation = 0,1,0,0;
-	  p position = -3.11196,0.0403318,-1.99075,0x669a1abf;
-	}
-}
-[t:trigger_change_mood_box,n:0x07b001b8]
-{
-	[common]
-	{
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = mood_change("multiplayer_world_hades_3");
-			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(1.000000,1.000000,6.000000,"on_every_enter");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  p position = 3.38928,0,1.90821,0xd7224a24;
-	}
-}
-[t:use_point,n:0x07b0017e]
-{
-	[placement]
-	{
-	  p position = 0.540308,0,-0.566422,0x0278d7df;
-	}
-}
 [t:trigger_change_mood_box,n:0x07b0023b]
 {
 	[common]
 	{
-		dev_instance_text = "MOOD, PLAYER LOCATION";
 		[instance_triggers]
 		{
 			[*]
 			{
-				action* = mood_change("multiplayer_world_hades_1");
-				action* = set_player_world_location("lava_caverns");
+				action* = mood_change("eos_betelgeuse_moon_1");
 			  b can_self_destruct = true;
 				condition* = party_member_within_bounding_box(1.000000,2.000000,8.000000,"on_every_enter");
 			  f delay = 0.000000;
@@ -631,18 +547,11 @@
 	  p position = 0.812057,-4.76837e-007,0.268613,0x173f8b4b;
 	}
 }
-[t:use_point,n:0x07b00210]
+[t:use_point,n:0x07b001c8]
 {
 	[placement]
 	{
-	  p position = 1.53112,0,-0.038269,0xda19bfa8;
-	}
-}
-[t:use_point,n:0x07b00008]
-{
-	[placement]
-	{
-	  p position = -1.40357,0.2,-1.26987,0xde092b62;
+	  p position = -2.05894,-1.90735e-006,-0.889503,0xcd10d827;
 	}
 }
 [t:trigger_change_mood_box,n:0x07b0000f]
@@ -653,7 +562,7 @@
 		{
 			[*]
 			{
-				action* = mood_change("multiplayer_world_hades_3");
+				action* = mood_change("eos_betelgeuse_moon_3");
 			  b can_self_destruct = true;
 				condition* = party_member_within_sphere(10.000000,"on_every_enter");
 			  f delay = 0.000000;
@@ -670,6 +579,78 @@
 	}
 	[placement]
 	{
-	  p position = -1.22974,-5.9208,-5.22385,0x1e82e9f1;
+	  q orientation = 0,8.9407e-008,0,1;
+	  p position = 0.82115,0.4,1.41879,0xdf7ecff0;
+	}
+}
+[t:use_point,n:0x07b0019f]
+{
+	[placement]
+	{
+	  p position = -2.04635,9.53674e-007,0.413025,0x4bbb64c7;
+	}
+}
+[t:trigger_change_mood_box,n:0x07b00239]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = mood_change("eos_betelgeuse_moon_1");
+			  b can_self_destruct = true;
+				condition* = party_member_within_bounding_box(1.000000,2.000000,6.000000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,0.707107,0,0.707107;
+	  p position = -0.32061,0.309043,1.22158,0x517ee7d0;
+	}
+}
+[t:trigger_change_mood_box,n:0x07b00053]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = mood_change("eos_betelgeuse_moon_4");
+			  b can_self_destruct = true;
+				condition* = party_member_within_bounding_box(1.000000,2.000000,4.000000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  p position = -3.42561,0,-0.123498,0x6786ee54;
+	}
+}
+[t:use_point,n:0x07b00178]
+{
+	[placement]
+	{
+	  p position = 0.9128,0,2.62487,0x041c4a63;
 	}
 }
