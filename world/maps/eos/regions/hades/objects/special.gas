@@ -116,83 +116,6 @@
 	  p position = 0.56823,-0.950518,-3.38147,0x50a01b9d;
 	}
 }
-[t:trigger_change_mood_box,n:0x07b0008d]
-{
-	[common]
-	{
-		dev_instance_text = "FADE, MOOD";
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = mood_change("multiplayer_world_hades_4");
-				action* = fade_nodes(0xA6495190,1,-1,-1,"out:black"), doc("dunes2hades");
-				action* = fade_nodes(0xA6495190,2,-1,-1,"out:black"), doc("dunes2hades entrance");
-			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(1.000000,1.000000,11.000000,"on_every_enter");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  q orientation = 0,0.707107,0,0.707107;
-	  p position = 0.331833,-1.2,-1.67325,0xce6c570e;
-	}
-}
-[t:trigger_change_mood_box,n:0x07b00150]
-{
-	[common]
-	{
-		dev_instance_text = "PLAYER LOCATION";
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = set_player_world_location("lava_caverns");
-			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(5.000000,1.000000,3.000000,"on_every_enter");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  q orientation = 0,-0.707107,0,0.707107;
-	  p position = 0.123971,-3.08265,1.3284,0x0a44a291;
-	}
-}
-[t:use_point,n:0x07b000f1]
-{
-	[placement]
-	{
-	  p position = 0.451385,5.95,-0.0547409,0x7af502aa;
-	}
-}
-[t:use_point,n:0x07b000f7]
-{
-	[placement]
-	{
-	  q orientation = 0,0.707107,0,0.707107;
-	  p position = 1.86073,0,-1.26617,0x4fa2c817;
-	}
-}
 [t:trigger_change_mood_box,n:0x07b0023c]
 {
 	[common]
@@ -533,43 +456,6 @@
 	  p position = 0.9128,0,2.62487,0x041c4a63;
 	}
 }
-[t:trigger_change_mood_box,n:0x07b00133]
-{
-	[common]
-	{
-		dev_instance_text = "PLAYER LOCATION";
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = set_player_world_location("lava_caverns");
-			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(3.000000,1.000000,3.000000,"on_every_enter");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  q orientation = 0,0.707107,0,0.707107;
-	  p position = -5.15517,0,0.027516,0x49336697;
-	}
-}
-[t:use_point,n:0x07b00085]
-{
-	[placement]
-	{
-	  p position = -0.185731,0,0.0210993,0x62cc1f8b;
-	}
-}
 [t:trigger_health_shrine,n:0x07b001b0]
 {
 	[common]
@@ -756,6 +642,34 @@
 {
 	[placement]
 	{
-	  p position = -0.379339,0.2,-0.378983,0x1a8dc31b;
+	  p position = -1.40357,0.2,-1.26987,0xde092b62;
+	}
+}
+[t:trigger_change_mood_box,n:0x07b0000f]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = mood_change("multiplayer_world_hades_3");
+			  b can_self_destruct = true;
+				condition* = party_member_within_sphere(10.000000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  p position = -1.22974,-5.9208,-5.22385,0x1e82e9f1;
 	}
 }
