@@ -418,6 +418,37 @@
 	  p position = -2.05894,-1.90735e-006,-0.889503,0xcd10d827;
 	}
 }
+[t:trigger_generic,n:0x07b0000a]
+{
+	[common]
+	{
+		dev_instance_text = "BG MOON ELEVATOR";
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_activate",0x07B0000B,0f,"default","every",0);
+				action* = send_world_message("we_req_activate",0x04C002D6,0f,"default","every",0);
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_req_activate",0,"on_every_message");
+				condition* = has_go_in_inventory("local",0x00000000,"starstone_betelgeuse");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  p position = -0.0624591,0.2,-1.51678,0xde092b62;
+	}
+}
 [t:use_point,n:0x07b0019e]
 {
 	[placement]
@@ -719,5 +750,12 @@
 	[placement]
 	{
 	  p position = 1.53112,0,-0.038269,0xda19bfa8;
+	}
+}
+[t:use_point,n:0x07b00008]
+{
+	[placement]
+	{
+	  p position = -0.379339,0.2,-0.378983,0x1a8dc31b;
 	}
 }
