@@ -53,6 +53,17 @@ Unrelatedly, ...";
 	  f scroll_rate = 10.000000;
 	}
 }
+[intro]
+{
+	[text*]
+	{
+		screen_text = "Blessings, stranger from another star.
+So how do you like this planet? Is it much different from yours?
+One thing that might be different is our sunlight - Betelgeuse is a pink star. Looks quite pretty ah? I imagine yellow sunlight to look a bit agressive... But to each their own, I guess.
+Anyways hope you like it here!";
+	  f scroll_rate = 10.000000;
+	}
+}
 [mule_shop]
 {
 	[text*]
@@ -110,6 +121,7 @@ Sorry, we need the other pack animals ourselves.";
 {
 	[text*]
 	{
+		choice = more;
 		complete_quest* = betelgeuse_wiseoldman;
 	  i order = 0;
 		screen_text = "You did it!";
@@ -170,17 +182,6 @@ I have a few things here that might be useful for you. Come have a look!";
 	[text*]
 	{
 		screen_text = "Be our guest!";
-	  f scroll_rate = 10.000000;
-	}
-}
-[intro]
-{
-	[text*]
-	{
-		screen_text = "Blessings, stranger from another star.
-So how do you like this planet? Is it much different from yours?
-One thing that might be different is our sunlight - Betelgeuse is a pink star. Looks quite pretty ah? I imagine yellow sunlight to look a bit agressive... But to each their own, I guess.
-Anyways hope you like it here!";
 	  f scroll_rate = 10.000000;
 	}
 }
