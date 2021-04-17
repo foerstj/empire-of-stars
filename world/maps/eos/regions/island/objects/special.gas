@@ -552,37 +552,12 @@
 {
 	[common]
 	{
-		dev_instance_text = "MOOD, FADE";
+		dev_instance_text = "MOOD";
 		[instance_triggers]
 		{
 			[*]
 			{
 				action* = mood_change("multiplayer_world_island_1");
-				action* = fade_nodes(0xAAB10101,1,-1,-1,"in"), doc("fade mega forest in");
-				action* = fade_nodes(0xAAB10101,2,-1,-1,"in");
-				action* = fade_nodes(0xAAB10101,3,1,-1,"in"), doc("fade the tower in mega forest in");
-				action* = fade_nodes(0xAAB10101,3,2,-1,"in");
-				action* = fade_nodes(0xAAB10101,3,3,-1,"in");
-				action* = fade_nodes(0xAAB10101,3,4,-1,"in");
-				action* = fade_nodes(0xAAB10101,3,5,-1,"in");
-				action* = fade_nodes(0xAAB10101,3,6,-1,"in");
-				action* = fade_nodes(0xAAB10101,3,7,-1,"in");
-				action* = fade_nodes(0xAAB10101,3,8,-1,"in");
-				action* = fade_nodes(0xAAB10101,3,9,-1,"in");
-				action* = fade_nodes(0xAAB10101,3,10,-1,"in");
-				action* = fade_nodes(0xAAB10101,3,11,-1,"in");
-				action* = fade_nodes(0xAAB10101,3,12,-1,"in");
-				action* = fade_nodes(0xAAB10101,3,13,-1,"in");
-				action* = fade_nodes(0xAAB10101,3,14,-1,"in");
-				action* = fade_nodes(0xAAB10101,3,15,-1,"in");
-				action* = fade_nodes(0xAAB10101,3,16,-1,"in");
-				action* = fade_nodes(0xAAB10101,3,17,-1,"in");
-				action* = fade_nodes(0xAAB10101,3,18,-1,"in");
-				action* = fade_nodes(0xAAB10101,3,19,-1,"in");
-				action* = fade_nodes(0xAAB10101,3,20,-1,"in");
-				action* = fade_nodes(0xAAB10101,3,21,-1,"in");
-				action* = fade_nodes(0xAAB10101,4,1,-1,"in");
-				action* = fade_nodes(0xAAB10101,4,2,-1,"in");
 			  b can_self_destruct = true;
 				condition* = party_member_within_bounding_box(3.500000,2.000000,0.700000,"on_every_enter");
 			  f delay = 0.000000;
@@ -603,101 +578,16 @@
 	  p position = 1.28598,-11.413,-11.0772,0x330118fe;
 	}
 }
-[t:trigger_fade_nodes_box,n:0x07900b21]
-{
-	[common]
-	{
-		[instance_triggers]
-		{
-			[*]
-			{
-			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(4.000000,2.000000,4.000000,"on_every_enter");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = island_arch_2;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  q orientation = 0,6.24655e-008,0,1;
-	  p position = 0.0710057,-11.7592,-4.45934,0x330118fe;
-	}
-}
-[t:trigger_fade_node_group,n:0x07900b22]
-{
-	[common]
-	{
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = fade_nodes(0x43BD2207,1,56,-1,"out:black"), group(1);
-				action* = fade_nodes(0x43BD2207,1,56,-1,"in"), group(2);
-			  b can_self_destruct = true;
-				condition* = party_member_left_trigger_group("island_arch_2","on_every_leave"), group(2);
-				condition* = party_member_entered_trigger_group("island_arch_2","on_every_enter"), group(1);
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  q orientation = 0,1,0,-1.81675e-007;
-	  p position = 1.23692,-11.7004,-4.46793,0x330118fe;
-	}
-}
 [t:trigger_change_mood_box,n:0x07900b23]
 {
 	[common]
 	{
-		dev_instance_text = "MOOD, FADE";
+		dev_instance_text = "MOOD";
 		[instance_triggers]
 		{
 			[*]
 			{
 				action* = mood_change("multiplayer_world_island_4");
-				action* = fade_nodes(0x43BD2207,4,1,-1,"out:black"), doc("fade out elevator shaft");
-				action* = fade_nodes(0xAAB10101,1,-1,-1,"out:black"), doc("fade mega forest out");
-				action* = fade_nodes(0xAAB10101,2,-1,-1,"out:black");
-				action* = fade_nodes(0xAAB10101,3,1,-1,"out:black"), doc("fade the tower in mega forest out");
-				action* = fade_nodes(0xAAB10101,3,2,-1,"out:black");
-				action* = fade_nodes(0xAAB10101,3,3,-1,"out:black");
-				action* = fade_nodes(0xAAB10101,3,4,-1,"out:black");
-				action* = fade_nodes(0xAAB10101,3,5,-1,"out:black");
-				action* = fade_nodes(0xAAB10101,3,6,-1,"out:black");
-				action* = fade_nodes(0xAAB10101,3,7,-1,"out:black");
-				action* = fade_nodes(0xAAB10101,3,8,-1,"out:black");
-				action* = fade_nodes(0xAAB10101,3,9,-1,"out:black");
-				action* = fade_nodes(0xAAB10101,3,10,-1,"out:black");
-				action* = fade_nodes(0xAAB10101,3,11,-1,"out:black");
-				action* = fade_nodes(0xAAB10101,3,12,-1,"out:black");
-				action* = fade_nodes(0xAAB10101,3,13,-1,"out:black");
-				action* = fade_nodes(0xAAB10101,3,14,-1,"out:black");
-				action* = fade_nodes(0xAAB10101,3,15,-1,"out:black");
-				action* = fade_nodes(0xAAB10101,3,16,-1,"out:black");
-				action* = fade_nodes(0xAAB10101,3,17,-1,"out:black");
-				action* = fade_nodes(0xAAB10101,3,18,-1,"out:black");
-				action* = fade_nodes(0xAAB10101,3,19,-1,"out:black");
-				action* = fade_nodes(0xAAB10101,3,20,-1,"out:black");
-				action* = fade_nodes(0xAAB10101,3,21,-1,"out:black");
-				action* = fade_nodes(0xAAB10101,4,1,-1,"out:black");
-				action* = fade_nodes(0xAAB10101,4,2,-1,"out:black");
 			  b can_self_destruct = true;
 				condition* = party_member_within_bounding_box(3.000000,2.000000,0.700000,"on_every_enter");
 			  f delay = 0.000000;
@@ -776,98 +666,16 @@
 	  p position = -2.36288,2,0.698792,0x550705b6;
 	}
 }
-[t:trigger_fade_nodes_box,n:0x07900b1f]
-{
-	[common]
-	{
-		[instance_triggers]
-		{
-			[*]
-			{
-			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(4.000000,2.000000,4.000000,"on_every_enter");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = island_arch_1;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  p position = 0.336469,-11.7889,-4.3202,0x7bccb5a5;
-	}
-}
-[t:trigger_fade_node_group,n:0x07900b20]
-{
-	[common]
-	{
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = fade_nodes(0x43BD2207,1,55,-1,"out:black"), group(1);
-				action* = fade_nodes(0x43BD2207,1,55,-1,"in"), group(2);
-			  b can_self_destruct = true;
-				condition* = party_member_left_trigger_group("island_arch_1","on_every_leave"), group(2);
-				condition* = party_member_entered_trigger_group("island_arch_1","on_every_enter"), group(1);
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  p position = -0.83414,-11.7772,-4.38633,0x7bccb5a5;
-	}
-}
 [t:trigger_change_mood_box,n:0x07900b24]
 {
 	[common]
 	{
-		dev_instance_text = "MOOD, FADE";
+		dev_instance_text = "MOOD";
 		[instance_triggers]
 		{
 			[*]
 			{
 				action* = mood_change("multiplayer_world_island_2_1");
-				action* = fade_nodes(0xAAB10101,1,-1,-1,"in"), doc("fade mega forest in");
-				action* = fade_nodes(0xAAB10101,2,-1,-1,"in");
-				action* = fade_nodes(0xAAB10101,3,1,-1,"in"), doc("fade the tower in mega forest in");
-				action* = fade_nodes(0xAAB10101,3,2,-1,"in");
-				action* = fade_nodes(0xAAB10101,3,3,-1,"in");
-				action* = fade_nodes(0xAAB10101,3,4,-1,"in");
-				action* = fade_nodes(0xAAB10101,3,5,-1,"in");
-				action* = fade_nodes(0xAAB10101,3,6,-1,"in");
-				action* = fade_nodes(0xAAB10101,3,7,-1,"in");
-				action* = fade_nodes(0xAAB10101,3,8,-1,"in");
-				action* = fade_nodes(0xAAB10101,3,9,-1,"in");
-				action* = fade_nodes(0xAAB10101,3,10,-1,"in");
-				action* = fade_nodes(0xAAB10101,3,11,-1,"in");
-				action* = fade_nodes(0xAAB10101,3,12,-1,"in");
-				action* = fade_nodes(0xAAB10101,3,13,-1,"in");
-				action* = fade_nodes(0xAAB10101,3,14,-1,"in");
-				action* = fade_nodes(0xAAB10101,3,15,-1,"in");
-				action* = fade_nodes(0xAAB10101,3,16,-1,"in");
-				action* = fade_nodes(0xAAB10101,3,17,-1,"in");
-				action* = fade_nodes(0xAAB10101,3,18,-1,"in");
-				action* = fade_nodes(0xAAB10101,3,19,-1,"in");
-				action* = fade_nodes(0xAAB10101,3,20,-1,"in");
-				action* = fade_nodes(0xAAB10101,3,21,-1,"in");
-				action* = fade_nodes(0xAAB10101,4,1,-1,"in");
-				action* = fade_nodes(0xAAB10101,4,2,-1,"in");
 			  b can_self_destruct = true;
 				condition* = party_member_within_bounding_box(3.500000,2.000000,0.700000,"on_every_enter");
 			  f delay = 0.000000;
@@ -892,38 +700,12 @@
 {
 	[common]
 	{
-		dev_instance_text = "MOOD, FADE";
+		dev_instance_text = "MOOD";
 		[instance_triggers]
 		{
 			[*]
 			{
 				action* = mood_change("multiplayer_world_island_4");
-				action* = fade_nodes(0x43BD2207,4,1,-1,"out:black"), doc("fade out elevator shaft");
-				action* = fade_nodes(0xAAB10101,1,-1,-1,"out:black"), doc("fade mega forest out");
-				action* = fade_nodes(0xAAB10101,2,-1,-1,"out:black");
-				action* = fade_nodes(0xAAB10101,3,1,-1,"out:black"), doc("fade the tower in mega forest out");
-				action* = fade_nodes(0xAAB10101,3,2,-1,"out:black");
-				action* = fade_nodes(0xAAB10101,3,3,-1,"out:black");
-				action* = fade_nodes(0xAAB10101,3,4,-1,"out:black");
-				action* = fade_nodes(0xAAB10101,3,5,-1,"out:black");
-				action* = fade_nodes(0xAAB10101,3,6,-1,"out:black");
-				action* = fade_nodes(0xAAB10101,3,7,-1,"out:black");
-				action* = fade_nodes(0xAAB10101,3,8,-1,"out:black");
-				action* = fade_nodes(0xAAB10101,3,9,-1,"out:black");
-				action* = fade_nodes(0xAAB10101,3,10,-1,"out:black");
-				action* = fade_nodes(0xAAB10101,3,11,-1,"out:black");
-				action* = fade_nodes(0xAAB10101,3,12,-1,"out:black");
-				action* = fade_nodes(0xAAB10101,3,13,-1,"out:black");
-				action* = fade_nodes(0xAAB10101,3,14,-1,"out:black");
-				action* = fade_nodes(0xAAB10101,3,15,-1,"out:black");
-				action* = fade_nodes(0xAAB10101,3,16,-1,"out:black");
-				action* = fade_nodes(0xAAB10101,3,17,-1,"out:black");
-				action* = fade_nodes(0xAAB10101,3,18,-1,"out:black");
-				action* = fade_nodes(0xAAB10101,3,19,-1,"out:black");
-				action* = fade_nodes(0xAAB10101,3,20,-1,"out:black");
-				action* = fade_nodes(0xAAB10101,3,21,-1,"out:black");
-				action* = fade_nodes(0xAAB10101,4,1,-1,"out:black");
-				action* = fade_nodes(0xAAB10101,4,2,-1,"out:black");
 			  b can_self_destruct = true;
 				condition* = party_member_within_bounding_box(3.000000,2.000000,0.700000,"on_every_enter");
 			  f delay = 0.000000;
