@@ -1,0 +1,85 @@
+[t:template,n:ice_beast]
+{
+	category_name = "1W_evil_d";
+	doc = "ice beast";
+	specializes = rock_beast_base;
+    [aspect]
+    {
+		textures:0 = b_c_edm_iw;
+		material = ice;
+		[voice]
+		{
+			[die]			{ priority = high; * = s_e_die_ice_warrior; }
+		}
+    }
+	[common]
+    {
+        screen_name="Ice Beast";
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				single_shot = true;
+				action* = call_sfx_script("rock_beast_eye_glow");
+			}
+			[*]
+			{
+				action* = call_sfx_script("rock_beast_dust","bip01_r_foot");
+				condition* = receive_world_message("we_anim_other",'rfdn');
+			}
+			[*]
+			{
+				action* = call_sfx_script("rock_beast_dust","bip01_l_foot");
+				condition* = receive_world_message("we_anim_other",'lfdn');
+			}
+			[*]
+			{
+				action* = call_sfx_script("ice_beast_smash");
+				condition* = receive_world_message("we_anim_sfx",1);
+			}
+			[*]
+			{
+				action* = call_sfx_script("rock_beast_yell");
+				condition* = receive_world_message("we_anim_sfx",2);
+			}
+			[*]
+			{
+				action* = call_sfx_script("rock_beast_dust_hands");
+				condition* = receive_world_message("we_anim_sfx",3);
+			}
+            // from ice warrior - shiny sparkles
+			[*]
+			{
+				action* = call_sfx_script("ice_warrior");
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				single_shot = true;
+			}
+		}
+    }
+	[inventory]
+	{
+		selected_active_location = il_active_primary_spell;
+		[other] { il_active_primary_spell=spell_ice_beast_blast; }
+    }
+	[physics]
+	{
+		[break_particulate]
+		{
+			frag_glb_ice_beast_01 = 1;
+			frag_glb_ice_beast_02 = 1;
+			frag_glb_ice_beast_03 = 1;
+			frag_glb_ice_beast_04 = 1;
+			frag_glb_ice_beast_05 = 1;
+			frag_glb_ice_beast_06 = 2;
+			frag_glb_ice_beast_07 = 3;
+			frag_glb_ice_beast_08 = 4;
+			frag_glb_ice_01 = 6;
+			frag_glb_ice_02 = 4;
+			frag_glb_ice_03 = 3;
+			frag_glb_ice_04 = 6;
+			frag_glb_ice_05 = 9;
+			frag_glb_ice_06 = 5;
+		}
+	}
+}

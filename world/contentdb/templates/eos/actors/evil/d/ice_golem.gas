@@ -1,0 +1,43 @@
+[t:template,n:ice_golem]
+{
+	category_name = "1W_evil_d";
+	doc = "ice golem";
+	specializes = golem_frost_base;
+	[aspect]
+	{
+		textures:0 = b_c_edm_iw;
+		material = ice;
+		[voice]
+		{
+			[die]			{ priority = high; * = s_e_die_ice_warrior; }
+		}
+	}
+    [common]
+    {
+		[template_triggers]
+		{
+            // from ice warrior - shiny sparkles
+			[*]
+			{
+				action* = call_sfx_script("ice_warrior");
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				single_shot = true;
+			}
+        }
+    }
+	[physics]
+	{
+		[break_particulate]
+		{
+            // from ice warrior
+			frag_glb_ice_01 = 2;
+			frag_glb_ice_02 = 1;
+			frag_glb_ice_03 = 3;
+			frag_glb_ice_04 = 1;
+			frag_glb_ice_05 = 2;
+			frag_glb_ice_06 = 1;
+			frag_glb_ice_07 = 1;
+			frag_glb_ice_08 = 3;
+		}
+	}
+}
