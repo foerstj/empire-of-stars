@@ -1,0 +1,1138 @@
+[t:narrator,n:0x027006ee]
+{
+	[conversation]
+	{
+		[conversations]
+		{
+			* = conversation_narrator;
+		}
+	}
+	[placement]
+	{
+	  p position = 3.24087,-6,-2.44473,0x3e77f433;
+	}
+}
+[t:guard_ranged,n:0x02700550]
+{
+	[conversation]
+	{
+		[conversations]
+		{
+			* = conversation_archer_guard;
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,0.983255,0,0.182235;
+	  p position = -3.57584,-2.38419e-006,-0.239079,0xd7b0f5bc;
+	}
+}
+[t:guard,n:0x02700554]
+{
+	[conversation]
+	{
+		[conversations]
+		{
+			* = conversation_guard_a;
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,0.923879,0,-0.382684;
+	  p position = 2.80846,1.43051e-006,1.93557,0xd7b0f5bc;
+	}
+}
+[t:wolf_white,n:0x0270035f]
+{
+	[placement]
+	{
+	  q orientation = 0,0.92388,0,0.382683;
+	  p position = -1.90536,1.2e-005,-3.14831,0x117015a3;
+	}
+}
+[t:wolf_white,n:0x02700361]
+{
+	[placement]
+	{
+	  q orientation = 0,1,0,0;
+	  p position = -0.768126,1.2e-005,-1.17952,0x117015a3;
+	}
+}
+[t:wolf_white,n:0x02700360]
+{
+	[placement]
+	{
+	  q orientation = 0,-0.923879,0,0.382683;
+	  p position = -0.042793,1e-006,-2.57277,0x3863e0b7;
+	}
+}
+[t:mp_townfolk_female_04,n:0x0270059a]
+{
+	[aspect]
+	{
+	  b interest_only = true;
+	}
+	[common]
+	{
+		screen_name = "Legionnaire Guard";
+	}
+	[conversation]
+	{
+		[conversations]
+		{
+			* = conversation_house1_f;
+		}
+	}
+	[inventory]
+	{
+		[equipment]
+		{
+			es_chest = bd_un_pl_f_g_c_fun;
+			es_feet = bo_bo_le_light;
+			es_forearms = gl_ga_ba_f_g_c_avg;
+		}
+	}
+	[mind]
+	{
+	  b actor_auto_fidgets = false;
+		jat_face = jat_none;
+		jat_talk = world\ai\jobs\common\job_talk.skrit;
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.5,0,0.866025;
+	  p position = 1.84258,-3.5,0.579277,0x358482c7;
+	}
+}
+[t:mp_guard,n:0x0270059c]
+{
+	[aspect]
+	{
+	  b interest_only = true;
+	}
+	[conversation]
+	{
+		[conversations]
+		{
+			* = conversation_house1_m;
+		}
+	}
+	[inventory]
+	{
+		[equipment]
+		{
+			es_chest = bd_un_pl_f_g_c_fun;
+			es_feet = bo_bo_ch_f_g_c_avg;
+		}
+		[other]
+		{
+			il_shield = sh_m_g_c_r_s_avg;
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,0.707107,0,0.707107;
+	  p position = 1.41514,-3.5,0.403366,0x358482c7;
+	}
+}
+[t:guard_ranged,n:0x02700556]
+{
+	[conversation]
+	{
+		[conversations]
+		{
+			* = conversation_archer_guard2;
+			* = conversation_book1;
+		}
+	}
+	[mind]
+	{
+		jat_talk = world\ai\jobs\actors\good\job_talk_guard_ranged_lore_book.skrit;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.688355,0,0.725374;
+	  p position = 1.61611,12,-0.143543,0xb4e4f426;
+	}
+}
+[t:ibsen,n:0x027001ec]
+{
+	[aspect]
+	{
+	  b interest_only = true;
+	}
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_activate",0x0270057C,0f,"default","",0);
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_req_talk_end",0,"on_every_message");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[conversation]
+	{
+		[conversations]
+		{
+			* = conversation_ibsen;
+			* = conversation_ibsen_2;
+		}
+	}
+	[mind]
+	{
+		jat_talk = world\ai\jobs\actors\good\job_talk_ibsen.skrit;
+	}
+	[placement]
+	{
+	  q orientation = 0,1,0,0;
+	  p position = 0.255562,5e-006,4.38389,0xa568bf85;
+	}
+}
+[t:jewlynna,n:0x027001ed]
+{
+	[aspect]
+	{
+	  b interest_only = true;
+	}
+	[conversation]
+	{
+		[conversations]
+		{
+			* = conversation_jewlynna;
+		}
+	}
+	[mind]
+	{
+		jat_talk = world\ai\jobs\common\job_talk.skrit;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.953717,0,0.300705;
+	  p position = -7.59602,7e-006,6.75992,0xa568bf85;
+	}
+}
+[t:lorun,n:0x027001ee]
+{
+	[common]
+	{
+	  b is_multi_player = false;
+	}
+	[conversation]
+	{
+		[conversations]
+		{
+			* = conversation_lorun_accept_have_money;
+			* = conversation_lorun_accept_no_money;
+			* = conversation_lorun_disband;
+			* = conversation_lorun_disband_rejoin;
+			* = conversation_lorun_join;
+			* = conversation_lorun_overseer;
+			* = conversation_lorun_reject;
+			* = conversation_lorun_rejoin;
+		}
+	}
+	[mind]
+	{
+		jat_talk = world\ai\jobs\actors\good\job_talk_goquua.skrit;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.92388,0,-0.382683;
+	  p position = 6.32824,3.8147e-006,1.53291,0xa568bf85;
+	}
+}
+[t:kroduk,n:0x027001ef]
+{
+	[common]
+	{
+	  b is_multi_player = false;
+	}
+	[conversation]
+	{
+		[conversations]
+		{
+			* = conversation_kroduk_accept_have_money;
+			* = conversation_kroduk_accept_no_money;
+			* = conversation_kroduk_disband;
+			* = conversation_kroduk_disband_rejoin;
+			* = conversation_kroduk_join;
+			* = conversation_kroduk_reject;
+			* = conversation_kroduk_rejoin;
+		}
+	}
+	[mind]
+	{
+		jat_talk = world\ai\jobs\actors\good\job_talk_kroduk.skrit;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.382683,0,0.923879;
+	  p position = 5.19821,0,0.428389,0xa568bf85;
+	}
+}
+[t:lorun,n:0x02700417]
+{
+	[common]
+	{
+	  b is_single_player = false;
+	}
+	[conversation]
+	{
+		[conversations]
+		{
+			* = conversation_lorun_multiplayer;
+		}
+	}
+	[mind]
+	{
+		jat_talk = world\ai\jobs\common\job_talk.skrit;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.92388,0,-0.382683;
+	  p position = 6.33739,4e-006,1.52359,0xa568bf85;
+	}
+}
+[t:mp_guard,n:0x02700560]
+{
+	[common]
+	{
+		screen_name = "Off-duty Guard";
+	}
+	[conversation]
+	{
+		[conversations]
+		{
+			* = conversation_bar_m;
+		}
+	}
+	[inventory]
+	{
+		[equipment]
+		{
+			es_chest = bd_un_pl_f_g_c_fun;
+			es_feet = bo_bo_ch_f_g_c_avg;
+		}
+		[other]
+		{
+			il_shield = sh_m_g_c_r_s_avg;
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.85264,0,0.522499;
+	  p position = -4.60696,0,6.18845,0xa568bf85;
+	}
+}
+[t:mp_townfolk_female_05,n:0x027005a1]
+{
+	[aspect]
+	{
+	  b interest_only = true;
+	}
+	[common]
+	{
+		screen_name = "Kylarila Liornth";
+	}
+	[conversation]
+	{
+		[conversations]
+		{
+			* = conversation_bar_f;
+		}
+	}
+	[mind]
+	{
+		jat_talk = world\ai\jobs\common\job_talk.skrit;
+	}
+	[placement]
+	{
+	  p position = -4.85156,-4.76837e-007,5.0479,0xa568bf85;
+	}
+}
+[t:mp_guard,n:0x027005a7]
+{
+	[aspect]
+	{
+	  b interest_only = true;
+	}
+	[conversation]
+	{
+		[conversations]
+		{
+			* = conversation_tavern_m;
+		}
+	}
+	[inventory]
+	{
+		[equipment]
+		{
+			es_chest = bd_un_pl_f_g_c_fun;
+			es_feet = bo_bo_ch_f_g_c_avg;
+		}
+		[other]
+		{
+			il_shield = sh_m_g_c_r_s_avg;
+		}
+	}
+	[mind]
+	{
+	  b actor_auto_fidgets = false;
+	  b actor_may_attack = false;
+	  b actor_may_be_attacked = false;
+		jat_face = jat_none;
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.707107,0,0.707107;
+	  p position = 7.78008,0,5.77923,0xa568bf85;
+	}
+}
+[t:mp_townfolk_female_03,n:0x027005af]
+{
+	[aspect]
+	{
+	  b interest_only = true;
+	}
+	[common]
+	{
+		screen_name = "Aliera Blesstone";
+	}
+	[conversation]
+	{
+		[conversations]
+		{
+			* = conversation_tavern_f;
+		}
+	}
+	[mind]
+	{
+	  b actor_auto_fidgets = false;
+		jat_face = jat_none;
+		jat_talk = world\ai\jobs\common\job_talk.skrit;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.887011,0,0.461749;
+	  p position = 6.64352,0,5.93973,0xa568bf85;
+	}
+}
+[t:guard_captain,n:0x02700656]
+{
+	[common]
+	{
+		screen_name = "Lieutenant Shea";
+	}
+	[conversation]
+	{
+		[conversations]
+		{
+			* = conversation_lieutenant_shea;
+		}
+	}
+	[inventory]
+	{
+		[equipment]
+		{
+			es_chest = bd_un_pl_f_g_c_avg;
+			es_feet = bo_bo_sc_f_g_c_avg;
+			es_forearms = gl_ga_fp_f_g_c_avg;
+			es_head = he_op_pl_roman;
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.173647,0,0.984808;
+	  p position = 0.922104,0,2.2455,0xa568bf85;
+	}
+}
+[t:mp_townfolk_female_01,n:0x027005bf]
+{
+	[common]
+	{
+		screen_name = "Legionnaire Guard";
+	}
+	[conversation]
+	{
+		[conversations]
+		{
+			* = conversation_guard_g;
+		}
+	}
+	[inventory]
+	{
+		[equipment]
+		{
+			es_chest = bd_un_pl_f_g_c_avg;
+			es_feet = bo_bo_le_light;
+			es_forearms = gl_gl_ch_f_g_c_avg;
+			es_head = he_op_pl_eyes;
+		}
+		[other]
+		{
+			il_shield = sh_w_g_c_r_m_avg;
+		}
+	}
+	[mind]
+	{
+		jat_talk = world\ai\jobs\common\job_talk.skrit;
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.258819,0,0.965926;
+	  p position = -1.6145,-1.90735e-006,-0.407349,0x5afb1c21;
+	}
+}
+[t:guard,n:0x0270055e]
+{
+	[aspect]
+	{
+	  b interest_only = true;
+	}
+	[common]
+	{
+		screen_name = "Off-duty Guard";
+	}
+	[conversation]
+	{
+		[conversations]
+		{
+			* = conversation_guard_c;
+		}
+	}
+	[inventory]
+	{
+		[equipment]
+		{
+			es_chest = bd_un_pl_f_g_c_fun;
+			es_feet = bo_bo_ch_f_g_c_avg;
+		}
+		[other]
+		{
+			il_shield = sh_m_g_c_r_s_avg;
+		}
+	}
+	[mind]
+	{
+	  b actor_auto_fidgets = false;
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.793354,0,0.608761;
+	  p position = -0.649239,-3.70002,0.805405,0x0ff1b584;
+	}
+}
+[t:mp_townfolk_male_02,n:0x0270055f]
+{
+	[aspect]
+	{
+	  b interest_only = true;
+	}
+	[common]
+	{
+		screen_name = "Off-duty Guard";
+	}
+	[conversation]
+	{
+		[conversations]
+		{
+			* = conversation_guard_d;
+		}
+	}
+	[inventory]
+	{
+		[equipment]
+		{
+			es_chest = bd_un_pl_f_g_c_fun;
+			es_feet = bo_bo_ch_f_g_c_avg;
+		}
+		[other]
+		{
+			il_shield = sh_m_g_c_r_s_avg;
+		}
+	}
+	[mind]
+	{
+	  b actor_auto_fidgets = false;
+		jat_face = jat_none;
+		jat_talk = world\ai\jobs\common\job_talk.skrit;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.130526,0,0.991445;
+	  p position = -1.55889,-3.7,-0.606888,0x0ff1b584;
+	}
+}
+[t:mp_peasant_female_01,n:0x027005be]
+{
+	[common]
+	{
+		screen_name = "Ada Riverstarn";
+	}
+	[conversation]
+	{
+		[conversations]
+		{
+			* = conversation_ada;
+			* = conversation_noquest_ada;
+		}
+	}
+	[inventory]
+	{
+		selected_active_location = il_active_ranged_weapon;
+		[equipment]
+		{
+			es_chest = bd_un_pl_f_g_c_fun;
+			es_feet = bo_bo_le_light;
+			es_forearms = gl_ga_ba_f_g_c_avg;
+		}
+		[other]
+		{
+			il_active_ranged_weapon = bw_g_d_s_l_c_avg;
+		}
+	}
+	[mind]
+	{
+		jat_talk = world\ai\jobs\actors\good\job_talk_ada.skrit;
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.843392,0,0.537299;
+	  p position = 2.38922,-3.69999,1.98376,0x0ff1b584;
+	}
+}
+[t:merchant_blacksmith_glacern,n:0x027000fa]
+{
+	[conversation]
+	{
+		[conversations]
+		{
+			* = conversation_foulton;
+		}
+	}
+	[mind]
+	{
+		jat_talk = world\ai\jobs\actors\good\job_talk_merchant_blacksmith;
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.258819,0,0.965926;
+	  p position = -0.643845,-5.15,-1.85178,0xa2634106;
+	}
+}
+[t:mp_village_idiot,n:0x02700590]
+{
+	[aspect]
+	{
+	  b interest_only = true;
+	}
+	[common]
+	{
+		screen_name = "Orlov";
+	}
+	[conversation]
+	{
+		[conversations]
+		{
+			* = conversation_orlov;
+			* = conversation_orlov_2;
+		}
+	}
+	[mind]
+	{
+		jat_talk = world\ai\jobs\actors\good\job_talk_orlov.skrit;
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.382683,0,0.92388;
+	  p position = 1.37184,-5.15,-2.66499,0xa2634106;
+	}
+}
+[t:mp_guard_captain,n:0x0270059d]
+{
+	[aspect]
+	{
+	  b interest_only = true;
+	}
+	[conversation]
+	{
+		[conversations]
+		{
+			* = conversation_guard_e;
+		}
+	}
+	[inventory]
+	{
+		[equipment]
+		{
+			es_chest = bd_un_pl_f_g_c_avg;
+			es_feet = bo_bo_sc_f_g_c_avg;
+			es_forearms = gl_ga_fp_f_g_c_avg;
+		}
+		[other]
+		{
+			il_shield = sh_w_g_c_r_m_avg;
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.92388,0,-0.382683;
+	  p position = -0.675064,-3.15,5.63885,0xa2634106;
+	}
+}
+[t:onoc,n:0x027000a1]
+{
+	[conversation]
+	{
+		[conversations]
+		{
+			* = conversation_onoc;
+		}
+	}
+	[placement]
+	{
+	  q orientation = -0.004664,0.963482,-0.016818,-0.267197;
+	  p position = 1.31879,-1.5,-2.05476,0x17554708;
+	}
+}
+[t:mp_peasant_female_01,n:0x02700598]
+{
+	[aspect]
+	{
+	  b interest_only = true;
+	}
+	[common]
+	{
+		screen_name = "Apprentice Marelle";
+	}
+	[conversation]
+	{
+		[conversations]
+		{
+			* = conversation_marelle;
+		}
+	}
+	[mind]
+	{
+		jat_talk = world\ai\jobs\common\job_talk.skrit;
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.92388,0,0.382683;
+	  p position = 7.95066,-0.5,2.5645,0x17554708;
+	}
+}
+[t:mp_peasant_male_01,n:0x02700646]
+{
+	[aspect]
+	{
+	  b interest_only = true;
+	}
+	[common]
+	{
+		screen_name = "Apprentice Ardun";
+	}
+	[conversation]
+	{
+		[conversations]
+		{
+			* = conversation_apprentice;
+			* = conversation_apprentice_complete;
+			* = conversation_apprentice_one_book;
+			* = conversation_apprentice_two_books;
+		}
+	}
+	[mind]
+	{
+		jat_talk = world\ai\jobs\actors\good\job_talk_ardun.skrit;
+	}
+	[placement]
+	{
+	  q orientation = 0,1,0,-2.08616e-007;
+	  p position = -7.90429,-0.5,3.46223,0x17554708;
+		use_point_scids = 0x027006ef;
+	}
+}
+[t:mp_townfolk_male_04,n:0x02700591]
+{
+	[aspect]
+	{
+	  b interest_only = true;
+	}
+	[common]
+	{
+		screen_name = "Elio";
+	}
+	[conversation]
+	{
+		[conversations]
+		{
+			* = conversation_book2;
+			* = conversation_book_no_quest;
+		}
+	}
+	[inventory]
+	{
+	  b drop_at_use_point = true;
+	}
+	[mind]
+	{
+		jat_talk = world\ai\jobs\actors\good\job_talk_elio.skrit;
+	}
+	[placement]
+	{
+		drop_point_scids = 0x027006e5;
+	  q orientation = 0,-0.923879,0,-0.382684;
+	  p position = 1.51816,-2.95,4.15816,0x5a8ec3c7;
+		use_point_scids = 0x027006e5;
+	}
+}
+[t:guard,n:0x02700413]
+{
+	[conversation]
+	{
+		[conversations]
+		{
+			* = conversation_guard_b;
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,0.987688,0,-0.156435;
+	  p position = 5.86382,-6,-3.56273,0x2d021454;
+	}
+}
+[t:guard_ranged,n:0x02700552]
+{
+	[conversation]
+	{
+		[conversations]
+		{
+			* = conversation_archer_guard4;
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,0.976296,0,0.216439;
+	  p position = -1.58401,-6,-3.67372,0x2d021454;
+	}
+}
+[t:guard_ranged,n:0x02700553]
+{
+	[conversation]
+	{
+		[conversations]
+		{
+			* = conversation_archer_guard3;
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,0.999391,0,0.0348993;
+	  p position = 0.925575,12,-1.23248,0x1ca205cd;
+	}
+}
+[t:ghilbertnor,n:0x02700041]
+{
+	[common]
+	{
+	  b is_multi_player = false;
+	}
+	[conversation]
+	{
+		[conversations]
+		{
+			* = conversation_ghilbertnor_first;
+			* = conversation_ghilbertnor_has_packmules;
+			* = conversation_ghilbertnor_no_packmules;
+		}
+	}
+	[mind]
+	{
+		jat_talk = world\ai\jobs\actors\good\job_talk_ghilbertnor.skrit;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.608762,0,0.793354;
+	  p position = 3.01566,-1.25,-0.692123,0xa8e5585f;
+	}
+}
+[t:mule_nt_r1,n:0x02700362]
+{
+	[common]
+	{
+		screen_name = "Midnight";
+	}
+	[placement]
+	{
+	  p position = 1.4693,-1.25,1.43419,0xa8e5585f;
+	}
+}
+[t:mule_nt_r1,n:0x02700363]
+{
+	[common]
+	{
+		screen_name = "Goldie";
+	}
+	[placement]
+	{
+	  q orientation = 0,0.382683,0,0.92388;
+	  p position = -1.84737,-1.25,1.81801,0xa8e5585f;
+	}
+}
+[t:mule_nt_r1,n:0x02700364]
+{
+	[common]
+	{
+		screen_name = "Benny";
+	}
+	[placement]
+	{
+	  q orientation = 0,1,0,0;
+	  p position = -1.4443,-1.25,-3.05351,0xa8e5585f;
+	}
+}
+[t:guard_ranged,n:0x0270055c]
+{
+	[conversation]
+	{
+		[conversations]
+		{
+			* = conversation_guard_f;
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,0.965926,0,-0.258819;
+	  p position = 0.770683,-3.33786e-006,-1.00919,0x8fe3ad4d;
+	}
+}
+[t:mp_guard,n:0x0270058b]
+{
+	[aspect]
+	{
+	  b interest_only = true;
+	}
+	[conversation]
+	{
+		[conversations]
+		{
+			* = conversation_inn_m;
+		}
+	}
+	[inventory]
+	{
+		[equipment]
+		{
+			es_chest = bd_un_pl_f_g_c_fun;
+			es_feet = bo_bo_ch_f_g_c_avg;
+			es_forearms = gl_ga_bl_f_g_c_avg;
+		}
+		[other]
+		{
+			il_shield = sh_m_g_c_r_s_avg;
+		}
+	}
+	[mind]
+	{
+	  b actor_auto_fidgets = false;
+	  b actor_may_attack = false;
+	  b actor_may_be_attacked = false;
+		jat_face = jat_none;
+	}
+	[placement]
+	{
+	  q orientation = 0,-1,0,-5.96046e-007;
+	  p position = 1.67579,-1.31984,7.24387,0xb4c52026;
+	}
+}
+[t:guard_captain,n:0x0270058c]
+{
+	[aspect]
+	{
+	  b interest_only = true;
+	  b is_selectable = false;
+	}
+	[inventory]
+	{
+		[equipment]
+		{
+			es_chest = bd_un_pl_f_g_c_avg;
+		}
+		[other]
+		{
+			il_shield = sh_w_g_c_r_m_avg;
+		}
+	}
+	[mind]
+	{
+	  b actor_auto_fidgets = false;
+	  b actor_may_attack = false;
+	  b actor_may_be_attacked = false;
+		jat_face = jat_none;
+	}
+	[placement]
+	{
+	  q orientation = 0,-5.66244e-007,0,1;
+	  p position = -10.6706,-1.4,-6.26727,0xb4c52026;
+	}
+}
+[t:mp_townfolk_female_02,n:0x0270058e]
+{
+	[aspect]
+	{
+	  b interest_only = true;
+	}
+	[conversation]
+	{
+		[conversations]
+		{
+			* = conversation_inn_f;
+		}
+	}
+	[mind]
+	{
+		jat_talk = world\ai\jobs\common\job_talk.skrit;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.382684,0,0.92388;
+	  p position = 1.23742,-1.4,6.43998,0xb4c52026;
+	}
+}
+[t:guard_ranged,n:0x02700676]
+{
+	[aspect]
+	{
+	  b interest_only = true;
+	  b is_selectable = false;
+	}
+	[inventory]
+	{
+		[equipment]
+		{
+			es_chest = bd_un_pl_f_g_c_avg;
+		}
+		[other]
+		{
+			il_active_ranged_weapon = bw_g_c_s_m_c_avg;
+		}
+	}
+	[mind]
+	{
+	  b actor_auto_fidgets = false;
+	  b actor_may_attack = false;
+	  b actor_may_be_attacked = false;
+		jat_face = jat_none;
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.0174523,0,0.999848;
+	  p position = -0.211357,-1.4,-2.32308,0xb4c52026;
+	}
+}
+[t:guard,n:0x0270067a]
+{
+	[aspect]
+	{
+	  b interest_only = true;
+	  b is_selectable = false;
+	}
+	[inventory]
+	{
+		[equipment]
+		{
+			es_chest = bd_un_pl_f_g_c_fun;
+		}
+		[other]
+		{
+			il_shield = sh_m_g_c_r_s_avg;
+		}
+	}
+	[mind]
+	{
+	  b actor_auto_fidgets = false;
+	  b actor_may_attack = false;
+	  b actor_may_be_attacked = false;
+		jat_face = jat_none;
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.719339,0,0.694659;
+	  p position = 4.78537,-1.40145,-2.77148,0xb4c52026;
+	}
+}
+[t:guard,n:0x0270067c]
+{
+	[aspect]
+	{
+	  b interest_only = true;
+	  b is_selectable = false;
+	}
+	[inventory]
+	{
+		[equipment]
+		{
+			es_chest = bd_un_pl_f_g_c_fun;
+		}
+		[other]
+		{
+			il_shield = sh_m_g_c_r_s_avg;
+		}
+	}
+	[mind]
+	{
+	  b actor_auto_fidgets = false;
+	  b actor_may_attack = false;
+	  b actor_may_be_attacked = false;
+		jat_face = jat_none;
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.0871548,0,0.996195;
+	  p position = -10.902,-1.40145,2.81799,0xb4c52026;
+	}
+}
+[t:guard,n:0x0270067e]
+{
+	[aspect]
+	{
+	  b interest_only = true;
+	  b is_selectable = false;
+	}
+	[inventory]
+	{
+		[equipment]
+		{
+			es_chest = bd_un_pl_f_g_c_fun;
+		}
+		[other]
+		{
+			il_shield = sh_m_g_c_r_s_avg;
+		}
+	}
+	[mind]
+	{
+	  b actor_auto_fidgets = false;
+	  b actor_may_attack = false;
+	  b actor_may_be_attacked = false;
+		jat_face = jat_none;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.999962,0,-0.00872773;
+	  p position = -10.6665,-1.40145,6.67791,0xb4c52026;
+	}
+}

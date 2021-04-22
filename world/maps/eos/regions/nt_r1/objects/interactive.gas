@@ -1,0 +1,599 @@
+[t:door_ice_gate,n:0x02700385]
+{
+	[door_basic]
+	{
+	  b oneshot = true;
+	  x second_door = 0x0270066D;
+	}
+	[placement]
+	{
+	  q orientation = 0,-1,0,0;
+	  p position = -0.019886,-6,0.842037,0x3e77f433;
+	}
+}
+[t:sign_ice_glacern_gate,n:0x027004b5]
+{
+	[placement]
+	{
+	  q orientation = 0,-1,0,-1.49012e-007;
+	  p position = 6.20665,-3.85032,-1.11044,0x3e77f433;
+	}
+}
+[t:door_ice_gate_right,n:0x0270066d]
+{
+	[door_basic]
+	{
+	  x msg_scid_opening = 0x0270064D;
+	  b oneshot = true;
+	  x second_door = 0x02700385;
+	}
+	[placement]
+	{
+	  q orientation = 0,-1,0,-1.60478e-007;
+	  p position = -0.0252876,-5.98179,0.834473,0x3e77f433;
+	}
+}
+[t:door_ice_peasant_right,n:0x02700092]
+{
+	[aspect]
+	{
+	  f scale_multiplier = 1.05;
+	}
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_trigger_activate",0x027000E3,0f,"default","receive_world_message",0);
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_req_use",0,"on_first_message"), doc("[*one-shot check (trigger is one-shot)*]");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = true;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.968147,0,0.25038;
+	  p position = -2.58483,-3.5,-2.03089,0x358482c7;
+		use_point_scids = 0x027006e2, 0x027006df;
+	}
+}
+[t:lever_glb_04,n:0x0270042e]
+{
+	[on_off_lever]
+	{
+		off_message = we_req_activate;
+	  f off_message_delay = 1;
+	  x off_scid = 0x0270002F;
+	  f on_message_delay = 1;
+	  x on_scid = 0x0270002F;
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.594823,0,0.803857;
+	  p position = -3.24554,1.8214,0.988361,0xb4e4f426;
+		use_point_scids = 0x02700572 , 0x0270057b;
+	}
+}
+[t:lever_glb_04,n:0x02700423]
+{
+	[aspect]
+	{
+	  f use_range = 2;
+	}
+	[on_off_lever]
+	{
+		off_message = we_req_activate;
+	  f off_message_delay = 1;
+	  x off_scid = 0x0270002F;
+	  f on_message_delay = 1;
+	  x on_scid = 0x0270002F;
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.594823,0,0.803857;
+	  p position = -2.29406,12.4034,1.57047,0x1447dd57;
+		use_point_scids = 0x02700573 , 0x0270057a,0x0270057d;
+	}
+}
+[t:sign_ice_inn_01,n:0x0270009c]
+{
+	[placement]
+	{
+	  q orientation = 0,-0.707107,0,0.707107;
+	  p position = -8.48476,0.815478,-8.95068,0xa568bf85;
+	}
+}
+[t:door_ice_peasant_right,n:0x0270011e]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_trigger_activate",0x02700295,0f,"default","receive_world_message",0);
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_req_use",0,"on_every_message");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,1,0,0;
+	  p position = -7.00119,-0.999991,-7.65123,0xa568bf85;
+		use_point_scids = 0x27004b8, 0x27004b9;
+	}
+}
+[t:sign_ice_inn_01,n:0x02700126]
+{
+	[placement]
+	{
+	  p position = -7.59052,1.54144,8.41815,0xa568bf85;
+	}
+}
+[t:door_ice_peasant_right,n:0x02700127]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_trigger_activate",0x02700369,0f,"default","receive_world_message",0);
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_req_use",0,"on_every_message");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,-1,0,4.17233e-007;
+	  p position = 0.303802,-3.7,-3.4046,0x0ff1b584;
+		use_point_scids = 0x027006e4, 0x027006e3;
+	}
+}
+[t:door_ice_peasant_right,n:0x0270011f]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_trigger_activate",0x027002B0,0f,"default","receive_world_message",0);
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_req_use",0,"on_every_message");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  p position = 1.80168,-3.15,7.65468,0xa2634106;
+		use_point_scids = 0x0270053b,0x02700580;
+	}
+}
+[t:door_ice_peasant_left,n:0x02700120]
+{
+	[door_basic]
+	{
+	  x msg_scid_open = 0x02700296;
+		msg_type_open = we_trigger_activate;
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.707107,0,0.707107;
+	  p position = -3.55168,-5.15,-2.40181,0xa2634106;
+		use_point_scids = 0x027006de, 0x027006db;
+	}
+}
+[t:door_ice_peasant_right,n:0x02700388]
+{
+	[door_basic]
+	{
+	  b can_use = false;
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.707107,0,0.707107;
+	  p position = -3.55246,-5.15,0.375771,0xa2634106;
+	}
+}
+[t:sign_ice_blacksmith_02,n:0x0270058a]
+{
+	[placement]
+	{
+	  q orientation = 0,-0.707107,0,0.707107;
+	  p position = -4.77528,-4.86522,-4.26084,0xa2634106;
+	}
+}
+[t:sign_ice_01,n:0x02700658]
+{
+	[common]
+	{
+		screen_name = "Jeriah's Trading Post";
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.382684,0,0.92388;
+	  p position = 1.52882,-0.290506,-1.98613,0x36b67c23;
+	}
+}
+[t:sign_ice_01,n:0x02700659]
+{
+	[common]
+	{
+		screen_name = "Alpine Caverns";
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.333807,0,0.942641;
+	  p position = 1.55786,0,-1.95888,0x36b67c23;
+	}
+}
+[t:door_ice_peasant_left,n:0x02700384]
+{
+	[aspect]
+	{
+	  f use_range = 1;
+	}
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_trigger_activate",0x0270028B,0f,"default","receive_world_message",0);
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_req_use",0,"on_every_message");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,-1,0,0;
+	  p position = 0.943955,-1.5,-7.74123,0x17554708;
+		use_point_scids = 0x02700651, 0x0270064f;
+	}
+}
+[t:respawn_statue,n:0x02700570]
+{
+	[common]
+	{
+	  b is_single_player = true;
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.92388,0,-0.382684;
+	  p position = 0.188068,-1.5,-0.782784,0x17554708;
+		use_point_scids = 0x027006f1;
+	}
+}
+[t:sign_ice_magicshop_01,n:0x02700648]
+{
+	[placement]
+	{
+	  q orientation = 0,1,0,0;
+	  p position = -4.92362,-4.5,-11.7096,0x17554708;
+	}
+}
+[t:sign_ice_01,n:0x0270065a]
+{
+	[common]
+	{
+		screen_name = "Glitterdelve Mines";
+	}
+	[placement]
+	{
+	  q orientation = 0,1,0,-8.9407e-008;
+	  p position = 15.8013,-4.77599,7.23097,0x17554708;
+	}
+}
+[t:sign_ice_01,n:0x02700675]
+{
+	[common]
+	{
+		screen_name = "Town of Stonebridge";
+	}
+	[placement]
+	{
+	  q orientation = 0,1,0,-8.9407e-008;
+	  p position = 15.8013,-4.5,7.23097,0x17554708;
+	}
+}
+[t:door_ice_peasant_left,n:0x02700128]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_trigger_activate",0x0270031D,0f,"default","",0);
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_req_use",0,"on_every_message");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,0.983255,0,0.182235;
+	  p position = 1.5321,-2.93547,-0.697067,0x5a8ec3c7;
+		use_point_scids = 0x02700652, 0x027006da;
+	}
+}
+[t:door_ice_gate,n:0x02700386]
+{
+	[aspect]
+	{
+	  f use_range = 2.5;
+	}
+	[door_basic]
+	{
+	  b oneshot = true;
+	  x second_door = 0x0270066E;
+	}
+	[placement]
+	{
+	  p position = 0.0230865,-6,0.877792,0x2d021454;
+		use_point_scids = 0x02700670,0x0270066f;
+	}
+}
+[t:sign_ice_glacern_gate,n:0x027004b6]
+{
+	[placement]
+	{
+	  q orientation = 0,-1,0,-1.49012e-007;
+	  p position = 6.28042,-3.94341,-1.15556,0x2d021454;
+	}
+}
+[t:door_ice_gate_right,n:0x0270066e]
+{
+	[door_basic]
+	{
+	  x second_door = 0x02700386;
+	}
+	[placement]
+	{
+	  p position = 0.0309067,-6,0.879211,0x2d021454;
+		use_point_scids = 0x02700670,0x0270066f;
+	}
+}
+[t:lever_glb_04,n:0x0270040e]
+{
+	[aspect]
+	{
+	  f use_range = 2;
+	}
+	[on_off_lever]
+	{
+		off_message = we_req_activate;
+	  f off_message_delay = 1;
+	  x off_scid = 0x02700102;
+	  f on_message_delay = 1;
+	  x on_scid = 0x02700102;
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.594823,0,0.803857;
+	  p position = -2.29256,12.2733,1.56123,0x1ca205cd;
+		use_point_scids = 0x02700575 , 0x02700578,0x0270057e;
+	}
+}
+[t:lever_glb_04,n:0x0270040f]
+{
+	[common]
+	{
+		dev_instance_text = "ELEVATOR";
+	}
+	[on_off_lever]
+	{
+		off_message = we_req_activate;
+	  f off_message_delay = 1;
+	  x off_scid = 0x02700102;
+	  f on_message_delay = 1;
+	  x on_scid = 0x02700102;
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.594823,0,0.803857;
+	  p position = -3.1745,2.1018,1.0191,0x1ca205cd;
+		use_point_scids = 0x02700576 , 0x02700579;
+	}
+}
+[t:sign_ice_barn_01,n:0x027005bb]
+{
+	[placement]
+	{
+	  q orientation = 0,0.707107,0,0.707107;
+	  p position = 4.80289,-1.69907,-2.26138,0xa8e5585f;
+	}
+}
+[t:door_grs_peasant_right,n:0x027002e3]
+{
+	[placement]
+	{
+	  q orientation = 0,0.707106,0,0.707107;
+	  p position = -4.95302,-1.4,5.81189,0xb4c52026;
+		use_point_scids = 0x027006e6, 0x027006e7;
+	}
+}
+[t:door_grs_peasant_left,n:0x0270032c]
+{
+	[placement]
+	{
+	  q orientation = 0,0.707107,0,0.707107;
+	  p position = -4.95367,-1.4,-1.808,0xb4c52026;
+		use_point_scids = 0x027006e9,0x027006e8;
+	}
+}
+[t:door_grs_peasant_left,n:0x02700389]
+{
+	[placement]
+	{
+	  p position = 1.90261,-1.4,0.548805,0xb4c52026;
+		use_point_scids = 0x027006ea,0x027006eb;
+	}
+}
+[t:arrow,n:0x0270059e]
+{
+	[aspect]
+	{
+	  b interest_only = true;
+	  f lodfi_lower = 0.45;
+	  f lodfi_upper = 0.45;
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.382683,0,0.92388;
+	  p position = -10.6493,-0.614067,-2.17087,0xb4c52026;
+	}
+}
+[t:arrow,n:0x0270059f]
+{
+	[aspect]
+	{
+	  b interest_only = true;
+	  f lodfi_lower = 0;
+	  f lodfi_upper = 0;
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.382683,0,0.92388;
+	  p position = -10.7398,-0.614065,-2.27366,0xb4c52026;
+	}
+}
+[t:arrow,n:0x027005a0]
+{
+	[aspect]
+	{
+	  b interest_only = true;
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.382683,0,0.92388;
+	  p position = -10.6872,-0.614065,-2.24608,0xb4c52026;
+	}
+}
+[t:arrow,n:0x027005a2]
+{
+	[aspect]
+	{
+	  b interest_only = true;
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.382683,0,0.92388;
+	  p position = -10.638,-0.614066,-1.92471,0xb4c52026;
+	}
+}
+[t:arrow,n:0x027005a3]
+{
+	[aspect]
+	{
+	  b interest_only = true;
+	  f lodfi_lower = 0;
+	  f lodfi_upper = 0;
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.382683,0,0.92388;
+	  p position = -10.9348,-0.614066,-1.93909,0xb4c52026;
+	}
+}
+[t:arrow,n:0x027005a4]
+{
+	[aspect]
+	{
+	  b interest_only = true;
+	  f lodfi_lower = 0;
+	  f lodfi_upper = 0;
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.382683,0,0.92388;
+	  p position = -10.8784,-0.614065,-1.75129,0xb4c52026;
+	}
+}
+[t:arrow,n:0x027005a5]
+{
+	[aspect]
+	{
+	  b interest_only = true;
+	  f lodfi_lower = 0;
+	  f lodfi_upper = 0;
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.382683,0,0.92388;
+	  p position = -11.0334,-0.614065,-1.78979,0xb4c52026;
+	}
+}
+[t:arrow,n:0x027005a6]
+{
+	[aspect]
+	{
+	  b interest_only = true;
+	  f lodfi_lower = 0;
+	  f lodfi_upper = 0;
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.382683,0,0.92388;
+	  p position = -10.773,-0.614065,-1.67873,0xb4c52026;
+	}
+}
