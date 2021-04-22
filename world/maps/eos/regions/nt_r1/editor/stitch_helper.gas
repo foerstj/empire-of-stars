@@ -2,6 +2,17 @@
 {
 	source_region_guid = 0xABA20100;
 	source_region_name = nt_r1;
+	[t:stitch_editor,n:df_r0]
+	{
+		dest_region = df_r0;
+		[node_ids]
+		{
+			0xada20001 = 0x21C01210,6;
+			0xada20002 = 0xD69ECE18,4;
+			0xada20003 = 0x256ADDC5,1;
+			0xada20004 = 0xDE54A908,2;
+		}
+	}
 	[t:stitch_editor,n:nt_r1a]
 	{
 		dest_region = nt_r1a;
@@ -24,17 +35,6 @@
 			0xaba20006 = 0x2D021454,2;
 			0xaba20007 = 0x2D021454,1;
 			0xaba20008 = 0x2D021454,16;
-		}
-	}
-	[t:stitch_editor,n:path2nt]
-	{
-		dest_region = path2nt;
-		[node_ids]
-		{
-			0xada20001 = 0x21C01210,6;
-			0xada20002 = 0xD69ECE18,4;
-			0xada20003 = 0x256ADDC5,1;
-			0xada20004 = 0xDE54A908,2;
 		}
 	}
 }
