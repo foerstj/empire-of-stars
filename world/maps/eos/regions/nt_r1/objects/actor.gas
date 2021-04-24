@@ -890,7 +890,7 @@
 		use_point_scids = 0x027006e5;
 	}
 }
-[t:ghilbertnor,n:0x02700041]
+[t:dwarf_mule_shop,n:0x02700041]
 {
 	[common]
 	{
@@ -903,6 +903,14 @@
 			* = conversation_ghilbertnor_first;
 			* = conversation_ghilbertnor_has_packmules;
 			* = conversation_ghilbertnor_no_packmules;
+		}
+	}
+	[inventory]
+	{
+		[equipment]
+		{
+			es_chest = bd_ra_ro_m_d_c_004;
+			es_feet = bo_bo_le_light;
 		}
 	}
 	[mind]
