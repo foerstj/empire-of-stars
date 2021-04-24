@@ -11,19 +11,10 @@
 	  p position = -0.019886,-6,0.842037,0x3e77f433;
 	}
 }
-[t:sign_ice_glacern_gate,n:0x027004b5]
-{
-	[placement]
-	{
-	  q orientation = 0,-1,0,-1.49012e-007;
-	  p position = 6.20665,-3.85032,-1.11044,0x3e77f433;
-	}
-}
 [t:door_ice_gate_right,n:0x0270066d]
 {
 	[door_basic]
 	{
-	  x msg_scid_opening = 0x0270064D;
 	  b oneshot = true;
 	  x second_door = 0x02700385;
 	}
@@ -150,6 +141,18 @@
 	  p position = -7.59052,1.54144,8.41815,0xa568bf85;
 	}
 }
+[t:sign_glb_no_return,n:0x0270050b]
+{
+	[common]
+	{
+		screen_name = "Ancient Pillar Circle of Lagomsnö - Was presumably used for Pagan fertility rites.";
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.382683,0,0.92388;
+	  p position = 1.55438,0,-1.60567,0xa32e7819;
+	}
+}
 [t:door_ice_peasant_right,n:0x02700127]
 {
 	[common]
@@ -247,24 +250,12 @@
 {
 	[common]
 	{
-		screen_name = "Jeriah's Trading Post";
+		screen_name = "Ancient Pillar Circle";
 	}
 	[placement]
 	{
 	  q orientation = 0,-0.382684,0,0.92388;
 	  p position = 1.52882,-0.290506,-1.98613,0x36b67c23;
-	}
-}
-[t:sign_ice_01,n:0x02700659]
-{
-	[common]
-	{
-		screen_name = "Alpine Caverns";
-	}
-	[placement]
-	{
-	  q orientation = 0,-0.333807,0,0.942641;
-	  p position = 1.55786,0,-1.95888,0x36b67c23;
 	}
 }
 [t:door_ice_peasant_left,n:0x02700384]
@@ -314,8 +305,12 @@
 		use_point_scids = 0x027006f1;
 	}
 }
-[t:sign_ice_magicshop_01,n:0x02700648]
+[t:sign_ice_magicshop_02,n:0x02700648]
 {
+	[common]
+	{
+		screen_name = "Lagomsnö Magicatorium";
+	}
 	[placement]
 	{
 	  q orientation = 0,1,0,0;
@@ -326,7 +321,7 @@
 {
 	[common]
 	{
-		screen_name = "Glitterdelve Mines";
+		screen_name = "Fireheart Caverns";
 	}
 	[placement]
 	{
@@ -338,7 +333,7 @@
 {
 	[common]
 	{
-		screen_name = "Town of Stonebridge";
+		screen_name = "Winternight Woods & Chapel";
 	}
 	[placement]
 	{
@@ -374,85 +369,6 @@
 	  q orientation = 0,0.983255,0,0.182235;
 	  p position = 1.5321,-2.93547,-0.697067,0x5a8ec3c7;
 		use_point_scids = 0x02700652, 0x027006da;
-	}
-}
-[t:door_ice_gate,n:0x02700386]
-{
-	[aspect]
-	{
-	  f use_range = 2.5;
-	}
-	[door_basic]
-	{
-	  b oneshot = true;
-	  x second_door = 0x0270066E;
-	}
-	[placement]
-	{
-	  p position = 0.0230865,-6,0.877792,0x2d021454;
-		use_point_scids = 0x02700670,0x0270066f;
-	}
-}
-[t:sign_ice_glacern_gate,n:0x027004b6]
-{
-	[placement]
-	{
-	  q orientation = 0,-1,0,-1.49012e-007;
-	  p position = 6.28042,-3.94341,-1.15556,0x2d021454;
-	}
-}
-[t:door_ice_gate_right,n:0x0270066e]
-{
-	[door_basic]
-	{
-	  x second_door = 0x02700386;
-	}
-	[placement]
-	{
-	  p position = 0.0309067,-6,0.879211,0x2d021454;
-		use_point_scids = 0x02700670,0x0270066f;
-	}
-}
-[t:lever_glb_04,n:0x0270040e]
-{
-	[aspect]
-	{
-	  f use_range = 2;
-	}
-	[on_off_lever]
-	{
-		off_message = we_req_activate;
-	  f off_message_delay = 1;
-	  x off_scid = 0x02700102;
-	  f on_message_delay = 1;
-	  x on_scid = 0x02700102;
-	}
-	[placement]
-	{
-	  q orientation = 0,-0.594823,0,0.803857;
-	  p position = -2.29256,12.2733,1.56123,0x1ca205cd;
-		use_point_scids = 0x02700575 , 0x02700578,0x0270057e;
-	}
-}
-[t:lever_glb_04,n:0x0270040f]
-{
-	[common]
-	{
-		dev_instance_text = "ELEVATOR";
-	}
-	[on_off_lever]
-	{
-		off_message = we_req_activate;
-	  f off_message_delay = 1;
-	  x off_scid = 0x02700102;
-	  f on_message_delay = 1;
-	  x on_scid = 0x02700102;
-	}
-	[placement]
-	{
-	  q orientation = 0,-0.594823,0,0.803857;
-	  p position = -3.1745,2.1018,1.0191,0x1ca205cd;
-		use_point_scids = 0x02700576 , 0x02700579;
 	}
 }
 [t:sign_ice_barn_01,n:0x027005bb]

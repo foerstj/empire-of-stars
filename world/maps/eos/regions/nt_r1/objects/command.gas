@@ -1,110 +1,8 @@
-[t:cmd_report_gameplay_screen_player,n:0x0270053d]
-{
-	[cmd_report_gameplay_screen_player]
-	{
-		report_name = "1_nt_r1";
-	}
-	[placement]
-	{
-	  p position = 0.991749,-9.53674e-007,-1.87767,0xc6de0945;
-	}
-}
-[t:cmd_enter_nis,n:0x0270002c]
-{
-	[cmd_enter_nis]
-	{
-	  i music_volume = 90;
-	  x next_scid = 0x0270002D;
-	  b select_catalyst = true;
-	}
-	[common]
-	{
-		dev_instance_text = "NIS";
-	  b is_multi_player = false;
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = send_world_message("we_req_activate",0x02700678,0f,"default","",0), doc("wrangler on");
-			  b can_self_destruct = true;
-				condition* = receive_world_message("we_req_activate",0,"on_every_message");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  p position = -2.07301,-6,-1.40667,0x3e77f433;
-	}
-}
-[t:cmd_leave_nis,n:0x02700094]
-{
-	[common]
-	{
-		dev_instance_text = "NIS";
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = send_world_message("we_req_deactivate",0x02700678,0f,"default","",0), delay(2), doc("wrangler off");
-			  b can_self_destruct = true;
-				condition* = receive_world_message("we_req_activate",0,"on_every_message");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  q orientation = 0,-0.707107,0,0.707107;
-	  p position = -2.03572,-5.99999,-3.33474,0x3e77f433;
-	}
-}
-[t:cmd_party_wrangler,n:0x02700678]
-{
-	[gizmo]
-	{
-	  v diffuse_color = 1,0,0;
-	}
-	[placement]
-	{
-	  p position = -2.63011,-6,-2.27035,0x3e77f433;
-	}
-}
 [t:cmd_ai_c_move,n:0x0270035e]
 {
 	[placement]
 	{
 	  p position = 0.022394,0.75,1.16803,0x71bbfc94;
-	}
-}
-[t:cmd_camera_command,n:0x0270064e]
-{
-	[cmd_camera_command]
-	{
-	  f duration = 0;
-	  x next_scid = 0x02700094;
-		order = cor_snap;
-	}
-	[placement]
-	{
-	  q orientation = 0.257465,0.000385125,-0.000102573,0.966287;
-	  p position = -0.573689,8.8277,3.46087,0x5309c4ef;
 	}
 }
 [t:cmd_animation_command,n:0x027005b9]
@@ -118,33 +16,6 @@
 	[placement]
 	{
 	  p position = 0.787552,-3.5,-1.24516,0x358482c7;
-	}
-}
-[t:cmd_camera_command,n:0x0270002d]
-{
-	[cmd_camera_command]
-	{
-	  f duration = 0;
-	  x next_scid = 0x0270007F;
-		order = cor_snap;
-	}
-	[placement]
-	{
-	  q orientation = 0.00119731,0.993295,-0.115136,0.0103293;
-	  p position = 0.11824,19.0719,-12.7439,0x30b6475f;
-	}
-}
-[t:cmd_camera_command,n:0x0270007f]
-{
-	[cmd_camera_command]
-	{
-	  f duration = 14;
-	  x next_scid = 0x0270064E;
-	}
-	[placement]
-	{
-	  q orientation = 0.00119731,0.993295,-0.115136,0.0103293;
-	  p position = 0.0436974,20.2595,-4.04377,0x30b6475f;
 	}
 }
 [t:light_flicker,n:0x027000f6]
@@ -225,21 +96,6 @@
 	[placement]
 	{
 	  p position = -0.641876,-5.15,-2.98091,0xa2634106;
-	}
-}
-[t:cmd_camera_move,n:0x02700584]
-{
-	[placement]
-	{
-	  q orientation = 0.183013,0.683013,-0.183013,0.683013;
-	  p position = 14.8369,4.5077,2.38007,0x17554708;
-	}
-}
-[t:cmd_auto_save,n:0x02700655]
-{
-	[placement]
-	{
-	  p position = -4.05645,-6,-1.8959,0x2d021454;
 	}
 }
 [t:cmd_animation_command,n:0x0270058f]
