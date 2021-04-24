@@ -10,11 +10,11 @@ Goid	m_Target$;
 bool give_stone$( goid target$ )
 {
 	// see if the person we are tying to reward alread has the object in their inventory.
-	Go item$ = m_Target$.Go.Inventory.GetItemFromTemplate( "starstone_aranna" );
+	Go item$ = m_Target$.Go.Inventory.GetItemFromTemplate( "starstone_altair" );
 	if( item$ == null )
 	{
 		SiegePos SpawnPos$;
-		GoCloneReq cloneReq$ = MakeGoCloneReq( "starstone_aranna" );
+		GoCloneReq cloneReq$ = MakeGoCloneReq( "starstone_altair" );
 		
 		SpawnPos$ = target$.go.placement.position;
 		cloneReq$.StartingPos	= SpawnPos$;
