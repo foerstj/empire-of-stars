@@ -6,7 +6,7 @@
 		{
 			[*]
 			{
-				action* = mood_change("map_world_df_r0_1");
+				action* = mood_change("eos_altair_wnw");
 			  b can_self_destruct = true;
 				condition* = party_member_within_bounding_box(10.000000,2.000000,1.000000,"on_every_enter");
 			  f delay = 0.000000;
@@ -53,35 +53,6 @@
 	{
 	  q orientation = 0,0.707107,0,0.707107;
 	  p position = -1.12543,1.33514e-005,-0.610661,0x3d06d4b5;
-	}
-}
-[t:trigger_change_mood_box,n:0x058004c7]
-{
-	[common]
-	{
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = mood_change("map_world_sr_r4_2");
-			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(4.000000,2.000000,1.000000,"on_every_enter");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  q orientation = 0,1,0,0;
-	  p position = -0.497867,-11.4285,4.3111,0xf5a00548;
 	}
 }
 [t:use_point,n:0x05800ad1]
@@ -238,7 +209,7 @@
 		{
 			[*]
 			{
-				action* = mood_change("map_world_df_r0_1"), doc("normal forest music");
+				action* = mood_change("eos_altair_wnw"), doc("normal forest music");
 			  b can_self_destruct = true;
 				condition* = party_member_within_bounding_box(27.000000,2.000000,1.000000,"on_every_enter");
 			  f delay = 0.000000;
@@ -353,7 +324,7 @@
 		{
 			[*]
 			{
-				action* = mood_change("map_world_df_r0_1"), doc("normal forest music");
+				action* = mood_change("eos_altair_wnw"), doc("normal forest music");
 			  b can_self_destruct = true;
 				condition* = party_member_within_bounding_box(22.000000,2.000000,1.000000,"on_every_enter");
 			  f delay = 0.000000;
@@ -557,7 +528,7 @@
 		{
 			[*]
 			{
-				action* = mood_change("map_world_df_r0_1"), doc("normal forest music");
+				action* = mood_change("eos_altair_wnw"), doc("normal forest music");
 			  b can_self_destruct = true;
 				condition* = party_member_within_bounding_box(30.000000,2.000000,1.000000,"on_every_enter");
 			  f delay = 0.000000;
@@ -586,7 +557,7 @@
 		{
 			[*]
 			{
-				action* = mood_change("map_world_df_r0_1"), doc("normal forest music");
+				action* = mood_change("eos_altair_wnw"), doc("normal forest music");
 			  b can_self_destruct = true;
 				condition* = party_member_within_bounding_box(30.000000,2.000000,1.000000,"on_every_enter");
 			  f delay = 0.000000;
@@ -615,7 +586,7 @@
 		{
 			[*]
 			{
-				action* = mood_change("map_world_df_r0_2"), doc("happy town music");
+				action* = mood_change("eos_altair_wnw_chapel"), doc("happy town music");
 			  b can_self_destruct = true;
 				condition* = party_member_within_bounding_box(15.000000,2.000000,10.000000,"on_every_enter");
 			  f delay = 0.000000;
@@ -670,5 +641,34 @@
 	[placement]
 	{
 	  p position = 0.275696,9.53674e-007,-0.401749,0x848d0d35;
+	}
+}
+[t:trigger_change_mood_box,n:0x05800013]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = mood_change("eos_altair_wnw");
+			  b can_self_destruct = true;
+				condition* = party_member_within_bounding_box(10.000000,2.000000,1.000000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,0.707107,0,0.707107;
+	  p position = -1.86362,0,0.802338,0xaa197acc;
 	}
 }
