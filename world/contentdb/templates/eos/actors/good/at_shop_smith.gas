@@ -1,0 +1,207 @@
+[t:template,n:at_shop_smith]
+{
+    // Smith shop on Altair.
+    // Good clothes from Jeriah, bad weapons from Bodrus
+	category_name = "1W_shopkeep";
+	doc = "blacksmith, meren (MP)";
+	specializes = base_dwarf;
+	[actor] { portrait_icon = b_gui_ig_i_ic_c_go; }
+	[aspect]
+	{
+		draw_selection_indicator = TRUE;
+		use_range = 1.0;
+		is_ghost_usable = TRUE;
+		[textures]
+		{
+			0 = b_c_gan_df_skin_05;
+			1 = b_c_pos_a1_032;
+		}
+	}
+	[common]
+	{
+		screen_name = "Blacksmith Wern Silverforge";
+	}
+	[conversation]
+	{
+	}
+	[inventory]
+	{
+		[store_pcontent]
+		{
+			full_ratio = 0;
+            // Good clothes from Jeriah
+			[armor]
+			{
+				[all*]
+				{
+					il_main = #body,ro/45-135;
+					max = 4;
+					min = 4;
+				}
+
+				[all*]
+				{
+					il_main = #body/45-55;
+					max = 7;
+					min = 7;
+				}
+				[all*]
+				{
+					il_main = #body/60-104;
+					max = 16;
+					min = 16;
+				}
+				[all*]
+				{
+					il_main = #body/105-135;
+					max = 3;
+					min = 3;
+				}
+
+
+				[all*]
+				{
+					il_main = #gloves/6-40;
+					max = 8;
+					min = 8;
+				}
+				[all*]
+				{
+					il_main = #gloves/50-104;
+					max = 8;
+					min = 8;
+				}
+				[all*]
+				{
+					il_main = #gloves/110-135;
+					max = 4;
+					min = 4;
+				}
+
+
+				[all*]
+				{
+					il_main = #helm/20-54;
+					max = 8;
+					min = 8;
+				}
+				[all*]
+				{
+					il_main = #helm/55-104;
+					max = 8;
+					min = 8;
+				}
+				[all*]
+				{
+					il_main = #helm/110-130;
+					max = 4;
+					min = 4;
+				}
+
+				[all*]
+				{
+					il_main = #boots/6-40;
+					max = 8;
+					min = 8;
+				}
+				[all*]
+				{
+					il_main = #boots/50-104;
+					max = 8;
+					min = 8;
+				}
+				[all*]
+				{
+					il_main = #boots/110-135;
+					max = 4;
+					min = 4;
+				}
+			}
+			[shields]
+			{
+				[all*]
+				{
+					il_main = #shield/10-50;
+					max = 5;
+					min = 5;
+				}
+				[all*]
+				{
+					il_main = #shield/55-104;
+					max = 6;
+					min = 6;
+				}
+				[all*]
+				{
+					il_main = #shield/110-135;
+					max = 4;
+					min = 4;
+				}
+			}
+            
+            // Bad weapons from Bodrus
+			[weapons]
+			{
+				[all*]
+				{
+					il_main = #melee/10-11;
+					max = 8;
+					min = 8;
+				}
+				[all*]
+				{
+					il_main = #melee/12-27;
+					max = 18;
+					min = 18;
+				}
+				[all*]
+				{
+					il_main = #melee/28-35;
+					max = 6;
+					min = 6;
+				}
+				[all*]
+				{
+					il_main = #ranged/10-11;
+					max = 8;
+					min = 8;
+				}
+				[all*]
+				{
+					il_main = #ranged/12-27;
+					max = 18;
+					min = 18;
+				}
+				[all*]
+				{
+					il_main = #ranged/28-35;
+					max = 6;
+					min = 6;
+				}
+			}
+            
+            // And then some backpacks
+            [misc]
+            {
+                [all*]
+                {
+                    il_main = DSX_backpack_empty;
+                    max = 3;
+                    min = 2;
+                }
+            }
+		}
+	}
+    [mind]
+    {
+		actor_may_attack = false;
+        actor_may_be_attacked = false;
+	}
+	[respawn_shrine]
+	{
+	}
+	[store]
+	{
+		item_markup = 2;
+	}
+}

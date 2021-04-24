@@ -148,7 +148,7 @@
 	}
 	[common]
 	{
-		screen_name = "King of SnÃ¶";
+		screen_name = "King of Snö";
 		[instance_triggers]
 		{
 			[*]
@@ -725,7 +725,7 @@
 	  p position = 2.38922,-3.69999,1.98376,0x0ff1b584;
 	}
 }
-[t:merchant_blacksmith_glacern,n:0x027000fa]
+[t:at_shop_smith,n:0x027000fa]
 {
 	[conversation]
 	{
@@ -804,7 +804,7 @@
 	  p position = -0.675064,-3.15,5.63885,0xa2634106;
 	}
 }
-[t:onoc,n:0x027000a1]
+[t:at_shop_magic,n:0x027000a1]
 {
 	[conversation]
 	{
@@ -812,6 +812,10 @@
 		{
 			* = conversation_onoc;
 		}
+	}
+	[mind]
+	{
+		jat_talk = world\ai\jobs\common\job_talk.skrit;
 	}
 	[placement]
 	{
