@@ -1,0 +1,54 @@
+[t:template,n:at_hire_m]
+{
+    // Hireable melee fighter on Altair.
+    // Torg dwarf with Kroduk stats / equipment.
+	category_name = "1W_character";
+	doc = "dwarf_foreman";
+	specializes = base_pm_dwarf;
+	[actor]
+	{
+		portrait_icon = b_gui_ig_i_ic_c_torg;
+		[skills]
+		{
+			dexterity 		= 2.16, 0, 10;
+			intelligence 	= 0.72, 0, 10;
+			strength 		= 5.12, 0, 10;
+			melee 			= 8, 0, 0;
+			uber 			= 8, 0, 0;
+		}
+	}
+	[aspect]
+	{
+		gold_value = 3400;
+		[textures]
+		{
+			0 = b_c_gan_df_skin_02;
+			1 = b_c_pos_a1_006;
+		}
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+	}
+	[common]
+	{
+		screen_name = "Kroduk";
+	}
+	[conversation]
+	{
+	}
+	[inventory]
+	{
+		[equipment]
+		{
+			es_chest = bd_bl_f_g_c_fun;
+			es_feet = #boots/20-30;
+			es_forearms = #gloves/20-30;
+		}
+        [other]
+        {
+			il_main = #axe/20-23;
+            il_main = #shield/30-40;
+        }
+	}
+}
