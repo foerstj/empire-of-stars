@@ -7,7 +7,7 @@
 	}
 	[placement]
 	{
-	  q orientation = 0,-1,0,0;
+	  q orientation = 0,1.66939e-007,0,1;
 	  p position = -0.019886,-6,0.842037,0x3e77f433;
 	}
 }
@@ -20,7 +20,7 @@
 	}
 	[placement]
 	{
-	  q orientation = 0,-1,0,-1.60478e-007;
+	  q orientation = 0,6.46033e-009,0,1;
 	  p position = -0.0252876,-5.98179,0.834473,0x3e77f433;
 	}
 }
@@ -294,6 +294,11 @@
 }
 [t:respawn_statue,n:0x02700570]
 {
+	[aspect]
+	{
+		model = m_i_glb_statue-08;
+	  f scale_multiplier = 1.5;
+	}
 	[common]
 	{
 	  b is_single_player = true;
