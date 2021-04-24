@@ -18,12 +18,12 @@
 	{
 		order = 0;
 		choice = shop;
-		screen_text = "It's a bit nippy out there, eh? Well thank the seven powers I don't have to live here year-round! I only come up here to run experiments. Heating and freezing spells, that nature of beast. In any case, you can have a look at some of my potions and spells if you like.";
+		screen_text = "It's a bit muggy out there, eh? Well thank the seven powers I don't have to live here year-round! I only come down here to run experiments. Heating and freezing spells, that nature of beast. In any case, you can have a look at some of my potions and spells if you like.";
 	}
 	[text*]
 	{
 		choice = shop;
-		screen_text = "Oh, hello again! Thought of something you could use?";
+		screen_text = "Oh, hello again! Thought of something you could use? I've got the best spells of the whole kingdom here!";
 	}
 }
 [conversation_ibsen]
@@ -31,17 +31,16 @@
 	[text*]
 	{
 		activate_quest*	= quest_find_merik;
-		screen_text = "I appreciate your enthusiasm to help, soldier, but I've got a battle to plan! Doesn't take a fool to see this all started the day our Grand Mage Merik vanished. Find him, and you'll find the cause of this mess.";
+		screen_text = "We welcome you on this world, tall alien. You say you search for an ancient stone to return to your home world - We wish you best luck, but unfortunately we know only little of the time of antiquity. Our records date back no further than to the founding of this city, hundreds of years ago. Apart from us Dwarves, only beasts like the Krug and Braak inhabit this world; and the Zaurask down in the Fireheart Caves. Maybe the best idea would be to search down there - the Caves are not fully explored, because of the smoldering heat down there.";
 		quest_dialog = true;
-       	button_1_text = "More";
-       	button_1_value = talked_to_overseer;
+        choice = more;
 	}
 }
 [conversation_ibsen_2]
 {
 	[text*]
 	{
-		screen_text = "The Legionnaires tell me it's even worse over the mountain. If you want to make yourself useful, go reinforce the men at Fortress Kroth. Just follow your nose through the ice caves and you'll get there soon enough!";
+		screen_text = "Our nephew is a good the barkeeper and that's what he should stick to; instead he keeps babbling of things on the Moon he sees in his dreams. Yeah maybe the artifact you're looking for is on the Moon for whatever we know, haha. If you came from the stars you can fly up there, We guess. Wrap yourselves in furs; from what we can see through telescopes from here, it should be rather cold and unpleasant up there.";
 		activate_quest* = quest_fort_kroth;
 		quest_dialog = true;
 	}
@@ -51,7 +50,7 @@
 	[text*]
 	{
 		activate_quest*	= quest_find_merik,1;
-		screen_text = "Blast men! The Overseer would give audience to a dog wearing the Legion's colors, but will he listen to his own niece? I've seen the Mage Merik in my dreams, trapped in the ice caves north of here. For generations my family's had the sight of dreams, but what am I given to do? Scrubbing, cooking, and minding the inn, that's what! OOOOOOOH!";
+		screen_text = "Blast the monarchy! The King would give audience to a dog wearing the Legion's colors, but will he listen to his own nephew? I've seen a magic stone in my dreams, trapped in the ice of the Moon. For generations my family's had the sight of dreams, but what am I given to do? Scrubbing, cooking, and minding the inn, that's what! OOOOOOOH!";
 		quest_dialog = true;
 	}
 }
@@ -59,14 +58,14 @@
 {
 	[text*]
 	{
-		screen_text = "If you've soom business with the Overseer, I suggest you speak to him directly aboot it. I'm joost here to deliver word on the state of things at Fort Kroth.";
+		screen_text = "If you've soom business with the King, I suggest you speak to him directly aboot it. I'm joost here to deliver word on the state of things at the Elevator.";
 	}
 }
 [conversation_lorun_overseer]
 {
 	[text*]
 	{
-		screen_text = "If you've soom business with the Overseer, I suggest you speak to him directly aboot it. I'm joost here to deliver word on the state of things at Fort Kroth.";
+		screen_text = "If you've soom business with the King, I suggest you speak to him directly aboot it. I'm joost here to deliver word on the state of things at the Elevator.";
 	}
 }
 [conversation_lorun_join]
@@ -74,7 +73,7 @@
 	[text*]
 	{
 		choice = potential_member;
-		screen_text = "If the Overseer sees fit to send you oot on a madman's quest, I should at least see you've a chance at living through it. I'm the best mage in these parts and I may be old, but I was roasting goblins with mage fire when yer daddy's daddy was a whelp! If you've the gold so's I kin settle my accounts here, we can get moving afore you can say bless the Glitterdelve. Will ye have me along?";
+		screen_text = "If the King sees fit to send you oot on a madman's quest, I should at least see you've a chance at living through it. I'm the best mage in these parts and I may be old, but I was roasting furoks with mage fire when yer daddy's daddy was a whelp! If you've the gold so's I kin settle my accounts here, we can get moving afore you can say bless the Fireheart. Will ye have me along?";
 	}
 }
 [conversation_lorun_accept_have_money]
@@ -88,7 +87,7 @@
 {
 	[text*]
 	{
-		screen_text = "I'd be glad to join your company, but I can't do it for free. I've financial matters for the Legion to attend to here in Glacern, but if you can help make up far some of the gold I lost to brigands on the way here, I'd be glad to toss in with your lot!";
+		screen_text = "I'd be glad to join your company, but I can't do it for free. I've financial matters for the Legion to attend to here in Lagomsnö, but if you can help make up far some of the gold I lost to brigands on the way here, I'd be glad to toss in with your lot!";
 	}
 }
 [conversation_lorun_reject]
@@ -126,7 +125,7 @@
 	[text*]
 	{
 		choice = potential_member;
-		screen_text = "Chieftain tell Kroduk 'bring caravan safe to kingdom of Ehb.' I bring to Stonebridge... then mule-eating Krug burn town! Driver steals wagon, driver takes Kroduk gold, and driver runs away. Kroduk tracks to Glacern, but cannot chase further. Kroduk help you if you help him. Kroduk good at smashing, beating, crushing... anything! You like?";
+		screen_text = "Chieftain tell Kroduk 'bring caravan safe to kingdom of Snö.' I bring to Jävlakallt... then mule-eating Krug attack caravan! Driver steals wagon, driver takes Kroduk gold, and driver runs away. Kroduk tracks to Lagomsnö, but cannot chase further. Kroduk help you if you help him. Kroduk good at smashing, beating, crushing... anything! You like?";
 	}
 }
 [conversation_kroduk_accept_have_money]
@@ -202,7 +201,7 @@
 	{
 		choice = shop;
 		order = 0;
-		screen_text = "Ah, a young buck out to save the world. I had that same glint in my eye once. Fought my way out of some pretty tight scrapes before I traded in my blade... So, you're heading out to the ice caverns? A slippery slope, that. Better outfit yourself real good. Care to see what I've got?";
+		screen_text = "Ah, a young buck out to travel the stars. I had that same glint in my eye once. Fought my way out of some pretty tight scrapes before I traded in my blade... So, you're heading out to the Winternight Woods? A slippery slope, that. Better outfit yourself real good. Care to see what I've got?";
 		scroll_rate = 7;
 	}
 	[text*]
@@ -222,153 +221,147 @@
 {
 	[text*]
 	{
-		screen_text = "If you've come to Glacern for safety, you made the right choice. The Overseer has withdrawn all patrols to here in preparation for a counterattack. You won't find more Legionnaires anywhere but Fortress Kroth and Castle Ehb.";
+		screen_text = "If you've come to Lagomsnö for safety, you made the right choice. The King has withdrawn all patrols to here in preparation for our annual Guards Fair. You won't find more Legionnaires anywhere in the Kingdom.";
 	}
 }
 [conversation_house1_m]
 {
 	[text*]
 	{
-	screen_text = "Looks like you have seen your fair share of battle, friend. With any luck, these counterattacks the Overseer is planning will finally give me something to tell my grandchildren.";
+        screen_text = "Looks like you have seen your fair share of battle, friend. With any luck, these festivities the King is planning will finally give me something to tell my grandchildren.";
 	}
 }
 [conversation_inn_m]
 {
 	[text*]
 	{
-	screen_text = "If the Overseer hadn't called me back to active duty, I could be sleeping in my own bed right now, not in this bloody hallway.";
+        screen_text = "If the King hadn't called me back to active duty, I could be sleeping in my own bed right now, not in this bloody hallway.";
 	}
 }
-
 [conversation_inn_f]
 {
 	[text*]
 	{
-	screen_text = "I'm sorry, we aren't used to so many Legionnaires off shift at one time. Can you just rest here until we have an opening?";
+        screen_text = "I'm sorry, we aren't used to so many Legionnaires off shift at one time. Can you just rest here until we have an opening?";
 	}
 }
-
 [conversation_tavern_m]
 {
 	[text*]
 	{
-	screen_text = "It's said that the Queensmen's sigil appeared here last week. I asked the Captain about it, and he gave me extra patrol duty for a week. And I still don't know why everyone's so hush-hush about it!";
+        screen_text = "It's said that the Queensmen's sigil appeared here last week. I asked the Captain about it, and he gave me extra patrol duty for a week. And I still don't know why everyone's so hush-hush about it!";
 	}
 }
-
 [conversation_tavern_f]
 {
 	[text*]
 	{
-	screen_text = "From what I heard, the Overseer withdrew the patrols along Fedwyrr's Way so that he would have enough men to secure Glitterdelve and Stonebridge beyond.";
+        screen_text = "From what I heard, the King withdrew the patrols along the Winternight Woods so that he would have enough men to organize the food and competitions.";
 	}
 }
 [conversation_bar_f]
 {
 	[text*]
 	{
-	screen_text = "I just want to go home to Stonebridge now, but the Overseer says the road won't be secure for another week.";
+        screen_text = "I just want to go home to Jävlakallt now, but the boys say the Guards Fair won't be over for another week.";
 	}
 }
 [conversation_bar_m]
 {
 	[text*]
 	{
-	screen_text = "The Overseer seems determined to reinforce everything west of Glacern, while Captain Tarish is left to fight the Droog with a single company of men. Tarish is brilliant, but I hope brilliance is enough. We haven't had to fight the Droog in centuries. If they can fight like they can smith, we are in for a tough fight.";
+        screen_text = "Welcome to Altair, tall alien. This planet may feel cold to you, but it's got a warm heart!";
 	}
 }
 [conversation_marelle]
 {
 	[text*]
 	{
-	order = 0;
-	screen_text = "Can't you see I'm with a customer? Somebody has been disturbing the spirits of the dead over the last week. And I am swamped with keeping them supplied. If you need something, talk to Onoc, he is handling all the living customers this week.";
+        order = 0;
+        screen_text = "Can't you see I'm with a customer? Somebody has been disturbing the spirits of the dead over the last week. And I am swamped with keeping them supplied. If you need something, talk to Orkin, he is handling all the living customers this week.";
 	}
 	[text*]
 	{
-	screen_text = "I am sorry, if you really must speak to me, you will have to go to the end of the line.";
+        screen_text = "I am sorry, if you really must speak to me, you will have to go to the end of the line.";
 	}
 }
 [conversation_apprentice]
 {
 	[text*]
 	{
-	order = 0;
-	screen_text = "Master Onoc is going to have my hide! I borrowed a trilogy of books about Fedwyrr's Way, and lent two out to some friends. But now, I don't remember to whom I lent them! Onoc forbids me to leave while he is keeping shop, but I am sure he will find them missing any time now. Might you have a few minutes to ask around town for me?";
+        order = 0;
+        screen_text = "Master Orkin is going to have my hide! I borrowed a trilogy of books about Thawhorn's Way, and lent two out to some friends. But now, I don't remember to whom I lent them! Orkin forbids me to leave while he is keeping shop, but I am sure he will find them missing any time now. Might you have a few minutes to ask around town for me?";
 		quest_dialog = true;
 		choice = more;
 	}
 	[text*]
 	{
-	order = 1;
-	screen_text = "You are very kind, stranger. I will gladly reimburse you for your trouble. Here's one of the books so you know what they look like.";
-		 activate_quest* = altair_apprentice_books;
+        order = 1;
+        screen_text = "You are very kind, stranger. I will gladly reimburse you for your trouble. Here's one of the books so you know what they look like.";
+		activate_quest* = altair_apprentice_books;
 	}
 	[text*]
 	{
-	screen_text = "Maybe I'd be able to remember who had the books if I didn't have to memorize so many spells.";
+        screen_text = "Maybe I'd be able to remember who had the books if I didn't have to memorize so many spells.";
 	}
 }
 [conversation_apprentice_one_book]
 {
 	[text*]
 	{
-	order = 0;
-	screen_text = "Well, two are better than none, but I don't want to tell Onoc untill I can return all three to him. You'd better keep those two until you find the third.";
-
+        order = 0;
+        screen_text = "Well, two are better than none, but I don't want to tell Orkin untill I can return all three to him. You'd better keep those two until you find the third.";
 	}
 	[text*]
 	{
-	screen_text = "I hope the other book is returned soon...";
+        screen_text = "I hope the other book is returned soon...";
 	}
 }
 [conversation_apprentice_two_books]
 {
 	[text*]
 	{
-	order = 0;
-	screen_text = "Thank you, friend! You have saved my job, and maybe my life. Take this gold and my gratitude for your help.";
-	complete_quest* = altair_apprentice_books;
+        order = 0;
+        screen_text = "Thank you, friend! You have saved my job, and maybe my life. Take this gold and my gratitude for your help.";
+        complete_quest* = altair_apprentice_books;
 	}
 }
 [conversation_apprentice_complete]
 {
-	[text*]       //if the quest is complete
+	[text*]
 	{
-	screen_text = "Neither a borrower nor a lender be; that's my new motto.";
+        screen_text = "Neither a borrower nor a lender be; that's my new motto.";
 	}
 }
 [conversation_book1]
 {
 	[text*]
 	{
-	order = 0;
-	screen_text = "Excuse me, what are you doing up-- oh! I see you have one of the Fedwyrr books. They're good reading; I just finished this one. You can borrow it, as long as you get it back to that mage kid when you're done.";
-
+        order = 0;
+        screen_text = "Excuse me, what are you doing up-- oh! I see you have one of the Thawhorn books. They're good reading; I just finished this one. You can borrow it, as long as you get it back to that mage kid when you're done.";
 	}
 	[text*]
 	{
-	screen_text = "Sure is cold up here.";
+        screen_text = "Sure is cold up here.";
 	}
 }
 [conversation_book2]
 {
 	[text*]
 	{
-	order = 0;
-	screen_text = "Hey, were you born in a barn? Shut the door! Oh, you're looking for books, are you? As a matter of fact, I do have one that Ardun lent me. Here, tell him thanks.";
-
+        order = 0;
+        screen_text = "Hey, were you born in a barn? Shut the door! Oh, you're looking for books, are you? As a matter of fact, I do have one that Ardun lent me. Here, tell him thanks.";
 	}
 	[text*]
 	{
-	screen_text = "Don't let the door hit you on your way out.";
+        screen_text = "Don't let the door hit you on your way out.";
 	}
 }
 [conversation_book_no_quest]
 {
 	[text*]
 	{
-	screen_text = "Another frozen day in the mountains. Well, as soon as my wife sells all her blasted packmules, we can move somewhere warm.";
+        screen_text = "Another sultry day in the valley. Well, as soon as my wife sells all her blasted packmules, we can move somewhere cool.";
 	}
 }
 [conversation_gate_guard_a]
@@ -382,14 +375,14 @@
 {
 	[text*]
 	{
-		screen_text = "You picked a bad week to travel north. The road will be impassible for another few months, and the Overseer has withdrawn Legion patrols from the subterranean caverns during these attacks. No doubt the Trog are having a heyday down there in our absence. You will need all the luck I can wish you if you must go. Azunai's warding to you, friend." ;
+		screen_text = "You picked a bad week to travel east. The Woods are full of Krugs, and the King has withdrawn Legion patrols from the Fireheart Caverns during these festivities. No doubt the Zaurask are having a heyday down there in our absence. You will need all the luck I can wish you if you must go. Thawhorn's warding to you, friend." ;
 	}
 }
 [conversation_guard_c]
 {
 	[text*]
 	{
-		screen_text = "Well you're a new face. You must be the one everyone says came from the stars. I certainly hope your business was in LagomsnÃ¶, because if you intend to visit the Caves, you'll never make it now that we've withdrawn the patrols." ;
+		screen_text = "Well you're a new face. You must be the one everyone says came from the stars. I certainly hope your business was in Lagomsnö, because if you intend to visit the Caves, you'll never make it now that we've withdrawn the patrols." ;
 	}
 }
 [conversation_guard_d]
@@ -433,12 +426,12 @@
 	[text*]
 	{
 		order = 0;
-		screen_text = "I had to take a job with the blacksmith to pay for my room at the Lucky Hurggis; my basement had become overrun with enormous frost beasts, and every time I opened my door, a pack of wolves would attack me! I don't know when I'll be able to go home, but Foulton needs the help, and offered to lend me his adventuring gear if I keep up the good work through the Legion withdrawal.";
+		screen_text = "I had to take a job with the blacksmith to pay for my room at the Lucky Hurggis; the Chapel had become overrun with Braaks, and every time I opened my door, a pack of wolves would attack me! I don't know when I'll be able to go home, but Foulton needs the help, and offered to lend me his adventuring gear if I keep up the good work through the Guards Fair.";
 		choice = more;
 	}
 	[text*]
 	{
-		screen_text = "Well, you seem a persistent sort. There's a chest and some crates in my basement. If you can clear the monsters out of there, you're welcome to what you find. My house is in the woods north of here." ;
+		screen_text = "Well, you seem a persistent sort. There's a chest and some crates in the Chapel. If you can clear the monsters out of there, you're welcome to what's left. The Chapel is in the Winternight Woods east of here." ;
 		activate_quest* = quest_ice_dungeon;
 		quest_dialog = true;
 	}
@@ -447,7 +440,7 @@
 {
 	[text*]
 	{
-		screen_text = "I miss my house." ;
+		screen_text = "I miss my Chapel.";
 	}
 }
 [conversation_lieutenant_shea]
@@ -455,11 +448,11 @@
 	[text*]
 	{
 		order = 0;
-		screen_text = "The Krug have always been, and will always be, a pawn of opportunists. I just don't see how the Goblins could stir them up like this. There must be another explanation for all this trouble." ;
+		screen_text = "The stars have always been, and will always be, a source of mystery. I just don't see how the people of antiquity could have built the interstellar teleportation devices you talk of. There must be another explanation for such a kind of sorcery.";
 		choice = more;
 	}
 	[text*]
 	{
-		screen_text = "If your report from the west is correct, we owe you a great deal of thanks, friend. The Overseer will have to reconsider our next move. If Merik is being held by the Goblins, there is no time to waste in locating their stronghold within the Eastern Swamp." ;
+		screen_text = "I don't know of any ancient artifacts, other than the Pillar Circle ruins you came from. Maybe they're buried deep within the planet's heart?";
 	}
 }
