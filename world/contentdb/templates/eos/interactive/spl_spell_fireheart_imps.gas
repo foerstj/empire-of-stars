@@ -1,0 +1,66 @@
+[t:template,n:spell_fireheart_imp_bullets]
+{
+	category_name = "magic";
+	doc = "spell lava imp bullets";
+	specializes = base_spell_monster;
+	[attack]
+	{
+		damage_max = 19;
+		damage_min = 17;
+	}
+	[common]
+	{
+		[template_triggers]
+		{
+			[*]
+			{
+				action* = call_sfx_script("lava_imp_bullets");
+				condition* = receive_world_message("we_req_cast");
+			}
+		}
+	}
+	[magic]
+	{
+		cast_range = 11;
+		cast_reload_delay = 1;
+		mana_cost = 0;
+		requires_line_of_sight = true;
+		speed_bias = 1;
+		target_type_flags = tt_conscious_enemy;
+		usage_context_flags = uc_offensive;
+	}
+	[spell_default] {}
+}
+[t:template,n:spell_fireheart_imp_ball]
+{
+	category_name = "magic";
+	doc = "spell lava imp bullets";
+	specializes = base_spell_monster;
+	[attack]
+	{
+		damage_max = 20;
+		damage_min = 16;
+	}
+	[common]
+	{
+		[template_triggers]
+		{
+			[*]
+			{
+				action* = call_sfx_script("lava_imp_ball");
+				condition* = receive_world_message("we_req_cast");
+			}
+		}
+	}
+	[magic]
+	{
+		cast_range = 11;
+		cast_reload_delay = 1;
+		mana_cost = 0;
+		requires_line_of_sight = true;
+		speed_bias = 1;
+		target_type_flags = tt_conscious_enemy;
+		usage_context_flags = uc_offensive;
+	}
+	[spell_default] {}
+}

@@ -1,0 +1,155 @@
+[t:template,n:eos_fireheart_imp_melee]
+{
+	category_name = "1W_evil_d";
+	doc = "lava_imp_01";
+	specializes = base_imp;
+	[actor]
+	{
+		[skills]
+		{
+			strength = 		3, 0;
+			intelligence = 	1, 0;
+			dexterity = 	1, 0;
+			melee =  		4, 0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 87;
+		life = 92;
+		max_life = 92;
+		mana = 1;
+		max_mana = 1;
+		model = m_c_edm_li_pos_1;
+		[textures] { 0=b_c_edm_li; }
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 20;
+		damage_min = 16;
+	}
+	[common]
+	{
+		screen_name="Fireheart Imp";
+		membership = monster, party_lava_imp_02;
+	}
+	[defend] { defense=30; }
+	[mind]
+	{
+		jat_brain							 = world\ai\jobs\common\brain_hero.skrit
+			?actor_joins_existing_party		 = true;
+
+		melee_engage_range = 14;
+		personal_space_range = 0.7;
+		ranged_engage_range = 14.0;
+		sight_range = 14;
+	}
+}
+
+[t:template,n:eos_fireheart_imp_bullets]
+{
+	category_name = "1W_evil_d";
+	doc = "lava_imp_02";
+	specializes = lava_imp_02_base;
+
+	[actor]
+	{
+		[skills]
+		{
+			strength = 		3, 0;
+			intelligence = 	1, 0;
+			dexterity = 	1, 0;
+			combat_magic = 	4, 0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 87;
+		life = 92;
+		max_life = 92;
+		mana = 1;
+		max_mana = 1;
+		model = m_c_edm_li_pos_2;
+		[textures] { 0=b_c_edm_li-02; }
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 19;
+		damage_min = 17;
+	}
+	[defend] { defense=30; }
+
+	[common]
+	{
+        screen_name = "Fireheart Imp Runner";
+		membership = monster, party_lava_imp_02;
+	}
+   	[inventory]
+	{
+		[other] { il_active_primary_spell=spell_fireheart_imp_bullets; }
+    }
+	[mind]
+	{
+		jat_brain					= world\ai\jobs\common\brain_hero.skrit
+			?actor_creates_own_party	= true
+			&actor_joins_existing_party	= true
+			&party_template				= "party_lava_imp_02";
+	}
+
+}
+
+[t:template,n:eos_fireheart_imp_ball]
+{
+	category_name = "1W_evil_d";
+	doc = "lava_imp_03";
+	specializes = lava_imp_03_base;
+
+	[actor]
+	{
+		[skills]
+		{
+			strength = 		4, 0;
+			intelligence = 	1, 0;
+			dexterity = 	2, 0;
+			combat_magic = 	4, 0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 100;
+		life = 97;
+		max_life = 97;
+		mana = 1;
+		max_mana = 1;
+		model = m_c_edm_li_pos_3;
+		[textures] { 0=b_c_edm_li-03; }
+	}
+
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 20;
+		damage_min = 16;
+	}
+	[defend] { defense=30; }
+	[inventory]
+	{
+		[other] { il_active_primary_spell=spell_fireheart_imp_ball; }
+    }
+    
+	[common]
+	{
+		membership = monster, party_lava_imp_03;
+		screen_name="Fireheart Imp Mage";
+	}
+	[mind]
+	{
+		jat_brain					= world\ai\jobs\common\brain_hero.skrit
+			?actor_creates_own_party	= true
+			&actor_joins_existing_party	= true
+			&party_template				= "party_lava_imp_03";
+	}
+
+}
