@@ -26,20 +26,6 @@
 	  f repeat_rate = 28;
 	}
 }
-[t:emt_sound,n:0x05800abe]
-{
-	[placement]
-	{
-	  q orientation = 0,-0.052336,0,0.99863;
-	  p position = -4.03541,-0.0347713,-1.55849,0xf8000fbb;
-	}
-	[sound_emitter]
-	{
-		event_sound = "amb_crickets";
-	  f max_repeat_rate = 60;
-	  f repeat_rate = 25;
-	}
-}
 [t:emt_sound,n:0x05800ab8]
 {
 	[placement]
@@ -52,6 +38,55 @@
 		event_sound = "amb_birds1";
 	  f max_repeat_rate = 70;
 	  f repeat_rate = 40;
+	}
+}
+[t:emt_sound,n:0x05800abe]
+{
+	[placement]
+	{
+	  q orientation = 0,-0.743145,0,0.669131;
+	  p position = -0.738457,2.01523,-1.8909,0xad3d87b8;
+	}
+	[sound_emitter]
+	{
+		event_sound = "amb_crickets";
+	  f max_repeat_rate = 60;
+	  f repeat_rate = 25;
+	}
+}
+[t:emt_fire,n:0x05800630]
+{
+	[placement]
+	{
+	  p position = 4.96185,0.6977,-7.13517,0x7e0e5a20;
+	}
+}
+[t:emt_fire,n:0x0580063d]
+{
+	[placement]
+	{
+	  p position = 8.12154,1.58653,1.88032,0x7e0e5a20;
+	}
+}
+[t:emt_fire,n:0x0580063f]
+{
+	[placement]
+	{
+	  p position = 0.214447,1.61501,7.8304,0x7e0e5a20;
+	}
+}
+[t:emt_fire,n:0x05800640]
+{
+	[placement]
+	{
+	  p position = -7.85939,1.78282,2.02876,0x7e0e5a20;
+	}
+}
+[t:emt_fire,n:0x05800642]
+{
+	[placement]
+	{
+	  p position = -4.35841,0.74942,-6.91507,0x7e0e5a20;
 	}
 }
 [t:emt_sound,n:0x05800abf]
@@ -68,18 +103,18 @@
 	  f repeat_rate = 40;
 	}
 }
-[t:emt_sound,n:0x05800ac0]
+[t:emt_sound,n:0x05800ab0]
 {
 	[placement]
 	{
 	  q orientation = 0,-0.052336,0,0.99863;
-	  p position = -2.73545,0.0264162,-0.981117,0x67f403b2;
+	  p position = 2.57396,0,-1.21396,0xa70644b9;
 	}
 	[sound_emitter]
 	{
-		event_sound = "amb_birds";
-	  f max_repeat_rate = 60;
-	  f repeat_rate = 40;
+		event_sound = "amb_crickets";
+	  f max_repeat_rate = 50;
+	  f repeat_rate = 20;
 	}
 }
 [t:emt_sound,n:0x05800aba]
@@ -152,17 +187,17 @@
 	  f repeat_rate = 35;
 	}
 }
-[t:emt_sound,n:0x05800ab0]
+[t:emt_sound,n:0x05800ac0]
 {
 	[placement]
 	{
-	  q orientation = 0,-0.052336,0,0.99863;
-	  p position = 2.57396,0,-1.21396,0xa70644b9;
+	  q orientation = 0,0.669131,0,0.743145;
+	  p position = 1.15385,0.0764161,-1.57379,0x84de12d8;
 	}
 	[sound_emitter]
 	{
-		event_sound = "amb_crickets";
-	  f max_repeat_rate = 50;
-	  f repeat_rate = 20;
+		event_sound = "amb_birds";
+	  f max_repeat_rate = 60;
+	  f repeat_rate = 40;
 	}
 }
