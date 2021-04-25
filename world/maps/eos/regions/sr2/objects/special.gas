@@ -1,37 +1,3 @@
-[t:trigger_change_mood_box,n:0x06b0010f]
-{
-	[common]
-	{
-		dev_instance_text = "fade";
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = fade_nodes(0x54A7ABC8,1,-1,-1,"out:black"), doc("quarry megamap overlap out");
-			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(1.000000,1.000000,4.000000,"on_every_enter");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-		}
-	}
-	[gizmo]
-	{
-	  v diffuse_color = 1,1,1;
-	}
-	[placement]
-	{
-	  q orientation = 0,0.707107,0,0.707107;
-	  p position = -0.235037,-12.0537,-0.558743,0x2e88bca2;
-	}
-}
 [t:trigger_change_mood_box,n:0x06b003e8]
 {
 	[common]
@@ -817,5 +783,19 @@
 	{
 	  q orientation = 0,-0.707107,0,0.707107;
 	  p position = -0.0874481,0.05,0.63839,0x65d46a25;
+	}
+}
+[t:use_point,n:0x06b00066]
+{
+	[placement]
+	{
+	  p position = 0.588568,-0.0499992,8.14106,0xe6cca797;
+	}
+}
+[t:use_point,n:0x06b00067]
+{
+	[placement]
+	{
+	  p position = 0.897342,-40.1,0.158859,0x7fa788d1;
 	}
 }
