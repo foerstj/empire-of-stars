@@ -1,43 +1,9 @@
-[t:emt_generic,n:0x042000e6]
-{
-	[generic_emitter]
-	{
-	  f rep_freq_max = 0.7;
-	  f rep_freq_min = 0.1;
-	  b water_wave = true;
-	}
-	[placement]
-	{
-	  q orientation = 0,0.92388,0,-0.382683;
-	  p position = 0.367772,-5.68335,-0.0713501,0x1f9f891a;
-	}
-}
-[t:emt_generic,n:0x042000e8]
-{
-	[generic_emitter]
-	{
-	  f rep_freq_max = 0.7;
-	  f rep_freq_min = 0.1;
-	  b water_wave = true;
-	}
-	[placement]
-	{
-	  q orientation = 0,5.96046e-008,0,1;
-	  p position = -0.114877,-5.68334,0.0776958,0x1f9f891a;
-	}
-}
-[t:emt_sound,n:0x042002dc]
+[t:emt_lava_drips,n:0x042000cb]
 {
 	[placement]
 	{
-	  q orientation = 0,0.942641,0,-0.333807;
-	  p position = -1.01074,0,1.68138,0x7e6730d7;
-	}
-	[sound_emitter]
-	{
-		event_sound = "amb_water_drip";
-	  f max_repeat_rate = 8;
-	  f repeat_rate = 3;
+	  q orientation = 0,0.707107,0,0.707107;
+	  p position = 0.104881,-5.5,-0.00499201,0x1f9f891a;
 	}
 }
 [t:emt_generic,n:0x04200263]
@@ -45,7 +11,7 @@
 	[generic_emitter]
 	{
 		event_sound = "env_geyser_lava";
-	  b geyser = true;
+	  b geyser_orange = true;
 	  f rep_freq_max = 80;
 	  f rep_freq_min = 30;
 	}
@@ -60,7 +26,7 @@
 	[generic_emitter]
 	{
 		event_sound = "env_geyser_lava";
-	  b geyser = true;
+	  b geyser_orange = true;
 	  f rep_freq_max = 80;
 	  f rep_freq_min = 30;
 	}
@@ -70,28 +36,8 @@
 	  p position = -0.0381365,1.90735e-006,-0.000907898,0x834483bd;
 	}
 }
-[t:emt_generic,n:0x042000f2]
+[t:emt_lava_drips,n:0x042000fb]
 {
-	[generic_emitter]
-	{
-	  f rep_freq_max = 0.7;
-	  f rep_freq_min = 0.1;
-	  b water_wave = true;
-	}
-	[placement]
-	{
-	  q orientation = 0,-0.707107,0,0.707107;
-	  p position = 0.752474,0.732191,0.932796,0x362c31ea;
-	}
-}
-[t:emt_generic,n:0x042000fb]
-{
-	[generic_emitter]
-	{
-	  f rep_freq_max = 0.7;
-	  f rep_freq_min = 0.1;
-	  b water_wave = true;
-	}
 	[placement]
 	{
 	  q orientation = 0,0.92388,0,0.382684;
@@ -103,7 +49,7 @@
 	[generic_emitter]
 	{
 		event_sound = "env_geyser_lava";
-	  b geyser = true;
+	  b geyser_orange = true;
 	  f rep_freq_max = 80;
 	  f rep_freq_min = 30;
 	}
@@ -113,32 +59,12 @@
 	  p position = 0.160782,-1.90735e-006,-0.0317993,0x3412ab04;
 	}
 }
-[t:emt_generic,n:0x04200108]
+[t:emt_lava_drips,n:0x04200108]
 {
-	[generic_emitter]
-	{
-	  f rep_freq_max = 0.7;
-	  f rep_freq_min = 0.1;
-	  b water_wave = true;
-	}
 	[placement]
 	{
 	  q orientation = 0,0.382683,0,0.92388;
-	  p position = 0.333694,-0.0452259,0.156586,0x4ff1ca34;
-	}
-}
-[t:emt_generic,n:0x04200109]
-{
-	[generic_emitter]
-	{
-	  f rep_freq_max = 0.7;
-	  f rep_freq_min = 0.1;
-	  b water_wave = true;
-	}
-	[placement]
-	{
-	  q orientation = 0,0.92388,0,0.382684;
-	  p position = -0.168346,-0.0672992,-0.232384,0x4ff1ca34;
+	  p position = 0.116745,-0.0452259,-0.0792236,0x4ff1ca34;
 	}
 }
 [t:emt_sound,n:0x042002e0]
@@ -150,61 +76,20 @@
 	}
 	[sound_emitter]
 	{
-		event_sound = "amb_water_drip";
-	  f max_repeat_rate = 8;
-	  f repeat_rate = 3;
+		event_sound = "env_singe_ambient";
+	  f max_repeat_rate = 20;
 	}
 }
-[t:emt_generic,n:0x0420010a]
+[t:emt_lava_drips,n:0x0420010a]
 {
-	[generic_emitter]
-	{
-	  f rep_freq_max = 0.7;
-	  f rep_freq_min = 0.1;
-	  b water_wave = true;
-	}
 	[placement]
 	{
 	  q orientation = 0,0.92388,0,0.382684;
-	  p position = 0.469936,0.628098,-0.0805283,0x6d65d605;
+	  p position = 0.0192108,0.628098,-0.0361176,0x6d65d605;
 	}
 }
-[t:emt_generic,n:0x0420010b]
+[t:emt_lava_drips,n:0x0420010d]
 {
-	[generic_emitter]
-	{
-	  f rep_freq_max = 0.7;
-	  f rep_freq_min = 0.1;
-	  b water_wave = true;
-	}
-	[placement]
-	{
-	  q orientation = 0,0.382683,0,0.92388;
-	  p position = -0.165916,0.637425,-0.750023,0x6d65d605;
-	}
-}
-[t:emt_generic,n:0x0420010c]
-{
-	[generic_emitter]
-	{
-	  f rep_freq_max = 0.7;
-	  f rep_freq_min = 0.1;
-	  b water_wave = true;
-	}
-	[placement]
-	{
-	  q orientation = 0,0.92388,0,0.382684;
-	  p position = -0.515049,0.661831,0.266037,0xfebfa9b1;
-	}
-}
-[t:emt_generic,n:0x0420010d]
-{
-	[generic_emitter]
-	{
-	  f rep_freq_max = 0.7;
-	  f rep_freq_min = 0.1;
-	  b water_wave = true;
-	}
 	[placement]
 	{
 	  q orientation = 0,0.382683,0,0.92388;
@@ -216,7 +101,7 @@
 	[generic_emitter]
 	{
 		event_sound = "env_geyser_lava";
-	  b geyser = true;
+	  b geyser_orange = true;
 	  f rep_freq_max = 80;
 	  f rep_freq_min = 30;
 	}
@@ -226,32 +111,12 @@
 	  p position = -0.0613861,-1.78814e-006,-0.0543671,0xfe768977;
 	}
 }
-[t:emt_generic,n:0x04200100]
+[t:emt_lava_drips,n:0x04200100]
 {
-	[generic_emitter]
-	{
-	  f rep_freq_max = 0.7;
-	  f rep_freq_min = 0.1;
-	  b water_wave = true;
-	}
 	[placement]
 	{
 	  q orientation = 0,0.92388,0,-0.382683;
 	  p position = 0.158325,0.00658607,-0.0902786,0xea0c67a4;
-	}
-}
-[t:emt_generic,n:0x04200101]
-{
-	[generic_emitter]
-	{
-	  f rep_freq_max = 0.7;
-	  f rep_freq_min = 0.1;
-	  b water_wave = true;
-	}
-	[placement]
-	{
-	  q orientation = 0,0.92388,0,0.382684;
-	  p position = 0.511398,-0.0604326,0.164795,0xea0c67a4;
 	}
 }
 [t:emt_sound,n:0x042002e4]
@@ -263,10 +128,8 @@
 	}
 	[sound_emitter]
 	{
-		event_sound = "amb_water_drip";
-	  f max_repeat_rate = 8;
-	  f min_dist = 1;
-	  f repeat_rate = 3;
+		event_sound = "env_singe_ambient";
+	  f max_repeat_rate = 20;
 	}
 }
 [t:emt_light_ray,n:0x04200227]
@@ -282,7 +145,7 @@
 	[generic_emitter]
 	{
 		event_sound = "env_geyser_lava";
-	  b geyser = true;
+	  b geyser_orange = true;
 	  f rep_freq_max = 80;
 	  f rep_freq_min = 30;
 	}
@@ -291,32 +154,12 @@
 	  p position = -0.0384064,-2.38419e-007,0.132034,0x6c030b0f;
 	}
 }
-[t:emt_generic,n:0x04200106]
+[t:emt_lava_drips,n:0x04200106]
 {
-	[generic_emitter]
-	{
-	  f rep_freq_max = 0.7;
-	  f rep_freq_min = 0.1;
-	  b water_wave = true;
-	}
 	[placement]
 	{
 	  q orientation = 0,0.707107,0,-0.707107;
-	  p position = 0.00836182,-5.63838,0.183136,0xa583c77b;
-	}
-}
-[t:emt_generic,n:0x04200107]
-{
-	[generic_emitter]
-	{
-	  f rep_freq_max = 0.7;
-	  f rep_freq_min = 0.1;
-	  b water_wave = true;
-	}
-	[placement]
-	{
-	  q orientation = 0,0.92388,0,0.382684;
-	  p position = -0.0269928,-5.65836,-0.172867,0xa583c77b;
+	  p position = 0.0978394,-5.63838,0.0646973,0xa583c77b;
 	}
 }
 [t:emt_sound,n:0x042002e5]
@@ -328,10 +171,8 @@
 	}
 	[sound_emitter]
 	{
-		event_sound = "amb_water_drip";
-	  f max_repeat_rate = 8;
-	  f min_dist = 1;
-	  f repeat_rate = 3;
+		event_sound = "env_singe_ambient";
+	  f max_repeat_rate = 20;
 	}
 }
 [t:emt_generic,n:0x042000e7]
@@ -339,7 +180,7 @@
 	[generic_emitter]
 	{
 		event_sound = "env_geyser_lava";
-	  b geyser = true;
+	  b geyser_orange = true;
 	  f rep_freq_max = 80;
 	  f rep_freq_min = 30;
 	}
@@ -356,32 +197,11 @@
 	  p position = -0.544556,0.110332,-0.370087,0x4d84f91f;
 	}
 }
-[t:emt_generic,n:0x04200102]
+[t:emt_lava_drips,n:0x04200102]
 {
-	[generic_emitter]
-	{
-	  f rep_freq_max = 0.7;
-	  f rep_freq_min = 0.1;
-	  b water_wave = true;
-	}
 	[placement]
 	{
-	  q orientation = 0,-1.49012e-007,0,1;
-	  p position = -0.0306702,-5.73457,-0.0377121,0x0a097dda;
-	}
-}
-[t:emt_generic,n:0x04200103]
-{
-	[generic_emitter]
-	{
-	  f rep_freq_max = 0.7;
-	  f rep_freq_min = 0.1;
-	  b water_wave = true;
-	}
-	[placement]
-	{
-	  q orientation = 0,0.92388,0,0.382684;
-	  p position = 0.403412,-5.74449,0.242691,0x0a097dda;
+	  p position = 0.0379028,-5.73457,-0.0309677,0x0a097dda;
 	}
 }
 [t:emt_sound,n:0x042002e7]
@@ -393,10 +213,8 @@
 	}
 	[sound_emitter]
 	{
-		event_sound = "amb_water_drip";
-	  f max_repeat_rate = 8;
-	  f min_dist = 1;
-	  f repeat_rate = 3;
+		event_sound = "env_singe_ambient";
+	  f max_repeat_rate = 20;
 	}
 }
 [t:emt_sound,n:0x042001ef]
@@ -409,7 +227,7 @@
 	[sound_emitter]
 	{
 	  b continual_loop = true;
-		event_sound = "env_waterfall";
+		event_sound = "env_lava_falls";
 	}
 }
 [t:emt_sound,n:0x042002b5]
@@ -422,7 +240,7 @@
 	[sound_emitter]
 	{
 	  b continual_loop = true;
-		event_sound = "env_waterfall";
+		event_sound = "env_lava_falls";
 	  f min_dist = 1;
 	  f repeat_rate = 3;
 	}
@@ -445,7 +263,7 @@
 	[sound_emitter]
 	{
 	  b continual_loop = true;
-		event_sound = "env_waterfall";
+		event_sound = "env_lava_falls";
 	}
 }
 [t:emt_light_ray,n:0x04200226]
@@ -461,7 +279,7 @@
 	[generic_emitter]
 	{
 		event_sound = "env_geyser_lava";
-	  b geyser = true;
+	  b geyser_orange = true;
 	  f rep_freq_max = 80;
 	  f rep_freq_min = 30;
 	}
@@ -475,7 +293,7 @@
 	[generic_emitter]
 	{
 		event_sound = "env_geyser_lava";
-	  b geyser = true;
+	  b geyser_orange = true;
 	  f rep_freq_max = 80;
 	  f rep_freq_min = 30;
 	}
@@ -485,60 +303,19 @@
 	  p position = 0.00927734,0.247887,-0.00628662,0x3970fc42;
 	}
 }
-[t:emt_generic,n:0x04200104]
+[t:emt_lava_drips,n:0x04200104]
 {
-	[generic_emitter]
-	{
-	  f rep_freq_max = 0.7;
-	  f rep_freq_min = 0.1;
-	  b water_wave = true;
-	}
 	[placement]
 	{
 	  q orientation = 0,0.707107,0,-0.707107;
-	  p position = 0.726364,0.668958,0.624435,0x1aa0315e;
+	  p position = 0.359741,0.668958,0.311005,0x1aa0315e;
 	}
 }
-[t:emt_generic,n:0x04200105]
+[t:emt_lava_drips,n:0x042000fd]
 {
-	[generic_emitter]
-	{
-	  f rep_freq_max = 0.7;
-	  f rep_freq_min = 0.1;
-	  b water_wave = true;
-	}
 	[placement]
 	{
-	  q orientation = 0,0.92388,0,0.382684;
-	  p position = -0.583893,0.679445,-0.0926361,0x1aa0315e;
-	}
-}
-[t:emt_generic,n:0x042000fc]
-{
-	[generic_emitter]
-	{
-	  f rep_freq_max = 0.7;
-	  f rep_freq_min = 0.1;
-	  b water_wave = true;
-	}
-	[placement]
-	{
-	  q orientation = 0,0.92388,0,0.382684;
-	  p position = -0.60585,0.732192,0.021328,0x4371b756;
-	}
-}
-[t:emt_generic,n:0x042000fd]
-{
-	[generic_emitter]
-	{
-	  f rep_freq_max = 0.7;
-	  f rep_freq_min = 0.1;
-	  b water_wave = true;
-	}
-	[placement]
-	{
-	  q orientation = 0,-1.49012e-007,0,1;
-	  p position = 0.56002,0.732192,0.274044,0x4371b756;
+	  p position = 0.126152,0.732192,-0.00684738,0x4371b756;
 	}
 }
 [t:emt_generic,n:0x042002d7]
@@ -546,7 +323,7 @@
 	[generic_emitter]
 	{
 		event_sound = "env_geyser_lava";
-	  b geyser = true;
+	  b geyser_orange = true;
 	  f rep_freq_max = 80;
 	  f rep_freq_min = 30;
 	}
@@ -564,32 +341,12 @@
 	  p position = -0.507898,0.623104,2.16596,0xe5fd3aae;
 	}
 }
-[t:emt_generic,n:0x042000f9]
+[t:emt_lava_drips,n:0x042000f9]
 {
-	[generic_emitter]
-	{
-	  f rep_freq_max = 0.7;
-	  f rep_freq_min = 0.1;
-	  b water_wave = true;
-	}
 	[placement]
 	{
 	  q orientation = 0,0.92388,0,-0.382683;
-	  p position = -0.145115,0.732191,-0.394873,0xa8f1a812;
-	}
-}
-[t:emt_generic,n:0x042000fa]
-{
-	[generic_emitter]
-	{
-	  f rep_freq_max = 0.7;
-	  f rep_freq_min = 0.1;
-	  b water_wave = true;
-	}
-	[placement]
-	{
-	  q orientation = 0,0.92388,0,0.382683;
-	  p position = 0.250614,0.732191,0.454874,0xa8f1a812;
+	  p position = 0.0540161,0.732191,-0.324154,0xa8f1a812;
 	}
 }
 [t:emt_sound,n:0x042002dd]
@@ -597,70 +354,20 @@
 	[placement]
 	{
 	  q orientation = 0,0.333807,0,0.942641;
-	  p position = -0.149143,0.15,0.376415,0xa8f1a812;
+	  p position = -0.151669,1.00038,0.210136,0xa8f1a812;
 	}
 	[sound_emitter]
 	{
-		event_sound = "amb_water_drip";
-	  f max_repeat_rate = 8;
-	  f min_dist = 1;
-	  f repeat_rate = 3;
+		event_sound = "env_singe_ambient";
+	  f max_repeat_rate = 20;
 	}
 }
-[t:emt_generic,n:0x042000f4]
+[t:emt_lava_drips,n:0x042000f5]
 {
-	[generic_emitter]
-	{
-	  f rep_freq_max = 0.7;
-	  f rep_freq_min = 0.1;
-	  b water_wave = true;
-	}
-	[placement]
-	{
-	  q orientation = 0,-0.92388,0,0.382683;
-	  p position = 0.267349,-5.68334,0.631966,0x8d4ac16c;
-	}
-}
-[t:emt_generic,n:0x042000f5]
-{
-	[generic_emitter]
-	{
-	  f rep_freq_max = 0.7;
-	  f rep_freq_min = 0.1;
-	  b water_wave = true;
-	}
 	[placement]
 	{
 	  q orientation = 0,-0.707107,0,0.707107;
-	  p position = -0.109934,-5.68334,0.0417061,0x8d4ac16c;
-	}
-}
-[t:emt_generic,n:0x042000e9]
-{
-	[generic_emitter]
-	{
-	  f rep_freq_max = 0.7;
-	  f rep_freq_min = 0.1;
-	  b water_wave = true;
-	}
-	[placement]
-	{
-	  q orientation = 0,4.17233e-007,0,-1;
-	  p position = 0.637604,0.512829,-0.306305,0xe19975d1;
-	}
-}
-[t:emt_generic,n:0x042000ea]
-{
-	[generic_emitter]
-	{
-	  f rep_freq_max = 0.7;
-	  f rep_freq_min = 0.1;
-	  b water_wave = true;
-	}
-	[placement]
-	{
-	  q orientation = 0,0.92388,0,-0.382683;
-	  p position = -0.598358,0.512829,0.316391,0xe19975d1;
+	  p position = -0.0599976,-5.68334,0.0415993,0x8d4ac16c;
 	}
 }
 [t:emt_sound,n:0x042002e6]
@@ -672,10 +379,8 @@
 	}
 	[sound_emitter]
 	{
-		event_sound = "amb_water_drip";
-	  f max_repeat_rate = 8;
-	  f min_dist = 1;
-	  f repeat_rate = 3;
+		event_sound = "env_singe_ambient";
+	  f max_repeat_rate = 20;
 	}
 }
 [t:emt_light_ray,n:0x0420022c]
@@ -691,7 +396,7 @@
 	[generic_emitter]
 	{
 		event_sound = "env_geyser_lava";
-	  b geyser = true;
+	  b geyser_orange = true;
 	  f rep_freq_max = 80;
 	  f rep_freq_min = 35;
 	}
@@ -706,39 +411,19 @@
 	[generic_emitter]
 	{
 		event_sound = "env_geyser_lava";
-	  b geyser_drizzle = true;
+	  b geyser_drizzle_orange = true;
 	}
 	[placement]
 	{
 	  p position = 0.0675964,-0.844557,-0.097496,0x16834a7b;
 	}
 }
-[t:emt_generic,n:0x042000fe]
+[t:emt_lava_drips,n:0x042000fe]
 {
-	[generic_emitter]
-	{
-	  f rep_freq_max = 0.7;
-	  f rep_freq_min = 0.1;
-	  b water_wave = true;
-	}
 	[placement]
 	{
 	  q orientation = 0,0.92388,0,0.382684;
-	  p position = 0.345329,-5.68335,0.0515594,0xc4bee1ed;
-	}
-}
-[t:emt_generic,n:0x042000ff]
-{
-	[generic_emitter]
-	{
-	  f rep_freq_max = 0.7;
-	  f rep_freq_min = 0.1;
-	  b water_wave = true;
-	}
-	[placement]
-	{
-	  q orientation = 0,0.92388,0,-0.382683;
-	  p position = -0.270126,-5.68994,-0.27932,0xc4bee1ed;
+	  p position = 0.196987,-5.68335,0.0753555,0xc4bee1ed;
 	}
 }
 [t:emt_light_ray,n:0x04200228]

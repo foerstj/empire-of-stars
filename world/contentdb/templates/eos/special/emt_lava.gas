@@ -1,0 +1,34 @@
+[t:template,n:emt_lava_drips]
+{
+	specializes		= emitter_lightweight;
+    category_name	= "emitter";
+	doc				= "t_emt_sound";
+	
+	[fire_emitter]
+	{
+		red0	= 0.2;
+		green0	= 0.2;
+		blue0	= 0.2;
+			
+		red1	= 0.0;
+		green1	= 0.0;
+		blue1	= 0.0;
+		
+		yvel	= 3.0;
+		yacc	= 1.0;
+		
+		fade	= 0.4;
+        
+        start_radius_max = 6;
+
+        time_scale = 0.5;
+        scale = 2;
+	}
+	[sound_emitter]
+    {
+	  b continual_loop = true;
+		event_sound = "env_lava_bubbling";
+        min_dist = 1.5;
+        max_dist = 7;
+    }
+}
