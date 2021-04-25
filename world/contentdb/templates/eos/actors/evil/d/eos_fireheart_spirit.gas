@@ -1,0 +1,43 @@
+[t:template,n:eos_fireheart_spirit]
+{
+    // Lava Spirit with stats of Scorpion
+	category_name = "1W_evil_d";
+	doc = "lava_spirit";
+	specializes = base_lava_spirit;
+	[actor]
+	{
+		[skills]
+		{
+			strength =  13, 0;
+			intelligence =  3, 0;
+			dexterity =  9, 0;
+			melee =  5,  0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 73;
+		life = 73;
+		max_life = 73;
+		mana = 6;
+		max_mana = 6;
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 42;
+		damage_min = 40;
+	}
+	[common]
+	{
+		screen_name="Fireheart Spirit";
+	}
+	[defend] { defense=62; }
+	[mind]
+	{
+		melee_engage_range = 14;
+		personal_space_range = 0.7;
+		ranged_engage_range = 14.0;
+		sight_range = 14;
+	}
+}
