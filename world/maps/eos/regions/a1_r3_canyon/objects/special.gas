@@ -811,3 +811,32 @@
 	  p position = -0.0932484,-0.442422,8.61969,0xb86eb014;
 	}
 }
+[t:trigger_generic,n:0x00300119]
+{
+	[common]
+	{
+		dev_instance_text = "TEST START POS MOOD";
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = mood_change("eos_altair_moon_default");
+			  b can_self_destruct = true;
+				condition* = party_member_within_sphere(2.500000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  p position = 1.51059,0,2.09359,0xc879b6da;
+	}
+}
