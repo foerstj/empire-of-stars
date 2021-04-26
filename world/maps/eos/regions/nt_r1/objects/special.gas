@@ -1114,6 +1114,37 @@
 	  p position = 18.7047,0.299999,0.311042,0xfb64d99e;
 	}
 }
+[t:trigger_generic,n:0x02700528]
+{
+	[common]
+	{
+		dev_instance_text = "AT MOON ELEVATOR";
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_activate",0x02700529,0f,"default","every",0);
+				action* = send_world_message("we_req_activate",0x08100040,0f,"default","every",0);
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_req_activate",0,"on_every_message");
+				condition* = has_go_in_inventory("local",0x00000000,"starstone_altair");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  p position = -0.0769541,0.2,-1.63934,0x4b601f1f;
+	}
+}
 [t:trigger_generic,n:0x027000ae]
 {
 	[common]
@@ -2733,5 +2764,12 @@
 	{
 	  q orientation = 0,-0.052336,0,0.99863;
 	  p position = 2.75139,-1.4,-0.450359,0xb4c52026;
+	}
+}
+[t:use_point,n:0x0270052a]
+{
+	[placement]
+	{
+	  p position = -0.493256,0.2,-0.569321,0x75d3a0ab;
 	}
 }
