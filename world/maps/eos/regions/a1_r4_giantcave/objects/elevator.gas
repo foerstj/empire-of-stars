@@ -1,0 +1,45 @@
+[t:elevator_instant_4s_1c,n:0x00400090]
+{
+	[common]
+	{
+		dev_instance_text = "DISPLACER GIZMO WITH MATCH CHECK";
+	}
+	[elevator_instant_4s_1c]
+	{
+	  i connect_door_location1_level1 = 9;
+	  i connect_door_location1_level2 = 10;
+	  i connect_door_location2_level1 = 9;
+	  i connect_door_location2_level2 = 10;
+	  x connect_node_location1 = 0x35FED5BE;
+	  x connect_node_location2 = 0x814B1756;
+	  f duration_location1_moving_to_lv1 = 22;
+	  f duration_location1_moving_to_lv2 = 3;
+	  f duration_location2_moving_to_lv1 = 22;
+	  f duration_location2_moving_to_lv2 = 3;
+	  i e2_connect_door_location1_level1 = 12;
+	  i e2_connect_door_location1_level2 = 11;
+	  i e2_connect_door_location2_level1 = 12;
+	  i e2_connect_door_location2_level2 = 11;
+	  i e2_elevator_door_location1_level1 = 2;
+	  i e2_elevator_door_location1_level2 = 2;
+	  i e2_elevator_door_location2_level1 = 2;
+	  i e2_elevator_door_location2_level2 = 2;
+	  x e2_elevator_node = 0xA6A83168;
+	  x elevator_node = 0xF3AD3F32;
+	  f location1_arrived_at_lv2_delay = 1;
+	  x location1_arrived_at_lv2_scid = 0x004000C1;
+		location1_moving_to_lv1_actioninfo = "map_expansion_a1_giantcave_dp_down";
+		location1_moving_to_lv2_actioninfo = "map_expansion_teleport_up";
+	  f location1_moving_to_lv2_delay = 0;
+	  x location1_moving_to_lv2_scid = 0x004000E2;
+		location2_moving_to_lv1_actioninfo = "map_expansion_a1_town_dp_down";
+		location2_moving_to_lv2_actioninfo = "map_expansion_teleport_up";
+		material = "hub";
+	  x other_elevator = 0x001004ED;
+	}
+	[placement]
+	{
+	  q orientation = 0,1,0,0;
+	  p position = -0.733445,7.56596,0.782542,0xf3ad3f32;
+	}
+}

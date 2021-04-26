@@ -1,0 +1,40 @@
+[t:lever_glb_06_message,n:0x00400039]
+{
+	[common]
+	{
+		screen_name = "Displacer Transport Switch";
+	}
+	[on_off_lever]
+	{
+		off_message = we_req_activate;
+		off_message_2 = we_req_activate;
+	  x off_scid = 0x00400092;
+	  x off_scid_2 = 0x004000B6;
+	  x on_scid = 0x00400092;
+	  x on_scid_2 = 0x004000B6;
+	  f reset_time = 30;
+	  f reset_time_2 = 30;
+	}
+	[placement]
+	{
+	  q orientation = -0.270617,0.653273,0.653273,0.270617;
+	  p position = 0.00972569,6.43187,-0.162393,0xf3ad3f32;
+		use_point_scids = 0x0040008d,0x0040008c;
+	}
+}
+[t:dsx_utraean_obj_01,n:0x00400114]
+{
+	[aspect]
+	{
+	  f scale_multiplier = 0.5;
+	}
+	[common]
+	{
+		screen_name = "'Arhok'";
+	}
+	[placement]
+	{
+	  q orientation = 0,0.390731,0,0.920505;
+	  p position = -3.05938,0,3.93432,0x2a6c272b;
+	}
+}

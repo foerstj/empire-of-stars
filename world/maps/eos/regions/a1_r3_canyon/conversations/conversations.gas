@@ -1,0 +1,122 @@
+[jondar_dismiss]
+{
+	[text*]
+	{
+		sample = s_v_a1_jondar_05;
+		screen_text = "Very well... I shall take my leave. Good luck to you!";
+	  f scroll_rate = 20.000000;
+	}
+}
+[jondar_hello]
+{
+	[text*]
+	{
+		
+		i order = 0;
+		choice = more;
+		sample = s_v_a1_jondar_01_a;
+		screen_text = "I thank you, stranger, for fighting your way here! My name is Jondar. I was tasked to guard the Staff of Stars, and I was traveling with the trade caravan of Khale Fenstor, who is, I am sad to say, no longer among the living. We were ambushed several days ago by an army of creatures, whose leader is a thing of massive size, a giant to be sure.";
+	  	f scroll_rate = 20.000000;
+	}
+	[text*]
+	{
+		activate_quest* = a1_bandits,2;
+		i order = 1;
+		choice = potential_member;
+		sample = s_v_a1_jondar_01_b;
+		screen_text = "We fought hard, but many fell and were devoured on the spot. Worse, as the monsters attacked the caravan, a dark, skeletal creature appeared as from nowhere and destroyed the cart where the Staff was stored. It stole the artifact and fled into the woods. Those who survived the attack were dragged into the recesses of the cave. I managed to escape only moments ago. Allow me to join you and help recover the staff!";
+	  	f scroll_rate = 20.000000;
+	}
+}
+[jondar_after_a1_monsters_hello]
+{
+	[text*]
+	{
+		i order = 0;
+		choice = more;
+		sample = s_v_a1_jondar_02_a;
+		screen_text = "I thank you, stranger, for clearing out the beasts!  My name is Jondar. I was tasked to guard the Staff of Stars, and I was traveling with the trade caravan of Khale Fenstor, who is, I am sad to say, no longer among the living. We were ambushed several days ago by an army of creatures, led by a foul giant. We fought hard, but many fell and were devoured on the spot. Those who survived the attack were dragged into the recesses of the cave, from which I escaped not long ago."
+	  f scroll_rate = 20.000000;
+	}
+	[text*]
+	{
+		i order = 1;
+		choice = potential_member;
+		sample = s_v_a1_jondar_02_b;
+		screen_text = "Worse, as the monsters attacked the caravan, a dark, skeletal creature appeared as from nowhere and destroyed the cart where the Staff was stored. It stole the artifact and fled into the woods.  Allow me to join you and help recover the staff!";
+	  f scroll_rate = 20.000000;
+	}
+	[text*]
+	{
+		choice = potential_member;
+		sample = s_v_a1_jondar_07;
+		screen_text = "So you can use my help after all.  I hoped you'd be back!";
+		f scroll_rate = 20.0;
+	}
+}
+
+[jondar_hire]
+{
+	[text*]
+	{
+		sample = s_v_a1_jondar_03;
+		screen_text = "I thank you!  Now let us journey forth and rid these lands of evil.";
+	  f scroll_rate = 20.000000;
+	}
+}
+[jondar_mp_hello]
+{
+	[text*]
+	{
+		i order = 0;
+		choice = more;
+		sample = s_v_a1_jondar_01_a;
+		screen_text = "I thank you, stranger, for fighting your way here! My name is Jondar. I was tasked to guard the Staff of Stars, and I was traveling with the trade caravan of Khale Fenstor, who is, I am sad to say, no longer among the living. We were ambushed several days ago by an army of creatures, whose leader is a thing of massive size, a giant to be sure."
+	  	f scroll_rate = 20.000000;
+	}
+	[text*]
+	{
+		activate_quest* = a1_bandits,2;
+		i order = 1;
+		sample = s_v_a1_jondar_mp_b;
+		b quest_dialog = true;
+		screen_text = "We fought hard, but many fell and were devoured on the spot. Worse, as the monsters attacked the caravan, a dark, skeletal creature appeared as from nowhere and destroyed the cart where the Staff was stored. It stole the artifact and fled into the woods. Those who survived the attack were dragged into the recesses of the cave. I managed to escape only moments ago.  You must recover the staff!";
+	  	f scroll_rate = 20.000000;
+	}
+	[text*]
+	{
+		//i order = ;
+		sample = s_v_a1_jondar_08;
+		screen_text = "I am just resting before making my way to Arhok.";
+	}
+}
+[jondar_no_hire]
+{
+	[text*]
+	{
+		sample = s_v_a1_jondar_04;
+		screen_text = "I feel you are making a mistake, but cannot stop you. I will wait here for a while in case you change your mind.";
+	  f scroll_rate = 20.000000;
+	}
+}
+[jondar_rehire]
+{
+	[text*]
+	{
+		choice = potential_member;
+		sample = s_v_a1_jondar_06;
+		screen_text = "Have you need of my skills again?";
+	  f scroll_rate = 20.000000;
+	}
+}
+[jondar_hire_rejected]
+{
+	[text*]
+	{
+		choice = potential_member;
+		sample = s_v_a1_jondar_07;
+		screen_text = "So you can use my help after all.  I hoped you'd be back!";
+		f scroll_rate = 20.0;
+	}
+	
+}

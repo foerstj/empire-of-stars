@@ -1,0 +1,203 @@
+[t:dsx_wolf_white,n:0x00400032]
+{
+	[placement]
+	{
+	  p position = 3.64579,1,1.56065,0x0b796d7a;
+	}
+}
+[t:dsx_wolf_white,n:0x00400033]
+{
+	[placement]
+	{
+	  p position = 3.45559,1,3.6535,0x0b796d7a;
+	}
+}
+[t:dsx_wolf_white,n:0x00400034]
+{
+	[placement]
+	{
+	  p position = 2.34848,1,3.90249,0xb4435609;
+	}
+}
+[t:dsx_wolf_white,n:0x00400035]
+{
+	[placement]
+	{
+	  p position = 0.573071,0.786782,1.72045,0xb4435609;
+	}
+}
+[t:bat,n:0x0040003b]
+{
+	[mind]
+	{
+	  b on_enemy_entered_weapon_engage_range_attack = true;
+	}
+	[placement]
+	{
+	  p position = -1.65317,3.6558,-0.457265,0x84287816;
+	}
+}
+[t:bat,n:0x0040003d]
+{
+	[mind]
+	{
+	  b on_enemy_entered_weapon_engage_range_attack = true;
+	}
+	[placement]
+	{
+	  p position = -0.43953,5.77044,0.347838,0x84287816;
+	}
+}
+[t:bat,n:0x0040003e]
+{
+	[mind]
+	{
+	  b on_enemy_entered_weapon_engage_range_attack = true;
+	}
+	[placement]
+	{
+	  p position = 0.152529,3.39596,-0.78999,0x84287816;
+	}
+}
+[t:bat,n:0x0040003f]
+{
+	[mind]
+	{
+	  b on_enemy_entered_weapon_engage_range_attack = true;
+	}
+	[placement]
+	{
+	  p position = 1.0778,4.09425,-1.76767,0x84287816;
+	}
+}
+[t:dsx_furok,n:0x00400030]
+{
+	[placement]
+	{
+	  q orientation = 0,1,0,-5.96046e-008;
+	  p position = 1.79448,0.784057,2.42029,0x3400c7a0;
+	}
+}
+[t:dsx_furok,n:0x00400031]
+{
+	[placement]
+	{
+	  p position = -3.68764,1,3.73738,0x944cc54a;
+	}
+}
+[t:dsx_furok,n:0x0040002e]
+{
+	[placement]
+	{
+	  q orientation = 0,0.707107,0,0.707107;
+	  p position = -2.36303,0.78945,-0.0410696,0x476dd973;
+	}
+}
+[t:dsx_golem_frost,n:0x0040002a]
+{
+	[placement]
+	{
+	  p position = 1.20354,-9.53674e-007,0.619251,0xf168c95a;
+	}
+}
+[t:dsx_golem_frost,n:0x00400028]
+{
+	[placement]
+	{
+	  q orientation = 0,0.707107,0,-0.707107;
+	  p position = 1.55337,0,-1.22115,0x2a6c272b;
+	}
+}
+[t:dsx_golem_frost_ranged,n:0x00400029]
+{
+	[placement]
+	{
+	  p position = -3.86462,0,3.50658,0x54f5d108;
+	}
+}
+[t:dsx_golem_frost_ranged,n:0x0040002b]
+{
+	[placement]
+	{
+	  p position = 2.58412,0,3.61207,0x54f5d108;
+	}
+}
+[t:dsx_frost_giant,n:0x00400042]
+{
+	[aspect]
+	{
+	  f scale_multiplier = 1.6;
+	}
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = change_quest_state("a1_bandits","active",3);
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_killed",0,"on_every_message");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  p position = -0.38663,0,1.8318,0x54f5d108;
+	}
+}
+[t:dsx_golem_frost,n:0x00400027]
+{
+	[placement]
+	{
+	  p position = 1.80689,0,-1.81515,0x41660b57;
+	}
+}
+[t:bat,n:0x0040003a]
+{
+	[mind]
+	{
+	  b on_enemy_entered_weapon_engage_range_attack = true;
+	}
+	[placement]
+	{
+	  q orientation = 0,1,0,0;
+	  p position = 1.25271,0,0.930287,0x41660b57;
+	}
+}
+[t:bat,n:0x0040003c]
+{
+	[mind]
+	{
+	  b on_enemy_entered_weapon_engage_range_attack = true;
+	}
+	[placement]
+	{
+	  q orientation = 0,1,0,0;
+	  p position = 0.910186,0,-1.23953,0x41660b57;
+	}
+}
+[t:dsx_furok,n:0x0040002c]
+{
+	[placement]
+	{
+	  q orientation = 0,-0.382683,0,0.92388;
+	  p position = -3.20021,-1,-2.86165,0x222059a6;
+	}
+}
+[t:dsx_furok,n:0x0040002d]
+{
+	[placement]
+	{
+	  q orientation = 0,5.96046e-008,0,1;
+	  p position = -2.72407,-1,-2.85789,0xd28d269b;
+	}
+}

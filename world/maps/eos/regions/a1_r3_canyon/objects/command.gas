@@ -1,0 +1,55 @@
+[t:cmd_alignment_changer,n:0x003002d6]
+{
+	[cmd_dumb_guy]
+	{
+		alignment_activated = aa_good;
+		alignment_spawn = aa_good;
+	  b change_collide = true;
+	  b change_invincibility = true;
+	  b change_may_attack = true;
+	  b change_may_attacked = true;
+	  b invincible_spawn = true;
+		life_state_spawn = ls_alive_conscious;
+	  b may_attack_spawn = true;
+	  b may_attacked_spawn = true;
+	  i start_state = 1;
+	}
+	[common]
+	{
+		dev_instance_text = "MP JONDAR CHANGER";
+	  b is_single_player = false;
+	}
+	[placement]
+	{
+	  q orientation = 0,1,0,0;
+	  p position = -1.96689,-0.346689,-1.64361,0xc824e84b;
+	}
+}
+[t:cmd_alignment_changer,n:0x003002d7]
+{
+	[cmd_dumb_guy]
+	{
+		alignment_activated = aa_good;
+		alignment_spawn = aa_good;
+	  b change_collide = true;
+	  b change_invincibility = true;
+	  b change_may_attack = true;
+	  b change_may_attacked = true;
+	  b change_selection = false;
+	  b invincible_spawn = true;
+		life_state_spawn = ls_alive_conscious;
+	  b may_attack_spawn = true;
+	  b may_attacked_spawn = true;
+	  i start_state = 1;
+	}
+	[common]
+	{
+		dev_instance_text = "SP JONDAR CHANGER";
+	  b is_multi_player = false;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.707107,0,0.707107;
+	  p position = -0.748714,0,2.87618,0x02a9d45d;
+	}
+}
