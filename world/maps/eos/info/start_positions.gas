@@ -48,7 +48,7 @@
 	}
 	[t:start_group,n:altair]
 	{
-	  b default = true;
+	  b default = false;
 		description = "";
 	  b dev_only = false;
 	  i id = 1698464;
@@ -63,6 +63,29 @@
 			  f distance = 20.000000;
 			  f orbit = 0.000000;
 				position = -0.036085,0.000000,-1.146096,0xB0D6A848;
+			}
+		}
+		[world_levels]
+		{
+		}
+	}
+	[t:start_group,n:altair_moon]
+	{
+	  b default = true;
+		description = "";
+	  b dev_only = false;
+	  i id = 1698464;
+		screen_name = "Altair Moon";
+		[start_position]
+		{
+		  i id = 1;
+			position = -0.634617,0.000000,-0.348564,0x49C0E464;
+			[camera]
+			{
+			  f azimuth = 0.500000;
+			  f distance = 20.000000;
+			  f orbit = 0.000000;
+				position = 0.000000,0.000000,0.000000,0x49C0E464;
 			}
 		}
 		[world_levels]

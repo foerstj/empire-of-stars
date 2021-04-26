@@ -114,322 +114,6 @@
 	  p position = -0.407269,0,-0.137002,0xdd5ca07d;
 	}
 }
-[t:play_chapter_sound,n:0x081007f3]
-{
-	[placement]
-	{
-	  p position = -3.14674,-9.53674e-007,-3.40555,0x7086f37e;
-	}
-	[play_chapter_sound]
-	{
-		sample = "s_e_level_up_quest_update";
-	}
-}
-[t:interface_fade,n:0x081007f4]
-{
-	[interface_fade]
-	{
-	  f duration = 7;
-		interface = "dsx_chapter_5";
-	}
-	[placement]
-	{
-	  p position = -0.830528,-9.53674e-007,1.29334,0x8e76f9a1;
-	}
-}
-[t:trigger_generic,n:0x08100018]
-{
-	[common]
-	{
-		dev_instance_text = "CHECK QUEST BITS FOR LIGHTS";
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = send_world_message("we_req_activate",0x08100052,0f,"0x4004","every",0), doc("lights check");
-				action* = send_world_message("we_req_activate",0x081007F2,0f,"all_conditions","every",0), doc("update map marker");
-				action* = mood_change("map_expansion_a9_r1_mountaintop");
-			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(2.500000,1.000000,2.500000,"on_every_enter");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-			[*]
-			{
-				action* = send_world_message("we_req_deactivate",0x08100076,0f,"default","every",0), doc("lights out");
-			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(2.500000,1.000000,2.500000,"on_every_last_leave");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-			[*]
-			{
-				action* = set_player_world_location("clock"), doc("mp location set");
-			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(2.500000,1.000000,2.500000,"on_every_enter");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = false;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-			[*]
-			{
-				action* = send_world_message("we_req_activate",0x081007F3,0f,"all_conditions","every",0);
-				action* = send_world_message("we_req_activate",0x081007F4,0f,"all_conditions","every",0);
-			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(2.500000,1.000000,2.500000,"on_first_enter"), doc("chapter 5");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = false;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = true;
-			  b start_active = true;
-			}
-			[*]
-			{
-				action* = send_world_message("we_req_activate",0x0810083A,0f,"default","every",0);
-			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(2.500000,1.000000,2.500000,"on_first_enter");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = false;
-			  b single_shot = true;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  q orientation = 0,-0.382683,0,0.92388;
-	  p position = 0.0341353,-9.53674e-007,0.00983429,0xb6e40992;
-	}
-}
-[t:check_quest_bits,n:0x08100052]
-{
-	[check_quest_bits]
-	{
-		bool_variable = "disp_a8_used";
-	  i level = 1;
-		map_name = "map_expansion";
-	  i object = 1;
-	  i region = 129;
-	  i section = 80;
-	  x send_to_scid = 0x08100076;
-	}
-	[common]
-	{
-		dev_instance_text = "QBIT CHECKER FOR DISP LIGHTS";
-	}
-	[placement]
-	{
-	  q orientation = 0,0.743145,0,0.669131;
-	  p position = 1.45562,0,3.43178,0xb6e40992;
-	}
-}
-[t:trigger_generic,n:0x08100076]
-{
-	[common]
-	{
-		dev_instance_text = "SWITCHER FOR DISP LIGHTS";
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = send_world_message("we_req_activate",0x0810007A,0f,"default","every",0);
-				action* = send_world_message("we_req_activate",0x08100083,0f,"default","every",0);
-				action* = send_world_message("we_req_activate",0x08100082,0f,"default","every",0);
-				action* = send_world_message("we_req_activate",0x0810007D,0f,"default","every",0);
-			  b can_self_destruct = true;
-				condition* = receive_world_message("we_req_activate",0,"on_every_message");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-			[*]
-			{
-				action* = send_world_message("we_req_deactivate",0x08100083,0f,"default","every",0);
-				action* = send_world_message("we_req_deactivate",0x08100082,0f,"default","every",0);
-				action* = send_world_message("we_req_deactivate",0x0810007D,0f,"default","every",0);
-				action* = send_world_message("we_req_deactivate",0x0810007A,0f,"default","every",0);
-			  b can_self_destruct = true;
-				condition* = receive_world_message("we_req_deactivate",0,"on_every_message");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  q orientation = 0,0.782608,0,0.622515;
-	  p position = 3.35143,-4.29153e-006,1.49411,0xb6e40992;
-	}
-}
-[t:trigger_generic,n:0x08100078]
-{
-	[common]
-	{
-		dev_instance_text = "TURN OFF PARTICLE SHOOTERS";
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = send_world_message("we_req_deactivate",0x08100073,0f,"default","every",0);
-				action* = send_world_message("we_req_deactivate",0x0810009A,0f,"default","every",0);
-				action* = send_world_message("we_req_deactivate",0x0810008A,0f,"default","every",0);
-				action* = send_world_message("we_req_deactivate",0x08100093,0f,"default","every",0);
-			  b can_self_destruct = true;
-				condition* = receive_world_message("we_req_activate",0,"on_every_message");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  q orientation = 0,0.21644,0,0.976296;
-	  p position = -1.39585,-7.45058e-009,-3.43884,0xb6e40992;
-	}
-}
-[t:trigger_generic,n:0x081000a3]
-{
-	[common]
-	{
-		dev_instance_text = "TURN ON PARTICLE SHOOTERS";
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = send_world_message("we_req_activate",0x08100073,0f,"default","every",0);
-				action* = send_world_message("we_req_activate",0x0810009A,0f,"default","every",0);
-				action* = send_world_message("we_req_activate",0x0810008A,0f,"default","every",0);
-				action* = send_world_message("we_req_activate",0x08100093,0f,"default","every",0);
-			  b can_self_destruct = true;
-				condition* = receive_world_message("we_req_activate",0,"on_every_message");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  p position = 1.56682,-8.10623e-006,-3.44845,0xb6e40992;
-	}
-}
-[t:update_map_marker,n:0x081007f2]
-{
-	[placement]
-	{
-	  p position = -3.85887,1.90735e-006,1.19931,0xb6e40992;
-	}
-	[update_map_marker]
-	{
-		marker_name = "clock";
-	}
-}
-[t:set_quest_bits,n:0x0810083a]
-{
-	[common]
-	{
-		dev_instance_text = "ALLOW MULTIPLAYER BUTTON PUSHER AND PAD PEOPLE TO USE DEVICE";
-	}
-	[placement]
-	{
-	  p position = -1.35827,0,3.51837,0xb6e40992;
-	}
-	[set_quest_bits]
-	{
-		bool_variable = "disp_a8_used";
-	}
-}
-[t:use_point,n:0x0810005a]
-{
-	[placement]
-	{
-	  p position = -1.17926,4.33244,-0.150321,0x910144c6;
-	}
-}
-[t:use_point,n:0x0810005d]
-{
-	[placement]
-	{
-	  p position = 1.17117,4.39385,-0.124236,0x910144c6;
-	}
-}
-[t:check_quest_bits,n:0x08100070]
-{
-	[check_quest_bits]
-	{
-		bool_variable = "disp_a8_used";
-	  i level = 1;
-		map_name = "map_expansion";
-	  i object = 1;
-	  i region = 129;
-	  i section = 80;
-	  x send_to_scid = 0x0810005E;
-	}
-	[common]
-	{
-		dev_instance_text = "QBIT CHECKER FOR ELEVATOR ACTIVATION";
-	}
-	[placement]
-	{
-	  q orientation = 0,0.99863,0,-0.0523361;
-	  p position = -0.0972392,7.79303,-0.827086,0x910144c6;
-	}
-}
 [t:use_point,n:0x08100146]
 {
 	[placement]
@@ -1441,5 +1125,34 @@
 	{
 	  q orientation = 0,0.707107,0,0.707107;
 	  p position = 3.35423,0,0.380173,0x6791cd5d;
+	}
+}
+[t:trigger_generic,n:0x0810003c]
+{
+	[common]
+	{
+		dev_instance_text = "START POS MOOD";
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = mood_change("eos_altair_moon_teleport");
+			  b can_self_destruct = true;
+				condition* = party_member_within_sphere(10.000000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  p position = -1.52426,0,-1.84929,0x49c0e464;
 	}
 }
