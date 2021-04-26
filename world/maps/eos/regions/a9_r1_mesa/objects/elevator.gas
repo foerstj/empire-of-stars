@@ -1,0 +1,45 @@
+[t:elevator_instant_4s_1c,n:0x0810005e]
+{
+	[common]
+	{
+		dev_instance_text = "DISPLACER GIZMO WITH MATCH CHECK";
+	}
+	[elevator_instant_4s_1c]
+	{
+	  i connect_door_location1_level1 = 12;
+	  i connect_door_location1_level2 = 11;
+	  i connect_door_location2_level1 = 12;
+	  i connect_door_location2_level2 = 11;
+	  x connect_node_location1 = 0xB6E40992;
+	  x connect_node_location2 = 0x09F46DAB;
+	  f duration_location1_moving_to_lv1 = 22;
+	  f duration_location1_moving_to_lv2 = 3;
+	  f duration_location2_moving_to_lv1 = 22;
+	  f duration_location2_moving_to_lv2 = 3;
+	  i e2_connect_door_location1_level1 = 9;
+	  i e2_connect_door_location1_level2 = 10;
+	  i e2_connect_door_location2_level1 = 9;
+	  i e2_connect_door_location2_level2 = 10;
+	  x e2_elevator_node = 0x8D3A85E1;
+	  i elevator_door_location1_level1 = 2;
+	  i elevator_door_location1_level2 = 2;
+	  i elevator_door_location2_level1 = 2;
+	  i elevator_door_location2_level2 = 2;
+	  x elevator_node = 0x910144C6;
+	  f location1_arrived_at_lv2_delay = 1;
+	  x location1_arrived_at_lv2_scid = 0x08100078;
+		location1_moving_to_lv1_actioninfo = "map_expansion_a9_r1_dp_down";
+		location1_moving_to_lv2_actioninfo = "map_expansion_teleport_up";
+	  f location1_moving_to_lv2_delay = 0;
+	  x location1_moving_to_lv2_scid = 0x081000A3;
+		location2_moving_to_lv1_actioninfo = "map_expansion_a8_r3_dp_down";
+		location2_moving_to_lv2_actioninfo = "map_expansion_teleport_up";
+		material = "hub";
+	  x other_elevator = 0x073000C2;
+	}
+	[placement]
+	{
+	  q orientation = 0,1,0,-2.96831e-005;
+	  p position = -0.135241,7.87463,0.592361,0x910144c6;
+	}
+}

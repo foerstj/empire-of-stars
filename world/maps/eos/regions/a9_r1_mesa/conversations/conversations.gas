@@ -1,0 +1,53 @@
+[therg_hello]
+{
+	[text*]
+	{
+		choice = more;
+	  	i order = 0;
+		sample = s_v_a9_therg_01;
+		screen_text = "Surprised to see me yet again? Surely you must have guessed that my role in this was more than just as an historian. I am the guardian of the Utraean artifacts and am responsible for their safekeeping. It is a grave task, for in the past my people created and controlled many great powers, and did not always use them wisely.  Once we realized our folly the elders appointed the great historians to be guardians of our legacy.  As long as we remember our vanity, we will not repeat it.";
+	  	f scroll_rate = 20.0;
+	}
+	[text*]
+	{
+		choice = more;
+	  	i order = 1;
+		sample = s_v_a9_therg_02;
+		screen_text = "However, we still pay for past misdeeds.  In our arrogance, we captured and imprisoned the Shadowjumper to harness his raw power for our own machinations. And now we are reaping the sorrow of that deed: the Shadowjumper has stolen the Staff of Stars and intends to use it to destroy the Great Clock. The Great Clock has maintained the very weather and elements of this world. He would destroy the Clock and unleash its power explosively upon our world.";
+	  	f scroll_rate = 20.0;
+	}
+	[text*]
+	{	  	i order = 2;
+		sample = s_v_a9_therg_03;
+		activate_quest* = a1_staff,10;
+	 	b quest_dialog = true;
+		screen_text = "You can prevent this horror. You will find the Shadowjumper in the chamber that houses the Clock's mechanism. Destroy him before he is able to use the Staff of Stars to disrupt the Clock. Defeat the Shadowjumper, and you will surely win your way home, and we will be able to continue repairing the damage we wrought in the past. Fail, and all that you know will be destroyed.  This is your last task, hero. Perhaps there is still hope that the legacy of the Utraeans will not always be of one of great sorrow.";
+		f scroll_rate = 20.0;
+	}
+	[text*]
+	{
+		sample = s_v_a9_therg_04;
+		screen_text = "You must hurry. The time draws near when the Shadowjumper will destroy the Clock!";
+	  f scroll_rate = 20.0;
+	}
+}
+[therg_during_quest]
+{
+	[text*]
+	{
+		sample = s_v_a9_therg_04;
+		screen_text = "You must hurry. The time draws near when the Shadowjumper will destroy the Clock!";
+	  f scroll_rate = 20.0;
+	}
+}
+[therg_after_victory]
+{
+	[text*]
+	{
+		sample = s_v_a9_therg_05;
+		screen_text = "We are forever in your debt, hero. We thank you and the ghosts of my people thank you, for you have given us a chance at redemption.";
+	  f scroll_rate = 20.0;
+	}
+}
+
+
