@@ -1,15 +1,3 @@
-[t:use_point,n:0x0030027b]
-{
-	[aspect]
-	{
-	  f scale_multiplier = 1.0427;
-	}
-	[placement]
-	{
-	  q orientation = 0,0.920505,0,-0.390731;
-	  p position = 0.588114,0,-0.509546,0x0b8c03f8;
-	}
-}
 [t:trigger_change_mood_box,n:0x003001c7]
 {
 	[common]
@@ -40,99 +28,6 @@
 	  p position = 3.94276,0,1.82021,0xcf6febc3;
 	}
 }
-[t:accumulate_trigger,n:0x003002d8]
-{
-	[common]
-	{
-		dev_instance_text = "MP JONDAR ACCUM";
-	  b is_single_player = false;
-	}
-	[generic_accumtrigger]
-	{
-	  i num_til_send = 2;
-	  x send_to_scid = 0x003002D6;
-	}
-	[placement]
-	{
-	  q orientation = 0,0.707107,0,0.707107;
-	  p position = -3.85929,0,-2.88653,0x0a5063ef;
-	}
-}
-[t:use_point,n:0x0030027c]
-{
-	[aspect]
-	{
-	  f scale_multiplier = 1.01367;
-	}
-	[placement]
-	{
-	  q orientation = 0,-0.182236,0,0.983255;
-	  p position = 0.748436,-3.94403,0.00916672,0xcfe9c96e;
-	}
-}
-[t:trigger_generic,n:0x00300456]
-{
-	[common]
-	{
-		dev_instance_text = "REDISTRIBUTE POTIONS TUT TIP";
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = send_world_message("we_req_activate",0x00300457,3f,"all_conditions","every",0);
-			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(10.000000,2.100000,0.250000,"on_first_enter");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = false;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = true;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  q orientation = 0,1,0,0;
-	  p position = -1.85698,-0.335698,-0.584724,0xc824e84b;
-	}
-}
-[t:accumulate_trigger,n:0x003002d9]
-{
-	[common]
-	{
-		dev_instance_text = "SP JONDAR ACCUM";
-	  b is_multi_player = false;
-	}
-	[generic_accumtrigger]
-	{
-	  i num_til_send = 2;
-	  x send_to_scid = 0x003002D7;
-	}
-	[placement]
-	{
-	  q orientation = 0,0.707107,0,0.707107;
-	  p position = 0.719311,0,2.89338,0x02a9d45d;
-	}
-}
-[t:tutorial_tip,n:0x00300457]
-{
-	[common]
-	{
-		dev_instance_text = "POTIONS TUTORIAL TIP";
-	}
-	[placement]
-	{
-	  p position = -2.34282,0,0.645954,0x02a9d45d;
-	}
-	[tip]
-	{
-		tip = "dsx_tip_4";
-	}
-}
 [t:trigger_generic,n:0x003001d3]
 {
 	[common]
@@ -160,18 +55,6 @@
 	{
 	  q orientation = 0,-0.707107,0,0.707107;
 	  p position = 1.59654,0,0.546579,0xbc2879b7;
-	}
-}
-[t:use_point,n:0x00300281]
-{
-	[aspect]
-	{
-	  f scale_multiplier = 1.03836;
-	}
-	[placement]
-	{
-	  q orientation = 0,0.190809,0,-0.981627;
-	  p position = 1.04445,0,1.1541,0x46401681;
 	}
 }
 [t:trigger_generic,n:0x003001d6]
@@ -207,73 +90,6 @@
 	[placement]
 	{
 	  p position = -1.35789,9.53674e-007,0.593218,0xb0f887cd;
-	}
-}
-[t:use_point,n:0x00300294]
-{
-	[aspect]
-	{
-	  f scale_multiplier = 0.914438;
-	}
-	[placement]
-	{
-	  q orientation = 0,0.190809,0,0.981627;
-	  p position = -2.43573,2.38419e-006,3.40019,0xae9dee54;
-	}
-}
-[t:use_point,n:0x00300072]
-{
-	[placement]
-	{
-	  p position = -1.50277,4.76837e-007,0.0407257,0x4bdcaa70;
-	}
-}
-[t:use_point,n:0x003001df]
-{
-	[placement]
-	{
-	  p position = 2.26529,0,0.688095,0x4bdcaa70;
-	}
-}
-[t:use_point,n:0x00300192]
-{
-	[placement]
-	{
-	  p position = -2.56611,0,0.4767,0xd400200b;
-	}
-}
-[t:use_point,n:0x00300296]
-{
-	[aspect]
-	{
-	  f scale_multiplier = 1.08048;
-	}
-	[placement]
-	{
-	  q orientation = 0,0.173648,0,-0.984808;
-	  p position = 2.31589,0,1.59341,0xacb880d9;
-	}
-}
-[t:blocking_object,n:0x0030020a]
-{
-	[aspect]
-	{
-	  f scale_multiplier = 0.1;
-	}
-	[placement]
-	{
-	  p position = -3.50153,-5.72205e-006,-0.547194,0xa20c594a;
-	}
-}
-[t:blocking_object,n:0x0030021c]
-{
-	[aspect]
-	{
-	  f scale_multiplier = 0.1;
-	}
-	[placement]
-	{
-	  p position = -3.56764,-5.24521e-006,0.517475,0xa20c594a;
 	}
 }
 [t:trigger_change_mood_box,n:0x00300081]
@@ -333,18 +149,6 @@
 	  p position = 1.51059,0,2.09359,0xc879b6da;
 	}
 }
-[t:update_map_marker,n:0x0030006f]
-{
-	[placement]
-	{
-	  q orientation = 0,0.707107,0,0.707107;
-	  p position = -0.748047,-11.5045,-11.5374,0x094e90ad;
-	}
-	[update_map_marker]
-	{
-		marker_name = "canyon";
-	}
-}
 [t:trigger_change_mood_box,n:0x0030019c]
 {
 	[common]
@@ -354,7 +158,6 @@
 			[*]
 			{
 				action* = mood_change("map_expansion_a1_giantcave_quick");
-				action* = send_world_message("we_req_activate",0x0030006F,0f,"all_conditions","every",0);
 			  b can_self_destruct = true;
 				condition* = party_member_within_bounding_box(0.500000,2.100000,3.000000,"on_every_enter");
 			  f delay = 0.000000;
@@ -364,21 +167,6 @@
 				occupants_group = ;
 			  f reset_duration = 0.000000;
 			  b single_player = true;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-			[*]
-			{
-				action* = set_player_world_location("canyon");
-			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(0.500000,2.100000,3.000000,"on_every_enter");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = false;
 			  b single_shot = false;
 			  b start_active = true;
 			}
@@ -451,52 +239,6 @@
 	  p position = 0.319323,-11.8203,-4.21652,0x094e90ad;
 	}
 }
-[t:trigger_generic,n:0x0030045a]
-{
-	[common]
-	{
-		dev_instance_text = "ORANGE PORTRAIT TUTORIAL TIP";
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = send_world_message("we_req_activate",0x0030045B,0f,"all_conditions","every",0);
-			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(3.000000,2.100000,0.250000,"on_first_enter");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = false;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = true;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  q orientation = 0,8.9407e-008,0,1;
-	  p position = 0.314548,-11.1994,-10.356,0x094e90ad;
-	}
-}
-[t:tutorial_tip,n:0x0030045b]
-{
-	[common]
-	{
-		dev_instance_text = "ORANGE PORTRAIT TUTORIAL TIP";
-	}
-	[placement]
-	{
-	  q orientation = 0,0.707107,0,0.707107;
-	  p position = 0.585804,-11.3586,-11.2343,0x094e90ad;
-	}
-	[tip]
-	{
-		tip = "dsx_tip_6";
-	}
-}
 [t:trigger_change_mood_box,n:0x0030007d]
 {
 	[common]
@@ -553,51 +295,6 @@
 	{
 	  q orientation = 0,1,0,1.78814e-007;
 	  p position = 1.82999,0,-1.72078,0x031bf4c7;
-	}
-}
-[t:trigger_generic,n:0x00300458]
-{
-	[common]
-	{
-		dev_instance_text = "CONTROL GROUPS TUTORIAL TIP";
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = send_world_message("we_req_activate",0x00300459,0f,"all_conditions","every",0);
-			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(3.000000,2.100000,0.250000,"on_first_enter");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = false;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = true;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  q orientation = 0,0.707107,0,-0.707107;
-	  p position = 0.0939865,-0.170354,2.04503,0xd03e6e84;
-	}
-}
-[t:tutorial_tip,n:0x00300459]
-{
-	[common]
-	{
-		dev_instance_text = "CONTROL GROUPS TUTORIAL TIP";
-	}
-	[placement]
-	{
-	  p position = -0.79348,0.295783,1.77401,0xd03e6e84;
-	}
-	[tip]
-	{
-		tip = "dsx_tip_5";
 	}
 }
 [t:trigger_change_mood_box,n:0x003000c2]
@@ -688,66 +385,6 @@
 	{
 	  q orientation = 0,-2.98023e-008,0,1;
 	  p position = -0.0593014,4,-0.279999,0xe0bb18bc;
-	}
-}
-[t:use_point,n:0x00300231]
-{
-	[aspect]
-	{
-	  f scale_multiplier = 1.04982;
-	}
-	[placement]
-	{
-	  q orientation = 0,-0.587785,0,0.809017;
-	  p position = 1.43117,0,-1.52013,0x5b708e49;
-	}
-}
-[t:use_point,n:0x0030028a]
-{
-	[aspect]
-	{
-	  f scale_multiplier = 1.04982;
-	}
-	[placement]
-	{
-	  q orientation = 0,-0.587785,0,0.809017;
-	  p position = 1.42886,0,0.462784,0x5b708e49;
-	}
-}
-[t:use_point,n:0x00300230]
-{
-	[aspect]
-	{
-	  f scale_multiplier = 0.974905;
-	}
-	[placement]
-	{
-	  q orientation = 0,0.66262,0,0.748956;
-	  p position = 0.804909,0,-2.55606,0x79c5eec0;
-	}
-}
-[t:use_point,n:0x0030028b]
-{
-	[aspect]
-	{
-	  f scale_multiplier = 0.974905;
-	}
-	[placement]
-	{
-	  q orientation = 0,0.66262,0,0.748956;
-	  p position = 0.289139,0,-1.49483,0x79c5eec0;
-	}
-}
-[t:use_point,n:0x00300295]
-{
-	[aspect]
-	{
-	  f scale_multiplier = 1.00365;
-	}
-	[placement]
-	{
-	  q orientation = 0,-0.71325,0,0.700909;
-	  p position = 1.40815,-1.25,-1.67502,0x22a0a6ca;
 	}
 }
 [t:set_bool,n:0x003002d3]
