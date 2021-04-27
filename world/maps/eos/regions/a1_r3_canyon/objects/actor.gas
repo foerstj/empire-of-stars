@@ -106,71 +106,6 @@
 	  p position = -0.372646,-3.95828,-1.53431,0xcfe9c96e;
 	}
 }
-[t:jondar,n:0x0030004e]
-{
-	[aspect]
-	{
-	  f life = 49;
-	  f mana = 30;
-	  f max_life = 49;
-	  f max_mana = 30;
-	}
-	[common]
-	{
-		dev_instance_text = "SP JONDAR";
-	  b is_multi_player = false;
-	}
-	[conversation]
-	{
-		[conversations]
-		{
-			* = jondar_after_a1_monsters_hello;
-			* = jondar_dismiss;
-			* = jondar_hello;
-			* = jondar_hire;
-			* = jondar_hire_rejected;
-			* = jondar_no_hire;
-			* = jondar_rehire;
-		}
-	}
-	[placement]
-	{
-	  q orientation = 0,0.923879,0,-0.382684;
-	  p position = 1.31015,4,0.816994,0x080c04f9;
-	}
-}
-[t:jondar,n:0x00300194]
-{
-	[aspect]
-	{
-	  b is_invincible = true;
-	  f life = 49;
-	  f mana = 30;
-	  f max_life = 49;
-	  f max_mana = 30;
-	}
-	[common]
-	{
-		dev_instance_text = "MP JONDAR";
-	  b is_single_player = false;
-	}
-	[conversation]
-	{
-		[conversations]
-		{
-			* = jondar_mp_hello;
-		}
-	}
-	[mind]
-	{
-		jat_talk = world\ai\jobs\common\job_talk.skrit;
-	}
-	[placement]
-	{
-	  q orientation = 0,0.92388,0,-0.382684;
-	  p position = 2.13799,4,1.38479,0x080c04f9;
-	}
-}
 [t:deer_doe,n:0x003001b1]
 {
 	[placement]
@@ -380,8 +315,7 @@
 {
 	[placement]
 	{
-	  q orientation = 0,1,0,0;
-	  p position = -0.35564,3.97256,1.46935,0xca4c1972;
+	  p position = 0.384413,0,1.91032,0x053c633a;
 	}
 }
 [t:dsx_grub,n:0x003001fb]
