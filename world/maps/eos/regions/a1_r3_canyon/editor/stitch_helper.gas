@@ -2,16 +2,6 @@
 {
 	source_region_guid = 0x00000003;
 	source_region_name = a1_r3_canyon;
-	[t:stitch_editor,n:a1_r1_town]
-	{
-		dest_region = a1_r1_town;
-		[node_ids]
-		{
-			0x11010201 = 0x687CE8AB,2;
-			0x11010202 = 0x7A6CA52F,1;
-			0x11010203 = 0xE3D91FAC,5;
-		}
-	}
 	[t:stitch_editor,n:a1_r4_giantcave]
 	{
 		dest_region = a1_r4_giantcave;
@@ -20,6 +10,14 @@
 			0x11020501 = 0x68AC240F,2;
 			0x11020502 = 0x094E90AD,10;
 			0x11020503 = 0xBFF36E66,4;
+		}
+	}
+	[t:stitch_editor,n:a9_r1_mesa]
+	{
+		dest_region = a9_r1_mesa;
+		[node_ids]
+		{
+			0x11010202 = 0x7A6CA52F,1;
 		}
 	}
 }

@@ -245,35 +245,6 @@
 	  p position = 1.61013,0,0.204121,0x18ecfe24;
 	}
 }
-[t:trigger_generic,n:0x081006ca]
-{
-	[common]
-	{
-		dev_instance_text = "BOOKMARK MOOD";
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = mood_change("eos_altair_moon_default");
-			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(4.000000,2.100000,2.000000,"on_every_enter");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  p position = 0.0461731,0,0.00630951,0xf1d6691e;
-	}
-}
 [t:chunks_ice_spire_03,n:0x0810069a]
 {
 	[aspect]
@@ -1954,73 +1925,6 @@
 	[placement]
 	{
 	  p position = 1.12062,0,0.988739,0x189089fa;
-	}
-}
-[t:trigger_generic,n:0x08100079]
-{
-	[common]
-	{
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = mood_change("eos_altair_moon_default");
-			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(3.000000,2.100000,0.250000,"on_every_enter");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  p position = 0.354408,-11.2178,-10.457,0xf6252467;
-	}
-}
-[t:trigger_generic,n:0x081000ab]
-{
-	[common]
-	{
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = mood_change("eos_altair_moon_cave");
-			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(3.000000,2.100000,0.250000,"on_every_enter");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  p position = 0.373947,-11.1,-9.47727,0xf6252467;
-	}
-}
-[t:set_bool,n:0x081006c9]
-{
-	[placement]
-	{
-	  p position = 0.442767,-11.6424,-11.6424,0xf6252467;
-	}
-	[set_bool]
-	{
-		bool_variable = "in_area_nine";
 	}
 }
 [t:trigger_generic,n:0x081007f1]
