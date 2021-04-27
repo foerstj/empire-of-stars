@@ -1,0 +1,190 @@
+// Desert Braaks with stats of normal Snow Braaks.
+[t:template,n:eos_braak_vega]
+{
+	category_name = "1W_evil_c";
+	doc = "braak, melee (desert)";
+	specializes = base_braak;
+	[actor]
+	{
+		[skills]
+		{
+			strength =  	12, 0;
+			intelligence =  9, 0;
+			dexterity =  11, 0;
+            melee =  8,  0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 113;
+		life = 189;
+        max_life = 189;
+		mana = 10;
+		max_mana = 10;
+        scale_base = 0.8;  // smaller
+		[textures] { 0 = b_c_ecm_bk-02; }
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 42;
+		damage_min = 38;
+	}
+	[common]
+	{
+		screen_name="Jungle Braak";
+		membership = party_braak_boss, monster;
+	}
+	[defend] { defense=52; }
+	[inventory]
+	{
+		[pcontent]
+		{
+			[oneof*]
+			{
+				[all*]
+				{
+       				chance = 0.02;
+	                il_main = #spell/8-14;
+				}
+				[oneof*]
+				{
+					chance = 0.25;
+					il_main = #*/30-38;
+					il_main = #armor/15-73;
+	                il_main = #weapon/30-38;
+				}
+                [oneof*]
+				{
+	            	chance = 0.004;
+	                il_main = #weapon/-rare(1)/32-44;
+	                il_main = #armor/-rare(1)/72-104;
+                    il_main = #*/-rare(1)/32-44;
+                }
+				[oneof*]
+				{
+                	chance = 0.002;
+	                il_main = #weapon/-unique(2)/32-44;
+	                il_main = #armor/-unique(2)/72-104;
+                    il_main = #*/-unique(2)/32-44;
+	            }
+				[gold*]
+				{
+					chance = 0.125;
+					max = 196;
+					min = 131;
+				}
+			}
+		}
+	}
+	[mind]
+	{
+		jat_brain							= world\ai\jobs\common\brain_hero.skrit
+			?actor_joins_existing_party			= true;
+	}
+}
+
+[t:template,n:eos_braak_vega_boss_01]
+{
+	category_name = "1W_evil_c";
+	doc = "braak, melee (desert)boss 01";
+	specializes = base_braak;
+	[actor]
+	{
+		[skills]
+		{
+			strength 	=  	13, 0;
+			intelligence =  10, 0;
+			dexterity 	=  11, 0;
+            melee 		=  10,  0;
+		}
+	}
+	[aspect]
+	{
+		textures:0 = b_c_ecm_bk-03;
+		experience_value = 180;
+		life = 279;
+        max_life = 279;
+		mana = 10;
+		max_mana = 10;
+        scale_base = 0.8;  // smaller
+		[textures] { 0 = b_c_ecm_bk-04; }
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 48;
+		damage_min = 42;
+	}
+	[body]
+	{
+		max_move_velocity = 7.0;
+	}
+	[common]
+	{
+		screen_name="Jungle Braak Chieftain";
+		membership=monster,immune_charm,immune_control,immune_freeze,immune_polymorph,immune_align_change,immune_explode;
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				single_shot = true;
+				no_trig_bits = true;
+				action* = call_sfx_script("unique_ray_yellow(sgx)");
+			}
+		}
+	}
+	[defend] { defense=88; }
+	[inventory]
+	{
+		[pcontent]
+		{
+			[all*]
+			{
+				[all*]
+				{
+	                il_main = #spell/12-14;
+				}
+				[oneof*]
+				{
+					il_main = #armor,f/90-108;
+	                il_main = #weapon/35-38;
+				}
+				[oneof*]
+				{
+	            	chance = 0.004;
+	                il_main = #weapon/-rare(1)/41-52;
+	                il_main = #armor/-rare(1)/109-127;
+                    il_main = #*/-rare(1)/41-52;
+                }
+				[oneof*]
+				{
+                	chance = 0.2;
+	                il_main = #weapon/-unique(2)/41-52;
+	                il_main = #armor/-unique(2)/109-127;
+                    il_main = #*/-unique(2)/41-52;
+	            }
+				[gold*]
+				{
+					max = 364;
+					min = 221;
+					min_pile = 57;
+					piles = 2 - 3;
+				}
+			}
+		}
+	}
+	[mind]
+	{
+		jat_fidget			= world\ai\jobs\common\job_fidget.skrit
+			?social				= 0.75
+			&friend_template 	= false
+			&friends			= party_braak_boss
+			&still				= false;
+
+		jat_brain							= world\ai\jobs\common\brain_hero.skrit
+			?actor_creates_own_party			= true
+			&party_template						= "party_braak_boss";
+	}
+}
