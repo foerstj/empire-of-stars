@@ -1,0 +1,78 @@
+// Giant Skrubb, stats from white drake
+[t:template,n:eos_giant_skrubb]
+{
+	category_name = "1W_evil_d";
+	doc = "pg_skrubb";
+	specializes = base_skrubb;
+	[common]
+	{
+		screen_name="Giant Skrubb";
+		membership = monster,immune_freeze;
+	}
+	[actor]
+	{
+		[skills]
+		{
+			strength =  21, 0;
+			intelligence =  13, 0;
+			dexterity =  12, 0;
+            melee =  20,  0;
+            combat_magic = 20, 0;
+		}
+	}
+	[aspect]
+	{
+		draw_shadow = false;
+		experience_value = 370;
+		life = 936;
+		max_life = 936;
+		mana = 26;
+        max_mana = 26;
+		model = m_c_edm_sb_pos_1;
+		[voice]
+		{
+			[cast]			{ * = s_e_attack_skrubb; }
+			[die]			{ priority = high; * = s_e_die_skrubb_SED; }
+			[enemy_spotted]	{ priority = high; * = s_e_call_skrubb_small_SED; }
+			[hit_glance]	{ priority = low; * = s_e_hit_skrubb; }
+		}
+	}
+	[attack]
+	{
+		attack_range = 3;
+		damage_max = 120;
+		damage_min = 100;
+		reload_delay = 1;
+	}
+   	[defend] { defense=102; }
+	[inventory]
+	{
+		selected_active_location = il_active_primary_spell;
+		[other] { il_active_primary_spell=spell_giant_skrubb_spit; }
+
+		[pcontent]
+		{
+			[oneof*]
+			{
+				chance = 0.8;
+				il_main = #*/38-42;
+			}
+		}
+	}
+	[mind]
+	{
+		actor_auto_fidgets = false;
+		movement_orders = mo_hold;
+		actor_weapon_preference			= WP_MAGIC;
+		actor_auto_switches_to_magic	= true;
+		actor_auto_switches_to_karate	= false;
+		actor_auto_switches_to_melee	= false;
+
+		melee_engage_range = 10;
+		personal_space_range = 4.7;
+		on_enemy_entered_ocz_attack = true;
+		ranged_engage_range = 10.0;
+		sight_range = 10.0;
+		sight_origin_height	= 2;
+	}
+}
