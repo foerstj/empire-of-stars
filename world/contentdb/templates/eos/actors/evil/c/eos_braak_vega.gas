@@ -1,43 +1,47 @@
-// Desert Braaks with stats of normal Snow Braaks.
+// Desert Braak with stats of kikclaw_2
 [t:template,n:eos_braak_vega]
 {
 	category_name = "1W_evil_c";
 	doc = "braak, melee (desert)";
 	specializes = base_braak;
+	[common]
+	{
+		screen_name="Jungle Braak";
+		membership = party_braak_boss, monster;
+	}
+
 	[actor]
 	{
 		[skills]
 		{
-			strength =  	12, 0;
-			intelligence =  9, 0;
-			dexterity =  11, 0;
-            melee =  8,  0;
+			strength 	 	=  15, 0;
+			intelligence   	=  8, 0;
+			dexterity 	 	=  10, 0;
+			melee 	 		=  13, 0;
 		}
 	}
 	[aspect]
 	{
-		experience_value = 113;
-		life = 189;
-        max_life = 189;
-		mana = 10;
-		max_mana = 10;
+		experience_value = 348;
+		life 			= 173;
+		max_life 		= 173;
+		mana 			= 10;
+		max_mana 		= 10;
+
         scale_base = 0.8;  // smaller
 		[textures] { 0 = b_c_ecm_bk-02; }
 	}
 	[attack]
 	{
 		attack_range = 0.5;
-		damage_max = 42;
-		damage_min = 38;
+		damage_max = 73;
+		damage_min = 67;
 	}
-	[common]
-	{
-		screen_name="Jungle Braak";
-		membership = party_braak_boss, monster;
-	}
-	[defend] { defense=52; }
+	[defend] { defense = 101; }
+
 	[inventory]
 	{
+        // pcontent from normal snow braak
 		[pcontent]
 		{
 			[oneof*]
@@ -84,6 +88,7 @@
 	}
 }
 
+// Ferocious Braak with stats of Ice Warrior Boss
 [t:template,n:eos_braak_vega_boss_01]
 {
 	category_name = "1W_evil_c";
@@ -93,28 +98,29 @@
 	{
 		[skills]
 		{
-			strength 	=  	13, 0;
-			intelligence =  10, 0;
+			strength 	=  18, 0;
+			intelligence =  5, 0;
 			dexterity 	=  11, 0;
-            melee 		=  10,  0;
+            melee 		=  13,  0;
 		}
 	}
 	[aspect]
 	{
-		textures:0 = b_c_ecm_bk-03;
-		experience_value = 180;
-		life = 279;
-        max_life = 279;
-		mana = 10;
-		max_mana = 10;
+		experience_value = 550;
+		life = 327;
+        max_life = 327;
+        mana = 8;
+		max_mana = 8;
+
         scale_base = 0.8;  // smaller
 		[textures] { 0 = b_c_ecm_bk-04; }
 	}
 	[attack]
 	{
 		attack_range = 0.5;
-		damage_max = 48;
-		damage_min = 42;
+        // dmg a bit higher than the normal jungle braak above
+		damage_max = 100;
+		damage_min = 75;
 	}
 	[body]
 	{
@@ -135,9 +141,10 @@
 			}
 		}
 	}
-	[defend] { defense=88; }
+	[defend] { defense=202; }
 	[inventory]
 	{
+        // pcontent of snow braak boss (pitiful braak)
 		[pcontent]
 		{
 			[all*]
