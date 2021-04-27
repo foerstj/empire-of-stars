@@ -28,17 +28,18 @@
 	  p position = 3.94276,0,1.82021,0xcf6febc3;
 	}
 }
-[t:trigger_generic,n:0x003001d3]
+[t:trigger_change_mood_box,n:0x0030019d]
 {
 	[common]
 	{
+		dev_instance_text = "MOOD, snow";
 		[instance_triggers]
 		{
 			[*]
 			{
-				action* = send_world_message("we_req_activate",0x003001D1,3f,"default","every",0);
+				action* = mood_change("map_expansion_a1_snow_heavy");
 			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(3.000000,2.100000,0.250000,"on_first_enter");
+				condition* = party_member_within_bounding_box(1.500000,2.100000,0.250000,"on_every_enter");
 			  f delay = 0.000000;
 			  b flip_flop = false;
 			  b multi_player = true;
@@ -46,7 +47,7 @@
 				occupants_group = ;
 			  f reset_duration = 0.000000;
 			  b single_player = true;
-			  b single_shot = true;
+			  b single_shot = false;
 			  b start_active = true;
 			}
 		}
@@ -54,7 +55,49 @@
 	[placement]
 	{
 	  q orientation = 0,-0.707107,0,0.707107;
-	  p position = 1.59654,0,0.546579,0xbc2879b7;
+	  p position = -3.53841,0,0.343441,0x02a9d45d;
+	}
+}
+[t:set_bool,n:0x003002d3]
+{
+	[placement]
+	{
+	  q orientation = 0,0.707107,0,0.707107;
+	  p position = -2.1514,0,0.107174,0xf9f959cf;
+	}
+	[set_bool]
+	{
+		bool_variable = "a1_bear_dead_0x3000db";
+	}
+}
+[t:trigger_change_mood_box,n:0x0030019b]
+{
+	[common]
+	{
+		dev_instance_text = "MOOD,light snow";
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = mood_change("map_expansion_a1_haunted");
+			  b can_self_destruct = true;
+				condition* = party_member_within_bounding_box(1.500000,2.100000,0.250000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,1,0,0;
+	  p position = 0.896988,0,0.605354,0x053c633a;
 	}
 }
 [t:trigger_generic,n:0x003001d6]
@@ -297,18 +340,17 @@
 	  p position = 1.82999,0,-1.72078,0x031bf4c7;
 	}
 }
-[t:trigger_change_mood_box,n:0x003000c2]
+[t:trigger_generic,n:0x003001d3]
 {
 	[common]
 	{
-		dev_instance_text = "MOOD, heavy snow";
 		[instance_triggers]
 		{
 			[*]
 			{
-				action* = mood_change("map_expansion_a1_haunted");
+				action* = send_world_message("we_req_activate",0x003001D1,3f,"default","every",0);
 			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(1.500000,2.100000,0.250000,"on_every_enter");
+				condition* = party_member_within_bounding_box(3.000000,2.100000,0.250000,"on_first_enter");
 			  f delay = 0.000000;
 			  b flip_flop = false;
 			  b multi_player = true;
@@ -316,15 +358,15 @@
 				occupants_group = ;
 			  f reset_duration = 0.000000;
 			  b single_player = true;
-			  b single_shot = false;
+			  b single_shot = true;
 			  b start_active = true;
 			}
 		}
 	}
 	[placement]
 	{
-	  q orientation = 0,1,0,2.98023e-008;
-	  p position = 9.46702,1.26033,2.09818,0xb2ed6a6f;
+	  q orientation = 0,-0.707107,0,0.707107;
+	  p position = 1.59654,0,0.546579,0xbc2879b7;
 	}
 }
 [t:trigger_change_mood_box,n:0x0030019e]
@@ -357,6 +399,36 @@
 	  p position = 0.182405,4,-1.64233,0xb969d82a;
 	}
 }
+[t:trigger_change_mood_box,n:0x003000c2]
+{
+	[common]
+	{
+		dev_instance_text = "MOOD, heavy snow";
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = mood_change("map_expansion_a1_haunted");
+			  b can_self_destruct = true;
+				condition* = party_member_within_bounding_box(1.500000,2.100000,0.250000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,1,0,2.98023e-008;
+	  p position = 9.46702,1.26033,2.09818,0xb2ed6a6f;
+	}
+}
 [t:trigger_generic,n:0x003001e5]
 {
 	[common]
@@ -385,77 +457,5 @@
 	{
 	  q orientation = 0,-2.98023e-008,0,1;
 	  p position = -0.0593014,4,-0.279999,0xe0bb18bc;
-	}
-}
-[t:set_bool,n:0x003002d3]
-{
-	[placement]
-	{
-	  q orientation = 0,0.707107,0,0.707107;
-	  p position = -2.1514,0,0.107174,0xf9f959cf;
-	}
-	[set_bool]
-	{
-		bool_variable = "a1_bear_dead_0x3000db";
-	}
-}
-[t:trigger_change_mood_box,n:0x0030019b]
-{
-	[common]
-	{
-		dev_instance_text = "MOOD,light snow";
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = mood_change("map_expansion_a1_haunted");
-			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(1.500000,2.100000,0.250000,"on_every_enter");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  q orientation = 0,1,0,0;
-	  p position = 0.896988,0,0.605354,0x053c633a;
-	}
-}
-[t:trigger_change_mood_box,n:0x0030019d]
-{
-	[common]
-	{
-		dev_instance_text = "MOOD, snow";
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = mood_change("map_expansion_a1_snow_heavy");
-			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(1.500000,2.100000,0.250000,"on_every_enter");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  q orientation = 0,-0.707107,0,0.707107;
-	  p position = -3.53841,0,0.343441,0x02a9d45d;
 	}
 }
