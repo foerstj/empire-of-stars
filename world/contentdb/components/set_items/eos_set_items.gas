@@ -245,3 +245,140 @@
 		set_item_requirement = 1;
     }
 }
+
+[ice_ring_of_stars]
+{
+    [modifier*]
+    {
+        [enchantments]
+        {
+            [cold_chance]
+            {
+                is_set_item = true;
+                duration = #infinite;
+
+                alteration = ALTER_CUSTOM_DAMAGE_CHANCE_MELEE;
+                custom_damage = cold;
+                value = (#itemsequipped) * 5;
+                description = "+<ALTER_CUSTOM_DAMAGE_CHANCE_MELEE>% Chance To Freeze And";
+            }
+			[cold_damage]
+            {
+                is_set_item = true;
+                duration = #infinite;
+                is_permanent = true;
+                is_single_instance = false;
+
+                alteration = ALTER_CUSTOM_DAMAGE_MELEE;
+                value = 3*(2**(#itemsequipped));  // from guiseppi_bow "spidersilk bow"
+                custom_damage = cold;
+                effect_script_equip	= dam_ice_7_wh;
+                effect_script_hit	= hit_flash_10_lbl;
+                custom_damage_skrit = world\global\skrits\weapon_cold.skrit?freeze_time=2.0;
+                description = "Adds <ALTER_CUSTOM_DAMAGE_MELEE> Cold Damage";
+            }
+            
+            // same for ranged
+            [cold_chance]
+            {
+                is_set_item = true;
+                duration = #infinite;
+
+                alteration = ALTER_CUSTOM_DAMAGE_CHANCE_RANGED;
+                custom_damage = cold;
+                value = (#itemsequipped) * 5;
+            }
+			[cold_damage]
+            {
+                is_set_item = true;
+                duration = #infinite;
+                is_permanent = true;
+                is_single_instance = false;
+
+                alteration = ALTER_CUSTOM_DAMAGE_RANGED;
+                value = 3*(2**(#itemsequipped));  // from guiseppi_bow "spidersilk bow"
+                custom_damage = cold;
+                effect_script_equip	= dam_ice_7_wh;
+                effect_script_hit	= hit_flash_10_lbl;
+                custom_damage_skrit = world\global\skrits\weapon_cold.skrit?freeze_time=2.0;
+            }
+        }
+		set_item_requirement = 1;
+    }
+}
+
+[fire_ring_of_stars]
+{
+    [modifier*]
+    {
+        [enchantments]
+        {
+            [fire_damage]
+            {
+                is_set_item = true;
+                duration			= #infinite;
+                is_permanent		= true;
+                is_single_instance	= false;
+
+                alteration			= ALTER_CUSTOM_DAMAGE_MELEE;
+                value = 3*(2**(#itemsequipped));  // from guiseppi_bow "spidersilk bow"
+                custom_damage		= fire;
+                effect_script_equip	= dam_fire_7_re;
+                effect_script_hit	= fire_weapon;
+                description			= "Adds <ALTER_CUSTOM_DAMAGE_MELEE> Fire Damage";
+            }
+            // same for ranged
+            [fire_damage]
+            {
+                is_set_item = true;
+                duration			= #infinite;
+                is_permanent		= true;
+                is_single_instance	= false;
+
+                alteration			= ALTER_CUSTOM_DAMAGE_RANGED;
+                value = 3*(2**(#itemsequipped));  // from guiseppi_bow "spidersilk bow"
+                custom_damage		= fire;
+                effect_script_hit	= bow_fire_15_or;
+                description			= "Adds <ALTER_CUSTOM_DAMAGE_RANGED> Fire Damage";
+            }
+        }
+		set_item_requirement = 1;
+    }
+}
+
+[spark_amulet_of_stars]
+{
+    [modifier*]
+    {
+        [enchantments]
+        {
+            [*]
+            {
+                is_set_item = true;
+                duration = #infinite;
+                is_permanent = true;
+                is_single_instance = false;
+
+                alteration = ALTER_SPECIAL_DEFENSE;
+                special_defense = zap;
+                value = 5 * (#itemsequipped);
+                special_defense_skrit = world\global\skrits\special_defense.skrit?damage_min=5&damage_max=10&is_lightning=true&effect_script="zap";
+                description = "+<ALTER_SPECIAL_DEFENSE>% Chance to Cast Zap on Taking Damage";
+            }
+            [*]
+            {
+                is_set_item = true;
+                duration = #infinite;
+                is_permanent = true;
+                is_single_instance = false;
+
+                alteration = ALTER_SPECIAL_DEFENSE;
+                special_defense = spark_multi;
+                value = 5 * (#itemsequipped);
+                special_defense_skrit = world\global\skrits\special_defense.skrit?damage_min=40&damage_max=45&effect_script="spark_multi";
+                description = "+<ALTER_SPECIAL_DEFENSE>% Chance to Cast Multispark on Taking Damage";
+            }
+        }
+		set_item_requirement = 1;
+    }
+}

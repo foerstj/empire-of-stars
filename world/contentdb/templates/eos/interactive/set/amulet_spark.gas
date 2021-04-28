@@ -1,0 +1,26 @@
+[t:template,n:eos_amulet_spark]
+{
+	category_name = "set_item";
+	doc = "eos spark amulet";
+	specializes = amulet;
+	
+	[common]
+    {
+        b allow_modifiers = false;
+        screen_name = "Spark Amulet of Stars";
+    }
+    [set_item]
+    {
+        set_name = "The Astral Set";
+        set_compare_name = eos;
+        modifier_file = "spark_amulet_of_stars";
+        number_items_in_set = 9;
+        item_power_modifier = 4;
+    }
+	[gui]
+    {
+        tooltip_color = set_item;
+    }
+	
+	[magic] {}
+}
