@@ -226,6 +226,20 @@
                 value = 5 * (#itemsequipped);
                 description = "Increase the damage of electric spells in this spellbook by <ALTER_SPELL_DAMAGE>%";
             }
+            [*]
+            {
+                is_set_item = true;
+                duration = #infinite;
+                is_permanent = true;
+                is_single_instance = false;
+                
+                alteration = ALTER_SPELL_COST;
+                is_imbued = true;
+                imbued_spell_group = spells_summon;
+                multiply_value = true;
+                value = 5 * (#itemsequipped);
+                description = "Reduces the cost of Summoning Spells in this spellbook by <ALTER_SPELL_COST>%";
+            }
         }
 		// the number of set_items that need to be equipped before this comes into effect
 		set_item_requirement = 1;
