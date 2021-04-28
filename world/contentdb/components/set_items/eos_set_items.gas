@@ -339,7 +339,6 @@
                 value = 3*(2**(#itemsequipped));  // from guiseppi_bow "spidersilk bow"
                 custom_damage		= fire;
                 effect_script_hit	= bow_fire_15_or;
-                description			= "Adds <ALTER_CUSTOM_DAMAGE_RANGED> Fire Damage";
             }
         }
 		set_item_requirement = 1;
@@ -380,5 +379,103 @@
             }
         }
 		set_item_requirement = 1;
+    }
+}
+
+[lightning_ring_of_stars]
+{
+    [modifier*]
+    {
+        [enchantments]
+        {
+            [lightning_damage]
+            {
+                is_set_item = true;
+                duration			= #infinite;
+                is_permanent		= true;
+                is_single_instance	= false;
+
+                alteration			= ALTER_CUSTOM_DAMAGE_MELEE;
+                value = 3*(2**(#itemsequipped));  // from guiseppi_bow "spidersilk bow"
+                custom_damage		= lightning;
+                effect_script_equip	= dam_zap_7_wh;
+                effect_script_hit	= hit_circuit_10_lbl;
+                description			= "Adds <ALTER_CUSTOM_DAMAGE_MELEE> Lightning Damage";
+            }
+            // same for ranged
+            [lightning_damage]
+            {
+                is_set_item = true;
+                duration			= #infinite;
+                is_permanent		= true;
+                is_single_instance	= false;
+
+                alteration			= ALTER_CUSTOM_DAMAGE_RANGED;
+                value = 3*(2**(#itemsequipped));  // from guiseppi_bow "spidersilk bow"
+                custom_damage		= lightning;
+                effect_script_hit	= bow_glitter_15_wt;
+            }
+        }
+        set_item_requirement = 1;
+    }
+}
+
+[stun_ring_of_stars]
+{
+    [modifier*]
+    {
+        [enchantments]
+        {
+            [*]
+            {
+                is_set_item = true;
+                duration = #infinite;
+
+                alteration = ALTER_CUSTOM_DAMAGE_CHANCE_MELEE;
+                custom_damage = petrify;
+                value = (#itemsequipped) * 5;
+                description = "+<ALTER_CUSTOM_DAMAGE_CHANCE_MELEE>% Chance To Stun And";
+            }
+			[*]
+            {
+                is_set_item = true;
+                duration = #infinite;
+                is_permanent = true;
+                is_single_instance = false;
+
+                alteration = ALTER_CUSTOM_DAMAGE_MELEE;
+                value = 3*(2**(#itemsequipped));  // from guiseppi_bow "spidersilk bow"
+                custom_damage = petrify;
+                custom_damage_skrit = world\global\skrits\weapon_hold.skrit?hold_time=4&immunity=immune_freeze;
+                effect_script_equip	= dsx_modifier_stunning_melee;
+                effect_script_hit	= dsx_modifier_stunning_hit;
+                description = "Adds <ALTER_CUSTOM_DAMAGE_MELEE> Stun Damage";
+            }
+            
+            // same for ranged
+            [*]
+            {
+                is_set_item = true;
+                duration = #infinite;
+
+                alteration = ALTER_CUSTOM_DAMAGE_CHANCE_RANGED;
+                custom_damage = petrify;
+                value = (#itemsequipped) * 5;
+            }
+			[*]
+            {
+                is_set_item = true;
+                duration = #infinite;
+                is_permanent = true;
+                is_single_instance = false;
+
+                alteration = ALTER_CUSTOM_DAMAGE_RANGED;
+                value = 3*(2**(#itemsequipped));  // from guiseppi_bow "spidersilk bow"
+                custom_damage = petrify;
+                custom_damage_skrit = world\global\skrits\weapon_hold.skrit?hold_time=4&immunity=immune_freeze;
+                effect_script_hit	= dsx_modifier_stunning_ranged;
+            }
+        }
+        set_item_requirement = 1;
     }
 }
