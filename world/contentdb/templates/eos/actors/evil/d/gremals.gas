@@ -57,7 +57,69 @@
 		sight_range              = 12.0;
 	}
 }
-// gremal_killer_base already exists (for summoning)
+// gremal_killer_base already exists (for summoning).
+// Small gremal but as enemy:
+[t:template,n:gremal_enemy_base]
+{
+	category_name = "1W_evil_d";
+	doc = "Gremal (enemy)";
+	specializes = gremal_base;
+
+	[actor]
+	{
+		alignment			= aa_evil;
+    }
+    // behavior of gremal boss (hulking gremal)
+	[mind]
+	{
+		jat_fidget							= world\ai\jobs\common\job_fidget.skrit
+			?social							= 0.45
+			&still							= false;
+		on_alert_projectile_near_missed_flee = true;
+
+		on_enemy_spotted_alert_friends       = false;
+
+
+		com_range                = 7.0;
+		melee_engage_range       = 0.5;
+		ranged_engage_range      = 1.0;
+		personal_space_range     = 1.3;
+		sight_range              = 12.0;
+	}
+}
+// Big gremal but as ambient:
+[t:template,n:gremal_killer_ambient_base]
+{
+	category_name = "1W_evil_d";
+	doc = "Gremal Killer (ambient)";
+	specializes = gremal_killer_base;
+
+	[actor]
+	{
+		alignment			= aa_neutral;
+    }
+    // behavior of small gremal
+	[mind]
+	{
+		jat_fidget = world\ai\jobs\actors\evil\job_fidget_curious.skrit;
+		on_alert_projectile_near_missed_flee = true;
+
+		on_enemy_spotted_alert_friends       = false;
+		on_enemy_entered_ocz_flee            = true;
+		on_friend_entered_ocz_flee           = true;
+		on_enemy_entered_icz_attack          = true;
+
+		sensor_scan_period		 = 0.75;
+		flee_count				 = 1000;
+		com_range                = 7.0;
+		inner_comfort_zone_range = 0.5;
+		melee_engage_range       = 0.5;
+		ranged_engage_range      = 1.0;
+		outer_comfort_zone_range = 3.0;
+		personal_space_range     = 0.7;
+		sight_range              = 12.0;
+	}
+}
 
 [t:template,n:gremal_beige]
 {
@@ -78,6 +140,23 @@
 {
 	doc = "Gremal white";
 	specializes = gremal_base;
+    [common]
+    {
+        screen_name = "Snow Gremal";
+    }
+    [aspect]
+    {
+		[textures] { 0=b_c_edm_gm-white; }
+    }
+}
+[t:template,n:gremal_enemy_white]
+{
+	doc = "Gremal white (enemy)";
+	specializes = gremal_enemy_base;
+    [common]
+    {
+        screen_name = "Snow Gremal";
+    }
     [aspect]
     {
 		[textures] { 0=b_c_edm_gm-white; }
@@ -87,6 +166,10 @@
 {
 	doc = "Gremal white";
 	specializes = gremal_killer_base;
+    [common]
+    {
+        screen_name = "Killer Snow Gremal";
+    }
     [aspect]
     {
 		[textures] { 0=b_c_edm_gm-02-white; }
