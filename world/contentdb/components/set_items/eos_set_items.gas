@@ -10,19 +10,9 @@
 				duration = #infinite;
 
 				alteration = ALTER_ARMOR;
-				value = 8*((#itemsequipped)-1) + ((#itemsequipped) -2)*((#itemsequipped)-3)*((#itemsequipped)-4)*(-0.166666666666);  // taken from arhoks_leather, halfed
+				value = 7 * (#itemsequipped);
 				description = "Adds <ALTER_ARMOR> to Armor";
 			}
-			
-		}
-		// the number of set_items that need to be equipped before this comes into effect
-		set_item_requirement = 1;
-	}
-	
-	[modifier*]
-	{
-		[enchantments]
-		{
 			[*]
 			{
 				is_set_item = true;
@@ -147,12 +137,11 @@
 				duration = #infinite;
 				
 				alteration = ALTER_ARMOR;
-				value = 16*((#itemsequipped)-1) + ((#itemsequipped) -2)*((#itemsequipped)-3)*((#itemsequipped)-4)*(-0.166666666666);  // arhoks_leather
+				value = 10 * (#itemsequipped);
 				description = "Adds <ALTER_ARMOR> to Armor";
 			}
 			
 		}
-		// the number of set_items that need to be equipped before this comes into effect
 		set_item_requirement = 1;
 	}
 }
@@ -173,7 +162,6 @@
 				description = "<ALTER_REFLECT_DAMAGE>% of Damage Reflected to Enemy";
             }
         }
-		// the number of set_items that need to be equipped before this comes into effect
 		set_item_requirement = 1;
     }
 }
@@ -241,7 +229,6 @@
                 description = "Reduces the cost of Summoning Spells in this spellbook by <ALTER_SPELL_COST>%";
             }
         }
-		// the number of set_items that need to be equipped before this comes into effect
 		set_item_requirement = 1;
     }
 }
