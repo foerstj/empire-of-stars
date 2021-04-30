@@ -31,7 +31,7 @@
 	[text*]
 	{
 		activate_quest*	= quest_find_merik;
-		screen_text = "We welcome you on this world, tall alien. You say you search for an ancient stone to return to your home world - We wish you best luck, but unfortunately we know only little of the time of antiquity. Our records date back no further than to the founding of this city, hundreds of years ago. Apart from us Dwarves, only beasts like the Krug and Braak inhabit this world; and the Zaurask down in the Fireheart Caves. Maybe the best idea would be to search down there - the Caves are not fully explored, because of the smoldering heat down there.";
+		screen_text = "We welcome you on this world, tall alien. You say you search for an ancient stone to return to your home world - We wish you best luck, but unfortunately we know only little of the time of antiquity. Our records date back no further than to the founding of this city, hundreds of years ago. Apart from us Dwarves, only beasts like the Krug and Braak inhabit this world; and the Zaurask down in the Fireheart Caverns. Maybe the best idea would be to search down there - the Caverns are not fully explored, because of the smoldering heat down there.";
 		quest_dialog = true;
         choice = more;
 	}
@@ -50,7 +50,7 @@
 	[text*]
 	{
 		activate_quest*	= quest_find_merik,1;
-		screen_text = "Blast the monarchy! The King would give audience to a dog wearing the Legion's colors, but will he listen to his own nephew? I've seen a magic stone in my dreams, trapped in the ice of the Moon. For generations my family's had the sight of dreams, but what am I given to do? Scrubbing, cooking, and minding the inn, that's what! OOOOOOOH!";
+		screen_text = "Blast the monarchy! The King would give audience to a dog wearing the Guard's colors, but will he listen to his own nephew? I've seen a magic stone in my dreams, trapped in the ice of the Moon. For generations my family's had the sight of dreams, but what am I given to do? Scrubbing, cooking, and minding the inn, that's what! OOOOOOOH!";
 		quest_dialog = true;
 	}
 }
@@ -58,14 +58,14 @@
 {
 	[text*]
 	{
-		screen_text = "If you've soom business with the King, I suggest you speak to him directly aboot it. I'm joost here to deliver word on the state of things at the Elevator.";
+		screen_text = "If you really come from another star, I suggest you speak with the King. This should interest him; also he might guide you to whatever help you may need.";
 	}
 }
 [conversation_lorun_overseer]
 {
 	[text*]
 	{
-		screen_text = "If you've soom business with the King, I suggest you speak to him directly aboot it. I'm joost here to deliver word on the state of things at the Elevator.";
+		screen_text = "If you really come from another star, I suggest you speak with the King. This should interest him; also he might guide you to whatever help you may need.";
 	}
 }
 [conversation_lorun_join]
@@ -73,7 +73,7 @@
 	[text*]
 	{
 		choice = potential_member;
-		screen_text = "If the King sees fit to send you oot on a madman's quest, I should at least see you've a chance at living through it. I'm the best mage in these parts and I may be old, but I was roasting furoks with mage fire when yer daddy's daddy was a whelp! If you've the gold so's I kin settle my accounts here, we can get moving afore you can say bless the Fireheart. Will ye have me along?";
+		screen_text = "If the King sees fit to send you oot on a madman's quest into the Fireheart Caverns, I should at least see you've a chance at living through it. I'm the best mage in these parts and I may be old, but I was roasting furoks with mage fire when yer daddy's daddy was a whelp! If you've the gold so's I kin settle my accounts here, we can get moving afore you can say bless the Fireheart. Will ye have me along?";
 	}
 }
 [conversation_lorun_accept_have_money]
@@ -87,7 +87,7 @@
 {
 	[text*]
 	{
-		screen_text = "I'd be glad to join your company, but I can't do it for free. I've financial matters for the Legion to attend to here in Lagomsno, but if you can help make up far some of the gold I lost to brigands on the way here, I'd be glad to toss in with your lot!";
+		screen_text = "I'd be glad to join your company, but I can't do it for free. I've financial matters for the Guard to attend to here in Lagomsno, but if you can help make up far some of the gold I lost to brigands on the way here, I'd be glad to toss in with your lot!";
 	}
 }
 [conversation_lorun_reject]
@@ -125,7 +125,7 @@
 	[text*]
 	{
 		choice = potential_member;
-		screen_text = "Chieftain tell Sig of Mugmort 'bring caravan safe to kingdom of Sno.' I bring to Javlakallt... then mule-eating Krug attack caravan! Driver steals wagon, driver takes Sig gold, and driver runs away. Sig tracks to Lagomsno, but cannot chase further. Sig help you if you help him. Sig good at smashing, beating, crushing... anything! You like?";
+		screen_text = "Chieftain tell Sig of Mugmort 'bring caravan safe to kingdom of Borea.' I bring to Javlakallt... then mule-eating Krug attack caravan! Driver steals wagon, driver takes Sig gold, and driver runs away. Sig tracks to Lagomsno, but cannot chase further. Sig help you if you help him. Sig good at smashing, beating, crushing... anything! You like?";
 	}
 }
 [conversation_kroduk_accept_have_money]
@@ -221,7 +221,7 @@
 {
 	[text*]
 	{
-		screen_text = "If you've come to Lagomsno for safety, you made the right choice. The King has withdrawn all patrols to here in preparation for our annual Guards Fair. You won't find more Legionnaires anywhere in the Kingdom.";
+		screen_text = "If you've come to Lagomsno for safety, you made the right choice. The King has withdrawn all patrols to here in preparation for our annual Guards Fair. You won't find more Guards anywhere in the Kingdom.";
 	}
 }
 [conversation_house1_m]
@@ -242,7 +242,7 @@
 {
 	[text*]
 	{
-        screen_text = "I'm sorry, we aren't used to so many Legionnaires off shift at one time. Can you just rest here until we have an opening?";
+        screen_text = "I'm sorry, we aren't used to so many Guards off shift at one time. Can you just rest here until we have an opening?";
 	}
 }
 [conversation_tavern_m]
@@ -278,7 +278,7 @@
 	[text*]
 	{
         order = 0;
-        screen_text = "Can't you see I'm with a customer? Somebody has been disturbing the spirits of the dead over the last week. And I am swamped with keeping them supplied. If you need something, talk to Orkin, he is handling all the living customers this week.";
+        screen_text = "Can't you see I'm with a customer? Somebody has been disturbing the spirits of the dead over the last week. And I am swamped with keeping them supplied. If you need something, talk to Bharmar, he is handling all the living customers this week.";
 	}
 	[text*]
 	{
@@ -290,7 +290,7 @@
 	[text*]
 	{
         order = 0;
-        screen_text = "Master Orkin is going to have my hide! I borrowed a trilogy of books about Thawhorn's Way, and lent two out to some friends. But now, I don't remember to whom I lent them! Orkin forbids me to leave while he is keeping shop, but I am sure he will find them missing any time now. Might you have a few minutes to ask around town for me?";
+        screen_text = "Master Bharmar is going to have my hide! I borrowed a trilogy of books about Thawhorn's Way, and lent two out to some friends. But now, I don't remember to whom I lent them! Bharmar forbids me to leave while he is keeping shop, but I am sure he will find them missing any time now. Might you have a few minutes to ask around town for me?";
 		quest_dialog = true;
 		choice = more;
 	}
@@ -310,7 +310,7 @@
 	[text*]
 	{
         order = 0;
-        screen_text = "Well, two are better than none, but I don't want to tell Orkin untill I can return all three to him. You'd better keep those two until you find the third.";
+        screen_text = "Well, two are better than none, but I don't want to tell Bharmar until I can return all three to him. You'd better keep those two until you find the third.";
 	}
 	[text*]
 	{
@@ -342,7 +342,7 @@
 	}
 	[text*]
 	{
-        screen_text = "Sure is cold up here.";
+        screen_text = "Sure is warm up here.";
 	}
 }
 [conversation_book2]
@@ -350,7 +350,7 @@
 	[text*]
 	{
         order = 0;
-        screen_text = "Hey, were you born in a barn? Shut the door! Oh, you're looking for books, are you? As a matter of fact, I do have one that Ardun lent me. Here, tell him thanks.";
+        screen_text = "Hey, were you born in a barn? Shut the door! Oh, you're looking for books, are you? As a matter of fact, I do have one that Spiut lent me. Here, tell him thanks.";
 	}
 	[text*]
 	{
@@ -361,7 +361,7 @@
 {
 	[text*]
 	{
-        screen_text = "Another sultry day in the valley. Well, as soon as my wife sells all her blasted packmules, we can move somewhere cool.";
+        screen_text = "Another sultry day in the valley. Well, as soon as Katla sells all our blasted packmules, we can move somewhere cool.";
 	}
 }
 [conversation_gate_guard_a]
@@ -375,14 +375,14 @@
 {
 	[text*]
 	{
-		screen_text = "You picked a bad week to travel east. The Woods are full of Krugs, and the King has withdrawn Legion patrols from the Fireheart Caverns during these festivities. No doubt the Zaurask are having a heyday down there in our absence. You will need all the luck I can wish you if you must go. Thawhorn's warding to you, friend." ;
+		screen_text = "You picked a bad week to travel east. The Woods are full of Krugs, and the King has withdrawn Guard patrols from the Fireheart Caverns during these festivities. No doubt the Zaurask are having a heyday down there in our absence. You will need all the luck I can wish you if you must go. Thawhorn's warding to you, friend." ;
 	}
 }
 [conversation_guard_c]
 {
 	[text*]
 	{
-		screen_text = "Well you're a new face. You must be the one everyone says came from the stars. I certainly hope your business was in Lagomsno, because if you intend to visit the Caves, you'll never make it now that we've withdrawn the patrols." ;
+		screen_text = "Well you're a new face. You must be the one everyone says came from the stars. I certainly hope your business was in Lagomsno, because if you intend to visit the Caverns, you'll never make it now that we've withdrawn the patrols." ;
 	}
 }
 [conversation_guard_d]
@@ -396,7 +396,7 @@
 {
 	[text*]
 	{
-		screen_text = "Foulton is the best smith in these parts. I'm glad he can find the time to refit my armor while he is trying to keep up with all the reserve Legionnaires in town." ;
+		screen_text = "Hjaldur is the best smith in these parts. I'm glad he can find the time to refit my armor while he is trying to keep up with all the reserve Guards in town." ;
 	}
 }
 [conversation_guard_f]
@@ -426,12 +426,12 @@
 	[text*]
 	{
 		order = 0;
-		screen_text = "I had to take a job with the blacksmith to pay for my room at the Lucky Hurggis; the Chapel had become overrun with Braaks, and every time I opened my door, a pack of wolves would attack me! I don't know when I'll be able to go home, but Foulton needs the help, and offered to lend me his adventuring gear if I keep up the good work through the Guards Fair.";
+		screen_text = "I had to take a job with the blacksmith to pay for my room at the Dragonblood Inn; the Aurora Shrine had become overrun with Braaks, and every time I opened my door, a pack of wolves would attack me! I don't know when I'll be able to go home, but Hjaldur needs the help, and offered to lend me his adventuring gear if I keep up the good work through the Guards Fair.";
 		choice = more;
 	}
 	[text*]
 	{
-		screen_text = "Well, you seem a persistent sort. There's a chest and some crates in the Chapel. If you can clear the monsters out of there, you're welcome to what's left. The Chapel is in the Winternight Woods east of here." ;
+		screen_text = "Well, you seem a persistent sort. There's a chest and some crates in the Aurora Shrine. If you can clear the monsters out of there, you're welcome to what's left. The Shrine is in the Winternight Woods east of here." ;
 		activate_quest* = quest_ice_dungeon;
 		quest_dialog = true;
 	}
@@ -440,7 +440,7 @@
 {
 	[text*]
 	{
-		screen_text = "I miss my Chapel.";
+		screen_text = "I miss my Shrine.";
 	}
 }
 [conversation_lieutenant_shea]
