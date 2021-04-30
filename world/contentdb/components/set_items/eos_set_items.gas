@@ -44,7 +44,7 @@
                 value = (#itemsequipped) * 5;
                 description = "+<ALTER_CUSTOM_DAMAGE_CHANCE_MELEE>% Chance To Flee And";
             }
-            [custom_damage]
+            [*]
             {
                 is_set_item = true;
                 duration = #infinite;
@@ -80,7 +80,7 @@
                 value = (#itemsequipped) * 5;
                 description = "+<ALTER_CUSTOM_DAMAGE_CHANCE_MELEE>% Chance To Poison And";
             }
-			[custom_damage]
+			[*]
             {
                 is_set_item = true;
                 duration = #infinite;
@@ -106,7 +106,7 @@
                 custom_damage = poison;
                 value = (#itemsequipped) * 5;
             }
-			[custom_damage]
+			[*]
             {
                 is_set_item = true;
                 duration = #infinite;
@@ -239,7 +239,7 @@
     {
         [enchantments]
         {
-            [cold_chance]
+            [*]
             {
                 is_set_item = true;
                 duration = #infinite;
@@ -249,7 +249,7 @@
                 value = (#itemsequipped) * 5;
                 description = "+<ALTER_CUSTOM_DAMAGE_CHANCE_MELEE>% Chance To Freeze And";
             }
-			[cold_damage]
+			[*]
             {
                 is_set_item = true;
                 duration = #infinite;
@@ -266,7 +266,7 @@
             }
             
             // same for ranged
-            [cold_chance]
+            [*]
             {
                 is_set_item = true;
                 duration = #infinite;
@@ -275,7 +275,7 @@
                 custom_damage = cold;
                 value = (#itemsequipped) * 5;
             }
-			[cold_damage]
+			[*]
             {
                 is_set_item = true;
                 duration = #infinite;
@@ -300,7 +300,7 @@
     {
         [enchantments]
         {
-            [fire_damage]
+            [*]
             {
                 is_set_item = true;
                 duration			= #infinite;
@@ -315,7 +315,7 @@
                 description			= "Adds <ALTER_CUSTOM_DAMAGE_MELEE> Fire Damage";
             }
             // same for ranged
-            [fire_damage]
+            [*]
             {
                 is_set_item = true;
                 duration			= #infinite;
@@ -375,7 +375,7 @@
     {
         [enchantments]
         {
-            [lightning_damage]
+            [*]
             {
                 is_set_item = true;
                 duration			= #infinite;
@@ -390,7 +390,7 @@
                 description			= "Adds <ALTER_CUSTOM_DAMAGE_MELEE> Lightning Damage";
             }
             // same for ranged
-            [lightning_damage]
+            [*]
             {
                 is_set_item = true;
                 duration			= #infinite;
