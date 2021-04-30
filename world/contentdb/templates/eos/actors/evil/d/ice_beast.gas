@@ -5,6 +5,10 @@
 	specializes = rock_beast_base;
     [aspect]
     {
+        life = 321; // rock beast: 132
+        max_life = 321;
+		experience_value = 256; // rock beast: 113
+
 		textures:0 = b_c_edm_iw;
 		material = ice;
 		[voice]
@@ -12,6 +16,11 @@
 			[die]			{ priority = high; * = s_e_die_ice_warrior; }
 		}
     }
+	[attack]
+	{
+		damage_max = 100; // rock beast: 69
+		damage_min = 90; // rock beast: 65
+	}
 	[common]
     {
         screen_name="Ice Beast";
