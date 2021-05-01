@@ -56,6 +56,42 @@
 }
 [t:chest_csl_05,n:0x04200397]
 {
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = change_quest_state("altair_caverns","completed",0);
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_req_use",0,"on_every_message");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+			[*]
+			{
+				action* = change_quest_state("altair_caverns","active",0);
+			  b can_self_destruct = true;
+				condition* = party_member_within_sphere(10.000000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
 	[inventory]
 	{
 		[other]
@@ -65,16 +101,16 @@
 	}
 	[placement]
 	{
-	  q orientation = 0,0.515038,0,-0.857167;
-	  p position = 1.78003,0.972097,3.50169,0xc392a2ae;
+	  q orientation = 0,0.241922,0,0.970296;
+	  p position = 3.90827,0,2.24155,0x3cd4ac8a;
 	}
 }
 [t:barrel_swp_01_sr_r3,n:0x04200395]
 {
 	[placement]
 	{
-	  q orientation = 0,0.87462,0,0.48481;
-	  p position = 3.17036,1.90735e-006,0.738688,0x634727ac;
+	  q orientation = 0,0.961262,0,-0.275637;
+	  p position = -1.64382,0.575512,1.52953,0x24c2828e;
 	}
 }
 [t:barrel_swp_01_sr_r3,n:0x04200396]
@@ -82,6 +118,6 @@
 	[placement]
 	{
 	  q orientation = 0,0.67559,0,0.737277;
-	  p position = -0.48399,1.90735e-006,3.91698,0x93e0aca1;
+	  p position = -2.7236,0.84,1.15363,0x24c2828e;
 	}
 }

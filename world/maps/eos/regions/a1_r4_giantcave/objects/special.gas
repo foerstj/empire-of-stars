@@ -68,11 +68,13 @@
 {
 	[common]
 	{
+		dev_instance_text = "LAUGH + QUEST";
 		[instance_triggers]
 		{
 			[*]
 			{
 				action* = send_world_message("we_req_activate",0x00400117,0f,"default","every",0);
+				action* = change_quest_state("altair_moon","active",0);
 			  b can_self_destruct = true;
 				condition* = party_member_within_bounding_box(3.000000,5.000000,3.000000,"on_first_enter");
 			  f delay = 0.000000;

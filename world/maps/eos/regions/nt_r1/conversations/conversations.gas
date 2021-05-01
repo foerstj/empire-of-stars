@@ -229,7 +229,7 @@ Here, have some Krug blood wine!";
 {
 	[text*]
 	{
-		activate_quest* = quest_find_merik;
+		activate_quest* = altair_caverns;
 		choice = more;
 		quest_dialog = true;
 		screen_text = "Broken swords! We welcome you on this world, tall alien. You say you search for an ancient stone to return to your home world - We wish you best luck, but unfortunately we know only little of the time of antiquity. Our records date back no further than to the founding of this city, hundreds of years ago. Apart from us Dwarves, only beasts like the Krug and Braak inhabit this world; and the Zaurask down in the Fireheart Caverns. Maybe the best idea would be to search down there - the Caverns are not fully explored, because of the smoldering heat down there.";
@@ -239,7 +239,7 @@ Here, have some Krug blood wine!";
 {
 	[text*]
 	{
-		activate_quest* = quest_fort_kroth;
+		activate_quest* = altair_moon;
 		quest_dialog = true;
 		screen_text = "Shriveling worm! Our nephew is a good the barkeeper and that's what he should stick to; instead he keeps babbling of things on the Moon he sees in his dreams. Yeah maybe the artifact you're looking for is on the Moon for whatever we know, haha. If you came from the stars you can fly up there, We guess. Wrap yourselves in furs; from what we can see through telescopes from here, it should be rather cold and unpleasant up there.";
 	}
@@ -262,7 +262,7 @@ Here, have some Krug blood wine!";
 {
 	[text*]
 	{
-		activate_quest* = quest_find_merik,1;
+		activate_quest* = altair_moon;
 		choice = more;
 		order = 0;
 		quest_dialog = true;
@@ -335,8 +335,10 @@ Here, have some Krug blood wine!";
 	}
 	[text*]
 	{
+		activate_quest* = altair_caverns;
 		choice = more;
 		order = 1;
+		quest_dialog = true;
 		screen_text = "I don't know of any ancient artifacts, other than the Pillar Circle ruins you came from. Maybe they're buried deep within the planet's heart?";
 	}
 	[text*]
@@ -446,7 +448,7 @@ Here, have some Krug blood wine!";
 	}
 	[text*]
 	{
-		activate_quest* = quest_ice_dungeon;
+		activate_quest* = altair_shrine;
 		quest_dialog = true;
 		screen_text = "Well, you seem a persistent sort. There's a chest and some crates in the Aurora Shrine. If you can clear the monsters out of there, you're welcome to what's left. The Shrine is in the Winternight Woods east of here.";
 	}

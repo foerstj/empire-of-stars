@@ -88,7 +88,7 @@
 		victory_sample = s_e_level_up_quest;
 		[*]
 		{
-			description = Look for Starstones in the Crypt;
+			description = "Look for Starstones in the Crypt.";
 		  b is_consumable = true;
 		  i order = 0;
 		  b required = true;
@@ -131,4 +131,40 @@
 			description = "Find the first two volumes in the Thawhorn's Way trilogy.";
 		}
 	}
+    [altair_caverns]
+    {
+		chapter			= c4_altair;
+		screen_name		= "The Fireheart Caverns";
+		victory_sample	= s_e_level_up_quest;
+		
+		[*]
+		{
+			order		= 0;
+			description = "Look for Starstones in the Fireheart Caverns.";
+		}
+    }
+    [altair_moon]
+    {
+		chapter			= c4_altair;
+		screen_name		= "The Ice Moon";
+		victory_sample	= s_e_level_up_quest;
+		
+		[*]
+		{
+			order		= 0;
+			description = "Look for Starstones on the Ice Moon.";
+		}
+    }
+    [altair_shrine]
+    {
+		chapter			= c4_altair;
+		screen_name		= "The Shrine";
+		victory_sample	= s_e_level_up_quest;
+		
+		[*]
+		{
+			order		= 0;
+			description = "Clear the Braak from the Aurora Shrine in the Winternight Woods.";
+		}
+    }
 }
