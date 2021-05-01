@@ -1114,7 +1114,7 @@
 	  p position = 18.7047,0.299999,0.311042,0xfb64d99e;
 	}
 }
-[t:trigger_generic,n:0x02700528]
+[t:trigger_generic,n:0x0270052f]
 {
 	[common]
 	{
@@ -1123,8 +1123,8 @@
 		{
 			[*]
 			{
-				action* = send_world_message("we_req_activate",0x02700529,0f,"default","every",0);
-				action* = send_world_message("we_req_activate",0x08100040,0f,"default","every",0);
+				action* = send_world_message("we_req_activate",0x02700530,0f,"default","every",0);
+				action* = send_world_message("we_req_activate",0x0810002A,0f,"default","every",0);
 			  b can_self_destruct = true;
 				condition* = receive_world_message("we_req_activate",0,"on_every_message");
 				condition* = has_go_in_inventory("local",0x00000000,"starstone_altair");
@@ -1142,14 +1142,14 @@
 	}
 	[placement]
 	{
-	  p position = -0.0769541,0.2,-1.63934,0x4b601f1f;
+	  p position = -0.0143585,0.2,-1.49345,0xc925100a;
 	}
 }
-[t:use_point,n:0x0270052a]
+[t:use_point,n:0x02700528]
 {
 	[placement]
 	{
-	  p position = -0.493256,0.2,-0.569321,0x75d3a0ab;
+	  p position = -0.560379,0.200001,-0.520409,0xdeb62691;
 	}
 }
 [t:trigger_generic,n:0x027000ae]

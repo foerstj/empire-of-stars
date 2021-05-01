@@ -1,5 +1,9 @@
 [t:elevator_2s_2c_2n,n:0x0270002f]
 {
+	[common]
+	{
+		dev_instance_text = "TOWER";
+	}
 	[elevator_2s_2c_2n]
 	{
 	  i additional_door_level1 = 13;
@@ -23,16 +27,20 @@
 	  p position = -2.29001,12,-0.680271,0xcf061e34;
 	}
 }
-[t:elevator_instant_4s_1c,n:0x02700529]
+[t:elevator_instant_4s_1c,n:0x02700530]
 {
+	[common]
+	{
+		dev_instance_text = "MOON";
+	}
 	[elevator_instant_4s_1c]
 	{
 	  i connect_door_location1_level1 = 5;
 	  i connect_door_location1_level2 = 8;
 	  i connect_door_location2_level1 = 5;
 	  i connect_door_location2_level2 = 8;
-	  x connect_node_location1 = 0x4B601F1F;
-	  x connect_node_location2 = 0xB905A903;
+	  x connect_node_location1 = 0xC925100A;
+	  x connect_node_location2 = 0x5DFBDA81;
 		down_effect = "eos_displacer_plate_down";
 	  f duration_location1_moving_to_lv1 = 16;
 	  f duration_location2_moving_to_lv1 = 16;
@@ -40,8 +48,8 @@
 	  i e2_connect_door_location1_level2 = 8;
 	  i e2_connect_door_location2_level1 = 5;
 	  i e2_connect_door_location2_level2 = 8;
-	  x e2_elevator_node = 0xF518B157;
-	  x elevator_node = 0x75D3A0AB;
+	  x e2_elevator_node = 0xCC5E0C85;
+	  x elevator_node = 0xDEB62691;
 		location1_moving_to_lv1_actioninfo = "eos_altair_teleport";
 		location1_moving_to_lv1_hint = ah_yaxis_negative;
 		location1_moving_to_lv2_actioninfo = "multiplayer_world_teleport";
@@ -51,16 +59,20 @@
 		location2_moving_to_lv2_actioninfo = "multiplayer_world_teleport";
 		location2_moving_to_lv2_hint = ah_yaxis_positive;
 		material = "hub";
-	  x other_elevator = 0x08100040;
+	  x other_elevator = 0x0810002A;
 		up_effect = "eos_displacer_plate_up";
 	}
 	[placement]
 	{
-	  p position = 0.00543213,0.2,-0.0311279,0x75d3a0ab;
+	  p position = 0.0294189,0.2,-0.029953,0xdeb62691;
 	}
 }
 [t:elevator_instant_4s_1c,n:0x0270040e]
 {
+	[common]
+	{
+		dev_instance_text = "HUB";
+	}
 	[elevator_instant_4s_1c]
 	{
 	  i connect_door_location1_level1 = 9;

@@ -138,7 +138,7 @@
 	  p position = -1.52426,0,-1.84929,0x49c0e464;
 	}
 }
-[t:trigger_generic,n:0x0810003e]
+[t:trigger_generic,n:0x08100028]
 {
 	[common]
 	{
@@ -147,8 +147,8 @@
 		{
 			[*]
 			{
-				action* = send_world_message("we_req_activate",0x08100040,0f,"default","every",0);
-				action* = send_world_message("we_req_activate",0x02700529,0f,"default","every",0);
+				action* = send_world_message("we_req_activate",0x0810002A,0f,"default","every",0);
+				action* = send_world_message("we_req_activate",0x02700530,0f,"default","every",0);
 			  b can_self_destruct = true;
 				condition* = receive_world_message("we_req_activate",0,"on_every_message");
 				condition* = has_go_in_inventory("local",0x00000000,"starstone_altair");
@@ -166,14 +166,7 @@
 	}
 	[placement]
 	{
-	  p position = 0.0370035,0.200001,-1.68278,0xb905a903;
-	}
-}
-[t:use_point,n:0x08100041]
-{
-	[placement]
-	{
-	  p position = -0.390313,0.2,-0.406343,0xf518b157;
+	  p position = -0.0784316,0.200001,-1.49592,0x5dfbda81;
 	}
 }
 [t:chunks_ice_spire_04,n:0x0810062f]
@@ -1955,5 +1948,12 @@
 	{
 	  q orientation = 0,0.707107,0,0.707107;
 	  p position = 2.1602,-1.0411,-1.46894,0x9afd1288;
+	}
+}
+[t:use_point,n:0x08100030]
+{
+	[placement]
+	{
+	  p position = -0.484682,0.2,-0.494835,0xcc5e0c85;
 	}
 }
