@@ -14,6 +14,7 @@
 	}
     [common]
     {
+        screen_name = "Ice Golem";
 		[template_triggers]
 		{
             // from ice warrior - shiny sparkles
@@ -39,5 +40,28 @@
 			frag_glb_ice_07 = 1;
 			frag_glb_ice_08 = 3;
 		}
+	}
+
+	[inventory] 
+	{	
+		selected_active_location = il_active_primary_spell;
+		[other] 
+		{ 
+			il_active_primary_spell=spell_ice_golem_blast; 
+		}
+	}
+	[mind]
+	{
+        // switching ad lib between melee & ranged attacks
+		actor_weapon_preference			= WP_MAGIC;
+		actor_auto_switches_to_magic	= true;
+		actor_auto_switches_to_karate	= true;
+		actor_auto_switches_to_melee	= true;
+		on_enemy_entered_icz_switch_to_melee = true;
+		inner_comfort_zone_range 		= 4.0;
+		outer_comfort_zone_range  		= 9.0;
+		jat_attack_object_melee	 		= world\ai\jobs\common\job_attack_object_melee.skrit
+			?persistence				= 0.0
+			&hit_multiple				= true;
 	}
 }
