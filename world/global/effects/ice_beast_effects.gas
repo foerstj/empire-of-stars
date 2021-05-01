@@ -6,14 +6,14 @@
 			if ( #LODFI > 0.4 )
 			{
 				sfx create fireb  #TARGET 
-					"offset(-0.01,.43,.11)velocity(0,0,40)scale(.2)color0(.3,.17,.08)
+					"offset(-0.01,.43,.11)velocity(0,0,40)scale(.2)color0(.08,.17,.3)
 					alphafade(4)lower_r0(0)lower_r1(0)upper_r0(0)upper_r1(0)
 					count(30)fctrl(0,0,-.1)flamesize(1.5)bone_orient()";
 				sfx attach_point #PEEK Bip01_Head target;
 				sfx start #POP;
 				
 				sfx create fireb  #TARGET 
-					"offset(-0.01,.43,-.11)velocity(0,0,-40)scale(.2)color0(.3,.17,.08)
+					"offset(-0.01,.43,-.11)velocity(0,0,-40)scale(.2)color0(.08,.17,.3)
 					alphafade(4)lower_r0(0)lower_r1(0)upper_r0(0)upper_r1(0)
 					count(30)fctrl(0,0,-.1)flamesize(1.5)bone_orient()";
 				sfx attach_point #PEEK Bip01_Head target;
@@ -49,7 +49,7 @@
 	
 			sfx create cylinder #TARGET
 			"texture(b_sfx_cyl_03)offset(0,0,0)hp0(.2,.6,.7)hp1(0,0,0)
-			rp0(0,4,3)rp1(.5,4.5,3.5)tin(.20)tout(.5)dur(1)color0(.3,.3,.25)
+			rp0(0,4,3)rp1(.5,4.5,3.5)tin(.20)tout(.5)dur(1)color0(.25,.3,.3)
 			spin(15)segments(22)";
 			
 			
@@ -59,7 +59,7 @@
 
 			sfx create cylinder #TARGET
 			"texture(b_sfx_cyl_03)offset(0,0,0)hp0(.2,.6,.7)hp1(0,0,0)
-			rp0(0,4,3)rp1(.5,4.5,3.5)tin(.20)tout(.5)dur(1)color0(.3,.3,.25)
+			rp0(0,4,3)rp1(.5,4.5,3.5)tin(.20)tout(.5)dur(1)color0(.25,.3,.3)
 			spin(15)segments(22)";
 			
 			
@@ -69,7 +69,7 @@
 
 			sfx create cylinder #TARGET
 			"texture(b_sfx_cyl_03)offset(0,0,0)hp0(.2,.6,.7)hp1(0,0,0)
-			rp0(0,4,2)rp1(.5,4.5,2.5)tin(.20)tout(.5)dur(1)color0(.3,.3,.25)
+			rp0(0,4,2)rp1(.5,4.5,2.5)tin(.20)tout(.5)dur(1)color0(.25,.3,.3)
 			spin(15)segments(22)";
 			
 			
@@ -79,7 +79,7 @@
 
 			sfx create cylinder #TARGET
 			"texture(b_sfx_cyl_03)offset(0,0,0)hp0(.2,.6,.7)hp1(0,0,0)
-			rp0(0,4,2)rp1(.5,4.5,2.5)tin(.20)tout(.5)dur(1)color0(.3,.3,.25)
+			rp0(0,4,2)rp1(.5,4.5,2.5)tin(.20)tout(.5)dur(1)color0(.25,.3,.3)
 			spin(15)segments(22)";
 			
 			
@@ -89,7 +89,7 @@
 
 			sfx create cylinder #TARGET
 			"texture(b_sfx_cyl_03)offset(0,0,0)hp0(.2,.6,.7)hp1(0,0,0)
-			rp0(0,4,1)rp1(.5,4.5,1.5)tin(.20)tout(.5)dur(1)color0(.3,.3,.25)
+			rp0(0,4,1)rp1(.5,4.5,1.5)tin(.20)tout(.5)dur(1)color0(.25,.3,.3)
 			spin(15)segments(22)";
 			
 			
@@ -99,7 +99,7 @@
 
 			sfx create cylinder #TARGET
 			"texture(b_sfx_cyl_03)offset(0,0,0)hp0(.2,.6,.7)hp1(0,0,0)
-			rp0(0,4,1)rp1(.5,4.5,1.5)tin(.20)tout(.5)dur(1)color0(.3,.3,.25)
+			rp0(0,4,1)rp1(.5,4.5,1.5)tin(.20)tout(.5)dur(1)color0(.25,.3,.3)
 			spin(15)segments(22)";
 			
 			
@@ -108,23 +108,23 @@
 			sfx start #POP;
 
 			sfx create lightsource #TARGET 
-				"offset(0,1,0)color0(1,.7,0)tin(0)tout(.5)dur(1)bone_orient()";
+				"offset(0,1,0)color0(0,.7,1)tin(0)tout(.5)dur(1)bone_orient()";
 			sfx attach_point #PEEK Bip01_Head target;
 			sfx start #POP;
 
-			//sfx create lightsource -color0(1,.7,0)tin(0)tout(.5)dur(.5) #TARGET
+			//sfx create lightsource -color0(0,.7,1)tin(0)tout(.5)dur(.5) #TARGET
 			//sfx attach_point #PEEK bip01_l_finger0 target
 			//sfx start #POP
 			
 			sfx create fire #TARGET 
-				"dark()delay(.1)grey_tex()dur(1)color0(.2,.2,.1)color1(0,0,0)
+				"dark()delay(.1)grey_tex()dur(1)color0(.1,.2,.2)color1(0,0,0)
 				count(20)alphafade(.2)flamesize(8)max_radius(10)velocity(0,0,0)
 				accel(0,0,0)";
 			sfx attach_point #PEEK bip01_r_finger0 target;
 			sfx start #POP;
 			
 			sfx create fire #TARGET 
-				"dark()delay(.1)grey_tex()dur(1)color0(.2,.2,.1)color1(0,0,0)
+				"dark()delay(.1)grey_tex()dur(1)color0(.1,.2,.2)color1(0,0,0)
 				count(20)alphafade(.2)flamesize(8)max_radius(10)velocity(0,0,0)
 				accel(0,0,0)";
 			sfx attach_point #PEEK bip01_l_finger0 target;
@@ -161,7 +161,7 @@
 
 	script	=[[
 			sfx create fireb #SOURCE
-				"must_update()dur(.8)offset(0,0,.5)color0(.2,.2,.1)dark()velocity(0,3,100)
+				"must_update()dur(.8)offset(0,0,.5)color0(.1,.2,.2)dark()velocity(0,3,100)
 				accel(0,-30,-10)cvel(1)ts(.6)light_freq(0)alphafade(1)
 				lower_r0(0)lower_r1(6)upper_r0(10)upper_r1(200)count(50)
 				flamesize(2)";
@@ -171,7 +171,7 @@
 
 			sfx create fire #SOURCE
 				"must_update()offset(0,0,0)dur(1)alphafade(2)count(5)flamesize(10)
-				color0(.4,.4,.2)color1(0,0,0)velocity(0,1,20)accel(0,0,0)
+				color0(.2,.4,.4)color1(0,0,0)velocity(0,1,20)accel(0,0,0)
 				max_radius(8)max_displace(0)dark()grey_tex()";
 			sfx attach_point #PEEK [0] target;
 			sfx friendly party #PEEK;
@@ -207,7 +207,7 @@
 	script	=[[
 			sfx create fireb  #SOURCE 
 				"start_rate(8)offset(-0.45,.3,0)velocity(-5,40,0)accel(7.5,-60,0)
-				scale(1)color0(.15,.08,.04)alphafade(2)lower_r0(0)lower_r1(0)
+				scale(1)color0(.04,.08,.15)alphafade(2)lower_r0(0)lower_r1(0)
 				upper_r0(0)upper_r1(0)count(10)fctrl(0,0,40)flamesize(.3)
 				bone_orient()dur(1)";
 			sfx attach_point #PEEK Bip01_Head target;
@@ -223,7 +223,7 @@
 	script	=[[
 			sfx create fireb  #SOURCE 
 				"start_rate(8)offset(-0.45,.3,0)velocity(-5,40,0)accel(7.5,-60,0)
-				scale(1)color0(.15,.08,.04)alphafade(2)lower_r0(0)lower_r1(0)
+				scale(1)color0(.04,.08,.15)alphafade(2)lower_r0(0)lower_r1(0)
 				upper_r0(0)upper_r1(0)count(10)fctrl(0,0,40)flamesize(.3)
 				bone_orient()dur(1)";
 			sfx attach_point #PEEK Bip01_Head target;
@@ -241,7 +241,7 @@
 			camerashake camera_stomp s<frequency=10&magnitude_x=0.01&magnitude_y=.03&magnitude_z=0.01&duration=.3&epicenter=#TARGET_GOID>;
 			
 			sfx create fire #TARGET
-				"offset(0,-.2,-.2)dur(1)alphafade(1)flamesize(2)color0(.3,.3,.22)
+				"offset(0,-.2,-.2)dur(1)alphafade(1)flamesize(2)color0(.22,.3,.3)
 				color1(0,0,0)velocity(0,.5,0)accel(0,0,0)max_radius(1)
 				max_displace(0)dark()grey_tex()";
 				
