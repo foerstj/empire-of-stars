@@ -246,6 +246,10 @@
 		standard_repeat_delay = 10.0f;
 		standard_track = "s_m_ArcticCaverns_07";
 	}
+	[snow]
+	{
+	  f snow_density = 450.000000;
+	}
 	[sun]
 	{
 		00h00m:color = 0xFF000000;
@@ -288,6 +292,10 @@
 		standard_repeat_delay = 10.0f;
 		standard_track = "s_m_ArcticCaverns_06";
 	}
+	[snow]
+	{
+	  f snow_density = 450.000000;
+	}
 	[sun]
 	{
 		00h00m:color = 0xFF000000;
@@ -323,12 +331,125 @@
 		frustum_height = 60.0f;
 		frustum_width = 45.0f;
 	}
+	[snow]
+	{
+	  f snow_density = 600.000000;
+	}
 	[music]
 	{
 		ambient_track = "s_e_ambient_wind_ice_cavern";
 		room_type = rt_mountains;
 		standard_repeat_delay = 10.0f;
 		standard_track = "s_m_ArcticCaverns_01";
+	}
+	[sun]
+	{
+		00h00m:color = 0xFF000000;
+		05h00m:color = 0xFF1A1A00;
+		06h00m:color = 0xFF66330D;
+		07h00m:color = 0xFFB39A40;
+		08h00m:color = 0xFFB3B3B3;
+		10h00m:color = 0xFFF0F0FF;
+		12h00m:color = 0xFFFFFFFF;
+		19h00m:color = 0xFFB39A9A;
+		20h00m:color = 0xFF66334D;
+		21h00m:color = 0xFF330D40;
+		22h00m:color = 0xFF000000;
+		23h00m:color = 0xFF000000;
+	}
+}
+[mood_setting*]
+{
+  b interior = true;
+	mood_name = eos_altair_moon_haunted;
+  f transition_time = 2.000000;
+	[fog]
+	{
+	  x fog_color = 0xFFD2E6F0;
+	  f fog_density = 1.000000;
+	  f fog_far_dist = 40.000000;
+	  f fog_lowdetail_far_dist = 35.000000;
+	  f fog_lowdetail_near_dist = 17.000000;
+	  f fog_near_dist = 17.000000;
+	}
+	[frustum]
+	{
+	  f frustum_height = 60.000000;
+	  f frustum_width = 45.000000;
+	}
+	[music]
+	{
+	  f ambient_intro_delay = 0.000000;
+	  f ambient_repeat_delay = 0.000000;
+		ambient_track = ;
+	  f battle_intro_delay = 0.000000;
+	  f battle_repeat_delay = 10.000000;
+		battle_track = s_m_battle;
+		room_type = rt_mountains;
+	  f standard_intro_delay = 0.000000;
+	  f standard_repeat_delay = 0.000000;
+		standard_track = s_m_icebridge;
+	}
+	[snow]
+	{
+	  f snow_density = 450.000000;
+	}
+	[sun]
+	{
+		00h00m:color = 0xFF000000;
+		05h00m:color = 0xFF1A1A00;
+		06h00m:color = 0xFF66330D;
+		07h00m:color = 0xFFB39A40;
+		08h00m:color = 0xFFB3B3B3;
+		10h00m:color = 0xFFF0F0FF;
+		12h00m:color = 0xFFFFFFFF;
+		19h00m:color = 0xFFB39A9A;
+		20h00m:color = 0xFF66334D;
+		21h00m:color = 0xFF330D40;
+		22h00m:color = 0xFF000000;
+		23h00m:color = 0xFF000000;
+	}
+}
+[mood_setting*]
+{
+  b interior = true;
+	mood_name = eos_altair_moon_snow_heavy;
+  f transition_time = 5.000000;
+	[fog]
+	{
+	  x fog_color = 0xFFD2E6F0;
+	  f fog_density = 1.000000;
+	  f fog_far_dist = 40.000000;
+	  f fog_lowdetail_far_dist = 35.000000;
+	  f fog_lowdetail_near_dist = 17.000000;
+	  f fog_near_dist = 17.000000;
+	}
+	[frustum]
+	{
+	  f frustum_height = 60.000000;
+	  f frustum_width = 45.000000;
+	}
+	[music]
+	{
+	  f ambient_intro_delay = 0.000000;
+	  f ambient_repeat_delay = 0.000000;
+		ambient_track = ;
+	  f battle_intro_delay = 0.000000;
+	  f battle_repeat_delay = 0.000000;
+		battle_track = s_m_battle;
+		room_type = rt_forest;
+	  f standard_intro_delay = 0.000000;
+	  f standard_repeat_delay = 10.000000;
+		standard_track = s_m_arcticcaverns_01;
+	}
+	[snow]
+	{
+	  f snow_density = 600.000000;
+	}
+	[wind]
+	{
+	  f wind_direction = 1.140000;
+	  f wind_velocity = 4.000000;
 	}
 	[sun]
 	{
