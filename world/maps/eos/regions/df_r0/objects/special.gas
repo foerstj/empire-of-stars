@@ -90,6 +90,61 @@
 	  p position = 0.352776,-1.5,-6.0547,0x7e0e5a20;
 	}
 }
+[t:accumulate_trigger,n:0x05800654]
+{
+	[generic_accumtrigger]
+	{
+	  i num_til_send = 10;
+	  x send_to_scid = 0x05800655;
+	}
+	[placement]
+	{
+	  p position = 0.133688,-1.5,-2.99009,0x7e0e5a20;
+	}
+}
+[t:trigger_generic,n:0x05800655]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = change_quest_state("altair_shrine","completed",0);
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_req_activate",0,"on_every_message");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+			[*]
+			{
+				action* = change_quest_state("altair_shrine","active",0);
+			  b can_self_destruct = true;
+				condition* = party_member_within_sphere(10.000000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  p position = 0.0753555,-1.5,-2.2412,0x7e0e5a20;
+	}
+}
 [t:trigger_change_mood_box,n:0x058004c6]
 {
 	[common]
@@ -307,19 +362,7 @@
 	  p position = -1.12557,0,-1.89253,0xc3160f08;
 	}
 }
-[t:accumulate_trigger,n:0x05800654]
-{
-	[generic_accumtrigger]
-	{
-	  i num_til_send = 10;
-	  x send_to_scid = 0x05800655;
-	}
-	[placement]
-	{
-	  p position = 0.133688,-1.5,-2.99009,0x7e0e5a20;
-	}
-}
-[t:trigger_generic,n:0x05800655]
+[t:trigger_change_mood_box,n:0x05800652]
 {
 	[common]
 	{
@@ -327,24 +370,9 @@
 		{
 			[*]
 			{
-				action* = change_quest_state("altair_shrine","completed",0);
+				action* = mood_change("eos_altair_wnw_cave");
 			  b can_self_destruct = true;
-				condition* = receive_world_message("we_req_activate",0,"on_every_message");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-			[*]
-			{
-				action* = change_quest_state("altair_shrine","active",0);
-			  b can_self_destruct = true;
-				condition* = party_member_within_sphere(10.000000,"on_every_enter");
+				condition* = party_member_within_bounding_box(10.000000,2.000000,1.000000,"on_every_enter");
 			  f delay = 0.000000;
 			  b flip_flop = false;
 			  b multi_player = true;
@@ -359,6 +387,6 @@
 	}
 	[placement]
 	{
-	  p position = 0.0753555,-1.5,-2.2412,0x7e0e5a20;
+	  p position = -0.509465,-11.5713,3.77228,0xf5a00548;
 	}
 }
