@@ -1,198 +1,112 @@
-[conversation_gate_archer_guard]
+[conversation_ada]
 {
 	[text*]
 	{
-		screen_text = "Son of a sea cook! Have a nice walk out in the snow, I'm sure the beasts are no danger to you." ;
+		screen_text = "Fudgepuppies! I've never seen the wolves attack a well-armed party; something's set them off for sure.";
+	}
+}
+[conversation_apprentice]
+{
+	[text*]
+	{
+		choice = more;
+		order = 0;
+		quest_dialog = true;
+		screen_text = "Puddlegoo! Master Bharmar is going to have my hide! I borrowed a trilogy of books about Thawhorn's Way, and lent two out to some friends. But now, I don't remember to whom I lent them! Bharmar forbids me to leave while he is keeping shop, but I am sure he will find them missing any time now. Might you have a few minutes to ask around town for me?";
+	}
+	[text*]
+	{
+		activate_quest* = altair_apprentice_books;
+		order = 1;
+		screen_text = "You are very kind, stranger. I will gladly reimburse you for your trouble. Here's one of the books so you know what they look like.";
+	}
+	[text*]
+	{
+		screen_text = "Maybe I'd be able to remember who had the books if I didn't have to memorize so many spells.";
+	}
+}
+[conversation_apprentice_complete]
+{
+	[text*]
+	{
+		screen_text = "Neither a borrower nor a lender be; that's my new motto.";
+	}
+}
+[conversation_apprentice_one_book]
+{
+	[text*]
+	{
+		order = 0;
+		screen_text = "Sweet cheese! Well, two are better than none, but I don't want to tell Bharmar until I can return all three to him. You'd better keep those two until you find the third.";
+	}
+	[text*]
+	{
+		screen_text = "I hope the other book is returned soon...";
+	}
+}
+[conversation_apprentice_two_books]
+{
+	[text*]
+	{
+		complete_quest* = altair_apprentice_books;
+		order = 0;
+		screen_text = "Fire and brimstone! Thank you, friend! You have saved my job, and maybe my life. Take this gold and my gratitude for your help.";
 	}
 }
 [conversation_archer_guard2]
 {
 	[text*]
 	{
-		screen_text = "Gobbledygook! I hate this shift. I swear that old statue is staring at me. It's named after Thawhorn our founder, but they say it was already up here all by itself when he arrived." ;
+		screen_text = "Gobbledygook! I hate this shift. I swear that old statue is staring at me. It's named after Thawhorn our founder, but they say it was already up here all by itself when he arrived.";
 	}
 }
-[conversation_onoc]
+[conversation_bar_f]
+{
+	[text*]
+	{
+		screen_text = "Boogers! I just want to go home to Javlakallt now, but the boys say the Guards Fair won't be over for another week.
+Have some Krug blood wine, it's delicious!";
+	  f scroll_rate = 10.000000;
+	}
+}
+[conversation_bar_m]
+{
+	[text*]
+	{
+		screen_text = "Friggers! Welcome to Altair, tall alien. This planet may feel cold to you, but it's got a warm heart!
+Here, have some Krug blood wine!";
+	  f scroll_rate = 10.000000;
+	}
+}
+[conversation_book1]
 {
 	[text*]
 	{
 		order = 0;
-		choice = shop;
-		screen_text = "Thunder and lightning! It's a bit muggy out there, eh? Well thank the seven powers I don't have to live here year-round! I only come down here to run experiments. Heating and freezing spells, that nature of beast. In any case, you can have a look at some of my potions and spells if you like.";
+		screen_text = "Gremal droppings! Excuse me, what are you doing up-- oh! I see you have one of the Thawhorn books. They're good reading; I just finished this one. You can borrow it, as long as you get it back to that mage kid when you're done.";
 	}
 	[text*]
 	{
-		choice = shop;
-		screen_text = "Thunder and lightning! Oh, hello again! Thought of something you could use? I've got the best spells of the whole kingdom here!";
+		screen_text = "Sure is warm up here.";
 	}
 }
-[conversation_ibsen]
+[conversation_book2]
 {
 	[text*]
 	{
-		activate_quest*	= quest_find_merik;
-		screen_text = "Broken swords! We welcome you on this world, tall alien. You say you search for an ancient stone to return to your home world - We wish you best luck, but unfortunately we know only little of the time of antiquity. Our records date back no further than to the founding of this city, hundreds of years ago. Apart from us Dwarves, only beasts like the Krug and Braak inhabit this world; and the Zaurask down in the Fireheart Caverns. Maybe the best idea would be to search down there - the Caverns are not fully explored, because of the smoldering heat down there.";
-		quest_dialog = true;
-        choice = more;
+		order = 0;
+		screen_text = "Hey, were you born in a barn? Shut the door! Oh, you're looking for books, are you? As a matter of fact, I do have one that Spiut lent me. Here, tell him thanks.";
+	}
+	[text*]
+	{
+		screen_text = "Don't let the door hit you on your way out.";
 	}
 }
-[conversation_ibsen_2]
+[conversation_book_no_quest]
 {
 	[text*]
 	{
-		screen_text = "Shriveling worm! Our nephew is a good the barkeeper and that's what he should stick to; instead he keeps babbling of things on the Moon he sees in his dreams. Yeah maybe the artifact you're looking for is on the Moon for whatever we know, haha. If you came from the stars you can fly up there, We guess. Wrap yourselves in furs; from what we can see through telescopes from here, it should be rather cold and unpleasant up there.";
-		activate_quest* = quest_fort_kroth;
-		quest_dialog = true;
-	}
-}
-[conversation_jewlynna]
-{
-	[text*]
-	{
-		activate_quest*	= quest_find_merik,1;
-		screen_text = "Blast the monarchy! The King would give audience to a dog wearing the Guard's colors, but will he listen to his own nephew? I've seen a magic stone in my dreams, trapped in the ice of the Moon. For generations my family's had the sight of dreams, but what am I given to do? Scrubbing, cooking, and minding the inn, that's what! OOOOOOOH!";
-		quest_dialog = true;
-	}
-}
-[conversation_lorun_multiplayer]
-{
-	[text*]
-	{
-		screen_text = "Burned gravy! If you really come from another star, I suggest you speak with the King. This should interest him; also he might guide you to whatever help you may need.";
-	}
-}
-[conversation_lorun_overseer]
-{
-	[text*]
-	{
-		screen_text = "Burned gravy! If you really come from another star, I suggest you speak with the King. This should interest him; also he might guide you to whatever help you may need.";
-	}
-}
-[conversation_lorun_join]
-{
-	[text*]
-	{
-		choice = potential_member;
-		screen_text = "Sewer pipe! If the King sees fit to send you oot on a madman's quest into the Fireheart Caverns, I should at least see you've a chance at living through it. I'm the best mage in these parts and I may be old, but I was roasting furoks with mage fire when yer daddy's daddy was a whelp! If you've the gold so's I kin settle my accounts here, we can get moving afore you can say bless the Fireheart. Will ye have me along?";
-	}
-}
-[conversation_lorun_accept_have_money]
-{
-	[text*]
-	{
-		screen_text = "Good enough. Let's be off, then!";
-	}
-}
-[conversation_lorun_accept_no_money]
-{
-	[text*]
-	{
-		screen_text = "I'd be glad to join your company, but I can't do it for free. I've financial matters for the Guard to attend to here in Lagomsno, but if you can help make up far some of the gold I lost to brigands on the way here, I'd be glad to toss in with your lot!";
-	}
-}
-[conversation_lorun_reject]
-{
-	[text*]
-	{
-		screen_text = "You're a mad duck you are, but do as you will. I shall be here when you come to your senses.";
-	}
-}
-[conversation_lorun_rejoin]
-{
-	[text*]
-	{
-		choice = potential_member;
-		screen_text = "I'd still be glad to help you out---assuming you want helping. If you've got the gold I need for settling my affairs, we can be on the road before you say, 'catch a queensmen.' How about it?";
-	}
-}
-[conversation_lorun_disband]
-{
-	[text*]
-	{
-		screen_text = "I don't know yer thinkin, but if you'll have no more of my company, then I suppose here's whar we break fellowship. Good luck to ye, all the same.";
-	}
-}
-[conversation_lorun_disband_rejoin]
-{
-	[text*]
-	{
-		choice = potential_member;
-		screen_text = "That's it, then? Yer joost going to march right up without an apology far abandoning me from before? Not soo much as an explanation? Ach, these new kidlings! If yer done fooling about now, I'd like to get back to our business. We've a kingdom to hold together!";
-	}
-}
-[conversation_kroduk_join]
-{
-	[text*]
-	{
-		choice = potential_member;
-		screen_text = "Bloodsucking barnacle! Chieftain tell Sig of Mugmort 'bring caravan safe to kingdom of Borea.' I bring to Javlakallt... then mule-eating Krug attack caravan! Driver steals wagon, driver takes Sig gold, and driver runs away. Sig tracks to Lagomsno, but cannot chase further. Sig help you if you help him. Sig good at smashing, beating, crushing... anything! You like?";
-	}
-}
-[conversation_kroduk_accept_have_money]
-{
-	[text*]
-	{
-		screen_text = "Aha! You make perfect, excellent choice! We have great fun pounding Krug, saving kingdom!";
-	}
-}
-[conversation_kroduk_accept_no_money]
-{
-	[text*]
-	{
-		screen_text = "Ah, well... I come with you when you have enough money. We have good time then, eh? Until then.";
-	}
-}
-[conversation_kroduk_reject]
-{
-	[text*]
-	{
-		screen_text = "You think about it. Sig of Mugmort will wait, be here when you're ready for big, strapping warrior, eh? Good, good. See you later.";
-	}
-}
-[conversation_kroduk_disband]
-{
-	[text*]
-	{
-		screen_text = "What, you no like Sig of Mugmort anymore? I good friend, smash enemies dead. You walk, cool off, get good sense back in head. Sig will wait.";
-	}
-}
-[conversation_kroduk_rejoin]
-{
-	[text*]
-	{
-		choice = potential_member;
-		screen_text = "Come, we have fun, we crack heads, Sig of Mugmort and tall friend make great names in songs of heroes, eh?";
-	}
-}
-[conversation_kroduk_disband_rejoin]
-{
-	[text*]
-	{
-		choice = potential_member;
-		screen_text = "Come, we have fun, we crack heads, Sig of Mugmort and tall friend make great names in songs of heroes, eh? Let's go together again. Sound good?";
-	}
-}
-[conversation_ghilbertnor_first]
-{
-	[text*]
-	{
-		screen_text = "Stuff yourself! Here to buy a mule, are you? You want a nice docile beastie you can leave out in the rain, pack a house-worth of stuff onto its back, and feed whenever you feel it's convenient? Hah! It's no wonder we went out of the sodding yak business! Do me a favor: take one of these worthless mules I got in trade for its equal in gold, and I'll be one step closer to getting out of this blighted kingdom for good.";
-		choice = buy_packmule;
-	}
-}
-[conversation_ghilbertnor_has_packmules]
-{
-	[text*]
-	{
-		screen_text = "Oh, back to buy one of these cretinous mules? Fine, fine. Take your pick. I don't care which one, just as long as you've got the gold I need.";
-		choice = buy_packmule;
-	}
-}
-[conversation_ghilbertnor_no_packmules]
-{
-	[text*]
-	{
-		screen_text = "If you're looking for another mule, you're out of luck. I've sold the last of them, and the Frozen Yak Corral is now history. Good riddance!";
+		screen_text = "Another sultry day in the valley. Well, as soon as Katla sells all our blasted packmules, we can move somewhere cool.";
 	}
 }
 [conversation_foulton]
@@ -210,11 +124,91 @@
 		screen_text = "Back again, are you? I'll bet you've got some tales to tell! So, what can I get you?";
 	}
 }
-[conversation_ada]
+[conversation_gate_archer_guard]
 {
 	[text*]
 	{
-		screen_text = "Fudgepuppies! I've never seen the wolves attack a well-armed party; something's set them off for sure.";
+		screen_text = "Son of a sea cook! Have a nice walk out in the snow, I'm sure the beasts are no danger to you.";
+	}
+}
+[conversation_gate_guard_a]
+{
+	[text*]
+	{
+		screen_text = "Ish! This snow is playing with my eyes, but I swear I have seen things moving around out there today. If I were you, I would head back to the Inn and grab a warm stout 'til this storm blows over.";
+	}
+}
+[conversation_ghilbertnor_first]
+{
+	[text*]
+	{
+		choice = buy_packmule;
+		screen_text = "Stuff yourself! Here to buy a mule, are you? You want a nice docile beastie you can leave out in the rain, pack a house-worth of stuff onto its back, and feed whenever you feel it's convenient? Hah! It's no wonder we went out of the sodding yak business! Do me a favor: take one of these worthless mules I got in trade for its equal in gold, and I'll be one step closer to getting out of this blighted kingdom for good.";
+	}
+}
+[conversation_ghilbertnor_has_packmules]
+{
+	[text*]
+	{
+		choice = buy_packmule;
+		screen_text = "Oh, back to buy one of these cretinous mules? Fine, fine. Take your pick. I don't care which one, just as long as you've got the gold I need.";
+	}
+}
+[conversation_ghilbertnor_no_packmules]
+{
+	[text*]
+	{
+		screen_text = "If you're looking for another mule, you're out of luck. I've sold the last of them, and the Frozen Yak Corral is now history. Good riddance!";
+	}
+}
+[conversation_guard_b]
+{
+	[text*]
+	{
+		screen_text = "Arrow to the knee! You picked a bad week to travel east. The Woods are full of Krugs, and the King has withdrawn Guard patrols from the Fireheart Caverns during these festivities. No doubt the Zaurask are having a heyday down there in our absence. You will need all the luck I can wish you if you must go. Thawhorn's warding to you, friend.";
+	}
+}
+[conversation_guard_c]
+{
+	[text*]
+	{
+		screen_text = "Phrak! Well you're a new face. You must be the one everyone says came from the stars. I certainly hope your business was in Lagomsno, because if you intend to visit the Caverns, you'll never make it now that we've withdrawn the patrols.";
+	}
+}
+[conversation_guard_d]
+{
+	[text*]
+	{
+		screen_text = "Muckdweller! I guess it isn't so bad being stationed here during the festivities; I'd rather stand in the sun for half a day than be hunting Klaws up and down the Winternight Woods.";
+	}
+}
+[conversation_guard_e]
+{
+	[text*]
+	{
+		screen_text = "Dust on crackers! Hjaldur is the best smith in these parts. I'm glad he can find the time to refit my armor while he is trying to keep up with all the reserve Guards in town.";
+	}
+}
+[conversation_guard_f]
+{
+	[text*]
+	{
+		screen_text = "Butterscotch! There hasn't been a Furok seen around these parts for twenty years.";
+	}
+	[text*]
+	{
+		screen_text = "You're seeing things; it happens on long marches.";
+	}
+}
+[conversation_guard_g]
+{
+	[text*]
+	{
+		screen_text = "Pea shoots! I swear by the stars that I saw a Furok on the march here from our post in the Caverns!";
+	}
+	[text*]
+	{
+		screen_text = "I know what I saw; strange things are afoot.";
 	}
 }
 [conversation_house1_f]
@@ -228,212 +222,233 @@
 {
 	[text*]
 	{
-        screen_text = "By Thawhorn's beard! Looks like you have seen your fair share of battle, friend. With any luck, these festivities the King is planning will finally give me something to tell my grandchildren.";
+		screen_text = "By Thawhorn's beard! Looks like you have seen your fair share of battle, friend. With any luck, these festivities the King is planning will finally give me something to tell my grandchildren.";
 	}
 }
-[conversation_inn_m]
+[conversation_ibsen]
 {
 	[text*]
 	{
-        screen_text = "Grime reaper! If the King hadn't called me back to active duty, I could be sleeping in my own bed right now, not in this bloody hallway.";
+		activate_quest* = quest_find_merik;
+		choice = more;
+		quest_dialog = true;
+		screen_text = "Broken swords! We welcome you on this world, tall alien. You say you search for an ancient stone to return to your home world - We wish you best luck, but unfortunately we know only little of the time of antiquity. Our records date back no further than to the founding of this city, hundreds of years ago. Apart from us Dwarves, only beasts like the Krug and Braak inhabit this world; and the Zaurask down in the Fireheart Caverns. Maybe the best idea would be to search down there - the Caverns are not fully explored, because of the smoldering heat down there.";
+	}
+}
+[conversation_ibsen_2]
+{
+	[text*]
+	{
+		activate_quest* = quest_fort_kroth;
+		quest_dialog = true;
+		screen_text = "Shriveling worm! Our nephew is a good the barkeeper and that's what he should stick to; instead he keeps babbling of things on the Moon he sees in his dreams. Yeah maybe the artifact you're looking for is on the Moon for whatever we know, haha. If you came from the stars you can fly up there, We guess. Wrap yourselves in furs; from what we can see through telescopes from here, it should be rather cold and unpleasant up there.";
 	}
 }
 [conversation_inn_f]
 {
 	[text*]
 	{
-        screen_text = "Cabbagehead! I'm sorry, we aren't used to so many Guards off shift at one time. Can you just rest here until we have an opening?";
+		screen_text = "Cabbagehead! I'm sorry, we aren't used to so many Guards off shift at one time. Can you just rest here until we have an opening?";
 	}
 }
-[conversation_tavern_m]
+[conversation_inn_m]
 {
 	[text*]
 	{
-        screen_text = "Frozen furok on a flying gremal! It's said that the Queensmen's sigil appeared here last week. I asked the Captain about it, and he gave me extra patrol duty for a week. And I still don't know why everyone's so hush-hush about it!";
+		screen_text = "Grime reaper! If the King hadn't called me back to active duty, I could be sleeping in my own bed right now, not in this bloody hallway.";
 	}
 }
-[conversation_tavern_f]
+[conversation_jewlynna]
 {
 	[text*]
 	{
-        screen_text = "Bag of potatoes! From what I heard, the King withdrew the patrols along the Winternight Woods so that he would have enough men to organize the food and competitions.";
+		activate_quest* = quest_find_merik,1;
+		choice = more;
+		order = 0;
+		quest_dialog = true;
+		screen_text = "Blast the monarchy! The King would give audience to a dog wearing the Guard's colors, but will he listen to his own nephew? I've seen a magic stone in my dreams, trapped in the ice of the Moon. For generations my family's had the sight of dreams, but what am I given to do? Scrubbing, cooking, and minding the inn, that's what! OOOOOOOH!";
+	}
+	[text*]
+	{
+		screen_text = "You want to order something to eat? On the menu's dragon blood pudding, green cheese and our specialty Royal Gremal Stew.";
 	}
 }
-[conversation_bar_f]
+[conversation_kroduk_accept_have_money]
 {
 	[text*]
 	{
-        screen_text = "Boogers! I just want to go home to Javlakallt now, but the boys say the Guards Fair won't be over for another week.";
+		screen_text = "Aha! You make perfect, excellent choice! We have great fun pounding Krug, saving kingdom!";
 	}
 }
-[conversation_bar_m]
+[conversation_kroduk_accept_no_money]
 {
 	[text*]
 	{
-        screen_text = "Friggers! Welcome to Altair, tall alien. This planet may feel cold to you, but it's got a warm heart!";
+		screen_text = "Ah, well... I come with you when you have enough money. We have good time then, eh? Until then.";
+	}
+}
+[conversation_kroduk_disband]
+{
+	[text*]
+	{
+		screen_text = "What, you no like Sig of Mugmort anymore? I good friend, smash enemies dead. You walk, cool off, get good sense back in head. Sig will wait.";
+	}
+}
+[conversation_kroduk_disband_rejoin]
+{
+	[text*]
+	{
+		choice = potential_member;
+		screen_text = "Come, we have fun, we crack heads, Sig of Mugmort and tall friend make great names in songs of heroes, eh? Let's go together again. Sound good?";
+	}
+}
+[conversation_kroduk_join]
+{
+	[text*]
+	{
+		choice = potential_member;
+		screen_text = "Bloodsucking barnacle! Chieftain tell Sig of Mugmort 'bring caravan safe to kingdom of Borea.' I bring to Javlakallt... then mule-eating Krug attack caravan! Driver steals wagon, driver takes Sig gold, and driver runs away. Sig tracks to Lagomsno, but cannot chase further. Sig help you if you help him. Sig good at smashing, beating, crushing... anything! You like?";
+	}
+}
+[conversation_kroduk_reject]
+{
+	[text*]
+	{
+		screen_text = "You think about it. Sig of Mugmort will wait, be here when you're ready for big, strapping warrior, eh? Good, good. See you later.";
+	}
+}
+[conversation_kroduk_rejoin]
+{
+	[text*]
+	{
+		choice = potential_member;
+		screen_text = "Come, we have fun, we crack heads, Sig of Mugmort and tall friend make great names in songs of heroes, eh?";
+	}
+}
+[conversation_lieutenant_shea]
+{
+	[text*]
+	{
+		choice = more;
+		order = 0;
+		screen_text = "Holy whack a moly! The stars have always been, and will always be, a source of mystery. I just don't see how the people of antiquity could have built the interstellar teleportation devices you talk of. There must be another explanation for such a kind of sorcery.";
+	}
+	[text*]
+	{
+		choice = more;
+		order = 1;
+		screen_text = "I don't know of any ancient artifacts, other than the Pillar Circle ruins you came from. Maybe they're buried deep within the planet's heart?";
+	}
+	[text*]
+	{
+		screen_text = "Have some whisky, it's all single malt here! I can recommend Ashtray and Throatburn.";
+	}
+}
+[conversation_lorun_accept_have_money]
+{
+	[text*]
+	{
+		screen_text = "Good enough. Let's be off, then!";
+	}
+}
+[conversation_lorun_accept_no_money]
+{
+	[text*]
+	{
+		screen_text = "I'd be glad to join your company, but I can't do it for free. I've financial matters for the Guard to attend to here in Lagomsno, but if you can help make up far some of the gold I lost to brigands on the way here, I'd be glad to toss in with your lot!";
+	}
+}
+[conversation_lorun_disband]
+{
+	[text*]
+	{
+		screen_text = "I don't know yer thinkin, but if you'll have no more of my company, then I suppose here's whar we break fellowship. Good luck to ye, all the same.";
+	}
+}
+[conversation_lorun_disband_rejoin]
+{
+	[text*]
+	{
+		choice = potential_member;
+		screen_text = "That's it, then? Yer joost going to march right up without an apology far abandoning me from before? Not soo much as an explanation? Ach, these new kidlings! If yer done fooling about now, I'd like to get back to our business. We've a kingdom to hold together!";
+	}
+}
+[conversation_lorun_join]
+{
+	[text*]
+	{
+		choice = potential_member;
+		screen_text = "Sewer pipe! If the King sees fit to send you oot on a madman's quest into the Fireheart Caverns, I should at least see you've a chance at living through it. I'm the best mage in these parts and I may be old, but I was roasting furoks with mage fire when yer daddy's daddy was a whelp! If you've the gold so's I kin settle my accounts here, we can get moving afore you can say bless the Fireheart. Will ye have me along?";
+	}
+}
+[conversation_lorun_multiplayer]
+{
+	[text*]
+	{
+		screen_text = "Burned gravy! If you really come from another star, I suggest you speak with the King. This should interest him; also he might guide you to whatever help you may need.";
+	}
+}
+[conversation_lorun_overseer]
+{
+	[text*]
+	{
+		screen_text = "Burned gravy! If you really come from another star, I suggest you speak with the King. This should interest him; also he might guide you to whatever help you may need.";
+	}
+}
+[conversation_lorun_reject]
+{
+	[text*]
+	{
+		screen_text = "You're a mad duck you are, but do as you will. I shall be here when you come to your senses.";
+	}
+}
+[conversation_lorun_rejoin]
+{
+	[text*]
+	{
+		choice = potential_member;
+		screen_text = "I'd still be glad to help you out---assuming you want helping. If you've got the gold I need for settling my affairs, we can be on the road before you say, 'catch a queensmen.' How about it?";
 	}
 }
 [conversation_marelle]
 {
 	[text*]
 	{
-        order = 0;
-        screen_text = "Spells and curses! Can't you see I'm with a customer? Somebody has been disturbing the spirits of the dead over the last week. And I am swamped with keeping them supplied. If you need something, talk to Bharmar, he is handling all the living customers this week.";
+		order = 0;
+		screen_text = "Spells and curses! Can't you see I'm with a customer? Somebody has been disturbing the spirits of the dead over the last week. And I am swamped with keeping them supplied. If you need something, talk to Bharmar, he is handling all the living customers this week.";
 	}
 	[text*]
 	{
-        screen_text = "I am sorry, if you really must speak to me, you will have to go to the end of the line.";
+		screen_text = "I am sorry, if you really must speak to me, you will have to go to the end of the line.";
 	}
 }
-[conversation_apprentice]
+[conversation_onoc]
 {
 	[text*]
 	{
-        order = 0;
-        screen_text = "Puddlegoo! Master Bharmar is going to have my hide! I borrowed a trilogy of books about Thawhorn's Way, and lent two out to some friends. But now, I don't remember to whom I lent them! Bharmar forbids me to leave while he is keeping shop, but I am sure he will find them missing any time now. Might you have a few minutes to ask around town for me?";
-		quest_dialog = true;
-		choice = more;
+		choice = shop;
+		order = 0;
+		screen_text = "Thunder and lightning! It's a bit muggy out there, eh? Well thank the seven powers I don't have to live here year-round! I only come down here to run experiments. Heating and freezing spells, that nature of beast. In any case, you can have a look at some of my potions and spells if you like.";
 	}
 	[text*]
 	{
-        order = 1;
-        screen_text = "You are very kind, stranger. I will gladly reimburse you for your trouble. Here's one of the books so you know what they look like.";
-		activate_quest* = altair_apprentice_books;
-	}
-	[text*]
-	{
-        screen_text = "Maybe I'd be able to remember who had the books if I didn't have to memorize so many spells.";
-	}
-}
-[conversation_apprentice_one_book]
-{
-	[text*]
-	{
-        order = 0;
-        screen_text = "Sweet cheese! Well, two are better than none, but I don't want to tell Bharmar until I can return all three to him. You'd better keep those two until you find the third.";
-	}
-	[text*]
-	{
-        screen_text = "I hope the other book is returned soon...";
-	}
-}
-[conversation_apprentice_two_books]
-{
-	[text*]
-	{
-        order = 0;
-        screen_text = "Fire and brimstone! Thank you, friend! You have saved my job, and maybe my life. Take this gold and my gratitude for your help.";
-        complete_quest* = altair_apprentice_books;
-	}
-}
-[conversation_apprentice_complete]
-{
-	[text*]
-	{
-        screen_text = "Neither a borrower nor a lender be; that's my new motto.";
-	}
-}
-[conversation_book1]
-{
-	[text*]
-	{
-        order = 0;
-        screen_text = "Gremal droppings! Excuse me, what are you doing up-- oh! I see you have one of the Thawhorn books. They're good reading; I just finished this one. You can borrow it, as long as you get it back to that mage kid when you're done.";
-	}
-	[text*]
-	{
-        screen_text = "Sure is warm up here.";
-	}
-}
-[conversation_book2]
-{
-	[text*]
-	{
-        order = 0;
-        screen_text = "Hey, were you born in a barn? Shut the door! Oh, you're looking for books, are you? As a matter of fact, I do have one that Spiut lent me. Here, tell him thanks.";
-	}
-	[text*]
-	{
-        screen_text = "Don't let the door hit you on your way out.";
-	}
-}
-[conversation_book_no_quest]
-{
-	[text*]
-	{
-        screen_text = "Another sultry day in the valley. Well, as soon as Katla sells all our blasted packmules, we can move somewhere cool.";
-	}
-}
-[conversation_gate_guard_a]
-{
-	[text*]
-	{
-		screen_text = "Ish! This snow is playing with my eyes, but I swear I have seen things moving around out there today. If I were you, I would head back to the Inn and grab a warm brew 'til this storm blows over." ;
-	}
-}
-[conversation_guard_b]
-{
-	[text*]
-	{
-		screen_text = "Arrow to the knee! You picked a bad week to travel east. The Woods are full of Krugs, and the King has withdrawn Guard patrols from the Fireheart Caverns during these festivities. No doubt the Zaurask are having a heyday down there in our absence. You will need all the luck I can wish you if you must go. Thawhorn's warding to you, friend." ;
-	}
-}
-[conversation_guard_c]
-{
-	[text*]
-	{
-		screen_text = "Phrak! Well you're a new face. You must be the one everyone says came from the stars. I certainly hope your business was in Lagomsno, because if you intend to visit the Caverns, you'll never make it now that we've withdrawn the patrols." ;
-	}
-}
-[conversation_guard_d]
-{
-	[text*]
-	{
-		screen_text = "Muckdweller! I guess it isn't so bad being stationed here during the festivities; I'd rather stand in the sun for half a day than be hunting Klaws up and down the Winternight Woods." ;
-	}
-}
-[conversation_guard_e]
-{
-	[text*]
-	{
-		screen_text = "Dust on crackers! Hjaldur is the best smith in these parts. I'm glad he can find the time to refit my armor while he is trying to keep up with all the reserve Guards in town." ;
-	}
-}
-[conversation_guard_f]
-{
-	[text*]
-	{
-		screen_text = "Butterscotch! There hasn't been a Furok seen around these parts for twenty years." ;
-	}
-	[text*]
-	{
-		screen_text = "You're seeing things; it happens on long marches." ;
-	}
-}
-[conversation_guard_g]
-{
-	[text*]
-	{
-		screen_text = "Pea shoots! I swear by the stars that I saw a Furok on the march here from our post in the Caverns!" ;
-	}
-	[text*]
-	{
-		screen_text = "I know what I saw; strange things are afoot." ;
+		choice = shop;
+		screen_text = "Thunder and lightning! Oh, hello again! Thought of something you could use? I've got the best spells of the whole kingdom here!";
 	}
 }
 [conversation_orlov]
 {
 	[text*]
 	{
+		choice = more;
 		order = 0;
 		screen_text = "Rusting spoons! I had to take a job with the blacksmith to pay for my room at the Dragonblood Inn; the Aurora Shrine had become overrun with Braaks, and every time I opened my door, a pack of wolves would attack me! I don't know when I'll be able to go home, but Hjaldur needs the help, and offered to lend me his adventuring gear if I keep up the good work through the Guards Fair.";
-		choice = more;
 	}
 	[text*]
 	{
-		screen_text = "Well, you seem a persistent sort. There's a chest and some crates in the Aurora Shrine. If you can clear the monsters out of there, you're welcome to what's left. The Shrine is in the Winternight Woods east of here." ;
 		activate_quest* = quest_ice_dungeon;
 		quest_dialog = true;
+		screen_text = "Well, you seem a persistent sort. There's a chest and some crates in the Aurora Shrine. If you can clear the monsters out of there, you're welcome to what's left. The Shrine is in the Winternight Woods east of here.";
 	}
 }
 [conversation_orlov_2]
@@ -443,16 +458,21 @@
 		screen_text = "I miss my Shrine.";
 	}
 }
-[conversation_lieutenant_shea]
+[conversation_tavern_f]
 {
 	[text*]
 	{
-		order = 0;
-		screen_text = "Holy whack a moly! The stars have always been, and will always be, a source of mystery. I just don't see how the people of antiquity could have built the interstellar teleportation devices you talk of. There must be another explanation for such a kind of sorcery.";
-		choice = more;
+		screen_text = "Bag of potatoes! From what I heard, the King withdrew the patrols along the Winternight Woods so that he would have enough men to organize the food and competitions.
+Speaking of food, I can really recommend the Royal Gremal Stew they serve here, best gremal stew of the kingdom! Order a whisky with it, you'll need it to digest, haha.";
+	  f scroll_rate = 10.000000;
 	}
+}
+[conversation_tavern_m]
+{
 	[text*]
 	{
-		screen_text = "I don't know of any ancient artifacts, other than the Pillar Circle ruins you came from. Maybe they're buried deep within the planet's heart?";
+		screen_text = "Frozen furok on a flying gremal! It's said that the Queensmen's sigil appeared here last week. I asked the Captain about it, and he gave me extra patrol duty for a week. And I still don't know why everyone's so hush-hush about it!
+Have some stout and green cheese!";
+	  f scroll_rate = 10.000000;
 	}
 }
