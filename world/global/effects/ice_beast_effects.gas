@@ -145,8 +145,8 @@
 			sfx friendly party #PEEK;
 			sfx start #POP;
 			
-			call ice_beast_base s<bip01_r_finger0>;
-			call ice_beast_base s<bip01_l_finger0>; 
+			call ice_beast_blast_base s<bip01_r_finger0>;
+			call ice_beast_blast_base s<bip01_l_finger0>; 
 			call ice_beast_blast_yell;
 
 			pause 3;
@@ -157,11 +157,11 @@
 }
 [effect_script*]
 {
-	name	=ice_beast_base;
+	name	=ice_beast_blast_base;
 
 	script	=[[
 			sfx create fireb #SOURCE
-				"must_update()dur(.8)offset(0,0,.5)color0(.1,.2,.2)dark()velocity(0,3,100)
+				"must_update()dur(.8)offset(0,0,.5)color0(.15,.2,.25)dark()velocity(0,3,100)
 				accel(0,-30,-10)cvel(1)ts(.6)light_freq(0)alphafade(1)
 				lower_r0(0)lower_r1(6)upper_r0(10)upper_r1(200)count(50)
 				flamesize(2)";
@@ -171,7 +171,7 @@
 
 			sfx create fire #SOURCE
 				"must_update()offset(0,0,0)dur(1)alphafade(2)count(5)flamesize(10)
-				color0(.2,.4,.4)color1(0,0,0)velocity(0,1,20)accel(0,0,0)
+				color0(.3,.4,.5)color1(0,0,0)velocity(0,1,20)accel(0,0,0)
 				max_radius(8)max_displace(0)dark()grey_tex()";
 			sfx attach_point #PEEK [0] target;
 			sfx friendly party #PEEK;
@@ -260,7 +260,7 @@
 
 	script	=[[
 			sfx create fire #TARGET
-				"dur(1)alphafade(.25)count(15)flamesize(4)color0(.4,.4,.4)
+				"dur(1)alphafade(.25)count(15)flamesize(4)color0(.7,.8,.9)
 				color1(0,0,0)velocity(0,.5,0)accel(0,0,0)max_radius(.5)
 				max_displace(0)dark()grey_tex()";
 				
@@ -269,7 +269,7 @@
 			sfx start #POP;
 
 			sfx create fire #TARGET
-				"dur(1)alphafade(.25)count(15)flamesize(4)color0(.4,.4,.4)
+				"dur(1)alphafade(.25)count(15)flamesize(4)color0(.7,.8,.9)
 				color1(0,0,0)velocity(0,.5,0)accel(0,0,0)max_radius(.5)
 				max_displace(0)dark()grey_tex()";
 				
@@ -278,7 +278,7 @@
 			sfx start #POP;
 			
 			sfx create explosion #TARGET
-			"scale(.5)texture(b_sfx_rock_single_01)omni_dir()color0(.2,.2,.2)
+			"scale(.5)texture(b_sfx_rock_single_01)omni_dir()color0(.35,.4,.45)
 			color1(.01,.01,.01)dark()dur(4)count(8)collide()";
 			
 			
@@ -286,7 +286,7 @@
 			sfx start #POP;
 			
 			sfx create explosion #TARGET
-			"scale(.5)texture(b_sfx_rock_single_01)omni_dir()color0(.2,.2,.2)
+			"scale(.5)texture(b_sfx_rock_single_01)omni_dir()color0(.35,.4,.45)
 			color1(.01,.01,.01)dark()dur(4)count(8)collide()";
 			
 			
