@@ -14,18 +14,17 @@ With help & content from:
 - Kathy CF & Bare Elf from Siege The Day,
 - Maps & resources from the original game and Project Britannia.
 
-## Release 0.3: A Utraean Utopia
+## Release 0.4: Ice & Fire
 
-This release includes Alpha Centauri from the 0.2 release and several new regions:
-- The main campaign of Betelgeuse.\
-On this paradisiacal planet under a pink sun, you travel through a forest of flowers to seek out the Elder of the Lake for answers.
-- Betelgeuse Moon, which offers stunning landscape with easy enemies.
-- The first part of the dense jungle of Vega, where you can go for hunting.
+This release includes Alpha Centauri, Vega and Betelgeuse from the 0.3 release and several new regions:
+- The snowy landscape of Altair.\
+Meet the dwarves in the cozy town of Lagomsnö and walk through the Winternight Woods.
+- The Fireheart Caverns, volcanic caves deep below the surface, inhabited by Zaurask and other creatures.
+- The Ice Moon of Altair, which is so cold that nothing but ice exists there.
+- The second part of the jungle of Vega, with some more Pygmies (Guliks & Bookas) and also stronger enemies like the Mantraps and the Jungle Braak. Located north-east of the teleporter.
 
 Miscellaneous:
-- A new item set was created, "The Astral Set". You can find up to 6 set items.
-- Black water for Lake Chalice at the start.
-- Some new enemies & ambients (simple re-textures & re-stats).
-- The map features some innocent nudity in the Utraean society.\
-  Planning on supporting a non-nude overlay dsres but tbh graphics is ridiculously primitive.
+- Each of these four areas contains new enemies (simple re-textures & re-stats).
+- Additions to the Astral item set - now already 11 items altogether.
+- Lagomsnö is ASCII-ized to Lagomsno in-game because DS kept behaving strangely. Correct spelling will at least be available in the German translation that I'll add one distant day.
 - More small changes, of course.
