@@ -270,7 +270,7 @@
 {
 	interior = false;
 	mood_name = eos_altair_moon_default;
-	transition_time = 50.0f;
+	transition_time = 5.0f;
 	[fog]
 	{
 	  x fog_color = 0xFFD2E6F0;
@@ -316,7 +316,7 @@
 {
 	interior = false;
 	mood_name = eos_altair_moon_mountaintop;
-	transition_time = 50.0f;
+	transition_time = 5.0f;
 	[fog]
 	{
 	  x fog_color = 0xFFD2E6F0;
@@ -471,15 +471,15 @@
 {
 	interior = false;
 	mood_name = eos_altair_moon_cave;
-	transition_time = 50.0f;
+	transition_time = 2.0f;
 	[fog]
 	{
-	  x fog_color = 0xFFD2E6F0;
-	  f fog_density = 0.500000;
+	  x fog_color = 0xFF000000;
+	  f fog_density = 50.000000;
 	  f fog_far_dist = 50.000000;
 	  f fog_lowdetail_far_dist = 45.000000;
-	  f fog_lowdetail_near_dist = 25.000000;
-	  f fog_near_dist = 25.000000;
+	  f fog_lowdetail_near_dist = 30.000000;
+	  f fog_near_dist = 30.000000;
 	}
 	[frustum]
 	{
@@ -488,8 +488,10 @@
 	}
 	[music]
 	{
+	  f ambient_intro_delay = 0.000000;
+	  f ambient_repeat_delay = 0.000000;
 		ambient_track = "s_e_ambient_wind_ice_cavern";
-		room_type = rt_mountains;
+		room_type = rt_cave;
 		standard_repeat_delay = 10.0f;
 		standard_track = "s_m_ArcticCaverns_04";
 	}
