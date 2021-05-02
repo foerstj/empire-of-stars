@@ -77,7 +77,7 @@
 		{
 			[*]
 			{
-				action* = change_quest_state("altair_moon","active",0);
+				action* = change_quest_state("altair_moon","completed",0);
 			  b can_self_destruct = true;
 				condition* = receive_world_message("we_killed",0,"on_every_message");
 			  f delay = 0.000000;
