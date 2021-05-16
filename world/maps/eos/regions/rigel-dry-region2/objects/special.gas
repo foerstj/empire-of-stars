@@ -28,6 +28,96 @@
 	  p position = -17.465,5.85864,-21.7048,0x5a3615de;
 	}
 }
+[t:trigger_generic,n:0x0d201ac9]
+{
+	[common]
+	{
+		dev_instance_text = "MOOD";
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = mood_change("eos_rigel_dry_oasis");
+			  b can_self_destruct = true;
+				condition* = party_member_within_sphere(50.000000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,0.707107,0,0.707107;
+	  p position = -44.4955,6.87727,-19.9174,0x7eb03b1c;
+	}
+}
+[t:trigger_generic,n:0x0d2019c0]
+{
+	[common]
+	{
+		dev_instance_text = "MOOD";
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = mood_change("eos_rigel_dry_oasis");
+			  b can_self_destruct = true;
+				condition* = party_member_within_sphere(50.000000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,0.707107,0,0.707107;
+	  p position = 16.4621,4.61078,8.50063,0x111786bb;
+	}
+}
+[t:trigger_generic,n:0x0d20197c]
+{
+	[common]
+	{
+		dev_instance_text = "MOOD";
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = mood_change("eos_rigel_dry_oasis");
+			  b can_self_destruct = true;
+				condition* = party_member_within_sphere(50.000000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,0.707107,0,0.707107;
+	  p position = -44.5517,3.81077,-52.556,0x9c4751e9;
+	}
+}
 [t:trigger_generic,n:0x0d200958]
 {
 	[common]
@@ -200,20 +290,6 @@
 	  p position = 18.7718,0.299999,0.467626,0x346775ed;
 	}
 }
-[t:use_point,n:0x0d200981]
-{
-	[placement]
-	{
-	  p position = -0.817833,0.1,-1.09654,0xb14c25f6;
-	}
-}
-[t:use_point,n:0x0d20111f]
-{
-	[placement]
-	{
-	  p position = 1.13421,0.1,1.08609,0xb14c25f6;
-	}
-}
 [t:trigger_generic,n:0x0d201486]
 {
 	[common]
@@ -244,93 +320,17 @@
 	  p position = -14.6828,6.84516,8.90213,0x897f4770;
 	}
 }
-[t:trigger_generic,n:0x0d20197c]
+[t:use_point,n:0x0d200981]
 {
-	[common]
-	{
-		dev_instance_text = "MOOD";
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = mood_change("eos_rigel_dry_oasis");
-			  b can_self_destruct = true;
-				condition* = party_member_within_sphere(50.000000,"on_every_enter");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-		}
-	}
 	[placement]
 	{
-	  q orientation = 0,0.707107,0,0.707107;
-	  p position = -44.5517,3.81077,-52.556,0x9c4751e9;
+	  p position = -0.817833,0.1,-1.09654,0xb14c25f6;
 	}
 }
-[t:trigger_generic,n:0x0d2019c0]
+[t:use_point,n:0x0d20111f]
 {
-	[common]
-	{
-		dev_instance_text = "MOOD";
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = mood_change("eos_rigel_dry_oasis");
-			  b can_self_destruct = true;
-				condition* = party_member_within_sphere(50.000000,"on_every_enter");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-		}
-	}
 	[placement]
 	{
-	  q orientation = 0,0.707107,0,0.707107;
-	  p position = 16.4621,4.61078,8.50063,0x111786bb;
-	}
-}
-[t:trigger_generic,n:0x0d201ac9]
-{
-	[common]
-	{
-		dev_instance_text = "MOOD";
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = mood_change("eos_rigel_dry_oasis");
-			  b can_self_destruct = true;
-				condition* = party_member_within_sphere(50.000000,"on_every_enter");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  q orientation = 0,0.707107,0,0.707107;
-	  p position = -44.4955,6.87727,-19.9174,0x7eb03b1c;
+	  p position = 1.13421,0.1,1.08609,0xb14c25f6;
 	}
 }
