@@ -278,7 +278,7 @@
 	}
 	[t:start_group,n:rigel_dry_test_exit]
 	{
-	  b default = true;
+	  b default = false;
 		description = "";
 	  b dev_only = false;
 	  i id = 1698464;
@@ -293,6 +293,29 @@
 			  f distance = 20.000000;
 			  f orbit = 0.000000;
 				position = -15.901051,0.516386,-12.204758,0xA0CEC499;
+			}
+		}
+		[world_levels]
+		{
+		}
+	}
+	[t:start_group,n:rigel_dry_test_pyramid]
+	{
+	  b default = true;
+		description = "";
+	  b dev_only = false;
+	  i id = 1698464;
+		screen_name = "";
+		[start_position]
+		{
+		  i id = 1;
+			position = -28.606800,9.919733,-37.984058,0xA18F1A42;
+			[camera]
+			{
+			  f azimuth = 0.500000;
+			  f distance = 20.000000;
+			  f orbit = 0.000000;
+				position = 0.000000,0.000000,0.000000,0xA18F1A42;
 			}
 		}
 		[world_levels]
