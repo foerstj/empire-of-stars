@@ -186,14 +186,16 @@
 {
 	[common]
 	{
-		dev_instance_text = "CHECK + ELEVATORS SIRIUS";
+		dev_instance_text = "CHECK + ELEVATORS RIGEL";
 		[instance_triggers]
 		{
 			[*]
 			{
 				action* = send_world_message("we_req_activate",0x07F00050,0f,"default","",0);
+				action* = send_world_message("we_req_activate",0x0D200957,0f,"default","",0);
 			  b can_self_destruct = true;
 				condition* = receive_world_message("we_req_activate",0,"on_every_message");
+				condition* = has_go_in_inventory("local",0x00000000,"starstone_rigel");
 			  f delay = 0.000000;
 			  b flip_flop = false;
 			  b multi_player = true;
@@ -216,7 +218,7 @@
 {
 	[common]
 	{
-		dev_instance_text = "CHECK + ELEVATORS RIGEL";
+		dev_instance_text = "CHECK + ELEVATORS SIRIUS";
 		[instance_triggers]
 		{
 			[*]
