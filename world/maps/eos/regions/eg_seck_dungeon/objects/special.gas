@@ -157,18 +157,17 @@
 	  p position = -0.000404358,1.19209e-007,-1.39159,0xd520e487;
 	}
 }
-[t:trigger_generic,n:0x02d0001d]
+[t:trigger_generic,n:0x02d0001b]
 {
 	[common]
 	{
-		dev_instance_text = "MOOD + FADE CAPS+SHAFT";
+		dev_instance_text = "REVERT FADE CAVE+DUNES";
 		[instance_triggers]
 		{
 			[*]
 			{
-				action* = mood_change("multiplayer_world_eg_seck_dungeon_2");
-				action* = fade_nodes(0x39B22300,3,-1,-1,"out:instant");
-				action* = fade_nodes(0x39B22300,1,2,-1,"out:instant");
+				action* = fade_nodes(0xE0D3DEC9,1,-1,-1,"in:instant");
+				action* = fade_nodes(0x000000D1,1,-1,-1,"in:instant");
 			  b can_self_destruct = true;
 				condition* = party_member_within_bounding_box(5.000000,0.500000,1.000000,"on_every_enter");
 			  f delay = 0.000000;
@@ -185,7 +184,40 @@
 	}
 	[placement]
 	{
-	  p position = -0.0741649,-1.90735e-006,0.834846,0xf3e45fb2;
+	  p position = -0.074299,-1.90735e-006,1.77541,0xf3e45fb2;
+	}
+}
+[t:trigger_generic,n:0x02d0001d]
+{
+	[common]
+	{
+		dev_instance_text = "MOOD + FADE CAPS+SHAFT+CAVE+DUNES";
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = mood_change("multiplayer_world_eg_seck_dungeon_2");
+				action* = fade_nodes(0x39B22300,3,-1,-1,"out:instant");
+				action* = fade_nodes(0x39B22300,1,2,-1,"out:instant");
+				action* = fade_nodes(0xE0D3DEC9,1,-1,-1,"out:instant");
+				action* = fade_nodes(0x000000D1,1,-1,-1,"out:instant");
+			  b can_self_destruct = true;
+				condition* = party_member_within_bounding_box(5.000000,0.500000,1.000000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  p position = -0.231657,-1.90735e-006,-0.46518,0xf3e45fb2;
 	}
 }
 [t:trigger_change_mood_box,n:0x02d001a3]
