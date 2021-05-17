@@ -3,6 +3,7 @@
 	category_name = "1W_evil_d";
 	doc = "sand_ripper";
 	specializes = base_imp;
+
 	[actor]
 	{
 		[skills]
@@ -26,6 +27,8 @@
 		{
 			[die]			{ priority = high; * = s_e_die_sand_ripper; }
 		}
+
+        scale_base = 1.1;
 	}
 	[attack]
 	{
@@ -73,6 +76,7 @@
 	category_name = "1W_evil_d";
 	doc = "sand_mage";
 	specializes = base_imp;
+
 	[actor]
 	{
 		[skills]
@@ -92,6 +96,8 @@
 		max_mana = 16;
 		model = m_c_edm_li_pos_2;
 		[textures] { 0=b_c_edm_li-06; }
+
+        scale_base = 1.1;
 	}
 	[attack]
 	{
@@ -156,6 +162,7 @@
 	category_name = "1W_evil_d";
 	doc = "sand_basher";
 	specializes = base_imp;
+
 	[actor]
 	{
 		[skills]
@@ -175,6 +182,8 @@
 		max_mana = 10;
 		model = m_c_edm_li_pos_3;
 		[textures] { 0=b_c_edm_li-07; }
+
+        scale_base = 1.1;
 	}
 	[attack]
 	{
@@ -208,7 +217,6 @@
 			}
 		}
 	}
-
 	[mind]
 	{
 		jat_brain							= world\ai\jobs\common\brain_hero.skrit
