@@ -1,4 +1,4 @@
-[t:template,n:eos_rgd_shop_ranged]
+[t:template,n:eos_rld_shop_melee]
 {
     category_name = "1W_shopkeep";
 	doc = "craftsman, quillrabe (MP)";
@@ -10,7 +10,7 @@
 		is_ghost_usable = TRUE;
 		[textures] { 0=b_c_eam_dg-05; }
 	}
-	[common] { screen_name="Hek-an-u"; }
+	[common] { screen_name="Se-ra-nefer-tai"; }
 	[conversation] { }
 	[inventory]
 	{
@@ -19,22 +19,22 @@
 			full_ratio = 0;
 			[weapons]
 			{
-                // ranged from verma
+                // melee from verma
 				[all*]
 				{
-					il_main = #ranged/44-56;
+					il_main = #melee/44-56;
 					max = 8;
 					min = 8;
 				}
 				[all*]
 				{
-					il_main = #ranged/57-85;
+					il_main = #melee/57-85;
 					max = 18;
 					min = 18;
 				}
 				[all*]
 				{
-					il_main = #ranged/86-101;
+					il_main = #melee/86-101;
 					max = 6;
 					min = 6;
 				}
