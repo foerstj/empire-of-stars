@@ -1,25 +1,28 @@
+// Droog archer with stats of ice archer
 [t:template,n:eos_rld_droog_archer_base]
 {
 	category_name = "1W_evil_a";
 	doc = "droog archer";
 	specializes = base_droog;
+
 	[actor]
 	{
 		[skills]
 		{
-			strength     = 24, 0;
-			intelligence = 16, 0;
-			dexterity    = 30, 0;
-			ranged       = 40, 0;
+			strength =  13, 0;
+			intelligence =  5, 0;
+			dexterity =  16, 0;
+            ranged =  6,  0;
 		}
 	}
 	[aspect]
 	{
-		experience_value = 34600;
-		life = 630;
-		max_life = 630;
-		mana = 28;
-		max_mana = 28;
+		experience_value = 261;
+		life = 243;
+        max_life = 243;
+        mana = 10;
+		max_mana = 10;
+
 		[textures] { 0=b_c_eam_dga; }
         
         scale_base = 0.9;  // smaller
@@ -27,11 +30,11 @@
 	[attack]
 	{
 		attack_range = 0.5;
-		damage_max = 36;
-		damage_min = 20;
+		damage_max = 51;
+		damage_min = 48;
 	}
 	[common] { screen_name="Droog Archer"; }
-	[defend] { defense=300; }
+	[defend] { defense=75; }
 	[guts_manager]
 	{
 		effect_name = melee_hit_2;
@@ -42,37 +45,47 @@
     	[pcontent]
 		{
 			[oneof*] { es_shield_hand = bw_un_droog_avg; }
+
+            // drops from ice archer
 			[oneof*]
 			{
 				[oneof*]
 				{
-					chance = 0.25;
-					il_main = #*/109-125;
-					il_main = #armor/54-266;
-        	        il_main = #nmagic/25-44;
-            	    il_main = #cmagic/25-44;
-   				    il_main = potion_health_large;
-				    il_main = potion_mana_large;
+				   chance = 0.05;
+				   il_main = potion_health_small;
+				   il_main = potion_mana_small;
+				}
+				[all*]
+				{
+       				chance = 0.02;
+	                il_main = #spell/10-14;
 				}
 				[oneof*]
 				{
+					chance = 0.2;
+					il_main = #*/6-11;
+					il_main = #armor/18-91;
+	                il_main = #weapon/36-43;
+				}
+                [oneof*]
+				{
 	            	chance = 0.004;
-	                il_main = #weapon/-rare(1)/121-134;
-	                il_main = #armor/-rare(1)/290-350;
-                    il_main = #*/-rare(1)/121-134;
+	                il_main = #weapon/-rare(1)/41-51;
+	                il_main = #armor/-rare(1)/110-143;
+                    il_main = #*/-rare(1)/41-51;
                 }
 				[oneof*]
 				{
                 	chance = 0.002;
-	                il_main = #weapon/-unique(2)/121-134;
-	                il_main = #armor/-unique(2)/290-350;
-                    il_main = #*/-unique(2)/121-134;
+	                il_main = #weapon/-unique(2)/41-51;
+	                il_main = #armor/-unique(2)/110-143;
+                    il_main = #*/-unique(2)/41-51;
 	            }
 				[gold*]
 				{
-					chance = 0.125;
-					max = 15002;
-					min = 13145;
+					chance = 0.15;
+					max = 398;
+					min = 266;
 				}
 			}
 		}
@@ -139,28 +152,31 @@
 	}
 }
 
+// Droog grunt with stats of ice warrior
 [t:template,n:eos_rld_droog_grunt_base]
 {
 	category_name = "1W_evil_a";
 	doc = "droog grunt";
 	specializes = base_droog;
+
 	[actor]
 	{
 		[skills]
 		{
-			strength     = 30, 0;
-			intelligence = 13, 0;
-			dexterity    = 22, 0;
-			melee        = 40, 0;
+			strength 	=  18, 0;
+			intelligence =  4, 0;
+			dexterity 	=  10, 0;
+            melee 		=  7,  0;
 		}
 	}
 	[aspect]
 	{
-		experience_value = 46179;
-		life             = 1040;
-		max_life         = 1040;
-		mana             = 26;
-		max_mana         = 26;
+		experience_value = 348;
+		life = 288;
+        max_life = 288;
+        mana = 8;
+		max_mana = 8;
+
 		[textures] { 0=b_c_eam_dgg; }
         
         scale_base = 0.9;  // smaller
@@ -168,11 +184,11 @@
 	[attack]
 	{
 		attack_range = 0.5;
-		damage_max = 60;
-		damage_min = 40;
+		damage_max = 33;
+		damage_min = 29;
 	}
 	[common] { screen_name="Droog Grunt"; }
-	[defend] { defense=460; }
+	[defend] { defense=98; }
 	[guts_manager]
 	{
 		effect_name = melee_hit_2;
@@ -188,35 +204,47 @@
     				es_weapon_hand = sd_un_droog_1h_avg;
 				}
 			}
+
+            // drops from ice warrior
 			[oneof*]
 			{
 				[oneof*]
 				{
-					chance = 0.25;
-					il_main = #*/109-115;
-					il_main = #armor/54-272;
-   				    il_main = potion_health_large;
-				    il_main = potion_mana_large;
+				   chance = 0.05;
+				   il_main = potion_health_small;
+				   il_main = potion_mana_small;
+				}
+				[all*]
+				{
+       				chance = 0.02;
+	                il_main = #spell/10-14;
+				}
+				[oneof*]
+				{
+					chance = 0.2;
+					il_main = #*/6-11;
+					il_main = #armor/18-98;
+	                il_main = #weapon/36-44;
 				}
 				[oneof*]
 				{
 	            	chance = 0.004;
-	                il_main = #weapon/-rare(1)/112-127;
-	                il_main = #armor/-rare(1)/290-350;
-                    il_main = #*/-rare(1)/112-127;
+	                il_main = #weapon/-rare(1)/42-59;
+	                il_main = #armor/-rare(1)/126-144;
+                    il_main = #*/-rare(1)/42-59;
                 }
 				[oneof*]
 				{
                 	chance = 0.002;
-	                il_main = #weapon/-unique(2)/112-127;
-	                il_main = #armor/-unique(2)/290-350;
-                    il_main = #*/-unique(2)/112-127;
+	                il_main = #weapon/-unique(2)/42-59;
+	                il_main = #armor/-unique(2)/126-144;
+                    il_main = #*/-unique(2)/42-59;
 	            }
 				[gold*]
 				{
-					chance = 0.125;
-					max = 15348;
-					min = 10199;
+					chance = 0.15;
+					max = 328;
+					min = 239;
 				}
 			}
 		}
@@ -262,6 +290,7 @@
 	}
 }
 
+// Droog grunt boss with stats of ice warrior boss
 [t:template,n:eos_rld_droog_grunt_boss_01]
 {
 	category_name = "1W_evil_a";
@@ -271,26 +300,27 @@
 	{
 		[skills]
 		{
-			strength     = 35, 0;
-			intelligence = 13, 0;
-			dexterity    = 23, 0;
-			melee        = 43, 0;
+			strength 	=  18, 0;
+			intelligence =  5, 0;
+			dexterity 	=  11, 0;
+            melee 		=  13,  0;
 		}
 	}
 	[aspect]
 	{
-		experience_value = 61210;
-		life             = 1448;
-		max_life         = 1448;
-		mana             = 26;
-		max_mana         = 26;
+		experience_value = 550;
+		life = 327;
+        max_life = 327;
+        mana = 8;
+		max_mana = 8;
+
 		[textures] { 0=b_c_eam_dgg-02; }
 	}
 	[attack]
 	{
 		attack_range = 0.5;
-		damage_max = 70;
-		damage_min = 50;
+		damage_max = 33;
+		damage_min = 29;
 	}
 	[common]
 	{
@@ -307,7 +337,7 @@
 			}
 		}
 	}
-	[defend] { defense=630; }
+	[defend] { defense=202; }
 	[inventory]
 	{
 		[pcontent]
@@ -319,34 +349,35 @@
     				es_weapon_hand = sd_un_droog_1h_avg;
 				}
 			}
+
+            // drops from ice warrior boss
 			[all*]
 			{
 				[oneof*]
 				{
-					il_main = #*/115-130;
-					il_main = #armor/370-410;
+					il_main = #armor,f/130-145;
+	                il_main = #weapon/44-48;
 				}
-
 				[oneof*]
 				{
 	            	chance = 0.004;
-	                il_main = #weapon/-rare(1)/138-159;
-	                il_main = #armor/-rare(1)/290-350;
-                    il_main = #*/-rare(1)/138-159;
+	                il_main = #weapon/-rare(1)/51-59;
+	                il_main = #armor/-rare(1)/155-172;
+                    il_main = #*/-rare(1)/51-59;
                 }
 				[oneof*]
 				{
                 	chance = 0.002;
-	                il_main = #weapon/-unique(2)/138-159;
-	                il_main = #armor/-unique(2)/290-350;
-                    il_main = #*/-unique(2)/138-159;
+	                il_main = #weapon/-unique(2)/51-59;
+	                il_main = #armor/-unique(2)/155-172;
+                    il_main = #*/-unique(2)/51-59;
 	            }
 				[gold*]
 				{
-					max = 29891;
-					min = 24678;
-					min_pile = 3641;
-					piles = 2 - 5;
+					max = 484;
+					min = 241;
+					min_pile = 41;
+					piles = 2 - 4;
 				}
 			}
 		}
@@ -361,6 +392,7 @@
 	}
 }
 
+// Droog mage with stats of ice mage
 [t:template,n:eos_rld_droog_mage_base]
 {
 	category_name = "1W_evil_a";
@@ -371,19 +403,20 @@
 	{
 		[skills]
 		{
-			strength     = 19, 0;
-			intelligence = 33, 0;
-			dexterity    = 20, 0;
-			combat_magic = 63, 0;
+			strength =  8, 0;
+			intelligence =  13, 0;
+			dexterity =  9, 0;
+			combat_magic =  8,  0;
 		}
 	}
 	[aspect]
 	{
-		experience_value = 34600;
-		life             = 540;
-		max_life         = 540;
-		mana             = 1936;
-		max_mana         = 1936;
+		experience_value = 261;
+		life = 100;
+		max_life = 100;
+		mana = 56;
+		max_mana = 56;
+
 		[textures] { 0=b_c_eam_dgm; }
         
         scale_base = 0.9;  // smaller
@@ -391,61 +424,47 @@
 	[attack]
 	{
 		attack_range = 0.5;
-		damage_max = 158;
-		damage_min = 102;
+		damage_max = 60;
+		damage_min = 55;
 	}
 	[common] { screen_name="Droog Mage"; }
-	[defend] { defense=275; }
+	[defend] { defense=74; }
 	[guts_manager]
 	{
 		effect_name = melee_hit_2;
 	}
 	[inventory]
 	{
-	  selected_active_location = il_active_primary_spell;
+        selected_active_location = il_active_primary_spell;
+		[other]
+		{
+			il_active_primary_spell = spell_droog_starburst;
+		}
 
-
-
+        // drops from ice mage
 		[pcontent]
 		{
 			[oneof*]
 			{
 				[oneof*]
 				{
-					chance = 0.25;
-					il_main = #*/109-115;
-					il_main = #armor/58-285;
-                    il_main = #body,ro/151-283;
-            	    il_main = #nmagic/45-49;
-                	il_main = #cmagic/45-49;
-   				    il_main = potion_health_large;
-				    il_main = potion_mana_large;
+				   chance = 0.05;
+				   il_main = potion_health_small;
+				   il_main = potion_mana_small;
+				}
+				[all*]
+				{
+       				chance = 0.1;
+                    il_main = #cmagic/3-15;
 				}
 				[oneof*]
 				{
-	            	chance = 0.004;
-	                il_main = #weapon/-rare(1)/116-124;
-	                il_main = #armor/-rare(1)/290-350;
-                    il_main = #*/-rare(1)/116-124;
-                }
-				[oneof*]
-				{
-                	chance = 0.002;
-	                il_main = #weapon/-unique(2)/116-124;
-	                il_main = #armor/-unique(2)/290-350;
-                    il_main = #*/-unique(2)/116-124;
-	            }
-				[gold*]
-				{
-					chance = 0.125;
-					max = 15330;
-					min = 11083;
+					chance = 0.15;
+                    il_main = #*/36-44;
+                    il_main = #body,ro/70-88;
 				}
+
 			}
-		}
-		[other]
-		{
-			il_active_primary_spell = spell_droog_starburst;
 		}
 	}
     [mind]
