@@ -1,0 +1,230 @@
+[t:template,n:eos_rld_sand_ripper]
+{
+	category_name = "1W_evil_d";
+	doc = "sand_ripper";
+	specializes = base_imp;
+	[actor]
+	{
+		[skills]
+		{
+			strength = 		13, 0;
+			intelligence = 	10, 0;
+			dexterity = 	12, 0;
+			melee =  		29, 0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 22000;
+		life = 960;
+		max_life = 960;
+		mana = 14;
+		max_mana = 14;
+		model = m_c_edm_li_pos_1;
+		[textures] { 0=b_c_edm_li-05; }
+		[voice]
+		{
+			[die]			{ priority = high; * = s_e_die_sand_ripper; }
+		}
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 140;
+		damage_min = 120;
+	}
+	[common] { screen_name="Sand Ripper"; }
+	[defend] { defense=300; }
+   	[inventory]
+	{
+    	[pcontent]
+		{
+   			[oneof*]
+			{
+				[oneof*]
+				{
+					chance = 0.25;
+					il_main = #*/39-114;
+	                il_main = #nmagic/15-24;
+                	il_main = #cmagic/15-24;
+    			}
+                [gold*]
+				{
+					chance = 0.125;
+                    max = 17980;
+					min = 15487;
+				}
+			}
+		}
+	}
+	[mind]
+	{
+		jat_fidget = world\ai\jobs\common\job_fidget.skrit;
+
+		melee_engage_range = 14;
+		personal_space_range = 0.7;
+		ranged_engage_range = 14.0;
+		sight_range = 14;
+	}
+}
+
+[t:template,n:eos_rld_sand_mage_base]
+{
+	category_name = "1W_evil_d";
+	doc = "sand_mage";
+	specializes = base_imp;
+	[actor]
+	{
+		[skills]
+		{
+			strength = 		13, 0;
+			intelligence = 	12, 0;
+			dexterity = 	14, 0;
+			combat_magic = 	31, 0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 30000;
+		life = 798;
+		max_life = 798;
+		mana = 16;
+		max_mana = 16;
+		model = m_c_edm_li_pos_2;
+		[textures] { 0=b_c_edm_li-06; }
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 150;
+		damage_min = 130;
+	}
+	[common] { screen_name="Sand Mage"; }
+	[defend] { defense=344; }
+   	[inventory]
+	{
+    	selected_active_location = il_active_primary_spell;
+		[other] { il_active_primary_spell=spell_sand_mage_blast; }
+    	[pcontent]
+		{
+   			[oneof*]
+			{
+				[oneof*]
+				{
+					chance = 0.25;
+					il_main = #*/78-114;
+               		il_main = #nmagic/45-55;
+               		il_main = #cmagic/45-55;
+				}
+				[gold*]
+				{
+					chance = 0.125;
+                    max = 17980;
+					min = 15487;
+				}
+			}
+		}
+	}
+	[mind]
+	{
+		jat_brain					 = world\ai\jobs\common\brain_hero.skrit
+			?actor_creates_own_party = true
+			&party_template			 = "party_sand_mage";
+
+		jat_fidget					 = world\ai\jobs\common\job_fidget.skrit;
+
+		actor_weapon_preference			= WP_MAGIC;
+		actor_auto_switches_to_magic	= true;
+		actor_auto_switches_to_karate	= false;
+		actor_auto_switches_to_melee	= false;
+
+		melee_engage_range = 14;
+		personal_space_range = 0.7;
+		ranged_engage_range = 14.0;
+		sight_range = 14;
+	}
+}
+[t:template,n:eos_rld_sand_mage]
+{
+	category_name = "1W_evil_d";
+	doc = "sand mage";
+	specializes = eos_rld_sand_mage_base;
+}
+
+[t:template,n:eos_rld_sand_basher_base]
+{
+	category_name = "1W_evil_d";
+	doc = "sand_basher";
+	specializes = base_imp;
+	[actor]
+	{
+		[skills]
+		{
+			strength = 		15, 0;
+			intelligence = 	10, 0;
+			dexterity = 	12, 0;
+			melee =  		30, 0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 34000;
+		life = 1260;
+		max_life = 1260;
+		mana = 10;
+		max_mana = 10;
+		model = m_c_edm_li_pos_3;
+		[textures] { 0=b_c_edm_li-07; }
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 190;
+		damage_min = 170;
+	}
+	[common]
+	{
+		screen_name="Sand Basher";
+		membership = monster, party_sand_mage;
+	}
+	[defend] { defense=362; }
+   	[inventory]
+	{
+    	[pcontent]
+		{
+   			[oneof*]
+			{
+				[oneof*]
+				{
+					chance = 0.25;
+					il_main = #*/59-114;
+				}
+				[gold*]
+				{
+					chance = 0.125;
+					max = 19458;
+					min = 16987;
+				}
+			}
+		}
+	}
+
+	[mind]
+	{
+		jat_brain							= world\ai\jobs\common\brain_hero.skrit
+			?actor_joins_existing_party		= true;
+
+		jat_fidget							= world\ai\jobs\common\job_fidget.skrit;
+
+		melee_engage_range = 14;
+		personal_space_range = 0.7;
+		ranged_engage_range = 14.0;
+		sight_range = 14;
+	}
+}
+[t:template,n:eos_rld_sand_basher]
+{
+	category_name = "1W_evil_d";
+	doc = "sand_basher";
+	specializes = eos_rld_sand_basher_base;
+}
