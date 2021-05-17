@@ -1,0 +1,491 @@
+[t:template,n:eos_rld_droog_archer_base]
+{
+	category_name = "1W_evil_a";
+	doc = "droog archer";
+	specializes = base_droog;
+	[actor]
+	{
+		[skills]
+		{
+			strength     = 24, 0;
+			intelligence = 16, 0;
+			dexterity    = 30, 0;
+			ranged       = 40, 0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 34600;
+		life = 630;
+		max_life = 630;
+		mana = 28;
+		max_mana = 28;
+		[textures] { 0=b_c_eam_dga; }
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 36;
+		damage_min = 20;
+	}
+	[common] { screen_name="Droog Archer"; }
+	[defend] { defense=300; }
+	[guts_manager]
+	{
+		effect_name = melee_hit_2;
+	}
+	[inventory]
+	{
+		selected_active_location = IL_ACTIVE_RANGED_WEAPON;
+    	[pcontent]
+		{
+			[oneof*] { es_shield_hand = bw_un_droog_avg; }
+			[oneof*]
+			{
+				[oneof*]
+				{
+					chance = 0.25;
+					il_main = #*/109-125;
+					il_main = #armor/54-266;
+        	        il_main = #nmagic/25-44;
+            	    il_main = #cmagic/25-44;
+   				    il_main = potion_health_large;
+				    il_main = potion_mana_large;
+				}
+				[oneof*]
+				{
+	            	chance = 0.004;
+	                il_main = #weapon/-rare(1)/121-134;
+	                il_main = #armor/-rare(1)/290-350;
+                    il_main = #*/-rare(1)/121-134;
+                }
+				[oneof*]
+				{
+                	chance = 0.002;
+	                il_main = #weapon/-unique(2)/121-134;
+	                il_main = #armor/-unique(2)/290-350;
+                    il_main = #*/-unique(2)/121-134;
+	            }
+				[gold*]
+				{
+					chance = 0.125;
+					max = 15002;
+					min = 13145;
+				}
+			}
+		}
+	}
+	[mind]
+	{
+		actor_auto_switches_to_melee         = false;
+		actor_auto_switches_to_ranged        = true;
+		actor_auto_uses_stored_items		 = true;
+
+		actor_weapon_preference				 = WP_RANGED;
+
+		on_enemy_entered_icz_switch_to_melee = false;
+		inner_comfort_zone_range             = 2;
+		outer_comfort_zone_range             = 4.0;
+		melee_engage_range                   = 2;
+		ranged_engage_range                  = 13.5;
+		sight_range                          = 14.0;
+
+		jat_brain						= world\ai\jobs\common\brain_hero.skrit
+			?actor_joins_existing_party		= true
+			&actor_creates_own_party		= true
+			&party_template					= "party_droog";
+		jat_fidget						= world\ai\jobs\common\job_fidget.skrit
+			?social							= 0.45
+			&delay_min						= 7.0
+			&still							= false;
+	}
+}
+[t:template,n:eos_rld_droog_archer]
+{
+	category_name = "1W_evil_a";
+	doc = "droog archer";
+	specializes = eos_rld_droog_archer_base;
+
+	[guts_manager]
+	{
+		effect_name = melee_hit_2;
+	}
+}
+[t:template,n:eos_rld_droog_archer_reveal]
+{
+	category_name = "1W_evil_a";
+	doc = "droog archer reveal";
+	specializes = eos_rld_droog_archer_base;
+	[mind]
+	{
+		jat_startup = world\ai\jobs\common\job_startup_reveal.skrit
+			?invisible = true;
+		sight_origin_height = 1;
+		actor_auto_fidgets = false;
+	}
+	[common]
+	{
+		[template_triggers]
+		{
+			[*]
+			{
+				single_shot = true;
+				action* = call_sfx_script("droog_reveal");
+				condition* = receive_world_message("we_enemy_spotted");
+			}
+		}
+	}
+}
+
+[t:template,n:eos_rld_droog_grunt_base]
+{
+	category_name = "1W_evil_a";
+	doc = "droog grunt";
+	specializes = base_droog;
+	[actor]
+	{
+		[skills]
+		{
+			strength     = 30, 0;
+			intelligence = 13, 0;
+			dexterity    = 22, 0;
+			melee        = 40, 0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 46179;
+		life             = 1040;
+		max_life         = 1040;
+		mana             = 26;
+		max_mana         = 26;
+		[textures] { 0=b_c_eam_dgg; }
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 60;
+		damage_min = 40;
+	}
+	[common] { screen_name="Droog Grunt"; }
+	[defend] { defense=460; }
+	[guts_manager]
+	{
+		effect_name = melee_hit_2;
+	}
+	[inventory]
+	{
+		[pcontent]
+		{
+			[all*]
+			{
+				[oneof*]
+				{
+    				es_weapon_hand = sd_un_droog_1h_avg;
+				}
+			}
+			[oneof*]
+			{
+				[oneof*]
+				{
+					chance = 0.25;
+					il_main = #*/109-115;
+					il_main = #armor/54-272;
+   				    il_main = potion_health_large;
+				    il_main = potion_mana_large;
+				}
+				[oneof*]
+				{
+	            	chance = 0.004;
+	                il_main = #weapon/-rare(1)/112-127;
+	                il_main = #armor/-rare(1)/290-350;
+                    il_main = #*/-rare(1)/112-127;
+                }
+				[oneof*]
+				{
+                	chance = 0.002;
+	                il_main = #weapon/-unique(2)/112-127;
+	                il_main = #armor/-unique(2)/290-350;
+                    il_main = #*/-unique(2)/112-127;
+	            }
+				[gold*]
+				{
+					chance = 0.125;
+					max = 15348;
+					min = 10199;
+				}
+			}
+		}
+	}
+	[mind]
+	{
+		jat_brain							 = world\ai\jobs\common\brain_hero.skrit
+			?actor_joins_existing_party		 = true
+			&actor_creates_own_party		 = false
+			&party_template					 = "party_droog";
+	}
+}
+[t:template,n:eos_rld_droog_grunt]
+{
+	category_name = "1W_evil_a";
+	doc = "droog grunt";
+	specializes = eos_rld_droog_grunt_base;
+}
+[t:template,n:eos_rld_droog_grunt_reveal]
+{
+	category_name = "1W_evil_a";
+	doc = "droog grunt reveal";
+	specializes = eos_rld_droog_grunt_base;
+	[mind]
+	{
+		jat_startup = world\ai\jobs\common\job_startup_reveal.skrit
+			?invisible = true;
+		sight_origin_height = 1;
+		actor_auto_fidgets = false;
+	}
+
+	[common]
+	{
+		[template_triggers]
+		{
+			[*]
+			{
+				single_shot = true;
+				action* = call_sfx_script("droog_reveal");
+				condition* = receive_world_message("we_enemy_spotted");
+			}
+		}
+	}
+}
+
+[t:template,n:eos_rld_droog_grunt_boss_01]
+{
+	category_name = "1W_evil_a";
+	doc = "droog grunt boss 01";
+	specializes = eos_rld_droog_grunt_base;
+	[actor]
+	{
+		[skills]
+		{
+			strength     = 35, 0;
+			intelligence = 13, 0;
+			dexterity    = 23, 0;
+			melee        = 43, 0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 61210;
+		life             = 1448;
+		max_life         = 1448;
+		mana             = 26;
+		max_mana         = 26;
+		[textures] { 0=b_c_eam_dgg-02; }
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 70;
+		damage_min = 50;
+	}
+	[common]
+	{
+		screen_name="Droog Captain";
+		membership=monster,droog,immune_charm,immune_control,immune_freeze,immune_polymorph,immune_align_change,immune_explode;
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				single_shot = true;
+				no_trig_bits = true;
+				action* = call_sfx_script("unique_ray_yellow(sgx)");
+			}
+		}
+	}
+	[defend] { defense=630; }
+	[inventory]
+	{
+		[pcontent]
+		{
+			[all*]
+			{
+				[oneof*]
+				{
+    				es_weapon_hand = sd_un_droog_1h_avg;
+				}
+			}
+			[all*]
+			{
+				[oneof*]
+				{
+					il_main = #*/115-130;
+					il_main = #armor/370-410;
+				}
+
+				[oneof*]
+				{
+	            	chance = 0.004;
+	                il_main = #weapon/-rare(1)/138-159;
+	                il_main = #armor/-rare(1)/290-350;
+                    il_main = #*/-rare(1)/138-159;
+                }
+				[oneof*]
+				{
+                	chance = 0.002;
+	                il_main = #weapon/-unique(2)/138-159;
+	                il_main = #armor/-unique(2)/290-350;
+                    il_main = #*/-unique(2)/138-159;
+	            }
+				[gold*]
+				{
+					max = 29891;
+					min = 24678;
+					min_pile = 3641;
+					piles = 2 - 5;
+				}
+			}
+		}
+    }
+    [mind]
+    {
+		jat_brain							 = world\ai\jobs\common\brain_hero.skrit
+			?actor_creates_own_party		 = true
+			&form_party_on_friend_entered_OCZ	= true
+			&form_party_on_friend_entered_ICZ	= true
+			&party_template					 = "party_droog";
+	}
+}
+
+[t:template,n:eos_rld_droog_mage_base]
+{
+	category_name = "1W_evil_a";
+	doc = "droog mage";
+	specializes = base_droog;
+
+	[actor]
+	{
+		[skills]
+		{
+			strength     = 19, 0;
+			intelligence = 33, 0;
+			dexterity    = 20, 0;
+			combat_magic = 63, 0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 34600;
+		life             = 540;
+		max_life         = 540;
+		mana             = 1936;
+		max_mana         = 1936;
+		[textures] { 0=b_c_eam_dgm; }
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 158;
+		damage_min = 102;
+	}
+	[common] { screen_name="Droog Mage"; }
+	[defend] { defense=275; }
+	[guts_manager]
+	{
+		effect_name = melee_hit_2;
+	}
+	[inventory]
+	{
+	  selected_active_location = il_active_primary_spell;
+
+
+
+		[pcontent]
+		{
+			[oneof*]
+			{
+				[oneof*]
+				{
+					chance = 0.25;
+					il_main = #*/109-115;
+					il_main = #armor/58-285;
+                    il_main = #body,ro/151-283;
+            	    il_main = #nmagic/45-49;
+                	il_main = #cmagic/45-49;
+   				    il_main = potion_health_large;
+				    il_main = potion_mana_large;
+				}
+				[oneof*]
+				{
+	            	chance = 0.004;
+	                il_main = #weapon/-rare(1)/116-124;
+	                il_main = #armor/-rare(1)/290-350;
+                    il_main = #*/-rare(1)/116-124;
+                }
+				[oneof*]
+				{
+                	chance = 0.002;
+	                il_main = #weapon/-unique(2)/116-124;
+	                il_main = #armor/-unique(2)/290-350;
+                    il_main = #*/-unique(2)/116-124;
+	            }
+				[gold*]
+				{
+					chance = 0.125;
+					max = 15330;
+					min = 11083;
+				}
+			}
+		}
+		[other]
+		{
+			il_active_primary_spell = spell_droog_starburst;
+		}
+	}
+    [mind]
+	{
+		jat_brain						 = world\ai\jobs\common\brain_hero.skrit
+			?actor_joins_existing_party		 = true
+			&actor_creates_own_party		 = true
+			&party_template					 = "party_droog";
+
+		actor_weapon_preference			= WP_MAGIC;
+		actor_auto_switches_to_magic	= true;
+		actor_auto_switches_to_karate	= false;
+		actor_auto_switches_to_melee	= false;
+//		actor_auto_heals_others_life	= true;
+
+	}
+}
+[t:template,n:eos_rld_droog_mage]
+{
+	category_name = "1W_evil_a";
+	doc = "droog mage";
+	specializes = eos_rld_droog_mage_base;
+}
+[t:template,n:eos_rld_droog_mage_reveal]
+{
+	category_name = "1W_evil_a";
+	doc = "droog mage reveal";
+	specializes = eos_rld_droog_mage_base;
+	[mind]
+	{
+		jat_startup = world\ai\jobs\common\job_startup_reveal.skrit
+			?invisible = true;
+		sight_origin_height = 1;
+		actor_auto_fidgets = false;
+	}
+
+	[common]
+	{
+		[template_triggers]
+		{
+			[*]
+			{
+				single_shot = true;
+				action* = call_sfx_script("droog_reveal");
+				condition* = receive_world_message("we_enemy_spotted");
+			}
+		}
+	}
+}
