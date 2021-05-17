@@ -1,9 +1,5 @@
-[t:droog_villager_standing,n:0x0d2014e0]
+[t:eos_rld_villager,n:0x0d2014e0]
 {
-	[mind]
-	{
-		jat_talk = world\ai\jobs\common\job_talk.skrit;
-	}
 	[placement]
 	{
 	  q orientation = 0,-0.318267,0,0.948001;
@@ -12,6 +8,10 @@
 }
 [t:eos_rld_shop_melee,n:0x0d2015e9]
 {
+	[common]
+	{
+		screen_name = "Se-ra-nefer-tai";
+	}
 	[conversation]
 	{
 		[conversations]
@@ -19,77 +19,84 @@
 			* = shop;
 		}
 	}
-	[mind]
-	{
-		jat_talk = world\ai\jobs\common\job_talk.skrit;
-	}
 	[placement]
 	{
 	  q orientation = 0,-0.419994,0,0.907527;
 	  p position = 20.3962,-1.45,18.0552,0x86408240;
 	}
 }
-[t:droog_villager_standing,n:0x0d2018ff]
+[t:eos_rld_villager,n:0x0d2018ff]
 {
-	[mind]
-	{
-		jat_talk = world\ai\jobs\common\job_talk.skrit;
-	}
 	[placement]
 	{
 	  q orientation = 0,-0.909177,0,0.41641;
 	  p position = 19.0623,-1.45,7.36202,0x86408240;
 	}
 }
-[t:droog_villager_standing,n:0x0d201921]
+[t:eos_rld_villager,n:0x0d201921]
 {
-	[mind]
-	{
-		jat_talk = world\ai\jobs\common\job_talk.skrit;
-	}
 	[placement]
 	{
 	  q orientation = 0,0.99978,0,0.0209797;
 	  p position = 17.9564,-1.45,22.8573,0x86408240;
 	}
 }
-[t:droog_villager_standing,n:0x0d20149c]
+[t:pb_cat_black,n:0x0d201b3c]
 {
-	[mind]
+	[placement]
 	{
-		jat_talk = world\ai\jobs\common\job_talk.skrit;
+	  q orientation = 0,0.989822,0,-0.142309;
+	  p position = 10.5729,-1.90733,19.6731,0x86408240;
 	}
+}
+[t:pb_cat_black,n:0x0d201b73]
+{
+	[placement]
+	{
+	  q orientation = 0,0.652761,0,0.757564;
+	  p position = 2.42779,-1.1915,2.35146,0x86408240;
+	}
+}
+[t:pb_cat_calico,n:0x0d201bd2]
+{
+	[placement]
+	{
+	  q orientation = 0,0.988043,0,-0.154176;
+	  p position = 7.86527,-2.39917,18.5331,0x86408240;
+	}
+}
+[t:pb_cat_gray,n:0x0d201be8]
+{
+	[placement]
+	{
+	  p position = 10.1008,-1.86508,15.7278,0x86408240;
+	}
+}
+[t:eos_rld_villager,n:0x0d20149c]
+{
 	[placement]
 	{
 	  q orientation = 0,-0.218965,0,0.975733;
 	  p position = -19.1937,5.25001,-17.7347,0x5a3615de;
 	}
 }
-[t:droog_villager_standing,n:0x0d201906]
+[t:eos_rld_villager,n:0x0d201906]
 {
-	[mind]
-	{
-		jat_talk = world\ai\jobs\common\job_talk.skrit;
-	}
 	[placement]
 	{
 	  q orientation = 0,0.697069,0,0.717004;
 	  p position = -20.5952,5.43186,-16.0198,0x5a3615de;
 	}
 }
-[t:droog_villager_standing,n:0x0d20190f]
+[t:eos_rld_villager,n:0x0d20190f]
 {
-	[mind]
-	{
-		jat_talk = world\ai\jobs\common\job_talk.skrit;
-	}
 	[placement]
 	{
 	  q orientation = 0,-0.995418,0,0.095615;
 	  p position = -18.7469,5.53263,-14.3264,0x5a3615de;
 	}
 }
-[t:nonataya,n:0x0d201971]
+[t:eos_rld_villager_b,n:0x0d201971]
 {
 	[common]
 	{
@@ -102,14 +109,18 @@
 			* = quest_pyramid;
 		}
 	}
-	[mind]
-	{
-		jat_talk = world\ai\jobs\common\job_talk.skrit;
-	}
 	[placement]
 	{
 	  q orientation = 0,-0.849362,0,0.527811;
 	  p position = -16.2592,5.68044,-16.2458,0x5a3615de;
+	}
+}
+[t:pb_cat_calico,n:0x0d201bd8]
+{
+	[placement]
+	{
+	  q orientation = 0,0.995951,0,-0.0899011;
+	  p position = -16.0393,5.97384,-19.5734,0x5a3615de;
 	}
 }
 [t:skick,n:0x0d206645]
@@ -230,16 +241,16 @@
 }
 [t:eos_rld_shop_ranged,n:0x0d201779]
 {
+	[common]
+	{
+		screen_name = "Hek-an-u";
+	}
 	[conversation]
 	{
 		[conversations]
 		{
 			* = shop;
 		}
-	}
-	[mind]
-	{
-		jat_talk = world\ai\jobs\common\job_talk.skrit;
 	}
 	[placement]
 	{
@@ -249,6 +260,10 @@
 }
 [t:eos_rld_shop_shields,n:0x0d2018ed]
 {
+	[common]
+	{
+		screen_name = "Ra-neb-kru";
+	}
 	[conversation]
 	{
 		[conversations]
@@ -256,38 +271,58 @@
 			* = shop;
 		}
 	}
-	[mind]
-	{
-		jat_talk = world\ai\jobs\common\job_talk.skrit;
-	}
 	[placement]
 	{
 	  q orientation = 0,0.560147,0,0.828393;
 	  p position = 12.1944,-1.11182,25.1728,0x2857115c;
 	}
 }
-[t:droog_villager_standing,n:0x0d20193c]
+[t:eos_rld_villager,n:0x0d20193c]
 {
-	[mind]
-	{
-		jat_talk = world\ai\jobs\common\job_talk.skrit;
-	}
 	[placement]
 	{
 	  q orientation = 0,-0.00427195,0,0.999991;
 	  p position = 23.8418,-1.1,13.4803,0x2857115c;
 	}
 }
-[t:droog_villager_standing,n:0x0d201969]
+[t:eos_rld_villager,n:0x0d201969]
 {
-	[mind]
-	{
-		jat_talk = world\ai\jobs\common\job_talk.skrit;
-	}
 	[placement]
 	{
 	  q orientation = 0,0.151637,0,-0.988436;
 	  p position = 14.5897,-1.1,13.2427,0x2857115c;
+	}
+}
+[t:pb_cat_black,n:0x0d201b3f]
+{
+	[placement]
+	{
+	  q orientation = 0,0.173974,0,0.98475;
+	  p position = 15.4383,-1.02248,21.3956,0x2857115c;
+	}
+}
+[t:pb_cat_calico,n:0x0d201bad]
+{
+	[placement]
+	{
+	  q orientation = 0,-0.482916,0,0.875666;
+	  p position = 17.7941,-1.1,18.9755,0x2857115c;
+	}
+}
+[t:pb_cat_gray,n:0x0d201c01]
+{
+	[placement]
+	{
+	  q orientation = 0,0.991211,0,0.132289;
+	  p position = 23.0307,-1.39421,18.894,0x2857115c;
+	}
+}
+[t:pb_cat_gray,n:0x0d201c1c]
+{
+	[placement]
+	{
+	  q orientation = 0,-0.293001,0,0.956112;
+	  p position = 31.5053,-0.940641,28.3913,0x2857115c;
 	}
 }
 [t:spider_stalagnid,n:0x0d2065ee]
@@ -4780,76 +4815,5 @@
 	{
 	  q orientation = 0,-0.998483,0,-0.0550533;
 	  p position = -27.3064,3.53185,-51.6115,0xf7e21c68;
-	}
-}
-[t:pb_cat_black,n:0x0d201b3c]
-{
-	[placement]
-	{
-	  q orientation = 0,0.989822,0,-0.142309;
-	  p position = 10.5729,-1.90733,19.6731,0x86408240;
-	}
-}
-[t:pb_cat_black,n:0x0d201b3f]
-{
-	[placement]
-	{
-	  q orientation = 0,0.173974,0,0.98475;
-	  p position = 15.4383,-1.02248,21.3956,0x2857115c;
-	}
-}
-[t:pb_cat_black,n:0x0d201b73]
-{
-	[placement]
-	{
-	  q orientation = 0,0.652761,0,0.757564;
-	  p position = 2.42779,-1.1915,2.35146,0x86408240;
-	}
-}
-[t:pb_cat_calico,n:0x0d201bad]
-{
-	[placement]
-	{
-	  q orientation = 0,-0.482916,0,0.875666;
-	  p position = 17.7941,-1.1,18.9755,0x2857115c;
-	}
-}
-[t:pb_cat_calico,n:0x0d201bd2]
-{
-	[placement]
-	{
-	  q orientation = 0,0.988043,0,-0.154176;
-	  p position = 7.86527,-2.39917,18.5331,0x86408240;
-	}
-}
-[t:pb_cat_calico,n:0x0d201bd8]
-{
-	[placement]
-	{
-	  q orientation = 0,0.995951,0,-0.0899011;
-	  p position = -16.0393,5.97384,-19.5734,0x5a3615de;
-	}
-}
-[t:pb_cat_gray,n:0x0d201be8]
-{
-	[placement]
-	{
-	  p position = 10.1008,-1.86508,15.7278,0x86408240;
-	}
-}
-[t:pb_cat_gray,n:0x0d201c01]
-{
-	[placement]
-	{
-	  q orientation = 0,0.991211,0,0.132289;
-	  p position = 23.0307,-1.39421,18.894,0x2857115c;
-	}
-}
-[t:pb_cat_gray,n:0x0d201c1c]
-{
-	[placement]
-	{
-	  q orientation = 0,-0.293001,0,0.956112;
-	  p position = 31.5053,-0.940641,28.3913,0x2857115c;
 	}
 }

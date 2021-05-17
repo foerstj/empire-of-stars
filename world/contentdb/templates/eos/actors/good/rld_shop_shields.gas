@@ -9,8 +9,8 @@
 		[textures] { 0=b_c_eam_dg-04; }
 		is_ghost_usable = true;
 		use_range = 1.0;
+        scale_base = 1.1;
 	}
-	[common] { screen_name="Ra-neb-kru"; }
 	[conversation] { }
 	[inventory]
 	{
@@ -82,6 +82,10 @@
 				}
 			}
 		}
+	}
+	[mind]
+	{
+		jat_talk = world\ai\jobs\common\job_talk.skrit;
 	}
 	[respawn_shrine]
 	{
