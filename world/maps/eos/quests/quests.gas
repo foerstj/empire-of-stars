@@ -36,6 +36,15 @@
 		  i order = 0;
 		}
 	}
+	[c5_rigel]
+	{
+		screen_name = Rigel;
+		[*]
+		{
+			description = Quests on Rigel;
+		  i order = 0;
+		}
+	}
 }
 [quests]
 {
@@ -165,6 +174,18 @@
 		{
 			order		= 0;
 			description = "Clear the Braak from the Aurora Shrine in the Winternight Woods.";
+		}
+    }
+    [rigel_pyramid]
+    {
+		chapter			= c5_rigel;
+		screen_name		= "The Pyramid";
+		victory_sample	= s_e_level_up_quest;
+		
+		[*]
+		{
+			order		= 0;
+			description = "Look for Starstones in the Pyramid.";
 		}
     }
 }
