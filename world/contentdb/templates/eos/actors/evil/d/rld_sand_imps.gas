@@ -1,5 +1,8 @@
+// Sand imps with stats somewhat below the eos_rld_droog
+
 [t:template,n:eos_rld_sand_ripper]
 {
+    // stats from dsx_wasped
 	category_name = "1W_evil_d";
 	doc = "sand_ripper";
 	specializes = base_imp;
@@ -8,19 +11,20 @@
 	{
 		[skills]
 		{
-			strength = 		13, 0;
-			intelligence = 	10, 0;
-			dexterity = 	12, 0;
-			melee =  		29, 0;
+			strength =  	13, 0;
+			intelligence =  8, 0;
+			dexterity =  	10, 0;
+			melee =  	11, 0;
 		}
 	}
 	[aspect]
 	{
-		experience_value = 22000;
-		life = 960;
-		max_life = 960;
-		mana = 14;
-		max_mana = 14;
+		experience_value = 224;
+		life = 145;
+		max_life = 145;
+		mana = 12;
+		max_mana = 12;
+
 		model = m_c_edm_li_pos_1;
 		[textures] { 0=b_c_edm_li-05; }
 		[voice]
@@ -33,33 +37,12 @@
 	[attack]
 	{
 		attack_range = 0.5;
-		damage_max = 140;
-		damage_min = 120;
+		damage_max = 49;
+		damage_min = 43;
 	}
 	[common] { screen_name="Sand Ripper"; }
-	[defend] { defense=300; }
-   	[inventory]
-	{
-    	[pcontent]
-		{
-   			[oneof*]
-			{
-				[oneof*]
-				{
-					chance = 0.25;
-					il_main = #*/39-114;
-	                il_main = #nmagic/15-24;
-                	il_main = #cmagic/15-24;
-    			}
-                [gold*]
-				{
-					chance = 0.125;
-                    max = 17980;
-					min = 15487;
-				}
-			}
-		}
-	}
+	[defend] { defense=75; }
+    // no inventory as in dsx_wasped
 	[mind]
 	{
 		jat_fidget = world\ai\jobs\common\job_fidget.skrit;
@@ -73,6 +56,7 @@
 
 [t:template,n:eos_rld_sand_mage_base]
 {
+    // stats from frostnid spitter
 	category_name = "1W_evil_d";
 	doc = "sand_mage";
 	specializes = base_imp;
@@ -81,19 +65,20 @@
 	{
 		[skills]
 		{
-			strength = 		13, 0;
-			intelligence = 	12, 0;
-			dexterity = 	14, 0;
-			combat_magic = 	31, 0;
+			strength =  10, 0;
+			intelligence =  5, 0;
+			dexterity =  16, 0;
+            combat_magic =  10,  0;
 		}
 	}
 	[aspect]
 	{
-		experience_value = 30000;
-		life = 798;
-		max_life = 798;
-		mana = 16;
-		max_mana = 16;
+		experience_value = 198;
+		life = 108;
+        max_life = 108;
+        mana = 8;
+		max_mana = 8;
+
 		model = m_c_edm_li_pos_2;
 		[textures] { 0=b_c_edm_li-06; }
 
@@ -102,34 +87,16 @@
 	[attack]
 	{
 		attack_range = 0.5;
-		damage_max = 150;
-		damage_min = 130;
+		damage_max = 40;
+		damage_min = 38;
 	}
 	[common] { screen_name="Sand Mage"; }
-	[defend] { defense=344; }
+	[defend] { defense=58; }
    	[inventory]
 	{
     	selected_active_location = il_active_primary_spell;
-		[other] { il_active_primary_spell=spell_sand_mage_blast; }
-    	[pcontent]
-		{
-   			[oneof*]
-			{
-				[oneof*]
-				{
-					chance = 0.25;
-					il_main = #*/78-114;
-               		il_main = #nmagic/45-55;
-               		il_main = #cmagic/45-55;
-				}
-				[gold*]
-				{
-					chance = 0.125;
-                    max = 17980;
-					min = 15487;
-				}
-			}
-		}
+		[other] { il_active_primary_spell=spell_rld_sand_mage_blast; }
+        // no drops as in frostnid spitter
 	}
 	[mind]
 	{
@@ -159,6 +126,7 @@
 
 [t:template,n:eos_rld_sand_basher_base]
 {
+    // stats from frostnid
 	category_name = "1W_evil_d";
 	doc = "sand_basher";
 	specializes = base_imp;
@@ -167,19 +135,20 @@
 	{
 		[skills]
 		{
-			strength = 		15, 0;
-			intelligence = 	10, 0;
-			dexterity = 	12, 0;
-			melee =  		30, 0;
+			strength =  10, 0;
+			intelligence =  4, 0;
+			dexterity =  15, 0;
+            melee =  8,  0;
 		}
 	}
 	[aspect]
 	{
-		experience_value = 34000;
-		life = 1260;
-		max_life = 1260;
-		mana = 10;
-		max_mana = 10;
+		experience_value = 228;
+		life = 177;
+        max_life = 177;
+        mana = 8;
+		max_mana = 8;
+
 		model = m_c_edm_li_pos_3;
 		[textures] { 0=b_c_edm_li-07; }
 
@@ -188,35 +157,16 @@
 	[attack]
 	{
 		attack_range = 0.5;
-		damage_max = 190;
-		damage_min = 170;
+		damage_max = 36;
+		damage_min = 30;
 	}
 	[common]
 	{
 		screen_name="Sand Basher";
 		membership = monster, party_sand_mage;
 	}
-	[defend] { defense=362; }
-   	[inventory]
-	{
-    	[pcontent]
-		{
-   			[oneof*]
-			{
-				[oneof*]
-				{
-					chance = 0.25;
-					il_main = #*/59-114;
-				}
-				[gold*]
-				{
-					chance = 0.125;
-					max = 19458;
-					min = 16987;
-				}
-			}
-		}
-	}
+	[defend] { defense=60; }
+   	// no inventory as in frostnid
 	[mind]
 	{
 		jat_brain							= world\ai\jobs\common\brain_hero.skrit
