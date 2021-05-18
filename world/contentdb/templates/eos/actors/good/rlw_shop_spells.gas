@@ -1,0 +1,55 @@
+[t:template,n:eos_rlw_shop_spells]
+{
+    category_name = "1W_shopkeep";
+	doc = "craftsman, quillrabe (MP)";
+	specializes = base_npc_dg;
+	[actor] { portrait_icon = b_gui_ig_i_ic_c_orellean; }  // TODO
+	[aspect]
+	{
+		use_range = 1.0;
+		is_ghost_usable = TRUE;
+		[textures] { 0=b_c_eam_dg-05-eos; }
+        scale_base = 0.9;
+	}
+	[conversation] { }
+	[inventory]
+	{
+		[store_pcontent]
+		{
+			full_ratio = 0;
+			[weapons]
+			{
+                // spells from verma - TODO
+				[all*]
+				{
+					il_main = #melee/44-56;
+					max = 8;
+					min = 8;
+				}
+				[all*]
+				{
+					il_main = #melee/57-85;
+					max = 18;
+					min = 18;
+				}
+				[all*]
+				{
+					il_main = #melee/86-101;
+					max = 6;
+					min = 6;
+				}
+			}
+		}
+	}
+	[mind]
+	{
+		jat_talk = world\ai\jobs\common\job_talk.skrit;
+	}
+    [respawn_shrine]
+	{
+	}
+	[store]
+	{
+		item_markup = 2;
+	}
+}
