@@ -261,3 +261,121 @@
 		23h00m:color = 0xFF000022;
 	}
 }
+
+[mood_setting*]
+{
+  b interior = true;
+	mood_name = eos_rigel_wet_town_1;
+  f transition_time = 3.000000;
+	[fog]
+	{
+	  x fog_color = 0xFFA9C0BD;
+	  f fog_density = 1.000000;
+	  f fog_far_dist = 50.000000;
+	  f fog_lowdetail_far_dist = 45.000000;
+	  f fog_lowdetail_near_dist = 22.000000;
+	  f fog_near_dist = 22.000000;
+	}
+	[frustum]
+	{
+        // high frustum to keep h2o floor nodes connected
+	  f frustum_height = 90.000000;
+	  f frustum_width = 90.000000;
+	}
+	[music]
+	{
+	  f ambient_intro_delay = 0.000000;
+	  f ambient_repeat_delay = 32.000000;
+		ambient_track = s_e_env_wind_gust;
+	  f battle_intro_delay = 0.000000;
+	  f battle_repeat_delay = 0.000000;
+		battle_track = ;
+		room_type = rt_mountains;
+	  f standard_intro_delay = 0.000000;
+	  f standard_repeat_delay = 0.000000;
+		standard_track = s_m_the_ultreans;
+	}
+	[wind]
+	{
+	  f wind_direction = 0.700000;
+	  f wind_velocity = 1.000000;
+	}
+}
+[mood_setting*]
+{
+  b interior = true;
+	mood_name = eos_rigel_wet_town_1a;
+  f transition_time = 3.000000;
+	[fog]
+	{
+	  x fog_color = 0xFFA9C0BD;
+	  f fog_density = 1.000000;
+	  f fog_far_dist = 50.000000;
+	  f fog_lowdetail_far_dist = 45.000000;
+	  f fog_lowdetail_near_dist = 22.000000;
+	  f fog_near_dist = 22.000000;
+	}
+	[frustum]
+	{
+        // high frustum to keep h2o floor nodes connected
+	  f frustum_height = 90.000000;
+	  f frustum_width = 90.000000;
+	}
+	[music]
+	{
+	  f ambient_intro_delay = 0.000000;
+	  f ambient_repeat_delay = 0.000000;
+		ambient_track = s_e_ambient_bird1;
+	  f battle_intro_delay = 0.000000;
+	  f battle_repeat_delay = 0.000000;
+		battle_track = ;
+		room_type = rt_mountains;
+	  f standard_intro_delay = 0.000000;
+	  f standard_repeat_delay = 0.000000;
+		standard_track = s_m_the_ultreans;
+	}
+	[wind]
+	{
+	  f wind_direction = 0.700000;
+	  f wind_velocity = 0.750000;
+	}
+}
+[mood_setting*]
+{
+  b interior = false;
+	mood_name = eos_rigel_wet_town_2;
+  f transition_time = 3.500000;
+	[fog]
+	{
+	  x fog_color = 0xFF83C0C0;
+	  f fog_density = 1.000000;
+	  f fog_far_dist = 50.000000;
+	  f fog_lowdetail_far_dist = 45.000000;
+	  f fog_lowdetail_near_dist = 22.000000;
+	  f fog_near_dist = 22.000000;
+	}
+	[frustum]
+	{
+        // high frustum to keep h2o floor nodes connected
+	  f frustum_height = 90.000000;
+	  f frustum_width = 90.000000;
+	}
+	[music]
+	{
+	  f ambient_intro_delay = 0.000000;
+	  f ambient_repeat_delay = 0.000000;
+		ambient_track = s_e_ambient_wind_01;
+	  f battle_intro_delay = 0.000000;
+	  f battle_repeat_delay = 0.000000;
+		battle_track = ;
+		room_type = rt_mountains;
+	  f standard_intro_delay = 0.000000;
+	  f standard_repeat_delay = 0.000000;
+		standard_track = s_m_the_ultreans;
+	}
+	[wind]
+	{
+	  f wind_direction = 0.600000;
+	  f wind_velocity = 1.300000;
+	}
+}
