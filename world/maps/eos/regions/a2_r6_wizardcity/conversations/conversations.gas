@@ -1,0 +1,344 @@
+[atala_hello]
+{
+	[text*]
+	{
+		screen_text = "The storms are coming... can you hear the thunder rumble? Our end will arrive soon!";
+	  f scroll_rate = 20.0;
+	}
+}
+[cerya_hello]
+{
+	[text*]
+	{
+		screen_text = "The Seer has potions that do more than heal, stranger. Some can harm as well. Be careful what you buy from her.";
+	  f scroll_rate = 20.0;
+	}
+}
+[daon_after_a2_citysafety]
+{
+	[text*]
+	{
+		choice = shop;
+		screen_text = "Greetings! I have many fine items you might find of use... care to look them over?";
+	  f scroll_rate = 20.0;
+	}
+}
+[daon_during_a2_citysafety]
+{
+	[text*]
+	{
+		screen_text = "Once those scaly lizards are wiped out, I'll break out my goods for sale.";
+	  f scroll_rate = 20.0;
+	}
+}
+[ezmera_after_a2_scribe]
+{
+	[text*]
+	{
+		sample = s_v_a2_ezmera_04;
+		screen_text = "Thank you-I'm so happy that Algher is safe!";
+	  f scroll_rate = 20.0;
+	}
+}
+[ezmera_before_a2_scribe]
+{
+	[text*]
+	{
+		choice = more;
+	  i order = 0;
+		sample = s_v_a2_ezmera_0_a;
+		screen_text = "I would ask a favor of you... My brother, Algher Mhankur, is currently employed by that crazed old man Therg at the ancient ruins of Mhakesha. The fool actually believes he can find the secrets of our people by digging into the ruins of old temples and libraries.";
+	  f scroll_rate = 20.0;
+	}
+	[text*]
+	{
+		activate_quest* = a2_scribe,0;
+	  i order = 1;
+	  b quest_dialog = true;
+		sample = s_v_a2_ezmera_02;
+		screen_text = "I do not trust that crazy old man he works for!  For all I know, Therg has left him to be killed by the Hassat at the bottom of a hole somewhere... Please - find my brother, and make sure he is safe.";
+	  f scroll_rate = 20.000000;
+	}
+}
+[ezmera_during_a2_citysafety]
+{
+	[text*]
+	{
+		sample = s_v_a2_ezmera_01;
+		screen_text = "Greetings, stranger! I cannot speak with the city under attack by the Zaurask. Once you've cleared the city of the beasts, I have a favor to ask. Come back then; I do not wish to burden you with it now.";
+	  f scroll_rate = 20.0;
+	}
+}
+[ezmera_during_a2_scribe]
+{
+	[text*]
+	{
+		sample = s_v_a2_ezmera_03;
+		screen_text = "Please-find my brother, and make sure he is safe.";
+	  f scroll_rate = 20.0;
+	}
+}
+[guardsman_after_a2_citysafety]
+{
+	[text*]
+	{
+		screen_text = "You went through those lizards like a Butchering Scimitar of Refreshment goes through sun-soft mungo butter... Good work!";
+	  f scroll_rate = 20.0;
+	}
+}
+[guardsman_during_a2_citysafety]
+{
+	[text*]
+	{
+		screen_text = "You'd best find another route, my friend. The lizard-folk are vicious. They've taken the buildings over the bridge here - I've got my hands full just keeping them at bay.";
+	  f scroll_rate = 20.0;
+	}
+}
+[inver_hello]
+{
+	[text*]
+	{
+		screen_text = "I am not surprised to see that strangers have finally arrived here. Tis a sure sign of the end of things. Our days are numbered, of that there is no doubt...";
+	  f scroll_rate = 20.0;
+	}
+}
+[ranwor_after_a2_citysafety]
+{
+	[text*]
+	{
+		choice = buy_packmule;
+		screen_text = "While others may sell 'beasts' - I offer beautiful, healthy, and pestilence-free creatures!  Are you in need of a good pack animal, friend?";
+	  f scroll_rate = 20.000000;
+	}
+}
+[ranwor_after_a2_citysafety_sold]
+{
+	[text*]
+	{
+		screen_text = "Unfortunately, I am unable to sell you my remaining tragg.  You see, she is 'with child.' If you return in a day or two, however, I will have several more creatures to sell!";
+	  f scroll_rate = 20.000000;
+	}
+}
+[ranwor_during_a2_citysafety]
+{
+	[text*]
+	{
+		screen_text = "Ah!  Greetings, greetings, greetings!  I would be delighted to sell an animal to you...  however, with the Zaurask running about, I am wary.  Should your pack animal get killed, there are no refunds.  Come back once the threat of the Zaurask has been taken care of.";
+	  f scroll_rate = 20.000000;
+	}
+}
+[kamik_after_a2_citysafety]
+{
+	[text*]
+	{
+		screen_text = "Not much to offer to slake your thirst, stranger... care to try a little a Phrak Juice Cocktail?";
+	  f scroll_rate = 20.0;
+	}
+}
+[kamik_during_a2_citysafety]
+{
+	[text*]
+	{
+		screen_text = "Best be on your guard, my friend. The Zaurask have overrun much of the town. I'm sorry I don't have much to offer you in the way of drink... care to try a little Phrak Juice Cocktail?";
+	  f scroll_rate = 20.0;
+	}
+}
+[laeta_after_a2_citysafety]
+{
+	[text*]
+	{
+		choice = shop;
+		screen_text = "In my dreams I saw you, traveler. A great storm heralded your arrival and the wind spoke of your name to me. An ill wind it was, full of dread and destruction. But when the storm had passed, the land was washed clean and my people were finally redeemed. Please, peruse my wares. I am sure you will not be disappointed.";
+	  f scroll_rate = 20.0;
+	}
+}
+[laeta_during_a2_citysafety]
+{
+	[text*]
+	{
+		screen_text = "If you drive out the Zaurask, I will feel free to unlock my wares for sale, and I will tell you of a dream I had...";
+	  f scroll_rate = 20.0;
+	}
+}
+[nardulo_accept]
+{
+	[text*]
+	{
+		sample = s_v_a2_nardulo_03;
+		screen_text = "I look forward to avenging my beloved!";
+	  f scroll_rate = 20.0;
+	}
+}
+[nardulo_disband]
+{
+	[text*]
+	{
+		sample = s_v_a2_nardulo_04;
+		screen_text = "Very well... I shall take my leave. Good luck to you.";
+	  f scroll_rate = 20.0;
+	}
+}
+[nardulo_hello]
+{
+	[text*]
+	{
+		choice = more;
+	  	i order = 0;
+		sample = s_v_a2_nardulo_01_a;
+		screen_text = "I greet you with honor and would speak with you plainly, outlander. My name is Nardulo, an artist and singer of songs.  Now I seek another path. The Zaurask have gone too far, and killed my beloved Teeza. Now I seek their deaths.";
+	  	f scroll_rate = 20.0;
+	}
+	[text*]
+	{
+		choice = potential_member;
+	  	i order = 1;
+		sample = s_v_a2_nardulo_01_b;
+		screen_text = "I have spent my time studying the ancient tomes and magics of my people and to you I will grant this knowledge in exchange for the chance to journey with you. What say you? Will you take me as a member of your company in your adventure?";
+	  	f scroll_rate = 20.0;
+	}
+	[text*]
+	{
+		choice = potential_member;
+		sample = s_v_a2_nardulo_01_b;
+		screen_text = "I have spent my time studying the ancient tomes and magics of my people and to you I will grant this knowledge in exchange for the chance to journey with you. What say you? Will you take me as a member of your company in your adventure?";
+	  	f scroll_rate = 20.0;
+	}
+}
+[nardulo_hire_rejected]
+{
+	[text*]
+	{
+		sample = s_v_a2_nardulo_05;
+		screen_text = "Then I will seek my revenge alone.  I feel you are making a mistake, but cannot stop you.  Very well.";
+	  f scroll_rate = 20.0;
+	}
+}
+[nardulo_mp]
+{
+	[text*]
+	{
+		sample = s_v_a2_nardulo_02;
+		screen_text = "I greet you with honor and would speak with you plainly, outlander. My name is Nardulo, an artist and singer of songs. The Zaurask have gone too far, and killed my beloved Teeza.  Avenge her for me.";
+	  f scroll_rate = 20.000000;
+	}
+}
+[nardulo_reject]
+{
+	[text*]
+	{
+		sample = s_v_a2_nardulo_05;
+		screen_text = "Then I will seek my revenge alone.  I feel you are making a mistake, but cannot stop you.  Very well.";
+	  f scroll_rate = 20.0;
+	}
+}
+[nardulo_rejoin]
+{
+	[text*]
+	{
+		sample = s_v_a2_nardulo_06;
+		choice = potential_member;
+		screen_text = "My need for revenge on these beasts is not yet sated, outlander... and if you still seek aid, let us go forth together!";
+	  f scroll_rate = 20.0;
+	}
+}
+[quayhdar_after_a1_staff_update]
+{
+	[text*]
+	{
+		sample = s_v_a2_elder_04;
+		screen_text = "Seek out Therg if you wish to know more.";
+	  f scroll_rate = 20.0;
+	}
+}
+[quayhdar_after_therg]
+{
+	[text*]
+	{
+		sample = s_v_a2_elder_05;
+		screen_text = "I am happy for your good fortune and that Therg was able to answer your questions. Fortune smiles upon you stranger.";
+	  f scroll_rate = 20.0;
+	}
+}
+[quayhdar_after_a2_citysafety]
+{
+	[text*]
+	{
+		choice = more;
+	  i order = 0;
+		sample = s_v_a2_elder_03_a;
+		screen_text = "I and my people thank you, outlander. This is no doubt a sign from Azunai that our redemption is close at hand. Your mission is quite troubling, though.  No doubt the Shadowjumper seeks to destroy us, as he has done in the past... this creature of darkness knows no mercy and will not stop with our destruction!";
+	  f scroll_rate = 20.0;
+	}
+	[text*]
+	{
+		activate_quest* = a1_staff,5;
+	  b quest_dialog = true;
+		sample = s_v_a2_elder_03_b;
+			  i order = 1;
+		screen_text = "You must seek Therg. He is our most learned scholar and now devotes his time to research and discovery of things that were lost. He is presently at the Ruins of Mhakesha, an ancient school of sorts. He has great insight and may have the answers you seek about the Shadowjumper.";
+	  f scroll_rate = 20.0;
+	}
+
+
+}
+[quayhdar_during_a2_citysafety]
+{
+	[text*]
+	{
+	  	i order = 0;
+		sample = s_v_a2_elder_01_a;
+		screen_text = "Years ago, a husband and wife also came from Arhok and drove Nosirrom's Zaurask army from our fair city, saving countless lives. Could they have been relations of yours? I suspect so, as there is no such thing as coincidence... I hope you will do as they did, and help us, for we have been unable to help ourselves.";
+	  	f scroll_rate = 20.0;
+	}
+	[text*]
+	{
+		sample = s_v_a2_elder_02;
+		screen_text = "You must aid us in our time of need... Have you driven out the Zaurask?";
+	  f scroll_rate = 20.0;
+	}
+}
+[quayhdar_hello]
+{
+	[text*]
+	{
+		activate_quest* = a2_citysafety,0;
+	  i order = 0;
+	  b quest_dialog = true;
+		sample = s_v_a2_elder_01;
+		screen_text = "Hail, stranger, though I cannot say well met.  As you can see, our fair city has been besieged by the Zaurask.  Many of us have been driven from our homes and businesses.  The populace is terrified, and I'm afraid we won't be able to help you much until the lizard-men are driven out.  Will you help to liberate our city?";
+	  f scroll_rate = 20.0;
+	}
+}
+[jhay_after_a2_citysafety]
+{
+	[text*]
+	{
+		choice = buy_packmule;
+		screen_text = "These poor beasts are all I have. Are you in need of a good pack-mule, good sirs? Try the mare... she has a kick, but is loyal and true!";
+	  f scroll_rate = 20.000000;
+	}
+}
+[jhay_after_a2_citysafety_sold]
+{
+	[text*]
+	{
+		screen_text = "Alas, I have no more animals.";
+	  f scroll_rate = 20.000000;
+	}
+}
+[jhay_during_a2_citysafety]
+{
+	[text*]
+	{
+		screen_text = "An outlander! Then the light of Azunai shines on us again! Though with these lizard-folk attacking, I would not feel safe letting you take one of my animals .. When the threat is over come talk to me again and I will gladly sell one of them to you.";
+	  f scroll_rate = 20.000000;
+	}
+}
+[zulor_hello]
+{
+	[text*]
+	{
+		screen_text = "Hail, stranger. I am amazed to see anyone step out of the jungle alive, what with all the Zaurask out there.";
+	  f scroll_rate = 20.0;
+	}
+}
