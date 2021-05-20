@@ -1,0 +1,25 @@
+[conversation_azunite_scholar]
+{
+	[text*]
+	{
+		order = 0;
+		screen_text = "Please, I beg of you, the Temple must be purified. The evil grows stronger with every day.";
+		choice = more;
+	}
+	[text*]
+	{
+		order = 1;
+		screen_text 	= "Take this icon. The Temple ahead has been overcome by a wakening evil. The icon can break the unholy discord if you can place it upon the altar. I have tried and failed. A powerful guardian desecrates the altar with his presence. Please, you must...";
+		activate_quest*	= quest_purify_temple;
+		quest_dialog = true;
+	}
+}
+[conversation_azunite_scholar_boss_dead]
+{
+	[text*]
+	{
+		screen_text = "Azunai be praised! You have slain the evil that afflicted the Temple. Please, take this holy icon and place it upon the altar, that the foul taint of corruption will be cleansed. Then, my life will not have been in vain...";
+		activate_quest* = quest_purify_temple_2;
+		quest_dialog = true;
+	}
+}
