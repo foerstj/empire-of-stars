@@ -11,22 +11,6 @@
 	  f max_repeat_rate = 25;
 	}
 }
-[t:emt_generic_act,n:0x01700b4b]
-{
-	[generic_emitter_act]
-	{
-		event_sound = "env_pipe_steam_burst";
-	  b geyser_white = true;
-	  f rep_freq_max = 30;
-	  f rep_freq_min = 5;
-	  b start_on_creation = true;
-	}
-	[placement]
-	{
-	  q orientation = 0,0.707107,0,0.707107;
-	  p position = -0.0295486,0.499999,0.146793,0xa6974cc7;
-	}
-}
 [t:emt_sound,n:0x01700b61]
 {
 	[placement]
@@ -193,6 +177,19 @@
 	  p position = 0.0869598,0.5,-0.0495224,0x1bc14565;
 	}
 }
+[t:emt_sound,n:0x01700b5a]
+{
+	[placement]
+	{
+	  q orientation = 0,0.999657,0,-0.0261768;
+	  p position = -0.455338,1,3.89087,0xedbdae3b;
+	}
+	[sound_emitter]
+	{
+		event_sound = "amb_crickets";
+	  f max_repeat_rate = 25;
+	}
+}
 [t:emt_sound,n:0x01700b58]
 {
 	[placement]
@@ -206,69 +203,12 @@
 	  f max_repeat_rate = 25;
 	}
 }
-[t:emt_sound,n:0x01700b57]
+[t:emt_sound,n:0x01700b59]
 {
 	[placement]
 	{
-	  q orientation = 0,0.725374,0,0.688355;
-	  p position = 2.52995,1,0.988724,0xf77e1256;
-	}
-	[sound_emitter]
-	{
-		event_sound = "amb_crickets";
-	  f max_repeat_rate = 25;
-	}
-}
-[t:emt_generic_act,n:0x01700b6a]
-{
-	[generic_emitter_act]
-	{
-		event_sound = "env_pipe_steam_burst";
-	  b geyser_green = true;
-	  f rep_freq_max = 30;
-	  f rep_freq_min = 5;
-	  b start_on_creation = true;
-	}
-	[placement]
-	{
-	  q orientation = 0,1,0,0;
-	  p position = 0.0307846,0.5,0.247711,0xd8366a4d;
-	}
-}
-[t:emt_sound,n:0x01700b56]
-{
-	[placement]
-	{
-	  q orientation = 0,-0.688354,0,0.725375;
-	  p position = -1.61202,1,3.69687,0x33a167dc;
-	}
-	[sound_emitter]
-	{
-		event_sound = "amb_crickets";
-	  f max_repeat_rate = 25;
-	}
-}
-[t:emt_generic_act,n:0x01700b62]
-{
-	[generic_emitter_act]
-	{
-		event_sound = "env_pipe_steam_burst";
-	  b geyser_green = true;
-	  f rep_freq_max = 30;
-	  f rep_freq_min = 5;
-	  b start_on_creation = true;
-	}
-	[placement]
-	{
-	  p position = 6.09296,0.499997,-13.9404,0x683b2f22;
-	}
-}
-[t:emt_sound,n:0x01700b4a]
-{
-	[placement]
-	{
-	  q orientation = 0,0.0261772,0,0.999657;
-	  p position = -0.79892,-0.0090313,0.282207,0x5dc406bb;
+	  q orientation = 0,0.0261768,0,0.999657;
+	  p position = 0.928696,0,-1.21816,0x51d412d4;
 	}
 	[sound_emitter]
 	{
@@ -315,25 +255,12 @@
 	  f max_repeat_rate = 25;
 	}
 }
-[t:emt_sound,n:0x01700b5a]
+[t:emt_sound,n:0x01700b56]
 {
 	[placement]
 	{
-	  q orientation = 0,0.999657,0,-0.0261768;
-	  p position = -0.455338,1,3.89087,0xedbdae3b;
-	}
-	[sound_emitter]
-	{
-		event_sound = "amb_crickets";
-	  f max_repeat_rate = 25;
-	}
-}
-[t:emt_sound,n:0x01700b59]
-{
-	[placement]
-	{
-	  q orientation = 0,0.0261768,0,0.999657;
-	  p position = 0.928696,0,-1.21816,0x51d412d4;
+	  q orientation = 0,-0.688354,0,0.725375;
+	  p position = -1.61202,1,3.69687,0x33a167dc;
 	}
 	[sound_emitter]
 	{
@@ -352,6 +279,63 @@
 		event_sound = "env_rats_sqeakskitter";
 	  f max_repeat_rate = 20;
 	  f repeat_rate = 5;
+	}
+}
+[t:emt_generic_act,n:0x01700b6a]
+{
+	[generic_emitter_act]
+	{
+		event_sound = "env_pipe_steam_burst";
+	  b geyser_green = true;
+	  f rep_freq_max = 30;
+	  f rep_freq_min = 5;
+	  b start_on_creation = true;
+	}
+	[placement]
+	{
+	  q orientation = 0,1,0,0;
+	  p position = 0.0307846,0.5,0.247711,0xd8366a4d;
+	}
+}
+[t:emt_sound,n:0x01700b57]
+{
+	[placement]
+	{
+	  q orientation = 0,0.725374,0,0.688355;
+	  p position = 2.52995,1,0.988724,0xf77e1256;
+	}
+	[sound_emitter]
+	{
+		event_sound = "amb_crickets";
+	  f max_repeat_rate = 25;
+	}
+}
+[t:emt_sound,n:0x01700b4a]
+{
+	[placement]
+	{
+	  q orientation = 0,0.0261772,0,0.999657;
+	  p position = -0.79892,-0.0090313,0.282207,0x5dc406bb;
+	}
+	[sound_emitter]
+	{
+		event_sound = "amb_crickets";
+	  f max_repeat_rate = 25;
+	}
+}
+[t:emt_generic_act,n:0x01700b62]
+{
+	[generic_emitter_act]
+	{
+		event_sound = "env_pipe_steam_burst";
+	  b geyser_green = true;
+	  f rep_freq_max = 30;
+	  f rep_freq_min = 5;
+	  b start_on_creation = true;
+	}
+	[placement]
+	{
+	  p position = 6.09296,0.499997,-13.9404,0x683b2f22;
 	}
 }
 [t:emt_generic_act,n:0x01700b71]
@@ -385,5 +369,21 @@
 		event_sound = "env_stone_shatter";
 	  b repeat = false;
 	  b start_on_creation = false;
+	}
+}
+[t:emt_generic_act,n:0x01700b4b]
+{
+	[generic_emitter_act]
+	{
+		event_sound = "env_pipe_steam_burst";
+	  b geyser_white = true;
+	  f rep_freq_max = 30;
+	  f rep_freq_min = 5;
+	  b start_on_creation = true;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.707107,0,0.707107;
+	  p position = -0.0295486,0.499999,0.146793,0xa6974cc7;
 	}
 }
