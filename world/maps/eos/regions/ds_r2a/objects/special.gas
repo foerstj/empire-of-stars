@@ -1,0 +1,130 @@
+[t:trigger_generic,n:0x08700110]
+{
+	[common]
+	{
+		dev_instance_text = "FADE   DS_R2 SINKHOLE FADE";
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = fade_nodes(0xAAB20200,4,-1,-1,"in"), doc("sinkhole plate in when falling");
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_req_activate",0,"on_every_message");
+				condition* = party_member_within_node(0x4F8CE910,-1,-1,-1,"wait_for_every_message"), doc("[*message checker (trigger is non-pure )*]");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+			[*]
+			{
+				action* = fade_nodes(0xAAB20200,4,-1,-1,"in"), doc("sinkhole plate in when falling failsafe");
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_req_activate",0,"on_every_message");
+				condition* = party_member_within_node(0xAAB20200,-1,-1,-1,"wait_for_every_message");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,1,0,0;
+	  p position = 2.19963,0.796816,4.73422,0xd722c952;
+	}
+}
+[t:event_manager,n:0x08700120]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_activate",0x0870011E,0f,"default","",0);
+				action* = send_world_message("we_req_activate",0x08700111,0.2f,"default","",0);
+				action* = send_world_message("we_req_activate",0x0870011F,0.2f,"default","",0);
+				action* = send_world_message("we_req_activate",0x08700117,0.2f,"default","",0);
+				action* = send_world_message("we_req_activate",0x0870011D,0.2f,"default","",0);
+				action* = send_world_message("we_req_activate",0x08700112,0.2f,"default","",0);
+				action* = send_world_message("we_req_activate",0x08700119,0.2f,"default","",0);
+				action* = send_world_message("we_req_activate",0x08700118,0.2f,"default","",0);
+				action* = send_world_message("we_req_activate",0x087000EF,0f,"default","",0);
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_req_activate",0,"on_every_message");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  p position = 0.187034,0.799995,1.93356,0xd722c952;
+	}
+}
+[t:use_point,n:0x08700128]
+{
+	[placement]
+	{
+	  p position = 5.6634,-2.5,5.74916,0x646b85e3;
+	}
+}
+[t:use_point,n:0x08700127]
+{
+	[placement]
+	{
+	  q orientation = 0,1,0,0;
+	  p position = -0.124708,-1.5,-0.931998,0xfa9b7856;
+	}
+}
+[t:use_point,n:0x08700126]
+{
+	[placement]
+	{
+	  q orientation = 0,-0.707107,0,0.707107;
+	  p position = -0.788174,-1.5,-1.89282,0x44467bb5;
+	}
+}
+[t:use_point,n:0x08700125]
+{
+	[placement]
+	{
+	  q orientation = 0,-0.707107,0,0.707107;
+	  p position = -1.0722,-4.76837e-007,-1.84697,0x4c0baec2;
+	}
+}
+[t:use_point,n:0x08700129]
+{
+	[placement]
+	{
+	  q orientation = 0,1,0,0;
+	  p position = 1.95598,-1.5,-0.738401,0xc34c664a;
+	}
+}
+[t:use_point,n:0x0870012c]
+{
+	[placement]
+	{
+	  q orientation = 0,1,0,0;
+	  p position = -1.97446,-1.5,-0.82521,0x31a968a8;
+	}
+}

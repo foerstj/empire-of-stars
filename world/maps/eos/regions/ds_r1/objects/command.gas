@@ -1,0 +1,244 @@
+[t:light_flicker,n:0x0160028f]
+{
+	[light_flicker]
+	{
+	  f flicker_frequency_max = 12;
+	  f flicker_frequency_min = 10;
+	  f magnitude = 0.15;
+	  x siege_light = 0x00000DA0;
+	}
+	[placement]
+	{
+	  p position = -2.18681,1e-006,3.06498,0x400c2a88;
+	}
+}
+[t:cmd_report_gameplay_screen_player,n:0x01600d2a]
+{
+	[cmd_report_gameplay_screen_player]
+	{
+		report_name = "1_ds_r1";
+	}
+	[placement]
+	{
+	  p position = 3.7719,0.5,-1.66198,0xf944a6d1;
+	}
+}
+[t:cmd_ai_c_move,n:0x016000b9]
+{
+	[placement]
+	{
+	  p position = -2.5018,1e-006,0.045975,0x4b6abd3e;
+	}
+}
+[t:cmd_ai_c_patrol,n:0x016000a6]
+{
+	[placement]
+	{
+	  p position = 1.15028,0.656929,-1.44597,0xf11687ea;
+	}
+}
+[t:cmd_ai_c_move,n:0x01600030]
+{
+	[placement]
+	{
+	  p position = 0.958328,1e-006,3.37756,0x70799eca;
+	}
+}
+[t:light_flicker,n:0x01600290]
+{
+	[light_flicker]
+	{
+	  f flicker_frequency_max = 12;
+	  f flicker_frequency_min = 10;
+	  f magnitude = 0.15;
+	  x siege_light = 0x00003E2E;
+	}
+	[placement]
+	{
+	  p position = 2.31418,0,-0.309303,0xdf838e82;
+	}
+}
+[t:cmd_ai_c_patrol,n:0x016001af]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_activate",0x01600034,0f,"default","",0);
+			  b can_self_destruct = true;
+				condition* = party_member_within_sphere(8.000000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  p position = 2.36725,-4e-006,1.93171,0x0b83a246;
+	}
+}
+[t:cmd_ai_c_patrol,n:0x016001b0]
+{
+	[placement]
+	{
+	  p position = 3.83821,4e-006,-0.551485,0x5680cb2a;
+	}
+}
+[t:cmd_ai_c_patrol,n:0x016001ae]
+{
+	[placement]
+	{
+	  p position = 1.42591,4e-006,-0.077088,0xf2ec9302;
+	}
+}
+[t:cmd_ai_c_patrol,n:0x01600176]
+{
+	[placement]
+	{
+	  p position = 5.81472,0.5,-7.06821,0x1c2fafcf;
+	}
+}
+[t:cmd_selection_toggle,n:0x01601210]
+{
+	[cmd_selection_toggle]
+	{
+	  x object_scid = 0x0160120D;
+	  i start_state = 1;
+	}
+	[common]
+	{
+		dev_instance_text = "ALTAR";
+	}
+	[placement]
+	{
+	  p position = -3.67027,0.499999,0.868837,0x1c2fafcf;
+	}
+}
+[t:cmd_inventory_changer,n:0x01601219]
+{
+	[cmd_inv_changer]
+	{
+	  b go_within_sphere = true;
+	  x msg_scid = 0x01601221;
+		template_name = "azunite_scholar_artifact_01";
+	}
+	[placement]
+	{
+	  q orientation = 0,0.707107,0,0.707107;
+	  p position = -0.853303,0.5,-1.33728,0x1c2fafcf;
+	}
+}
+[t:cmd_selection_toggle,n:0x01601220]
+{
+	[cmd_selection_toggle]
+	{
+	  x object_scid = 0x0160121F;
+	  i start_state = 1;
+	  b toggle_selection = false;
+	  b toggle_visability = true;
+	}
+	[common]
+	{
+		dev_instance_text = "ARTIFACT";
+	}
+	[placement]
+	{
+	  p position = -3.63995,0.5,-1.97981,0x1c2fafcf;
+	}
+}
+[t:light_enable,n:0x01601223]
+{
+	[light_enable]
+	{
+	  f flare_duration = 1.75;
+	  b initially_active = false;
+	  x siege_light = 0x78D74521;
+	  b use_fizzle = true;
+	  b use_flare = true;
+	}
+	[placement]
+	{
+	  p position = -4.44623,0.5,-0.66667,0x1c2fafcf;
+	}
+}
+[t:light_enable,n:0x01601225]
+{
+	[light_enable]
+	{
+	  f fizzle_duration = 2;
+	  f flare_duration = 1.75;
+	  x siege_light = 0x5FB48FE2;
+	  b use_fizzle = true;
+	  b use_flare = true;
+	}
+	[placement]
+	{
+	  p position = 1.40826,0.499999,-0.313706,0x1c2fafcf;
+	}
+}
+[t:light_enable,n:0x01601226]
+{
+	[light_enable]
+	{
+	  f flare_duration = 1.75;
+	  f flare_magnitude = 2;
+	  b initially_active = false;
+	  x siege_light = 0x9F750204;
+	  b use_flare = true;
+	}
+	[placement]
+	{
+	  p position = 1.51757,0.499999,-1.20389,0x1c2fafcf;
+	}
+}
+[t:cmd_ai_c_patrol,n:0x0160016c]
+{
+	[placement]
+	{
+	  p position = 2.59464,-4e-006,1.35095,0x0b0f2126;
+	}
+}
+[t:cmd_ai_c_patrol,n:0x016001a5]
+{
+	[placement]
+	{
+	  p position = -2.28875,0,0.535866,0x07a92293;
+	}
+}
+[t:cmd_ai_c_patrol,n:0x01600049]
+{
+	[placement]
+	{
+	  p position = 0.179641,-4e-006,-0.267048,0xf4952f48;
+	}
+}
+[t:cmd_ai_c_patrol,n:0x016001ad]
+{
+	[placement]
+	{
+	  p position = 0.148261,0,-2.90352,0xa9ea2f67;
+	}
+}
+[t:cmd_ai_c_patrol,n:0x01600177]
+{
+	[placement]
+	{
+	  p position = -3.59876,0,2.09067,0x4fc84e74;
+	}
+}
+[t:cmd_ai_c_patrol,n:0x016001a6]
+{
+	[placement]
+	{
+	  p position = -2.71193,0,3.77455,0xc76ab4a3;
+	}
+}
