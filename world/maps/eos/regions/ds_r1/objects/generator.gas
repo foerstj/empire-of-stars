@@ -1,20 +1,3 @@
-[t:generator_generic,n:0x0160009d]
-{
-	[generator_basic]
-	{
-		child_template_name = "swamp_witch";
-	  x initial_command = 0x016000A6;
-	  x initial_command2 = 0x01600030;
-	  x initial_command3 = 0x016000B9;
-	  i max_alive_children = 2;
-	  i num_children_incubating = 2;
-	}
-	[placement]
-	{
-	  q orientation = 0,1,0,0;
-	  p position = 1.48132,-1.85001,-0.656212,0x4a21146e;
-	}
-}
 [t:gen_bush_swamp-mangler,n:0x0160122d]
 {
 	[placement]
@@ -44,20 +27,37 @@
 	  p position = 1.06108,-1,-1.53281,0x5313fa92;
 	}
 }
-[t:generator_generic,n:0x01600168]
+[t:generator_generic,n:0x0160009d]
 {
 	[generator_basic]
 	{
-		child_template_name = "zombie_02";
-	  x initial_command = 0x01600049;
-	  i max_alive_children = 5;
-	  i num_children_incubating = 5;
+		child_template_name = "swamp_witch";
+	  x initial_command = 0x016000A6;
+	  x initial_command2 = 0x01600030;
+	  x initial_command3 = 0x016000B9;
+	  i max_alive_children = 2;
+	  i num_children_incubating = 2;
+	}
+	[placement]
+	{
+	  q orientation = 0,1,0,0;
+	  p position = 1.48132,-1.85001,-0.656212,0x4a21146e;
+	}
+}
+[t:generator_generic,n:0x016001ab]
+{
+	[generator_basic]
+	{
+		child_template_name = "zombie_01";
+	  x initial_command = 0x016001B0;
+	  i max_alive_children = 2;
+	  i num_children_incubating = 2;
 	  f spawn_period = 7;
 	}
 	[placement]
 	{
 	  q orientation = 0,0.707107,0,0.707107;
-	  p position = 3.62745,0,-1.10658,0xc14954d7;
+	  p position = -0.540833,0,0.412617,0x096dd6a6;
 	}
 }
 [t:gen_bush_swamp-troll_swamp,n:0x01600b1c]
@@ -84,23 +84,7 @@
 	  p position = -2.923,1,3.65375,0x705fcc02;
 	}
 }
-[t:generator_generic,n:0x016001ab]
-{
-	[generator_basic]
-	{
-		child_template_name = "zombie_01";
-	  x initial_command = 0x016001B0;
-	  i max_alive_children = 2;
-	  i num_children_incubating = 2;
-	  f spawn_period = 7;
-	}
-	[placement]
-	{
-	  q orientation = 0,0.707107,0,0.707107;
-	  p position = -0.540833,0,0.412617,0x096dd6a6;
-	}
-}
-[t:generator_generic,n:0x0160004e]
+[t:generator_generic,n:0x01600168]
 {
 	[generator_basic]
 	{
@@ -113,23 +97,7 @@
 	[placement]
 	{
 	  q orientation = 0,0.707107,0,0.707107;
-	  p position = 2.08002,0,0.538727,0x3a9c9b11;
-	}
-}
-[t:generator_generic,n:0x016001ac]
-{
-	[generator_basic]
-	{
-		child_template_name = "zombie_headless";
-	  x initial_command = 0x016001AF;
-	  i max_alive_children = 2;
-	  i num_children_incubating = 2;
-	  f spawn_period = 7;
-	}
-	[placement]
-	{
-	  q orientation = 0,0.707107,0,0.707107;
-	  p position = -0.866402,0,-0.401413,0x1abbe559;
+	  p position = 3.62745,0,-1.10658,0xc14954d7;
 	}
 }
 [t:generator_generic,n:0x01600167]
@@ -162,6 +130,22 @@
 	{
 	  q orientation = 0,0.707107,0,0.707107;
 	  p position = -2.62886,0,2.6247,0xe0b7ca49;
+	}
+}
+[t:generator_generic,n:0x0160004e]
+{
+	[generator_basic]
+	{
+		child_template_name = "zombie_02";
+	  x initial_command = 0x01600049;
+	  i max_alive_children = 5;
+	  i num_children_incubating = 5;
+	  f spawn_period = 7;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.707107,0,0.707107;
+	  p position = 2.08002,0,0.538727,0x3a9c9b11;
 	}
 }
 [t:generator_generic,n:0x01600042]
@@ -281,5 +265,21 @@
 	{
 	  q orientation = 0,0.707107,0,0.707107;
 	  p position = -3.0777,0,-0.612034,0x3b39812d;
+	}
+}
+[t:generator_generic,n:0x016001ac]
+{
+	[generator_basic]
+	{
+		child_template_name = "zombie_headless";
+	  x initial_command = 0x016001AF;
+	  i max_alive_children = 2;
+	  i num_children_incubating = 2;
+	  f spawn_period = 7;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.707107,0,0.707107;
+	  p position = -0.866402,0,-0.401413,0x1abbe559;
 	}
 }

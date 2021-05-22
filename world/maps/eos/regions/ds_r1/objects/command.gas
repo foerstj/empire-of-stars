@@ -58,41 +58,6 @@
 	  p position = 2.31418,0,-0.309303,0xdf838e82;
 	}
 }
-[t:cmd_ai_c_patrol,n:0x016001af]
-{
-	[common]
-	{
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = send_world_message("we_req_activate",0x01600034,0f,"default","",0);
-			  b can_self_destruct = true;
-				condition* = party_member_within_sphere(8.000000,"on_every_enter");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  p position = 2.36725,-4e-006,1.93171,0x0b83a246;
-	}
-}
-[t:cmd_ai_c_patrol,n:0x016001b0]
-{
-	[placement]
-	{
-	  p position = 3.83821,4e-006,-0.551485,0x5680cb2a;
-	}
-}
 [t:cmd_ai_c_patrol,n:0x016001ae]
 {
 	[placement]
@@ -228,11 +193,46 @@
 	  p position = 0.148261,0,-2.90352,0xa9ea2f67;
 	}
 }
+[t:cmd_ai_c_patrol,n:0x016001b0]
+{
+	[placement]
+	{
+	  p position = 3.83821,4e-006,-0.551485,0x5680cb2a;
+	}
+}
 [t:cmd_ai_c_patrol,n:0x01600177]
 {
 	[placement]
 	{
 	  p position = -3.59876,0,2.09067,0x4fc84e74;
+	}
+}
+[t:cmd_ai_c_patrol,n:0x016001af]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_activate",0x01600034,0f,"default","",0);
+			  b can_self_destruct = true;
+				condition* = party_member_within_sphere(8.000000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  p position = 2.36725,-4e-006,1.93171,0x0b83a246;
 	}
 }
 [t:cmd_ai_c_patrol,n:0x016001a6]
