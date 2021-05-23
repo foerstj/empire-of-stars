@@ -118,6 +118,36 @@
 	  p position = -44.5517,3.81077,-52.556,0x9c4751e9;
 	}
 }
+[t:trigger_generic,n:0x0d201c1f]
+{
+	[common]
+	{
+		dev_instance_text = "PLANET ELEVATOR";
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_activate",0x0D201C2C,0f,"default","every",0);
+				action* = send_world_message("we_req_activate",0x01900217,0f,"default","every",0);
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_req_activate",0,"on_every_message");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  p position = 1.64112,0.2,-0.0146121,0xe41f3f4d;
+	}
+}
 [t:trigger_generic,n:0x0d200958]
 {
 	[common]
@@ -332,5 +362,12 @@
 	[placement]
 	{
 	  p position = 1.13421,0.1,1.08609,0xb14c25f6;
+	}
+}
+[t:use_point,n:0x0d201bd0]
+{
+	[placement]
+	{
+	  p position = 0.502769,0.2,-0.533727,0xf38a6d06;
 	}
 }

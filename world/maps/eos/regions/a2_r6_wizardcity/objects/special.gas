@@ -384,6 +384,43 @@
 	  p position = -16.0527,2,11.6571,0x1757ffb9;
 	}
 }
+[t:trigger_generic,n:0x01900218]
+{
+	[common]
+	{
+		dev_instance_text = "ELEVATOR";
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_activate",0x01900217,0f,"default","every",0);
+				action* = send_world_message("we_req_activate",0x0D201C2C,0f,"default","every",0);
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_req_activate",0,"on_every_message");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  p position = -0.0302279,0.199999,-1.68939,0xf07a3551;
+	}
+}
+[t:use_point,n:0x01900216]
+{
+	[placement]
+	{
+	  p position = -0.543446,0.2,-0.54768,0x14392da4;
+	}
+}
 [t:trigger_change_mood_box,n:0x01900023]
 {
 	[common]
