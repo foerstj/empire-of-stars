@@ -1,4 +1,4 @@
-[t:dsx_utraean_elder_male_01,n:0x019003c7]
+[t:eos_rlw_villager_b,n:0x019003c7]
 {
 	[common]
 	{
@@ -402,7 +402,7 @@
 	  p position = 2.47054,-1.75214,-0.652951,0x1e3490c6;
 	}
 }
-[t:dsx_utraean_townfolk_female_03,n:0x019003ca]
+[t:eos_rlw_villager_b,n:0x019003ca]
 {
 	[common]
 	{
@@ -428,7 +428,7 @@
 	  p position = -1.01968,-1.74944,-2.0781,0x65f03ace;
 	}
 }
-[t:dsx_blacksmith_daon,n:0x019003d2]
+[t:eos_rlw_shop_jewellery,n:0x019003d2]
 {
 	[conversation]
 	{
@@ -448,7 +448,7 @@
 	  p position = -1.67673,-1.75,-0.976456,0xe39a1c06;
 	}
 }
-[t:dsx_utraean_townfolk_male_03,n:0x019003ce]
+[t:eos_rlw_villager,n:0x019003ce]
 {
 	[common]
 	{
@@ -466,7 +466,7 @@
 	  p position = 2.94364,3.5,-2.21742,0x704c323f;
 	}
 }
-[t:dsx_utraean_townfolk_male_02,n:0x019003cb]
+[t:eos_rlw_shop_potions,n:0x019003cb]
 {
 	[common]
 	{
@@ -490,7 +490,7 @@
 	  p position = -0.777481,-0.25,-0.221924,0x620b72fe;
 	}
 }
-[t:dsx_utraean_townfolk_female_02,n:0x019003d0]
+[t:eos_rlw_villager,n:0x019003d0]
 {
 	[common]
 	{
@@ -508,7 +508,7 @@
 	  p position = 1.72029,4.49,-1.56213,0x51b3fa98;
 	}
 }
-[t:dsx_utraean_townfolk_male_01,n:0x019003d1]
+[t:eos_rlw_villager,n:0x019003d1]
 {
 	[common]
 	{
@@ -526,7 +526,7 @@
 	  p position = 0.74863,4.49,5.40362,0x51b3fa98;
 	}
 }
-[t:dsx_laeta,n:0x019003c9]
+[t:eos_rlw_shop_spells,n:0x019003c9]
 {
 	[common]
 	{
@@ -550,7 +550,7 @@
 	  p position = 0.609192,-1.75,-2.74142,0x1ef726b7;
 	}
 }
-[t:dsx_utraean_townfolk_guardsman,n:0x019003de]
+[t:eos_rlw_villager_b,n:0x019003de]
 {
 	[conversation]
 	{
@@ -558,6 +558,13 @@
 		{
 			* = guardsman_after_a2_citysafety;
 			* = guardsman_during_a2_citysafety;
+		}
+	}
+	[inventory]
+	{
+		[equipment]
+		{
+			es_weapon_hand = sd_un_droog_1h_avg_eos;
 		}
 	}
 	[mind]
@@ -570,7 +577,7 @@
 	  p position = 9.23301,4,1.1459,0x3c95e2e6;
 	}
 }
-[t:dsx_utraean_townfolk_female_01,n:0x019003cd]
+[t:eos_rlw_villager,n:0x019003cd]
 {
 	[common]
 	{
@@ -792,37 +799,7 @@
 	  p position = -1.05447,-1.75214,-1.52933,0x1b951ec0;
 	}
 }
-[t:dsx_nardulo,n:0x019003cc]
-{
-	[aspect]
-	{
-	  f max_life = 107.8;
-	  f max_mana = 85;
-	}
-	[common]
-	{
-		dev_instance_text = "SP NARDULO";
-	  b is_multi_player = false;
-	}
-	[conversation]
-	{
-		[conversations]
-		{
-			* = nardulo_accept;
-			* = nardulo_disband;
-			* = nardulo_hello;
-			* = nardulo_hire_rejected;
-			* = nardulo_reject;
-			* = nardulo_rejoin;
-		}
-	}
-	[placement]
-	{
-	  q orientation = 0,-0.382683,0,-0.92388;
-	  p position = -1.4641,-1.74919,-2.12608,0xe352d5cf;
-	}
-}
-[t:dsx_nardulo,n:0x01900425]
+[t:eos_rlw_villager,n:0x01900425]
 {
 	[aspect]
 	{
@@ -832,7 +809,6 @@
 	[common]
 	{
 		dev_instance_text = "MP NARDULO";
-	  b is_single_player = false;
 	}
 	[conversation]
 	{
@@ -840,10 +816,6 @@
 		{
 			* = nardulo_mp;
 		}
-	}
-	[mind]
-	{
-		jat_talk = world\ai\jobs\common\job_talk.skrit;
 	}
 	[placement]
 	{
