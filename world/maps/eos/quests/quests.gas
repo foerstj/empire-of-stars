@@ -212,4 +212,37 @@
 		  	b required = false;
 		}			
     }
+	[rigel_artifact]
+	{
+		chapter			= c5_rigel;		
+		screen_name		= "Purify the Altar";
+		victory_sample	= s_e_level_up_quest;
+				
+		[*]
+		{
+			order			= 0;
+			description     = "Destroy the Altar Guardian.";
+			required		= true;
+		}
+
+		[*]
+		{
+			order			= 1;
+			description		= "Place the holy icon on the Altar";
+			required		= true;
+		}
+	}
+	[rigel_artifact_2]
+	{
+		chapter			= c5_rigel;		
+		screen_name		= "Purify the Altar";
+		victory_sample	= s_e_level_up_quest;
+				
+		[*]
+		{
+			order			= 0;
+			description		= "Place the holy icon on the Altar";
+			required		= true;
+		}
+	}
 }

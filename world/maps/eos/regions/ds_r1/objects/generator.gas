@@ -60,6 +60,70 @@
 	  p position = 3.34505,0,-1.47957,0xaed56441;
 	}
 }
+[t:generator_generic,n:0x016001ac]
+{
+	[generator_basic]
+	{
+		child_template_name = "zombie_headless";
+	  x initial_command = 0x016001AF;
+	  i max_alive_children = 2;
+	  i num_children_incubating = 2;
+	  f spawn_period = 7;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.707107,0,0.707107;
+	  p position = -0.758545,0,-0.287308,0x1abbe559;
+	}
+}
+[t:generator_generic,n:0x01600167]
+{
+	[generator_basic]
+	{
+		child_template_name = "zombie_headless";
+	  x initial_command = 0x01600049;
+	  i max_alive_children = 5;
+	  i num_children_incubating = 5;
+	  f spawn_period = 7;
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.707107,0,0.707107;
+	  p position = 0.810982,0,3.95158,0x24306a6f;
+	}
+}
+[t:generator_generic,n:0x01600168]
+{
+	[generator_basic]
+	{
+		child_template_name = "zombie_02";
+	  x initial_command = 0x01600049;
+	  i max_alive_children = 5;
+	  i num_children_incubating = 5;
+	  f spawn_period = 7;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.707107,0,0.707107;
+	  p position = 3.51959,0,-1.22069,0xc14954d7;
+	}
+}
+[t:generator_generic,n:0x01600034]
+{
+	[generator_basic]
+	{
+		child_template_name = "goo_walker";
+	  x initial_command = 0x016001AF;
+	  i max_alive_children = 5;
+	  i num_children_incubating = 5;
+	  f spawn_period = 7;
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.707107,0,0.707107;
+	  p position = 2.74297,1.7,-2.73256,0xf071eb54;
+	}
+}
 [t:gen_bush_swamp-troll_swamp,n:0x01600b1c]
 {
 	[placement]
@@ -84,52 +148,67 @@
 	  p position = -2.923,1,3.65375,0x705fcc02;
 	}
 }
-[t:generator_generic,n:0x01600168]
+[t:generator_generic,n:0x01600196]
 {
 	[generator_basic]
 	{
-		child_template_name = "zombie_02";
-	  x initial_command = 0x01600049;
-	  i max_alive_children = 5;
-	  i num_children_incubating = 5;
-	  f spawn_period = 7;
+		child_template_name = "zombie_01_ar";
+	  x initial_command = 0x01600177;
+	  i max_alive_children = 3;
+	  i num_children_incubating = 3;
+	  f spawn_period = 8;
 	}
 	[placement]
 	{
-	  q orientation = 0,0.707107,0,0.707107;
-	  p position = 3.51959,0,-1.22069,0xc14954d7;
+	  p position = -2.89207,-1.2,1.94487,0xf6c9c0e0;
 	}
 }
-[t:generator_generic,n:0x01600167]
+[t:generator_generic,n:0x01600195]
 {
 	[generator_basic]
 	{
-		child_template_name = "zombie_headless";
-	  x initial_command = 0x01600049;
+		child_template_name = "zombie_03_ar";
+	  x initial_command = 0x0160016C;
 	  i max_alive_children = 5;
 	  i num_children_incubating = 5;
 	  f spawn_period = 7;
 	}
 	[placement]
 	{
-	  q orientation = 0,-0.707107,0,0.707107;
-	  p position = -1.8678,0,-0.764511,0x24306a6f;
+	  q orientation = 0,-2.98023e-008,0,1;
+	  p position = -0.0138397,-1.56087,1.12762,0xcbcb5ce0;
 	}
 }
-[t:generator_generic,n:0x01600034]
+[t:generator_generic,n:0x01600181]
 {
 	[generator_basic]
 	{
-		child_template_name = "goo_walker";
-	  x initial_command = 0x016001AF;
+		child_template_name = "zombie_03_ar";
+	  x initial_command = 0x01600177;
 	  i max_alive_children = 5;
 	  i num_children_incubating = 5;
+	  f spawn_period = 5;
+	}
+	[placement]
+	{
+	  q orientation = 0,-2.98023e-008,0,1;
+	  p position = 0.308624,-1.5819,0.792747,0xc937ed35;
+	}
+}
+[t:generator_generic,n:0x016001a8]
+{
+	[generator_basic]
+	{
+		child_template_name = "goo_walker_ar";
+	  x initial_command = 0x0160016C;
+	  i max_alive_children = 3;
+	  i num_children_incubating = 3;
 	  f spawn_period = 7;
 	}
 	[placement]
 	{
-	  q orientation = 0,-0.707107,0,0.707107;
-	  p position = 2.74297,1.7,-2.73256,0xf071eb54;
+	  q orientation = 0,-2.98023e-008,0,1;
+	  p position = 1.39262,0,3.74911,0x6aa57152;
 	}
 }
 [t:generator_generic,n:0x0160004e]
@@ -144,8 +223,8 @@
 	}
 	[placement]
 	{
-	  q orientation = 0,1,0,0;
-	  p position = 0.652878,-0.6,-0.187866,0x8b48978f;
+	  q orientation = 0,-0.707107,0,0.707107;
+	  p position = 0.26165,1.70035,-3.99406,0x1d50e9e0;
 	}
 }
 [t:generator_generic,n:0x01600042]
@@ -161,34 +240,7 @@
 	[placement]
 	{
 	  q orientation = 0,0.707107,0,0.707107;
-	  p position = -5.72416,-1.53319,1.82829,0x7561334d;
-	}
-}
-[t:generator_generic,n:0x01600183]
-{
-	[generator_basic]
-	{
-		child_template_name = "grave_crawler";
-	  x initial_command = 0x01600176;
-	  f spawn_period = 0;
-	}
-	[placement]
-	{
-	  p position = -2.73642,-1.4,-0.524994,0xdc2d03bd;
-	}
-}
-[t:generator_generic,n:0x01600197]
-{
-	[generator_basic]
-	{
-		child_template_name = "grave_crawler";
-	  x initial_command = 0x01600176;
-	  f spawn_period = 0.5;
-	}
-	[placement]
-	{
-	  q orientation = 0,1,0,0;
-	  p position = -1.06923,0.4,1.47125,0x9a324347;
+	  p position = -3.09908,-1.49066,4.64017,0x7561334d;
 	}
 }
 [t:generator_generic,n:0x016001aa]
@@ -202,85 +254,33 @@
 	[placement]
 	{
 	  q orientation = 0,0.707107,0,0.707107;
-	  p position = -4.34002,-1.47776,1.76564,0x7561334d;
+	  p position = -1.86896,-1.52413,5.60545,0x7561334d;
 	}
 }
-[t:generator_generic,n:0x01600196]
+[t:generator_generic,n:0x01600183]
 {
 	[generator_basic]
 	{
-		child_template_name = "zombie_01_ar";
-	  x initial_command = 0x01600177;
-	  i max_alive_children = 3;
-	  i num_children_incubating = 3;
-	  f spawn_period = 8;
+		child_template_name = "grave_crawler";
+	  x initial_command = 0x01600176;
+	  f spawn_period = 0;
 	}
 	[placement]
 	{
-	  p position = 1.00783,0,-0.403336,0x07a92293;
+	  p position = -3.64516,-1.6,0.00801088,0xdc2d03bd;
 	}
 }
-[t:generator_generic,n:0x01600195]
+[t:generator_generic,n:0x01600197]
 {
 	[generator_basic]
 	{
-		child_template_name = "zombie_03_ar";
-	  x initial_command = 0x0160016C;
-	  i max_alive_children = 5;
-	  i num_children_incubating = 5;
-	  f spawn_period = 7;
+		child_template_name = "grave_crawler";
+	  x initial_command = 0x01600176;
+	  f spawn_period = 0.5;
 	}
 	[placement]
 	{
-	  q orientation = 0,0.707107,0,0.707107;
-	  p position = -1.62639,0,-0.0550995,0xb962e6ec;
-	}
-}
-[t:generator_generic,n:0x01600181]
-{
-	[generator_basic]
-	{
-		child_template_name = "zombie_03_ar";
-	  x initial_command = 0x01600177;
-	  i max_alive_children = 5;
-	  i num_children_incubating = 5;
-	  f spawn_period = 5;
-	}
-	[placement]
-	{
-	  q orientation = 0,1,0,0;
-	  p position = 1.73616,0,3.53441,0xb35db66a;
-	}
-}
-[t:generator_generic,n:0x016001a8]
-{
-	[generator_basic]
-	{
-		child_template_name = "goo_walker_ar";
-	  x initial_command = 0x0160016C;
-	  i max_alive_children = 3;
-	  i num_children_incubating = 3;
-	  f spawn_period = 7;
-	}
-	[placement]
-	{
-	  q orientation = 0,0.707107,0,0.707107;
-	  p position = -2.96349,0,-0.719849,0x3b39812d;
-	}
-}
-[t:generator_generic,n:0x016001ac]
-{
-	[generator_basic]
-	{
-		child_template_name = "zombie_headless";
-	  x initial_command = 0x016001AF;
-	  i max_alive_children = 2;
-	  i num_children_incubating = 2;
-	  f spawn_period = 7;
-	}
-	[placement]
-	{
-	  q orientation = 0,0.707107,0,0.707107;
-	  p position = -0.758545,0,-0.287308,0x1abbe559;
+	  q orientation = 0,-0.707107,0,0.707107;
+	  p position = -0.10553,-0.556044,-1.75824,0x44fce0a6;
 	}
 }
