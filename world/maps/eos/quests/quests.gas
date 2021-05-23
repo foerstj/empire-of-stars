@@ -78,6 +78,7 @@
 		  b required_update = false;
 		}
 	}
+
 	[alphacentauri_chapel]
 	{		
 		chapter			= c2_alpha_centauri;
@@ -104,6 +105,7 @@
 			speaker = ;
 		}
 	}
+
 	[betelgeuse_wiseoldman]
 	{
 		chapter = c3_betelgeuse;
@@ -128,6 +130,7 @@
 			speaker = ;
 		}
 	}
+
 	[altair_apprentice_books]
 	{
 		chapter			= c4_altair;
@@ -176,6 +179,7 @@
 			description = "Clear the Braak from the Aurora Shrine in the Winternight Woods.";
 		}
     }
+
     [rigel_pyramid]
     {
 		chapter			= c5_rigel;
@@ -187,5 +191,25 @@
 			order		= 0;
 			description = "Look for Starstones in the Pyramid.";
 		}
+    }
+    [rigel_townsafety]
+    {
+		chapter			= c5_rigel;
+		screen_name		= "Orionis";
+		victory_sample	= s_e_level_up_quest;
+		
+		[*]
+		{
+			description = "Clear Orionis of the savage Droog.";
+		  	b is_consumable = true;
+		  	i order = 0;
+		  	b required = false;
+		}
+		[*]
+		{
+			description = "Orionis is safe.";
+		  	i order = 1;
+		  	b required = false;
+		}			
     }
 }
