@@ -17,26 +17,56 @@
 		[store_pcontent]
 		{
 			full_ratio = 0;
-			[weapons]
+            
+            // spells from Verma increased
+			[magic]
 			{
-                // spells from verma - TODO
 				[all*]
 				{
-					il_main = #melee/44-56;
-					max = 8;
-					min = 8;
+					il_main = #spell/25-34;
+					max = 20;
+					min = 15;
 				}
 				[all*]
 				{
-					il_main = #melee/57-85;
-					max = 18;
-					min = 18;
+					il_main = #spell/15-24;
+					max = 20;
+					min = 15;
 				}
 				[all*]
 				{
-					il_main = #melee/86-101;
-					max = 6;
-					min = 6;
+					il_main = #spell/0-14;
+					max = 10;
+					min = 5;
+				}
+			}
+
+            // spellbooks from Lhuk Torath (Demlock's Cut LoA)
+			[misc]
+			{
+                [all*]
+                {
+                    il_main = #spellbook/30-45;
+                    max = 6;
+                    min = 2;
+                }
+                [all*]
+                {
+                    il_main = #spellbook/36-49;
+                    max = 10;
+                    min = 6;
+                }
+                [all*]
+                {
+                    il_main = #spellbook/39-52;
+                    max = 5;
+                    min = 2;
+                }
+				[all*]
+				{
+					il_main = book_glb_magic_01;
+					max = 3;
+					min = 3;
 				}
 			}
 		}
@@ -51,5 +81,17 @@
 	[store]
 	{
 		item_markup = 2;
+        
+        // spells from Verma
+		[item_restock]
+		{
+			scroll_resurrect = 2;
+            spell_resurrect = 2;
+            spell_revive = 2;
+            spell_healing_hands = 2;
+
+            spell_fireshot = 2;
+            spell_zap = 2;
+		}
 	}
 }
