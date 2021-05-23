@@ -344,8 +344,8 @@
 	[music]
 	{
 	  f ambient_intro_delay = 0.000000;
-	  f ambient_repeat_delay = 32.000000;
-		ambient_track = s_e_env_wind_gust;
+	  f ambient_repeat_delay = 0.000000;
+		ambient_track = s_e_ambient_swamp;
 	  f battle_intro_delay = 0.000000;
 	  f battle_repeat_delay = 0.000000;
 		battle_track = ;
@@ -446,7 +446,7 @@
   f transition_time = 3.500000;
 	[fog]
 	{
-	  x fog_color = 0xFFA0B0E0;
+	  x fog_color = 0xFF70B0E0;
 	  f fog_density = 1.000000;
 	  f fog_far_dist = 40.000000;
 	  f fog_lowdetail_far_dist = 40.000000;
@@ -496,6 +496,65 @@
 		21h00m:color = 0xFF224488;
 		22h00m:color = 0xFF002244;
 		23h00m:color = 0xFF000022;
+	}
+}
+[mood_setting*]
+{
+  b interior = true;
+	mood_name = eos_rigel_wet_town_backtrack;
+  f transition_time = 5.000000;
+	[fog]
+	{
+	  x fog_color = 0xFF70B0E0;
+	  f fog_density = 1.000000;
+	  f fog_far_dist = 40.000000;
+	  f fog_lowdetail_far_dist = 40.000000;
+	  f fog_lowdetail_near_dist = 20.000000;
+	  f fog_near_dist = 20.000000;
+	}
+	[frustum]
+	{
+        // high frustum to keep h2o floor nodes connected
+	  f frustum_height = 90.000000;
+	  f frustum_width = 90.000000;
+	}
+	[music]
+	{
+	  f ambient_intro_delay = 0.000000;
+	  f ambient_repeat_delay = 0.000000;
+		ambient_track = s_e_ambient_swamp;
+	  f battle_intro_delay = 0.000000;
+	  f battle_repeat_delay = 0.000000;
+		battle_track = ;
+		room_type = rt_generic;
+	  f standard_intro_delay = 10.000000;
+	  f standard_repeat_delay = 20.000000;
+		standard_track = s_m_DarkForest_03;
+	}
+	[rain]
+	{
+	  b lightning = false;
+	  f rain_density = 100.000000;
+	}
+	[sun]
+	{
+		00h00m:color = 0xFF000000;
+		04h00m:color = 0xFF000022;
+		05h00m:color = 0xFF002244;
+		06h00m:color = 0xFF224488;
+		07h00m:color = 0xFF4488FF;
+		08h00m:color = 0xFF88FFFF;
+		09h00m:color = 0xFFFFFFFF;
+		19h00m:color = 0xFF88FFFF;
+		20h00m:color = 0xFF4488FF;
+		21h00m:color = 0xFF224488;
+		22h00m:color = 0xFF002244;
+		23h00m:color = 0xFF000022;
+	}
+	[wind]
+	{
+	  f wind_direction = 0.700000;
+	  f wind_velocity = 1.000000;
 	}
 }
 [mood_setting*]
@@ -633,7 +692,7 @@
 	}
 	[rain]
 	{
-	  b lightning = false;
+	  b lightning = true;
 	  f rain_density = 100.000000;
 	}
 	[sun]
@@ -729,7 +788,7 @@
 	}
 	[rain]
 	{
-	  b lightning = false;
+	  b lightning = true;
 	  f rain_density = 300.000000;
 	}
 	[sun]

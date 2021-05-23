@@ -384,35 +384,6 @@
 	  p position = -16.0527,2,11.6571,0x1757ffb9;
 	}
 }
-[t:trigger_change_mood_box,n:0x019003dc]
-{
-	[common]
-	{
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = mood_change("map_expansion_a2_r5_coastal"), delay(5);
-			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(1.000000,0.500000,16.000000,"on_every_enter");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  q orientation = 0,1,0,7.09295e-006;
-	  p position = 1.00011,0,-0.284033,0xa3b9b416;
-	}
-}
 [t:trigger_change_mood_box,n:0x01900023]
 {
 	[common]
@@ -554,7 +525,7 @@
 		{
 			[*]
 			{
-				action* = mood_change("map_expansion_a2_r5_coastal"), delay(5);
+				action* = mood_change("eos_rigel_wet_town_backtrack"), delay(5);
 				action* = send_world_message("we_req_activate",0x019006BD,0f,"all_conditions","every",0);
 			  b can_self_destruct = true;
 				condition* = party_member_within_bounding_box(0.500000,2.500000,2.500000,"on_every_enter");
@@ -2707,7 +2678,7 @@
 		{
 			[*]
 			{
-				action* = mood_change("map_expansion_a3_r1_darkjungle");
+				action* = mood_change("eos_rigel_wet_wetlands_begin_1");
 				action* = send_world_message("we_req_activate",0x0190041F,0f,"all_conditions","every",0), doc("map marker");
 			  b can_self_destruct = true;
 				condition* = party_member_within_bounding_box(2.000000,1.000000,1.000000,"on_every_enter");
