@@ -1,17 +1,3 @@
-[t:emt_sound,n:0x019004d5]
-{
-	[placement]
-	{
-	  p position = -0.710104,0,-3.59121,0x6f8d4158;
-	}
-	[sound_emitter]
-	{
-	  b continual_loop = true;
-		event_sound = "env_utraean_floating_statue";
-	  f max_dist = 15;
-	  f min_dist = 1;
-	}
-}
 [t:emt_sound,n:0x019004de]
 {
 	[placement]
@@ -66,6 +52,428 @@
 		event_sound = "env_utraean_floating_statue";
 	  f max_dist = 6;
 	  f min_dist = 1;
+	}
+}
+[t:emt_sound,n:0x019004d5]
+{
+	[placement]
+	{
+	  p position = -0.710104,0,-3.59121,0x6f8d4158;
+	}
+	[sound_emitter]
+	{
+	  b continual_loop = true;
+		event_sound = "env_utraean_floating_statue";
+	  f max_dist = 15;
+	  f min_dist = 1;
+	}
+}
+[t:emt_glow_act,n:0x019003d7]
+{
+	[common]
+	{
+		dev_instance_text = "GLOW BALL BRIDGE ACTIVE INDICATOR";
+	}
+	[glow_emitter_act]
+	{
+	  f blue = 1;
+	  f green = 0.1;
+	  f red = 0.1;
+	  f scale = 1.5;
+	}
+	[placement]
+	{
+	  q orientation = 0,-1.6675e-006,0,1;
+	  p position = 6.87517,5.69789,1.5492,0xa33a6216;
+	}
+}
+[t:emt_glow_act,n:0x019003d8]
+{
+	[common]
+	{
+		dev_instance_text = "GLOW BALL BRIDGE ACTIVE INDICATOR";
+	}
+	[glow_emitter_act]
+	{
+	  f blue = 1;
+	  f green = 0.1;
+	  f red = 0.1;
+	  f scale = 1.5;
+	}
+	[placement]
+	{
+	  q orientation = 0,-1.6675e-006,0,1;
+	  p position = 6.85774,5.77601,-1.57807,0xa33a6216;
+	}
+}
+[t:emt_sound_act,n:0x019003da]
+{
+	[placement]
+	{
+	  q orientation = 0,1,0,8.79754e-008;
+	  p position = 6.86429,2.10984,0.00684807,0xa33a6216;
+	}
+	[sound_emitter_act]
+	{
+		event_sound = "env_utraean_torch_light";
+	  b repeat = false;
+	  b start_on_creation = false;
+	}
+}
+[t:emt_glow_act,n:0x01900436]
+{
+	[common]
+	{
+		dev_instance_text = "GLOW BALL BRIDGE ACTIVE INDICATOR";
+	}
+	[glow_emitter_act]
+	{
+	  f blue = 0.9;
+	  f green = 0.2;
+	  f red = 0.1;
+	  f scale = 1.5;
+	}
+	[placement]
+	{
+	  q orientation = 0,-1.78234e-006,0,1;
+	  p position = -15.1567,0.415794,1.47015,0xa33a6216;
+	}
+}
+[t:emt_glow_act,n:0x01900437]
+{
+	[common]
+	{
+		dev_instance_text = "GLOW BALL BRIDGE ACTIVE INDICATOR";
+	}
+	[glow_emitter_act]
+	{
+	  f blue = 0.9;
+	  f green = 0.2;
+	  f red = 0.1;
+	  f scale = 1.5;
+	}
+	[placement]
+	{
+	  q orientation = 0,-1.57595e-006,0,1;
+	  p position = -15.1185,0.47551,-1.36771,0xa33a6216;
+	}
+}
+[t:emt_glow_act,n:0x01900449]
+{
+	[common]
+	{
+		dev_instance_text = "GLOW BALL BRIDGE ACTIVE INDICATOR";
+	}
+	[glow_emitter_act]
+	{
+	  f blue = 0.9;
+	  f green = 0.2;
+	  f red = 0.1;
+	  f scale = 1.5;
+	}
+	[placement]
+	{
+	  q orientation = 0,-1.66313e-006,0,1;
+	  p position = -7.45241,3.93992,1.6275,0xa33a6216;
+	}
+}
+[t:emt_glow_act,n:0x0190044a]
+{
+	[common]
+	{
+		dev_instance_text = "GLOW BALL BRIDGE ACTIVE INDICATOR";
+	}
+	[glow_emitter_act]
+	{
+	  f blue = 0.9;
+	  f green = 0.2;
+	  f red = 0.1;
+	  f scale = 1.5;
+	}
+	[placement]
+	{
+	  q orientation = 0,-1.66313e-006,0,1;
+	  p position = -7.51749,4.10675,-1.65141,0xa33a6216;
+	}
+}
+[t:emt_sound_act,n:0x0190044c]
+{
+	[placement]
+	{
+	  q orientation = 0,1,0,1.1341e-007;
+	  p position = -7.46375,0.360317,0.410781,0xa33a6216;
+	}
+	[sound_emitter_act]
+	{
+		event_sound = "env_utraean_torch_light";
+	  b repeat = false;
+	  b start_on_creation = false;
+	}
+}
+[t:emt_glow_act,n:0x01900453]
+{
+	[common]
+	{
+		dev_instance_text = "GLOW BALL BRIDGE ACTIVE INDICATOR";
+	}
+	[glow_emitter_act]
+	{
+	  f blue = 1;
+	  f green = 0.1;
+	  f red = 0.1;
+	  f scale = 1.5;
+	}
+	[placement]
+	{
+	  q orientation = 0,1,0,1.57595e-006;
+	  p position = 14.6723,4.28069,-1.48146,0xa33a6216;
+	}
+}
+[t:emt_glow_act,n:0x01900454]
+{
+	[common]
+	{
+		dev_instance_text = "GLOW BALL BRIDGE ACTIVE INDICATOR";
+	}
+	[glow_emitter_act]
+	{
+	  f blue = 1;
+	  f green = 0.1;
+	  f red = 0.1;
+	  f scale = 1.5;
+	}
+	[placement]
+	{
+	  q orientation = 0,1,0,1.57595e-006;
+	  p position = 14.7757,4.33944,1.48836,0xa33a6216;
+	}
+}
+[t:emt_sound_act,n:0x019004d0]
+{
+	[placement]
+	{
+	  p position = -15.6525,-3.25498,0.584183,0xa33a6216;
+	}
+	[sound_emitter_act]
+	{
+		event_sound = "env_utraean_torch_light";
+	  b repeat = false;
+	  b start_on_creation = false;
+	}
+}
+[t:emt_sound_act,n:0x019004d4]
+{
+	[placement]
+	{
+	  p position = 13.8828,0.977969,-0.317884,0xa33a6216;
+	}
+	[sound_emitter_act]
+	{
+		event_sound = "env_utraean_torch_light";
+	  b repeat = false;
+	  b start_on_creation = false;
+	}
+}
+[t:emt_glow_act,n:0x0190044e]
+{
+	[common]
+	{
+		dev_instance_text = "GLOW BALL BRIDGE ACTIVE INDICATOR";
+	}
+	[glow_emitter_act]
+	{
+	  f blue = 0.8;
+	  f red = 0.1;
+	  f scale = 1.5;
+	}
+	[placement]
+	{
+	  q orientation = 0,1,0,4.15457e-009;
+	  p position = -11.8303,4.32592,-1.49958,0x61858e90;
+	}
+}
+[t:emt_glow_act,n:0x01900455]
+{
+	[common]
+	{
+		dev_instance_text = "GLOW BALL BRIDGE ACTIVE INDICATOR";
+	}
+	[glow_emitter_act]
+	{
+	  f blue = 0.8;
+	  f red = 0.1;
+	  f scale = 1.5;
+	}
+	[placement]
+	{
+	  q orientation = 0,1,0,4.15457e-009;
+	  p position = -11.8002,4.31918,1.61921,0x61858e90;
+	}
+}
+[t:emt_sound_act,n:0x0190045b]
+{
+	[placement]
+	{
+	  q orientation = 0,1.57537e-006,0,1;
+	  p position = -11.8348,0.70371,-0.761283,0x61858e90;
+	}
+	[sound_emitter_act]
+	{
+		event_sound = "env_utraean_torch_light";
+	  b repeat = false;
+	  b start_on_creation = false;
+	}
+}
+[t:emt_sound_act,n:0x0190046d]
+{
+	[placement]
+	{
+	  p position = 7.859,-1.08843,-0.251843,0x61858e90;
+	}
+	[sound_emitter_act]
+	{
+		event_sound = "env_utraean_torch_light";
+	  b repeat = false;
+	  b start_on_creation = false;
+	}
+}
+[t:emt_sound_act,n:0x0190046e]
+{
+	[placement]
+	{
+	  p position = -19.4901,-1.08197,0.187423,0x61858e90;
+	}
+	[sound_emitter_act]
+	{
+		event_sound = "env_utraean_torch_light";
+	  b repeat = false;
+	  b start_on_creation = false;
+	}
+}
+[t:emt_glow_act,n:0x0190047b]
+{
+	[common]
+	{
+		dev_instance_text = "GLOW BALL BRIDGE ACTIVE INDICATOR";
+	}
+	[glow_emitter_act]
+	{
+	  f blue = 0.7;
+	  f green = 0.4;
+	  f red = 0.1;
+	  f scale = 1.5;
+	}
+	[placement]
+	{
+	  q orientation = 0,1,0,6.77277e-006;
+	  p position = 8.0326,2.35716,-1.52689,0x61858e90;
+	}
+}
+[t:emt_glow_act,n:0x0190047c]
+{
+	[common]
+	{
+		dev_instance_text = "GLOW BALL BRIDGE ACTIVE INDICATOR";
+	}
+	[glow_emitter_act]
+	{
+	  f blue = 0.7;
+	  f green = 0.4;
+	  f red = 0.1;
+	  f scale = 1.5;
+	}
+	[placement]
+	{
+	  q orientation = 0,1,0,6.73475e-006;
+	  p position = 8.05424,2.2795,1.48339,0x61858e90;
+	}
+}
+[t:emt_glow_act,n:0x0190047f]
+{
+	[common]
+	{
+		dev_instance_text = "GLOW BALL BRIDGE ACTIVE INDICATOR";
+	}
+	[glow_emitter_act]
+	{
+	  f blue = 0.8;
+	  f red = 0.1;
+	  f scale = 1.5;
+	}
+	[placement]
+	{
+	  q orientation = 0,1,0,7.25527e-006;
+	  p position = -19.7472,2.42266,-1.48187,0x61858e90;
+	}
+}
+[t:emt_glow_act,n:0x01900480]
+{
+	[common]
+	{
+		dev_instance_text = "GLOW BALL BRIDGE ACTIVE INDICATOR";
+	}
+	[glow_emitter_act]
+	{
+	  f blue = 0.8;
+	  f red = 0.1;
+	  f scale = 1.5;
+	}
+	[placement]
+	{
+	  q orientation = 0,1,0,1.28251e-005;
+	  p position = -19.6795,2.38568,1.48529,0x61858e90;
+	}
+}
+[t:emt_glow_act,n:0x019004d1]
+{
+	[common]
+	{
+		dev_instance_text = "GLOW BALL BRIDGE ACTIVE INDICATOR";
+	}
+	[glow_emitter_act]
+	{
+	  f blue = 0.7;
+	  f green = 0.4;
+	  f red = 0.1;
+	  f scale = 1.5;
+	}
+	[placement]
+	{
+	  q orientation = 0,1,0,1.22266e-005;
+	  p position = -0.403444,4.1595,-1.33357,0x61858e90;
+	}
+}
+[t:emt_glow_act,n:0x019004d2]
+{
+	[common]
+	{
+		dev_instance_text = "GLOW BALL BRIDGE ACTIVE INDICATOR";
+	}
+	[glow_emitter_act]
+	{
+	  f blue = 0.7;
+	  f green = 0.4;
+	  f red = 0.1;
+	  f scale = 1.5;
+	}
+	[placement]
+	{
+	  q orientation = 0,1,0,-5.54069e-007;
+	  p position = -0.300122,4.21826,1.63625,0x61858e90;
+	}
+}
+[t:emt_sound_act,n:0x019004d9]
+{
+	[placement]
+	{
+	  q orientation = 0,-1.06471e-005,0,1;
+	  p position = -0.116361,0.702276,-0.6963,0x61858e90;
+	}
+	[sound_emitter_act]
+	{
+		event_sound = "env_utraean_torch_light";
+	  b repeat = false;
+	  b start_on_creation = false;
 	}
 }
 [t:emt_sound_act,n:0x01900467]
@@ -274,85 +682,11 @@
 	  b start_on_creation = false;
 	}
 }
-[t:emt_glow_act,n:0x01900473]
-{
-	[common]
-	{
-		dev_instance_text = "GLOW BALL BRIDGE ACTIVE INDICATOR";
-	}
-	[glow_emitter_act]
-	{
-	  f blue = 0.7;
-	  f green = 0.4;
-	  f red = 0.1;
-	  f scale = 1.5;
-	}
-	[placement]
-	{
-	  q orientation = 0,1,0,1.11403e-005;
-	  p position = 8.03878,2.3216,-1.5181,0x832b48f5;
-	}
-}
-[t:emt_glow_act,n:0x01900474]
-{
-	[common]
-	{
-		dev_instance_text = "GLOW BALL BRIDGE ACTIVE INDICATOR";
-	}
-	[glow_emitter_act]
-	{
-	  f blue = 0.7;
-	  f green = 0.4;
-	  f red = 0.1;
-	  f scale = 1.5;
-	}
-	[placement]
-	{
-	  q orientation = 0,1,0,1.11403e-005;
-	  p position = 7.99659,2.24479,1.49746,0x832b48f5;
-	}
-}
-[t:emt_glow_act,n:0x01900477]
-{
-	[common]
-	{
-		dev_instance_text = "GLOW BALL BRIDGE ACTIVE INDICATOR";
-	}
-	[glow_emitter_act]
-	{
-	  f blue = 0.8;
-	  f red = 0.1;
-	  f scale = 1.5;
-	}
-	[placement]
-	{
-	  q orientation = 0,1,0,0;
-	  p position = -19.7344,2.38834,-1.48809,0x832b48f5;
-	}
-}
-[t:emt_glow_act,n:0x01900478]
-{
-	[common]
-	{
-		dev_instance_text = "GLOW BALL BRIDGE ACTIVE INDICATOR";
-	}
-	[glow_emitter_act]
-	{
-	  f blue = 0.8;
-	  f red = 0.1;
-	  f scale = 1.5;
-	}
-	[placement]
-	{
-	  q orientation = 0,1,0,-5.79894e-009;
-	  p position = -19.7069,2.25105,1.52966,0x832b48f5;
-	}
-}
-[t:emt_sound_act,n:0x019004ce]
+[t:emt_sound_act,n:0x01900469]
 {
 	[placement]
 	{
-	  p position = 7.92065,-1.10866,-0.0802155,0x832b48f5;
+	  p position = 0.0273154,-1.39401,13.561,0x3181f481;
 	}
 	[sound_emitter_act]
 	{
@@ -361,11 +695,11 @@
 	  b start_on_creation = false;
 	}
 }
-[t:emt_sound_act,n:0x019004cf]
+[t:emt_sound_act,n:0x0190046a]
 {
 	[placement]
 	{
-	  p position = -19.4672,-1.07606,0.158821,0x832b48f5;
+	  p position = -0.0644778,-1.37772,-3.96855,0x3181f481;
 	}
 	[sound_emitter_act]
 	{
@@ -374,173 +708,7 @@
 	  b start_on_creation = false;
 	}
 }
-[t:emt_glow_act,n:0x019004dd]
-{
-	[common]
-	{
-		dev_instance_text = "GLOW BALL BRIDGE ACTIVE INDICATOR";
-	}
-	[glow_emitter_act]
-	{
-	  f blue = 0.8;
-	  f red = 0.1;
-	  f scale = 1.5;
-	}
-	[placement]
-	{
-	  q orientation = 0,1,0,1.66835e-005;
-	  p position = -11.8157,4.24284,-1.5392,0x832b48f5;
-	}
-}
-[t:emt_glow_act,n:0x019004e3]
-{
-	[common]
-	{
-		dev_instance_text = "GLOW BALL BRIDGE ACTIVE INDICATOR";
-	}
-	[glow_emitter_act]
-	{
-	  f blue = 0.8;
-	  f red = 0.1;
-	  f scale = 1.5;
-	}
-	[placement]
-	{
-	  q orientation = 0,1,0,1.56106e-005;
-	  p position = -11.8273,4.31139,1.53898,0x832b48f5;
-	}
-}
-[t:emt_sound_act,n:0x019004e5]
-{
-	[placement]
-	{
-	  q orientation = 0,-1.41205e-005,0,1;
-	  p position = -11.8029,0.70392,-0.759071,0x832b48f5;
-	}
-	[sound_emitter_act]
-	{
-		event_sound = "env_utraean_torch_light";
-	  b repeat = false;
-	  b start_on_creation = false;
-	}
-}
-[t:emt_glow_act,n:0x019004e7]
-{
-	[common]
-	{
-		dev_instance_text = "GLOW BALL BRIDGE ACTIVE INDICATOR";
-	}
-	[glow_emitter_act]
-	{
-	  f blue = 0.7;
-	  f green = 0.4;
-	  f red = 0.1;
-	  f scale = 1.5;
-	}
-	[placement]
-	{
-	  q orientation = 0,1,0,1.66835e-005;
-	  p position = -0.172829,4.40127,-1.54067,0x832b48f5;
-	}
-}
-[t:emt_glow_act,n:0x019004e8]
-{
-	[common]
-	{
-		dev_instance_text = "GLOW BALL BRIDGE ACTIVE INDICATOR";
-	}
-	[glow_emitter_act]
-	{
-	  f blue = 0.7;
-	  f green = 0.4;
-	  f red = 0.1;
-	  f scale = 1.5;
-	}
-	[placement]
-	{
-	  q orientation = 0,1,0,1.56106e-005;
-	  p position = -0.17878,4.4646,1.49865,0x832b48f5;
-	}
-}
-[t:emt_sound_act,n:0x019004ea]
-{
-	[placement]
-	{
-	  q orientation = 0,-1.40907e-005,0,1;
-	  p position = -0.116341,0.702401,-0.847794,0x832b48f5;
-	}
-	[sound_emitter_act]
-	{
-		event_sound = "env_utraean_torch_light";
-	  b repeat = false;
-	  b start_on_creation = false;
-	}
-}
-[t:emt_sound_act,n:0x01900464]
-{
-	[placement]
-	{
-	  p position = -19.569,-1.10749,-0.0752983,0x7e56d696;
-	}
-	[sound_emitter_act]
-	{
-		event_sound = "env_utraean_torch_light";
-	  b repeat = false;
-	  b start_on_creation = false;
-	}
-}
-[t:emt_sound_act,n:0x01900465]
-{
-	[placement]
-	{
-	  p position = 7.85184,-1.08793,-0.165302,0x7e56d696;
-	}
-	[sound_emitter_act]
-	{
-		event_sound = "env_utraean_torch_light";
-	  b repeat = false;
-	  b start_on_creation = false;
-	}
-}
-[t:emt_glow_act,n:0x0190048f]
-{
-	[common]
-	{
-		dev_instance_text = "GLOW BALL BRIDGE ACTIVE INDICATOR";
-	}
-	[glow_emitter_act]
-	{
-	  f blue = 0.5;
-	  f green = 0.6;
-	  f red = 0.1;
-	  f scale = 1.5;
-	}
-	[placement]
-	{
-	  q orientation = 0,-1.56164e-005,0,1;
-	  p position = 8.04059,2.38712,1.47263,0x7e56d696;
-	}
-}
-[t:emt_glow_act,n:0x01900490]
-{
-	[common]
-	{
-		dev_instance_text = "GLOW BALL BRIDGE ACTIVE INDICATOR";
-	}
-	[glow_emitter_act]
-	{
-	  f blue = 0.5;
-	  f green = 0.6;
-	  f red = 0.1;
-	  f scale = 1.5;
-	}
-	[placement]
-	{
-	  q orientation = 0,-1.43051e-005,0,1;
-	  p position = 8.02701,2.22279,-1.51006,0x7e56d696;
-	}
-}
-[t:emt_glow_act,n:0x019004ca]
+[t:emt_glow_act,n:0x01900487]
 {
 	[common]
 	{
@@ -555,11 +723,11 @@
 	}
 	[placement]
 	{
-	  q orientation = 0,1,0,-9.73676e-006;
-	  p position = -19.6769,2.3959,-1.49663,0x7e56d696;
+	  q orientation = 0,0.707108,0,0.707106;
+	  p position = 1.50722,2.0109,13.6967,0x3181f481;
 	}
 }
-[t:emt_glow_act,n:0x019004cb]
+[t:emt_glow_act,n:0x01900488]
 {
 	[common]
 	{
@@ -574,11 +742,11 @@
 	}
 	[placement]
 	{
-	  q orientation = 0,1,0,1.25863e-005;
-	  p position = -19.6623,2.4683,1.50615,0x7e56d696;
+	  q orientation = 0,0.707108,0,0.707106;
+	  p position = -1.48736,2.01041,13.6942,0x3181f481;
 	}
 }
-[t:emt_glow_act,n:0x01900505]
+[t:emt_glow_act,n:0x01900497]
 {
 	[common]
 	{
@@ -593,11 +761,11 @@
 	}
 	[placement]
 	{
-	  q orientation = 0,-1.80006e-005,0,1;
-	  p position = -0.158012,4.29171,1.51653,0x7e56d696;
+	  q orientation = 0,0.707099,0,0.707115;
+	  p position = 1.48901,2.08699,-4.15403,0x3181f481;
 	}
 }
-[t:emt_glow_act,n:0x01900506]
+[t:emt_glow_act,n:0x01900498]
 {
 	[common]
 	{
@@ -612,16 +780,54 @@
 	}
 	[placement]
 	{
-	  q orientation = 0,-1.5378e-005,0,1;
-	  p position = -0.127316,4.30239,-1.56321,0x7e56d696;
+	  q orientation = 0,0.707096,0,0.707117;
+	  p position = -1.49239,2.03672,-4.15482,0x3181f481;
 	}
 }
-[t:emt_sound_act,n:0x01900508]
+[t:emt_glow_act,n:0x0190053c]
+{
+	[common]
+	{
+		dev_instance_text = "GLOW BALL BRIDGE ACTIVE INDICATOR";
+	}
+	[glow_emitter_act]
+	{
+	  f blue = 0.45;
+	  f green = 0.65;
+	  f red = 0.1;
+	  f scale = 1.5;
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.707117,0,0.707097;
+	  p position = -1.5387,3.9864,6.2902,0x3181f481;
+	}
+}
+[t:emt_glow_act,n:0x0190053d]
+{
+	[common]
+	{
+		dev_instance_text = "GLOW BALL BRIDGE ACTIVE INDICATOR";
+	}
+	[glow_emitter_act]
+	{
+	  f blue = 0.45;
+	  f green = 0.65;
+	  f red = 0.1;
+	  f scale = 1.5;
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.707115,0,0.707099;
+	  p position = 1.54868,4.04515,6.28986,0x3181f481;
+	}
+}
+[t:emt_sound_act,n:0x0190053f]
 {
 	[placement]
 	{
-	  q orientation = 0,1,0,1.38283e-005;
-	  p position = -0.109058,0.702396,0.662113,0x7e56d696;
+	  q orientation = 0,0.707099,0,0.707115;
+	  p position = -0.515321,0.410955,6.2733,0x3181f481;
 	}
 	[sound_emitter_act]
 	{
@@ -630,7 +836,7 @@
 	  b start_on_creation = false;
 	}
 }
-[t:emt_glow_act,n:0x0190050f]
+[t:emt_glow_act,n:0x01900541]
 {
 	[common]
 	{
@@ -638,18 +844,18 @@
 	}
 	[glow_emitter_act]
 	{
-	  f blue = 0.45;
-	  f green = 0.65;
+	  f blue = 0.5;
+	  f green = 0.6;
 	  f red = 0.1;
 	  f scale = 1.5;
 	}
 	[placement]
 	{
-	  q orientation = 0,-1.85745e-005,0,1;
-	  p position = -11.833,4.29398,1.54378,0x7e56d696;
+	  q orientation = 0,-0.707116,0,0.707098;
+	  p position = -1.55329,3.9864,3.20167,0x3181f481;
 	}
 }
-[t:emt_glow_act,n:0x01900510]
+[t:emt_glow_act,n:0x01900542]
 {
 	[common]
 	{
@@ -657,23 +863,242 @@
 	}
 	[glow_emitter_act]
 	{
-	  f blue = 0.45;
-	  f green = 0.65;
+	  f blue = 0.5;
+	  f green = 0.6;
 	  f red = 0.1;
 	  f scale = 1.5;
 	}
 	[placement]
 	{
-	  q orientation = 0,-1.59362e-005,0,1;
-	  p position = -11.8528,4.26922,-1.5214,0x7e56d696;
+	  q orientation = 0,-0.707115,0,0.707099;
+	  p position = 1.52477,4.04515,3.21875,0x3181f481;
 	}
 }
-[t:emt_sound_act,n:0x01900512]
+[t:emt_sound_act,n:0x01900544]
 {
 	[placement]
 	{
-	  q orientation = 0,1,0,1.43426e-005;
-	  p position = -11.7348,0.704181,0.638355,0x7e56d696;
+	  q orientation = 0,0.707099,0,0.707115;
+	  p position = -0.52192,0.410392,3.1176,0x3181f481;
+	}
+	[sound_emitter_act]
+	{
+		event_sound = "env_utraean_torch_light";
+	  b repeat = false;
+	  b start_on_creation = false;
+	}
+}
+[t:emt_sound_act,n:0x0190046b]
+{
+	[placement]
+	{
+	  p position = 7.87575,-1.0963,-0.0687188,0xd1d61725;
+	}
+	[sound_emitter_act]
+	{
+		event_sound = "env_utraean_torch_light";
+	  b repeat = false;
+	  b start_on_creation = false;
+	}
+}
+[t:emt_sound_act,n:0x0190046c]
+{
+	[placement]
+	{
+	  p position = -19.6279,-1.12185,0.111854,0xd1d61725;
+	}
+	[sound_emitter_act]
+	{
+		event_sound = "env_utraean_torch_light";
+	  b repeat = false;
+	  b start_on_creation = false;
+	}
+}
+[t:emt_glow_act,n:0x0190048b]
+{
+	[common]
+	{
+		dev_instance_text = "GLOW BALL BRIDGE ACTIVE INDICATOR";
+	}
+	[glow_emitter_act]
+	{
+	  f blue = 0.6;
+	  f green = 0.6;
+	  f red = 0.1;
+	  f scale = 1.5;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.7071,0,0.707113;
+	  p position = 8.02682,2.24128,1.43171,0xd1d61725;
+	}
+}
+[t:emt_glow_act,n:0x0190048c]
+{
+	[common]
+	{
+		dev_instance_text = "GLOW BALL BRIDGE ACTIVE INDICATOR";
+	}
+	[glow_emitter_act]
+	{
+	  f blue = 0.6;
+	  f green = 0.6;
+	  f red = 0.1;
+	  f scale = 1.5;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.707095,0,0.707119;
+	  p position = 8.0443,2.27953,-1.49276,0xd1d61725;
+	}
+}
+[t:emt_glow_act,n:0x0190049b]
+{
+	[common]
+	{
+		dev_instance_text = "GLOW BALL BRIDGE ACTIVE INDICATOR";
+	}
+	[glow_emitter_act]
+	{
+	  f blue = 0.6;
+	  f green = 0.6;
+	  f red = 0.1;
+	  f scale = 1.5;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.707097,0,0.707117;
+	  p position = -19.6767,2.2425,-1.50057,0xd1d61725;
+	}
+}
+[t:emt_glow_act,n:0x0190049c]
+{
+	[common]
+	{
+		dev_instance_text = "GLOW BALL BRIDGE ACTIVE INDICATOR";
+	}
+	[glow_emitter_act]
+	{
+	  f blue = 0.6;
+	  f green = 0.6;
+	  f red = 0.1;
+	  f scale = 1.5;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.707106,0,0.707107;
+	  p position = -19.6318,2.24401,1.53277,0xd1d61725;
+	}
+}
+[t:emt_glow_act,n:0x019004ec]
+{
+	[common]
+	{
+		dev_instance_text = "GLOW BALL BRIDGE ACTIVE INDICATOR";
+	}
+	[glow_emitter_act]
+	{
+	  f blue = 0.6;
+	  f green = 0.6;
+	  f red = 0.1;
+	  f scale = 1.5;
+	}
+	[placement]
+	{
+	  q orientation = 0,1,0,1.78592e-005;
+	  p position = -0.158187,4.37932,-1.55793,0xd1d61725;
+	}
+}
+[t:emt_glow_act,n:0x019004ed]
+{
+	[common]
+	{
+		dev_instance_text = "GLOW BALL BRIDGE ACTIVE INDICATOR";
+	}
+	[glow_emitter_act]
+	{
+	  f blue = 0.6;
+	  f green = 0.6;
+	  f red = 0.1;
+	  f scale = 1.5;
+	}
+	[placement]
+	{
+	  q orientation = 0,1,0,1.78592e-005;
+	  p position = -0.113393,4.37384,1.49295,0xd1d61725;
+	}
+}
+[t:emt_sound_act,n:0x019004ef]
+{
+	[placement]
+	{
+	  q orientation = 0,-1.68677e-005,0,1;
+	  p position = -0.308411,0.702854,-0.572127,0xd1d61725;
+	}
+	[sound_emitter_act]
+	{
+		event_sound = "env_utraean_torch_light";
+	  b repeat = false;
+	  b start_on_creation = false;
+	}
+}
+[t:emt_glow_act,n:0x019004f1]
+{
+	[common]
+	{
+		dev_instance_text = "GLOW BALL BRIDGE ACTIVE INDICATOR";
+	}
+	[glow_emitter_act]
+	{
+	  f blue = 0.6;
+	  f green = 0.6;
+	  f red = 0.1;
+	  f scale = 1.5;
+	}
+	[placement]
+	{
+	  q orientation = 0,1,0,4.15457e-009;
+	  p position = -11.8309,4.37499,-1.53192,0xd1d61725;
+	}
+}
+[t:emt_glow_act,n:0x019004f2]
+{
+	[common]
+	{
+		dev_instance_text = "GLOW BALL BRIDGE ACTIVE INDICATOR";
+	}
+	[glow_emitter_act]
+	{
+	  f blue = 0.6;
+	  f green = 0.6;
+	  f red = 0.1;
+	  f scale = 1.5;
+	}
+	[placement]
+	{
+	  q orientation = 0,1,0,4.15457e-009;
+	  p position = -11.8416,4.34262,1.55406,0xd1d61725;
+	}
+}
+[t:emt_sound_act,n:0x019004f4]
+{
+	[placement]
+	{
+	  q orientation = 0,1.57537e-006,0,1;
+	  p position = -11.8016,0.703778,-0.83273,0xd1d61725;
+	}
+	[sound_emitter_act]
+	{
+		event_sound = "env_utraean_torch_light";
+	  b repeat = false;
+	  b start_on_creation = false;
+	}
+}
+[t:emt_sound_act,n:0x01900461]
+{
+	[placement]
+	{
+	  p position = -11.6674,31.75,-1.94261,0x830247e5;
 	}
 	[sound_emitter_act]
 	{
@@ -867,225 +1292,6 @@
 	{
 	  q orientation = 0,0.707113,0,0.707101;
 	  p position = -0.497958,0.345184,-8.19036,0x1502dd13;
-	}
-	[sound_emitter_act]
-	{
-		event_sound = "env_utraean_torch_light";
-	  b repeat = false;
-	  b start_on_creation = false;
-	}
-}
-[t:emt_sound_act,n:0x01900463]
-{
-	[placement]
-	{
-	  p position = -29.1836,-1.01167,-0.395332,0x288b2304;
-	}
-	[sound_emitter_act]
-	{
-		event_sound = "env_utraean_torch_light";
-	  b repeat = false;
-	  b start_on_creation = false;
-	}
-}
-[t:emt_sound_act,n:0x01900466]
-{
-	[placement]
-	{
-	  p position = 7.15247,-0.894142,0.213165,0x288b2304;
-	}
-	[sound_emitter_act]
-	{
-		event_sound = "env_utraean_torch_light";
-	  b repeat = false;
-	  b start_on_creation = false;
-	}
-}
-[t:emt_glow_act,n:0x0190049f]
-{
-	[common]
-	{
-		dev_instance_text = "GLOW BALL BRIDGE ACTIVE INDICATOR";
-	}
-	[glow_emitter_act]
-	{
-	  f blue = 0.5;
-	  f green = 0.6;
-	  f red = 0.1;
-	  f scale = 1.5;
-	}
-	[placement]
-	{
-	  q orientation = 0,-1.24516e-005,0,1;
-	  p position = 8.06982,2.30878,1.50116,0x288b2304;
-	}
-}
-[t:emt_glow_act,n:0x019004a0]
-{
-	[common]
-	{
-		dev_instance_text = "GLOW BALL BRIDGE ACTIVE INDICATOR";
-	}
-	[glow_emitter_act]
-	{
-	  f blue = 0.5;
-	  f green = 0.6;
-	  f red = 0.1;
-	  f scale = 1.5;
-	}
-	[placement]
-	{
-	  q orientation = 0,-1.56164e-005,0,1;
-	  p position = 8.06055,2.31756,-1.51013,0x288b2304;
-	}
-}
-[t:emt_glow_act,n:0x019004c6]
-{
-	[common]
-	{
-		dev_instance_text = "GLOW BALL BRIDGE ACTIVE INDICATOR";
-	}
-	[glow_emitter_act]
-	{
-	  f blue = 0.45;
-	  f green = 0.65;
-	  f red = 0.1;
-	  f scale = 1.5;
-	}
-	[placement]
-	{
-	  q orientation = 0,1,0,1.25544e-005;
-	  p position = -29.7327,2.40933,-1.48859,0x288b2304;
-	}
-}
-[t:emt_glow_act,n:0x019004c7]
-{
-	[common]
-	{
-		dev_instance_text = "GLOW BALL BRIDGE ACTIVE INDICATOR";
-	}
-	[glow_emitter_act]
-	{
-	  f blue = 0.45;
-	  f green = 0.65;
-	  f red = 0.1;
-	  f scale = 1.5;
-	}
-	[placement]
-	{
-	  q orientation = 0,1,0,1.25544e-005;
-	  p position = -29.6661,2.32758,1.51943,0x288b2304;
-	}
-}
-[t:emt_glow_act,n:0x01900500]
-{
-	[common]
-	{
-		dev_instance_text = "GLOW BALL BRIDGE ACTIVE INDICATOR";
-	}
-	[glow_emitter_act]
-	{
-	  f blue = 0.5;
-	  f green = 0.6;
-	  f red = 0.1;
-	  f scale = 1.5;
-	}
-	[placement]
-	{
-	  q orientation = 0,-1.7941e-005,0,1;
-	  p position = -0.187454,4.18498,1.53061,0x288b2304;
-	}
-}
-[t:emt_glow_act,n:0x01900501]
-{
-	[common]
-	{
-		dev_instance_text = "GLOW BALL BRIDGE ACTIVE INDICATOR";
-	}
-	[glow_emitter_act]
-	{
-	  f blue = 0.5;
-	  f green = 0.6;
-	  f red = 0.1;
-	  f scale = 1.5;
-	}
-	[placement]
-	{
-	  q orientation = 0,-1.80006e-005,0,1;
-	  p position = -0.168633,4.2394,-1.5718,0x288b2304;
-	}
-}
-[t:emt_sound_act,n:0x01900503]
-{
-	[placement]
-	{
-	  q orientation = 0,1,0,1.64211e-005;
-	  p position = -0.249496,0.702861,0.595398,0x288b2304;
-	}
-	[sound_emitter_act]
-	{
-		event_sound = "env_utraean_torch_light";
-	  b repeat = false;
-	  b start_on_creation = false;
-	}
-}
-[t:emt_glow_act,n:0x0190050a]
-{
-	[common]
-	{
-		dev_instance_text = "GLOW BALL BRIDGE ACTIVE INDICATOR";
-	}
-	[glow_emitter_act]
-	{
-	  f blue = 0.45;
-	  f green = 0.65;
-	  f red = 0.1;
-	  f scale = 1.5;
-	}
-	[placement]
-	{
-	  q orientation = 0,-1.79784e-005,0,1;
-	  p position = -21.4937,4.22491,1.55562,0x288b2304;
-	}
-}
-[t:emt_glow_act,n:0x0190050b]
-{
-	[common]
-	{
-		dev_instance_text = "GLOW BALL BRIDGE ACTIVE INDICATOR";
-	}
-	[glow_emitter_act]
-	{
-	  f blue = 0.45;
-	  f green = 0.65;
-	  f red = 0.1;
-	  f scale = 1.5;
-	}
-	[placement]
-	{
-	  q orientation = 0,-1.85745e-005,0,1;
-	  p position = -21.4719,4.15621,-1.52348,0x288b2304;
-	}
-}
-[t:emt_sound_act,n:0x0190050d]
-{
-	[placement]
-	{
-	  q orientation = 0,1,0,1.64287e-005;
-	  p position = -21.4234,0.702551,0.762478,0x288b2304;
-	}
-	[sound_emitter_act]
-	{
-		event_sound = "env_utraean_torch_light";
-	  b repeat = false;
-	  b start_on_creation = false;
-	}
-}
-[t:emt_sound_act,n:0x01900461]
-{
-	[placement]
-	{
-	  p position = -11.6674,31.75,-1.94261,0x830247e5;
 	}
 	[sound_emitter_act]
 	{
@@ -1809,11 +2015,11 @@
 	  b start_on_creation = false;
 	}
 }
-[t:emt_sound_act,n:0x01900469]
+[t:emt_sound_act,n:0x01900463]
 {
 	[placement]
 	{
-	  p position = 0.0273154,-1.39401,13.561,0x3181f481;
+	  p position = -29.1836,-1.01167,-0.395332,0x288b2304;
 	}
 	[sound_emitter_act]
 	{
@@ -1822,11 +2028,11 @@
 	  b start_on_creation = false;
 	}
 }
-[t:emt_sound_act,n:0x0190046a]
+[t:emt_sound_act,n:0x01900466]
 {
 	[placement]
 	{
-	  p position = -0.0644778,-1.37772,-3.96855,0x3181f481;
+	  p position = 7.15247,-0.894142,0.213165,0x288b2304;
 	}
 	[sound_emitter_act]
 	{
@@ -1835,45 +2041,7 @@
 	  b start_on_creation = false;
 	}
 }
-[t:emt_glow_act,n:0x01900487]
-{
-	[common]
-	{
-		dev_instance_text = "GLOW BALL BRIDGE ACTIVE INDICATOR";
-	}
-	[glow_emitter_act]
-	{
-	  f blue = 0.45;
-	  f green = 0.65;
-	  f red = 0.1;
-	  f scale = 1.5;
-	}
-	[placement]
-	{
-	  q orientation = 0,0.707108,0,0.707106;
-	  p position = 1.50722,2.0109,13.6967,0x3181f481;
-	}
-}
-[t:emt_glow_act,n:0x01900488]
-{
-	[common]
-	{
-		dev_instance_text = "GLOW BALL BRIDGE ACTIVE INDICATOR";
-	}
-	[glow_emitter_act]
-	{
-	  f blue = 0.45;
-	  f green = 0.65;
-	  f red = 0.1;
-	  f scale = 1.5;
-	}
-	[placement]
-	{
-	  q orientation = 0,0.707108,0,0.707106;
-	  p position = -1.48736,2.01041,13.6942,0x3181f481;
-	}
-}
-[t:emt_glow_act,n:0x01900497]
+[t:emt_glow_act,n:0x0190049f]
 {
 	[common]
 	{
@@ -1888,11 +2056,11 @@
 	}
 	[placement]
 	{
-	  q orientation = 0,0.707099,0,0.707115;
-	  p position = 1.48901,2.08699,-4.15403,0x3181f481;
+	  q orientation = 0,-1.24516e-005,0,1;
+	  p position = 8.06982,2.30878,1.50116,0x288b2304;
 	}
 }
-[t:emt_glow_act,n:0x01900498]
+[t:emt_glow_act,n:0x019004a0]
 {
 	[common]
 	{
@@ -1907,11 +2075,11 @@
 	}
 	[placement]
 	{
-	  q orientation = 0,0.707096,0,0.707117;
-	  p position = -1.49239,2.03672,-4.15482,0x3181f481;
+	  q orientation = 0,-1.56164e-005,0,1;
+	  p position = 8.06055,2.31756,-1.51013,0x288b2304;
 	}
 }
-[t:emt_glow_act,n:0x0190053c]
+[t:emt_glow_act,n:0x019004c6]
 {
 	[common]
 	{
@@ -1926,11 +2094,11 @@
 	}
 	[placement]
 	{
-	  q orientation = 0,-0.707117,0,0.707097;
-	  p position = -1.5387,3.9864,6.2902,0x3181f481;
+	  q orientation = 0,1,0,1.25544e-005;
+	  p position = -29.7327,2.40933,-1.48859,0x288b2304;
 	}
 }
-[t:emt_glow_act,n:0x0190053d]
+[t:emt_glow_act,n:0x019004c7]
 {
 	[common]
 	{
@@ -1945,25 +2113,11 @@
 	}
 	[placement]
 	{
-	  q orientation = 0,-0.707115,0,0.707099;
-	  p position = 1.54868,4.04515,6.28986,0x3181f481;
+	  q orientation = 0,1,0,1.25544e-005;
+	  p position = -29.6661,2.32758,1.51943,0x288b2304;
 	}
 }
-[t:emt_sound_act,n:0x0190053f]
-{
-	[placement]
-	{
-	  q orientation = 0,0.707099,0,0.707115;
-	  p position = -0.515321,0.410955,6.2733,0x3181f481;
-	}
-	[sound_emitter_act]
-	{
-		event_sound = "env_utraean_torch_light";
-	  b repeat = false;
-	  b start_on_creation = false;
-	}
-}
-[t:emt_glow_act,n:0x01900541]
+[t:emt_glow_act,n:0x01900500]
 {
 	[common]
 	{
@@ -1978,11 +2132,11 @@
 	}
 	[placement]
 	{
-	  q orientation = 0,-0.707116,0,0.707098;
-	  p position = -1.55329,3.9864,3.20167,0x3181f481;
+	  q orientation = 0,-1.7941e-005,0,1;
+	  p position = -0.187454,4.18498,1.53061,0x288b2304;
 	}
 }
-[t:emt_glow_act,n:0x01900542]
+[t:emt_glow_act,n:0x01900501]
 {
 	[common]
 	{
@@ -1997,16 +2151,16 @@
 	}
 	[placement]
 	{
-	  q orientation = 0,-0.707115,0,0.707099;
-	  p position = 1.52477,4.04515,3.21875,0x3181f481;
+	  q orientation = 0,-1.80006e-005,0,1;
+	  p position = -0.168633,4.2394,-1.5718,0x288b2304;
 	}
 }
-[t:emt_sound_act,n:0x01900544]
+[t:emt_sound_act,n:0x01900503]
 {
 	[placement]
 	{
-	  q orientation = 0,0.707099,0,0.707115;
-	  p position = -0.52192,0.410392,3.1176,0x3181f481;
+	  q orientation = 0,1,0,1.64211e-005;
+	  p position = -0.249496,0.702861,0.595398,0x288b2304;
 	}
 	[sound_emitter_act]
 	{
@@ -2015,11 +2169,50 @@
 	  b start_on_creation = false;
 	}
 }
-[t:emt_sound_act,n:0x0190046b]
+[t:emt_glow_act,n:0x0190050a]
+{
+	[common]
+	{
+		dev_instance_text = "GLOW BALL BRIDGE ACTIVE INDICATOR";
+	}
+	[glow_emitter_act]
+	{
+	  f blue = 0.45;
+	  f green = 0.65;
+	  f red = 0.1;
+	  f scale = 1.5;
+	}
+	[placement]
+	{
+	  q orientation = 0,-1.79784e-005,0,1;
+	  p position = -21.4937,4.22491,1.55562,0x288b2304;
+	}
+}
+[t:emt_glow_act,n:0x0190050b]
+{
+	[common]
+	{
+		dev_instance_text = "GLOW BALL BRIDGE ACTIVE INDICATOR";
+	}
+	[glow_emitter_act]
+	{
+	  f blue = 0.45;
+	  f green = 0.65;
+	  f red = 0.1;
+	  f scale = 1.5;
+	}
+	[placement]
+	{
+	  q orientation = 0,-1.85745e-005,0,1;
+	  p position = -21.4719,4.15621,-1.52348,0x288b2304;
+	}
+}
+[t:emt_sound_act,n:0x0190050d]
 {
 	[placement]
 	{
-	  p position = 7.87575,-1.0963,-0.0687188,0xd1d61725;
+	  q orientation = 0,1,0,1.64287e-005;
+	  p position = -21.4234,0.702551,0.762478,0x288b2304;
 	}
 	[sound_emitter_act]
 	{
@@ -2028,11 +2221,11 @@
 	  b start_on_creation = false;
 	}
 }
-[t:emt_sound_act,n:0x0190046c]
+[t:emt_sound_act,n:0x01900464]
 {
 	[placement]
 	{
-	  p position = -19.6279,-1.12185,0.111854,0xd1d61725;
+	  p position = -19.569,-1.10749,-0.0752983,0x7e56d696;
 	}
 	[sound_emitter_act]
 	{
@@ -2041,126 +2234,11 @@
 	  b start_on_creation = false;
 	}
 }
-[t:emt_glow_act,n:0x0190048b]
-{
-	[common]
-	{
-		dev_instance_text = "GLOW BALL BRIDGE ACTIVE INDICATOR";
-	}
-	[glow_emitter_act]
-	{
-	  f blue = 0.6;
-	  f green = 0.6;
-	  f red = 0.1;
-	  f scale = 1.5;
-	}
-	[placement]
-	{
-	  q orientation = 0,0.7071,0,0.707113;
-	  p position = 8.02682,2.24128,1.43171,0xd1d61725;
-	}
-}
-[t:emt_glow_act,n:0x0190048c]
-{
-	[common]
-	{
-		dev_instance_text = "GLOW BALL BRIDGE ACTIVE INDICATOR";
-	}
-	[glow_emitter_act]
-	{
-	  f blue = 0.6;
-	  f green = 0.6;
-	  f red = 0.1;
-	  f scale = 1.5;
-	}
-	[placement]
-	{
-	  q orientation = 0,0.707095,0,0.707119;
-	  p position = 8.0443,2.27953,-1.49276,0xd1d61725;
-	}
-}
-[t:emt_glow_act,n:0x0190049b]
-{
-	[common]
-	{
-		dev_instance_text = "GLOW BALL BRIDGE ACTIVE INDICATOR";
-	}
-	[glow_emitter_act]
-	{
-	  f blue = 0.6;
-	  f green = 0.6;
-	  f red = 0.1;
-	  f scale = 1.5;
-	}
-	[placement]
-	{
-	  q orientation = 0,0.707097,0,0.707117;
-	  p position = -19.6767,2.2425,-1.50057,0xd1d61725;
-	}
-}
-[t:emt_glow_act,n:0x0190049c]
-{
-	[common]
-	{
-		dev_instance_text = "GLOW BALL BRIDGE ACTIVE INDICATOR";
-	}
-	[glow_emitter_act]
-	{
-	  f blue = 0.6;
-	  f green = 0.6;
-	  f red = 0.1;
-	  f scale = 1.5;
-	}
-	[placement]
-	{
-	  q orientation = 0,0.707106,0,0.707107;
-	  p position = -19.6318,2.24401,1.53277,0xd1d61725;
-	}
-}
-[t:emt_glow_act,n:0x019004ec]
-{
-	[common]
-	{
-		dev_instance_text = "GLOW BALL BRIDGE ACTIVE INDICATOR";
-	}
-	[glow_emitter_act]
-	{
-	  f blue = 0.6;
-	  f green = 0.6;
-	  f red = 0.1;
-	  f scale = 1.5;
-	}
-	[placement]
-	{
-	  q orientation = 0,1,0,1.78592e-005;
-	  p position = -0.158187,4.37932,-1.55793,0xd1d61725;
-	}
-}
-[t:emt_glow_act,n:0x019004ed]
-{
-	[common]
-	{
-		dev_instance_text = "GLOW BALL BRIDGE ACTIVE INDICATOR";
-	}
-	[glow_emitter_act]
-	{
-	  f blue = 0.6;
-	  f green = 0.6;
-	  f red = 0.1;
-	  f scale = 1.5;
-	}
-	[placement]
-	{
-	  q orientation = 0,1,0,1.78592e-005;
-	  p position = -0.113393,4.37384,1.49295,0xd1d61725;
-	}
-}
-[t:emt_sound_act,n:0x019004ef]
+[t:emt_sound_act,n:0x01900465]
 {
 	[placement]
 	{
-	  q orientation = 0,-1.68677e-005,0,1;
-	  p position = -0.308411,0.702854,-0.572127,0xd1d61725;
+	  p position = 7.85184,-1.08793,-0.165302,0x7e56d696;
 	}
 	[sound_emitter_act]
 	{
@@ -2169,7 +2247,7 @@
 	  b start_on_creation = false;
 	}
 }
-[t:emt_glow_act,n:0x019004f1]
+[t:emt_glow_act,n:0x0190048f]
 {
 	[common]
 	{
@@ -2177,18 +2255,18 @@
 	}
 	[glow_emitter_act]
 	{
-	  f blue = 0.6;
+	  f blue = 0.5;
 	  f green = 0.6;
 	  f red = 0.1;
 	  f scale = 1.5;
 	}
 	[placement]
 	{
-	  q orientation = 0,1,0,4.15457e-009;
-	  p position = -11.8309,4.37499,-1.53192,0xd1d61725;
+	  q orientation = 0,-1.56164e-005,0,1;
+	  p position = 8.04059,2.38712,1.47263,0x7e56d696;
 	}
 }
-[t:emt_glow_act,n:0x019004f2]
+[t:emt_glow_act,n:0x01900490]
 {
 	[common]
 	{
@@ -2196,32 +2274,18 @@
 	}
 	[glow_emitter_act]
 	{
-	  f blue = 0.6;
+	  f blue = 0.5;
 	  f green = 0.6;
 	  f red = 0.1;
 	  f scale = 1.5;
 	}
 	[placement]
 	{
-	  q orientation = 0,1,0,4.15457e-009;
-	  p position = -11.8416,4.34262,1.55406,0xd1d61725;
+	  q orientation = 0,-1.43051e-005,0,1;
+	  p position = 8.02701,2.22279,-1.51006,0x7e56d696;
 	}
 }
-[t:emt_sound_act,n:0x019004f4]
-{
-	[placement]
-	{
-	  q orientation = 0,1.57537e-006,0,1;
-	  p position = -11.8016,0.703778,-0.83273,0xd1d61725;
-	}
-	[sound_emitter_act]
-	{
-		event_sound = "env_utraean_torch_light";
-	  b repeat = false;
-	  b start_on_creation = false;
-	}
-}
-[t:emt_glow_act,n:0x0190044e]
+[t:emt_glow_act,n:0x019004ca]
 {
 	[common]
 	{
@@ -2229,17 +2293,18 @@
 	}
 	[glow_emitter_act]
 	{
-	  f blue = 0.8;
+	  f blue = 0.45;
+	  f green = 0.65;
 	  f red = 0.1;
 	  f scale = 1.5;
 	}
 	[placement]
 	{
-	  q orientation = 0,1,0,4.15457e-009;
-	  p position = -11.8303,4.32592,-1.49958,0x61858e90;
+	  q orientation = 0,1,0,-9.73676e-006;
+	  p position = -19.6769,2.3959,-1.49663,0x7e56d696;
 	}
 }
-[t:emt_glow_act,n:0x01900455]
+[t:emt_glow_act,n:0x019004cb]
 {
 	[common]
 	{
@@ -2247,22 +2312,61 @@
 	}
 	[glow_emitter_act]
 	{
-	  f blue = 0.8;
+	  f blue = 0.45;
+	  f green = 0.65;
 	  f red = 0.1;
 	  f scale = 1.5;
 	}
 	[placement]
 	{
-	  q orientation = 0,1,0,4.15457e-009;
-	  p position = -11.8002,4.31918,1.61921,0x61858e90;
+	  q orientation = 0,1,0,1.25863e-005;
+	  p position = -19.6623,2.4683,1.50615,0x7e56d696;
 	}
 }
-[t:emt_sound_act,n:0x0190045b]
+[t:emt_glow_act,n:0x01900505]
+{
+	[common]
+	{
+		dev_instance_text = "GLOW BALL BRIDGE ACTIVE INDICATOR";
+	}
+	[glow_emitter_act]
+	{
+	  f blue = 0.5;
+	  f green = 0.6;
+	  f red = 0.1;
+	  f scale = 1.5;
+	}
+	[placement]
+	{
+	  q orientation = 0,-1.80006e-005,0,1;
+	  p position = -0.158012,4.29171,1.51653,0x7e56d696;
+	}
+}
+[t:emt_glow_act,n:0x01900506]
+{
+	[common]
+	{
+		dev_instance_text = "GLOW BALL BRIDGE ACTIVE INDICATOR";
+	}
+	[glow_emitter_act]
+	{
+	  f blue = 0.5;
+	  f green = 0.6;
+	  f red = 0.1;
+	  f scale = 1.5;
+	}
+	[placement]
+	{
+	  q orientation = 0,-1.5378e-005,0,1;
+	  p position = -0.127316,4.30239,-1.56321,0x7e56d696;
+	}
+}
+[t:emt_sound_act,n:0x01900508]
 {
 	[placement]
 	{
-	  q orientation = 0,1.57537e-006,0,1;
-	  p position = -11.8348,0.70371,-0.761283,0x61858e90;
+	  q orientation = 0,1,0,1.38283e-005;
+	  p position = -0.109058,0.702396,0.662113,0x7e56d696;
 	}
 	[sound_emitter_act]
 	{
@@ -2271,11 +2375,50 @@
 	  b start_on_creation = false;
 	}
 }
-[t:emt_sound_act,n:0x0190046d]
+[t:emt_glow_act,n:0x0190050f]
+{
+	[common]
+	{
+		dev_instance_text = "GLOW BALL BRIDGE ACTIVE INDICATOR";
+	}
+	[glow_emitter_act]
+	{
+	  f blue = 0.45;
+	  f green = 0.65;
+	  f red = 0.1;
+	  f scale = 1.5;
+	}
+	[placement]
+	{
+	  q orientation = 0,-1.85745e-005,0,1;
+	  p position = -11.833,4.29398,1.54378,0x7e56d696;
+	}
+}
+[t:emt_glow_act,n:0x01900510]
+{
+	[common]
+	{
+		dev_instance_text = "GLOW BALL BRIDGE ACTIVE INDICATOR";
+	}
+	[glow_emitter_act]
+	{
+	  f blue = 0.45;
+	  f green = 0.65;
+	  f red = 0.1;
+	  f scale = 1.5;
+	}
+	[placement]
+	{
+	  q orientation = 0,-1.59362e-005,0,1;
+	  p position = -11.8528,4.26922,-1.5214,0x7e56d696;
+	}
+}
+[t:emt_sound_act,n:0x01900512]
 {
 	[placement]
 	{
-	  p position = 7.859,-1.08843,-0.251843,0x61858e90;
+	  q orientation = 0,1,0,1.43426e-005;
+	  p position = -11.7348,0.704181,0.638355,0x7e56d696;
 	}
 	[sound_emitter_act]
 	{
@@ -2284,20 +2427,7 @@
 	  b start_on_creation = false;
 	}
 }
-[t:emt_sound_act,n:0x0190046e]
-{
-	[placement]
-	{
-	  p position = -19.4901,-1.08197,0.187423,0x61858e90;
-	}
-	[sound_emitter_act]
-	{
-		event_sound = "env_utraean_torch_light";
-	  b repeat = false;
-	  b start_on_creation = false;
-	}
-}
-[t:emt_glow_act,n:0x0190047b]
+[t:emt_glow_act,n:0x01900473]
 {
 	[common]
 	{
@@ -2312,11 +2442,11 @@
 	}
 	[placement]
 	{
-	  q orientation = 0,1,0,6.77277e-006;
-	  p position = 8.0326,2.35716,-1.52689,0x61858e90;
+	  q orientation = 0,1,0,1.11403e-005;
+	  p position = 8.03878,2.3216,-1.5181,0x832b48f5;
 	}
 }
-[t:emt_glow_act,n:0x0190047c]
+[t:emt_glow_act,n:0x01900474]
 {
 	[common]
 	{
@@ -2331,11 +2461,11 @@
 	}
 	[placement]
 	{
-	  q orientation = 0,1,0,6.73475e-006;
-	  p position = 8.05424,2.2795,1.48339,0x61858e90;
+	  q orientation = 0,1,0,1.11403e-005;
+	  p position = 7.99659,2.24479,1.49746,0x832b48f5;
 	}
 }
-[t:emt_glow_act,n:0x0190047f]
+[t:emt_glow_act,n:0x01900477]
 {
 	[common]
 	{
@@ -2349,11 +2479,11 @@
 	}
 	[placement]
 	{
-	  q orientation = 0,1,0,7.25527e-006;
-	  p position = -19.7472,2.42266,-1.48187,0x61858e90;
+	  q orientation = 0,1,0,0;
+	  p position = -19.7344,2.38834,-1.48809,0x832b48f5;
 	}
 }
-[t:emt_glow_act,n:0x01900480]
+[t:emt_glow_act,n:0x01900478]
 {
 	[common]
 	{
@@ -2367,11 +2497,87 @@
 	}
 	[placement]
 	{
-	  q orientation = 0,1,0,1.28251e-005;
-	  p position = -19.6795,2.38568,1.48529,0x61858e90;
+	  q orientation = 0,1,0,-5.79894e-009;
+	  p position = -19.7069,2.25105,1.52966,0x832b48f5;
 	}
 }
-[t:emt_glow_act,n:0x019004d1]
+[t:emt_sound_act,n:0x019004ce]
+{
+	[placement]
+	{
+	  p position = 7.92065,-1.10866,-0.0802155,0x832b48f5;
+	}
+	[sound_emitter_act]
+	{
+		event_sound = "env_utraean_torch_light";
+	  b repeat = false;
+	  b start_on_creation = false;
+	}
+}
+[t:emt_sound_act,n:0x019004cf]
+{
+	[placement]
+	{
+	  p position = -19.4672,-1.07606,0.158821,0x832b48f5;
+	}
+	[sound_emitter_act]
+	{
+		event_sound = "env_utraean_torch_light";
+	  b repeat = false;
+	  b start_on_creation = false;
+	}
+}
+[t:emt_glow_act,n:0x019004dd]
+{
+	[common]
+	{
+		dev_instance_text = "GLOW BALL BRIDGE ACTIVE INDICATOR";
+	}
+	[glow_emitter_act]
+	{
+	  f blue = 0.8;
+	  f red = 0.1;
+	  f scale = 1.5;
+	}
+	[placement]
+	{
+	  q orientation = 0,1,0,1.66835e-005;
+	  p position = -11.8157,4.24284,-1.5392,0x832b48f5;
+	}
+}
+[t:emt_glow_act,n:0x019004e3]
+{
+	[common]
+	{
+		dev_instance_text = "GLOW BALL BRIDGE ACTIVE INDICATOR";
+	}
+	[glow_emitter_act]
+	{
+	  f blue = 0.8;
+	  f red = 0.1;
+	  f scale = 1.5;
+	}
+	[placement]
+	{
+	  q orientation = 0,1,0,1.56106e-005;
+	  p position = -11.8273,4.31139,1.53898,0x832b48f5;
+	}
+}
+[t:emt_sound_act,n:0x019004e5]
+{
+	[placement]
+	{
+	  q orientation = 0,-1.41205e-005,0,1;
+	  p position = -11.8029,0.70392,-0.759071,0x832b48f5;
+	}
+	[sound_emitter_act]
+	{
+		event_sound = "env_utraean_torch_light";
+	  b repeat = false;
+	  b start_on_creation = false;
+	}
+}
+[t:emt_glow_act,n:0x019004e7]
 {
 	[common]
 	{
@@ -2386,11 +2592,11 @@
 	}
 	[placement]
 	{
-	  q orientation = 0,1,0,1.22266e-005;
-	  p position = -0.403444,4.1595,-1.33357,0x61858e90;
+	  q orientation = 0,1,0,1.66835e-005;
+	  p position = -0.172829,4.40127,-1.54067,0x832b48f5;
 	}
 }
-[t:emt_glow_act,n:0x019004d2]
+[t:emt_glow_act,n:0x019004e8]
 {
 	[common]
 	{
@@ -2405,222 +2611,16 @@
 	}
 	[placement]
 	{
-	  q orientation = 0,1,0,-5.54069e-007;
-	  p position = -0.300122,4.21826,1.63625,0x61858e90;
+	  q orientation = 0,1,0,1.56106e-005;
+	  p position = -0.17878,4.4646,1.49865,0x832b48f5;
 	}
 }
-[t:emt_sound_act,n:0x019004d9]
+[t:emt_sound_act,n:0x019004ea]
 {
 	[placement]
 	{
-	  q orientation = 0,-1.06471e-005,0,1;
-	  p position = -0.116361,0.702276,-0.6963,0x61858e90;
-	}
-	[sound_emitter_act]
-	{
-		event_sound = "env_utraean_torch_light";
-	  b repeat = false;
-	  b start_on_creation = false;
-	}
-}
-[t:emt_glow_act,n:0x019003d7]
-{
-	[common]
-	{
-		dev_instance_text = "GLOW BALL BRIDGE ACTIVE INDICATOR";
-	}
-	[glow_emitter_act]
-	{
-	  f blue = 1;
-	  f green = 0.1;
-	  f red = 0.1;
-	  f scale = 1.5;
-	}
-	[placement]
-	{
-	  q orientation = 0,-1.6675e-006,0,1;
-	  p position = 6.87517,5.69789,1.5492,0xa33a6216;
-	}
-}
-[t:emt_glow_act,n:0x019003d8]
-{
-	[common]
-	{
-		dev_instance_text = "GLOW BALL BRIDGE ACTIVE INDICATOR";
-	}
-	[glow_emitter_act]
-	{
-	  f blue = 1;
-	  f green = 0.1;
-	  f red = 0.1;
-	  f scale = 1.5;
-	}
-	[placement]
-	{
-	  q orientation = 0,-1.6675e-006,0,1;
-	  p position = 6.85774,5.77601,-1.57807,0xa33a6216;
-	}
-}
-[t:emt_sound_act,n:0x019003da]
-{
-	[placement]
-	{
-	  q orientation = 0,1,0,8.79754e-008;
-	  p position = 6.86429,2.10984,0.00684807,0xa33a6216;
-	}
-	[sound_emitter_act]
-	{
-		event_sound = "env_utraean_torch_light";
-	  b repeat = false;
-	  b start_on_creation = false;
-	}
-}
-[t:emt_glow_act,n:0x01900436]
-{
-	[common]
-	{
-		dev_instance_text = "GLOW BALL BRIDGE ACTIVE INDICATOR";
-	}
-	[glow_emitter_act]
-	{
-	  f blue = 0.9;
-	  f green = 0.2;
-	  f red = 0.1;
-	  f scale = 1.5;
-	}
-	[placement]
-	{
-	  q orientation = 0,-1.78234e-006,0,1;
-	  p position = -15.1567,0.415794,1.47015,0xa33a6216;
-	}
-}
-[t:emt_glow_act,n:0x01900437]
-{
-	[common]
-	{
-		dev_instance_text = "GLOW BALL BRIDGE ACTIVE INDICATOR";
-	}
-	[glow_emitter_act]
-	{
-	  f blue = 0.9;
-	  f green = 0.2;
-	  f red = 0.1;
-	  f scale = 1.5;
-	}
-	[placement]
-	{
-	  q orientation = 0,-1.57595e-006,0,1;
-	  p position = -15.1185,0.47551,-1.36771,0xa33a6216;
-	}
-}
-[t:emt_glow_act,n:0x01900449]
-{
-	[common]
-	{
-		dev_instance_text = "GLOW BALL BRIDGE ACTIVE INDICATOR";
-	}
-	[glow_emitter_act]
-	{
-	  f blue = 0.9;
-	  f green = 0.2;
-	  f red = 0.1;
-	  f scale = 1.5;
-	}
-	[placement]
-	{
-	  q orientation = 0,-1.66313e-006,0,1;
-	  p position = -7.45241,3.93992,1.6275,0xa33a6216;
-	}
-}
-[t:emt_glow_act,n:0x0190044a]
-{
-	[common]
-	{
-		dev_instance_text = "GLOW BALL BRIDGE ACTIVE INDICATOR";
-	}
-	[glow_emitter_act]
-	{
-	  f blue = 0.9;
-	  f green = 0.2;
-	  f red = 0.1;
-	  f scale = 1.5;
-	}
-	[placement]
-	{
-	  q orientation = 0,-1.66313e-006,0,1;
-	  p position = -7.51749,4.10675,-1.65141,0xa33a6216;
-	}
-}
-[t:emt_sound_act,n:0x0190044c]
-{
-	[placement]
-	{
-	  q orientation = 0,1,0,1.1341e-007;
-	  p position = -7.46375,0.360317,0.410781,0xa33a6216;
-	}
-	[sound_emitter_act]
-	{
-		event_sound = "env_utraean_torch_light";
-	  b repeat = false;
-	  b start_on_creation = false;
-	}
-}
-[t:emt_glow_act,n:0x01900453]
-{
-	[common]
-	{
-		dev_instance_text = "GLOW BALL BRIDGE ACTIVE INDICATOR";
-	}
-	[glow_emitter_act]
-	{
-	  f blue = 1;
-	  f green = 0.1;
-	  f red = 0.1;
-	  f scale = 1.5;
-	}
-	[placement]
-	{
-	  q orientation = 0,1,0,1.57595e-006;
-	  p position = 14.6723,4.28069,-1.48146,0xa33a6216;
-	}
-}
-[t:emt_glow_act,n:0x01900454]
-{
-	[common]
-	{
-		dev_instance_text = "GLOW BALL BRIDGE ACTIVE INDICATOR";
-	}
-	[glow_emitter_act]
-	{
-	  f blue = 1;
-	  f green = 0.1;
-	  f red = 0.1;
-	  f scale = 1.5;
-	}
-	[placement]
-	{
-	  q orientation = 0,1,0,1.57595e-006;
-	  p position = 14.7757,4.33944,1.48836,0xa33a6216;
-	}
-}
-[t:emt_sound_act,n:0x019004d0]
-{
-	[placement]
-	{
-	  p position = -15.6525,-3.25498,0.584183,0xa33a6216;
-	}
-	[sound_emitter_act]
-	{
-		event_sound = "env_utraean_torch_light";
-	  b repeat = false;
-	  b start_on_creation = false;
-	}
-}
-[t:emt_sound_act,n:0x019004d4]
-{
-	[placement]
-	{
-	  p position = 13.8828,0.977969,-0.317884,0xa33a6216;
+	  q orientation = 0,-1.40907e-005,0,1;
+	  p position = -0.116341,0.702401,-0.847794,0x832b48f5;
 	}
 	[sound_emitter_act]
 	{

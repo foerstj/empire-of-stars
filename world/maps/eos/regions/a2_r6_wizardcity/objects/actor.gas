@@ -117,23 +117,7 @@
 	  p position = 7.27172,-2.12715,-9.00282,0x7aaba6d0;
 	}
 }
-[t:dsx_utraean_townfolk_guardsman,n:0x019003de]
-{
-	[conversation]
-	{
-		[conversations]
-		{
-			* = guardsman_after_a2_citysafety;
-			* = guardsman_during_a2_citysafety;
-		}
-	}
-	[placement]
-	{
-	  q orientation = 0,0.743145,0,-0.669131;
-	  p position = 9.23301,4,1.1459,0x3c95e2e6;
-	}
-}
-[t:dsx_zaurask_spitter,n:0x019002f4]
+[t:dsx_zaurask_claw,n:0x019003c0]
 {
 	[common]
 	{
@@ -158,11 +142,11 @@
 	}
 	[placement]
 	{
-	  q orientation = 0,0.923888,0,-0.382663;
-	  p position = -3.80759,4,7.84012,0x78ac99b7;
+	  q orientation = 0,-0.707106,0,-0.707108;
+	  p position = 5.37041,4,-6.67881,0x69ee0aef;
 	}
 }
-[t:dsx_zaurask_apprentice,n:0x019002f9]
+[t:dsx_zaurask_claw,n:0x019003c2]
 {
 	[common]
 	{
@@ -187,367 +171,8 @@
 	}
 	[placement]
 	{
-	  q orientation = 0,0.382688,0,-0.923877;
-	  p position = -5.86559,4,-6.92101,0x78ac99b7;
-	}
-}
-[t:dsx_zaurask_claw,n:0x01900366]
-{
-	[common]
-	{
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = send_world_message("we_req_activate",0x019003D3,0f,"default","every",0);
-			  b can_self_destruct = true;
-				condition* = receive_world_message("we_killed",0,"on_every_message");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  q orientation = 0,1,0,5.50763e-006;
-	  p position = -6.81281,4,3.77186,0x78ac99b7;
-	}
-}
-[t:dsx_zaurask_spitter,n:0x019002f5]
-{
-	[common]
-	{
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = send_world_message("we_req_activate",0x019003D3,0f,"default","every",0);
-			  b can_self_destruct = true;
-				condition* = receive_world_message("we_killed",0,"on_every_message");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  q orientation = 0,1,0,1.57595e-006;
-	  p position = -0.911394,-1.75214,2.40106,0x1b951ec0;
-	}
-}
-[t:dsx_zaurask_apprentice,n:0x01900348]
-{
-	[common]
-	{
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = send_world_message("we_req_activate",0x019003D3,0f,"default","every",0);
-			  b can_self_destruct = true;
-				condition* = receive_world_message("we_killed",0,"on_every_message");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  q orientation = 0,-0.707103,0,-0.70711;
-	  p position = 2.81502,-1.75214,0.560885,0x1b951ec0;
-	}
-}
-[t:dsx_zaurask_claw,n:0x019003c3]
-{
-	[common]
-	{
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = send_world_message("we_req_activate",0x019003D3,0f,"default","every",0);
-			  b can_self_destruct = true;
-				condition* = receive_world_message("we_killed",0,"on_every_message");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  q orientation = 0,-0.382678,0,-0.923882;
-	  p position = 1.95129,-1.75214,1.50712,0x1b951ec0;
-	}
-}
-[t:dsx_zaurask_claw,n:0x019003c4]
-{
-	[common]
-	{
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = send_world_message("we_req_activate",0x019003D3,0f,"default","every",0);
-			  b can_self_destruct = true;
-				condition* = receive_world_message("we_killed",0,"on_every_message");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  q orientation = 0,-0.927186,0,0.374602;
-	  p position = -1.05447,-1.75214,-1.52933,0x1b951ec0;
-	}
-}
-[t:dsx_utraean_townfolk_male_02,n:0x019003cb]
-{
-	[common]
-	{
-		dev_instance_text = "UTRAEAN TAVERNKEEP - Krinob";
-	}
-	[conversation]
-	{
-		[conversations]
-		{
-			* = kamik_after_a2_citysafety;
-			* = kamik_during_a2_citysafety;
-		}
-	}
-	[placement]
-	{
-	  q orientation = 0,-0.707107,0,-0.707107;
-	  p position = -0.777481,-0.25,-0.221924,0x620b72fe;
-	}
-}
-[t:dsx_utraean_townfolk_female_02,n:0x019003d0]
-{
-	[common]
-	{
-		dev_instance_text = "Cerya";
-	}
-	[conversation]
-	{
-		[conversations]
-		{
-			* = cerya_hello;
-		}
-	}
-	[placement]
-	{
-	  p position = 1.72029,4.49,-1.56213,0x51b3fa98;
-	}
-}
-[t:dsx_utraean_townfolk_male_01,n:0x019003d1]
-{
-	[common]
-	{
-		dev_instance_text = "Zulor";
-	}
-	[conversation]
-	{
-		[conversations]
-		{
-			* = zulor_hello;
-		}
-	}
-	[placement]
-	{
-	  p position = 0.74863,4.49,5.40362,0x51b3fa98;
-	}
-}
-[t:dsx_laeta,n:0x019003c9]
-{
-	[common]
-	{
-		dev_instance_text = "UTRAEAN ALCHEMIST - Laeta";
-	}
-	[conversation]
-	{
-		[conversations]
-		{
-			* = laeta_after_a2_citysafety;
-			* = laeta_during_a2_citysafety;
-		}
-	}
-	[placement]
-	{
-	  q orientation = 0,0.5373,0,0.843391;
-	  p position = 0.609192,-1.75,-2.74142,0x1ef726b7;
-	}
-}
-[t:dsx_utraean_townfolk_female_01,n:0x019003cd]
-{
-	[common]
-	{
-		dev_instance_text = "Atala";
-	}
-	[conversation]
-	{
-		[conversations]
-		{
-			* = atala_hello;
-		}
-	}
-	[placement]
-	{
-	  q orientation = 0,0.0784591,0,-0.996917;
-	  p position = 8.14983,3.48,3.54994,0x5209065b;
-	}
-}
-[t:dsx_utraean_townfolk_female_03,n:0x019003ca]
-{
-	[common]
-	{
-		dev_instance_text = "SCRIBE QUEST - Ezmera";
-		screen_name = "Ezmera";
-	}
-	[conversation]
-	{
-		[conversations]
-		{
-			* = ezmera_after_a2_scribe;
-			* = ezmera_before_a2_scribe;
-			* = ezmera_during_a2_citysafety;
-			* = ezmera_during_a2_scribe;
-		}
-	}
-	[mind]
-	{
-		jat_talk = world\ai\jobs\actors\good\job_talk_ezmera.skrit;
-	}
-	[placement]
-	{
-	  p position = -1.01968,-1.74944,-2.0781,0x65f03ace;
-	}
-}
-[t:dsx_blacksmith_daon,n:0x019003d2]
-{
-	[conversation]
-	{
-		[conversations]
-		{
-			* = daon_after_a2_citysafety;
-			* = daon_during_a2_citysafety;
-		}
-	}
-	[placement]
-	{
-	  q orientation = 0,-1.80857e-008,0,1;
-	  p position = -1.67673,-1.75,-0.976456,0xe39a1c06;
-	}
-}
-[t:dsx_utraean_townfolk_male_03,n:0x019003ce]
-{
-	[common]
-	{
-		description = "UTRAEAN GUY - Inver";
-	}
-	[conversation]
-	{
-		[conversations]
-		{
-			* = inver_hello;
-		}
-	}
-	[placement]
-	{
-	  p position = 2.94364,3.5,-2.21742,0x704c323f;
-	}
-}
-[t:dsx_nardulo,n:0x019003cc]
-{
-	[aspect]
-	{
-	  f max_life = 107.8;
-	  f max_mana = 85;
-	}
-	[common]
-	{
-		dev_instance_text = "SP NARDULO";
-	  b is_multi_player = false;
-	}
-	[conversation]
-	{
-		[conversations]
-		{
-			* = nardulo_accept;
-			* = nardulo_disband;
-			* = nardulo_hello;
-			* = nardulo_hire_rejected;
-			* = nardulo_reject;
-			* = nardulo_rejoin;
-		}
-	}
-	[placement]
-	{
-	  q orientation = 0,-0.382683,0,-0.92388;
-	  p position = -1.4641,-1.74919,-2.12608,0xe352d5cf;
-	}
-}
-[t:dsx_nardulo,n:0x01900425]
-{
-	[aspect]
-	{
-	  f max_life = 117.6;
-	  f max_mana = 110;
-	}
-	[common]
-	{
-		dev_instance_text = "MP NARDULO";
-	  b is_single_player = false;
-	}
-	[conversation]
-	{
-		[conversations]
-		{
-			* = nardulo_mp;
-		}
-	}
-	[mind]
-	{
-		jat_talk = world\ai\jobs\common\job_talk.skrit;
-	}
-	[placement]
-	{
-	  q orientation = 0,-0.382683,0,-0.92388;
-	  p position = -1.18667,-1.74919,-1.85201,0xe352d5cf;
+	  q orientation = 0,-0.923879,0,-0.382685;
+	  p position = 7.96001,4,5.28929,0x69ee0aef;
 	}
 }
 [t:dsx_zaurask_spitter,n:0x019002f8]
@@ -753,36 +378,178 @@
 	  p position = 2.47054,-1.75214,-0.652951,0x1e3490c6;
 	}
 }
-[t:dsx_zaurask_claw,n:0x019003c0]
+[t:dsx_utraean_townfolk_female_03,n:0x019003ca]
 {
 	[common]
 	{
-		[instance_triggers]
+		dev_instance_text = "SCRIBE QUEST - Ezmera";
+		screen_name = "Ezmera";
+	}
+	[conversation]
+	{
+		[conversations]
 		{
-			[*]
-			{
-				action* = send_world_message("we_req_activate",0x019003D3,0f,"default","every",0);
-			  b can_self_destruct = true;
-				condition* = receive_world_message("we_killed",0,"on_every_message");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = false;
-			  b start_active = true;
-			}
+			* = ezmera_after_a2_scribe;
+			* = ezmera_before_a2_scribe;
+			* = ezmera_during_a2_citysafety;
+			* = ezmera_during_a2_scribe;
 		}
+	}
+	[mind]
+	{
+		jat_talk = world\ai\jobs\actors\good\job_talk_ezmera.skrit;
 	}
 	[placement]
 	{
-	  q orientation = 0,-0.707106,0,-0.707108;
-	  p position = 5.37041,4,-6.67881,0x69ee0aef;
+	  p position = -1.01968,-1.74944,-2.0781,0x65f03ace;
 	}
 }
-[t:dsx_zaurask_claw,n:0x019003c2]
+[t:dsx_blacksmith_daon,n:0x019003d2]
+{
+	[conversation]
+	{
+		[conversations]
+		{
+			* = daon_after_a2_citysafety;
+			* = daon_during_a2_citysafety;
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,-1.80857e-008,0,1;
+	  p position = -1.67673,-1.75,-0.976456,0xe39a1c06;
+	}
+}
+[t:dsx_utraean_townfolk_male_03,n:0x019003ce]
+{
+	[common]
+	{
+		description = "UTRAEAN GUY - Inver";
+	}
+	[conversation]
+	{
+		[conversations]
+		{
+			* = inver_hello;
+		}
+	}
+	[placement]
+	{
+	  p position = 2.94364,3.5,-2.21742,0x704c323f;
+	}
+}
+[t:dsx_utraean_townfolk_male_02,n:0x019003cb]
+{
+	[common]
+	{
+		dev_instance_text = "UTRAEAN TAVERNKEEP - Krinob";
+	}
+	[conversation]
+	{
+		[conversations]
+		{
+			* = kamik_after_a2_citysafety;
+			* = kamik_during_a2_citysafety;
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.707107,0,-0.707107;
+	  p position = -0.777481,-0.25,-0.221924,0x620b72fe;
+	}
+}
+[t:dsx_utraean_townfolk_female_02,n:0x019003d0]
+{
+	[common]
+	{
+		dev_instance_text = "Cerya";
+	}
+	[conversation]
+	{
+		[conversations]
+		{
+			* = cerya_hello;
+		}
+	}
+	[placement]
+	{
+	  p position = 1.72029,4.49,-1.56213,0x51b3fa98;
+	}
+}
+[t:dsx_utraean_townfolk_male_01,n:0x019003d1]
+{
+	[common]
+	{
+		dev_instance_text = "Zulor";
+	}
+	[conversation]
+	{
+		[conversations]
+		{
+			* = zulor_hello;
+		}
+	}
+	[placement]
+	{
+	  p position = 0.74863,4.49,5.40362,0x51b3fa98;
+	}
+}
+[t:dsx_laeta,n:0x019003c9]
+{
+	[common]
+	{
+		dev_instance_text = "UTRAEAN ALCHEMIST - Laeta";
+	}
+	[conversation]
+	{
+		[conversations]
+		{
+			* = laeta_after_a2_citysafety;
+			* = laeta_during_a2_citysafety;
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,0.5373,0,0.843391;
+	  p position = 0.609192,-1.75,-2.74142,0x1ef726b7;
+	}
+}
+[t:dsx_utraean_townfolk_guardsman,n:0x019003de]
+{
+	[conversation]
+	{
+		[conversations]
+		{
+			* = guardsman_after_a2_citysafety;
+			* = guardsman_during_a2_citysafety;
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,0.743145,0,-0.669131;
+	  p position = 9.23301,4,1.1459,0x3c95e2e6;
+	}
+}
+[t:dsx_utraean_townfolk_female_01,n:0x019003cd]
+{
+	[common]
+	{
+		dev_instance_text = "Atala";
+	}
+	[conversation]
+	{
+		[conversations]
+		{
+			* = atala_hello;
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,0.0784591,0,-0.996917;
+	  p position = 8.14983,3.48,3.54994,0x5209065b;
+	}
+}
+[t:dsx_zaurask_spitter,n:0x019002f4]
 {
 	[common]
 	{
@@ -807,8 +574,241 @@
 	}
 	[placement]
 	{
-	  q orientation = 0,-0.923879,0,-0.382685;
-	  p position = 7.96001,4,5.28929,0x69ee0aef;
+	  q orientation = 0,0.923888,0,-0.382663;
+	  p position = -3.80759,4,7.84012,0x78ac99b7;
+	}
+}
+[t:dsx_zaurask_apprentice,n:0x019002f9]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_activate",0x019003D3,0f,"default","every",0);
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_killed",0,"on_every_message");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,0.382688,0,-0.923877;
+	  p position = -5.86559,4,-6.92101,0x78ac99b7;
+	}
+}
+[t:dsx_zaurask_claw,n:0x01900366]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_activate",0x019003D3,0f,"default","every",0);
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_killed",0,"on_every_message");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,1,0,5.50763e-006;
+	  p position = -6.81281,4,3.77186,0x78ac99b7;
+	}
+}
+[t:dsx_zaurask_spitter,n:0x019002f5]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_activate",0x019003D3,0f,"default","every",0);
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_killed",0,"on_every_message");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,1,0,1.57595e-006;
+	  p position = -0.911394,-1.75214,2.40106,0x1b951ec0;
+	}
+}
+[t:dsx_zaurask_apprentice,n:0x01900348]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_activate",0x019003D3,0f,"default","every",0);
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_killed",0,"on_every_message");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.707103,0,-0.70711;
+	  p position = 2.81502,-1.75214,0.560885,0x1b951ec0;
+	}
+}
+[t:dsx_zaurask_claw,n:0x019003c3]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_activate",0x019003D3,0f,"default","every",0);
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_killed",0,"on_every_message");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.382678,0,-0.923882;
+	  p position = 1.95129,-1.75214,1.50712,0x1b951ec0;
+	}
+}
+[t:dsx_zaurask_claw,n:0x019003c4]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_activate",0x019003D3,0f,"default","every",0);
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_killed",0,"on_every_message");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.927186,0,0.374602;
+	  p position = -1.05447,-1.75214,-1.52933,0x1b951ec0;
+	}
+}
+[t:dsx_nardulo,n:0x019003cc]
+{
+	[aspect]
+	{
+	  f max_life = 107.8;
+	  f max_mana = 85;
+	}
+	[common]
+	{
+		dev_instance_text = "SP NARDULO";
+	  b is_multi_player = false;
+	}
+	[conversation]
+	{
+		[conversations]
+		{
+			* = nardulo_accept;
+			* = nardulo_disband;
+			* = nardulo_hello;
+			* = nardulo_hire_rejected;
+			* = nardulo_reject;
+			* = nardulo_rejoin;
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.382683,0,-0.92388;
+	  p position = -1.4641,-1.74919,-2.12608,0xe352d5cf;
+	}
+}
+[t:dsx_nardulo,n:0x01900425]
+{
+	[aspect]
+	{
+	  f max_life = 117.6;
+	  f max_mana = 110;
+	}
+	[common]
+	{
+		dev_instance_text = "MP NARDULO";
+	  b is_single_player = false;
+	}
+	[conversation]
+	{
+		[conversations]
+		{
+			* = nardulo_mp;
+		}
+	}
+	[mind]
+	{
+		jat_talk = world\ai\jobs\common\job_talk.skrit;
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.382683,0,-0.92388;
+	  p position = -1.18667,-1.74919,-1.85201,0xe352d5cf;
 	}
 }
 [t:dsx_zaurask_spitter,n:0x019002f6]
