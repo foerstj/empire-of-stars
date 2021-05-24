@@ -236,14 +236,25 @@
 	  p position = 3.93525,-17.85,-5.14058,0xfb9b4e8a;
 	}
 }
-[t:peasant_male_old_02,n:0x00c00515]
+[t:eos_rlw_quest_die,n:0x00c00515]
 {
+	[common]
+	{
+		screen_name = "Repenting Treasure Hunter";
+	}
 	[conversation]
 	{
 		[conversations]
 		{
 			* = conversation_azunite_scholar;
 			* = conversation_azunite_scholar_boss_dead;
+		}
+	}
+	[inventory]
+	{
+		[other]
+		{
+			il_main = azunite_scholar_artifact_01;
 		}
 	}
 	[mind]

@@ -1,0 +1,49 @@
+[t:template,n:eos_rlw_quest_die]
+{
+    category_name = "1W_good";
+	specializes = base_npc_dg;
+	[actor] { portrait_icon = b_gui_ig_i_ic_c_no-eos; }
+	[aspect]
+	{
+		life = 1;
+		max_life = 1;
+		is_invincible		= false;
+		is_collidable   = true;
+
+		use_range = 1.0;
+		is_ghost_usable = TRUE;
+		[textures] { 0 = b_c_eam_dg-04-eos; }
+        scale_base = 0.9;
+	}
+    [body]
+    {
+		avg_move_velocity = 0;
+    }
+	[breaking_object]
+	{
+		damage_on_activate = 5;
+	}
+	[common] { screen_name="Quest giver that dies"; }
+	[conversation] {}
+	[mind]
+	{
+        jat_attack_object = jat_none;
+        jat_attack_object_melee = jat_none;
+        jat_attack_object_ranged = jat_none;
+		jat_talk = world\ai\jobs\common\job_talk.skrit;
+        jat_die = world\ai\jobs\common\job_die.skrit;
+
+		on_enemy_spotted_alert_friends             = false;
+		on_enemy_spotted_attack                    = false;
+		actor_auto_defends_others                  = false;
+		actor_auto_heals_others_life               = false;
+		actor_auto_heals_others_mana               = false;
+		actor_auto_heals_self_life                 = false;
+		actor_auto_heals_self_mana                 = false;
+		actor_auto_xfers_mana                      = false;
+		actor_may_attack = false;
+		actor_may_be_attacked = false;
+		combat_orders                              = co_hold;
+		movement_orders                            = mo_hold;
+	}
+}
