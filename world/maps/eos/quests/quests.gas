@@ -245,4 +245,35 @@
 			required		= true;
 		}
 	}
+	[rigel_missing_shopkeep]
+	{
+		chapter = c5_rigel;
+		screen_name = "Missing Shopkeep";
+		victory_sample = s_e_level_up_quest;
+		[*]
+		{
+			description = "Rescue Necahual, the missing shopkeep";
+		  	i order = 0;
+		  	b required = false;
+		}
+		[*]
+		{
+			description = "You have discovered Necahual";
+			i order = 1;
+			b required = false;
+		}
+	}
+	[rigel_skull]
+	{
+		chapter			= c5_rigel;		
+		screen_name		= "The Skull of the Fallen God";
+		victory_sample	= s_e_level_up_quest;
+				
+		[*]
+		{
+			order			= 0;
+			description		= "Look for starstones at the Skull of the Fallen God.";
+			required		= true;
+		}
+	}
 }
