@@ -1997,11 +1997,10 @@
 	  p position = -3.44739,0,-1.60193,0x40965b25;
 	}
 }
-[t:andiemus,n:0x01700350]
+[t:eos_rlw_villager,n:0x01700350]
 {
 	[common]
 	{
-	  b is_multi_player = false;
 		[instance_triggers]
 		{
 			[*]
@@ -2040,18 +2039,12 @@
 	{
 		[conversations]
 		{
-			* = conversation_andiemus_accept_have_money;
-			* = conversation_andiemus_accept_no_money;
-			* = conversation_andiemus_disband;
-			* = conversation_andiemus_disband_rejoin;
-			* = conversation_andiemus_join;
-			* = conversation_andiemus_reject;
-			* = conversation_andiemus_rejoin;
+			* = conversation_andiemus;
 		}
 	}
 	[mind]
 	{
-		jat_talk = world\ai\jobs\actors\good\job_talk_andiemus.skrit;
+		jat_talk = world\ai\jobs\common\job_talk.skrit;
 	}
 	[placement]
 	{
