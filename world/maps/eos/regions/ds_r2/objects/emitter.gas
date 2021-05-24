@@ -249,6 +249,21 @@
 	  p position = 0.629022,0.299998,3.00626,0x0edb408d;
 	}
 }
+[t:emt_sound_act,n:0x01700334]
+{
+	[placement]
+	{
+	  q orientation = 0,0.450577,0,0.892737;
+	  p position = 2.18782,0.5,-0.0378418,0x7cf568b2;
+	}
+	[sound_emitter_act]
+	{
+		event_sound = "die_krakbone";
+	  b is_global = true;
+	  b repeat = false;
+	  b start_on_creation = false;
+	}
+}
 [t:emt_sound_act,n:0x017001d0]
 {
 	[placement]
@@ -378,20 +393,5 @@
 	[placement]
 	{
 	  p position = 0.0204201,0.5,0.188087,0x70054dd6;
-	}
-}
-[t:emt_sound_act,n:0x01700334]
-{
-	[placement]
-	{
-	  q orientation = 0,0.450577,0,0.892737;
-	  p position = 2.18782,0.5,-0.0378418,0x7cf568b2;
-	}
-	[sound_emitter_act]
-	{
-		event_sound = "die_krakbone";
-	  b is_global = true;
-	  b repeat = false;
-	  b start_on_creation = false;
 	}
 }
