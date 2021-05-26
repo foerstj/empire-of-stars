@@ -85,3 +85,32 @@
 		use_point_scids = 0x01900216;
 	}
 }
+[t:lever_glb_02,n:0x01900424]
+{
+	[aspect]
+	{
+	  f use_range = 0;
+	}
+	[on_off_lever]
+	{
+	  x off_scid = 0x01900389;
+	  x on_scid = 0x01900389;
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.707107,0,0.707107;
+	  p position = 2.00199,-1.47786,5.70569,0xe15e7d51;
+		use_point_scids = 0x0190042d;
+	}
+}
+[t:door_csl_dungeon_07,n:0x01900389]
+{
+	[aspect]
+	{
+	  b is_usable = false;
+	}
+	[placement]
+	{
+	  p position = 0.00273298,-1.5,0.0229053,0x4b7eab9e;
+	}
+}
