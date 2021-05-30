@@ -613,3 +613,43 @@
 		set_item_requirement = 1;
     }
 }
+
+[health_boots_of_stars]
+{
+    [modifier*]
+    {
+        [enchantments]
+        {
+            [*]
+            {
+				is_set_item = true;
+				duration = #infinite;
+				
+				alteration = ALTER_MAX_LIFE;
+				value = 10 * (#itemsequipped);
+				description = "Adds <ALTER_REFLECT_DAMAGE> to Health";
+            }
+        }
+		set_item_requirement = 1;
+    }
+}
+
+[mana_helm_of_stars]
+{
+    [modifier*]
+    {
+        [enchantments]
+        {
+            [*]
+            {
+				is_set_item = true;
+				duration = #infinite;
+				
+				alteration = ALTER_MAX_MANA;
+				value = 10 * (#itemsequipped);
+				description = "Adds <ALTER_REFLECT_DAMAGE> to Mana";
+            }
+        }
+		set_item_requirement = 1;
+    }
+}

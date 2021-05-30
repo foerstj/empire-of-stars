@@ -1,0 +1,38 @@
+[t:template,n:bo_sc_f_dragon_eos_set]
+{
+	category_name = "set_item";
+	doc = "EoS Set Boots";
+	specializes = base_boot;
+
+	[common]
+	{
+        b allow_modifiers = false;
+        is_pcontent_allowed = false;
+		screen_name = "Serpent Boots of Stars";
+	}
+	[defend]
+	{
+		armor_style = 075;
+		armor_type = type1;
+		defense = 15;
+	}
+	[gui]
+	{
+        tooltip_color = set_item;
+
+        equip_requirements = strength:15;
+		inventory_height = 2;
+		inventory_icon = b_gui_ig_i_a_boot_075;
+		inventory_width = 1;
+	}
+    [set_item]
+    {
+        set_name = "The Astral Set";
+        set_compare_name = eos;
+        modifier_file = "health_boots_of_stars";
+        number_items_in_set = 16;
+        item_power_modifier = 4;
+    }
+	
+	[magic] {}
+}
