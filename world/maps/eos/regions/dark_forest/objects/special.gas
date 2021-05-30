@@ -1123,3 +1123,31 @@
 	  p position = 0.79318,-0.934252,-1.58605,0x83c9a091;
 	}
 }
+[t:trigger_generic,n:0x08000016]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = mood_change("multiplayer_world_dark_forest_teleport");
+			  b can_self_destruct = true;
+				condition* = party_member_within_sphere(2.500000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  p position = 1.73985,-0.0499992,-0.639124,0xeccfdbb9;
+	}
+}
