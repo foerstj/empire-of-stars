@@ -124,65 +124,7 @@
 	[placement]
 	{
 	  q orientation = 0,0.707107,0,0.707107;
-	  p position = -1.00672,-0.630213,-1.01239,0x323fd54f;
-	}
-}
-[t:trigger_change_mood_box,n:0x09601359]
-{
-	[common]
-	{
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = mood_change("multiplayer_world_ocean_4");
-			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(1.000000,1.500000,24.000000,"on_every_enter");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  q orientation = 0,-0.707107,0,0.707107;
-	  p position = -0.466125,-0.877656,-2.25212,0x1b22446a;
-	}
-}
-[t:trigger_change_mood_box,n:0x09601763]
-{
-	[common]
-	{
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = mood_change("multiplayer_world_ocean_4");
-			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(1.000000,1.500000,24.000000,"on_every_enter");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  q orientation = 0,-0.707107,0,0.707107;
-	  p position = -0.466125,-0.877656,-2.25212,0x1b22446a;
+	  p position = 0.2623,-11.3413,-11.2366,0xf5dc4639;
 	}
 }
 [t:use_point,n:0x0960191f]

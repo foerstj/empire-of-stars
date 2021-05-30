@@ -137,6 +137,34 @@
 	  p position = -0.0325012,1.94336,-0.124912,0x8cceb92e;
 	}
 }
+[t:trigger_generic,n:0x08000016]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = mood_change("multiplayer_world_dark_forest_teleport");
+			  b can_self_destruct = true;
+				condition* = party_member_within_sphere(2.500000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  p position = 1.73985,-0.0499992,-0.639124,0xeccfdbb9;
+	}
+}
 [t:trigger_change_mood_box,n:0x08001769]
 {
 	[common]
@@ -1123,7 +1151,7 @@
 	  p position = 0.79318,-0.934252,-1.58605,0x83c9a091;
 	}
 }
-[t:trigger_generic,n:0x08000016]
+[t:trigger_generic,n:0x08000015]
 {
 	[common]
 	{
@@ -1131,9 +1159,9 @@
 		{
 			[*]
 			{
-				action* = mood_change("multiplayer_world_dark_forest_teleport");
+				action* = mood_change("multiplayer_world_dark_forest_4");
 			  b can_self_destruct = true;
-				condition* = party_member_within_sphere(2.500000,"on_every_enter");
+				condition* = party_member_within_bounding_box(4.000000,4.000000,4.000000,"on_every_enter");
 			  f delay = 0.000000;
 			  b flip_flop = false;
 			  b multi_player = true;
@@ -1148,6 +1176,7 @@
 	}
 	[placement]
 	{
-	  p position = 1.73985,-0.0499992,-0.639124,0xeccfdbb9;
+	  q orientation = 0,0.707107,0,0.707107;
+	  p position = -3.84845,0,2.19876,0x3bad786b;
 	}
 }
