@@ -1,15 +1,17 @@
-[t:trigger_generic,n:0x08000155]
+[t:trigger_generic,n:0x08000018]
 {
 	[common]
 	{
-		dev_instance_text = "TIP TRIGGER";
+		dev_instance_text = "STARSTONE + ELEVATOR";
 		[instance_triggers]
 		{
 			[*]
 			{
-				action* = send_world_message("we_req_activate",0x08000156,0f,"0x4002","every",0);
+				action* = send_world_message("we_req_activate",0x08001B64,0f,"default","every",0);
+				action* = send_world_message("we_req_activate",0x066027F7,0f,"default","every",0);
 			  b can_self_destruct = true;
-				condition* = party_member_within_node(0xA50DF9C4,1,99,-1,"on_unique_enter");
+				condition* = receive_world_message("we_req_activate",0,"on_every_message");
+				condition* = has_go_in_inventory("local",0x00000000,"starstone_vega");
 			  f delay = 0.000000;
 			  b flip_flop = false;
 			  b multi_player = true;
@@ -24,117 +26,14 @@
 	}
 	[placement]
 	{
-	  p position = 0.399344,-0.0500011,0.936228,0x983e3926;
-	}
-}
-[t:tutorial_tip,n:0x08000156]
-{
-	[common]
-	{
-		dev_instance_text = "DISPLACER TIP";
-	}
-	[placement]
-	{
-	  p position = -0.967239,0.00546713,0.990857,0x983e3926;
-	}
-	[tip]
-	{
-		tip = "tip_5";
-	}
-}
-[t:trigger_change_mood_box,n:0x080000f9]
-{
-	[common]
-	{
-		dev_instance_text = "PLAYER LOCATION";
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = set_player_world_location("cloud_forest");
-			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(3.000000,1.000000,3.000000,"on_every_enter");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  q orientation = 0,1,0,0;
-	  p position = -1.27747,0.2,-1.39622,0x049399c2;
-	}
-}
-[t:trigger_generic,n:0x08001b83]
-{
-	[common]
-	{
-		dev_instance_text = "SCRIPTED EVENT, PLAYER LOCATION";
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = send_world_message("we_req_activate",0x08001B82,0f,"default","",0);
-			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(7.000000,2.000000,7.000000,"on_every_enter");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  q orientation = 0,-0.707107,0,0.707107;
-	  p position = -1.50336,0.2,0.551992,0x049399c2;
-	}
-}
-[t:set_quest_bits,n:0x08001b82]
-{
-	[placement]
-	{
-	  p position = -0.398808,-9.53674e-007,-1.66958,0x28d9c664;
-	}
-	[set_quest_bits]
-	{
-		bool_variable = "teleport_ocean_dark_forest_active";
+	  p position = 0.119727,0.2,-1.4809,0x049399c2;
 	}
 }
 [t:use_point,n:0x08001b33]
 {
 	[placement]
 	{
-	  p position = 0.367432,0.200005,-0.686535,0x8cceb92e;
-	}
-}
-[t:check_quest_bits,n:0x08001b36]
-{
-	[check_quest_bits]
-	{
-		bool_variable = "teleport_ocean_dark_forest_active";
-	  i level = 1;
-	  i object = -1;
-	  i region = -1525810748;
-	  i section = 2;
-	  x send_to_scid = 0x08001B64;
-	}
-	[placement]
-	{
-	  q orientation = 0,-0.707107,0,0.707107;
-	  p position = -0.0325012,1.94336,-0.124912,0x8cceb92e;
+	  p position = -0.331524,0.2,0.357134,0xdd471263;
 	}
 }
 [t:trigger_generic,n:0x08000016]
@@ -585,6 +484,35 @@
 	[placement]
 	{
 	  p position = 2.50079,-3.97159,-1.34059,0x35ead5ea;
+	}
+}
+[t:trigger_generic,n:0x08000015]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = mood_change("multiplayer_world_dark_forest_4");
+			  b can_self_destruct = true;
+				condition* = party_member_within_bounding_box(4.000000,4.000000,4.000000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,0.707107,0,0.707107;
+	  p position = -3.84845,0,2.19876,0x3bad786b;
 	}
 }
 [t:use_point,n:0x080018fa]
@@ -1149,34 +1077,5 @@
 	[placement]
 	{
 	  p position = 0.79318,-0.934252,-1.58605,0x83c9a091;
-	}
-}
-[t:trigger_generic,n:0x08000015]
-{
-	[common]
-	{
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = mood_change("multiplayer_world_dark_forest_4");
-			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(4.000000,4.000000,4.000000,"on_every_enter");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  q orientation = 0,0.707107,0,0.707107;
-	  p position = -3.84845,0,2.19876,0x3bad786b;
 	}
 }

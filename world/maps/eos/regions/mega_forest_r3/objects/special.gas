@@ -710,6 +710,37 @@
 	  p position = 3.37835,4,3.87037,0x9888b369;
 	}
 }
+[t:trigger_generic,n:0x066027f8]
+{
+	[common]
+	{
+		dev_instance_text = "MOON STARSTONE + ELEVATOR";
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_activate",0x066027F7,0f,"default","every",0);
+				action* = send_world_message("we_req_activate",0x08001B64,0f,"default","every",0);
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_req_activate",0,"on_every_message");
+				condition* = has_go_in_inventory("local",0x00000000,"starstone_vega");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  p position = -0.0392892,0.2,-1.54133,0x85a51f17;
+	}
+}
 [t:trigger_change_mood_box,n:0x0660211a]
 {
 	[common]
@@ -940,5 +971,12 @@
 	{
 	  q orientation = 0,-0.0283578,0,0.999598;
 	  p position = -0.341431,0.841825,0.428467,0x679e0c68;
+	}
+}
+[t:use_point,n:0x066027f6]
+{
+	[placement]
+	{
+	  p position = -0.488482,0.2,-0.456638,0x5d139bb6;
 	}
 }
