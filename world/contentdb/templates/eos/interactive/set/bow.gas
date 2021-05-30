@@ -1,0 +1,44 @@
+[t:template,n:bw_g_c_eos_cry_set]
+{
+	category_name = "set_item";
+	doc = "EoS Set Bow";
+	specializes = dsx_base_bow;
+
+	[aspect]
+    {
+        model = m_w_bow_300;
+    }
+	[attack]
+    {
+        attack_range = 12;
+        f damage_max = 49.0;
+        f damage_min = 41;
+        reload_delay = 0.0;
+    }
+	[common]
+    {
+        b allow_modifiers = false;
+        is_pcontent_allowed = false;
+        screen_name = "Eagle Bow of Stars";
+    }
+	[gui]
+    {
+        tooltip_color = set_item;
+
+        active_icon = b_gui_ig_i_ic_bow_004;
+        inventory_icon = b_gui_ig_i_w_bow_300;
+        equip_requirements = strength:12,dexterity:16;
+        inventory_height = 3;
+        inventory_width = 1;
+    }
+    [set_item]
+    {
+        set_name = "The Astral Set";
+        set_compare_name = eos;
+        modifier_file = "eagle_bow_of_stars";
+        number_items_in_set = 14;
+        item_power_modifier = 4;
+    }
+	
+	[magic] {}
+}

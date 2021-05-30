@@ -1,19 +1,20 @@
-[t:template,n:eos_amulet_spark]
+[t:template,n:eos_amulet_ember]
 {
 	category_name = "set_item";
-	doc = "eos spark amulet";
+	doc = "eos ember amulet";
 	specializes = amulet;
 	
 	[common]
     {
         b allow_modifiers = false;
-        screen_name = "Spark Amulet of Stars";
+        is_pcontent_allowed = false;
+        screen_name = "Ember Amulet of Stars";
     }
     [set_item]
     {
         set_name = "The Astral Set";
         set_compare_name = eos;
-        modifier_file = "spark_amulet_of_stars";
+        modifier_file = "ember_amulet_of_stars";
         number_items_in_set = 14;
         item_power_modifier = 4;
     }

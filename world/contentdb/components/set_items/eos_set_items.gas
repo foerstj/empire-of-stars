@@ -466,3 +466,150 @@
         set_item_requirement = 1;
     }
 }
+
+[ember_amulet_of_stars]
+{
+    [modifier*]
+    {
+        [enchantments]
+        {
+            [*]
+            {
+                is_set_item = true;
+                duration = #infinite;
+                is_permanent = true;
+                is_single_instance = false;
+
+                alteration = ALTER_SPECIAL_DEFENSE;
+                special_defense = fireshot;
+                value = 5 * (#itemsequipped);
+                special_defense_skrit = world\global\skrits\special_defense.skrit?damage_min=10&damage_max=15;
+                description = "+<ALTER_SPECIAL_DEFENSE>% Chance to Cast Fireshot on Taking Damage";
+            }
+            [*]
+            {
+                is_set_item = true;
+                duration = #infinite;
+                is_permanent = true;
+                is_single_instance = false;
+
+                alteration = ALTER_SPECIAL_DEFENSE;
+                special_defense = fire_spray;
+                value = 5 * (#itemsequipped);
+                special_defense_skrit = world\global\skrits\special_defense.skrit?damage_min=20&damage_max=25&effect_script="fire_spray";
+                description = "+<ALTER_SPECIAL_DEFENSE>% Chance to Cast Firespray on Taking Damage";
+            }
+        }
+		set_item_requirement = 1;
+    }
+}
+
+[eagle_bow_of_stars]
+{
+    [modifier*]
+    {
+        [enchantments]
+        {
+            [*]
+            {
+                is_set_item = true;
+                duration = #infinite;
+                is_permanent = true;
+                is_single_instance = false;
+
+                alteration = ALTER_RANGED_DAMAGE_MAX;
+                value = 5 * (#itemsequipped);
+                effect_script_hit	= bow_sparkglow_15_wh;
+                description = "Adds <ALTER_RANGED_DAMAGE_MAX> to Max Damage";
+            }
+            [*]
+            {
+                is_set_item = true;
+                duration = #infinite;
+                is_permanent = true;
+                is_single_instance = false;
+
+                alteration = ALTER_RANGED_RANGE;
+                value = 1 * (#itemsequipped);
+                effect_script_hit = dsx_modifier_sailing;
+                description = "Adds <ALTER_RANGED_RANGE> to Range";
+            }
+            [*]
+            {
+                is_set_item = true;
+                duration = #infinite;
+                is_permanent = true;
+                is_single_instance = false;
+
+                alteration = ALTER_PIERCING_DAMAGE_CHANCE_RANGED;
+                value = 5 * (#itemsequipped);
+                effect_script_hit	= bow_sparkglow_15_wh;
+                description = "+<ALTER_PIERCING_DAMAGE_CHANCE_RANGED>% Chance to Inflict a Piercing Hit";
+            }
+            [*]
+            {
+                is_set_item = true;
+                duration = #infinite;
+                is_permanent = true;
+                is_single_instance = false;
+
+                alteration = ALTER_LIFE_STEAL;
+                value = 5 * (#itemsequipped);
+                effect_script_equip	= steal_drip_05_lre;
+                effect_script_hit	= hit_spark_10_lre;
+                description = "<ALTER_LIFE_STEAL> Health Stolen Per Hit";
+            }
+        }
+		set_item_requirement = 1;
+    }
+}
+
+[unbridled_sword_of_stars]
+{
+    [modifier*]
+    {
+        [enchantments]
+        {
+            [*]
+            {
+                is_set_item = true;
+                duration = #infinite;
+                is_permanent = true;
+                is_single_instance = false;
+
+                alteration = ALTER_MELEE_DAMAGE_MAX;
+                value = 5 * (#itemsequipped);
+                effect_script_equip	= dam_haze_05_lbl;
+                effect_script_hit	= hit_spark_10_lbl;
+                description = "Adds <ALTER_MELEE_DAMAGE_MAX> to Max Damage";
+            }
+            [*]
+            {
+                is_set_item = true;
+                duration = #infinite;
+                is_permanent = true;
+                is_single_instance = false;
+
+                alteration = ALTER_PIERCING_DAMAGE_CHANCE_MELEE;
+                value = 5 * (#itemsequipped);
+                effect_script_equip	= dam_haze_05_lgr;
+                effect_script_hit	= hit_spark_10_lgr;
+                description = "+<ALTER_PIERCING_DAMAGE_CHANCE_MELEE>% Chance to Inflict a Piercing Hit";
+            }
+            [*]
+            {
+                is_set_item = true;
+                duration = #infinite;
+                is_permanent = true;
+                is_single_instance = false;
+
+                alteration = ALTER_LIFE_STEAL;
+                value = 5 * (#itemsequipped);
+                effect_script_equip	= steal_drip_05_lre;
+                effect_script_hit	= hit_spark_10_lre;
+                description = "<ALTER_LIFE_STEAL> Health Stolen Per Hit";
+            }
+        }
+		set_item_requirement = 1;
+    }
+}
