@@ -1,0 +1,516 @@
+// Droog archer with stats of ice archer
+[t:template,n:eos_rld_droog_archer_base]
+{
+	category_name = "1W_evil_a";
+	doc = "droog archer";
+	specializes = base_droog;
+
+	[actor]
+	{
+		[skills]
+		{
+			strength =  13, 0;
+			intelligence =  5, 0;
+			dexterity =  16, 0;
+            ranged =  6,  0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 261;
+		life = 243;
+        max_life = 243;
+        mana = 10;
+		max_mana = 10;
+
+		[textures] { 0=b_c_eam_dga; }
+        
+        scale_base = 0.9;  // smaller
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 51;
+		damage_min = 48;
+	}
+	[common] { screen_name="Droog Archer"; }
+	[defend] { defense=75; }
+	[guts_manager]
+	{
+		effect_name = melee_hit_2;
+	}
+	[inventory]
+	{
+		selected_active_location = IL_ACTIVE_RANGED_WEAPON;
+    	[pcontent]
+		{
+			[oneof*] { es_shield_hand = bw_un_droog_avg_eos; }
+
+            // drops from ice archer
+			[oneof*]
+			{
+				[oneof*]
+				{
+				   chance = 0.05;
+				   il_main = potion_health_small;
+				   il_main = potion_mana_small;
+				}
+				[all*]
+				{
+       				chance = 0.02;
+	                il_main = #spell/10-14;
+				}
+				[oneof*]
+				{
+					chance = 0.2;
+					il_main = #*/6-11;
+					il_main = #armor/18-91;
+	                il_main = #weapon/36-43;
+				}
+                [oneof*]
+				{
+	            	chance = 0.004;
+	                il_main = #weapon/-rare(1)/41-51;
+	                il_main = #armor/-rare(1)/110-143;
+                    il_main = #*/-rare(1)/41-51;
+                }
+				[oneof*]
+				{
+                	chance = 0.002;
+	                il_main = #weapon/-unique(2)/41-51;
+	                il_main = #armor/-unique(2)/110-143;
+                    il_main = #*/-unique(2)/41-51;
+	            }
+				[gold*]
+				{
+					chance = 0.15;
+					max = 398;
+					min = 266;
+				}
+			}
+		}
+	}
+	[mind]
+	{
+		actor_auto_switches_to_melee         = false;
+		actor_auto_switches_to_ranged        = true;
+		actor_auto_uses_stored_items		 = true;
+
+		actor_weapon_preference				 = WP_RANGED;
+
+		on_enemy_entered_icz_switch_to_melee = false;
+		inner_comfort_zone_range             = 2;
+		outer_comfort_zone_range             = 4.0;
+		melee_engage_range                   = 2;
+		ranged_engage_range                  = 13.5;
+		sight_range                          = 14.0;
+
+		jat_brain						= world\ai\jobs\common\brain_hero.skrit
+			?actor_joins_existing_party		= true
+			&actor_creates_own_party		= true
+			&party_template					= "party_droog";
+		jat_fidget						= world\ai\jobs\common\job_fidget.skrit
+			?social							= 0.45
+			&delay_min						= 7.0
+			&still							= false;
+	}
+}
+[t:template,n:eos_rld_droog_archer]
+{
+	category_name = "1W_evil_a";
+	doc = "droog archer";
+	specializes = eos_rld_droog_archer_base;
+
+	[guts_manager]
+	{
+		effect_name = melee_hit_2;
+	}
+}
+[t:template,n:eos_rld_droog_archer_reveal]
+{
+	category_name = "1W_evil_a";
+	doc = "droog archer reveal";
+	specializes = eos_rld_droog_archer_base;
+	[mind]
+	{
+		jat_startup = world\ai\jobs\common\job_startup_reveal.skrit
+			?invisible = true;
+		sight_origin_height = 1;
+		actor_auto_fidgets = false;
+	}
+	[common]
+	{
+		[template_triggers]
+		{
+			[*]
+			{
+				single_shot = true;
+				action* = call_sfx_script("droog_reveal");
+				condition* = receive_world_message("we_enemy_spotted");
+			}
+		}
+	}
+}
+
+// Droog grunt with stats of ice warrior
+[t:template,n:eos_rld_droog_grunt_base]
+{
+	category_name = "1W_evil_a";
+	doc = "droog grunt";
+	specializes = base_droog;
+
+	[actor]
+	{
+		[skills]
+		{
+			strength 	=  18, 0;
+			intelligence =  4, 0;
+			dexterity 	=  10, 0;
+            melee 		=  7,  0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 348;
+		life = 288;
+        max_life = 288;
+        mana = 8;
+		max_mana = 8;
+
+		[textures] { 0=b_c_eam_dgg; }
+        
+        scale_base = 0.9;  // smaller
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 33;
+		damage_min = 29;
+	}
+	[common] { screen_name="Droog Grunt"; }
+	[defend] { defense=98; }
+	[guts_manager]
+	{
+		effect_name = melee_hit_2;
+	}
+	[inventory]
+	{
+		[pcontent]
+		{
+			[all*]
+			{
+				[oneof*]
+				{
+    				es_weapon_hand = sd_un_droog_1h_avg_eos;
+				}
+			}
+
+            // drops from ice warrior
+			[oneof*]
+			{
+				[oneof*]
+				{
+				   chance = 0.05;
+				   il_main = potion_health_small;
+				   il_main = potion_mana_small;
+				}
+				[all*]
+				{
+       				chance = 0.02;
+	                il_main = #spell/10-14;
+				}
+				[oneof*]
+				{
+					chance = 0.2;
+					il_main = #*/6-11;
+					il_main = #armor/18-98;
+	                il_main = #weapon/36-44;
+				}
+				[oneof*]
+				{
+	            	chance = 0.004;
+	                il_main = #weapon/-rare(1)/42-59;
+	                il_main = #armor/-rare(1)/126-144;
+                    il_main = #*/-rare(1)/42-59;
+                }
+				[oneof*]
+				{
+                	chance = 0.002;
+	                il_main = #weapon/-unique(2)/42-59;
+	                il_main = #armor/-unique(2)/126-144;
+                    il_main = #*/-unique(2)/42-59;
+	            }
+				[gold*]
+				{
+					chance = 0.15;
+					max = 328;
+					min = 239;
+				}
+			}
+		}
+	}
+	[mind]
+	{
+		jat_brain							 = world\ai\jobs\common\brain_hero.skrit
+			?actor_joins_existing_party		 = true
+			&actor_creates_own_party		 = false
+			&party_template					 = "party_droog";
+	}
+}
+[t:template,n:eos_rld_droog_grunt]
+{
+	category_name = "1W_evil_a";
+	doc = "droog grunt";
+	specializes = eos_rld_droog_grunt_base;
+}
+[t:template,n:eos_rld_droog_grunt_reveal]
+{
+	category_name = "1W_evil_a";
+	doc = "droog grunt reveal";
+	specializes = eos_rld_droog_grunt_base;
+	[mind]
+	{
+		jat_startup = world\ai\jobs\common\job_startup_reveal.skrit
+			?invisible = true;
+		sight_origin_height = 1;
+		actor_auto_fidgets = false;
+	}
+
+	[common]
+	{
+		[template_triggers]
+		{
+			[*]
+			{
+				single_shot = true;
+				action* = call_sfx_script("droog_reveal");
+				condition* = receive_world_message("we_enemy_spotted");
+			}
+		}
+	}
+}
+
+// Droog grunt boss with stats of ice warrior boss
+[t:template,n:eos_rld_droog_grunt_boss_01]
+{
+	category_name = "1W_evil_a";
+	doc = "droog grunt boss 01";
+	specializes = eos_rld_droog_grunt_base;
+	[actor]
+	{
+		[skills]
+		{
+			strength 	=  18, 0;
+			intelligence =  5, 0;
+			dexterity 	=  11, 0;
+            melee 		=  13,  0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 550;
+		life = 327;
+        max_life = 327;
+        mana = 8;
+		max_mana = 8;
+
+		[textures] { 0=b_c_eam_dgg-02; }
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 33;
+		damage_min = 29;
+	}
+	[common]
+	{
+		screen_name="Droog Captain";
+		membership=monster,droog,immune_charm,immune_control,immune_freeze,immune_polymorph,immune_align_change,immune_explode;
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				single_shot = true;
+				no_trig_bits = true;
+				action* = call_sfx_script("unique_ray_yellow(sgx)");
+			}
+		}
+	}
+	[defend] { defense=202; }
+	[inventory]
+	{
+		[pcontent]
+		{
+			[all*]
+			{
+				[oneof*]
+				{
+    				es_weapon_hand = sd_un_droog_1h_avg_eos;
+				}
+			}
+
+            // drops from ice warrior boss
+			[all*]
+			{
+				[oneof*]
+				{
+					il_main = #armor,f/130-145;
+	                il_main = #weapon/44-48;
+				}
+				[oneof*]
+				{
+	            	chance = 0.004;
+	                il_main = #weapon/-rare(1)/51-59;
+	                il_main = #armor/-rare(1)/155-172;
+                    il_main = #*/-rare(1)/51-59;
+                }
+				[oneof*]
+				{
+                	chance = 0.002;
+	                il_main = #weapon/-unique(2)/51-59;
+	                il_main = #armor/-unique(2)/155-172;
+                    il_main = #*/-unique(2)/51-59;
+	            }
+				[gold*]
+				{
+					max = 484;
+					min = 241;
+					min_pile = 41;
+					piles = 2 - 4;
+				}
+			}
+		}
+    }
+    [mind]
+    {
+		jat_brain							 = world\ai\jobs\common\brain_hero.skrit
+			?actor_creates_own_party		 = true
+			&form_party_on_friend_entered_OCZ	= true
+			&form_party_on_friend_entered_ICZ	= true
+			&party_template					 = "party_droog";
+	}
+}
+
+// Droog mage with stats of ice mage
+[t:template,n:eos_rld_droog_mage_base]
+{
+	category_name = "1W_evil_a";
+	doc = "droog mage";
+	specializes = base_droog;
+
+	[actor]
+	{
+		[skills]
+		{
+			strength =  8, 0;
+			intelligence =  13, 0;
+			dexterity =  9, 0;
+			combat_magic =  8,  0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 261;
+		life = 100;
+		max_life = 100;
+		mana = 56;
+		max_mana = 56;
+
+		[textures] { 0=b_c_eam_dgm; }
+        
+        scale_base = 0.9;  // smaller
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 60;
+		damage_min = 55;
+	}
+	[common] { screen_name="Droog Mage"; }
+	[defend] { defense=74; }
+	[guts_manager]
+	{
+		effect_name = melee_hit_2;
+	}
+	[inventory]
+	{
+        selected_active_location = il_active_primary_spell;
+		[other]
+		{
+			il_active_primary_spell = spell_droog_starburst_eos;
+		}
+
+        // drops from ice mage
+		[pcontent]
+		{
+			[oneof*]
+			{
+				[oneof*]
+				{
+				   chance = 0.05;
+				   il_main = potion_health_small;
+				   il_main = potion_mana_small;
+				}
+				[all*]
+				{
+       				chance = 0.1;
+                    il_main = #cmagic/3-15;
+				}
+				[oneof*]
+				{
+					chance = 0.15;
+                    il_main = #*/36-44;
+                    il_main = #body,ro/70-88;
+				}
+
+			}
+		}
+	}
+    [mind]
+	{
+		jat_brain						 = world\ai\jobs\common\brain_hero.skrit
+			?actor_joins_existing_party		 = true
+			&actor_creates_own_party		 = true
+			&party_template					 = "party_droog";
+
+		actor_weapon_preference			= WP_MAGIC;
+		actor_auto_switches_to_magic	= true;
+		actor_auto_switches_to_karate	= false;
+		actor_auto_switches_to_melee	= false;
+//		actor_auto_heals_others_life	= true;
+
+	}
+}
+[t:template,n:eos_rld_droog_mage]
+{
+	category_name = "1W_evil_a";
+	doc = "droog mage";
+	specializes = eos_rld_droog_mage_base;
+}
+[t:template,n:eos_rld_droog_mage_reveal]
+{
+	category_name = "1W_evil_a";
+	doc = "droog mage reveal";
+	specializes = eos_rld_droog_mage_base;
+	[mind]
+	{
+		jat_startup = world\ai\jobs\common\job_startup_reveal.skrit
+			?invisible = true;
+		sight_origin_height = 1;
+		actor_auto_fidgets = false;
+	}
+
+	[common]
+	{
+		[template_triggers]
+		{
+			[*]
+			{
+				single_shot = true;
+				action* = call_sfx_script("droog_reveal");
+				condition* = receive_world_message("we_enemy_spotted");
+			}
+		}
+	}
+}

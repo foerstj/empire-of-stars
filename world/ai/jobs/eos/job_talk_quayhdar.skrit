@@ -1,0 +1,149 @@
+/*
+  ============================================================================
+  ----------------------------------------------------------------------------
+
+	File		: 	job_talk_quayhdar.skrit
+
+	Author(s)	: 	Anu Kirk (ripping off Chad Queen)
+
+	Purpose		: 	quayhdar (a1_r1) talk skrit
+
+	(C)opyright 2003 Mad Doc Software, LLC/Gas Powered Games, Inc.
+
+  ----------------------------------------------------------------------------
+  ============================================================================
+*/
+
+Go		m_Go$;
+GoMind	m_Mind$;
+GoBody  m_Body$;
+Job		m_Job$;
+Goid	m_Target$;
+
+#include "k_job_c_mcp_fidget_utils"
+#include "k_job_c_talk_utils"
+
+startup state STARTUP$
+{
+}
+
+////////////////////////////////////////////////////////////////////////////////
+//	init
+
+event OnJobInitPointers$( Job job$ )
+{
+	m_Job$		= job$;
+	m_Go$		= job$.Go;
+	m_Mind$		= job$.Go.Mind;
+	m_Body$		= job$.Go.Body;
+}
+
+
+event OnJobInit$( Job job$ )
+{
+	OnJobInitPointers$( job$ );
+
+	m_Target$	= job$.GoalObject;
+
+	SetState Talk$;  
+}
+
+
+////////////////////////////////////////////////////////////////////////////////
+//	face the audience
+state Face$
+{
+	transition
+	{
+		-> Talk$:	OnWorldMessage( WE_MCP_FACING_LOCKEDON );
+	}
+
+	event OnEnterState$
+	{		
+		if( !m_Go$.HasConversation )
+		{
+			report.errorf( "Actor '%s', scid:0x%08x was told to run job_talk but he doesn't have a conversation component.",
+							m_Go$.GetTemplateName,
+							m_Go$.Goid );
+			SetState Exiting$;
+		}
+		MCPManager.MakeRequest( m_Go$.Goid, PL_FACE, m_Target$ );	
+	}
+}
+
+
+////////////////////////////////////////////////////////////////////////////////
+//	blab blab away... pretend you're Lee
+state Talk$
+{
+	transition
+	{
+		-> Exiting$:	OnWorldMessage( WE_REQ_TALK_END ) =
+		{
+			if( m_Go$.Mind.ActorAutoFidgets )
+			{
+				StartFidgetIfRequired$();
+			}
+		}
+	}
+	
+	trigger OnWorldMessage$( WE_ANIM_DONE )
+	{
+		TryAnim$('talk');
+	}
+
+	event OnEnterState$
+	{
+		// have they saved the city yet?
+		if ( Victory.IsQuestCompleted( "rigel_townsafety" , m_Target$) )
+		{
+			// yes - have they seen therg yet?
+			if ( Victory.IsQuestCompleted( "a1_staff" , m_Target$) 
+					|| Victory.GetQuestOrder( "a1_staff", m_Target$) > 10 )
+			{
+				// yup - just say done with therg stuff
+				 m_Go$.GetConversation.RSSelectConversation( "quayhdar_after_therg" );
+				 TryAnim$('talk');
+			}
+			else if ( Victory.GetQuestOrder( "a1_staff", m_Target$ ) >= 5 )
+			{
+				// i already told them to see therg
+				 m_Go$.GetConversation.RSSelectConversation( "quayhdar_after_a1_staff_update" );
+				 TryAnim$('talk');
+			}		
+			else
+			{
+				m_Go$.GetConversation.RSSelectConversation( "quayhdar_after_a2_citysafety" );
+				TryAnim$('talk');
+			}
+		}
+		else if ( Victory.IsQuestActive( "rigel_townsafety", m_Target$ ) )
+		{
+			// they have the quest but haven't completed it
+			m_Go$.GetConversation.RSSelectConversation( "quayhdar_during_a2_citysafety" );
+			TryAnim$('talk');
+		}
+		else
+		{
+			// they don't have the quest yet
+			m_Go$.GetConversation.RSSelectConversation( "quayhdar_hello" );
+			TryAnim$('talk');
+		}
+		
+		
+		m_Go$.GetConversation.RSActivateDialogue();
+	}
+}
+
+
+////////////////////////////////////////////////////////////////////////////////
+//	finish blabbing
+state Exiting$
+{
+	event OnEnterState$
+	{
+		m_Job$.MarkForDeletion();
+	}
+}
+
+

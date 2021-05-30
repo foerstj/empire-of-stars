@@ -1,0 +1,116 @@
+[t:template,n:eos_rld_shop_shields]
+{
+    category_name = "1W_shopkeep";
+	doc = "shaman, quillrabe (MP)";
+	specializes = base_npc_dg;
+	[actor] { portrait_icon = b_gui_ig_i_ic_c_no; }
+	[aspect]
+	{
+		[textures] { 0=b_c_eam_dg-04; }
+		is_ghost_usable = true;
+		use_range = 1.0;
+        scale_base = 1.1;
+	}
+	[conversation] { }
+	[inventory]
+	{
+		[store_pcontent]
+		{
+			full_ratio = 0.8;
+            // shields from verma
+			[shields]
+			{
+				[all*]
+				{
+					il_main = #shield/12-121;
+					max = 5;
+					min = 5;
+				}
+				[all*]
+				{
+					il_main = #shield/122-185;
+					max = 6;
+					min = 6;
+				}
+				[all*]
+				{
+					il_main = #shield/186-222;
+					max = 4;
+					min = 4;
+				}
+			}
+			[misc]
+			{
+                // basics
+				[all*]
+				{
+					il_main = book_glb_magic_01;
+					max = 3;
+					min = 3;
+				}
+                [all*]
+                {
+                    il_main = DSX_backpack_empty;
+                    max = 3;
+                    min = 2;
+                }
+                
+                // baubles
+				[all*]
+				{
+					il_main = #ring/1-15;
+					max = 7;
+					min = 3;
+				}
+				[all*]
+				{
+					il_main = #ring/16-30;
+					max = 7;
+					min = 3;
+				}
+				[all*]
+				{
+					il_main = #amulet/1-15;
+					max = 7;
+					min = 3;
+				}
+				[all*]
+				{
+					il_main = #amulet/16-30;
+					max = 7;
+					min = 3;
+				}
+			}
+		}
+	}
+	[mind]
+	{
+		jat_talk = world\ai\jobs\common\job_talk.skrit;
+	}
+	[respawn_shrine]
+	{
+	}
+	[store]
+	{
+		item_markup = 2;
+
+		[item_restock]
+		{
+            // dreven without large potions
+			potion_health_small = 5;
+			potion_health_medium = 10;
+			potion_mana_small = 5;
+			potion_mana_medium = 10;
+			potion_rejuvenation_small = 2;
+			potion_rejuvenation_medium = 2;
+
+			scroll_resurrect = 10;
+            spell_resurrect = 10;
+            spell_revive = 10;
+            spell_healing_hands = 10;
+
+            spell_fireshot = 4;
+            spell_zap = 4;
+		}
+	}
+}

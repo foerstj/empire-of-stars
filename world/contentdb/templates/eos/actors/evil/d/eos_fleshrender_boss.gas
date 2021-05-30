@@ -1,0 +1,65 @@
+[t:template,n:eos_fleshrender_boss]
+{
+    // Balanced to level 13, medium melee
+    // ...and then upped a bit
+	category_name = "1W_evil_d";
+	doc = "eos_fleshrender_boss";
+	specializes = dsx_fleshrender_base;
+
+	[actor]
+	{
+		[skills]
+		{
+			strength     = 13, 0;
+			intelligence = 8, 0;
+			dexterity    = 9, 0;
+			melee        = 10, 0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 300;  // 258+42
+		life             = 300;  // 258+42
+		max_life         = 300;  // 258+42
+		mana             = 45;
+		max_mana         = 45;
+
+		material = flesh;
+		draw_shadow = false;
+		[voice]
+		{
+			[die] 			{ priority = high;	* = s_e_call_wraith_SED;			}
+			[enemy_spotted] { priority = high;	* = s_e_call_zombie_ground_SED;	}
+			[hit_critical]	{ priority = low;	* = s_e_hit_dead_SED;			}
+			[hit_glance]	{ priority = low;	* = s_e_hit_dead_SED;			}
+			[hit_solid]		{ priority = low;	* = s_e_hit_dead_SED;			}
+		}
+
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 80;  // 68+12
+		damage_min = 60;  // 50+10
+	}
+
+	[common]
+    {
+        screen_name = "Fleshrender";
+        
+        // boss-ified
+		membership=monster,immune_charm,immune_control,immune_freeze,immune_polymorph,immune_align_change,immune_explode;
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				single_shot = true;
+				no_trig_bits = true;
+				action* = call_sfx_script("unique_ray_red(sgx)");
+			}
+		}
+    }
+
+	[defend] { defense = 100; }
+}

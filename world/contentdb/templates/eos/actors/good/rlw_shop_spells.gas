@@ -1,0 +1,97 @@
+[t:template,n:eos_rlw_shop_spells]
+{
+    category_name = "1W_shopkeep";
+	doc = "craftsman, quillrabe (MP)";
+	specializes = base_npc_dg;
+	[actor] { portrait_icon = b_gui_ig_i_ic_c_orellean-eos; }
+	[aspect]
+	{
+		use_range = 1.0;
+		is_ghost_usable = TRUE;
+		[textures] { 0=b_c_eam_dg-05-eos; }
+        scale_base = 0.9;
+	}
+	[conversation] { }
+	[inventory]
+	{
+		[store_pcontent]
+		{
+			full_ratio = 0;
+            
+            // spells from Verma increased
+			[magic]
+			{
+				[all*]
+				{
+					il_main = #spell/25-34;
+					max = 20;
+					min = 15;
+				}
+				[all*]
+				{
+					il_main = #spell/15-24;
+					max = 20;
+					min = 15;
+				}
+				[all*]
+				{
+					il_main = #spell/0-14;
+					max = 10;
+					min = 5;
+				}
+			}
+
+            // spellbooks from Lhuk Torath (Demlock's Cut LoA)
+			[misc]
+			{
+                [all*]
+                {
+                    il_main = #spellbook/30-45;
+                    max = 6;
+                    min = 2;
+                }
+                [all*]
+                {
+                    il_main = #spellbook/36-49;
+                    max = 10;
+                    min = 6;
+                }
+                [all*]
+                {
+                    il_main = #spellbook/39-52;
+                    max = 5;
+                    min = 2;
+                }
+				[all*]
+				{
+					il_main = book_glb_magic_01;
+					max = 3;
+					min = 3;
+				}
+			}
+		}
+	}
+	[mind]
+	{
+		jat_talk = world\ai\jobs\common\job_talk.skrit;
+	}
+    [respawn_shrine]
+	{
+	}
+	[store]
+	{
+		item_markup = 2;
+        
+        // spells from Verma
+		[item_restock]
+		{
+			scroll_resurrect = 2;
+            spell_resurrect = 2;
+            spell_revive = 2;
+            spell_healing_hands = 2;
+
+            spell_fireshot = 2;
+            spell_zap = 2;
+		}
+	}
+}
