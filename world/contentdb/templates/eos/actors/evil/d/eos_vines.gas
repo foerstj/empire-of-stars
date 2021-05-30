@@ -1,0 +1,146 @@
+// Vines with stats of Octodrak
+[t:template,n:eos_vines_killer]
+{
+    category_name = "1W_evil_d";
+    doc = "eos vines_killer";
+    specializes = actor_evil;
+    [actor]
+    {
+        [skills]
+        {
+            strength =  15, 0;
+            intelligence =  8, 0;
+            dexterity =  11, 0;
+            melee =  13,  0;
+        }
+    }
+    [aspect]
+    {
+        experience_value = 623;
+        life = 369;
+        max_life = 369;
+        mana = 92;
+        max_mana = 92;
+
+        draw_shadow = false;
+        model = m_c_edm_ug_pos_1;
+        textures:0 = b_c_edm_vines;
+        [voice]
+        {
+            [attack]		{ priority = always;	* = s_e_attack_whip;	}
+            [die]			{ priority = high;	* = s_e_die_vines;		}
+            [enemy_spotted]	{ priority = high; * = s_e_ground_burst_SED;}
+        }
+        
+        scale_base = 2;  // doubled
+    }
+    [attack]
+    {
+        attack_range = 6;  // doubled
+        damage_max = 70;
+        damage_min = 64;
+    }
+	
+	  [common]
+	    {
+	      screen_name = "Killer Vines"; //--
+	      membership = monster; //--
+	    }
+	  [defend] { defense = 148; }
+	
+	[body]
+	{
+		avg_move_velocity = 0;
+		[bone_translator]
+		{
+			body_anterior = bone20;
+			body_mid = bone13;
+			body_posterior = bone04;
+			kill_bone = bone09;
+			shield_bone = bone01;
+		}
+		[chore_dictionary]
+		{
+			initial_chore = chore_none;
+			chore_prefix = a_c_edm_ug_fs;
+			[chore_attack]
+			{
+				chore_stances = 0;
+				skrit = select_attack;
+				[anim_files]
+				{
+					00 = at;
+					01 = at-02;
+				}
+			}
+			[chore_default]
+			{
+				chore_stances = 0;
+				skrit = infinite_loop;
+				[anim_files] { 00=ds; }
+			}
+			[chore_misc]
+			{
+				chore_stances = 0;
+				skrit = select_transition;
+				[anim_files]
+				{
+					slep = ds;
+					wake = rv;
+				}
+			}
+			[chore_die]
+			{
+				chore_stances = 0;
+				skrit = select_transition;
+				[anim_files] { 00=di; }
+			}
+			[chore_fidget]
+			{
+				chore_stances = 0;
+				skrit = select_fidget;
+				[anim_files] { 00=dff; }
+			}
+			[chore_walk]
+			{
+				chore_stances = 0;
+				skrit = select_walk;
+				[anim_files] { 00=dfs; }
+			}
+		}
+	}
+	[mind]
+	{
+		jat_brain				= world\ai\jobs\common\brain_hero.skrit
+		?actor_joins_existing_party		= false
+		&actor_creates_own_party		= false;
+		
+		jat_die 					= world\ai\jobs\actors\evil\job_die_delete.skrit;
+		jat_startup 							= world\ai\jobs\common\job_startup_reveal.skrit
+			?invisible 							= true;
+		
+		jat_flee_from_object		= jat_none;
+		jat_guard         			= jat_none;
+		jat_move          			= jat_none;
+		jat_patrol         			= jat_none;
+
+		actor_auto_fidgets 			= false;
+		movement_orders 			= mo_hold;
+		personal_space_range 		= 0.7;
+		on_enemy_entered_ocz_attack = true;
+		sight_origin_height			= 2.5;
+		
+		actor_weapon_preference		= WP_MELEE;
+		actor_auto_switches_to_magic	= false;
+		actor_auto_switches_to_karate	= false;
+		actor_auto_switches_to_melee	= true;
+		
+        // doubled
+		melee_engage_range 			= 6;
+		ranged_engage_range 		= 6.0;
+		sight_range 				= 6.0;
+		inner_comfort_zone_range 	= 6.0;
+		outer_comfort_zone_range 	= 6.0;
+		com_range				 	= 6.0;
+	}
+}
