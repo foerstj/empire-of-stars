@@ -76,14 +76,6 @@
 	  p position = 3.42072,0,1.55756,0x5af0e9f1;
 	}
 }
-[t:crate_dsx_a4_r1-03,n:0x00c0044b]
-{
-	[placement]
-	{
-	  q orientation = 0,0.819152,0,0.573577;
-	  p position = -0.496429,0,-1.47325,0x5ecc3cca;
-	}
-}
 [t:crate_dsx_a4_r4-02,n:0x00c0044a]
 {
 	[aspect]
@@ -94,6 +86,14 @@
 	{
 	  q orientation = 0,-0.833886,0,0.551937;
 	  p position = -1.1759,0,1.44328,0x5ecc3cca;
+	}
+}
+[t:crate_dsx_a4_r1-03,n:0x00c0044b]
+{
+	[placement]
+	{
+	  q orientation = 0,0.819152,0,0.573577;
+	  p position = -0.496429,0,-1.47325,0x5ecc3cca;
 	}
 }
 [t:crate_dsx_a4_r1-03,n:0x00c0044c]
@@ -153,15 +153,16 @@
 }
 [t:sarcophagus_csl_03,n:0x00c00ac0]
 {
-	[aspect]
-	{
-	  b dynamically_lit = false;
-	  b is_invincible = true;
-	  b is_selectable = false;
-	}
 	[common]
 	{
-		dev_instance_text = "LOST WITCH CASKET NOT OPENABLE";
+		dev_instance_text = "LOST WITCH CASKET";
+	}
+	[inventory]
+	{
+		[other]
+		{
+			il_main = bw_g_c_eos_cry_set;
+		}
 	}
 	[placement]
 	{

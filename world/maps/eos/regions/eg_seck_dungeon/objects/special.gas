@@ -136,6 +136,34 @@
 	  p position = -4.53676,-1.5,-0.702333,0x766a06c3;
 	}
 }
+[t:trigger_generic,n:0x02d0001e]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = change_quest_state("rigel_pyramid","completed",0);
+			  b can_self_destruct = true;
+				condition* = party_member_within_bounding_box(10.000000,0.500000,10.000000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  p position = 0.92931,0,-0.030943,0xd520e487;
+	}
+}
 [t:use_point,n:0x02d00128]
 {
 	[placement]
@@ -247,6 +275,35 @@
 	{
 	  q orientation = 0,0.707107,0,-0.707107;
 	  p position = -3.33393,0,0.240129,0xc7e649c7;
+	}
+}
+[t:trigger_generic,n:0x02d0001f]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = change_quest_state("rigel_pyramid","active",0);
+			  b can_self_destruct = true;
+				condition* = party_member_within_bounding_box(30.000000,0.500000,30.000000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,5.96046e-008,0,1;
+	  p position = 5.26734,-2,2.31687,0x1ea066f6;
 	}
 }
 [t:use_point,n:0x02d00175]
@@ -639,62 +696,5 @@
 	[placement]
 	{
 	  p position = 0.0326023,-3.1,-0.859882,0x723d00c1;
-	}
-}
-[t:trigger_generic,n:0x02d0001e]
-{
-	[common]
-	{
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = change_quest_state("rigel_pyramid","completed",0);
-			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(10.000000,0.500000,10.000000,"on_every_enter");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  p position = 0.92931,0,-0.030943,0xd520e487;
-	}
-}
-[t:trigger_generic,n:0x02d0001f]
-{
-	[common]
-	{
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = change_quest_state("rigel_pyramid","active",0);
-			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(30.000000,0.500000,30.000000,"on_every_enter");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  q orientation = 0,5.96046e-008,0,1;
-	  p position = 5.26734,-2,2.31687,0x1ea066f6;
 	}
 }
