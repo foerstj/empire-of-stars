@@ -18,12 +18,12 @@
 		{
 			full_ratio = 0;
             
-            // spells from Verma increased
+            // spells from Verma, balanced
 			[magic]
 			{
 				[all*]
 				{
-					il_main = #spell/25-34;
+					il_main = #spell/0-14;
 					max = 20;
 					min = 15;
 				}
@@ -35,9 +35,9 @@
 				}
 				[all*]
 				{
-					il_main = #spell/0-14;
-					max = 10;
-					min = 5;
+					il_main = #spell/25-34;
+					max = 20;
+					min = 15;
 				}
 			}
 
@@ -92,6 +92,15 @@
 
             spell_fireshot = 2;
             spell_zap = 2;
+
+            // added these myself
+            spell_battle_healing = 2;
+            spell_healing_wind = 2;
+            spell_major_heal = 1;
+            scroll_major_heal = 2;
+            spell_regeneration = 2;
+            spell_summon_dsx_zepheryl = 2;
+            spell_group_haste = 1;
 		}
 	}
 }
