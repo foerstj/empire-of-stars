@@ -7,6 +7,33 @@ Goid	m_Target$;
 #include "k_job_c_mcp_fidget_utils"
 #include "k_job_c_talk_utils"
 
+bool give_stone$( goid target$ )
+{
+	// see if the person we are tying to reward alread has the object in their inventory.
+	Go item$ = m_Target$.Go.Inventory.GetItemFromTemplate( "starstone_rigel" );
+	if( item$ == null )
+	{
+		SiegePos SpawnPos$;
+		GoCloneReq cloneReq$ = MakeGoCloneReq( "starstone_rigel" );
+		
+		SpawnPos$ = target$.go.placement.position;
+		cloneReq$.StartingPos	= SpawnPos$;
+	    
+		if( target$.Go.Hasmind )
+		{
+			if( AIQuery.FindSpotRelativeToSource( target$.Go, .25, .5, 2.0, target$.Go.Mind.TempPos1 ) )
+	   		{
+	   			cloneReq$.StartingPos = target$.Go.Mind.TempPos1;
+	   		}
+	   	}	
+		cloneReq$.SnapToTerrain = true;
+	    GoDb.SCloneGo( cloneReq$ );
+	    
+	    return true;
+	}
+	return false; 
+}
+
 startup state STARTUP$
 {
 }
@@ -56,13 +83,27 @@ state Talk$
 	{
 		#only( game )
 		[[
-            if (!GameAuditor.GetDb.GetBool( "quest_bg_starstone_given" ))
+            if (!GameAuditor.GetDb.GetBool( "quest_bg_starstone_b_given" ))
             {
                 m_Go$.GetConversation.RSSelectConversation("quest_a_pre");
             }
             else
             {
-                m_Go$.GetConversation.RSSelectConversation("quest_a_post");
+                if (!GameAuditor.GetDb.GetBool( "quest_bg_starstone_a_given" ))
+                {
+                    m_Go$.GetConversation.RSSelectConversation("quest_a");
+
+                    GameAuditor.GetDb.SetBool( "quest_bg_starstone_a_given", true );
+                    // give starstone
+                    if( m_Target$.IsValid() ) 
+                    {	
+                        give_stone$( m_Target$ );
+                    }
+                }
+                else
+                {
+                    m_Go$.GetConversation.RSSelectConversation("quest_a_post");
+                }
             }
 		]]		
 

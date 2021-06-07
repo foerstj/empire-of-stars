@@ -117,16 +117,19 @@ Sorry, we need the other pack animals ourselves.";
 	  f scroll_rate = 10.000000;
 	}
 }
-[quest_a_post]
+[quest_a]
 {
 	[text*]
 	{
 		choice = more;
 		complete_quest* = betelgeuse_wiseoldman;
 	  i order = 0;
-		screen_text = "You did it!";
+		screen_text = "The Elder gave me this stone, long ago, to guard it. I just received a telepathic vision from him telling me to give it to you. The Elder is wise; and I can sense that it will be in good hands.";
 	  f scroll_rate = 10.000000;
 	}
+}
+[quest_a_post]
+{
 	[text*]
 	{
 		screen_text = "I pray for your safe and happy return home.

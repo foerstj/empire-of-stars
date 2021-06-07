@@ -83,11 +83,11 @@ state Talk$
 	{
 		#only( game )
 		[[
-            if (!GameAuditor.GetDb.GetBool( "quest_bg_starstone_given" ))
+            if (!GameAuditor.GetDb.GetBool( "quest_bg_starstone_b_given" ))
             {
                 m_Go$.GetConversation.RSSelectConversation("quest_b");
 
-				GameAuditor.GetDb.SetBool( "quest_bg_starstone_given", true );
+				GameAuditor.GetDb.SetBool( "quest_bg_starstone_b_given", true );
                 // give starstone
                 if( m_Target$.IsValid() ) 
                 {	
