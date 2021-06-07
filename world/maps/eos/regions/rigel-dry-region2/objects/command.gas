@@ -8,7 +8,7 @@
 			{
 				action* = send_world_message("we_req_activate",0x0D201AE6,0f,"default","every",0);
 			  b can_self_destruct = true;
-				condition* = party_member_within_sphere(10.000000,"on_every_enter");
+				condition* = party_member_within_sphere(10.000000,"on_first_enter");
 			  f delay = 0.000000;
 			  b flip_flop = false;
 			  b multi_player = true;
