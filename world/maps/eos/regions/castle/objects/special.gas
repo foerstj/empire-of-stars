@@ -2178,64 +2178,6 @@
 	  p position = 0.823288,0.15,-0.932308,0x5ff418cf;
 	}
 }
-[t:trigger_change_mood_box,n:0x070005f9]
-{
-	[common]
-	{
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = mood_change("eos_aldebaran_palace_3");
-			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(0.500000,1.000000,10.000000,"on_every_enter");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  q orientation = 0,-0.382683,0,0.92388;
-	  p position = -1.1658,0,3.23909,0xbc95b3bd;
-	}
-}
-[t:trigger_change_mood_box,n:0x070005fa]
-{
-	[common]
-	{
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = mood_change("eos_aldebaran_palace_4");
-			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(0.500000,1.000000,10.000000,"on_every_enter");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  q orientation = 0,-0.382683,0,0.92388;
-	  p position = -3.01035,0,1.42731,0xbc95b3bd;
-	}
-}
 [t:use_point,n:0x07000659]
 {
 	[placement]
@@ -2759,35 +2701,6 @@
 	  p position = -0.149945,-3.5,3.96568,0x455fd49f;
 	}
 }
-[t:trigger_change_mood_box,n:0x070006fa]
-{
-	[common]
-	{
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = mood_change("eos_aldebaran_palace_2");
-			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(0.500000,1.000000,2.000000,"on_every_enter");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  q orientation = 0,5.96046e-008,0,1;
-	  p position = 2.41521,-3.5,0.0413742,0x455fd49f;
-	}
-}
 [t:trigger_fade_nodes_box,n:0x070006fc]
 {
 	[common]
@@ -2817,93 +2730,6 @@
 	{
 	  q orientation = 0,2.68221e-007,0,-1;
 	  p position = 0.0516405,-3.5,1.16398,0x455fd49f;
-	}
-}
-[t:trigger_change_mood_box,n:0x070006fd]
-{
-	[common]
-	{
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = mood_change("eos_aldebaran_palace_2");
-			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(0.500000,1.000000,2.000000,"on_every_enter");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  q orientation = 0,1,0,-2.08616e-007;
-	  p position = -2.37418,-3.5,0.0858383,0x455fd49f;
-	}
-}
-[t:trigger_change_mood_box,n:0x07000701]
-{
-	[common]
-	{
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = mood_change("eos_aldebaran_palace_2");
-			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(0.500000,1.000000,2.000000,"on_every_enter");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  q orientation = 0,0.707107,0,0.707107;
-	  p position = 0.038805,-3.5,-0.964462,0x455fd49f;
-	}
-}
-[t:trigger_change_mood_box,n:0x07000702]
-{
-	[common]
-	{
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = mood_change("eos_aldebaran_palace_4");
-			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(0.500000,1.000000,2.000000,"on_every_enter");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  q orientation = 0,0.707107,0,0.707107;
-	  p position = 0.0262856,-3.5,0.997536,0x455fd49f;
 	}
 }
 [t:use_point,n:0x0700068e]
@@ -3180,64 +3006,6 @@
 	  p position = -0.0210533,-3.5,1.77928,0x0fa7987f;
 	}
 }
-[t:trigger_change_mood_box,n:0x0700053f]
-{
-	[common]
-	{
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = mood_change("eos_aldebaran_palace_2");
-			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(0.500000,1.000000,2.000000,"on_every_enter");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  q orientation = 0,-0.707107,0,0.707107;
-	  p position = 0.0827217,-3.5,-0.726562,0x0fa7987f;
-	}
-}
-[t:trigger_change_mood_box,n:0x07000540]
-{
-	[common]
-	{
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = mood_change("eos_aldebaran_palace_3");
-			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(0.500000,1.000000,2.000000,"on_every_enter");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  q orientation = 0,-0.707107,0,0.707107;
-	  p position = 0.0997123,-3.5,1.08136,0x0fa7987f;
-	}
-}
 [t:trigger_generic,n:0x07000834]
 {
 	[common]
@@ -3384,7 +3152,7 @@
 	[placement]
 	{
 	  q orientation = 0,1,0,2.79998e-006;
-	  p position = -0.203992,-3.5,0.121674,0x53b22c24;
+	  p position = 0.160457,-3.5,0.1315,0x53b22c24;
 	}
 }
 [t:use_point,n:0x07000527]
@@ -3400,64 +3168,6 @@
 	[placement]
 	{
 	  p position = 0.0408908,-3.5,-1.7838,0x53b22c24;
-	}
-}
-[t:trigger_change_mood_box,n:0x0700053d]
-{
-	[common]
-	{
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = mood_change("eos_aldebaran_palace_4");
-			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(0.500000,1.000000,2.000000,"on_every_enter");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  q orientation = 0,-0.707106,0,0.707107;
-	  p position = -0.121833,-3.5,0.133179,0x53b22c24;
-	}
-}
-[t:trigger_change_mood_box,n:0x0700053e]
-{
-	[common]
-	{
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = mood_change("eos_aldebaran_palace_2");
-			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(0.500000,1.000000,2.000000,"on_every_enter");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  q orientation = 0,-0.707106,0,0.707107;
-	  p position = 0.0485984,-3.5,1.52335,0x53b22c24;
 	}
 }
 [t:trigger_generic,n:0x07000878]
@@ -3619,122 +3329,6 @@
 	[placement]
 	{
 	  p position = 0.0587659,-3.5,3.69933,0x6171a070;
-	}
-}
-[t:trigger_change_mood_box,n:0x070006fb]
-{
-	[common]
-	{
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = mood_change("eos_aldebaran_palace_2");
-			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(0.500000,1.000000,2.000000,"on_every_enter");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  q orientation = 0,-1,0,7.45058e-008;
-	  p position = 2.39149,-3.5,0.539986,0x6171a070;
-	}
-}
-[t:trigger_change_mood_box,n:0x07000703]
-{
-	[common]
-	{
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = mood_change("eos_aldebaran_palace_4");
-			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(0.500000,1.000000,2.000000,"on_every_enter");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  q orientation = 0,-0.707107,0,0.707107;
-	  p position = -0.0234561,-3.5,1.04886,0x6171a070;
-	}
-}
-[t:trigger_change_mood_box,n:0x07000704]
-{
-	[common]
-	{
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = mood_change("eos_aldebaran_palace_2");
-			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(0.500000,1.000000,2.000000,"on_every_enter");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  q orientation = 0,2.98023e-007,0,1;
-	  p position = -2.34697,-3.5,0.734772,0x6171a070;
-	}
-}
-[t:trigger_change_mood_box,n:0x07000705]
-{
-	[common]
-	{
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = mood_change("eos_aldebaran_palace_2");
-			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(0.500000,1.000000,2.000000,"on_every_enter");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  q orientation = 0,-0.707107,0,0.707107;
-	  p position = 0.0430462,-3.5,-0.777244,0x6171a070;
 	}
 }
 [t:trigger_generic,n:0x0700086f]
