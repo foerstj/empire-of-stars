@@ -162,8 +162,10 @@
 			[*]
 			{
 				action* = send_world_message("we_req_activate",0x07F00052,0f,"default","",0);
+				action* = send_world_message("we_req_activate",0x072005F0,0f,"default","every",0);
 			  b can_self_destruct = true;
 				condition* = receive_world_message("we_req_activate",0,"on_every_message");
+				condition* = has_go_in_inventory("local",0x00000000,"starstone_aldebaran");
 			  f delay = 0.000000;
 			  b flip_flop = false;
 			  b multi_player = true;

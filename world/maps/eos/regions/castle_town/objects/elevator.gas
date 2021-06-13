@@ -64,7 +64,8 @@
 	  i connect_door_location2_level1 = 4;
 	  i connect_door_location2_level2 = 2;
 	  x connect_node_location1 = 0xA931D4E9;
-	  x connect_node_location2 = 0xD14939A3;
+	  x connect_node_location2 = 0xD14939A4;
+		down_effect = "eos_hub_plate_down";
 	  f duration_location1_moving_to_lv1 = 16;
 	  f duration_location2_moving_to_lv1 = 16;
 	  i e2_connect_door_location1_level1 = 10;
@@ -75,18 +76,19 @@
 	  i e2_elevator_door_location1_level2 = 2;
 	  i e2_elevator_door_location2_level1 = 2;
 	  i e2_elevator_door_location2_level2 = 2;
-	  x e2_elevator_node = 0xEACF22F6;
+	  x e2_elevator_node = 0xEACF22F7;
 	  x elevator_node = 0xE922CC15;
-		location1_moving_to_lv1_actioninfo = "multiplayer_world_castle_town_teleport";
+		location1_moving_to_lv1_actioninfo = "eos_aldebaran_teleport";
 		location1_moving_to_lv2_actioninfo = "multiplayer_world_teleport";
 		location2_moving_to_lv1_actioninfo = "multiplayer_world_new_hub_teleport";
 		location2_moving_to_lv2_actioninfo = "multiplayer_world_teleport";
 		material = "hub";
 	  x other_elevator = 0x07F00052;
+		up_effect = "eos_hub_plate_up";
 	}
 	[placement]
 	{
-	  q orientation = 0,1,0,0;
-	  p position = 0,5,0,0xe922cc15;
+	  q orientation = 0,1,0,-2.98023e-008;
+	  p position = -0.0454712,0.1,-0.0198059,0xe922cc15;
 	}
 }

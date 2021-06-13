@@ -643,17 +643,19 @@
 	  p position = -1.63791,0,-1.82638,0x0751626a;
 	}
 }
-[t:trigger_generic,n:0x0720066d]
+[t:trigger_generic,n:0x0720001c]
 {
 	[common]
 	{
+		dev_instance_text = "ELEVATORS";
 		[instance_triggers]
 		{
 			[*]
 			{
-				action* = set_player_world_location("hiroth");
+				action* = send_world_message("we_req_activate",0x072005F0,0f,"default","every",0);
+				action* = send_world_message("we_req_activate",0x07F00052,0f,"default","every",0);
 			  b can_self_destruct = true;
-				condition* = party_member_within_sphere(6.000000,"on_every_enter");
+				condition* = receive_world_message("we_req_activate",0,"on_every_message");
 			  f delay = 0.000000;
 			  b flip_flop = false;
 			  b multi_player = true;
@@ -669,7 +671,150 @@
 	[placement]
 	{
 	  q orientation = 0,1,0,0;
-	  p position = 20.1074,0.4,-5.95645,0xa931d4e9;
+	  p position = 0.402435,0,-1.95903,0x4d9807f0;
+	}
+}
+[t:trigger_generic,n:0x0720006a]
+{
+	[common]
+	{
+		dev_instance_text = "STARSTONES CHECK";
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_activate",0x0720001C,0f,"default","every",0);
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_req_activate",0,"on_every_message");
+				condition* = has_go_in_inventory("local",0x00000000,"starstone_aranna");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+			[*]
+			{
+				action* = send_world_message("we_req_activate",0x0720001C,0f,"default","every",0);
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_req_activate",0,"on_every_message");
+				condition* = has_go_in_inventory("local",0x00000000,"starstone_alphacentauri");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+			[*]
+			{
+				action* = send_world_message("we_req_activate",0x0720001C,0f,"default","every",0);
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_req_activate",0,"on_every_message");
+				condition* = has_go_in_inventory("local",0x00000000,"starstone_vega");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+			[*]
+			{
+				action* = send_world_message("we_req_activate",0x0720001C,0f,"default","every",0);
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_req_activate",0,"on_every_message");
+				condition* = has_go_in_inventory("local",0x00000000,"starstone_betelgeuse");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+			[*]
+			{
+				action* = send_world_message("we_req_activate",0x0720001C,0f,"default","every",0);
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_req_activate",0,"on_every_message");
+				condition* = has_go_in_inventory("local",0x00000000,"starstone_altair");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+			[*]
+			{
+				action* = send_world_message("we_req_activate",0x0720001C,0f,"default","every",0);
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_req_activate",0,"on_every_message");
+				condition* = has_go_in_inventory("local",0x00000000,"starstone_rigel");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+			[*]
+			{
+				action* = send_world_message("we_req_activate",0x0720001C,0f,"default","every",0);
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_req_activate",0,"on_every_message");
+				condition* = has_go_in_inventory("local",0x00000000,"starstone_aldebaran");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+			[*]
+			{
+				action* = send_world_message("we_req_activate",0x0720001C,0f,"default","every",0);
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_req_activate",0,"on_every_message");
+				condition* = has_go_in_inventory("local",0x00000000,"starstone_sirius");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,1,0,0;
+	  p position = -0.6371,0,-1.9554,0x4d9807f0;
 	}
 }
 [t:trigger_change_mood_box,n:0x07200465]
@@ -1433,6 +1578,36 @@
 	  p position = 1.8908,-9.53674e-007,1.18761,0xa2859afc;
 	}
 }
+[t:trigger_change_mood_box,n:0x072006d9]
+{
+	[common]
+	{
+		dev_instance_text = "PLAYER LOCATION";
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = set_player_world_location("hiroth");
+			  b can_self_destruct = true;
+				condition* = party_member_within_bounding_box(0.500000,2.000000,20.000000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.382683,0,0.92388;
+	  p position = -2.40125,-0.150048,1.37488,0xffb78392;
+	}
+}
 [t:trigger_change_mood_box,n:0x07200469]
 {
 	[common]
@@ -1521,37 +1696,7 @@
 	  p position = 0.861923,0,2.31772,0x7d0ecc5c;
 	}
 }
-[t:trigger_change_mood_box,n:0x072006d9]
-{
-	[common]
-	{
-		dev_instance_text = "PLAYER LOCATION";
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = set_player_world_location("hiroth");
-			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(0.500000,2.000000,20.000000,"on_every_enter");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  q orientation = 0,-0.382683,0,0.92388;
-	  p position = -2.40125,-0.150048,1.37488,0xffb78392;
-	}
-}
-[t:trigger_change_mood_box,n:0x07200466]
+[t:trigger_change_mood_box,n:0x07200464]
 {
 	[common]
 	{
@@ -1561,7 +1706,7 @@
 			{
 				action* = mood_change("multiplayer_world_castle_town_1");
 			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(0.500000,1.500000,6.000000,"on_every_enter");
+				condition* = party_member_within_bounding_box(0.500000,1.500000,4.000000,"on_every_enter");
 			  f delay = 0.000000;
 			  b flip_flop = false;
 			  b multi_player = true;
@@ -1576,8 +1721,8 @@
 	}
 	[placement]
 	{
-	  q orientation = 0,-0.707107,0,0.707107;
-	  p position = -2.81002,-0.990586,-1.98117,0x088e18d3;
+	  q orientation = 0,1,0,1.49012e-008;
+	  p position = -3.91737,7.62939e-006,-0.334488,0xf852e4ea;
 	}
 }
 [t:trigger_change_mood_box,n:0x07200468]
@@ -1609,7 +1754,7 @@
 	  p position = 0.411227,1,3.64433,0x02e46457;
 	}
 }
-[t:trigger_change_mood_box,n:0x07200464]
+[t:trigger_change_mood_box,n:0x07200466]
 {
 	[common]
 	{
@@ -1619,7 +1764,7 @@
 			{
 				action* = mood_change("multiplayer_world_castle_town_1");
 			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(0.500000,1.500000,4.000000,"on_every_enter");
+				condition* = party_member_within_bounding_box(0.500000,1.500000,6.000000,"on_every_enter");
 			  f delay = 0.000000;
 			  b flip_flop = false;
 			  b multi_player = true;
@@ -1634,8 +1779,8 @@
 	}
 	[placement]
 	{
-	  q orientation = 0,1,0,1.49012e-008;
-	  p position = -3.91737,7.62939e-006,-0.334488,0xf852e4ea;
+	  q orientation = 0,-0.707107,0,0.707107;
+	  p position = -2.81002,-0.990586,-1.98117,0x088e18d3;
 	}
 }
 [t:use_point,n:0x07200821]
@@ -1754,35 +1899,6 @@
 	[placement]
 	{
 	  p position = -0.67939,0.2,0.480103,0xd83c8404;
-	}
-}
-[t:trigger_generic,n:0x0720006a]
-{
-	[common]
-	{
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = send_world_message("we_req_activate",0x072005F0,0f,"default","every",0);
-			  b can_self_destruct = true;
-				condition* = receive_world_message("we_req_activate",0,"on_every_message");
-				condition* = party_member_within_node(0xBCE27414,3,-1,-1,"wait_for_every_message");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  p position = 0,2,0,0xe922cc15;
 	}
 }
 [t:use_point,n:0x072000de]
