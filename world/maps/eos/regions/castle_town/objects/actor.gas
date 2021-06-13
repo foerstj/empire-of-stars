@@ -1,0 +1,940 @@
+[t:skeleton_mercenary_archer_reveal_02,n:0x072000e1]
+{
+	[placement]
+	{
+	  p position = -2.06434,0,1.26221,0x5fd0ca50;
+	}
+}
+[t:skeleton_mercenary_archer_reveal_02,n:0x072001dc]
+{
+	[placement]
+	{
+	  p position = -2.46461,9.53674e-007,2.68351,0x5fd0ca50;
+	}
+}
+[t:skeleton_mercenary_archer_reveal_02,n:0x072001dd]
+{
+	[placement]
+	{
+	  p position = -1.86675,0,-0.0375643,0x6fcf61aa;
+	}
+}
+[t:skeleton_mercenary_archer_reveal_02,n:0x072001df]
+{
+	[placement]
+	{
+	  p position = 0.404512,-9.53674e-007,0.788751,0x6fcf61aa;
+	}
+}
+[t:skeleton_mercenary_archer,n:0x07200677]
+{
+	[placement]
+	{
+	  q orientation = 0,0.19509,0,0.980785;
+	  p position = -1.4412,0,-1.59844,0x70a8a3e1;
+	}
+}
+[t:skeleton_mercenary_archer,n:0x07200672]
+{
+	[placement]
+	{
+	  q orientation = 0,0.19509,0,0.980785;
+	  p position = -0.426032,0,-1.10862,0xc81c32b1;
+	}
+}
+[t:skeleton_mercenary_archer,n:0x07200673]
+{
+	[placement]
+	{
+	  q orientation = 0,0.19509,0,0.980785;
+	  p position = 0.311304,1,3.81793,0xb1d9af8b;
+	}
+}
+[t:skeleton_mercenary_archer,n:0x07200674]
+{
+	[placement]
+	{
+	  q orientation = 0,0.19509,0,0.980785;
+	  p position = 3.8401,1,-1.35808,0xb1d9af8b;
+	}
+}
+[t:mp_guard,n:0x072001c9]
+{
+	[aspect]
+	{
+	  b interest_only = true;
+		model = m_c_gah_fb_pos_a3;
+	}
+	[common]
+	{
+		dev_instance_text = "#7";
+	}
+	[conversation]
+	{
+		[conversations]
+		{
+			* = conversation_guard_7;
+			* = conversation_guard_7_red;
+			* = zconversation_directions;
+		}
+	}
+	[inventory]
+	{
+		[equipment]
+		{
+			es_chest = bd_un_pl_f_g_c_fun;
+			es_feet = bo_bo_ch_f_g_c_avg;
+		}
+		[other]
+		{
+			il_shield = sh_m_g_c_r_s_avg;
+		}
+	}
+	[mind]
+	{
+	  b actor_auto_fidgets = false;
+	  b actor_may_attack = false;
+	  b actor_may_be_attacked = false;
+		jat_face = jat_none;
+		jat_talk = world\ai\jobs\common\job_talk_mp.skrit;
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.382683,0,0.92388;
+	  p position = 4.49938,-1.5,-6.07511,0xed8ca793;
+	}
+}
+[t:mp_guard_captain,n:0x07200583]
+{
+	[aspect]
+	{
+		model = m_c_gah_fb_pos_a3;
+	}
+	[common]
+	{
+		screen_name = "Guard Captain of Hiroth";
+	}
+	[conversation]
+	{
+		[conversations]
+		{
+			* = conversation_guard_captain;
+			* = conversation_guard_captain_red;
+			* = zconversation_directions;
+		}
+	}
+	[mind]
+	{
+		jat_talk = world\ai\jobs\common\job_talk_mp.skrit;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.819152,0,0.573576;
+	  p position = 12.2623,-2.5,-2.7679,0xed8ca793;
+	}
+}
+[t:mp_guard_ranged,n:0x0720058b]
+{
+	[aspect]
+	{
+	  b interest_only = true;
+		model = m_c_gah_fb_pos_a3;
+	}
+	[common]
+	{
+		dev_instance_text = "# 6";
+	}
+	[conversation]
+	{
+		[conversations]
+		{
+			* = conversation_guard_6;
+			* = conversation_guard_6_red;
+			* = zconversation_directions;
+		}
+	}
+	[inventory]
+	{
+		[equipment]
+		{
+			es_chest = bd_un_pl_f_g_c_avg;
+			es_feet = bo_bo_ch_f_g_c_avg;
+		}
+		[other]
+		{
+			il_active_melee_weapon = ax_carnage;
+			il_active_ranged_weapon = bw_g_c_s_m_c_avg;
+			il_main = bw_g_c_s_m_c_avg;
+			il_main = bw_g_c_s_m_c_avg;
+		}
+	}
+	[mind]
+	{
+	  b actor_auto_fidgets = false;
+	  b actor_may_attack = false;
+	  b actor_may_be_attacked = false;
+		jat_face = jat_none;
+		jat_talk = world\ai\jobs\common\job_talk_mp.skrit;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.92388,0,0.382683;
+	  p position = 2.97538,-1.46356,-4.66496,0xed8ca793;
+	}
+}
+[t:mp_peasant_male_01,n:0x0720058d]
+{
+	[aspect]
+	{
+	  b interest_only = true;
+	}
+	[common]
+	{
+		screen_name = "Jamas Trind";
+	}
+	[conversation]
+	{
+		[conversations]
+		{
+			* = conversation_jamas;
+			* = conversation_jamas_red;
+			* = zconversation_directions;
+		}
+	}
+	[mind]
+	{
+		jat_talk = world\ai\jobs\common\job_talk_mp.skrit;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.615662,0,-0.788011;
+	  p position = -4.9568,-1.5,-0.464973,0xed8ca793;
+	}
+}
+[t:mp_farmer_male_old,n:0x0720058e]
+{
+	[aspect]
+	{
+	  b interest_only = true;
+	}
+	[common]
+	{
+		screen_name = "Barten Viloril";
+	}
+	[conversation]
+	{
+		[conversations]
+		{
+			* = conversation_barten;
+			* = conversation_barten_red;
+			* = zconversation_directions;
+		}
+	}
+	[mind]
+	{
+		jat_talk = world\ai\jobs\common\job_talk_mp.skrit;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.909961,0,0.414693;
+	  p position = -6.15657,-1.5,0.137741,0xed8ca793;
+	}
+}
+[t:mp_townfolk_female_07,n:0x07200592]
+{
+	[aspect]
+	{
+	  b interest_only = true;
+	}
+	[common]
+	{
+		screen_name = "Alandriel Galas";
+	}
+	[conversation]
+	{
+		[conversations]
+		{
+			* = conversation_alandriel;
+			* = conversation_alandriel_red;
+			* = zconversation_directions;
+		}
+	}
+	[mind]
+	{
+	  b actor_auto_fidgets = false;
+		jat_talk = world\ai\jobs\common\job_talk_mp.skrit;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.374607,0,0.927184;
+	  p position = 2.89916,-1.5,-6.16228,0xed8ca793;
+	}
+}
+[t:townfolk_m_03,n:0x072005e3]
+{
+	[aspect]
+	{
+	  b interest_only = true;
+	}
+	[common]
+	{
+		screen_name = "Innkeeper";
+	}
+	[placement]
+	{
+	  q orientation = 0,0.382683,0,0.92388;
+	  p position = -8.02132,-1.5,-3.43258,0xed8ca793;
+	}
+}
+[t:azunite_priestess_challe,n:0x0720042a]
+{
+	[conversation]
+	{
+		[conversations]
+		{
+			* = conversation_challe;
+			* = conversation_challe_red;
+			* = zconversation_directions;
+		}
+	}
+	[mind]
+	{
+		jat_talk = world\ai\jobs\common\job_talk_mp.skrit;
+	}
+	[placement]
+	{
+	  q orientation = 0,-1,0,-5.96046e-007;
+	  p position = -1.05255,-4.25,0.818321,0x3909b301;
+	}
+}
+[t:mp_townfolk_m_05,n:0x07200543]
+{
+	[common]
+	{
+		screen_name = "Utraean High Priest Kavaren";
+	}
+	[conversation]
+	{
+		[conversations]
+		{
+			* = conversation_kavaren;
+			* = conversation_kavaren_complete;
+			* = conversation_kavaren_goto;
+			* = conversation_kavaren_no_crystwind;
+			* = conversation_kavaren_no_elddim;
+			* = conversation_kavaren_no_fallraen;
+			* = conversation_kavaren_no_grescal;
+			* = conversation_kavaren_no_lang;
+			* = conversation_kavaren_no_meren;
+			* = conversation_kavaren_no_quillrabe;
+			* = conversation_kavaren_ring;
+			* = conversation_kavaren_state2;
+			* = zconversation_directions;
+		}
+	}
+	[inventory]
+	{
+		[equipment]
+		{
+			es_chest = bd_ra_ro_m_g_c_084;
+			es_feet = bo_bo_le_light;
+		}
+	}
+	[mind]
+	{
+		jat_talk = world\ai\jobs\actors\good\job_talk_kavaren.skrit;
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.382683,0,0.92388;
+	  p position = 0.285919,-4.25,-1.4666,0x3909b301;
+	}
+}
+[t:mp_guard_ranged,n:0x07200580]
+{
+	[aspect]
+	{
+		model = m_c_gah_fb_pos_a3;
+	}
+	[common]
+	{
+		dev_instance_text = "#5";
+	}
+	[conversation]
+	{
+		[conversations]
+		{
+			* = conversation_guard_5;
+			* = conversation_guard_5_red;
+			* = zconversation_directions;
+		}
+	}
+	[mind]
+	{
+		jat_talk = world\ai\jobs\common\job_talk_mp.skrit;
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.48481,0,-0.874619;
+	  p position = -3.52373,-4.76837e-007,-1.91721,0x4d9807f0;
+	}
+}
+[t:mule,n:0x07200168]
+{
+	[common]
+	{
+		screen_name = "Yee";
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.382683,0,0.92388;
+	  p position = -1.67031,0,1.02744,0x4b8ec8fd;
+	}
+}
+[t:lame_mare,n:0x07200167]
+{
+	[placement]
+	{
+	  q orientation = 0,-0.382683,0,0.92388;
+	  p position = 2.36594,0,0.86829,0x80cbaa40;
+	}
+}
+[t:blacksmith_moik_stourn,n:0x07200429]
+{
+	[conversation]
+	{
+		[conversations]
+		{
+			* = conversation_moik;
+			* = conversation_moik_red;
+			* = zconversation_directions;
+		}
+	}
+	[mind]
+	{
+		jat_talk = world\ai\jobs\common\job_talk_mp.skrit;
+	}
+	[placement]
+	{
+	  p position = -4.58181,-3.0874,-2.29668,0x1fae5174;
+	}
+}
+[t:mp_townfolk_female_03,n:0x0720055c]
+{
+	[common]
+	{
+		screen_name = "Jirna Kellen";
+	}
+	[conversation]
+	{
+		[conversations]
+		{
+			* = conversation_jirna;
+			* = conversation_jirna_red;
+			* = zconversation_directions;
+		}
+	}
+	[inventory]
+	{
+		[equipment]
+		{
+			es_chest = bd_le_r_g_c_avg;
+		}
+	}
+	[mind]
+	{
+	  b actor_auto_fidgets = false;
+		jat_face = jat_none;
+		jat_talk = world\ai\jobs\common\job_talk_mp.skrit;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.848048,0,0.52992;
+	  p position = 1.31678,-2.1,3.35867,0x1fae5174;
+	}
+}
+[t:mp_guard,n:0x07200582]
+{
+	[aspect]
+	{
+		model = m_c_gah_fb_pos_a3;
+	}
+	[common]
+	{
+		dev_instance_text = "#2";
+	}
+	[conversation]
+	{
+		[conversations]
+		{
+			* = conversation_guard_2;
+			* = conversation_guard_2_red;
+			* = zconversation_directions;
+		}
+	}
+	[mind]
+	{
+		jat_talk = world\ai\jobs\common\job_talk_mp.skrit;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.414693,0,0.909961;
+	  p position = -3.62965,2.86102e-006,-2.77153,0x0e592d34;
+	}
+}
+[t:mp_guard_ranged,n:0x07200581]
+{
+	[aspect]
+	{
+		model = m_c_gah_fb_pos_a3;
+	}
+	[common]
+	{
+		dev_instance_text = "#1";
+	}
+	[conversation]
+	{
+		[conversations]
+		{
+			* = conversation_guard_1;
+			* = conversation_guard_1_red;
+			* = zconversation_directions;
+		}
+	}
+	[mind]
+	{
+		jat_talk = world\ai\jobs\common\job_talk_mp.skrit;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.104529,0,0.994522;
+	  p position = 3.87246,-1.5,-2.8569,0x249194e8;
+	}
+}
+[t:skeleton_mercenary_archer_reveal_02,n:0x07200457]
+{
+	[placement]
+	{
+	  p position = 1.84351,0,3.44046,0x1464f164;
+	}
+}
+[t:skeleton_mercenary_archer_reveal_02,n:0x07200458]
+{
+	[placement]
+	{
+	  p position = -0.998856,-1.90735e-006,-3.00267,0x1464f164;
+	}
+}
+[t:skeleton_mercenary_archer,n:0x072006ac]
+{
+	[placement]
+	{
+	  q orientation = 0,0.19509,0,0.980785;
+	  p position = 1.03073,0,1.75377,0x1464f164;
+	}
+}
+[t:skeleton_mercenary_archer,n:0x072006ad]
+{
+	[placement]
+	{
+	  q orientation = 0,0.19509,0,0.980785;
+	  p position = 3.29053,0,0.982679,0xa8955b44;
+	}
+}
+[t:skeleton_mercenary_archer_reveal_02,n:0x072001f3]
+{
+	[placement]
+	{
+	  p position = -1.21794,0,3.17953,0xa0465982;
+	}
+}
+[t:skeleton_mercenary_archer_reveal_02,n:0x072001f5]
+{
+	[placement]
+	{
+	  p position = -1.66357,0,2.02332,0xa0465982;
+	}
+}
+[t:mp_guard_05,n:0x07200669]
+{
+	[aspect]
+	{
+		model = m_c_gah_fg_pos_a3;
+	}
+	[check_level]
+	{
+	  b check_level = true;
+	  f high_level = 52;
+	  f high_level_2w = 85;
+	  f high_level_3w = 109;
+	  f low_level = 48;
+	  f low_level_2w = 83;
+	  f low_level_3w = 109;
+	}
+	[common]
+	{
+		dev_instance_text = "SOUTH";
+	}
+	[conversation]
+	{
+		[conversations]
+		{
+			* = conversation_guard_s;
+			* = conversation_guard_s_high;
+			* = conversation_guard_s_low;
+			* = conversation_guard_s_red;
+			* = zconversation_directions;
+		}
+	}
+	[mind]
+	{
+		jat_talk = world\ai\jobs\common\job_talk_mp.skrit;
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.382683,0,0.92388;
+	  p position = -3.61853,-1.5,-3.47722,0x5e713a86;
+	}
+}
+[t:skeleton_mercenary_archer_reveal_02,n:0x072001e8]
+{
+	[placement]
+	{
+	  p position = -0.00257611,-9.53674e-007,-0.195971,0x1dd15fe8;
+	}
+}
+[t:skeleton_mercenary_archer_reveal_02,n:0x072001ea]
+{
+	[placement]
+	{
+	  p position = 1.43689,-9.53674e-007,0.218254,0x1dd15fe8;
+	}
+}
+[t:skeleton_mercenary_archer,n:0x072006a3]
+{
+	[placement]
+	{
+	  q orientation = 0,0.980785,0,-0.19509;
+	  p position = -0.437048,0,1.27811,0x98c8e735;
+	}
+}
+[t:skeleton_mercenary_archer,n:0x072006a4]
+{
+	[placement]
+	{
+	  q orientation = 0,0.980785,0,-0.19509;
+	  p position = -0.341091,0,-0.176735,0x98c8e735;
+	}
+}
+[t:skeleton_mercenary_archer_reveal_02,n:0x072001f2]
+{
+	[placement]
+	{
+	  p position = 0.0487862,0,0.238309,0x7a411550;
+	}
+}
+[t:skeleton_mercenary_archer_reveal_02,n:0x072001e7]
+{
+	[placement]
+	{
+	  p position = -1.22201,0,-0.140829,0x4c281dad;
+	}
+}
+[t:skeleton_mercenary_archer,n:0x0720066f]
+{
+	[placement]
+	{
+	  q orientation = 0,0.980785,0,-0.19509;
+	  p position = -0.890613,0,-1.39828,0x4c281dad;
+	}
+}
+[t:skeleton_mercenary_archer,n:0x07200671]
+{
+	[placement]
+	{
+	  q orientation = 0,0.19509,0,0.980785;
+	  p position = -2.33612,0,0.467278,0x39ef1a42;
+	}
+}
+[t:skeleton_mercenary_archer_reveal_02,n:0x072001e6]
+{
+	[placement]
+	{
+	  p position = -1.33883,9.53674e-007,3.90296,0xf1e8a136;
+	}
+}
+[t:skeleton_mercenary_archer_reveal_02,n:0x072001f7]
+{
+	[placement]
+	{
+	  p position = 0.796667,0,-3.56252,0xebf91d3d;
+	}
+}
+[t:skeleton_mercenary_archer_reveal_02,n:0x07200200]
+{
+	[placement]
+	{
+	  p position = -3.93068,-0.299999,0.0403652,0x5e4c2676;
+	}
+}
+[t:skeleton_mercenary_archer_reveal_02,n:0x07200204]
+{
+	[placement]
+	{
+	  p position = -1.86757,-0.0959244,-1.15281,0x5e4c2676;
+	}
+}
+[t:skeleton_mercenary_archer_reveal_02,n:0x072001fc]
+{
+	[placement]
+	{
+	  p position = 2.98005,-1.90735e-006,3.04124,0x379fdc89;
+	}
+}
+[t:skeleton_mercenary_archer,n:0x07200552]
+{
+	[placement]
+	{
+	  q orientation = 0,0.829038,0,0.559193;
+	  p position = -3.60126,0,-0.766586,0x8bd4a00c;
+	}
+}
+[t:skeleton_mercenary_archer,n:0x07200553]
+{
+	[placement]
+	{
+	  q orientation = 0,0.34202,0,0.939693;
+	  p position = -0.976124,0,-0.0664673,0x8bd4a00c;
+	}
+}
+[t:mp_townfolk_male_02,n:0x07200534]
+{
+	[common]
+	{
+		screen_name = "Rittren Holden";
+	}
+	[conversation]
+	{
+		[conversations]
+		{
+			* = conversation_rittren;
+			* = conversation_rittren_red;
+			* = zconversation_directions;
+		}
+	}
+	[mind]
+	{
+		jat_talk = world\ai\jobs\common\job_talk_mp.skrit;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.130526,0,0.991445;
+	  p position = -2.82953,-9.53674e-007,-0.947868,0x8ddbf4e0;
+	}
+}
+[t:mp_townfolk_female_08,n:0x07200565]
+{
+	[common]
+	{
+		screen_name = "Lillian Zane";
+	}
+	[conversation]
+	{
+		[conversations]
+		{
+			* = conversation_lillian;
+			* = conversation_lillian_red;
+			* = zconversation_directions;
+		}
+	}
+	[mind]
+	{
+		jat_talk = world\ai\jobs\common\job_talk_mp.skrit;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.258819,0,0.965926;
+	  p position = -1.54308,3.8147e-006,0.381752,0x9e976671;
+	}
+}
+[t:mule,n:0x072000f2]
+{
+	[common]
+	{
+		screen_name = "Gerty";
+	}
+	[placement]
+	{
+	  q orientation = 0,0.173648,0,0.984808;
+	  p position = 0.493259,-9.53674e-007,-1.52766,0xccf74181;
+	}
+}
+[t:mp_guard_ranged,n:0x0720057f]
+{
+	[aspect]
+	{
+		model = m_c_gah_fb_pos_a3;
+	}
+	[check_level]
+	{
+	  b check_level = true;
+	  f high_level = 52;
+	  f high_level_2w = 85;
+	  f high_level_3w = 109;
+	  f low_level = 45;
+	  f low_level_2w = 81;
+	  f low_level_3w = 108;
+	}
+	[common]
+	{
+		dev_instance_text = "#4 NORTH ";
+	}
+	[conversation]
+	{
+		[conversations]
+		{
+			* = conversation_guard_n;
+			* = conversation_guard_n_high;
+			* = conversation_guard_n_low;
+			* = conversation_guard_n_red;
+			* = zconversation_directions;
+		}
+	}
+	[mind]
+	{
+		jat_talk = world\ai\jobs\common\job_talk_mp.skrit;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.19081,0,0.981627;
+	  p position = -3.3244,-8.34465e-007,-2.56178,0x7d0ecc5c;
+	}
+}
+[t:mp_guard_ranged,n:0x07200584]
+{
+	[aspect]
+	{
+		model = m_c_gah_fb_pos_a3;
+	}
+	[common]
+	{
+		dev_instance_text = "#3";
+	}
+	[conversation]
+	{
+		[conversations]
+		{
+			* = conversation_guard_3;
+			* = conversation_guard_3_red;
+			* = zconversation_directions;
+		}
+	}
+	[mind]
+	{
+		jat_talk = world\ai\jobs\common\job_talk_mp.skrit;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.12187,0,0.992546;
+	  p position = -0.42939,0.574292,0.63876,0x9eaa62f9;
+	}
+}
+[t:mp_npc_dwarf_01,n:0x07200126]
+{
+	[aspect]
+	{
+	  b interest_only = true;
+	}
+	[common]
+	{
+		screen_name = "Scudly Faern";
+	}
+	[conversation]
+	{
+		[conversations]
+		{
+			* = conversation_scudly;
+			* = conversation_scudly_red;
+			* = zconversation_directions;
+		}
+	}
+	[mind]
+	{
+	  b actor_auto_fidgets = false;
+		jat_talk = world\ai\jobs\common\job_talk_mp.skrit;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.997564,0,0.0697561;
+	  p position = -7.72357,-2.65,-4.51319,0x2dbbce59;
+	}
+}
+[t:mp_townfolk_female_06,n:0x0720055a]
+{
+	[aspect]
+	{
+	  b interest_only = true;
+	}
+	[common]
+	{
+		screen_name = "Keely Faern";
+	}
+	[conversation]
+	{
+		[conversations]
+		{
+			* = conversation_keely;
+			* = conversation_keely_red;
+			* = zconversation_directions;
+		}
+	}
+	[inventory]
+	{
+		[equipment]
+		{
+			es_chest = bd_le_f_g_c_low;
+		}
+	}
+	[mind]
+	{
+	  b actor_auto_fidgets = false;
+		jat_face = jat_none;
+		jat_talk = world\ai\jobs\common\job_talk_mp.skrit;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.21644,0,0.976296;
+	  p position = -7.17538,-2.66976,-6.09458,0x2dbbce59;
+	}
+}
+[t:mp_village_idiot,n:0x0720055b]
+{
+	[aspect]
+	{
+	  b interest_only = true;
+	}
+	[common]
+	{
+		screen_name = "Kamber Gane";
+	}
+	[conversation]
+	{
+		[conversations]
+		{
+			* = conversation_kamber;
+			* = conversation_kamber_red;
+			* = zconversation_directions;
+		}
+	}
+	[mind]
+	{
+	  b actor_auto_fidgets = false;
+		jat_face = jat_none;
+		jat_talk = world\ai\jobs\common\job_talk_mp.skrit;
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.0348999,0,0.99939;
+	  p position = 7.80494,-2.65,1.34921,0x2dbbce59;
+	}
+}

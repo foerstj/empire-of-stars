@@ -1,0 +1,688 @@
+[zconversation_directions]
+{
+	[text*]
+	{
+		screen_text = "So, you're the one they say is marked with fire. If you're headed to Grescal, why not go through the Utraean's Basilicus? It's rumored that you can travel there overland if you enter the Mausoleum underneath Castle Hiroth. I've heard there's an entrance within one of the castle towers, and the Mausoleum still has the old criminal's exit to the Mesa Desert. If you head east, eventually you'll hit the edge of the Grescal Dunes. Grescal itself is somewhere east of there around the oasis. However, only a fool would try to cross the desert without a guide. Grescal is a hermit's village for a reason, you know.";
+	}
+}
+
+
+[conversation_moik]
+{
+	[text*]
+	{
+		order = 0;
+		choice = shop;
+
+		screen_text = "We're still in one piece, but since Hiroth Castle fell into disrepair, that's about as much as can be said these days. None of the old servants have come out of the castle in weeks, and strange beasts prowl the walls. Still, there's always plenty of business to keep me busy.";
+		button_1_text = "Directions";
+       		button_1_value = d_0x07200429;
+	}
+	[text*]
+	{
+        order = 1;
+		choice = shop;
+
+		screen_text = "Thinking about going into the castle, are you? Well, you'll be lucky if you get past the courtyard inside the walls. In any case, I'll supply you with what you need. You'll have a better chance with my armor protecting your skin.";
+		button_1_text = "Directions";
+       		button_1_value = d_0x07200429;
+	}
+
+    [text*]
+	{
+
+		choice = shop;
+
+		screen_text = "Fear not, my skills are not diminished from the attacks. Hiroth Castle has stood for centuries; and sooner or later, it will rise again as our great protector, and I'll still be here serving those who seek greatness.";
+		button_1_text = "Directions";
+       		button_1_value = d_0x07200429;
+	}
+
+}
+[conversation_moik_red]
+{
+	[text*]
+	{
+
+		screen_text = "There's not much that will stop old Moik from working, but I dunno about this.";
+		button_1_text = "Directions";
+       		button_1_value = d_0x07200429;
+       		choice = shop;
+	}
+}
+
+[conversation_challe]
+{
+	[text*]
+	{
+		order = 0;
+		choice = shop;
+
+		screen_text = "Thy arrival comes at a momentous time, my child. I sense much evil in the world. The northern drakes are restless, I fear, and that means grave danger is in store for us all. The shrine will keep thee safe even in times of peril.";
+		button_1_text = "Directions";
+       		button_1_value = d_0x0720042a;
+	}
+	[text*]
+	{
+		choice = shop;
+
+		screen_text = "Pray to Azunai with me now, child, and I will show thee things which thou wilt find helpful in thy journeys.";
+		button_1_text = "Directions";
+       		button_1_value = d_0x0720042a;
+	}
+
+}
+[conversation_challe_red]
+{
+	[text*]
+	{
+
+		screen_text = "If I had not seen the Maljin for myself, I would not have believed such creatures existed!";
+		button_1_text = "Directions";
+       		button_1_value = d_0x0720042a;
+       		choice = shop;
+	}
+}
+
+[conversation_kavaren]
+{
+    [text*]             //no ring
+	{
+        order = 0;
+
+		screen_text = "Greetings, stranger. If you are seeking work with the Utraean Society, I suggest you speak with High Priestess Kelti in Elddim.";
+        activate_quest* = goto_elddim;
+        button_1_text = "Directions";
+       	button_1_value = d_0x07200543;
+       	quest_dialog = true;
+	}
+    [text*]
+	{
+
+		screen_text = "I'm afraid I don't have anything for you right now.";
+		button_1_text = "Directions";
+       		button_1_value = d_0x07200543;
+
+	}
+}
+[conversation_kavaren_goto]
+{
+	[text*]     //active goto grescal quest
+	{
+
+		screen_text = "Priestess Kylira probably hasn't seen a new face in years. There haven't been many travellers to Grescal since the oasis receded. The journey there is just too perilous for most, and it's nothing but sand for breakfast, lunch, and dinner once you do arrive.";
+		complete_quest* = goto_hiroth_a;
+		button_1_text = "Directions";
+       		button_1_value = d_0x07200543;
+	}
+}
+[conversation_kavaren_no_elddim]
+{
+	[text*]
+	{                //if you have the ring and DO NOT have the elddim stone
+
+		screen_text = "The Utraean Circle is ready to be completed, but you are missing the Elddim Sunrise Stone. Speak with Utraean High Priestess Kelti in Elddim, then return here to me.";
+        activate_quest* = goto_elddim;
+        complete_quest* = goto_hiroth_b;
+        complete_quest* = goto_hiroth_a;
+        button_1_text = "Directions";
+       	button_1_value = d_0x07200543;
+       	quest_dialog = true;
+	}
+}
+[conversation_kavaren_no_crystwind]
+{
+	[text*]
+	{                //if you have the ring and DO NOT have the crystwind stone
+
+		screen_text = "The Utraean Circle is ready to be completed, but you are missing the Crystwind Hammer Stone. Speak with Utraean Priest Sarden in Crystwind, then return here to me.";
+        activate_quest* = goto_crystwind;
+        complete_quest* = goto_hiroth_b;
+        complete_quest* = goto_hiroth_a;
+        button_1_text = "Directions";
+       	button_1_value = d_0x07200543;
+       	quest_dialog = true;
+	}
+}
+[conversation_kavaren_no_fallraen]
+{
+	[text*]
+	{                //if you have the ring and DO NOT have the fallraen stone
+
+		screen_text = "The Utraean Circle is ready to be completed, but you are missing the Fallraen Snowflake Stone. Speak with Utraean Apprentice Flessan in Fallraen, then return here to me.";
+        	activate_quest* = goto_fallraen;
+        	complete_quest* = goto_hiroth_b;
+        	complete_quest* = goto_hiroth_a;
+        	button_1_text = "Directions";
+       		button_1_value = d_0x07200543;
+       		quest_dialog = true;
+	}
+}
+[conversation_kavaren_no_meren]
+{
+	[text*]
+	{                //if you have the ring and DO NOT have the meren stone
+
+		screen_text = "The Utraean Circle is ready to be completed, but you are missing the Meren Fish Stone. Speak with Utraean Priest Tas in Meren, then return here to me.";
+        	activate_quest* = goto_meren;
+        	complete_quest* = goto_hiroth_b;
+        	complete_quest* = goto_hiroth_a;
+        	button_1_text = "Directions";
+       		button_1_value = d_0x07200543;
+       		quest_dialog = true;
+	}
+}
+[conversation_kavaren_no_lang]
+{
+	[text*]
+	{                //if you have the ring and DO NOT have the lang stone
+
+		screen_text = "The Utraean Circle is ready to be completed, but you are missing the Lang Mosquito Stone. Speak with Utraean Priestess Janeira in Lang, then return here to me.";
+        	activate_quest* = goto_lang;
+        	complete_quest* = goto_hiroth_b;
+        	complete_quest* = goto_hiroth_a;
+        	button_1_text = "Directions";
+       		button_1_value = d_0x07200543;
+       		quest_dialog = true;
+	}
+}
+[conversation_kavaren_no_quillrabe]
+{
+	[text*]
+	{                //if you have the ring and DO NOT have the quillrabe stone
+
+		screen_text = "The Utraean Circle is ready to be completed, but you are missing the Quillrabe Mask Stone. Speak with Utraean Priest Ferdl in Quillrabe, then return here to me.";
+        	activate_quest* = goto_quillrabe;
+        	complete_quest* = goto_hiroth_b;
+        	complete_quest* = goto_hiroth_a;
+        	button_1_text = "Directions";
+       		button_1_value = d_0x07200543;
+       		quest_dialog = true;
+	}
+}
+[conversation_kavaren_no_grescal]
+{
+	[text*]
+	{                //if you have the ring and DO NOT have the grescal stone
+
+		screen_text = "The Utraean Circle is ready to be completed, but you are missing the Grescal Palm Stone. Speak with Utraean Priestess Kylira in Grescal, as she will be able to tell you more about it. I see you are one of the few who carry the Mark of Fire. If you travel to Grescal through the Basilicus, you will have a much better chance of reaching the oasis. No one who travels there overland through the Eastern Desert ever returns.";
+        	activate_quest* = goto_grescal;
+        	complete_quest* = goto_hiroth_b;
+        	complete_quest* = goto_hiroth_a;
+        	button_1_text = "Directions";
+       		button_1_value = d_0x07200543;
+       		quest_dialog = true;
+	}
+}
+[conversation_kavaren_ring]
+{
+	[text*]     //if you have the ring and all 7 stones (except hiroth) and quest_townstones is on state 1
+	{
+        	order = 0;
+        	choice = more;
+		screen_text = "Welcome, friend. Your task is considerable, but you have proven your fortitude to the Society time and time again. I have placed Hiroth's own Crown Stone in the Utraean Circle; it is ready to receive the Townstones. We of the Utraean Society are praying for your success in placing them correctly. Soon, we shall learn the secrets of the Utraeans.";
+        	complete_quest* = goto_hiroth_b;
+        	complete_quest* = goto_hiroth_a;
+        	activate_quest* = quest_townstones;
+        	button_2_text = "Directions";
+       		button_2_value = d_0x07200543;
+       		quest_dialog = true;
+	}
+    [text*]
+	{
+		screen_text = "As you know, the Utraeans disappeared centuries ago, leaving behind only the ruins scattered around the land and the mystical temple we call the Basilicus. While I have not traveled to it myself, I am told that Hiroth's own ruined Circle is remarkably similar to the Basilicus. I have done much research into the two, and it is obvious that the Utraeans were fascinated with rapid methods of travel. I am convinced that they built our Circle to leave this land for a better place. When you place the Townstones in the Circle, we will see where the Utraeans went!";
+        	activate_quest* = quest_townstones,1;
+        	button_1_text = "Directions";
+       		button_1_value = d_0x07200543;
+       		quest_dialog = true;
+	}
+
+
+}
+[conversation_kavaren_state2]
+{
+	[text*]
+	{                  //if quest_townstones is on state 2
+        	order = 0;
+        	choice = more;
+		screen_text = "By the gods, what have we done? I have never seen such creatures as these Maljin! We should never have completed the Circle, oh, this is a catastrophe! Can you hear the screams of people dying? I don't think the air is safe to breathe, all filled with ash and brimstone. We must do something!!";
+		button_2_text = "Directions";
+       		button_2_value = d_0x07200543;
+	}
+
+    [text*]
+	{
+        order = 1;
+		screen_text = "I killed three Maljin that crawled in through the windows. These creatures are not natural! We must destroy them all -- they seem to be coming up through the Utraean Circle, which means there must be a way down through there as well! I have a Tenstone from the legion I've been holding all these years. Take it and carry it to where the Maljin gather their power beneath the Utraean Circle. You were able to slay the Dragon Queen and recapture the Grescal Townstone. Only you have the courage and skills to save us from the Maljin. Please, do not fail us now!";
+        	activate_quest* = quest_townstones,3;
+        	button_1_text = "Directions";
+       		button_1_value = d_0x07200543;
+       		quest_dialog = true;
+	}
+    [text*]
+	{
+
+		screen_text = "How could we have known the Circle would release such demons? You must destroy the Maljin before they kill us all!";
+		button_1_text = "Directions";
+       		button_1_value = d_0x07200543;
+	}
+}
+[conversation_kavaren_complete]
+{
+	[text*]
+	{               //if quest_elddim is complete
+
+		screen_text = "You...you have returned? The Maljin are dead? Oh, thank the gods. The entire Utraean Peninsula is safe again. You will be eternally remembered as the one who saved us from our own ambition.";
+		button_1_text = "Directions";
+       		button_1_value = d_0x07200543;
+	}
+}
+
+
+[conversation_guard_6]
+{
+	[text*]
+	{
+
+		screen_text = "The keep is overrun and the dungeons flooded. We knew the peace couldn't last with the queen dead these last five years and not an heir in sight. They say Grescal holds the key, but who can survive the Empty Eastern Desert to bring it back?";
+		button_1_text = "Directions";
+       		button_1_value = d_0x0720058b;
+	}
+}
+[conversation_guard_6_red]
+{
+	[text*]
+	{
+
+		screen_text = "I've been a Legionnaire going on fifteen years, and I've never seen anything like this before!";
+		button_1_text = "Directions";
+       		button_1_value = d_0x0720058b;
+	}
+}
+[conversation_guard_7]
+{
+	[text*]
+	{
+       
+		screen_text = "I haven't seen this many undead in my life! If we could turn bones into gold, we'd be rich.";
+		button_1_text = "Directions";
+       		button_1_value = d_0x072001c9;
+	}
+	
+}
+[conversation_guard_7_red]
+{
+	[text*]
+	{
+
+		screen_text = "Aug, the smell of decay is making me sick.";
+		button_1_text = "Directions";
+       		button_1_value = d_0x072001c9;
+	}
+}
+[conversation_guard_captain]
+{
+	[text*]
+	{
+
+		screen_text = "Hiroth has lost nearly a full regiment this week to the skeletal horde around the castle. It wouldn't be so bad if the undead had taken similar losses, but they're raising our dead to add to their ranks!";
+		button_1_text = "Directions";
+       		button_1_value = d_0x07200583;
+	}
+}
+[conversation_guard_captain_red]
+{
+	[text*]
+	{
+
+		screen_text = "By the shield, this is a catastrophe! Priest Kavaren promised assembling the Circle would aid us, but it looks like we have brought about our own downfall! I knew we should have waited until we had a full Legion present for the ceremony!";
+		button_1_text = "Directions";
+       		button_1_value = d_0x07200583;
+	}
+}
+
+[conversation_kamber]
+{
+	[text*]
+	{
+
+		screen_text = "It gets worse every day. Next thing you know, it'll be drakes flying overhead. We never did seal that old Drake's nest to the north completely.";
+		button_1_text = "Directions";
+       		button_1_value = d_0x0720055b;
+	}
+}
+[conversation_kamber_red]
+{
+	[text*]
+	{
+
+		screen_text = "I was just as excited about seeing what the Circle has been hiding all of these years, but I never expected the very sky to be poisoned. We are all doomed!";
+		button_1_text = "Directions";
+       		button_1_value = d_0x0720055b;
+	}
+}
+[conversation_jamas]
+{
+	
+	[text*]
+	{
+		screen_text = "What do you do if a skeleton asks you the way to the barn? Run! Ha!";
+		button_1_text = "Directions";
+       		button_1_value = d_0x0720058d;
+	}
+}
+[conversation_jamas_red]
+{
+	[text*]
+	{
+
+		screen_text = "What does it mean if the sky turns red? Time to get the 'ell out of 'iroth! Auuuuuugh!";
+		button_1_text = "Directions";
+       		button_1_value = d_0x0720058d;
+	}
+}
+[conversation_barten]
+{
+	[text*]
+	{
+
+		screen_text = "I've heard strange sounds coming out of Hiroth Ravine to the north on many a night; all manner of growls and hisses. I have no idea what's in there, but I'm staying far away from it.";
+		button_1_text = "Directions";
+       		button_1_value = d_0x0720058e;
+	}
+}
+[conversation_barten_red]
+{
+	[text*]
+	{
+
+		screen_text = "It's as if the whole nest of drakes came out of their cave and set fire to the sky! Run for your life!";
+		button_1_text = "Directions";
+       		button_1_value = d_0x0720058e;
+	}
+}
+[conversation_scudly]
+{
+	[text*]
+	{
+
+		screen_text = "I used to be the curator of the Hiroth Mausoleum underneath the castle. Last thing I saw before the Legion forced me out was a horde of terrible creatures smashing the statues!";
+		button_1_text = "Directions";
+       		button_1_value = d_0x07200126;
+	}
+}
+[conversation_scudly_red]
+{
+	[text*]
+	{
+
+		screen_text = "The air, it burns! Buuuurns!";
+		button_1_text = "Directions";
+       		button_1_value = d_0x07200126;
+	}
+}
+[conversation_alandriel]
+{
+	[text*]
+	{
+
+		screen_text = "It's said that the Dragon Queen herself lives in the Drake Nest to the north! I don't believe it though, Hiroth Ravine is filled with deer, and I've never seen anything other than seagulls flying overhead.";
+		button_1_text = "Directions";
+       		button_1_value = d_0x07200592;
+	}
+}
+[conversation_alandriel_red]
+{
+	[text*]
+	{
+
+		screen_text = "We've gotten along just fine with that stinking Circle being broken for all these years. Why'd we have to go and break the world in order to fix it?";
+		button_1_text = "Directions";
+       		button_1_value = d_0x07200592;
+	}
+}
+[conversation_jirna]
+{
+	[text*]
+	{
+
+		screen_text = "Moik's a good man. He's old enough to not always be wanting to run off and find the fabled Lost Pyramids in the Endless Dunes like all the younger lads around here.";
+		button_1_text = "Directions";
+       		button_1_value = d_0x0720055c;
+	}
+}
+[conversation_jirna_red]
+{
+	[text*]
+	{
+
+		screen_text = "You'd think old Kavaren would have known by now what happens when he meddles with things he does not understand. If he's the wisest priest the Society has, we're in a lot more trouble than I thought!";
+		button_1_text = "Directions";
+       		button_1_value = d_0x0720055c;
+	}
+}
+[conversation_keely]
+{
+	[text*]
+	{
+
+		screen_text = "I found a newly hatched drakeling outside of the northern Drake's Nest once. By the time my mother made me let it go, it had eaten half of our pigs and burned down our barn.";
+		button_1_text = "Directions";
+       		button_1_value = d_0x0720055a;
+	}
+}
+[conversation_keely_red]
+{
+	[text*]
+	{
+
+		screen_text = "I was curious about the Utraean Circle like everyone else, but I wish we'd been content with curiosity now that I know the consequences are so grim!";
+		button_1_text = "Directions";
+       		button_1_value = d_0x0720055a;
+	}
+}
+[conversation_rittren]
+{
+	[text*]
+	{
+
+		screen_text = "Used to be anyone could explore Castle Hiroth and maybe even meet the queen! But ever since she died, the doors have been closed. If you look in the windows, you'll see strange shadows moving around inside. And now the town is being attacked by undead!";
+		button_1_text = "Directions";
+       		button_1_value = d_0x07200534;
+	}
+}
+[conversation_rittren_red]
+{
+	[text*]
+	{
+
+		screen_text = "Ohhh, the air is full of brimstone! I think I'm going to be sick.";
+		button_1_text = "Directions";
+       		button_1_value = d_0x07200534;
+	}
+}
+[conversation_guard_1]
+{
+	[text*]
+	{
+
+		screen_text = "Before all hell broke loose here, there was talk of an envoy to the oasis town of Grescal. I wouldn't want to be assigned to that one -- a trip through the Endless Dunes is likely to be, well, endless!";
+		button_1_text = "Directions";
+       		button_1_value = d_0x07200581;
+	}
+}
+[conversation_guard_1_red]
+{
+	[text*]
+	{
+
+		screen_text = "What I wouldn't give to be in Grescal now! I'd put up with sand in my armor if it got me away from this terrible haze!";
+		button_1_text = "Directions";
+       		button_1_value = d_0x07200581;
+	}
+}
+[conversation_guard_2]
+{
+	[text*]
+	{
+
+		screen_text = "It'll take more Legionnaires than we've got to make Castle Hiroth safe again.";
+		button_1_text = "Directions";
+       		button_1_value = d_0x07200582;
+	}
+}
+[conversation_guard_2_red]
+{
+	[text*]
+	{
+
+		screen_text = "The very air is burning! It was a trap!";
+		button_1_text = "Directions";
+       		button_1_value = d_0x07200582;
+	}
+}
+[conversation_guard_3]
+{
+	[text*]
+	{
+
+		screen_text = "I've always wanted to visit the oasis town of Grescal, but I'd never make it through the Endless Dunes without one of their hermits as a guide. It's said the Hiroth Mausoleum underneath the castle exits to the edge of the dunes, and anyone convicted of banditry is left out there to die.";
+		button_1_text = "Directions";
+       		button_1_value = d_0x07200584;
+	}
+}
+[conversation_guard_3_red]
+{
+	[text*]
+	{
+
+		screen_text = "Let's just break everything we can find and get if over with already. For the time being, keep your eyes open for strange creatures in the fog.";
+		button_1_text = "Directions";
+       		button_1_value = d_0x07200584;
+	}
+}
+
+[conversation_guard_5]
+{
+	[text*]
+	{
+
+		screen_text = "Hiroth may appear peaceful at first glance, but there are undercurrents here you don't want to mess with. We're caught between dragons to the north and undead to the south, and only a handful of Legionnaires are left to keep the town intact.";
+		button_1_text = "Directions";
+       		button_1_value = d_0x07200580;
+	}
+}
+[conversation_guard_5_red]
+{
+	[text*]
+	{
+
+		screen_text = "I'm just a guard, what do I know of ancient relics and magical mist? I'll keep the road clear and leave someone else to fix the world.";
+		button_1_text = "Directions";
+       		button_1_value = d_0x07200580;
+	}
+}
+[conversation_lillian]
+{
+	[text*]
+	{
+
+		screen_text = "They say it's perfectly safe back here far away from the fighting in Hiroth Castle to the south, but I'm sticking close to my livestock just in case. ";
+		button_1_text = "Directions";
+       		button_1_value = d_0x07200565;
+	}
+}
+[conversation_lillian_red]
+{
+	[text*]
+	{
+
+		screen_text = "This is the first time I've ever been more spooked than the animals. I don't know what's scarier -- going inside where I can't see if we're being attacked, or staying out here where anything might creep up behind me!";
+		button_1_text = "Directions";
+       		button_1_value = d_00x07200565;
+	}
+}
+
+[conversation_guard_s]
+{
+	[text*]	// 57 - 59
+	{
+
+		screen_text = "It's sorry times when Castle Hiroth is unsafe even for Legionnaires. You look suited-up enough to brave the corridors, but don't be expecting it to be as pristine as the days of old.";
+			button_1_text = "Directions";
+       		button_1_value = d_0x07200669;
+	}
+}
+[conversation_guard_s_low]
+{
+	[text*] //level 56 or lower
+	{
+
+		screen_text = "Hiroth is under attack by an undead army, and the wilds outside come closer every day. An adventurer as inexperienced as yourself would be foolish to venture outside the Dusky Rose tavern, let alone beyond the town itself!";
+		button_1_text = "Directions";
+       	button_1_value = d_0x07200669;
+	}
+}
+[conversation_guard_s_high]
+{
+	[text*]	//level 60+
+	{
+
+		screen_text = "Hail, friend! An adventurer as well-traveled as yourself must be downright bored with Hiroth. I'm afraid you won't find much that's more exciting outside, what with your expertise.";
+		button_1_text = "Directions";
+       	button_1_value = d_0x07200669;
+	}
+}
+[conversation_guard_s_red]
+{
+	[text*]
+	{
+		
+		screen_text = "Egads! Priest Kavaren speaks of vile creatures emerging from the depths of the earth. And we thought undead warriors were a formidable enemy.";
+			button_1_text = "Directions";
+       		button_1_value = d_0x07200669;
+	}
+}
+
+[conversation_guard_n]
+{
+	[text*]// 55 - 57
+	{
+
+		screen_text = "Best stay on your guard while visiting Hiroth. The drakes in the north have been causing trouble again, and that's not the worst of it. There's a skeletal army invading from the south, and they've almost broken through our defenses!";
+		button_1_text = "Directions";
+       		button_1_value = d_0x0720057f;
+	}
+}
+[conversation_guard_n_low]
+{
+	[text*] //level 54 or lower
+	{
+
+		screen_text = "Hiroth is under attack by an undead army, and the wilds outside come closer every day. An adventurer as inexperienced as yourself would be foolish to venture outside the Dusky Rose tavern, let alone beyond the town itself!";
+		button_1_text = "Directions";
+       	button_1_value = d_0x0720057f;
+	}
+}
+[conversation_guard_n_high]
+{
+	[text*]	//level 58+
+	{
+
+		screen_text = "Hail, friend! An adventurer as well-traveled as yourself must be downright bored with Hiroth. I'm afraid you won't find much that's more exciting outside, what with your expertise.";
+		button_1_text = "Directions";
+       	button_1_value = d_0x0720057f;
+	}
+}
+[conversation_guard_n_red]
+{
+	[text*]
+	{
+
+		screen_text = "If you put a wet rag over your nose and mouth, the putrid air is a bit more bearable.";
+		button_1_text = "Directions";
+       		button_1_value = d_0x0720057f;
+	}
+}
+
+

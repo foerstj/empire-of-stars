@@ -1,0 +1,351 @@
+[t:elevator_2s_1c_1n,n:0x07200573]
+{
+	[elevator_2s_1c_1n]
+	{
+	  i connect_door_level1 = 54;
+	  i connect_door_level2 = 53;
+	  x connect_node = 0xE0CA8E03;
+	  f duration = 10;
+	  i elevator_door_level1 = 1;
+	  i elevator_door_level2 = 1;
+	  x elevator_node = 0xFCEF354F;
+		material = "hub";
+	}
+	[placement]
+	{
+	  p position = 0.746109,-7.6,-1.04585,0xe0ca8e03;
+	}
+}
+[t:elevator_2s_1c_1n,n:0x072001cc]
+{
+	[common]
+	{
+		dev_instance_text = "special one-shot elevator for TOP piece";
+	}
+	[elevator_2s_1c_1n]
+	{
+	  i connect_door_level1 = 53;
+	  i connect_door_level2 = 54;
+	  x connect_node = 0xE0CA8E03;
+	  f duration = 7;
+	  i elevator_door_level1 = 1;
+	  i elevator_door_level2 = 1;
+	  x elevator_node = 0xFCEF354F;
+		material = "hub";
+	}
+	[placement]
+	{
+	  p position = -1.05774,-7.6,-0.464378,0xc6a8534e;
+	}
+}
+[t:elevator_2s_1c_1n,n:0x07200217]
+{
+	[elevator_2s_1c_1n]
+	{
+	  i connect_door_level1 = 35;
+	  i connect_door_level2 = 33;
+	  x connect_node = 0xE0CA8E03;
+	  f duration = 7;
+	  i elevator_door_level1 = 1;
+	  i elevator_door_level2 = 1;
+	  x elevator_node = 0xC6A8534E;
+	  x level2_scid = 0x07200819;
+		material = "hub";
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.92388,0,0.382683;
+	  p position = -0.352173,-12.6,-1.11204,0xc6a8534e;
+	}
+}
+[t:elevator_2s_1c_2n,n:0x0720022c]
+{
+	[elevator_2s_1c_2n]
+	{
+	  i connect_door_level1 = 33;
+	  i connect_door_level2 = 9;
+	  x connect_node_level1 = 0xE0CA8E03;
+	  x connect_node_level2 = 0x12EC73AF;
+	  f duration = 10;
+	  i elevator_door_level1 = 1;
+	  i elevator_door_level2 = 1;
+	  x elevator_node = 0xC6A8534E;
+		material = "hub";
+		moving1_actioninfo = "multiplayer_world_hub_quest_dun_1;0xBCE27414,1,-1,-1,out:black;0x82EF8A87,1,-1,-1,in;0xBCE27414,3,-1,-1,out:black";
+		moving2_actioninfo = "multiplayer_world_castle_town_1,9;0xBCE27414,1,-1,-1,in,8.5;0x82EF8A87,1,-1,-1,out:black,9;0xBCE27414,3,-1,-1,in,9";
+	}
+	[gizmo]
+	{
+	  v diffuse_color = 1,0,0;
+	}
+	[placement]
+	{
+	  p position = -1.00403,-12.6,0.636475,0xc6a8534e;
+	}
+}
+[t:elevator_2s_1c_1n_act_deact,n:0x07200676]
+{
+	[elevator_2s_1c_1n_act_deact]
+	{
+	  i connect_door_level1 = 49;
+	  i connect_door_level2 = 50;
+	  x connect_node = 0xE0CA8E03;
+	  f duration = 0.5;
+	  i elevator_door_level1 = 1;
+	  i elevator_door_level2 = 1;
+	  x elevator_node = 0x3D4F723D;
+		level1_message = we_req_deactivate;
+	  x level1_scid = 0x07200675;
+	  x level2_scid = 0x07200675;
+		material = "bigplate";
+	}
+	[placement]
+	{
+	  p position = 0.208115,-7.0422,-8.74017,0x3d4f723d;
+	}
+}
+[t:elevator_2s_1c_1n_act_deact,n:0x0720067d]
+{
+	[elevator_2s_1c_1n_act_deact]
+	{
+	  i connect_door_level1 = 51;
+	  i connect_door_level2 = 52;
+	  x connect_node = 0xE0CA8E03;
+	  f duration = 0.5;
+	  i elevator_door_level1 = 1;
+	  i elevator_door_level2 = 1;
+	  x elevator_node = 0x2A11BA56;
+		level1_message = we_req_deactivate;
+	  x level1_scid = 0x07200675;
+	  x level2_scid = 0x07200675;
+		material = "bigplate";
+	}
+	[placement]
+	{
+	  p position = 6.44233,-7.0422,-6.10858,0x2a11ba56;
+	}
+}
+[t:elevator_2s_1c_1n_act_deact,n:0x07200682]
+{
+	[elevator_2s_1c_1n_act_deact]
+	{
+	  i connect_door_level1 = 47;
+	  i connect_door_level2 = 48;
+	  x connect_node = 0xE0CA8E03;
+	  f duration = 0.5;
+	  i elevator_door_level1 = 1;
+	  i elevator_door_level2 = 1;
+	  x elevator_node = 0xD4D19F43;
+		level1_message = we_req_deactivate;
+	  x level1_scid = 0x07200675;
+	  x level2_scid = 0x07200675;
+		material = "bigplate";
+	}
+	[placement]
+	{
+	  q orientation = 0,0.707107,0,0.707107;
+	  p position = 6.5051,-7.0422,-7.00303,0xd4d19f43;
+	}
+}
+[t:elevator_2s_1c_1n_act_deact,n:0x07200681]
+{
+	[elevator_2s_1c_1n_act_deact]
+	{
+	  i connect_door_level1 = 45;
+	  i connect_door_level2 = 46;
+	  x connect_node = 0xE0CA8E03;
+	  f duration = 0.5;
+	  i elevator_door_level1 = 1;
+	  i elevator_door_level2 = 1;
+	  x elevator_node = 0x36FD18C7;
+		level1_message = we_req_deactivate;
+	  x level1_scid = 0x07200675;
+	  x level2_scid = 0x07200675;
+		material = "bigplate";
+	}
+	[placement]
+	{
+	  q orientation = 0,0.707107,0,0.707107;
+	  p position = 0.257706,-7.0422,-10.0613,0x36fd18c7;
+	}
+}
+[t:elevator_2s_1c_1n_act_deact,n:0x07200680]
+{
+	[elevator_2s_1c_1n_act_deact]
+	{
+	  i connect_door_level1 = 43;
+	  i connect_door_level2 = 44;
+	  x connect_node = 0xE0CA8E03;
+	  f duration = 0.5;
+	  i elevator_door_level1 = 1;
+	  i elevator_door_level2 = 1;
+	  x elevator_node = 0x52FECF53;
+		level1_message = we_req_deactivate;
+	  x level1_scid = 0x07200675;
+	  x level2_scid = 0x07200675;
+		material = "bigplate";
+	}
+	[placement]
+	{
+	  q orientation = 0,1,0,-7.45058e-008;
+	  p position = 5.41215,-7.0422,-6.74518,0x52fecf53;
+	}
+}
+[t:elevator_2s_1c_1n_act_deact,n:0x0720067f]
+{
+	[elevator_2s_1c_1n_act_deact]
+	{
+	  i connect_door_level1 = 41;
+	  i connect_door_level2 = 42;
+	  x connect_node = 0xE0CA8E03;
+	  f duration = 0.5;
+	  i elevator_door_level1 = 1;
+	  i elevator_door_level2 = 1;
+	  x elevator_node = 0x77053D06;
+		level1_message = we_req_deactivate;
+	  x level1_scid = 0x07200675;
+	  x level2_scid = 0x07200675;
+		material = "bigplate";
+	}
+	[placement]
+	{
+	  q orientation = 0,1,0,0;
+	  p position = -0.529655,-7.0422,-9.72112,0x77053d06;
+	}
+}
+[t:elevator_2s_1c_1n_act_deact,n:0x0720067e]
+{
+	[elevator_2s_1c_1n_act_deact]
+	{
+	  i connect_door_level1 = 39;
+	  i connect_door_level2 = 40;
+	  x connect_node = 0xE0CA8E03;
+	  f duration = 0.5;
+	  i elevator_door_level1 = 1;
+	  i elevator_door_level2 = 1;
+	  x elevator_node = 0x1E84E611;
+		level1_message = we_req_deactivate;
+	  x level1_scid = 0x07200675;
+	  x level2_scid = 0x07200675;
+		material = "bigplate";
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.707107,0,0.707107;
+	  p position = 5.89116,-7.0422,-6.16126,0x1e84e611;
+	}
+}
+[t:elevator_2s_1c_1n_act_deact,n:0x072005d2]
+{
+	[elevator_2s_1c_1n_act_deact]
+	{
+	  i connect_door_level1 = 37;
+	  i connect_door_level2 = 38;
+	  x connect_node = 0xE0CA8E03;
+	  f duration = 0.5;
+	  i elevator_door_level1 = 1;
+	  i elevator_door_level2 = 1;
+	  x elevator_node = 0x71F7841F;
+		level1_message = we_req_deactivate;
+	  x level1_scid = 0x07200675;
+	  x level2_scid = 0x07200675;
+		material = "bigplate";
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.707107,0,0.707107;
+	  p position = -0.44754,-7.0422,-9.03981,0x71f7841f;
+	}
+}
+[t:elevator_2s_1c_2n,n:0x07200823]
+{
+	[elevator_2s_1c_2n]
+	{
+	  i connect_door_level1 = 10;
+	  i connect_door_level2 = 2;
+	  x connect_node_level1 = 0xA2859AFC;
+	  x connect_node_level2 = 0x36ACFF35;
+	  f duration = 5;
+	  i elevator_door_level1 = 1;
+	  i elevator_door_level2 = 1;
+	  x elevator_node = 0xDDFBF464;
+		material = "dm_small";
+		moving1_actioninfo = "0xBCE27414,4,-1,-1,in,4;0xAAA20200,4,1,-1,in,4";
+		moving2_actioninfo = "0xBCE27414,4,-1,-1,out:black;0xAAA20200,4,1,-1,out:black";
+	}
+	[placement]
+	{
+	  p position = -0.0838852,3.37233,-0.172943,0xddfbf464;
+	}
+}
+[t:elevator_instant_4s_1c,n:0x07200694]
+{
+	[elevator_instant_4s_1c]
+	{
+	  i connect_door_location1_level1 = 7;
+	  i connect_door_location1_level2 = 8;
+	  i connect_door_location2_level1 = 5;
+	  i connect_door_location2_level2 = 6;
+	  x connect_node_location1 = 0x36ACFF35;
+	  x connect_node_location2 = 0x558B1350;
+		down_effect = "displacer_plate_down";
+	  f duration_location1_moving_to_lv1 = 16;
+	  f duration_location2_moving_to_lv1 = 16;
+	  i e2_connect_door_location1_level1 = 9;
+	  i e2_connect_door_location1_level2 = 10;
+	  i e2_connect_door_location2_level1 = 7;
+	  i e2_connect_door_location2_level2 = 8;
+	  i e2_elevator_door_location1_level1 = 2;
+	  i e2_elevator_door_location1_level2 = 2;
+	  i e2_elevator_door_location2_level1 = 2;
+	  i e2_elevator_door_location2_level2 = 2;
+	  x e2_elevator_node = 0x4A598D2C;
+	  x elevator_node = 0xD83C8404;
+		location1_moving_to_lv1_actioninfo = "multiplayer_world_castle_town_teleport";
+		location1_moving_to_lv2_actioninfo = "multiplayer_world_teleport";
+		location2_moving_to_lv1_actioninfo = "multiplayer_world_desert_teleport";
+		location2_moving_to_lv2_actioninfo = "multiplayer_world_teleport";
+		material = "hub";
+	  x other_elevator = 0x0710048A;
+		up_effect = "displacer_plate_up";
+	}
+	[placement]
+	{
+	  p position = 0,5,0,0xd83c8404;
+	}
+}
+[t:elevator_instant_4s_1c,n:0x072005f0]
+{
+	[elevator_instant_4s_1c]
+	{
+	  i connect_door_location1_level1 = 9;
+	  i connect_door_location1_level2 = 11;
+	  i connect_door_location2_level1 = 4;
+	  i connect_door_location2_level2 = 2;
+	  x connect_node_location1 = 0xA931D4E9;
+	  x connect_node_location2 = 0xD14939A3;
+	  f duration_location1_moving_to_lv1 = 16;
+	  f duration_location2_moving_to_lv1 = 16;
+	  i e2_connect_door_location1_level1 = 10;
+	  i e2_connect_door_location1_level2 = 12;
+	  i e2_connect_door_location2_level1 = 3;
+	  i e2_connect_door_location2_level2 = 1;
+	  i e2_elevator_door_location1_level1 = 2;
+	  i e2_elevator_door_location1_level2 = 2;
+	  i e2_elevator_door_location2_level1 = 2;
+	  i e2_elevator_door_location2_level2 = 2;
+	  x e2_elevator_node = 0xEACF22F6;
+	  x elevator_node = 0xE922CC15;
+		location1_moving_to_lv1_actioninfo = "multiplayer_world_castle_town_teleport";
+		location1_moving_to_lv2_actioninfo = "multiplayer_world_teleport";
+		location2_moving_to_lv1_actioninfo = "multiplayer_world_new_hub_teleport";
+		location2_moving_to_lv2_actioninfo = "multiplayer_world_teleport";
+		material = "hub";
+	  x other_elevator = 0x07F00052;
+	}
+	[placement]
+	{
+	  q orientation = 0,1,0,0;
+	  p position = 0,5,0,0xe922cc15;
+	}
+}
