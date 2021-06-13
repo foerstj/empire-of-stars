@@ -6,63 +6,11 @@
 	  p position = 2.569,3.9425,3.89566,0xfd7d60b2;
 	}
 }
-[t:emt_sound,n:0x0700070b]
+[t:emt_sound,n:0x0700070d]
 {
 	[placement]
 	{
-	  p position = -3.82251,3.8147e-006,-0.334309,0x5c165de9;
-	}
-	[sound_emitter]
-	{
-		event_sound = "env_haunting";
-	  f max_repeat_rate = 80;
-	  f repeat_rate = 20;
-	}
-}
-[t:emt_sound,n:0x07000537]
-{
-	[placement]
-	{
-	  p position = 1.26866,0,0.0570909,0xd5c29e39;
-	}
-	[sound_emitter]
-	{
-		event_sound = "env_haunting";
-	  f max_repeat_rate = 80;
-	  f repeat_rate = 20;
-	}
-}
-[t:emt_sound,n:0x07000536]
-{
-	[placement]
-	{
-	  p position = 2.83557,0,1.80776,0x1eae30f2;
-	}
-	[sound_emitter]
-	{
-		event_sound = "env_moaning";
-	  f max_repeat_rate = 80;
-	  f repeat_rate = 20;
-	}
-}
-[t:emt_sound,n:0x070002db]
-{
-	[placement]
-	{
-	  p position = -0.977637,0,0.0935132,0x12e61727;
-	}
-	[sound_emitter]
-	{
-		event_sound = "env_haunting";
-	  f max_repeat_rate = 80;
-	  f repeat_rate = 20;
-	}
-}
-[t:emt_sound,n:0x0700052c]
-{
-	[placement]
-	{
-	  p position = -0.886018,-3.8147e-006,3.99131,0xfc599289;
+	  p position = 1.50059,0,0.448036,0x74252fe2;
 	}
 	[sound_emitter]
 	{
@@ -93,6 +41,96 @@
 	  p position = -2.1374,2.73674,-3.01283,0x616c66b7;
 	}
 }
+[t:emt_sound,n:0x0700070b]
+{
+	[placement]
+	{
+	  p position = -3.82251,3.8147e-006,-0.334309,0x5c165de9;
+	}
+	[sound_emitter]
+	{
+		event_sound = "env_haunting";
+	  f max_repeat_rate = 80;
+	  f repeat_rate = 20;
+	}
+}
+[t:emt_sound,n:0x07000342]
+{
+	[placement]
+	{
+	  p position = -0.31154,-1.90735e-006,-0.0802689,0x7d753f72;
+	}
+	[sound_emitter]
+	{
+		event_sound = "env_moaning";
+	  f max_repeat_rate = 60;
+	  f repeat_rate = 20;
+	}
+}
+[t:emt_sound,n:0x07000536]
+{
+	[placement]
+	{
+	  p position = 2.83557,0,1.80776,0x1eae30f2;
+	}
+	[sound_emitter]
+	{
+		event_sound = "env_moaning";
+	  f max_repeat_rate = 80;
+	  f repeat_rate = 20;
+	}
+}
+[t:emt_sound,n:0x0700052c]
+{
+	[placement]
+	{
+	  p position = -0.886018,-3.8147e-006,3.99131,0xfc599289;
+	}
+	[sound_emitter]
+	{
+		event_sound = "env_haunting";
+	  f max_repeat_rate = 80;
+	  f repeat_rate = 20;
+	}
+}
+[t:emt_sound,n:0x07000716]
+{
+	[placement]
+	{
+	  p position = 1.16186,0,0.236193,0xaa0838a6;
+	}
+	[sound_emitter]
+	{
+		event_sound = "env_haunting";
+	  f max_repeat_rate = 15;
+	}
+}
+[t:emt_sound,n:0x07000714]
+{
+	[placement]
+	{
+	  p position = -0.235245,0,0.0632438,0x0c53776a;
+	}
+	[sound_emitter]
+	{
+		event_sound = "env_moaning";
+	  f max_repeat_rate = 60;
+	  f repeat_rate = 20;
+	}
+}
+[t:emt_sound,n:0x0700070c]
+{
+	[placement]
+	{
+	  p position = -1.12595,7.62939e-006,-0.909046,0x7e69386a;
+	}
+	[sound_emitter]
+	{
+		event_sound = "env_voices_whispering";
+	  f max_repeat_rate = 60;
+	  f repeat_rate = 10;
+	}
+}
 [t:emt_sound,n:0x0700070a]
 {
 	[placement]
@@ -106,18 +144,51 @@
 	  f repeat_rate = 20;
 	}
 }
-[t:emt_sound,n:0x07000710]
+[t:emt_sound,n:0x070002db]
 {
 	[placement]
 	{
-	  q orientation = 0,1,0,0;
-	  p position = -0.302048,-3.8147e-006,-0.556316,0x95c4ba96;
+	  p position = -0.977637,0,0.0935132,0x12e61727;
 	}
 	[sound_emitter]
 	{
-		event_sound = "env_moaning";
+		event_sound = "env_haunting";
 	  f max_repeat_rate = 80;
 	  f repeat_rate = 20;
+	}
+}
+[t:emt_glow,n:0x070001ab]
+{
+	[glow_emitter]
+	{
+	  f blue = 0.4;
+	  f green = 0.4;
+	  f radius = 0.2;
+	  f red = 0.1;
+	  b sparkle = true;
+	  b use_star = true;
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.707106,0,0.707107;
+	  p position = 0.214138,1.22924,-0.106033,0x909bc901;
+	}
+}
+[t:emt_glow,n:0x07000456]
+{
+	[glow_emitter]
+	{
+	  f blue = 0.8;
+	  f radius = 0.4;
+	  f red = 0.1;
+	  b sparkle = true;
+	  f theta = 0.2;
+	  b use_star = true;
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.707106,0,0.707107;
+	  p position = 0.19421,1.50428,-0.104217,0x909bc901;
 	}
 }
 [t:emt_spark,n:0x070001ac]
@@ -185,38 +256,18 @@
 	  f repeat_rate = 20;
 	}
 }
-[t:emt_glow,n:0x070001ab]
+[t:emt_sound,n:0x07000710]
 {
-	[glow_emitter]
-	{
-	  f blue = 0.4;
-	  f green = 0.4;
-	  f radius = 0.2;
-	  f red = 0.1;
-	  b sparkle = true;
-	  b use_star = true;
-	}
 	[placement]
 	{
-	  q orientation = 0,-0.707106,0,0.707107;
-	  p position = 0.214138,1.22924,-0.106033,0x909bc901;
+	  q orientation = 0,1,0,0;
+	  p position = -0.302048,-3.8147e-006,-0.556316,0x95c4ba96;
 	}
-}
-[t:emt_glow,n:0x07000456]
-{
-	[glow_emitter]
+	[sound_emitter]
 	{
-	  f blue = 0.8;
-	  f radius = 0.4;
-	  f red = 0.1;
-	  b sparkle = true;
-	  f theta = 0.2;
-	  b use_star = true;
-	}
-	[placement]
-	{
-	  q orientation = 0,-0.707106,0,0.707107;
-	  p position = 0.19421,1.50428,-0.104217,0x909bc901;
+		event_sound = "env_moaning";
+	  f max_repeat_rate = 80;
+	  f repeat_rate = 20;
 	}
 }
 [t:emt_sound,n:0x07000706]
@@ -232,67 +283,16 @@
 	  f repeat_rate = 20;
 	}
 }
-[t:emt_sound,n:0x0700070c]
+[t:emt_sound,n:0x07000537]
 {
 	[placement]
 	{
-	  p position = -1.12595,7.62939e-006,-0.909046,0x7e69386a;
-	}
-	[sound_emitter]
-	{
-		event_sound = "env_voices_whispering";
-	  f max_repeat_rate = 60;
-	  f repeat_rate = 10;
-	}
-}
-[t:emt_sound,n:0x07000716]
-{
-	[placement]
-	{
-	  p position = 1.16186,0,0.236193,0xaa0838a6;
-	}
-	[sound_emitter]
-	{
-		event_sound = "env_haunting";
-	  f max_repeat_rate = 15;
-	}
-}
-[t:emt_sound,n:0x0700070d]
-{
-	[placement]
-	{
-	  p position = 1.50059,0,0.448036,0x74252fe2;
+	  p position = 1.26866,0,0.0570909,0xd5c29e39;
 	}
 	[sound_emitter]
 	{
 		event_sound = "env_haunting";
 	  f max_repeat_rate = 80;
-	  f repeat_rate = 20;
-	}
-}
-[t:emt_sound,n:0x07000342]
-{
-	[placement]
-	{
-	  p position = -0.31154,-1.90735e-006,-0.0802689,0x7d753f72;
-	}
-	[sound_emitter]
-	{
-		event_sound = "env_moaning";
-	  f max_repeat_rate = 60;
-	  f repeat_rate = 20;
-	}
-}
-[t:emt_sound,n:0x07000714]
-{
-	[placement]
-	{
-	  p position = -0.235245,0,0.0632438,0x0c53776a;
-	}
-	[sound_emitter]
-	{
-		event_sound = "env_moaning";
-	  f max_repeat_rate = 60;
 	  f repeat_rate = 20;
 	}
 }
