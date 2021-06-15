@@ -1791,80 +1791,6 @@
 	  p position = 0.227648,0.2,0.202927,0xddfbf464;
 	}
 }
-[t:tutorial_tip,n:0x0720013d]
-{
-	[common]
-	{
-		dev_instance_text = "DISPLACER TIP";
-	}
-	[placement]
-	{
-	  p position = 1.34391,-0.599999,-0.472217,0x36acff35;
-	}
-	[tip]
-	{
-		tip = "tip_4";
-	}
-}
-[t:trigger_generic,n:0x072001cd]
-{
-	[common]
-	{
-		dev_instance_text = "TIP TRIGGER";
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = send_world_message("we_req_activate",0x0720013D,0f,"0x4002","every",0);
-			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(3.000000,0.500000,3.000000,"on_unique_enter");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  p position = 0.201349,-0.6,-0.0761108,0x36acff35;
-	}
-}
-[t:trigger_generic,n:0x07200692]
-{
-	[common]
-	{
-		dev_instance_text = "PLAYER LOCATION";
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = set_player_world_location("hiroth");
-			  b can_self_destruct = true;
-				condition* = party_member_within_sphere(4.000000,"on_every_enter");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  q orientation = 0,1,0,0;
-	  p position = 0.118626,-0.6,-0.596756,0x36acff35;
-	}
-}
 [t:use_point,n:0x0720081f]
 {
 	[placement]
@@ -1877,29 +1803,6 @@
 	[placement]
 	{
 	  p position = -2.59569,-0.600001,2.56473,0x36acff35;
-	}
-}
-[t:check_quest_bits,n:0x07200696]
-{
-	[check_quest_bits]
-	{
-		bool_variable = "teleport_castle_town_desert_active";
-	  i level = 1;
-	  i object = -1;
-	  i region = -1126009836;
-	  i section = 4;
-	  x send_to_scid = 0x07200694;
-	}
-	[placement]
-	{
-	  p position = -0.0237274,1.55496,0.0289764,0xd83c8404;
-	}
-}
-[t:use_point,n:0x0720081b]
-{
-	[placement]
-	{
-	  p position = -0.67939,0.2,0.480103,0xd83c8404;
 	}
 }
 [t:use_point,n:0x072000de]
