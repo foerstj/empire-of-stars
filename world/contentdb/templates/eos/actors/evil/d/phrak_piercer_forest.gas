@@ -1,0 +1,56 @@
+[t:template,n:phrak_piercer_forest]
+{
+	category_name = "1W_evil_d";
+	doc = "phrak_forest";
+	specializes = base_phrak;
+	[actor]
+	{
+		[skills]
+		{
+			strength =  	6, 0;
+			intelligence =  2, 0;
+			dexterity =  	17, 0;
+            melee = 		12, 0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 2000;
+		life = 180;
+        max_life = 180;
+        mana = 2;
+		max_mana = 2;
+		scale_base = 0.40;
+		textures:0 = b_c_edm_ph-02;
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 105;
+		damage_min = 95;
+	}
+	[common]
+	{
+		screen_name="Forest Phrak Piercer";
+		membership = monster, party_spiked_dweller;
+	}
+    [defend] { defense=100; }
+
+	[inventory]
+	{
+		selected_active_location = il_active_primary_spell;
+		[other] { il_active_primary_spell=spell_phrak_forest_dart; }
+	}
+	[mind]
+	{
+		actor_weapon_preference			= WP_MAGIC;
+		actor_auto_switches_to_magic	= true;
+		actor_auto_switches_to_karate	= false;
+		actor_auto_switches_to_melee	= false;
+
+		jat_brain							= world\ai\jobs\common\brain_hero.skrit
+			?actor_joins_existing_party		= true
+			&guard							= true
+			&friends						= phrak;
+	}
+}
