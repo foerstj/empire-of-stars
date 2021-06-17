@@ -44,6 +44,10 @@
 }
 [t:elevator_instant_4s_1c,n:0x07f0003c]
 {
+	[common]
+	{
+		dev_instance_text = "ALTAIR";
+	}
 	[elevator_instant_4s_1c]
 	{
 	  i connect_door_location1_level1 = 15;
@@ -84,6 +88,10 @@
 }
 [t:elevator_instant_4s_1c,n:0x07f00063]
 {
+	[common]
+	{
+		dev_instance_text = "VEGA";
+	}
 	[elevator_instant_4s_1c]
 	{
 	  i connect_door_location1_level1 = 31;
@@ -124,6 +132,10 @@
 }
 [t:elevator_instant_4s_1c,n:0x07f0003d]
 {
+	[common]
+	{
+		dev_instance_text = "ARANNA";
+	}
 	[elevator_instant_4s_1c]
 	{
 	  i connect_door_location1_level1 = 23;
@@ -166,7 +178,7 @@
 {
 	[common]
 	{
-		dev_instance_text = "ELEVATOR";
+		dev_instance_text = "ALPHA CENTAURI";
 	}
 	[elevator_instant_4s_1c]
 	{
@@ -219,6 +231,7 @@
 	  i connect_door_location2_level1 = 10;
 	  i connect_door_location2_level2 = 12;
 	  x connect_node_location1 = 0xD14939A4;
+	  x connect_node_location2 = 0x8673E970;
 		down_effect = "eos_hub_plate_down";
 	  f duration_location1_moving_to_lv1 = 16;
 	  f duration_location2_moving_to_lv1 = 16;
@@ -226,6 +239,7 @@
 	  i e2_connect_door_location1_level2 = 10;
 	  i e2_connect_door_location2_level1 = 9;
 	  i e2_connect_door_location2_level2 = 11;
+	  x e2_elevator_node = 0xB7B17EF8;
 	  i elevator_door_location1_level1 = 2;
 	  i elevator_door_location1_level2 = 2;
 	  i elevator_door_location2_level1 = 2;
@@ -233,9 +247,10 @@
 	  x elevator_node = 0x0BF53F4F;
 		location1_moving_to_lv1_actioninfo = "multiplayer_world_new_hub_teleport";
 		location1_moving_to_lv2_actioninfo = "multiplayer_world_teleport";
-		location2_moving_to_lv1_actioninfo = "multiplayer_world_swamp_town_teleport";
+		location2_moving_to_lv1_actioninfo = "eos_sirius_teleport";
 		location2_moving_to_lv2_actioninfo = "multiplayer_world_teleport";
 		material = "hub";
+	  x other_elevator = 0x0E000004;
 		up_effect = "eos_hub_plate_up";
 	}
 	[gizmo]
@@ -249,6 +264,10 @@
 }
 [t:elevator_instant_4s_1c,n:0x07f00052]
 {
+	[common]
+	{
+		dev_instance_text = "ALDEBARAN";
+	}
 	[elevator_instant_4s_1c]
 	{
 	  i connect_door_location1_level1 = 3;
@@ -289,6 +308,10 @@
 }
 [t:elevator_instant_4s_1c,n:0x07f00065]
 {
+	[common]
+	{
+		dev_instance_text = "BETELGEUSE";
+	}
 	[elevator_instant_4s_1c]
 	{
 	  i connect_door_location1_level1 = 27;
