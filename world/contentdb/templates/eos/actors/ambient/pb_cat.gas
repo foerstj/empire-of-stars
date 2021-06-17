@@ -3,6 +3,7 @@
 	doc = "Base Cat Template";
 	specializes = actor_ambient;
 	category_name = "1W_ambients";
+
 	[actor] { race=other; alignment = aa_neutral;}
 	[aspect]
 	{
@@ -50,19 +51,13 @@
 			{
 				chore_stances = 0;
 				skrit = select_transition;
-				[anim_files]
-				{
-					00=di;
-				}
+				[anim_files] { 00=di; }
 			}
 			[chore_fidget]
 			{
 				chore_stances = 0;
 				skrit = select_fidget;
-				[anim_files]
-				{
-					00 = dsf;
-				}
+				[anim_files] { 00 = dsf; }
 			}
 			[chore_walk]
 			{

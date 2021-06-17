@@ -1,0 +1,37 @@
+[effect_script*]
+{
+    name = pb_sheep_baa;
+
+    script = [[
+        randrange 0 2;
+        set $temp #POP;
+        
+        if ( $temp == 0 )
+        {
+            sound play s_e_env_sheep at #SOURCE_POSITION dist 4 12;
+        }
+        else if ( $temp == 1 )
+        {
+            sound play s_e_env_sheep_die at #SOURCE_POSITION dist 4 12;
+        }
+    ]];
+}
+[effect_script*]
+{
+    name = pb_sheep_baa_maybe;
+
+    script = [[
+        randrange 0 4;
+        set $temp #POP;
+        
+        if ( $temp == 0 )
+        {
+            sound play s_e_env_sheep at #SOURCE_POSITION dist 4 12;
+        }
+        else if ( $temp == 1 )
+        {
+            sound play s_e_env_sheep_die at #SOURCE_POSITION dist 4 12;
+        }
+        // other half of the cases stay quiet
+    ]];
+}
