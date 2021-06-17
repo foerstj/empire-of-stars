@@ -1791,11 +1791,35 @@
 	  p position = 0.227648,0.2,0.202927,0xddfbf464;
 	}
 }
-[t:use_point,n:0x0720081b]
+[t:trigger_generic,n:0x0720006c]
 {
+	[common]
+	{
+		dev_instance_text = "RING";
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_activate",0x07200078,0f,"default","every",0);
+				action* = send_world_message("we_req_activate",0x07100019,0f,"default","every",0);
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_req_activate",0,"on_every_message");
+				condition* = has_go_in_inventory("local",0x00000000,"starstone_aldebaran");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
 	[placement]
 	{
-	  p position = -1.59141,-0.6,-2.59547,0x36acff35;
+	  p position = -0.0113016,-0.6,-1.60268,0x36acff35;
 	}
 }
 [t:use_point,n:0x0720081f]
@@ -1810,6 +1834,14 @@
 	[placement]
 	{
 	  p position = -2.59569,-0.600001,2.56473,0x36acff35;
+	}
+}
+[t:use_point,n:0x0720081b]
+{
+	[placement]
+	{
+	  q orientation = 0,1,0,0;
+	  p position = 0.640858,0.2,0.704117,0x4f012368;
 	}
 }
 [t:use_point,n:0x072000de]

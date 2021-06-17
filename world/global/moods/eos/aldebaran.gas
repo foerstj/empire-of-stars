@@ -267,3 +267,30 @@
 		standard_track = "s_m_Drums_01";
 	}
 }
+
+[mood_setting*]
+{
+	interior = false;
+	mood_name = eos_aldebaran_ring_teleport;
+	transition_time = 22.0f;
+	[fog]
+	{
+	  x fog_color = 0xFFC0C000;
+		fog_density = 0.5f;
+	  f fog_far_dist = 50.0f;
+		fog_lowdetail_far_dist = 45.0f;
+		fog_lowdetail_near_dist = 30.0f;
+	  f fog_near_dist = 40.0f;
+	}
+	[frustum]
+	{
+		frustum_height = 60.0f;
+		frustum_width = 45.0f;
+	}
+	[music]
+	{
+		ambient_track = "";
+		room_type = rt_generic;
+		standard_track = "s_m_Drums_01";
+	}
+}

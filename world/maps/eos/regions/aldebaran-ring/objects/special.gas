@@ -1,0 +1,37 @@
+[t:trigger_generic,n:0x0710001b]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_activate",0x07100019,0f,"default","every",0);
+				action* = send_world_message("we_req_activate",0x07200078,0f,"default","every",0);
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_req_activate",0,"on_every_message");
+				condition* = has_go_in_inventory("local",0x00000000,"starstone_aldebaran");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  p position = 0.0811452,0.199999,1.56438,0x2e95fa78;
+	}
+}
+[t:use_point,n:0x0710001a]
+{
+	[placement]
+	{
+	  p position = 0.423988,0.2,-0.413232,0x658e9d23;
+	}
+}
