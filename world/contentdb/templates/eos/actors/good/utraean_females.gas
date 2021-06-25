@@ -66,10 +66,10 @@
 		}
 	}
 }
-		// custom_head = m_c_gah_fg_hlmt_head-02;  // up
-		// custom_head = m_c_gah_fg_hlmt_head-03;  // short
-		// custom_head = m_c_gah_fg_hlmt_head-04;  // bald
-		// custom_head = m_c_gah_fg_hlmt_head-05;  // bun
+// custom_head = m_c_gah_fg_hlmt_head-02;  // up
+// custom_head = m_c_gah_fg_hlmt_head-03;  // short
+// custom_head = m_c_gah_fg_hlmt_head-04;  // bald
+// custom_head = m_c_gah_fg_hlmt_head-05;  // bun
 
 [t:template,n:eos_utraean_female_a1_1a_nude_base]
 {
@@ -302,5 +302,40 @@
 	[store]  // enable selling mules
 	{
 		item_markup = 2;
+	}
+}
+
+[t:template,n:eos_utraean_female_b1_base]
+{
+	category_name = "1W_townsperson";
+	specializes = dsx_base_npc_fg_multiplayer;
+	[aspect]
+	{
+		model = m_c_gah_fg_pos_b1;
+	}
+	[inventory]
+	{
+		[equipment]
+		{
+			// remove boots
+		}
+	}
+	[mind]
+	{
+        jat_talk = world\ai\jobs\common\job_talk.skrit;
+	}	
+}
+[t:template,n:eos_utraean_female_b1_dress]
+{
+    // Utraean woman wearing dress by kathycf
+	doc = "eos utraean female kathycf dress";
+	specializes = eos_utraean_female_b1_base;
+	[aspect]
+	{
+		[textures]
+		{
+			0 = b_c_gan_utraean_skin_04;
+			1 = b_c_pos_b1_utdress;
+		}
 	}
 }
