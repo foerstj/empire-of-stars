@@ -64,6 +64,24 @@
 	{
 		dev_instance_text = "C2";
 		screen_name = "Guard Thril";
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_deactivate",0x072000CB,0f,"default","every",0);
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_selected",0,"on_first_message");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = true;
+			  b start_active = true;
+			}
+		}
 	}
 	[conversation]
 	{
@@ -133,6 +151,24 @@
 	{
 		dev_instance_text = "C1";
 		screen_name = "Guard Crerkrins";
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_deactivate",0x07200590,0f,"default","every",0);
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_selected",0,"on_first_message");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = true;
+			  b start_active = true;
+			}
+		}
 	}
 	[conversation]
 	{
