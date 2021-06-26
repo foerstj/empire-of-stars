@@ -69,7 +69,11 @@
 	{
 		[conversations]
 		{
-			* = hire_test;
+			* = hire_accept_have_money;
+			* = hire_accept_no_money;
+			* = hire_c2_join;
+			* = hire_disband;
+			* = hire_reject;
 		}
 	}
 	[inventory]
@@ -87,8 +91,7 @@
 	[mind]
 	{
 	  b actor_auto_fidgets = false;
-	  b actor_may_attack = false;
-	  b actor_may_be_attacked = false;
+		jat_talk = world\ai\jobs\eos\job_talk_ad_hire_c2.skrit;
 	}
 	[placement]
 	{
@@ -102,6 +105,21 @@
 	{
 		dev_instance_text = "M2";
 		screen_name = "Guard Ukens";
+	}
+	[conversation]
+	{
+		[conversations]
+		{
+			* = hire_accept_have_money;
+			* = hire_accept_no_money;
+			* = hire_disband;
+			* = hire_m2_join;
+			* = hire_reject;
+		}
+	}
+	[mind]
+	{
+		jat_talk = world\ai\jobs\eos\job_talk_ad_hire_m2.skrit;
 	}
 	[placement]
 	{
@@ -120,7 +138,11 @@
 	{
 		[conversations]
 		{
-			* = hire_test;
+			* = hire_accept_have_money;
+			* = hire_accept_no_money;
+			* = hire_c1_join;
+			* = hire_disband;
+			* = hire_reject;
 		}
 	}
 	[inventory]
@@ -141,8 +163,7 @@
 	[mind]
 	{
 	  b actor_auto_fidgets = false;
-	  b actor_may_attack = false;
-	  b actor_may_be_attacked = false;
+		jat_talk = world\ai\jobs\eos\job_talk_ad_hire_c1.skrit;
 	}
 	[placement]
 	{
@@ -317,8 +338,16 @@
 	{
 		[conversations]
 		{
-			* = hire_test;
+			* = hire_accept_have_money;
+			* = hire_accept_no_money;
+			* = hire_disband;
+			* = hire_r1_join;
+			* = hire_reject;
 		}
+	}
+	[mind]
+	{
+		jat_talk = world\ai\jobs\eos\job_talk_ad_hire_r1.skrit;
 	}
 	[placement]
 	{
@@ -503,8 +532,16 @@
 	{
 		[conversations]
 		{
-			* = hire_test;
+			* = hire_accept_have_money;
+			* = hire_accept_no_money;
+			* = hire_disband;
+			* = hire_r2_join;
+			* = hire_reject;
 		}
+	}
+	[mind]
+	{
+		jat_talk = world\ai\jobs\eos\job_talk_ad_hire_r2.skrit;
 	}
 	[placement]
 	{
@@ -634,8 +671,16 @@
 	{
 		[conversations]
 		{
-			* = hire_test;
+			* = hire_accept_have_money;
+			* = hire_accept_no_money;
+			* = hire_disband;
+			* = hire_n1_join;
+			* = hire_reject;
 		}
+	}
+	[mind]
+	{
+		jat_talk = world\ai\jobs\eos\job_talk_ad_hire_n1.skrit;
 	}
 	[placement]
 	{
@@ -955,8 +1000,16 @@
 	{
 		[conversations]
 		{
-			* = hire_test;
+			* = hire_accept_have_money;
+			* = hire_accept_no_money;
+			* = hire_disband;
+			* = hire_n2_join;
+			* = hire_reject;
 		}
+	}
+	[mind]
+	{
+		jat_talk = world\ai\jobs\eos\job_talk_ad_hire_n2.skrit;
 	}
 	[placement]
 	{
