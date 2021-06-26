@@ -96,13 +96,15 @@
 	}
 	[inventory]
 	{
+		selected_active_location = il_active_primary_spell;
 		[equipment]
 		{
 			es_chest = bd_ra_ro_m_g_c_026;
+			es_spellbook = book_glb_magic_01;
 		}
 		[other]
 		{
-			il_shield = sh_m_g_c_r_s_avg;
+			il_active_primary_spell = spell_fireball;
 		}
 	}
 	[mind]
@@ -139,6 +141,7 @@
 		[equipment]
 		{
 			es_chest = bd_pl_f_g_c_avg_alloy_dsx;
+			es_weapon_hand = sd_g_c_st_2h_avg;
 		}
 	}
 	[mind]
@@ -189,16 +192,15 @@
 	}
 	[inventory]
 	{
+		selected_active_location = il_active_primary_spell;
 		[equipment]
 		{
 			es_chest = bd_ra_ro_m_g_c_018;
+			es_spellbook = book_glb_magic_01;
 		}
 		[other]
 		{
-			il_active_melee_weapon = ax_carnage;
-			il_active_ranged_weapon = bw_g_c_s_m_c_avg;
-			il_main = bw_g_c_s_m_c_avg;
-			il_main = bw_g_c_s_m_c_avg;
+			il_active_primary_spell = spell_explosive_powder;
 		}
 	}
 	[mind]
@@ -388,9 +390,11 @@
 	}
 	[inventory]
 	{
+		selected_active_location = il_active_ranged_weapon;
 		[equipment]
 		{
 			es_chest = bd_br_r_g_c_avg_flywing_dsx;
+			es_shield_hand = bw_g_c_c_m_4_avg;
 		}
 	}
 	[mind]
@@ -426,6 +430,7 @@
 		[equipment]
 		{
 			es_chest = bd_sc_f_g_c_avg;
+			es_weapon_hand = sd_g_c_sc_1h_avg;
 		}
 	}
 	[mind]
@@ -596,9 +601,11 @@
 	}
 	[inventory]
 	{
+		selected_active_location = il_active_ranged_weapon;
 		[equipment]
 		{
 			es_chest = bd_br_r_g_c_avg_bug_dsx;
+			es_shield_hand = bw_g_c_c_l_r_avg;
 		}
 	}
 	[mind]
@@ -742,9 +749,16 @@
 	}
 	[inventory]
 	{
+		selected_active_location = il_active_primary_spell;
 		[equipment]
 		{
 			es_chest = bd_ra_ro_m_g_c_021;
+			es_spellbook = book_glb_magic_01;
+		}
+		[other]
+		{
+			il_active_primary_spell = spell_flash;
+			il_active_secondary_spell = spell_healing_wind;
 		}
 	}
 	[mind]
@@ -1078,9 +1092,16 @@
 	}
 	[inventory]
 	{
+		selected_active_location = il_active_primary_spell;
 		[equipment]
 		{
 			es_chest = bd_ro_m_g_c_avg_leaf_dsx;
+			es_spellbook = book_glb_magic_01;
+		}
+		[other]
+		{
+			il_active_primary_spell = spell_iceblast;
+			il_active_secondary_spell = spell_healing_wind;
 		}
 	}
 	[mind]
