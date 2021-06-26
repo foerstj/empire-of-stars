@@ -599,11 +599,45 @@
 		screen_text = "The air, it burns! Buuuurns!";
 	}
 }
-[zconversation_directions]
+[hire_accept_have_money]
 {
 	[text*]
 	{
-		screen_text = "So, you're the one they say is marked with fire. If you're headed to Grescal, why not go through the Utraean's Basilicus? It's rumored that you can travel there overland if you enter the Mausoleum underneath Castle Hiroth. I've heard there's an entrance within one of the castle towers, and the Mausoleum still has the old criminal's exit to the Mesa Desert. If you head east, eventually you'll hit the edge of the Grescal Dunes. Grescal itself is somewhere east of there around the oasis. However, only a fool would try to cross the desert without a guide. Grescal is a hermit's village for a reason, you know.";
+		screen_text = "Let's go!";
+	  f scroll_rate = 10.000000;
+	}
+}
+[hire_accept_no_money]
+{
+	[text*]
+	{
+		screen_text = "Unfortunately you cannot pay the fee.";
+	  f scroll_rate = 10.000000;
+	}
+}
+[hire_disband]
+{
+	[text*]
+	{
+		screen_text = "As you wish.";
+	  f scroll_rate = 10.000000;
+	}
+}
+[hire_m1_join]
+{
+	[text*]
+	{
+		choice = potential_member;
+		screen_text = "10th Legion Guard Eeddieds at your service!";
+	  f scroll_rate = 10.000000;
+	}
+}
+[hire_reject]
+{
+	[text*]
+	{
+		screen_text = "As you wish.";
+	  f scroll_rate = 10.000000;
 	}
 }
 [hire_test]
@@ -613,5 +647,12 @@
 		choice = potential_member;
 		screen_text = "Hire?";
 	  f scroll_rate = 10.000000;
+	}
+}
+[zconversation_directions]
+{
+	[text*]
+	{
+		screen_text = "So, you're the one they say is marked with fire. If you're headed to Grescal, why not go through the Utraean's Basilicus? It's rumored that you can travel there overland if you enter the Mausoleum underneath Castle Hiroth. I've heard there's an entrance within one of the castle towers, and the Mausoleum still has the old criminal's exit to the Mesa Desert. If you head east, eventually you'll hit the edge of the Grescal Dunes. Grescal itself is somewhere east of there around the oasis. However, only a fool would try to cross the desert without a guide. Grescal is a hermit's village for a reason, you know.";
 	}
 }
