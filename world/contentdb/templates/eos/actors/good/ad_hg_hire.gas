@@ -110,6 +110,10 @@
 	{
 		screen_name = "Hireable Half-Giant Melee 1";
 	}
+    [inventory]
+    {
+        selected_active_location = il_active_melee_weapon;
+    }
 }
 [t:template,n:ad_hg_hire_r1]
 {
@@ -141,6 +145,10 @@
 	{
 		screen_name = "Hireable Half-Giant Ranged 1";
 	}
+    [inventory]
+    {
+        selected_active_location = il_active_ranged_weapon;
+    }
 }
 [t:template,n:ad_hg_hire_c1]
 {
@@ -172,6 +180,14 @@
 	{
 		screen_name = "Hireable Half-Giant CombatMagic 1";
 	}
+    [inventory]
+    {
+        selected_active_location = il_active_primary_spell;
+        [other]
+        {
+            il_active_primary_spell = spell_explosive_powder;
+        }
+    }
 }
 [t:template,n:ad_hg_hire_n1]
 {
@@ -203,6 +219,15 @@
 	{
 		screen_name = "Hireable Half-Giant NatureMagic 1";
 	}
+    [inventory]
+    {
+        selected_active_location = il_active_primary_spell;
+        [other]
+        {
+            il_active_primary_spell = spell_flash;
+            il_active_secondary_spell = spell_healing_wind;
+        }
+    }
 }
 
 [t:template,n:ad_hg_hire_base2]
@@ -244,6 +269,10 @@
 	{
 		screen_name = "Hireable Half-Giant Melee 2";
 	}
+    [inventory]
+    {
+        selected_active_location = il_active_melee_weapon;
+    }
 }
 [t:template,n:ad_hg_hire_r2]
 {
@@ -275,6 +304,10 @@
 	{
 		screen_name = "Hireable Half-Giant Ranged 2";
 	}
+    [inventory]
+    {
+        selected_active_location = il_active_ranged_weapon;
+    }
 }
 [t:template,n:ad_hg_hire_c2]
 {
@@ -306,6 +339,14 @@
 	{
 		screen_name = "Hireable Half-Giant CombatMagic 2";
 	}
+    [inventory]
+    {
+        selected_active_location = il_active_primary_spell;
+        [other]
+        {
+            il_active_primary_spell = spell_fireball;
+        }
+    }
 }
 [t:template,n:ad_hg_hire_n2]
 {
@@ -337,4 +378,13 @@
 	{
 		screen_name = "Hireable Half-Giant NatureMagic 2";
 	}
+    [inventory]
+    {
+        selected_active_location = il_active_primary_spell;
+        [other]
+        {
+            il_active_primary_spell = spell_iceblast;
+            il_active_secondary_spell = spell_healing_wind;
+        }
+    }
 }
