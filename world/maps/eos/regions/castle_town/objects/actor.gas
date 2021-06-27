@@ -262,7 +262,7 @@
 	  p position = -6.15657,-1.5,0.137741,0xed8ca793;
 	}
 }
-[t:dwarf_worker,n:0x07200592]
+[t:dwarf_townfolk_02,n:0x07200592]
 {
 	[aspect]
 	{
@@ -271,6 +271,13 @@
 	[common]
 	{
 		screen_name = "Svirdmadra";
+	}
+	[conversation]
+	{
+		[conversations]
+		{
+			* = dwarf_drinking;
+		}
 	}
 	[mind]
 	{
@@ -513,11 +520,6 @@
 		{
 			es_chest = bd_le_r_g_c_avg;
 		}
-	}
-	[mind]
-	{
-	  b actor_auto_fidgets = false;
-		jat_face = jat_none;
 	}
 	[placement]
 	{
@@ -1352,6 +1354,7 @@
 	[mind]
 	{
 	  b actor_auto_fidgets = false;
+		jat_talk = world\ai\jobs\common\job_talk.skrit;
 	}
 	[placement]
 	{
@@ -1387,6 +1390,7 @@
 	{
 	  b actor_auto_fidgets = false;
 		jat_face = jat_none;
+		jat_talk = world\ai\jobs\common\job_talk.skrit;
 	}
 	[placement]
 	{
@@ -1410,11 +1414,6 @@
 		{
 			* = hg_upstairs;
 		}
-	}
-	[mind]
-	{
-	  b actor_auto_fidgets = false;
-		jat_face = jat_none;
 	}
 	[placement]
 	{
