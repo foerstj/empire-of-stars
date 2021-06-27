@@ -71,7 +71,14 @@ state Talk$
 	event OnEnterState$
 	{
 		// $$$ read/write variables from the Game Auditor here, and bring up the appropriate dialogs...
-		m_Go$.GetConversation.RSSelectConversation( "hire_r1_join" );
+        if ( ! Victory.IsQuestCompleted( "aldebaran_overseer" ) )
+        {
+            m_Go$.GetConversation.RSSelectConversation( "hire_talk2overseer" );
+        }
+        else
+        {
+            m_Go$.GetConversation.RSSelectConversation( "hire_r1_join" );
+        }
 
 		if ( GameAuditor.GetDb.GetBool( "party_accept_0x7200580" ) )
 		{

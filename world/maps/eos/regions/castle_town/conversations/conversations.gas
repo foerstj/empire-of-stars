@@ -703,6 +703,24 @@
 	  f scroll_rate = 10.000000;
 	}
 }
+[hire_talk2overseer]
+{
+	[text*]
+	{
+		activate_quest* = aldebaran_overseer;
+		screen_text = "Please talk to the Overseer.";
+	  f scroll_rate = 10.000000;
+	}
+}
+[overseer]
+{
+	[text*]
+	{
+		complete_quest* = aldebaran_overseer;
+		screen_text = "Welcome to Aldebaran! Hire my legionnaires if you want.";
+	  f scroll_rate = 10.000000;
+	}
+}
 [zconversation_directions]
 {
 	[text*]

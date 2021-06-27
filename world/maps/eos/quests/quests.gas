@@ -45,6 +45,15 @@
 		  i order = 0;
 		}
 	}
+    [c6_aldebaran]
+    {
+        screen_name = Aldebaran;
+        [*]
+        {
+            description = Quests on Aldebaran;
+          i order = 0;
+        }
+    }
 }
 [quests]
 {
@@ -276,4 +285,18 @@
 			required		= true;
 		}
 	}
+    
+    [aldebaran_overseer]
+    {
+		chapter			= c6_aldebaran;
+		screen_name		= "Talk to the Overseer";
+		victory_sample	= s_e_level_up_quest;
+				
+		[*]
+		{
+			order			= 0;
+			description		= "Talk to the 10th Legion Overseer of Iliyuna.";
+			required		= false;
+		}
+    }
 }

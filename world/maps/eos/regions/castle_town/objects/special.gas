@@ -292,6 +292,7 @@
 			{
 				action* = fade_nodes(0xBCE27414,1,2,2,"out:black"), group(1);
 				action* = fade_nodes(0xBCE27414,1,2,2,"in"), group(2);
+				action* = change_quest_state("aldebaran_overseer","active",0), group(1);
 			  b can_self_destruct = true;
 				condition* = party_member_entered_trigger_group("castle_town_house_2_floor_2","on_every_enter"), group(1);
 				condition* = party_member_left_trigger_group("castle_town_house_2_floor_2","on_every_leave"), group(2);
