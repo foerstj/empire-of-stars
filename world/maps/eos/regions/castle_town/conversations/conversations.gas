@@ -611,12 +611,19 @@
 {
 	[text*]
 	{
-		screen_text = "Unfortunately you cannot pay the fee.";
+		screen_text = "Unfortunately, there is a certain deposit to be paid as required by law. If you have the funds, come back to me!";
 	  f scroll_rate = 10.000000;
 	}
 }
 [hire_c1_join]
 {
+    [text*]
+    {
+        choice = more;
+        order = 0;
+		screen_text = "*Burp* Excuse me.";
+	  f scroll_rate = 10.000000;
+    }
 	[text*]
 	{
 		choice = potential_member;
@@ -626,6 +633,13 @@
 }
 [hire_c2_join]
 {
+    [text*]
+    {
+        choice = more;
+        order = 0;
+		screen_text = "*Burp* Excuse me.";
+	  f scroll_rate = 10.000000;
+    }
 	[text*]
 	{
 		choice = potential_member;
@@ -661,6 +675,13 @@
 }
 [hire_n1_join]
 {
+    [text*]
+    {
+        choice = more;
+        order = 0;
+		screen_text = "This teleporter here leads to the planetary ring. During high season, adventurous tourists like to go up there and smash some Shards, but right now it'll be teeming with Trog, so take care if you want to go there.";
+	  f scroll_rate = 10.000000;
+    }
 	[text*]
 	{
 		choice = potential_member;
@@ -688,6 +709,13 @@
 }
 [hire_r2_join]
 {
+    [text*]
+    {
+        choice = more;
+        order = 0;
+		screen_text = "This way leads to the ruins of the Palace of Light, once one of the twin seats of power of the Empire of Stars, and scene of many events of ancient history. It's quite pretty to see, overgrown with all the ivy, but remember it's off-season and it might be a bit unkempt - you may encounter some wild beasts in there.";
+	  f scroll_rate = 10.000000;
+    }
 	[text*]
 	{
 		choice = potential_member;
@@ -707,8 +735,15 @@
 {
 	[text*]
 	{
+        choice = more;
+        order = 0;
+		screen_text = "Alien Humans coming in peace! So it is true what the Seeress said...";
+	  f scroll_rate = 10.000000;
+	}
+	[text*]
+	{
 		activate_quest* = aldebaran_overseer;
-		screen_text = "Please talk to the Overseer.";
+		screen_text = "Welcome to Agalla. Please talk to our Decurio immediately - he must currently be in the Inn.";
 	  f scroll_rate = 10.000000;
 	}
 }
@@ -716,8 +751,41 @@
 {
 	[text*]
 	{
+        choice = more;
+		order = 0;
+		screen_text = "Welcome to Aldebaran! I'm excited to see you arrive - The Seeress has never spoken wrong, but the news of Humans coming in peace out of the Lost Worlds was just too remarkable...";
+	  f scroll_rate = 10.000000;
+	}
+	[text*]
+	{
+        choice = more;
+		order = 1;
+		screen_text = "You must understand, the last Humans this world has seen were Bandits from a Sirian moon, half a millennium ago.
+I'm sure others can tell you more about the history. And if you're really interested, you should seek out the library in the Palace ruins.";
+	  f scroll_rate = 10.000000;
+	}
+	[text*]
+	{
+        choice = more;
+		order = 2;
+		screen_text = "I am 10th Legion Decurio Eekir, at the service of Her Majesty the Stellar Empress. We are on duty on this little island to protect the ancient ruins of Iliyuna - specifically the Palace of Light and the Interstellar Teleporter. Of course, it is more kind of a guard of honour, since after the last Sirian battle this planet has been practically cut off from the stars - until now...";
+	  f scroll_rate = 10.000000;
+	}
+	[text*]
+	{
+        choice = more;
+		order = 3;
+		screen_text = "Unfortunately, we do not possess the Aranna Starstone. The only Starstone we have is that of Sirius, and our wise Empress has decided not to venture thither anymore after the last battle - too great was the risk of releasing the evil breed of this star to the world again. You see, it basically went like this: During the last Sirian battle, the Reptiloids managed to steal all of our Starstones except that one, but we managed to break their side of the Teleporter. Since then both our worlds are stuck in a stalemate, and all we could do is pray for Ashtar to return.
+The Seeress says it lies in your fate to re-unite what has dwindled apart, but she could not tell whether under the aegis of Agalla or the Reptiloids. Well, maybe it's time to find out...";
+	  f scroll_rate = 10.000000;
+	}
+	[text*]
+	{
 		complete_quest* = aldebaran_overseer;
-		screen_text = "Welcome to Aldebaran! Hire my legionnaires if you want.";
+		screen_text = "So, if you want to venture to Sirius, listen closely:
+First: The Sirius Starstone lies in the room of alchemy in the Palace of Light. You can reach it via the roof.
+Second: Our knowledge of what might await you on Sirius is half a millennium old, but here's what we know: The Interstellar Teleporter does not go directly to the main planet like on other worlds. They moved it onto an asteroid, and the teleporter down to the planet of the Reptiloids is guarded by three Darkness Generators located on its three moons - the Bandit Moon, the Moon of Machines, and the Moon of Death. Nomen est Omen.
+Third: I will permit you to hire my legionnaires. There is however a certain deposit to be paid as required by law. If you can pay it, talk to them to hire them.";
 	  f scroll_rate = 10.000000;
 	}
 }
