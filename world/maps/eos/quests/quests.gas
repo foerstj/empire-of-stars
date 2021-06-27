@@ -66,7 +66,7 @@
 		{
 			description = "After having received a letter informing you that your strange but beloved Aunt Luna has disappeared, you took the long journey to the place she was last seen. You hope to find her alive and well.";
 		  i order = 0;
-		  b required_update = true;
+		  b required = true;
 		}
 	}
 	[find_way_home]
@@ -78,25 +78,26 @@
 		{
 			description = "Oh no, you went into the Stellar Hub without the right starstone to get back home! You need to find an Aranna Starstone. Maybe Aunt Luna can help you... But she's on Betelgeuse.";
 		  i order = 0;
-		  b required_update = true;
+		  b required = true;
 		}
 		[*]
 		{
 			description = "Oh no, you went into the Stellar Hub without the right starstone to get back home! You need to find an Aranna Starstone.";
 		  i order = 1;
-		  b required_update = false;
+		  b is_consumable = true;
+		  b required = false;
 		}
 		[*]
 		{
 			description = "Find an Aranna Starstone on Sirius to get back home.";
 		  i order = 2;
-		  b required_update = true;
+		  b required = true;
 		}
 		[*]
 		{
 			description = "After an odyssee among the stars, you are finally able to return home to Aranna.";
 		  i order = 3;
-		  b required_update = true;
+		  b required = true;
 		}
 	}
 
@@ -138,7 +139,6 @@
 		  b is_consumable = true;
 		  i order = 0;
 		  b required = false;
-		  b required_update = false;
 			speaker = ;
 		}
 		[*]
@@ -147,7 +147,6 @@
 		  b is_consumable = true;
 		  i order = 1;
 		  b required = true;
-		  b required_update = true;
 			speaker = ;
 		}
 	}
