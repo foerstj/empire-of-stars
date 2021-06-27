@@ -48,7 +48,7 @@
 			{
 				action* = change_quest_state("aldebaran_alchemyroom","completed",0);
 			  b can_self_destruct = true;
-				condition* = receive_world_message("we_picked_up",0,"on_every_message");
+				condition* = receive_world_message("we_picked_up",0,"on_first_message");
 			  f delay = 0.000000;
 			  b flip_flop = false;
 			  b multi_player = true;
@@ -56,7 +56,7 @@
 				occupants_group = ;
 			  f reset_duration = 0.000000;
 			  b single_player = true;
-			  b single_shot = false;
+			  b single_shot = true;
 			  b start_active = true;
 			}
 		}

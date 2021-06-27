@@ -5,3 +5,31 @@
 	  p position = 17.0464,0.0999985,-5.95899,0x8673e970;
 	}
 }
+[t:starstone_aranna,n:0x0e000020]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = change_quest_state("find_way_home","active",3);
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_picked_up",0,"on_first_message");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = true;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  p position = 16.5779,0.1,-6.39767,0x8673e970;
+	}
+}
