@@ -298,6 +298,7 @@
 	[aspect]
 	{
 	  b interest_only = true;
+	  f scale_multiplier = 1.1;
 	}
 	[common]
 	{
@@ -319,14 +320,17 @@
 	{
 		[conversations]
 		{
-			* = conversation_challe;
-			* = conversation_challe_red;
-			* = zconversation_directions;
+			* = shop_magic;
 		}
 	}
-	[mind]
+	[inventory]
 	{
-		jat_talk = world\ai\jobs\common\job_talk_mp.skrit;
+		[equipment]
+		{
+			es_chest = bd_ra_ro_m_g_c_018;
+			es_feet = bo_bo_le_light;
+			es_weapon_hand = st_g_d_r_avg;
+		}
 	}
 	[placement]
 	{
@@ -336,6 +340,10 @@
 }
 [t:half_giantess_ft,n:0x07200543]
 {
+	[aspect]
+	{
+	  f scale_multiplier = 0.9;
+	}
 	[common]
 	{
 		screen_name = "Atrugiel";
@@ -489,14 +497,17 @@
 	{
 		[conversations]
 		{
-			* = conversation_moik;
-			* = conversation_moik_red;
-			* = zconversation_directions;
+			* = shop_smith;
 		}
 	}
-	[mind]
+	[inventory]
 	{
-		jat_talk = world\ai\jobs\common\job_talk_mp.skrit;
+		[equipment]
+		{
+			es_chest = bd_ra_bl_f_g_c_str;
+			es_feet = bo_bo_le_light;
+			es_weapon_hand = blacksmith_hammer;
+		}
 	}
 	[placement]
 	{
