@@ -36,6 +36,17 @@
 		use_point_scids = 0x07000529,0x0700052a;
 	}
 }
+[t:sign_glb_no_return,n:0x07000909]
+{
+	[common]
+	{
+		screen_name = "Iliyuna Authentic Farmstay - closed for off-season";
+	}
+	[placement]
+	{
+	  p position = 9.35102,-2.3,9.78285,0x6a67987a;
+	}
+}
 [t:door_glb_keep_02,n:0x07000417]
 {
 	[door_basic]
@@ -445,6 +456,18 @@
 	  q orientation = 0,-0.92388,0,0.382683;
 	  p position = -3.58034,-4.25,-3.53828,0xfd7d60b2;
 		use_point_scids = 0x0700052d,0x0700052f;
+	}
+}
+[t:sign_glb_no_return,n:0x07000908]
+{
+	[common]
+	{
+		screen_name = "'Palace of Light' Summer Residence - closed for off-season";
+	}
+	[placement]
+	{
+	  q orientation = 0,0.923879,0,-0.382684;
+	  p position = -6.3827,-4.55,-2.99101,0xfd7d60b2;
 	}
 }
 [t:rack_csl_weapons_gen_01_castle,n:0x070003f7]
@@ -1132,26 +1155,193 @@
 	  p position = 0.0826626,-2,-0.0464783,0x48dc300a;
 	}
 }
-[t:sign_glb_no_return,n:0x07000908]
+[t:bookcase_glb_gen_01,n:0x0700008c]
 {
-	[common]
+	[aspect]
 	{
-		screen_name = "'Palace of Light' Summer Residence - closed for off-season";
+	  f scale_multiplier = 1.5;
+	}
+	[inventory]
+	{
+		[other]
+		{
+			il_main = book_glb_lore_reptiloids;
+		}
 	}
 	[placement]
 	{
-	  q orientation = 0,0.923879,0,-0.382684;
-	  p position = -6.3827,-4.55,-2.99101,0xfd7d60b2;
+	  q orientation = 0,-0.707107,0,0.707107;
+	  p position = -5.33187,0,-0.0312119,0xe2b27f42;
 	}
 }
-[t:sign_glb_no_return,n:0x07000909]
+[t:bookcase_glb_gen_01,n:0x07000065]
 {
-	[common]
+	[aspect]
 	{
-		screen_name = "Iliyuna Authentic Farmstay - closed for off-season";
+	  f scale_multiplier = 1.5;
+	}
+	[inventory]
+	{
+		[other]
+		{
+			il_main = book_glb_lore_iliyuna_ruins;
+		}
 	}
 	[placement]
 	{
-	  p position = 9.35102,-2.3,9.78285,0x6a67987a;
+	  q orientation = 0,1,0,1.49012e-007;
+	  p position = -0.0383148,-3.5,-0.0690994,0x7694acb9;
+	}
+}
+[t:bookcase_glb_gen_01,n:0x0700008a]
+{
+	[aspect]
+	{
+	  f scale_multiplier = 1.5;
+	}
+	[inventory]
+	{
+		[other]
+		{
+			il_main = book_glb_lore_agalla;
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.707107,0,-0.707107;
+	  p position = -4.66254,0,2.56569,0xe2b27f42;
+	}
+}
+[t:bookcase_glb_gen_01,n:0x0700008b]
+{
+	[aspect]
+	{
+	  f scale_multiplier = 1.5;
+	}
+	[inventory]
+	{
+		[other]
+		{
+			il_main = book_glb_lore_set_items;
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.707107,0,0.707107;
+	  p position = -5.33027,0,2.56149,0xe2b27f42;
+	}
+}
+[t:bookcase_glb_gen_01,n:0x0700008d]
+{
+	[aspect]
+	{
+	  f scale_multiplier = 1.5;
+	}
+	[inventory]
+	{
+		[other]
+		{
+			il_main = book_glb_lore_creator_gods;
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.707107,0,-0.707107;
+	  p position = -4.66254,0,-0.0373535,0xe2b27f42;
+	}
+}
+[t:bookcase_glb_gen_01,n:0x070000ce]
+{
+	[aspect]
+	{
+	  f scale_multiplier = 1.5;
+	}
+	[inventory]
+	{
+		[other]
+		{
+			il_main = book_glb_lore_pillars_of_the_legion;
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.707107,0,-0.707107;
+	  p position = 0.437622,0,2.56569,0xe2b27f42;
+	}
+}
+[t:bookcase_glb_gen_01,n:0x070000cf]
+{
+	[aspect]
+	{
+	  f scale_multiplier = 1.5;
+	}
+	[inventory]
+	{
+		[other]
+		{
+			il_main = book_glb_lore_hub;
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.707107,0,0.707107;
+	  p position = -0.230133,0,2.56149,0xe2b27f42;
+	}
+}
+[t:bookcase_glb_gen_01,n:0x070000d0]
+{
+	[aspect]
+	{
+	  f scale_multiplier = 1.5;
+	}
+	[inventory]
+	{
+		[other]
+		{
+			il_main = book_glb_lore_empire2;
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.707107,0,0.707107;
+	  p position = -0.231735,0,-0.0312119,0xe2b27f42;
+	}
+}
+[t:bookcase_glb_gen_01,n:0x070000d1]
+{
+	[aspect]
+	{
+	  f scale_multiplier = 1.5;
+	}
+	[inventory]
+	{
+		[other]
+		{
+			il_main = book_glb_lore_war_of_legions;
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.707107,0,-0.707107;
+	  p position = 0.437622,0,-0.0373535,0xe2b27f42;
+	}
+}
+[t:bookcase_glb_gen_01,n:0x07000062]
+{
+	[aspect]
+	{
+	  f scale_multiplier = 1.5;
+	}
+	[inventory]
+	{
+		[other]
+		{
+			il_main = book_glb_lore_ashtar;
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,1,0,5.96045e-008;
+	  p position = -0.0193329,-2,-0.152496,0x3acc435a;
 	}
 }
