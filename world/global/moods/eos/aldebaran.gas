@@ -275,7 +275,7 @@
 	transition_time = 22.0f;
 	[fog]
 	{
-	  x fog_color = 0xFFC0C000;
+	  x fog_color = 0xFF000000;
 		fog_density = 0.5f;
 	  f fog_far_dist = 50.0f;
 		fog_lowdetail_far_dist = 45.0f;
@@ -292,5 +292,32 @@
 		ambient_track = "";
 		room_type = rt_generic;
 		standard_track = "s_m_Drums_01";
+	}
+	[sun]
+	{
+		//00h00m:color = 0xFFFF0000;
+		01h00m:color = 0xFFFFFF00;
+		//02h00m:color = 0xFF00FF00;
+		03h00m:color = 0xFF00FFFF;
+		//04h00m:color = 0xFF0000FF;
+		05h00m:color = 0xFFFF00FF;
+		//06h00m:color = 0xFFFF0000;
+		07h00m:color = 0xFFFFFF00;
+		//08h00m:color = 0xFF00FF00;
+		09h00m:color = 0xFF00FFFF;
+		//10h00m:color = 0xFF0000FF;
+		11h00m:color = 0xFFFF00FF;
+		//12h00m:color = 0xFFFF0000;
+		13h00m:color = 0xFFFFFF00;
+		//14h00m:color = 0xFF00FF00;
+		15h00m:color = 0xFF00FFFF;
+		//16h00m:color = 0xFF0000FF;
+		17h00m:color = 0xFFFF00FF;
+		//18h00m:color = 0xFFFF0000;
+		19h00m:color = 0xFFFFFF00;
+		//20h00m:color = 0xFF00FF00;
+		21h00m:color = 0xFF00FFFF;
+		//22h00m:color = 0xFF0000FF;
+		23h00m:color = 0xFFFF00FF;
 	}
 }
