@@ -653,3 +653,106 @@
 		set_item_requirement = 1;
     }
 }
+
+[shield_of_stars]
+{
+    [modifier*]
+    {
+        [enchantments]
+        {
+            [*]
+            {
+				is_set_item = true;
+				duration = #infinite;
+				
+				alteration = ALTER_BLOCK_MELEE_DAMAGE;
+				value = 5 * (#itemsequipped);
+				description = "Melee Damage Reduced by <ALTER_BLOCK_MELEE_DAMAGE>%";
+            }
+            [*]
+            {
+				is_set_item = true;
+				duration = #infinite;
+				
+				alteration = ALTER_BLOCK_RANGED_DAMAGE;
+				value = 5 * (#itemsequipped);
+				effect_script_equip	= arm_beam_05_lgr;
+				effect_script_hit	= hit_spark_10_lgr;
+				description = "Ranged Damage Reduced by <ALTER_BLOCK_RANGED_DAMAGE>%";
+            }
+            [*]
+            {
+				is_set_item = true;
+				duration = #infinite;
+				
+				alteration = ALTER_BLOCK_NATURE_MAGIC_DAMAGE;
+				value = 5 * (#itemsequipped);
+            }
+            [*]
+            {
+				is_set_item = true;
+				duration = #infinite;
+				
+				alteration = ALTER_BLOCK_COMBAT_MAGIC_DAMAGE;
+				value = 5 * (#itemsequipped);
+				description = "Magic Damage Reduced by <ALTER_BLOCK_COMBAT_MAGIC_DAMAGE>%";
+            }
+        }
+		set_item_requirement = 1;
+    }
+}
+
+[acid_ring_of_stars]
+{
+    [modifier*]
+    {
+        [enchantments]
+        {
+            [*]
+            {
+				is_set_item = true;
+				duration = #infinite;
+				
+				alteration = ALTER_CUSTOM_DAMAGE_CHANCE_MELEE;
+				custom_damage = acid;
+				value = 5 * (#itemsequipped);
+				description = "+<ALTER_CUSTOM_DAMAGE_CHANCE_MELEE>% Chance to Acidify And";
+            }
+            [*]
+            {
+				is_set_item = true;
+				duration = #infinite;
+				
+				alteration = ALTER_CUSTOM_DAMAGE_MELEE;
+				custom_damage = acid;
+				value = 10 * (#itemsequipped);
+				custom_damage_skrit = world\global\skrits\weapon_poison.skrit?duration=4&manager_template="dsx_base_acid_manager";
+				effect_script_equip = dsx_modifier_misting_melee;
+				effect_script_hit = dsx_modifier_misting_hit;
+				description = "Adds <ALTER_CUSTOM_DAMAGE_MELEE> to Acid Damage";
+            }
+
+            [*]
+            {
+				is_set_item = true;
+				duration = #infinite;
+				
+				alteration = ALTER_CUSTOM_DAMAGE_CHANCE_RANGED;
+				custom_damage = acid;
+				value = 5 * (#itemsequipped);
+            }
+            [*]
+            {
+				is_set_item = true;
+				duration = #infinite;
+				
+				alteration = ALTER_CUSTOM_DAMAGE_RANGED;
+				custom_damage = acid;
+				value = 10 * (#itemsequipped);
+				custom_damage_skrit = world\global\skrits\weapon_poison.skrit?duration=4&manager_template="dsx_base_acid_manager";
+				effect_script_hit = dsx_modifier_misting_hit;
+            }
+        }
+		set_item_requirement = 1;
+    }
+}
