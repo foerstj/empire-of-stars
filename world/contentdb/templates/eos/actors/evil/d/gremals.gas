@@ -250,6 +250,90 @@
     }
 }
 
+// Up-stats
+[t:template,n:gremal_black_forest]
+{
+	// black gremal with stats of forest phrak
+	doc = "Gremal black";
+	specializes = gremal_base;
+    [common]
+    {
+        screen_name = "Forest Gremal";
+    }
+    [aspect]
+    {
+		[textures] { 0=b_c_edm_gm-black; }
+    }
+
+	[actor]
+	{
+		[skills]
+		{
+			strength =  	6, 0;
+			intelligence =  2, 0;
+			dexterity =  	17, 0;
+            melee = 		12, 0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 2000;
+		life = 180;
+        max_life = 180;
+        mana = 2;
+		max_mana = 2;
+		scale_base = 0.40;
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 105;
+		damage_min = 95;
+	}
+    [defend] { defense=100; }
+}
+[t:template,n:gremal_killer_black_forest]
+{
+	// black gremal with stats of black wolf
+	doc = "Gremal black";
+	specializes = gremal_killer_base;
+    [common]
+    {
+        screen_name = "Killer Forest Gremal";
+    }
+    [aspect]
+    {
+		[textures] { 0=b_c_edm_gm-02-black; }
+    }
+
+	[actor]
+	{
+		[skills]
+		{
+			strength =  14, 0;
+			intelligence =  8, 0;
+			dexterity =  15, 0;
+            melee =  11,  0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 758;
+		life = 270;
+        max_life = 270;
+        mana = 16;
+        max_mana = 16;
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 74;
+		damage_min = 70;
+	}
+	[defend] { defense=150; }
+}
+
+
 // Just testin'
 [t:template,n:gremal_ktest]
 {
