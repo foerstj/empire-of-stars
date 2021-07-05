@@ -1,0 +1,65 @@
+[t:template,n:flag_glb_legion_ashtar]
+{
+	category_name = "outdoor";
+	doc = "legion_flag";
+	specializes = non_interactive_blocking;
+	[aspect] 
+	{ 
+		model=m_i_glb_legion-flag; 
+		[textures]	{0=b_i_glb_legion-flag-ashtar;}
+	  b draw_selection_indicator = false;
+	  b is_selectable = true;
+	}
+	[common]
+	{
+	  b rollover_display = true;
+	    screen_name = "Ashtar Command";
+	}
+}
+
+[t:template,n:picture_glb_sq_ashtar_01]
+{
+	category_name = "picture";
+	doc = "picture square ashtar 01";
+	specializes = non_interactive_nonblocking;
+	[aspect]
+	{
+		lodfi_lower = 0.35;
+		lodfi_upper = 0.35;
+		model = m_i_glb_picture-04;
+		[textures]
+		{
+			0 = b_i_glb_picture-square-ashtar-01;
+		}
+	  b draw_selection_indicator = false;
+	  b is_selectable = true;
+	}
+	[common]
+	{
+	  b rollover_display = true;
+	    screen_name = "Ashtar Sheran";
+	}
+}
+[t:template,n:picture_glb_sq_ashtar_02]
+{
+	category_name = "picture";
+	doc = "picture square ashtar 02";
+	specializes = non_interactive_nonblocking;
+	[aspect]
+	{
+		lodfi_lower = 0.35;
+		lodfi_upper = 0.35;
+		model = m_i_glb_picture-04;
+		[textures]
+		{
+			0 = b_i_glb_picture-square-ashtar-02;
+		}
+	  b draw_selection_indicator = false;
+	  b is_selectable = true;
+	}
+	[common]
+	{
+	  b rollover_display = true;
+	    screen_name = "Ashtar Sheran";
+	}
+}
