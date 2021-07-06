@@ -1,5 +1,13 @@
 [t:eos_teleport_statue_big,n:0x0e000002]
 {
+	[aspect]
+	{
+	  b is_usable = false;
+	}
+	[common]
+	{
+		screen_name = "Interstellar Teleporter (broken)";
+	}
 	[on_off_lever]
 	{
 	  x off_scid = 0x0E00001B;
@@ -9,8 +17,45 @@
 	}
 	[placement]
 	{
-	  q orientation = 0,1,0,-1.66939e-007;
+	  q orientation = -0.173483,-0.983871,-0.0432942,-0.00531569;
 	  p position = 0,0.1,0,0xb7b17ef8;
 		use_point_scids = 0x0e000000,0x0e000001;
+	}
+}
+[t:barrier_breakable_01,n:0x0e000034]
+{
+	[aspect]
+	{
+	  b is_collidable = false;
+	  b is_selectable = false;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.707107,0,0.707107;
+	  p position = 1.5821,1.90735e-006,-0.114288,0x9d84831d;
+	}
+}
+[t:barrier_breakable_01,n:0x0e000033]
+{
+	[aspect]
+	{
+	  b is_collidable = false;
+	  b is_selectable = false;
+	}
+	[placement]
+	{
+	  p position = -0.00205994,0,-0.120808,0x5379b622;
+	}
+}
+[t:sign_eos_reptiloids,n:0x0e00002a]
+{
+	[common]
+	{
+		screen_name = "Planet of the Reptiloids";
+	}
+	[placement]
+	{
+	  q orientation = -0.653281,-0.270598,0.270598,-0.653282;
+	  p position = -1.49139,-4.22311,0.710217,0x7da4d36f;
 	}
 }
