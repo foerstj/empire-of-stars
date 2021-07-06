@@ -5,7 +5,7 @@
 	transition_time = 22.0f;
 	[fog]
 	{
-	  x fog_color = 0xFF0000C0;
+	  x fog_color = 0xFF000000;
 		fog_density = 0.5f;
 	  f fog_far_dist = 50.0f;
 		fog_lowdetail_far_dist = 45.0f;
@@ -19,8 +19,15 @@
 	}
 	[music]
 	{
+	  f ambient_intro_delay = 0.000000;
+	  f ambient_repeat_delay = 0.000000;
 		ambient_track = "";
-		room_type = rt_generic;
-		standard_track = "s_m_BesiegedTown_04";
+	  f battle_intro_delay = 0.000000;
+	  f battle_repeat_delay = 0.000000;
+		battle_track = 0.000000;
+		room_type = rt_dizzy;
+	  f standard_intro_delay = 0.000000;
+	  f standard_repeat_delay = 0.000000;
+		standard_track = s_m_furyden_01;
 	}
 }
