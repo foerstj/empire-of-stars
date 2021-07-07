@@ -1,0 +1,193 @@
+// original tretch template, for subclassing
+[t:template,n:tretch_base]
+{
+	category_name = "1W_evil_d";
+	doc = "tretch";
+	specializes = actor_evil;
+	[actor]
+	{
+		[skills]
+		{
+			strength = 		16, 0;
+			intelligence = 	6, 0;
+			dexterity = 	5, 0;
+			melee =  		18,  0;
+		}
+	}
+	[aspect]
+	{
+		draw_shadow = false;
+		experience_value = 1450;
+		life = 480;
+        material = wood;
+		max_life = 480;
+		mana = 12;
+		max_mana = 12;
+		model = m_c_edm_tr_pos_1;
+		[voice]
+		{
+			[die]			{ priority = high; * = s_e_die_tretch; }
+		}
+	}
+	[attack]
+	{
+		attack_range = 3;
+		damage_max = 144;
+		damage_min = 140;
+	}
+	[body]
+	{
+		avg_move_velocity = 0.000000;
+		[bone_translator]
+		{
+			body_anterior = bone01;
+			body_mid = bone01;
+			body_posterior = bone01;
+			kill_bone = eye3_base;
+			shield_bone = bone01;
+			weapon_bone = bone01;
+		}
+		[chore_dictionary]
+		{
+			chore_prefix = a_c_edm_tr_fs;
+			[chore_attack]
+			{
+				chore_stances = 0;
+				skrit = select_attack;
+				[anim_files] { 00=at; }
+			}
+			[chore_default]
+			{
+				chore_stances = 0;
+				skrit = infinite_loop;
+				[anim_files] { 00=ds; }
+			}
+			[chore_die]
+			{
+				chore_stances = 0;
+				skrit = select_transition;
+				[anim_files] { 00=di; }
+			}
+			[chore_fidget]
+			{
+				chore_stances = 0;
+				skrit = select_fidget;
+				[anim_files] { 00=dsf; }
+			}
+			[chore_walk]
+			{
+				chore_stances = 0;
+				skrit = select_walk;
+				[anim_files] { 00=ds; }
+			}
+		}
+	}
+	[common] 
+	{ 
+		screen_name="Tretch"; 
+		membership=monster,immune_freeze;
+	}
+	[defend] { defense=260; }
+	[inventory]
+	{
+    	[pcontent]
+		{
+			[oneof*]
+			{
+				chance = 0.2;
+				il_main = #*/50-75;
+			}
+		}
+	}
+	[mind]
+	{
+		jat_attack_object_melee = world\ai\jobs\common\job_attack_object_melee.skrit
+			?no_turn			= true;
+
+		jat_flee_from_object	= jat_none;
+		jat_guard         		= jat_none;
+		jat_move          		= jat_none;
+		jat_patrol         		= jat_none;
+
+		movement_orders			= mo_hold;
+		melee_engage_range 		= 3;
+		personal_space_range 	= 0.7;
+		ranged_engage_range 	= 3.0;
+		sight_range 			= 3.0;
+		inner_comfort_zone_range = 3.0;
+		outer_comfort_zone_range = 3.0;
+		com_range				 = 3.0;
+	}
+	[physics]
+	{
+		gib_gore_good = true;
+	}
+}
+
+// A good-aligned npc that can talk
+[t:template,n:wise_tretch]
+{
+	category_name = "1W_character";
+	doc = "wise tretch";
+	specializes = tretch_base;
+
+	[actor]
+	{
+		alignment = aa_good;
+	}
+	[body]
+	{
+		[chore_dictionary]
+		{
+			chore_prefix = a_c_edm_tr_fs;
+			[chore_attack]
+			{
+				chore_stances = 0;
+				skrit = select_attack;
+				[anim_files] { 00=at; }
+			}
+			[chore_default]
+			{
+				chore_stances = 0;
+				skrit = infinite_loop;
+				[anim_files] { 00=ds; }
+			}
+			[chore_die]
+			{
+				chore_stances = 0;
+				skrit = select_transition;
+				[anim_files] { 00=di; }
+			}
+			[chore_fidget]
+			{
+				chore_stances = 0;
+				skrit = select_fidget;
+				[anim_files] { 00=dsf; }
+			}
+			[chore_walk]
+			{
+				chore_stances = 0;
+				skrit = select_walk;
+				[anim_files] { 00=ds; }
+			}
+
+			[chore_misc]
+			{
+				chore_stances = ignore;
+				skrit = select_transition;
+				[anim_files]
+				{
+					talk = a_c_edm_tr_fs0_dff;
+				}
+			}
+		}
+	}
+	[common] { screen_name="Wise Tretch"; }
+	[conversation] { }
+	[mind]
+	{
+		jat_talk = world\ai\jobs\eos\job_talk_anim.skrit;
+		actor_may_attack = false;
+        actor_may_be_attacked = false;
+	}
+}
