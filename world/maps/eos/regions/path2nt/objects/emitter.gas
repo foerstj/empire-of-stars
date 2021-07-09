@@ -1,3 +1,37 @@
+[t:emt_mist_act,n:0x04c00538]
+{
+	[fire_emitter_act]
+	{
+	  f blue0 = 0.2;
+	  f damage_max = 0;
+	  f damage_min = 0;
+	  f green0 = 0.2;
+	  b grey_tex = true;
+	  f red0 = 0.2;
+	  f scale = 1.5;
+	  f time_scale = 0.1;
+	}
+	[placement]
+	{
+	  p position = 2.26716,-1.35,-1.78656,0x0a3c25f9;
+	}
+}
+[t:emt_sound_act,n:0x04c0053a]
+{
+	[placement]
+	{
+	  p position = 0.368634,-1.35,6.48067,0x0a3c25f9;
+	}
+	[sound_emitter_act]
+	{
+	  b continual_loop = true;
+		event_sound = "env_conveyer";
+	  f max_dist = 32;
+	  f min_dist = 4;
+	  b start_on_creation = false;
+	  b stop_instantly = true;
+	}
+}
 [t:emt_sound,n:0x04c00684]
 {
 	[placement]

@@ -125,6 +125,37 @@
 	  p position = -0.104434,-0.506592,-1.64272,0x0a3c25f9;
 	}
 }
+[t:trigger_generic,n:0x04c00560]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_activate",0x04C00538,0f,"default","every",0);
+				action* = send_world_message("we_req_activate",0x04C0053A,0f,"default","every",0);
+				action* = send_world_message("we_req_deactivate",0x04C00538,20f,"default","every",0);
+				action* = send_world_message("we_req_deactivate",0x04C0053A,20f,"default","every",0);
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_req_activate",0,"on_every_message");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  p position = 1.58048,-1.35,-1.68773,0x0a3c25f9;
+	}
+}
 [t:trigger_fade_node_box,n:0x04c0068d]
 {
 	[common]
