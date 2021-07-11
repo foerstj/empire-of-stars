@@ -161,7 +161,7 @@
 		{
 			[*]
 			{
-				action* = send_world_message("we_req_activate",0x07f00f52,0f,"default","",0);
+				action* = send_world_message("we_req_activate",0x07F00F52,0f,"default","",0);
 				action* = send_world_message("we_req_activate",0x072005F0,0f,"default","every",0);
 			  b can_self_destruct = true;
 				condition* = receive_world_message("we_req_activate",0,"on_every_message");
@@ -225,7 +225,7 @@
 		{
 			[*]
 			{
-				action* = send_world_message("we_req_activate",0x07f00f40,0f,"default","",0);
+				action* = send_world_message("we_req_activate",0x07F00F40,0f,"default","",0);
 				action* = send_world_message("we_req_activate",0x0E000004,0f,"default","every",0);
 			  b can_self_destruct = true;
 				condition* = receive_world_message("we_req_activate",0,"on_every_message");
