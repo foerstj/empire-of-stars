@@ -1,0 +1,29 @@
+[t:template,n:chest_grs_02_eos_rlw_trap]
+{
+	category_name = "sr_r2";
+	doc = "1W_chest_grs_02_sr_r2";
+	specializes = base_chest;
+	[aspect]
+	{
+		model = m_i_glb_chest-04;
+		[textures]
+		{
+			0 = b_i_glb_chest-open-02;
+		}
+	}
+	[attack]
+	{
+        // comparatively high even for swp. it's a trap!
+		damage_max = 100;
+		damage_min = 50;
+	}
+	[inventory]
+	{
+        // none. it's a trap!
+	}
+	[trapped]
+	{
+		trap = trp_generator_gas;
+		fire_event = WE_REQ_USE;
+	}
+}
