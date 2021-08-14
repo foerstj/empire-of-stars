@@ -54,6 +54,15 @@
           i order = 0;
         }
     }
+    [c7_sirius]
+    {
+        screen_name = Sirius;
+        [*]
+        {
+            description = Quests on Sirius;
+          i order = 0;
+        }
+    }
 }
 [quests]
 {
@@ -62,6 +71,7 @@
 		chapter = c1_eos;
 		screen_name = "Find Aunt Luna";
 		victory_sample = s_e_level_up_quest;
+
 		[*]
 		{
 			description = "After having received a letter informing you that your strange but beloved Aunt Luna has disappeared, you took the long journey to the place she was last seen. You hope to find her alive and well.";
@@ -74,6 +84,7 @@
 		chapter = c1_eos;
 		screen_name = "Find Way Home";
 		victory_sample = s_e_level_up_quest;
+
 		[*]
 		{
 			description = "Oh no, you went into the Stellar Hub without the right starstone to get back home! You need to find an Aranna Starstone. Maybe Aunt Luna can help you... But she's on Betelgeuse.";
@@ -107,6 +118,7 @@
 		screen_name		= "The Chapel";
 		victory_sample	= s_e_level_up_quest;
 		quest_image 	= b_gui_ig_mnu_jnl_quest_02;
+
 		[*]
 		{
 			order		= 0;
@@ -118,6 +130,7 @@
 		chapter = c2_alpha_centauri;
 		screen_name = The Crypt;
 		victory_sample = s_e_level_up_quest;
+
 		[*]
 		{
 			description = "Look for Starstones in the Crypt.";
@@ -133,6 +146,7 @@
 		chapter = c3_betelgeuse;
 		screen_name = "The Elder of the Lake";
 		victory_sample = s_e_level_up_quest;
+
 		[*]
 		{
 			description = "See the Elder of the Lake about starstones. He lives in the village of Wishy-Washy.";
@@ -156,7 +170,7 @@
 		chapter			= c4_altair;
 		screen_name		= "Book Return";
 		victory_sample	= s_e_level_up_quest;
-		
+
 		[*]
 		{
 			order		= 0;
@@ -168,7 +182,7 @@
 		chapter			= c4_altair;
 		screen_name		= "The Fireheart Caverns";
 		victory_sample	= s_e_level_up_quest;
-		
+
 		[*]
 		{
 			order		= 0;
@@ -180,7 +194,7 @@
 		chapter			= c4_altair;
 		screen_name		= "The Ice Moon";
 		victory_sample	= s_e_level_up_quest;
-		
+
 		[*]
 		{
 			order		= 0;
@@ -192,7 +206,7 @@
 		chapter			= c4_altair;
 		screen_name		= "The Shrine";
 		victory_sample	= s_e_level_up_quest;
-		
+
 		[*]
 		{
 			order		= 0;
@@ -205,7 +219,7 @@
 		chapter			= c5_rigel;
 		screen_name		= "The Pyramid";
 		victory_sample	= s_e_level_up_quest;
-		
+
 		[*]
 		{
 			order		= 0;
@@ -217,7 +231,7 @@
 		chapter			= c5_rigel;
 		screen_name		= "Orionis";
 		victory_sample	= s_e_level_up_quest;
-		
+
 		[*]
 		{
 			description = "Clear Orionis of the savage Droog.";
@@ -230,21 +244,20 @@
 			description = "Orionis is safe.";
 		  	i order = 1;
 		  	b required = false;
-		}			
+		}
     }
 	[rigel_artifact]
 	{
 		chapter			= c5_rigel;		
 		screen_name		= "Purify the Altar";
 		victory_sample	= s_e_level_up_quest;
-				
+
 		[*]
 		{
 			order			= 0;
 			description     = "Destroy the Fleshrender.";
 			required		= true;
 		}
-
 		[*]
 		{
 			order			= 1;
@@ -257,7 +270,7 @@
 		chapter			= c5_rigel;		
 		screen_name		= "Purify the Altar";
 		victory_sample	= s_e_level_up_quest;
-				
+
 		[*]
 		{
 			order			= 0;
@@ -270,6 +283,7 @@
 		chapter = c5_rigel;
 		screen_name = "Missing Shopkeep";
 		victory_sample = s_e_level_up_quest;
+
 		[*]
 		{
 			description = "Rescue Necahual, the missing shopkeep";
@@ -288,7 +302,7 @@
 		chapter			= c5_rigel;		
 		screen_name		= "The Skull of the Fallen God";
 		victory_sample	= s_e_level_up_quest;
-				
+
 		[*]
 		{
 			order			= 0;
@@ -302,7 +316,7 @@
 		chapter			= c6_aldebaran;
 		screen_name		= "Talk to the Decurio";
 		victory_sample	= s_e_level_up_quest;
-				
+
 		[*]
 		{
 			order			= 0;
@@ -315,11 +329,24 @@
         chapter = c6_aldebaran;
         screen_name = "Sirius Starstone";
 		victory_sample	= s_e_level_up_quest;
-				
+
 		[*]
 		{
 			order			= 0;
 			description		= "Fetch the Sirius Starstone from the Alchemy Room in the ruins of the Palace of Light. It is reachable via the roof.";
+			required		= false;
+		}
+    }
+
+    [sirius_darkgen_banditmoon]
+    {
+        chapter = c7_sirius;
+        screen_name = "Bandit Moon";
+
+		[*]
+		{
+			order			= 0;
+			description		= "Destroy the Dark Generator on the Bandit Moon.";
 			required		= false;
 		}
     }
