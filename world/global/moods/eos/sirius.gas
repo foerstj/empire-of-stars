@@ -31,3 +31,45 @@
 		standard_track = s_m_furyden_01;
 	}
 }
+
+[mood_setting*]
+{
+	mood_name				= eos_sirius_banditmoon_teleport;
+	transition_time			= 20.0f;
+	interior				= false;
+	[frustum]
+	{
+		frustum_height = 60.0f;
+		frustum_width = 45.0f;
+	}
+
+	[fog]
+	{
+		fog_near_dist		= 30.0f;
+		fog_far_dist		= 50.0f;
+		fog_lowdetail_near_dist		= 30.0f;
+		fog_lowdetail_far_dist		= 45.0f;
+		fog_color			= 0xff2b3b2b;
+		fog_density			= 0.5f;
+	}
+
+	[rain]
+	{
+		rain_density		= 150.0f;
+		lightning			= false;
+	}
+
+	[wind]
+	{
+		wind_velocity		= 0.5f;
+		wind_direction		= 4.7f;
+	}
+
+	[music]
+	{
+		ambient_track		= "s_e_ambient_woods_01";
+		standard_repeat_delay	= 10.0f;
+		standard_track		= "s_m_DarkForest_02";
+		room_type			= rt_generic;
+	}
+}

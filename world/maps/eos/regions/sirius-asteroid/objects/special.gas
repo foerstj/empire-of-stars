@@ -213,18 +213,48 @@
 	  p position = 0.00534248,0.0537954,-1.26631,0x6a89ca76;
 	}
 }
-[t:trigger_generic,n:0x0e000036]
-{
-	[placement]
-	{
-	  p position = -1.41031,0.200001,-1.34822,0xe1820e0d;
-	}
-}
 [t:trigger_generic,n:0x0e000037]
 {
 	[placement]
 	{
 	  p position = -1.42716,0.200001,-1.45143,0x8a78827d;
+	}
+}
+[t:trigger_generic,n:0x0e000036]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_activate",0x0E00002F,0f,"default","every",0);
+				action* = send_world_message("we_req_activate",0x05900068,0f,"default","every",0);
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_req_activate",0,"on_every_message");
+				condition* = has_go_in_inventory("local",0x00000000,"starstone_sirius");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  p position = -1.41031,0.200001,-1.34822,0xe1820e0d;
+	}
+}
+[t:trigger_generic,n:0x0e000039]
+{
+	[placement]
+	{
+	  p position = -1.39132,0.200001,-1.34902,0x0c07a402;
 	}
 }
 [t:trigger_generic,n:0x0e000038]
@@ -234,10 +264,31 @@
 	  p position = -1.33403,0.199997,-1.34032,0x24a490c1;
 	}
 }
-[t:trigger_generic,n:0x0e000039]
+[t:use_point,n:0x0e00003b]
 {
 	[placement]
 	{
-	  p position = -1.39132,0.200001,-1.34902,0x0c07a402;
+	  p position = -0.544635,0.2,-0.519871,0xac57897c;
+	}
+}
+[t:use_point,n:0x0e00003f]
+{
+	[placement]
+	{
+	  p position = -0.525078,0.2,-0.524624,0x4c9f7fdf;
+	}
+}
+[t:use_point,n:0x0e000040]
+{
+	[placement]
+	{
+	  p position = -0.533329,0.2,-0.528557,0xa9b9e242;
+	}
+}
+[t:use_point,n:0x0e000041]
+{
+	[placement]
+	{
+	  p position = -0.513336,0.2,-0.524112,0x771c1dc3;
 	}
 }
