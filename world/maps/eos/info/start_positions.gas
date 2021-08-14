@@ -186,7 +186,7 @@
 	}
 	[t:start_group,n:aranna]
 	{
-	  b default = true;
+	  b default = false;
 		description = "This is the default group.";
 	  b dev_only = false;
 	  i id = 0;
@@ -477,6 +477,29 @@
 			  f distance = 20.000000;
 			  f orbit = 0.000000;
 				position = -0.128565,-0.279842,-0.067193,0x6A89CA76;
+			}
+		}
+		[world_levels]
+		{
+		}
+	}
+	[t:start_group,n:sirius_moon_bandits_loop]
+	{
+	  b default = true;
+		description = "";
+	  b dev_only = false;
+	  i id = 1698464;
+		screen_name = "";
+		[start_position]
+		{
+		  i id = 1;
+			position = 0.035134,0.000000,0.049485,0xF47286CE;
+			[camera]
+			{
+			  f azimuth = 0.500000;
+			  f distance = 20.000000;
+			  f orbit = 0.000000;
+				position = 0.000000,0.000000,0.000000,0xF47286CE;
 			}
 		}
 		[world_levels]
