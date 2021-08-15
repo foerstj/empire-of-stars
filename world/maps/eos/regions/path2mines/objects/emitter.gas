@@ -30,19 +30,6 @@
 	  i stop_hour = 4;
 	}
 }
-[t:emt_sound_act,n:0x002008f9]
-{
-	[placement]
-	{
-	  q orientation = 0,0.984808,0,-0.173648;
-	  p position = 0.0538578,-0.749999,-0.133202,0x84e2bc53;
-	}
-	[sound_emitter_act]
-	{
-		event_sound = "env_shrine_mana";
-	  b start_on_creation = false;
-	}
-}
 [t:emt_sound,n:0x002006e4]
 {
 	[placement]
@@ -240,18 +227,5 @@
 	  f repeat_rate = 4;
 	  i start_hour = 22;
 	  i stop_hour = 4;
-	}
-}
-[t:emt_sound_act,n:0x002006e1]
-{
-	[placement]
-	{
-	  q orientation = 0,-0.923879,0,-0.382684;
-	  p position = 0.105957,-1.24167,0.0209045,0x7122c7aa;
-	}
-	[sound_emitter_act]
-	{
-		event_sound = "env_shrine_health";
-	  b start_on_creation = false;
 	}
 }
