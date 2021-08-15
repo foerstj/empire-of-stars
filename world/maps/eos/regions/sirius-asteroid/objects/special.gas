@@ -292,11 +292,11 @@
 	{
 	  b check_complete = true;
 		quest_name = "sirius_darkgen_banditmoon";
-	  x send_to_scid = 0x0E000043;
+	  x send_to_scid = 0x0E000044;
 	}
 	[placement]
 	{
-	  p position = -1.47703,0.2,-0.0186272,0x0c07a402;
+	  p position = -1.39614,0.2,-0.753465,0x0c07a402;
 	}
 }
 [t:trigger_generic,n:0x0e000043]
@@ -354,5 +354,18 @@
 	[placement]
 	{
 	  p position = -0.525078,0.2,-0.524624,0x4c9f7fdf;
+	}
+}
+[t:check_quest,n:0x0e000044]
+{
+	[check_quest]
+	{
+	  b check_complete = true;
+		quest_name = "sirius_darkgen_machinemoon";
+	  x send_to_scid = 0x0E000043;
+	}
+	[placement]
+	{
+	  p position = -1.50994,0.2,0.0942926,0x0c07a402;
 	}
 }
