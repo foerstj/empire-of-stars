@@ -1,3 +1,32 @@
+[t:trigger_change_mood_box,n:0x0020008b]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = mood_change("multiplayer_world_path2mines_2");
+			  b can_self_destruct = true;
+				condition* = party_member_within_bounding_box(4.000000,4.000000,4.000000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,0.995185,0,-0.0980176;
+	  p position = 0.0206785,0,-1.94702,0x20283e5f;
+	}
+}
 [t:trigger_change_mood_box,n:0x002003c4]
 {
 	[common]
@@ -2034,38 +2063,6 @@
 	  p position = 2.55209,-3.79853,-0.323059,0xa2e6444b;
 	}
 }
-[t:trigger_generic,n:0x002008b3]
-{
-	[common]
-	{
-		dev_instance_text = "SCRIPTED EVENT";
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = send_world_message("we_req_activate",0x002005C7,0f,"default","",0);
-				action* = send_world_message("we_req_activate",0x002005CA,0f,"default","",0);
-				action* = send_world_message("we_req_activate",0x00200602,0f,"default","",0);
-			  b can_self_destruct = true;
-				condition* = party_member_within_sphere(7.000000,"on_first_enter"), doc("[*one-shot check (trigger is one-shot)*]");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = true;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  q orientation = 0,0.976296,0,0.216439;
-	  p position = -1.71338,-6,-1.76462,0x5811e783;
-	}
-}
 [t:spawnpoint,n:0x00200832]
 {
 	[placement]
@@ -2393,38 +2390,6 @@
 	  p position = -0.476768,0,0.238861,0x49115997;
 	}
 }
-[t:trigger_generic,n:0x00200a60]
-{
-	[common]
-	{
-		dev_instance_text = "SCRIPTED EVENT";
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = send_world_message("we_req_activate",0x00200A22,0f,"default","",0);
-				action* = send_world_message("we_req_activate",0x00200A19,0f,"default","",0);
-				action* = send_world_message("we_req_activate",0x00200A5D,0f,"default","",0);
-			  b can_self_destruct = true;
-				condition* = party_member_within_sphere(7.000000,"on_first_enter"), doc("[*one-shot check (trigger is one-shot)*]");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = true;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  q orientation = 0,0.976296,0,0.216439;
-	  p position = -3.06784,-9.53674e-007,-3.90315,0x0494e70b;
-	}
-}
 [t:spawnpoint,n:0x00200a1a]
 {
 	[placement]
@@ -2638,34 +2603,5 @@
 	{
 	  q orientation = 0,1,0,0;
 	  p position = -0.046916,2.10196,0.293243,0x628dca00;
-	}
-}
-[t:trigger_change_mood_box,n:0x0020008b]
-{
-	[common]
-	{
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = mood_change("multiplayer_world_path2mines_2");
-			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(4.000000,4.000000,4.000000,"on_every_enter");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  q orientation = 0,0.995185,0,-0.0980176;
-	  p position = 0.0206785,0,-1.94702,0x20283e5f;
 	}
 }
