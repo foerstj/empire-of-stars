@@ -26,34 +26,6 @@
 	  p position = -0.321779,1.90735e-006,-0.19219,0x6c3f25a3;
 	}
 }
-[t:trigger_change_mood_box,n:0x059006b8]
-{
-	[common]
-	{
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = mood_change("map_world_df_r0_1");
-			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(1.000000,2.000000,15.000000,"on_every_enter");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  p position = -2.52808,0,0.257099,0x719a6cee;
-	}
-}
 [t:trigger_change_mood_box,n:0x059006a6]
 {
 	[common]
@@ -62,7 +34,7 @@
 		{
 			[*]
 			{
-				action* = mood_change("map_world_df_bandits_1");
+				action* = mood_change("eos_sirius_banditmoon_1");
 			  b can_self_destruct = true;
 				condition* = party_member_within_bounding_box(1.000000,2.000000,15.000000,"on_every_enter");
 			  f delay = 0.000000;
@@ -127,7 +99,7 @@
 		{
 			[*]
 			{
-				action* = mood_change("map_world_df_bandits_2");
+				action* = mood_change("eos_sirius_banditmoon_2");
 			  b can_self_destruct = true;
 				condition* = party_member_within_bounding_box(1.000000,2.000000,20.000000,"on_every_enter");
 			  f delay = 0.000000;
@@ -163,7 +135,7 @@
 		{
 			[*]
 			{
-				action* = mood_change("map_world_df_bandits_1");
+				action* = mood_change("eos_sirius_banditmoon_1");
 			  b can_self_destruct = true;
 				condition* = party_member_within_bounding_box(1.000000,2.000000,24.000000,"on_every_enter");
 			  f delay = 0.000000;
@@ -192,7 +164,7 @@
 		{
 			[*]
 			{
-				action* = mood_change("map_world_df_bandits_3");
+				action* = mood_change("eos_sirius_banditmoon_3");
 			  b can_self_destruct = true;
 				condition* = party_member_within_bounding_box(5.000000,2.000000,0.500000,"on_every_enter");
 			  f delay = 0.000000;
@@ -221,7 +193,7 @@
 		{
 			[*]
 			{
-				action* = mood_change("map_world_df_bandits_1");
+				action* = mood_change("eos_sirius_banditmoon_1");
 			  b can_self_destruct = true;
 				condition* = party_member_within_bounding_box(6.000000,2.000000,0.500000,"on_every_enter");
 			  f delay = 0.000000;
@@ -250,7 +222,7 @@
 		{
 			[*]
 			{
-				action* = mood_change("map_world_df_bandits_3");
+				action* = mood_change("eos_sirius_banditmoon_3");
 			  b can_self_destruct = true;
 				condition* = party_member_within_bounding_box(1.000000,2.000000,0.500000,"on_every_enter");
 			  f delay = 0.000000;
@@ -279,7 +251,7 @@
 		{
 			[*]
 			{
-				action* = mood_change("map_world_df_bandits_1");
+				action* = mood_change("eos_sirius_banditmoon_1");
 			  b can_self_destruct = true;
 				condition* = party_member_within_bounding_box(2.000000,2.000000,0.500000,"on_every_enter");
 			  f delay = 0.000000;
@@ -482,7 +454,7 @@
 		{
 			[*]
 			{
-				action* = mood_change("map_world_df_bandits_2");
+				action* = mood_change("eos_sirius_banditmoon_2");
 			  b can_self_destruct = true;
 				condition* = party_member_within_bounding_box(1.000000,5.000000,20.000000,"on_every_enter");
 			  f delay = 0.000000;
@@ -511,7 +483,7 @@
 		{
 			[*]
 			{
-				action* = mood_change("map_world_df_bandits_1");
+				action* = mood_change("eos_sirius_banditmoon_1");
 			  b can_self_destruct = true;
 				condition* = party_member_within_bounding_box(1.000000,5.000000,20.000000,"on_every_enter");
 			  f delay = 0.000000;
@@ -540,7 +512,7 @@
 		{
 			[*]
 			{
-				action* = mood_change("map_world_df_bandits_2");
+				action* = mood_change("eos_sirius_banditmoon_2");
 			  b can_self_destruct = true;
 				condition* = party_member_within_bounding_box(1.000000,5.000000,20.000000,"on_every_enter");
 			  f delay = 0.000000;
@@ -569,7 +541,7 @@
 		{
 			[*]
 			{
-				action* = mood_change("map_world_df_bandits_1");
+				action* = mood_change("eos_sirius_banditmoon_1");
 			  b can_self_destruct = true;
 				condition* = party_member_within_bounding_box(1.000000,5.000000,20.000000,"on_every_enter");
 			  f delay = 0.000000;
@@ -598,7 +570,7 @@
 		{
 			[*]
 			{
-				action* = mood_change("map_world_df_bandits_1");
+				action* = mood_change("eos_sirius_banditmoon_1");
 			  b can_self_destruct = true;
 				condition* = party_member_within_bounding_box(1.000000,1.000000,3.000000,"on_every_enter");
 			  f delay = 0.000000;
@@ -627,7 +599,7 @@
 		{
 			[*]
 			{
-				action* = mood_change("map_world_df_bandits_4");
+				action* = mood_change("eos_sirius_banditmoon_4");
 			  b can_self_destruct = true;
 				condition* = party_member_within_bounding_box(1.000000,1.000000,3.000000,"on_every_enter");
 			  f delay = 0.000000;
@@ -656,7 +628,7 @@
 		{
 			[*]
 			{
-				action* = mood_change("map_world_df_bandits_4");
+				action* = mood_change("eos_sirius_banditmoon_4");
 			  b can_self_destruct = true;
 				condition* = party_member_within_bounding_box(1.000000,2.000000,11.000000,"on_every_enter");
 			  f delay = 0.000000;
@@ -684,7 +656,7 @@
 		{
 			[*]
 			{
-				action* = mood_change("map_world_df_bandits_5");
+				action* = mood_change("eos_sirius_banditmoon_5");
 			  b can_self_destruct = true;
 				condition* = party_member_within_bounding_box(1.000000,2.000000,11.000000,"on_every_enter");
 			  f delay = 0.000000;
@@ -712,7 +684,7 @@
 		{
 			[*]
 			{
-				action* = mood_change("map_world_df_bandits_5");
+				action* = mood_change("eos_sirius_banditmoon_5");
 			  b can_self_destruct = true;
 				condition* = party_member_within_bounding_box(1.000000,2.000000,3.700000,"on_every_enter");
 			  f delay = 0.000000;
@@ -741,7 +713,7 @@
 		{
 			[*]
 			{
-				action* = mood_change("map_world_df_bandits_4");
+				action* = mood_change("eos_sirius_banditmoon_4");
 			  b can_self_destruct = true;
 				condition* = party_member_within_bounding_box(1.000000,2.000000,3.700000,"on_every_enter");
 			  f delay = 0.000000;
@@ -771,7 +743,7 @@
 		{
 			[*]
 			{
-				action* = mood_change("map_world_df_bandits_7");
+				action* = mood_change("eos_sirius_banditmoon_7");
 				action* = fade_nodes(0xABA40200,1,2,-1,"in");
 			  b can_self_destruct = true;
 				condition* = party_member_within_bounding_box(4.000000,2.000000,0.250000,"on_every_enter");
@@ -802,7 +774,7 @@
 		{
 			[*]
 			{
-				action* = mood_change("map_world_df_bandits_6");
+				action* = mood_change("eos_sirius_banditmoon_6");
 				action* = fade_nodes(0xABA40200,1,2,-1,"out:black");
 			  b can_self_destruct = true;
 				condition* = party_member_within_bounding_box(2.000000,2.000000,1.000000,"on_every_enter");
@@ -832,7 +804,7 @@
 		{
 			[*]
 			{
-				action* = mood_change("map_world_df_bandits_7");
+				action* = mood_change("eos_sirius_banditmoon_7");
 				action* = fade_nodes(0xABA40200,1,2,-1,"in");
 			  b can_self_destruct = true;
 				condition* = party_member_within_bounding_box(4.000000,2.000000,0.250000,"on_every_enter");
