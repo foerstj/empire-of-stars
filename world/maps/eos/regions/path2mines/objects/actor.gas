@@ -1163,8 +1163,29 @@
 	  p position = 0.0929699,-0.200001,-0.081131,0x3a39169e;
 	}
 }
-[t:krug_shaman_boss_01,n:0x002005d0]
+[t:goblin_robo_suit,n:0x002005d0]
 {
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_activate",0x002005D0,0f,"default","every",0);
+			  b can_self_destruct = true;
+				condition* = party_member_within_sphere(20.000000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
 	[placement]
 	{
 	  q orientation = 0,-0.923879,0,0.382683;
@@ -1176,7 +1197,7 @@
 	[placement]
 	{
 	  q orientation = 0,0.996918,0,-0.0784593;
-	  p position = 0.312271,-1.15,0.848038,0xf86d9ed8;
+	  p position = 0.13422,-1.15,1.51317,0xf86d9ed8;
 	}
 }
 [t:hunter,n:0x00200836]
