@@ -93,33 +93,6 @@
 	  p position = 0.986527,0,-0.604555,0xc0240114;
 	}
 }
-[t:mp_dwarf_legionnaire_guard,n:0x00200951]
-{
-	[aspect]
-	{
-	  b is_collidable = false;
-		model = m_c_gan_df_pos_a3;
-	}
-	[conversation]
-	{
-		[conversations]
-		{
-			* = conversation_guard;
-			* = conversation_guard_red;
-		}
-	}
-	[mind]
-	{
-	  b actor_may_attack = false;
-	  b actor_may_be_attacked = false;
-		jat_talk = world\ai\jobs\common\job_talk_mp.skrit;
-	}
-	[placement]
-	{
-	  q orientation = 0,0.92388,0,0.382683;
-	  p position = -2.30627,0,-0.0811516,0x78d5a4ad;
-	}
-}
 [t:krug_throw,n:0x00200a49]
 {
 	[placement]
