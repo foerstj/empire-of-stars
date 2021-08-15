@@ -86,62 +86,6 @@
 	  p position = 1.91761,0.724448,-0.178802,0xc0a1e064;
 	}
 }
-[t:tutorial_tip,n:0x002004ab]
-{
-	[common]
-	{
-		dev_instance_text = "DISPLACER TIP";
-	}
-	[placement]
-	{
-	  q orientation = 0,1,0,0;
-	  p position = 3.25581,0.249997,-1.40355,0x7e2476b1;
-	}
-	[tip]
-	{
-		tip = "tip_5";
-	}
-}
-[t:trigger_generic,n:0x002005de]
-{
-	[common]
-	{
-		dev_instance_text = "TIP TRIGGER";
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = send_world_message("we_req_activate",0x002004AB,0f,"0x4002","every",0);
-			  b can_self_destruct = true;
-				condition* = party_member_within_node(0x08B4B471,1,99,-1,"on_unique_enter");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  p position = 3.26243,-1.90735e-006,-0.100861,0x7e2476b1;
-	}
-}
-[t:set_quest_bits,n:0x00200958]
-{
-	[placement]
-	{
-	  p position = 3.08591,-1.90735e-006,1.20307,0x7e2476b1;
-	}
-	[set_quest_bits]
-	{
-		bool_variable = "teleport_river_forest_path2mines_active";
-	}
-}
 [t:trigger_change_mood_box,n:0x00200900]
 {
 	[common]
@@ -2522,86 +2466,40 @@
 	  p position = -0.583,0,0.0116577,0xdaae7b79;
 	}
 }
-[t:trigger_change_mood_box,n:0x002005a2]
-{
-	[common]
-	{
-		dev_instance_text = " PLAYER LOCATION";
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = set_player_world_location("elddim_glade");
-			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(3.000000,2.000000,3.000000,"on_every_enter");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  q orientation = 0,1,0,-5.96046e-008;
-	  p position = 1.4006,0.2,-1.36279,0x898cbaab;
-	}
-}
-[t:trigger_generic,n:0x002005a3]
-{
-	[common]
-	{
-		dev_instance_text = "TIP TRIGGERS";
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = send_world_message("we_req_activate",0x00200958,0f,"default","",0), doc("set the bool to true");
-			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(3.000000,2.000000,3.000000,"on_first_enter"), doc("[*one-shot check (trigger is one-shot)*]");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  p position = 0.0744581,0.199996,-0.023613,0x628dca00;
-	}
-}
 [t:use_point,n:0x00200884]
 {
 	[placement]
 	{
-	  p position = 0.518395,0.199999,0.710854,0x628dca00;
+	  p position = 0.376741,0.2,-0.504837,0xe4fbd568;
 	}
 }
-[t:check_quest_bits,n:0x00200953]
+[t:trigger_generic,n:0x00200092]
 {
-	[check_quest_bits]
+	[common]
 	{
-		bool_variable = "teleport_river_forest_path2mines_active";
-	  i level = 1;
-	  i object = -1;
-	  i region = 146060401;
-	  i section = 4;
-	  x send_to_scid = 0x00200954;
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_activate",0x00200954,0f,"default","every",0);
+				action* = send_world_message("we_req_activate",0x0E000030,0f,"default","every",0);
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_req_activate",0,"on_every_message");
+				condition* = has_go_in_inventory("local",0x00000000,"starstone_sirius");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
 	}
 	[placement]
 	{
-	  q orientation = 0,1,0,0;
-	  p position = -0.046916,2.10196,0.293243,0x628dca00;
+	  p position = 1.36123,0.2,-1.33924,0x898cbaab;
 	}
 }
