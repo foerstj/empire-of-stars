@@ -37,6 +37,7 @@
 	mood_name				= eos_sirius_banditmoon_teleport;
 	transition_time			= 20.0f;
 	interior				= false;
+
 	[frustum]
 	{
 		frustum_height = 60.0f;
@@ -304,19 +305,31 @@
 	transition_time			= 20.0f;
 	interior				= false;
 
+	[frustum]
+	{
+		frustum_height = 60.0f;
+		frustum_width = 45.0f;
+	}
+
 	[fog]
 	{
-		fog_near_dist		= 35.0f;
-		fog_far_dist		= 45.0f;
+		fog_near_dist		= 40.0f;
+		fog_far_dist		= 50.0f;
 		fog_lowdetail_near_dist		= 35.0f;
 		fog_lowdetail_far_dist		= 40.0f;
 		fog_color			= 0xFF90C9FF;
 		fog_density			= 0.4f;
 	}
 
+	[wind]
+	{
+		wind_velocity		= 0.5f;
+		wind_direction		= 4.7f;
+	}
+
 	[music]
 	{
-		ambient_track		= "";
+		ambient_track		= "s_e_ambient_wind_02";
 		standard_repeat_delay	= 10.0f;
 		standard_track		= "s_m_GoblinInventor_02";
 		room_type			= rt_generic;
@@ -330,17 +343,23 @@
 
 	[fog]
 	{
-		fog_near_dist		= 35.0f;
-		fog_far_dist		= 45.0f;
+		fog_near_dist		= 40.0f;
+		fog_far_dist		= 50.0f;
 		fog_lowdetail_near_dist		= 35.0f;
 		fog_lowdetail_far_dist		= 40.0f;
 		fog_color			= 0xFF90C9FF;
 		fog_density			= 0.4f;
 	}
 
+	[wind]
+	{
+		wind_velocity		= 0.5f;
+		wind_direction		= 4.7f;
+	}
+
 	[music]
 	{
-		ambient_track		= "";
+		ambient_track		= "s_e_ambient_wind_02";
 		standard_repeat_delay	= 10.0f;
 		standard_track		= "s_m_GoblinInventor_02";
 		room_type			= rt_generic;
@@ -354,17 +373,28 @@
 
 	[fog]
 	{
-		fog_near_dist		= 35.0f;
-		fog_far_dist		= 45.0f;
+		fog_near_dist		= 40.0f;
+		fog_far_dist		= 50.0f;
 		fog_lowdetail_near_dist		= 35.0f;
 		fog_lowdetail_far_dist		= 40.0f;
 		fog_color			= 0xFF90C9FF;
 		fog_density			= 0.4f;
 	}
 
+	[rain]
+	{
+		rain_density		= 150.0f;
+		lightning			= false;
+	}
+	[wind]
+	{
+		wind_velocity		= 0.5f;
+		wind_direction		= 4.7f;
+	}
+
 	[music]
 	{
-		ambient_track		= "";
+		ambient_track		= "s_e_ambient_wind_02";
 		standard_repeat_delay	= 10.0f;
 		standard_track		= "s_m_GoblinInventor_03";
 		room_type			= rt_generic;
@@ -379,17 +409,23 @@
 
 	[fog]
 	{
-		fog_near_dist		= 35.0f;
-		fog_far_dist		= 45.0f;
+		fog_near_dist		= 40.0f;
+		fog_far_dist		= 50.0f;
 		fog_lowdetail_near_dist		= 35.0f;
 		fog_lowdetail_far_dist		= 40.0f;
 		fog_color			= 0xFF90C9FF;
 		fog_density			= 0.4f;
 	}
 
+	[wind]
+	{
+		wind_velocity		= 0.5f;
+		wind_direction		= 4.7f;
+	}
+
 	[music]
 	{
-		ambient_track		= "";
+		ambient_track		= "s_e_ambient_wind_02";
 		standard_repeat_delay	= 10.0f;
 		standard_track		= "s_m_GoblinInventor_05";
 		room_type			= rt_generic;
@@ -404,17 +440,23 @@
 
 	[fog]
 	{
-		fog_near_dist		= 35.0f;
-		fog_far_dist		= 45.0f;
+		fog_near_dist		= 40.0f;
+		fog_far_dist		= 50.0f;
 		fog_lowdetail_near_dist		= 35.0f;
 		fog_lowdetail_far_dist		= 40.0f;
 		fog_color			= 0xFF90C9FF;
 		fog_density			= 0.4f;
 	}
 
+	[wind]
+	{
+		wind_velocity		= 0.5f;
+		wind_direction		= 4.7f;
+	}
+
 	[music]
 	{
-		ambient_track		= "";
+		ambient_track		= "s_e_ambient_wind_02";
 		standard_repeat_delay	= 10.0f;
 		standard_track		= "s_m_DwarvenMines_05";
 		room_type			= rt_generic;
