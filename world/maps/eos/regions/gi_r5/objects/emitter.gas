@@ -15,6 +15,36 @@
 		event_sound = "env_motors";
 	}
 }
+[t:emt_sound,n:0x0550023a]
+{
+	[placement]
+	{
+	  q orientation = 0,-0.707107,0,0.707107;
+	  p position = -3.46596,-1.87238,-2.95354,0x46a17b64;
+	}
+	[sound_emitter]
+	{
+	  b continual_loop = true;
+		event_sound = "env_machinery";
+	}
+}
+[t:emt_sound,n:0x0550018b]
+{
+	[common]
+	{
+		dev_instance_text = "SOUND- conveyer";
+	}
+	[placement]
+	{
+	  q orientation = 0,1,0,0;
+	  p position = -0.0556639,0.341039,-1.93346,0xfc1e556a;
+	}
+	[sound_emitter]
+	{
+	  b continual_loop = true;
+		event_sound = "env_conveyer";
+	}
+}
 [t:emt_sound,n:0x05500186]
 {
 	[placement]
@@ -42,35 +72,5 @@
 	{
 	  b continual_loop = true;
 		event_sound = "env_conveyer";
-	}
-}
-[t:emt_sound,n:0x0550018b]
-{
-	[common]
-	{
-		dev_instance_text = "SOUND- conveyer";
-	}
-	[placement]
-	{
-	  q orientation = 0,1,0,0;
-	  p position = -0.0556639,0.341039,-1.93346,0xfc1e556a;
-	}
-	[sound_emitter]
-	{
-	  b continual_loop = true;
-		event_sound = "env_conveyer";
-	}
-}
-[t:emt_sound,n:0x0550023a]
-{
-	[placement]
-	{
-	  q orientation = 0,-0.707107,0,0.707107;
-	  p position = -3.46596,-1.87238,-2.95354,0x46a17b64;
-	}
-	[sound_emitter]
-	{
-	  b continual_loop = true;
-		event_sound = "env_machinery";
 	}
 }
