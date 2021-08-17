@@ -431,34 +431,3 @@
 		room_type			= rt_generic;
 	}
 }
-[mood_setting*]
-{
-	// dwarven music for the pseudo-dwarven themed side area
-	mood_name				= eos_sirius_machinemoon_r5a_1;
-	transition_time			= 3.0f;
-	interior				= false;
-
-	[fog]
-	{
-		fog_near_dist		= 40.0f;
-		fog_far_dist		= 50.0f;
-		fog_lowdetail_near_dist		= 35.0f;
-		fog_lowdetail_far_dist		= 40.0f;
-		fog_color			= 0xFF90C9FF;
-		fog_density			= 0.4f;
-	}
-
-	[wind]
-	{
-		wind_velocity		= 0.5f;
-		wind_direction		= 4.7f;
-	}
-
-	[music]
-	{
-		ambient_track		= "s_e_ambient_wind_02";
-		standard_repeat_delay	= 10.0f;
-		standard_track		= "s_m_DwarvenMines_05";
-		room_type			= rt_generic;
-	}
-}

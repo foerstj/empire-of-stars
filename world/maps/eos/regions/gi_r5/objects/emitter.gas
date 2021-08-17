@@ -28,23 +28,6 @@
 		event_sound = "env_machinery";
 	}
 }
-[t:emt_sound,n:0x0550018b]
-{
-	[common]
-	{
-		dev_instance_text = "SOUND- conveyer";
-	}
-	[placement]
-	{
-	  q orientation = 0,1,0,0;
-	  p position = -0.0556639,0.341039,-1.93346,0xfc1e556a;
-	}
-	[sound_emitter]
-	{
-	  b continual_loop = true;
-		event_sound = "env_conveyer";
-	}
-}
 [t:emt_sound,n:0x05500186]
 {
 	[placement]
@@ -67,6 +50,23 @@
 	{
 	  q orientation = 0,0.707107,0,0.707107;
 	  p position = 1.89955,4.04804,-1.79414,0xad0d39c0;
+	}
+	[sound_emitter]
+	{
+	  b continual_loop = true;
+		event_sound = "env_conveyer";
+	}
+}
+[t:emt_sound,n:0x0550018b]
+{
+	[common]
+	{
+		dev_instance_text = "SOUND- conveyer";
+	}
+	[placement]
+	{
+	  q orientation = 0,1,0,0;
+	  p position = -0.0556639,0.341039,-1.93346,0xfc1e556a;
 	}
 	[sound_emitter]
 	{
