@@ -1,0 +1,62 @@
+[t:template,n:eos_ursae_demonic_base]
+{
+	category_name = "1W_evil_d";
+	doc = "eos_ursae_demonic";
+	specializes = dsx_ursae_demonic_base;
+
+	[aspect]
+	{
+		model = m_c_edm_DEMURSAE_pos_1;
+		textures:0 = b_c_edm_demonic_ursae;
+		material = claw;
+		[voice]
+		{
+			[die]			{ priority = high; * = s_e_die_bear_SED; }
+			[enemy_spotted]	{ priority = high; * = s_e_call_bear_SED; }
+			[hit_glance]
+			{
+				* = s_e_hit_bear_SED;
+				* = s_e_hit_bear2_SED;
+				priority = low;
+			}
+		}
+	}
+	[common]
+	{
+		screen_name = "Ursae";
+		membership = monster, undead;
+	}
+}
+[t:template,n:eos_ursae_demonic]
+{
+    // Balanced for level 32, hard melee
+    // dsx ursae with stats of swamp creature
+	specializes = eos_ursae_demonic_base;
+
+	[actor]
+	{
+		[skills]
+		{
+			strength =  22, 0;
+			intelligence =  8, 0;
+			dexterity =  7, 0;
+            melee =  	12,  0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 2500;
+		life = 1040;
+		max_life = 1040;
+		mana = 10;
+		max_mana = 10;
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 145;
+		damage_min = 135;
+		reload_delay = 0;
+	}
+	[defend] { defense = 140; }
+}

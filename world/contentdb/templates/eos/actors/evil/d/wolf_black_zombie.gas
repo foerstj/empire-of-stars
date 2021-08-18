@@ -1,0 +1,17 @@
+// wolf_black but with zombie texture
+[t:template,n:wolf_black_zombie]
+{
+	category_name = "1W_evil_d";
+	doc = "wolf_black_zombie";
+	specializes = wolf_black_base;
+
+	[aspect]
+	{
+		textures:0 = b_c_edm_wf-05;
+	}
+	[common]
+	{
+		screen_name="Undead Black Wolf";
+		membership = party_wolf_black_boss, monster, undead;
+	}
+}

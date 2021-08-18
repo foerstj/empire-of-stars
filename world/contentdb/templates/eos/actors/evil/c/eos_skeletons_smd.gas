@@ -1,0 +1,429 @@
+// Skeletons from dsx just a bit higher stats
+
+[t:template,n:eos_smd_skeleton_melee_01]
+{
+	category_name = "1W_evil_c";
+	doc = "eos skeleton melee 01";
+	specializes = base_skeleton;
+
+	[actor]
+	{
+		[skills]
+		{
+			strength	= 15, 0;
+			intelligence= 10, 0;
+			dexterity	= 10, 0;
+			melee		= 13, 0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 500;
+		life = 500;
+		max_life = 500;
+		mana = 5;
+		max_mana = 5;
+
+		[textures]	{0 = b_c_ecm_sk-02;}
+	}
+	[attack]
+	{
+		damage_max = 100;
+		damage_min = 80;
+	}
+	[defend] { defense = 200; }
+
+	[common]
+	{
+        screen_name="Skeleton";
+		membership = skeleton, monster;
+	}
+	[physics]
+	{
+		[break_particulate]
+        {
+            frag_glb_bone_dirty_01 = 1;
+            frag_glb_bone_dirty_02 = 1;
+            frag_glb_bone_dirty_03 = 1;
+            frag_glb_bone_dirty_04 = 4;
+            frag_glb_bone_dirty_05 = 1;
+            frag_glb_bone_dirty_06 = 1;
+        }
+	}
+
+	[inventory]
+	{
+		[pcontent]
+        {
+            /* Generated: Tue Jun 17 11:13:15 2003
+                Level 13, Medium */
+            [oneof*]
+            {
+                [gold*]
+                {
+                    chance = 0.2;
+                    min = 153;
+                    max = 305;
+                }
+                [oneof*]
+                {
+                    chance = 0.2;
+                    il_main = potion_mana_small;
+                    il_main = potion_health_small;
+                }
+                [oneof*]
+                {
+                    chance = 0.15;
+                    il_main = #weapon/25-36;
+                    il_main = #armor/9-71;
+                    il_main = #*/25-36;
+                }
+                [oneof*]
+                {
+                    chance = 0.0075;
+                    il_main = #weapon/-rare(1)/28-41;
+                    il_main = #armor/-rare(1)/53-118;
+                    il_main = #*/-rare(1)/28-41;
+                }
+                
+            }
+        }
+	}
+	[mind]
+	{
+		jat_brain				= world\ai\jobs\common\brain_hero.skrit
+			?actor_joins_existing_party	= true;
+
+		job_travel_distance_limit = 10;
+		melee_engage_range = 8.0;
+		on_job_reached_travel_distance_abort_attack = true;
+		ranged_engage_range			= 8.0;
+		sight_range				= 14.0;
+		jat_fidget				= world\ai\jobs\common\job_fidget.skrit;
+	}
+}
+
+[t:template,n:eos_smd_skeleton_large]
+{
+	category_name = "1W_evil_c";
+	doc = "DSX_Skeleton_Large";
+	specializes = base_skeleton;
+
+	[actor]
+	{
+		[skills]
+		{
+			strength        = 15, 0;
+			intelligence    = 10, 0;
+			dexterity       = 10, 0;
+			melee           = 15, 0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 800;
+		life = 1000;
+		max_life = 1000;
+		mana = 10;
+		max_mana = 10;
+		[textures]	{0=b_c_ecm_sk-02;}
+		scale_base = 1.5;
+	}
+	[attack]
+	{
+		damage_max = 181;
+		damage_min = 165;
+	}
+
+	[body]
+    {
+        armor_version = ecm_sk;
+        avg_move_velocity = 1.500000;
+        [bone_translator]
+        {
+            body_anterior = bip01_head;
+            body_mid = bip01_spine2;
+            body_posterior = bip01_pelvis;
+            kill_bone = bip01_spine;
+            shield_bone = shield_grip;
+            weapon_bone = weapon_grip;
+        }
+        [chore_dictionary]
+        {
+            chore_prefix = a_c_ecm_sk_fs;
+            [chore_attack]
+            {
+                chore_stances = 0,1,2,3,4,5,6;
+                skrit = select_attack;
+                [anim_files]
+                {
+                    00 = at;
+                    02 = at-03;
+                    04 = at-05;
+                    05 = at-06;
+                }
+            }
+            [chore_default]
+            {
+                chore_stances = 0,1,2,3,4,5,6;
+                skrit = infinite_loop;
+                [anim_files] { 00=dfs; }
+            }
+            [chore_die]
+            {
+                chore_stances = 0,1,2,3,4,5,6;
+                skrit = select_transition;
+                [anim_files] { 00=di; }
+            }
+            [chore_fidget]
+            {
+                chore_stances = 0,1,2,3,4,5,6;
+                skrit = select_fidget;
+                [anim_files]
+                {
+                    00 = dff;
+                    01 = dff-02;
+                    02 = dff-03;
+                }
+            }
+            [chore_walk]
+            {
+                chore_stances = 0,1,2,3,4,5,6;
+                skrit = select_walk;
+                [anim_files] { 00=wl-02; }
+            }
+        }
+    }
+
+	[physics]
+	{
+		[break_particulate]
+        {
+            frag_glb_bone_dirty_01 = 1;
+            frag_glb_bone_dirty_02 = 1;
+            frag_glb_bone_dirty_03 = 1;
+            frag_glb_bone_dirty_04 = 4;
+            frag_glb_bone_dirty_05 = 1;
+            frag_glb_bone_dirty_06 = 1;
+        }
+	}
+	[common]
+	{
+		screen_name="Giant Skeleton Stalker";
+		membership = skeleton, monster;
+	}
+	[defend] { defense=400; }
+	[inventory]
+    {
+        spew_equipped_kill_count = ;
+        [pcontent]
+        {
+            es_weapon_hand = sd_g_c_sd_1h_avg_dsx;
+            es_shield_hand = sh_un_m_o_k_m_dermal_dsx;
+            // sh_un_m_o_c_m_parade
+            // sh_ra_w_g_o_k_m_fin
+            // sh_un_m_o_k_m_dermal
+            /* Generated: Tue Jun 17 11:13:15 2003
+                Level 14, Strong */
+            [oneof*]
+            {
+                [gold*]
+                {
+                    chance = 0.2;
+                    min = 200;
+                    max = 398;
+                }
+                [oneof*]
+                {
+                    chance = 0.2;
+                    il_main = potion_mana_small;
+                    il_main = potion_health_small;
+                }
+                [oneof*]
+                {
+                    chance = 0.2;
+                    il_main = #weapon/30-41;
+                    il_main = #armor/15-90;
+                    il_main = #*/30-41;
+                }
+                [oneof*]
+                {
+                    chance = 0.01;
+                    il_main = #weapon/-rare(1)/41-49;
+                    il_main = #armor/-rare(1)/62-137;
+                    il_main = #*/-rare(1)/41-49;
+                }
+                [oneof*]
+                {
+                    chance = 0.005;
+                    il_main = #weapon/-unique(2)/41-49;
+                    il_main = #armor/-unique(2)/62-137;
+                    il_main = #*/-unique(2)/41-49;
+                }			
+            }
+        }
+    }
+	[mind]
+    {
+        jat_fidget		= world\ai\jobs\common\job_fidget.skrit
+            ?still			= false;
+
+        melee_engage_range = 14.0;
+        ranged_engage_range = 14.0;
+        sight_range = 14.0;
+        personal_space_range = 1.4;
+    }
+}
+
+[t:template,n:eos_smd_skeleton_archer]
+{
+	category_name = "1W_evil_c";
+	doc = "eos smd skeleton archer";
+	specializes = base_skeleton;
+
+	[actor]
+	{
+		[skills]
+		{
+			strength     =	15, 0;
+			intelligence =	10, 0;
+			dexterity    =	10, 0;
+			ranged       =	13, 0;
+		}
+	}
+
+	[aspect]
+	{
+		experience_value = 600;
+		life = 500;
+		max_life = 500;
+		mana = 5;
+		max_mana = 5;
+	}
+	[attack]
+	{
+		damage_max = 110;
+		damage_min = 90;
+	}
+	[common] { screen_name="Skeletal Archer"; }
+	[defend] { defense=200; }
+	[inventory]
+	{
+		selected_active_location = IL_ACTIVE_RANGED_WEAPON;
+		[equipment]
+		{
+			es_shield_hand = bw_g_c_s_s_r_avg_dsx;
+		}
+		[pcontent]
+        {
+            /* Generated: Tue Jun 17 11:13:15 2003
+                Level 14, Medium */
+            [oneof*]
+            {
+                [gold*]
+                {
+                    chance = 0.2;
+                    min = 200;
+                    max = 398;
+                }
+                [oneof*]
+                {
+                    chance = 0.2;
+                    il_main = potion_mana_small;
+                    il_main = potion_health_small;
+                }
+                [oneof*]
+                {
+                    es_shield_hand = bw_g_c_s_s_r_avg_dsx;
+                    chance = 0.15;
+                    il_main = #weapon/28-39;
+                    il_main = #armor/10-81;
+                    il_main = #*/28-39;
+                }
+                [oneof*]
+                {
+                    chance = 0.0075;
+                    il_main = #weapon/-rare(1)/30-44;
+                    il_main = #armor/-rare(1)/53-128;
+                    il_main = #*/-rare(1)/30-44;
+                }
+            }
+        }
+	}
+
+	[mind]
+    {
+        melee_engage_range = 10.0;
+        ranged_engage_range = 16.0;
+        sight_range = 16.0;
+        jat_fidget							= world\ai\jobs\common\job_fidget.skrit
+            ?social							= 0.5
+            &meander						= false
+            &still							= false;
+    }
+}
+
+[t:template,n:eos_smd_skeleton_melee_02]
+{
+	category_name = "1W_evil_c";
+	doc = "eos smd skeleton melee 02";
+	specializes = base_skeleton;
+
+	[actor]
+	{
+		[skills]
+		{
+			strength	    = 16, 0;
+			intelligence    = 10, 0;
+			dexterity	    = 10, 0;
+			melee		    = 14, 0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 600;
+		life = 600;
+		max_life = 600;
+		mana = 6;
+		max_mana = 6;
+
+		[textures]	{0 = b_c_ecm_sk-02;}
+	}
+	[attack]
+	{
+		damage_min = 120;
+		damage_max = 100;
+	}
+	[defend] { defense = 250; }
+
+	[common]
+	{
+		membership = skeleton, monster;
+	}
+	[physics]
+	{
+		[break_particulate]
+		{
+			frag_glb_bone_dirty_01 = 1;
+			frag_glb_bone_dirty_02 = 1;
+			frag_glb_bone_dirty_03 = 1;
+			frag_glb_bone_dirty_04 = 4;
+			frag_glb_bone_dirty_05 = 1;
+			frag_glb_bone_dirty_06 = 1;
+		}
+	}
+	[common] { screen_name="Skeleton"; }
+
+	[mind]
+    {
+        jat_brain									= world\ai\jobs\common\brain_hero.skrit
+            ?actor_joins_existing_party					= true;
+
+        job_travel_distance_limit = 10;
+        melee_engage_range = 8.0;
+        on_job_reached_travel_distance_abort_attack = true;
+        ranged_engage_range							= 8.0;
+        sight_range									= 14.0;
+        jat_fidget									= world\ai\jobs\common\job_fidget.skrit;
+    }
+}
