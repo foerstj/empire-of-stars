@@ -65,14 +65,6 @@
 	  p position = 0.483528,-4,-3.62659,0x4c2738b5;
 	}
 }
-[t:barrel_gob_exp,n:0x05500092]
-{
-	[placement]
-	{
-	  q orientation = 0,-0.707107,0,0.707107;
-	  p position = -0.421585,0,3.51109,0xb0ae1636;
-	}
-}
 [t:chest_gob_01_gi_r5,n:0x05500255]
 {
 	[inventory]
@@ -95,21 +87,47 @@
 		use_point_scids = 0x05500295;
 	}
 }
-[t:crate_glb_gi_r5,n:0x05500253]
+[t:barrel_gob_exp,n:0x05500092]
 {
 	[placement]
 	{
-	  p position = -1.62115,2.38419e-007,-0.439552,0x18505170;
-		use_point_scids = 0x05500291;
+	  q orientation = 0,-0.707107,0,0.707107;
+	  p position = -0.421585,0,3.51109,0xb0ae1636;
 	}
 }
-[t:barrel_glb_gi_r5,n:0x05500254]
+[t:barrel_gob_exp,n:0x0550005f]
 {
 	[placement]
 	{
-	  q orientation = 0,0.382683,0,0.92388;
-	  p position = -1.20841,4.05312e-006,-1.35793,0x18505170;
-		use_point_scids = 0x05500290;
+	  q orientation = 0,1,0,0;
+	  p position = -0.686439,-3.5,-1.56735,0xee18b5ad;
+	}
+}
+[t:barrel_gob_exp,n:0x055000f1]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_exploded",0,"on_every_message");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  p position = 0.328484,-3.5,-0.634254,0xee18b5ad;
 	}
 }
 [t:barrel_glb_gi_r5,n:0x0550024d]
@@ -143,6 +161,40 @@
 	{
 	  p position = 2.50211,-2.6,-3.55168,0x46a17b64;
 		use_point_scids = 0x0550028e;
+	}
+}
+[t:barrel_gob_exp,n:0x05500096]
+{
+	[placement]
+	{
+	  p position = -3.80981,2,-1.06848,0x236acc67;
+	}
+}
+[t:barrel_gob_exp,n:0x055000eb]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_exploded",0,"on_every_message");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  p position = 1.7235,-1.5,-0.210098,0x3c171cb6;
 	}
 }
 [t:barrel_glb_gi_r5,n:0x0550025b]
@@ -407,73 +459,21 @@
 		use_point_scids = 0x05500265;
 	}
 }
-[t:barrel_gob_exp,n:0x05500096]
+[t:crate_glb_gi_r5,n:0x05500253]
 {
 	[placement]
 	{
-	  p position = -3.80981,2,-1.06848,0x236acc67;
+	  p position = -1.62115,2.38419e-007,-0.439552,0x18505170;
+		use_point_scids = 0x05500291;
 	}
 }
-[t:barrel_gob_exp,n:0x055000eb]
-{
-	[common]
-	{
-		[instance_triggers]
-		{
-			[*]
-			{
-			  b can_self_destruct = true;
-				condition* = receive_world_message("we_exploded",0,"on_every_message");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  p position = 1.7235,-1.5,-0.210098,0x3c171cb6;
-	}
-}
-[t:barrel_gob_exp,n:0x0550005f]
+[t:barrel_glb_gi_r5,n:0x05500254]
 {
 	[placement]
 	{
-	  q orientation = 0,1,0,0;
-	  p position = -0.686439,-3.5,-1.56735,0xee18b5ad;
-	}
-}
-[t:barrel_gob_exp,n:0x055000f1]
-{
-	[common]
-	{
-		[instance_triggers]
-		{
-			[*]
-			{
-			  b can_self_destruct = true;
-				condition* = receive_world_message("we_exploded",0,"on_every_message");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  p position = 0.328484,-3.5,-0.634254,0xee18b5ad;
+	  q orientation = 0,0.382683,0,0.92388;
+	  p position = -1.20841,4.05312e-006,-1.35793,0x18505170;
+		use_point_scids = 0x05500290;
 	}
 }
 [t:barrel_gob_exp,n:0x055000bd]
