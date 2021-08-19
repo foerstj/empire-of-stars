@@ -2,36 +2,36 @@
 {
 	[elevator_instant_4s_1c]
 	{
-	  i connect_door_location1_level1 = 7;
+	  i connect_door_location1_level1 = 5;
 	  i connect_door_location1_level2 = 8;
 	  i connect_door_location2_level1 = 5;
-	  i connect_door_location2_level2 = 6;
+	  i connect_door_location2_level2 = 8;
 	  x connect_node_location1 = 0x898CBAAB;
-	  x connect_node_location2 = 0x007EEAA4;
-		down_effect = "displacer_plate_down";
+	  x connect_node_location2 = 0x24A490C1;
+		down_effect = "eos_displacer_plate_down";
 	  f duration_location1_moving_to_lv1 = 16;
 	  f duration_location2_moving_to_lv1 = 16;
 	  i e2_connect_door_location1_level1 = 5;
-	  i e2_connect_door_location1_level2 = 6;
-	  i e2_connect_door_location2_level1 = 3;
-	  i e2_connect_door_location2_level2 = 4;
-	  x e2_elevator_node = 0xA2B5D4E4;
-	  i elevator_door_location1_level1 = 2;
-	  i elevator_door_location1_level2 = 2;
-	  i elevator_door_location2_level1 = 2;
-	  i elevator_door_location2_level2 = 2;
-	  x elevator_node = 0x628DCA00;
-		location1_moving_to_lv1_actioninfo = "multiplayer_world_path2mines_teleport";
+	  i e2_connect_door_location1_level2 = 8;
+	  i e2_connect_door_location2_level1 = 5;
+	  i e2_connect_door_location2_level2 = 8;
+	  x e2_elevator_node = 0xA9B9E242;
+	  x elevator_node = 0xE1C5F653;
+		location1_moving_to_lv1_actioninfo = "eos_sirius_deathmoon_teleport";
+		location1_moving_to_lv1_hint = ah_yaxis_negative;
 		location1_moving_to_lv2_actioninfo = "multiplayer_world_teleport";
-		location2_moving_to_lv1_actioninfo = "multiplayer_world_river_forest_teleport";
+		location1_moving_to_lv2_hint = ah_yaxis_positive;
+		location2_moving_to_lv1_actioninfo = "eos_sirius_teleport";
+		location2_moving_to_lv1_hint = ah_yaxis_negative;
 		location2_moving_to_lv2_actioninfo = "multiplayer_world_teleport";
+		location2_moving_to_lv2_hint = ah_yaxis_positive;
 		material = "hub";
-	  x other_elevator = 0x08401086;
-		up_effect = "displacer_plate_up";
+	  x other_elevator = 0x0E000031;
+		up_effect = "eos_displacer_plate_up";
 	}
 	[placement]
 	{
 	  q orientation = 0,1,0,0;
-	  p position = 0,5,0,0x628dca00;
+	  p position = 0,0.2,0,0xe1c5f653;
 	}
 }

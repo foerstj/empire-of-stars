@@ -60,24 +60,19 @@
 	  p position = -1.09732,-0.177391,1.06451,0x78d5a4ad;
 	}
 }
-[t:statue_cav_spin_02,n:0x00200864]
+[t:eos_teleport_statue_small,n:0x0020001c]
 {
-	[common]
-	{
-		screen_name = "Elddim Glade to Elddim Displacer";
-	}
 	[on_off_lever]
 	{
-		off_message = we_req_activate;
-	  x off_scid = 0x00200953;
-	  x on_scid = 0x00200953;
-	  f reset_time = 25;
-	  f reset_time_2 = 25;
+	  x off_scid = 0x0020001D;
+	  x off_scid_2 = 0x0E000038;
+	  x on_scid = 0x0020001D;
+	  x on_scid_2 = 0x0E000038;
 	}
 	[placement]
 	{
-	  q orientation = 0,0.707107,0,0.707107;
-	  p position = 0.00742579,0.199998,0.0352554,0x628dca00;
+	  q orientation = 0,1,0,-1.66939e-007;
+	  p position = 0,0.2,0,0xe1c5f653;
 		use_point_scids = 0x00200884;
 	}
 }
