@@ -1,0 +1,17 @@
+// wolf_black but with gray zombie texture
+[t:template,n:wolf_gray_zombie]
+{
+	category_name = "1W_evil_d";
+	doc = "wolf_gray_zombie";
+	specializes = wolf_black_base;
+
+	[aspect]
+	{
+		textures:0 = b_c_edm_wf-05_gz;
+	}
+	[common]
+	{
+		screen_name="Undead Gray Wolf";
+		membership = party_wolf_gray_boss, monster, undead;
+	}
+}
