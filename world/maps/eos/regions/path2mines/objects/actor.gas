@@ -93,33 +93,6 @@
 	  p position = 0.986527,0,-0.604555,0xc0240114;
 	}
 }
-[t:mp_dwarf_legionnaire_guard,n:0x00200951]
-{
-	[aspect]
-	{
-	  b is_collidable = false;
-		model = m_c_gan_df_pos_a3;
-	}
-	[conversation]
-	{
-		[conversations]
-		{
-			* = conversation_guard;
-			* = conversation_guard_red;
-		}
-	}
-	[mind]
-	{
-	  b actor_may_attack = false;
-	  b actor_may_be_attacked = false;
-		jat_talk = world\ai\jobs\common\job_talk_mp.skrit;
-	}
-	[placement]
-	{
-	  q orientation = 0,0.92388,0,0.382683;
-	  p position = -2.30627,0,-0.0811516,0x78d5a4ad;
-	}
-}
 [t:krug_throw,n:0x00200a49]
 {
 	[placement]
@@ -289,7 +262,8 @@
 {
 	[placement]
 	{
-	  p position = -0.458281,0,0.395695,0x9d7255d7;
+	  q orientation = 0,-0.707107,0,0.707107;
+	  p position = 0.127327,0,-0.871231,0xc0b38a3d;
 	}
 }
 [t:krug_dog,n:0x00200613]
@@ -490,18 +464,11 @@
 	  p position = -2.18001,0,1.1294,0x49cd260f;
 	}
 }
-[t:krug_grunt,n:0x00200a52]
-{
-	[placement]
-	{
-	  p position = 0.983992,0,1.99833,0x072007c4;
-	}
-}
 [t:krug_grunt,n:0x00200a53]
 {
 	[placement]
 	{
-	  p position = 2.78944,0,0.434572,0x072007c4;
+	  p position = 2.81695,0,-1.06701,0xab480248;
 	}
 }
 [t:krug_grunt,n:0x00200a6a]
@@ -583,24 +550,24 @@
 {
 	[placement]
 	{
-	  q orientation = 0,-0.861629,0,0.507538;
-	  p position = -1.60643,0,-2.96941,0x85c7c3c9;
+	  q orientation = 0,-0.25038,0,0.968148;
+	  p position = -2.32521,0,-0.840309,0x8feee910;
 	}
 }
 [t:krug_dog,n:0x0020060d]
 {
 	[placement]
 	{
-	  q orientation = 0,-0.275637,0,0.961262;
-	  p position = -0.21307,0,-0.997917,0x85c7c3c9;
+	  q orientation = 0,0.961262,0,0.275637;
+	  p position = 1.76633,-0.326633,-1.64629,0x6ff7c59e;
 	}
 }
 [t:krug_dog,n:0x0020060f]
 {
 	[placement]
 	{
-	  q orientation = 0,-0.548293,0,0.836287;
-	  p position = -2.05127,0,-1.03094,0x85c7c3c9;
+	  q orientation = 0,0.203642,0,0.979045;
+	  p position = -0.386738,0,-0.39547,0x8feee910;
 	}
 }
 [t:krug_shaman,n:0x00200992]
@@ -715,23 +682,24 @@
 {
 	[placement]
 	{
-	  q orientation = 0,1,0,0;
-	  p position = -1.82721,0,-1.80036,0xab0caf66;
+	  q orientation = 0,0,0,1;
+	  p position = 1.89502,0,1.78958,0x4cb63d2c;
 	}
 }
 [t:krug_throw,n:0x002009df]
 {
 	[placement]
 	{
-	  q orientation = 0,1,0,0;
-	  p position = 0.649988,0,-1.29019,0xab0caf66;
+	  q orientation = 0,0,0,1;
+	  p position = -0.544558,0,0.502354,0x4cb63d2c;
 	}
 }
 [t:krug_throw,n:0x002009e0]
 {
 	[placement]
 	{
-	  p position = 1.4711,0,-0.262165,0xab0caf66;
+	  q orientation = 0,1,0,0;
+	  p position = -2.49625,0,-0.0971947,0x4cb63d2c;
 	}
 }
 [t:krug_throw,n:0x002009ca]
@@ -864,32 +832,32 @@
 {
 	[placement]
 	{
-	  q orientation = 0,-0.923879,0,0.382683;
-	  p position = 0.183189,-6,0.681564,0xcc6e1fb1;
+	  q orientation = 0,0.382683,0,0.92388;
+	  p position = 1.91241,0,0.067688,0x28a7a2a0;
 	}
 }
 [t:krug_raider,n:0x00200a89]
 {
 	[placement]
 	{
-	  q orientation = 0,0.19509,0,0.980785;
-	  p position = -0.243629,-6,-0.260498,0xcc6e1fb1;
+	  q orientation = 0,0.980785,0,-0.19509;
+	  p position = 2.02242,0,1.23949,0x28a7a2a0;
 	}
 }
 [t:krug_dog,n:0x00200619]
 {
 	[placement]
 	{
-	  q orientation = 0,-0.529919,0,0.848048;
-	  p position = -1.58379,-0.0500002,0.915024,0x8bf5f94a;
+	  q orientation = 0,0.97437,0,-0.224951;
+	  p position = -3.17616,-9.53674e-007,3.37305,0x5b8c7067;
 	}
 }
 [t:krug_dog,n:0x002009e4]
 {
 	[placement]
 	{
-	  q orientation = 0,0.21644,0,0.976296;
-	  p position = -1.80851,-0.0500002,-0.524063,0x8bf5f94a;
+	  q orientation = 0,-0.537299,0,0.843392;
+	  p position = -1.14043,-9.53674e-007,3.73013,0x5b8c7067;
 	}
 }
 [t:krug_dog,n:0x002009e5]
@@ -897,7 +865,7 @@
 	[placement]
 	{
 	  q orientation = 0,-0.0261768,0,0.999657;
-	  p position = 1.13438,-0.0500002,-1.9321,0x8bf5f94a;
+	  p position = -3.58865,-9.53674e-007,0.0658569,0x0494e70b;
 	}
 }
 [t:krug_dog,n:0x002009e6]
@@ -905,7 +873,7 @@
 	[placement]
 	{
 	  q orientation = 0,0.99863,0,-0.0523361;
-	  p position = 1.64198,-0.0500002,0.497025,0x8bf5f94a;
+	  p position = -3.64326,-9.53674e-007,3.02756,0x0494e70b;
 	}
 }
 [t:krug_raider,n:0x002008e9]
@@ -1041,5 +1009,12 @@
 	{
 	  q orientation = 0,0.649448,0,0.760406;
 	  p position = -1.93192,0,1.18536,0x0cc9a195;
+	}
+}
+[t:krug_grunt,n:0x00200a52]
+{
+	[placement]
+	{
+	  p position = 0.968853,0,1.75243,0xab480248;
 	}
 }
