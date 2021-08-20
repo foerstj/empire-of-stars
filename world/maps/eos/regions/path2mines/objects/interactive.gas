@@ -39,18 +39,6 @@
 	  p position = -0.58799,-0.0479779,2.04275,0x0f79e91e;
 	}
 }
-[t:respawn_statue,n:0x002006d6]
-{
-	[aspect]
-	{
-	  f scale_multiplier = 1.15524;
-	}
-	[placement]
-	{
-	  q orientation = 0,0.927184,0,0.374607;
-	  p position = -3.93382,-6,0.326729,0xac4bddf7;
-	}
-}
 [t:dsx_darkgenerator_1,n:0x00200080]
 {
 	[common]
@@ -60,8 +48,24 @@
 			[*]
 			{
 				action* = send_world_message("we_req_deactivate",0x00200081,0f,"default","every",0);
+				action* = change_quest_state("sirius_darkgen_deathmoon","active",0);
 			  b can_self_destruct = true;
 				condition* = receive_world_message("we_killed",0,"on_every_message");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+			[*]
+			{
+				action* = change_quest_state("sirius_darkgen_deathmoon","active",0);
+			  b can_self_destruct = true;
+				condition* = party_member_within_sphere(20.000000,"on_every_enter");
 			  f delay = 0.000000;
 			  b flip_flop = false;
 			  b multi_player = true;
@@ -77,5 +81,17 @@
 	[placement]
 	{
 	  p position = 0.416382,-1.15,-0.0860397,0xf86d9ed8;
+	}
+}
+[t:respawn_statue,n:0x002006d6]
+{
+	[aspect]
+	{
+	  f scale_multiplier = 1.15524;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.927184,0,0.374607;
+	  p position = -3.93382,-6,0.326729,0xac4bddf7;
 	}
 }
