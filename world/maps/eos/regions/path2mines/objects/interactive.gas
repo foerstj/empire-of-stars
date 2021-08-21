@@ -48,7 +48,7 @@
 			[*]
 			{
 				action* = send_world_message("we_req_deactivate",0x00200081,0f,"default","every",0);
-				action* = change_quest_state("sirius_darkgen_deathmoon","active",0);
+				action* = change_quest_state("sirius_darkgen_deathmoon","completed",0);
 			  b can_self_destruct = true;
 				condition* = receive_world_message("we_killed",0,"on_every_message");
 			  f delay = 0.000000;
