@@ -634,3 +634,39 @@
 		room_type			= rt_generic;
 	}
 }
+
+[mood_setting*]
+{
+	mood_name				= eos_sirius_planet_teleport;
+	transition_time			= 20.0f;
+	interior				= true;
+
+	[frustum]
+	{
+		frustum_width		= 45.0f;
+		frustum_height		= 60.0f;
+	}
+
+	[fog]
+	{
+		fog_near_dist		= 10.0f;
+		fog_far_dist		= 40.0f;
+		fog_lowdetail_near_dist		= 10.0f;
+		fog_lowdetail_far_dist		= 30.0f;
+		fog_color			= 0xFF804040;
+		fog_density			= 0.5f;
+	}
+
+	[rain]
+	{
+		lightning			= true;
+	}
+
+	[music]
+	{
+		ambient_track		= "";
+		standard_repeat_delay = 10.0f;
+		standard_track		= "s_m_DwarvenMines_01";
+		room_type			= rt_generic;
+	}
+}
