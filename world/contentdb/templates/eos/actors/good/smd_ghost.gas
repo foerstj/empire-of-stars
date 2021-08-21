@@ -1,0 +1,206 @@
+[t:template,n:ghost_base]  // = ghost
+{
+	category_name = "1W_evil_d";
+	doc = "ghost";
+	specializes = actor_evil;
+	
+	[actor]
+	{
+		[skills]
+		{
+			strength =  	23, 0;
+			intelligence =  11, 0;
+			dexterity =  	16, 0;
+			combat_magic = 	34, 0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 62000;
+		life = 1600;
+		max_life = 1600;
+		mana = 14;
+        max_mana = 14;
+		draw_shadow = false;
+		model = m_c_edm_gh_pos_1;
+		
+		[textures] { 0=b_c_edm_gh-static; }
+		[voice]
+		{
+			[die]
+			{
+				  * = s_e_die_ghost;
+			}
+		}
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 190;
+		damage_min = 170;
+	}
+	[body]
+	{
+		avg_move_velocity = 2.720000;
+		[bone_translator]
+		{
+			body_anterior = bip01_head;
+			body_mid = bip01_neck;
+			body_posterior = bip01_pelvis;
+			kill_bone = bip01_spine;
+			shield_bone = shield_grip;
+			weapon_bone = weapon_grip;
+		}
+		[chore_dictionary]
+		{
+			chore_prefix = a_c_edm_gh_fs;
+			[chore_attack]
+			{
+				chore_stances = 0;
+				skrit = select_attack;
+				[anim_files] { 00=at; }
+			}
+			[chore_magic]
+			{
+				chore_stances = 0;
+				skrit = select_attack;
+				[anim_files] { 00=at; }
+			}
+			[chore_default]
+			{
+				chore_stances = 0;
+				skrit = infinite_loop;
+				[anim_files] { 00=dfs; }
+			}
+			[chore_die]
+			{
+				chore_stances = 0;
+				skrit = select_transition;
+				[anim_files] { 00=ds; }
+			}
+			[chore_misc]
+			{
+				chore_stances = 0;
+				skrit = select_transition;
+				[anim_files]
+				{
+					slep = dfs;
+					wake = ds;
+				}
+			}
+			[chore_fidget]
+			{
+				chore_stances = 0;
+				skrit = select_fidget;
+				[anim_files] { 00=dsf; }
+			}
+			[chore_walk]
+			{
+				chore_stances = 0;
+				skrit = select_walk;
+				[anim_files] { 00=wl; }
+			}
+		}
+	}
+	[common]
+	{
+		screen_name="Ghost";
+		membership=monster,immune_freeze;
+		[template_triggers]
+		{
+			[*]
+			{
+				single_shot = true;
+				action* = call_sfx_script("ghost_eye_glow");
+				condition* = receive_world_message("we_enemy_spotted");
+			}
+		}
+	}
+	[defend] { defense=220; }
+	[inventory]
+	{
+		selected_active_location = il_active_primary_spell;
+		[other] { il_active_primary_spell=spell_ghost_sap; }
+    	[pcontent]
+		{
+			[oneof*]
+			{
+				chance = 0.1;
+				il_main = #ring/78-129;
+                il_main = #amulet/56-100;
+			}
+		}
+	}
+	[mind]
+	{
+		melee_engage_range = 14;
+		personal_space_range = 0.7;
+		ranged_engage_range = 14.0;
+		sight_range = 14.0;
+	
+		jat_startup = world\ai\jobs\common\job_startup_reveal.skrit
+			?invisible = true;
+		
+		jat_fidget	= world\ai\jobs\common\job_fidget.skrit;
+		
+		actor_auto_fidgets = false;
+		sight_origin_height = 1;
+		
+		actor_weapon_preference			= WP_MAGIC;
+		actor_auto_switches_to_magic	= true;
+		actor_auto_switches_to_karate	= false;
+		actor_auto_switches_to_melee	= false;
+	}
+	[physics]
+	{
+		break_effect = ghost_die;
+		explode_when_killed = true;
+		gib_gore_good = true;
+	}
+}
+
+[t:template,n:ghost_npc]
+{
+	category_name = "1W_character";
+    specializes = ghost_base;
+    
+    [actor]
+    {
+        alignment = aa_neutral;
+        portrait_icon = b_gui_ig_i_ic_c_sk;
+    }
+	[aspect]
+	{
+		use_range = 1.0;
+		is_ghost_usable = TRUE;
+		life = 1;
+		max_life = 1;
+		is_invincible		= false;
+    }
+	[breaking_object]
+	{
+		damage_on_activate = 5;
+	}
+    [common]
+    {
+	  b rollover_display = true;
+		[template_triggers]
+		{
+			[*]
+			{
+				single_shot = true;
+				action* = call_sfx_script("ghost_eye_glow");
+				condition* = receive_world_message("we_entered_world");  // EDITED (was we_enemy_spotted)
+			}
+		}
+    }
+    [conversation] {}
+    [mind]
+    {
+        actor_may_attack = false;
+        actor_may_be_attacked = false;
+        jat_startup = jat_none;
+		jat_talk	= world\ai\jobs\common\job_talk.skrit;
+    }
+    [respawn_shrine] {}
+}

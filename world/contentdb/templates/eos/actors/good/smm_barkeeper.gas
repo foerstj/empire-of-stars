@@ -77,9 +77,24 @@
     }
     [common]
     {
-        membership = hero;
 	  b rollover_display = true;
         screen_name = "Gobbot Cantina Barkeeper";
+
+        [template_triggers]
+        {
+            [*]
+            {
+                action* = call_sfx_script("automaton_smoke");
+                condition* = receive_world_message("WE_ENTERED_WORLD");  // EDITED (was WE_ENEMY_SPOTTED)
+                single_shot = true;
+            }
+            [*]
+            {
+                action* = call_sfx_script("automaton_death_sparks");
+                condition* = receive_world_message("WE_KILLED");
+                single_shot = true;
+            }
+        }
     }
     [conversation] {}
 	[mind]
