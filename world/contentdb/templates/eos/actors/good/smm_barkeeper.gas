@@ -1,0 +1,116 @@
+[t:template,n:dsx_golem_clockwork_base]  // = dsx_golem_clockwork
+{
+// Balanced to level 28, hard melee
+	category_name = "1W_evil_d";
+	doc = "dsx_golem_clockwork";
+	specializes = dsx_automaton_base;
+	[actor]
+	{
+		[skills]
+		{
+			strength 	 = 19, 0;
+			intelligence =  8, 0;
+			dexterity 	 = 12, 0;
+			melee 		 = 23, 0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 2732;
+		life 			= 764;
+		max_life 		= 764;
+		mana 			= 275;
+		max_mana 		= 275;
+		model = m_c_edm_au;
+		[textures]	{ 0 = b_c_edm_au-06; }
+		material = steel;
+		scale_base = 1.3;
+		[voice]
+		{
+			[attack]	{ priority = high; * = s_e_attack_automaton_SED;	 }
+			[die]	{ priority = high; * = s_e_die_automaton;	 }
+			[enemy_spotted]	{ priority = high; * = s_e_call_mechanoid_big_SED; }
+		}
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 161;
+		damage_min = 145;
+		reload_delay = 0;
+	}
+	[common] { screen_name="Clockwork Automaton"; }
+	[defend] { defense = 359; }
+	[body]
+	{
+		avg_move_velocity = 3.000;
+	}
+	[mind]
+	{
+		jat_guard = world\ai\jobs\common\job_guard.skrit;
+		melee_engage_range = 14;
+		personal_space_range = 0.7;
+		ranged_engage_range = 14.0;
+		sight_range = 14.0;
+	}
+	[physics]
+	{
+		break_effect = mine_worm_die_dust;
+    }
+}
+
+[t:template,n:eos_smm_barkeeper]
+{
+	category_name = "1W_character";
+    specializes = dsx_golem_clockwork_base;
+    
+    [actor]
+    {
+        alignment = aa_neutral;
+        portrait_icon = b_gui_ig_i_ic_c_hubvend;
+    }
+	[aspect]
+	{
+		use_range = 1.0;
+		is_ghost_usable = TRUE;
+        is_invincible = true;
+    }
+    [common]
+    {
+        membership = hero;
+	  b rollover_display = true;
+        screen_name = "Gobbot Cantina Barkeeper";
+    }
+    [conversation] {}
+	[mind]
+	{
+		jat_fidget = world\ai\jobs\common\job_fidget.skrit;
+        jat_startup = jat_none;
+		jat_talk = world\ai\jobs\common\job_talk.skrit;
+    }
+	[inventory]
+	{
+        drop_at_use_point = false;
+		[store_pcontent]
+		{
+			full_ratio = 0;
+        }
+    }
+    [respawn_shrine] {}
+	[store]
+	{
+		item_markup = 2;
+		[item_restock]
+		{
+			potion_health_small = 6;
+			potion_health_medium = 8;
+			potion_health_large = 3;
+			potion_mana_small = 6;
+			potion_mana_medium = 8;
+			potion_mana_large = 3;
+			potion_rejuvenation_small = 2;
+			potion_rejuvenation_medium = 2;
+			potion_rejuvenation_large = 2;
+		}
+	}
+}

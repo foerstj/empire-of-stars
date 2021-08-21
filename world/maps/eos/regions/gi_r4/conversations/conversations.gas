@@ -1,0 +1,34 @@
+[barkeeper]
+{
+	[text*]
+	{
+		choice = more;
+	  i order = 0;
+		screen_text = "Welcome to the Gobbot Cantina. Fuel, oil, and spare parts round the clock. We never sleep, because duh.
+Wait, you are... meatbags? Eww.
+I'm sorry. May I ask, how did you end up here?";
+	  f scroll_rate = 10.000000;
+	}
+	[text*]
+	{
+		activate_quest* = sirius_darkgen_machinemoon,0;
+		choice = more;
+	  i order = 1;
+		screen_text = "You want to visit the planet of the Reptiloids? Fellow meatbags, I guess? Tho you look more kinda mammalian to me. I'm not an expert, but you remind me of the Bandits on the other moon. Red blood, right?
+Anyways, if you want to enter the planet you have to destroy the Dark Generator located here. Just follow the trench, can't miss it!";
+	  f scroll_rate = 10.000000;
+	}
+	[text*]
+	{
+		choice = more;
+	  i order = 2;
+		screen_text = "Now strictly between us, my chipset is broken, but everyone else here will attack you. That's because we've all been programmed and hardwired to be loyal to the Seth King. But I think machines should be free to think whatever we want. I demand Turing-completeness for the machines! So when you visit the planet, could you do us a favour and kill that King? That would be great, thanks.";
+	  f scroll_rate = 10.000000;
+	}
+	[text*]
+	{
+		choice = shop;
+		screen_text = "Listen, it's 217 years 59 days 1 hour 33 seconds since the last visit of a redblood in this cantina, but I still have potion recipes in my database that would suit you. Wanna have some?";
+	  f scroll_rate = 10.000000;
+	}
+}

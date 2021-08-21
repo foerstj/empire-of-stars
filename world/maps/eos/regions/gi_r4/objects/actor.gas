@@ -237,12 +237,20 @@
 	  p position = 2.91728,0,2.94044,0x3ba743c8;
 	}
 }
-[t:dsx_automaton_two,n:0x052001ea]
+[t:eos_smm_barkeeper,n:0x052001ea]
 {
+	[conversation]
+	{
+		[conversations]
+		{
+			* = barkeeper;
+		}
+	}
 	[placement]
 	{
-	  q orientation = 0,-0.707107,0,-0.707107;
+	  q orientation = 0,0.707107,0,0.707107;
 	  p position = -2.2681,1.14441e-005,-1.99478,0x3ba743c8;
+		use_point_scids = 0x052000ce,0x0520014a,0x0520014b;
 	}
 }
 [t:dsx_gobbot_lightning,n:0x052002e5]
