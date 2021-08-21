@@ -75,6 +75,13 @@
 		is_ghost_usable = TRUE;
         is_invincible = true;
     }
+    [body]
+    {
+	  f avg_move_velocity = 0;
+	  b can_turn_and_move = false;
+	  f max_move_velocity = 0;
+	  f min_move_velocity = 0;
+    }
     [common]
     {
 	  b rollover_display = true;
@@ -99,7 +106,17 @@
     [conversation] {}
 	[mind]
 	{
+        actor_may_attack = false;
+        actor_may_be_attacked = false;
+        combat_orders = co_hold;
+        movement_orders = mo_hold;
+        flee_count = 0;
+        flee_distance = 0;
+        inner_comfort_zone_range = 0;
+        personal_space_range = 0;
 		jat_fidget = world\ai\jobs\common\job_fidget.skrit;
+		jat_move = jat_none;
+		jat_patrol = jat_none;
         jat_startup = jat_none;
 		jat_talk = world\ai\jobs\common\job_talk.skrit;
     }
