@@ -9,25 +9,23 @@ On this map, you discover that the ancient Empire of Stars was actually an inter
 
 FOSS, CC-BY-SA.
 
-With help & content from: 
-- Eksevis, Sadowson, tristanzz & Starfall from DS Discord,
+With help & content from:
+- Eksevis, Sadowson, Tristanzz, Starfall & Orix from DS Discord,
 - Kathy CF & Bare Elf from Siege The Day,
 - Maps & resources from the original game and Project Britannia.
 
-## Release 0.6: The Lost Twin
+## Release 0.7: Shit is getting Sirius
 
-This release includes Alpha Centauri, Vega, Betelgeuse, Altair and Rigel from the 0.5 release and several new regions:
-- The town of Iliyuna on Aldebaran.\
-  Discover a part of the Empire of Stars still in existence: the town of Iliyuna, which once formed the Empire's twin capital together with Iliyara on Aranna. Hire Half-Giant 10th Legion guards, and explore the town and the ruins of the Palace of Light.
-- The planetary ring.\
-  Walk around in space and smash some shards for fun!
-- The teleport asteroid of Sirius.\
-  Nothing there yet except for the Aranna Starstone. Tbh just wanted to get the interstellar hub finished.
+This release includes Alpha Centauri, Vega, Betelgeuse, Altair, Rigel and Aldebaran from the 0.6 release and several new regions:
+- The Bandit Moon.\
+  Fight the savage Bandits in this picturesque forest.
+- The Machine Moon.\
+  Turn this bunch of bots into a scrapyard.
+- The Death Moon.\
+  Hack and slash through the horde of rotting flesh.
 
 Miscellaneous:
-- New enemies were made for planet Agalla as well as the planetary ring (simple re-textures & re-stats).
-- Legionnaire Robe was added for the hireable 10th Legion mages.
-- Additions to the Astral item set: shield & a ring - now 18 items altogether.
-- Lots of lore books to explore in the lore lib of the palace ruins.
-- Wise Tretch added on Vega, supposed to provide a little guidance.
+- New enemies were made mostly for the Death Moon (simple re-textures & re-stats). Textures of gray zombie wolves and brown ursae are courtesy of Eksevis' Halloween Mod.
+- Each of the three moons has a quest to find and destroy a Dark Generator located there. You need to destroy all three Dark Generators to be able to teleport to the planet. You can test the condition, but the "planet" is just a dummmy region to be implemented in the next release.
+- On each moon you can find one friendly soul to talk to. They all ask you to kill the Seth King. This will be made into a quest in the next release.
 - More small changes, of course.
