@@ -1,0 +1,31 @@
+[robbers_daughter]
+{
+	[text*]
+	{
+		choice = more;
+	  i order = 0;
+		screen_text = "I am Lyssa, the robber's daughter. Spare my life, I mean no harm to you.";
+	  f scroll_rate = 10.000000;
+	}
+	[text*]
+	{
+		choice = more;
+	  i order = 1;
+		screen_text = "We are humans like you, but centuries on this goddamn moon with nobody but the Reptilians around have turned our gang into a brutish horde of savages.
+Please, fight the Reptilians as you have fought my gang! Kill the Seth King, and I will find peace after this bloodshed.";
+	  f scroll_rate = 10.000000;
+	}
+	[text*]
+	{
+		activate_quest* = sirius_darkgen_banditmoon,0;
+		choice = more;
+	  i order = 2;
+		screen_text = "To get down to the planet, you have to destroy the Dark Generator on this moon. It is located south from here, in the hidden castle that is occupied by a rogue bandit.";
+	  f scroll_rate = 10.000000;
+	}
+	[text*]
+	{
+		screen_text = "Good luck to your quest!";
+	  f scroll_rate = 10.000000;
+	}
+}
