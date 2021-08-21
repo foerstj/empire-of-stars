@@ -737,6 +737,70 @@
 	  p position = 0.912857,0,0.137253,0x8286e073;
 	}
 }
+[t:smb_robbers_daughter,n:0x0590009a]
+{
+	[actor]
+	{
+		alignment = aa_neutral;
+	}
+	[aspect]
+	{
+	  f max_life = 78.4;
+	  f max_mana = 42;
+	}
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_deactivate",0x0590009C,0f,"default","every",0);
+			  b can_self_destruct = true;
+				condition* = party_member_within_sphere(5.000000,"on_first_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+			[*]
+			{
+				action* = send_world_message("we_req_activate",0x0590009C,0f,"default","every",0);
+			  b can_self_destruct = true;
+				condition* = party_member_within_sphere(50.000000,"on_first_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[conversation]
+	{
+		[conversations]
+		{
+			* = robbers_daughter;
+		}
+	}
+	[mind]
+	{
+		jat_talk = world\ai\jobs\common\job_talk.skrit;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.382683,0,0.92388;
+	  p position = 1.28365,0,1.07915,0xa7b22661;
+	}
+}
 [t:bandit_boss,n:0x059008a9]
 {
 	[common]
@@ -1435,33 +1499,5 @@
 	{
 	  q orientation = 0,0.965926,0,0.258819;
 	  p position = 2.46025,9.53674e-007,-0.164821,0x21ee4841;
-	}
-}
-[t:lyssa,n:0x0590009a]
-{
-	[actor]
-	{
-		alignment = aa_neutral;
-	}
-	[aspect]
-	{
-	  f max_life = 78.4;
-	  f max_mana = 42;
-	}
-	[conversation]
-	{
-		[conversations]
-		{
-			* = robbers_daughter;
-		}
-	}
-	[mind]
-	{
-		jat_talk = world\ai\jobs\common\job_talk.skrit;
-	}
-	[placement]
-	{
-	  q orientation = 0,0.382683,0,0.92388;
-	  p position = 1.28365,0,1.07915,0xa7b22661;
 	}
 }
