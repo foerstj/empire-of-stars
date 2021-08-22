@@ -639,7 +639,7 @@
 {
 	mood_name				= eos_sirius_planet_teleport;
 	transition_time			= 20.0f;
-	interior				= true;
+	interior				= false;
 
 	[frustum]
 	{
@@ -649,24 +649,238 @@
 
 	[fog]
 	{
-		fog_near_dist		= 10.0f;
-		fog_far_dist		= 40.0f;
-		fog_lowdetail_near_dist		= 10.0f;
-		fog_lowdetail_far_dist		= 30.0f;
-		fog_color			= 0xFF804040;
+		fog_near_dist		= 30.0f;
+		fog_far_dist		= 50.0f;
+		fog_lowdetail_near_dist		= 30.0f;
+		fog_lowdetail_far_dist		= 45.0f;
+		fog_color			= 0xFF602020;
 		fog_density			= 0.5f;
-	}
-
-	[rain]
-	{
-		lightning			= true;
 	}
 
 	[music]
 	{
 		ambient_track		= "";
-		standard_repeat_delay = 10.0f;
-		standard_track		= "s_m_DwarvenMines_01";
+		standard_repeat_delay	= 10.0f;
+		standard_track		= "s_m_CastleEhb_01";
+		room_type			= rt_generic;
+	}
+}
+[mood_setting*]
+{
+	mood_name				= eos_sirius_planet_r1_1;
+	transition_time			= 4.0f;
+	interior				= false;
+
+	[fog]
+	{
+		fog_near_dist		= 30.0f;
+		fog_far_dist		= 50.0f;
+		fog_lowdetail_near_dist		= 30.0f;
+		fog_lowdetail_far_dist		= 45.0f;
+		fog_color			= 0xFF602020;
+		fog_density			= 0.5f;
+	}
+
+	[music]
+	{
+		ambient_track		= "";
+		standard_repeat_delay	= 10.0f;
+		standard_track		= "s_m_CastleEhb_01";
+		room_type			= rt_generic;
+	}
+}
+[mood_setting*]
+{
+	mood_name				= eos_sirius_planet_r1a_1;
+	transition_time			= 1.0f;
+	interior				= false;
+
+	[fog]
+	{
+		fog_near_dist		= 30.0f;
+		fog_far_dist		= 50.0f;
+		fog_lowdetail_near_dist		= 30.0f;
+		fog_lowdetail_far_dist		= 45.0f;
+		fog_color			= 0xFF000000;
+		fog_density			= 0.5f;
+	}
+
+	[music]
+	{
+		ambient_track		= "";
+		standard_repeat_delay	= 10.0f;
+		standard_track		= "s_m_CastleEhb_01";
+		room_type			= rt_cave;
+	}
+}
+[mood_setting*]
+{
+	mood_name				= eos_sirius_planet_r2_1;
+	transition_time			= 2.0f;
+	interior				= false;
+
+	[fog]
+	{
+		fog_near_dist		= 30.0f;
+		fog_far_dist		= 50.0f;
+		fog_lowdetail_near_dist		= 30.0f;
+		fog_lowdetail_far_dist		= 45.0f;
+		fog_color			= 0xFF602020;
+		fog_density			= 0.5f;
+	}
+
+	[music]
+	{
+		ambient_track		= "";
+		standard_repeat_delay	= 10.0f;
+		standard_track		= "s_m_CastleEhb_02";
+		room_type			= rt_generic;
+	}
+}
+[mood_setting*]
+{
+	// Castle Ehb NIS music. kinda violating naming convention a tad, sorry Dave :)
+	mood_name				= eos_sirius_planet_r2_1_1;
+	transition_time			= 1.5f;
+	interior				= false;
+
+	[fog]
+	{
+		fog_near_dist		= 30.0f;
+		fog_far_dist		= 50.0f;
+		fog_lowdetail_near_dist		= 30.0f;
+		fog_lowdetail_far_dist		= 45.0f;
+		fog_color			= 0xFF602020;
+		fog_density			= 0.5f;
+	}
+
+	[music]
+	{
+		ambient_track		= "";
+		standard_repeat_delay	= 10.0f;
+		standard_track		= "s_m_CastleEhb_06";
+		room_type			= rt_generic;
+	}
+}
+[mood_setting*]
+{
+	mood_name				= eos_sirius_planet_r2_2;
+	transition_time			= 2.0f;
+	interior				= false;
+
+	[fog]
+	{
+		fog_near_dist		= 30.0f;
+		fog_far_dist		= 50.0f;
+		fog_lowdetail_near_dist		= 30.0f;
+		fog_lowdetail_far_dist		= 45.0f;
+		fog_color			= 0xFF602020;
+		fog_density			= 0.5f;
+	}
+
+	[music]
+	{
+		ambient_track		= "";
+		standard_repeat_delay	= 10.0f;
+		standard_track		= "s_m_CastleEhb_03";
+		room_type			= rt_generic;
+	}
+}
+[mood_setting*]
+{
+	//castle interior, upper level
+	mood_name				= eos_sirius_planet_r2_3;
+	transition_time			= 2.0f;
+	interior				= false;
+
+	[fog]
+	{
+		fog_near_dist		= 30.0f;
+		fog_far_dist		= 50.0f;
+		fog_lowdetail_near_dist		= 30.0f;
+		fog_lowdetail_far_dist		= 45.0f;
+		fog_color			= 0xFF602020;
+		fog_density			= 0.5f;
+	}
+
+	[music]
+	{
+		ambient_track		= "";
+		standard_repeat_delay	= 10.0f;
+		standard_track		= "s_m_CastleEhb_04";
+		room_type			= rt_generic;
+	}
+}
+[mood_setting*]
+{
+	//castle roof
+	mood_name				= eos_sirius_planet_r2_4;
+	transition_time			= 2.0f;
+	interior				= false;
+
+	[fog]
+	{
+		fog_near_dist		= 30.0f;
+		fog_far_dist		= 50.0f;
+		fog_lowdetail_near_dist		= 30.0f;
+		fog_lowdetail_far_dist		= 45.0f;
+		fog_color			= 0xFF602020;
+		fog_density			= 0.5f;
+	}
+
+	[music]
+	{
+		ambient_track		= "";
+		standard_repeat_delay	= 10.0f;
+		standard_track		= "s_m_CastleEhb_05";
+		room_type			= rt_generic;
+	}
+}
+[mood_setting*]
+{
+	mood_name				= eos_sirius_planet_r2a_1;
+	transition_time			= 5.0f;
+	interior				= false;
+
+	[fog]
+	{
+		fog_near_dist		= 2.0f;
+		fog_far_dist		= 40.0f;
+		fog_lowdetail_near_dist		= 2.0f;
+		fog_lowdetail_far_dist		= 35.0f;
+		fog_color			= 0xFF602020;
+		fog_density			= 0.5f;
+	}
+
+	[music]
+	{
+		ambient_track		= "";
+		standard_repeat_delay	= 10.0f;
+		standard_track		= "s_m_CastleEhb_02";
+		room_type			= rt_generic;
+	}
+}
+[mood_setting*]
+{
+	mood_name				= eos_sirius_planet_r2a_2;
+	transition_time			= 5.0f;
+	interior				= false;
+
+	[fog]
+	{
+		fog_near_dist		= 10.0f;
+		fog_far_dist		= 45.0f;
+		fog_lowdetail_near_dist		= 10.0f;
+		fog_lowdetail_far_dist		= 40.0f;
+		fog_color			= 0xFF602020;
+		fog_density			= 0.5f;
+	}
+
+	[music]
+	{
+		ambient_track		= "";
+		standard_repeat_delay	= 10.0f;
+		standard_track		= "s_m_CastleEhb_02";
 		room_type			= rt_generic;
 	}
 }

@@ -6,7 +6,7 @@
 		{
 			[*]
 			{
-				action* = mood_change("map_world_ce_r2_1");
+				action* = mood_change("eos_sirius_planet_r2_1");
 			  b can_self_destruct = true;
 				condition* = party_member_within_bounding_box(3.000000,1.000000,3.000000,"on_every_enter");
 			  f delay = 0.000000;
@@ -95,8 +95,8 @@
 		{
 			[*]
 			{
-				action* = mood_change("map_world_ce_r2_1_1"), doc("nis mood");
-				action* = mood_change("map_world_ce_r2_1"), delay(33), doc("back to normal");
+				action* = mood_change("eos_sirius_planet_r2_1_1"), doc("nis mood");
+				action* = mood_change("eos_sirius_planet_r2_1"), delay(33), doc("back to normal");
 			  b can_self_destruct = true;
 				condition* = receive_world_message("we_req_activate",0,"on_first_message"), doc("[*converted to one-shot*]");
 				condition* = party_member_within_node(0xAAA90200,-1,-1,-1,"wait_for_every_message"), doc("for mood[*message checker (trigger is non-pure )*]");
@@ -530,7 +530,7 @@
 		{
 			[*]
 			{
-				action* = mood_change("map_world_ce_r2_1");
+				action* = mood_change("eos_sirius_planet_r2_1");
 			  b can_self_destruct = true;
 				condition* = party_member_within_bounding_box(2.000000,1.000000,1.000000,"on_every_enter");
 			  f delay = 0.000000;
@@ -670,7 +670,7 @@
 		{
 			[*]
 			{
-				action* = mood_change("map_world_ce_r2_2");
+				action* = mood_change("eos_sirius_planet_r2_2");
 				action* = fade_nodes(0xAAA90200,2,6,-1,"in");
 				action* = fade_nodes(0xAAA90200,3,-1,-1,"in");
 				action* = fade_nodes(0xAAA90200,5,1,-1,"out:black"), delay(0.5);
@@ -787,7 +787,7 @@
 		{
 			[*]
 			{
-				action* = mood_change("map_world_ce_r2_1");
+				action* = mood_change("eos_sirius_planet_r2_1");
 			  b can_self_destruct = true;
 				condition* = party_member_within_bounding_box(1.000000,2.000000,2.000000,"on_every_enter");
 			  f delay = 0.000000;
@@ -815,7 +815,7 @@
 		{
 			[*]
 			{
-				action* = mood_change("map_world_ce_r2_2");
+				action* = mood_change("eos_sirius_planet_r2_2");
 				action* = fade_nodes(0xAAA90200,2,6,-1,"in");
 				action* = fade_nodes(0xAAA90200,3,-1,-1,"in");
 				action* = fade_nodes(0xAAA90200,5,1,-1,"out:black"), delay(0.5);
@@ -847,7 +847,7 @@
 		{
 			[*]
 			{
-				action* = mood_change("map_world_ce_r2_2");
+				action* = mood_change("eos_sirius_planet_r2_2");
 				action* = fade_nodes(0xAAA90200,2,6,-1,"in");
 				action* = fade_nodes(0xAAA90200,3,-1,-1,"in");
 				action* = fade_nodes(0xAAA90200,5,1,-1,"out:black"), delay(0.5);
@@ -879,7 +879,7 @@
 		{
 			[*]
 			{
-				action* = mood_change("map_world_ce_r2_2");
+				action* = mood_change("eos_sirius_planet_r2_2");
 				action* = fade_nodes(0xAAA90200,2,6,-1,"in");
 				action* = fade_nodes(0xAAA90200,3,-1,-1,"in");
 				action* = fade_nodes(0xAAA90200,5,1,-1,"out:black"), delay(0.5);
@@ -1110,7 +1110,7 @@
 		{
 			[*]
 			{
-				action* = mood_change("map_world_ce_r2_4");
+				action* = mood_change("eos_sirius_planet_r2_4");
 				action* = fade_nodes(0xAAA90200,3,-1,-1,"in");
 				action* = fade_nodes(0xAAA90200,6,-1,-1,"in");
 				action* = fade_nodes(0xAAA90200,2,1,-1,"out:black"), delay(0.3);
@@ -1143,7 +1143,7 @@
 		{
 			[*]
 			{
-				action* = mood_change("map_world_ce_r2_3");
+				action* = mood_change("eos_sirius_planet_r2_3");
 				action* = fade_nodes(0xAAA90200,3,-1,-1,"out:black"), delay(0.3);
 				action* = fade_nodes(0xAAA90200,6,-1,-1,"out:black");
 				action* = fade_nodes(0xAAA90200,2,1,-1,"in");
@@ -2237,7 +2237,7 @@
 		{
 			[*]
 			{
-				action* = mood_change("map_world_ce_r2_2");
+				action* = mood_change("eos_sirius_planet_r2_2");
 				action* = fade_nodes(0xAAA90200,3,-1,-1,"in");
 				action* = fade_nodes(0xAAA90200,2,1,-1,"out:black");
 				action* = fade_nodes(0xAAA90200,2,2,-1,"out:black");
@@ -2272,7 +2272,7 @@
 		{
 			[*]
 			{
-				action* = mood_change("map_world_ce_r2_3");
+				action* = mood_change("eos_sirius_planet_r2_3");
 				action* = fade_nodes(0xAAA90200,3,-1,-1,"out:black"), delay(0.5);
 				action* = fade_nodes(0xAAA90200,2,1,-1,"in");
 				action* = fade_nodes(0xAAA90200,2,2,-1,"in");
@@ -3272,7 +3272,7 @@
 		{
 			[*]
 			{
-				action* = mood_change("map_world_ce_r2_1");
+				action* = mood_change("eos_sirius_planet_r2_1");
 			  b can_self_destruct = true;
 				condition* = party_member_within_bounding_box(7.000000,1.000000,7.000000,"on_every_enter");
 			  f delay = 0.000000;
