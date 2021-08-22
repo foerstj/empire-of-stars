@@ -1,0 +1,134 @@
+[t:emt_sound,n:0x007002a4]
+{
+	[placement]
+	{
+	  q orientation = 0,0.707107,0,0.707107;
+	  p position = -0.589758,1.49769,0.786371,0x4b59442f;
+	}
+	[sound_emitter]
+	{
+		event_sound = "amb_crickets";
+	  f max_repeat_rate = 20;
+	  f min_dist = 2;
+	  f repeat_rate = 5;
+	  i start_hour = 1;
+	  i stop_hour = 4;
+	  i time_chunk = 1;
+	}
+}
+[t:emt_sound_act,n:0x0070029b]
+{
+	[placement]
+	{
+	  q orientation = 0,-0.707107,0,0.707107;
+	  p position = 0.0427806,-1.18887,-0.00589371,0x7ca9b0b5;
+	}
+	[sound_emitter_act]
+	{
+		event_sound = "env_shrine_health";
+	  f max_dist = 25;
+	  b start_on_creation = false;
+	}
+}
+[t:emt_sound,n:0x007002a1]
+{
+	[placement]
+	{
+	  q orientation = 0,1,0,0;
+	  p position = -0.4547,1.49769,3.45599,0x0f5f791c;
+	}
+	[sound_emitter]
+	{
+		event_sound = "amb_birds";
+	  f max_repeat_rate = 20;
+	  f min_dist = 2;
+	  f repeat_rate = 5;
+	  i start_hour = 12;
+	  i stop_hour = 19;
+	  i time_chunk = 3;
+	}
+}
+[t:emt_sound,n:0x0070029c]
+{
+	[placement]
+	{
+	  p position = -1.83764,2.0477,8.47743,0x199bb231;
+	}
+	[sound_emitter]
+	{
+	  b continual_loop = true;
+		event_sound = "env_brook";
+	  f max_dist = 15;
+	  f min_dist = 2;
+	}
+}
+[t:emt_sound,n:0x0070029f]
+{
+	[placement]
+	{
+	  p position = 1.55325,-0.71282,-18.5626,0xaaf3e440;
+	}
+	[sound_emitter]
+	{
+	  b continual_loop = true;
+		event_sound = "env_waterfall";
+	  f max_dist = 15;
+	  f min_dist = 2;
+	}
+}
+[t:emt_sound,n:0x007002a0]
+{
+	[placement]
+	{
+	  p position = -1.18946,2.0477,-6.42586,0xaaf3e440;
+	}
+	[sound_emitter]
+	{
+	  b continual_loop = true;
+		event_sound = "env_brook";
+	  f max_dist = 15;
+	  f min_dist = 2;
+	}
+}
+[t:emt_sound,n:0x007002a3]
+{
+	[placement]
+	{
+	  p position = -2.57997,2.0477,5.20422,0xaaf3e440;
+	}
+	[sound_emitter]
+	{
+	  b continual_loop = true;
+		event_sound = "env_brook";
+	  f max_dist = 15;
+	  f min_dist = 2;
+	}
+}
+[t:emt_sound,n:0x0070029e]
+{
+	[placement]
+	{
+	  q orientation = 0,-0.707107,0,0.707107;
+	  p position = -5.25586,8.08948,7.52351,0x5c87d282;
+	}
+	[sound_emitter]
+	{
+	  b continual_loop = true;
+		event_sound = "env_waterfall";
+	  f max_dist = 20;
+	  f min_dist = 2;
+	}
+}
+[t:emt_sound,n:0x007002a2]
+{
+	[placement]
+	{
+	  p position = 0.196238,-4.6,-3.15545,0x9590a563;
+	}
+	[sound_emitter]
+	{
+	  b continual_loop = true;
+		event_sound = "env_waterfall";
+	  f min_dist = 2;
+	}
+}
