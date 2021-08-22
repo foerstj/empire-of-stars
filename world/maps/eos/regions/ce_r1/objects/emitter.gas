@@ -1,49 +1,14 @@
-[t:emt_sound,n:0x007002a4]
+[t:emt_sound,n:0x007002a2]
 {
 	[placement]
 	{
-	  q orientation = 0,0.707107,0,0.707107;
-	  p position = -0.589758,1.49769,0.786371,0x4b594430;
+	  p position = 0.196238,-4.6,-3.15545,0x9590a564;
 	}
 	[sound_emitter]
 	{
-		event_sound = "amb_crickets";
-	  f max_repeat_rate = 20;
+	  b continual_loop = true;
+		event_sound = "env_waterfall";
 	  f min_dist = 2;
-	  f repeat_rate = 5;
-	  i start_hour = 1;
-	  i stop_hour = 4;
-	  i time_chunk = 1;
-	}
-}
-[t:emitter_glb_smoke_01,n:0x00700216]
-{
-	[placement]
-	{
-	  q orientation = 0,0.66262,0,-0.748956;
-	  p position = 0.990374,-3.69799,-0.0832901,0x5ba19c85;
-	}
-}
-[t:emitter_glb_smoke_01,n:0x00700217]
-{
-	[placement]
-	{
-	  q orientation = 0,0.87462,0,-0.48481;
-	  p position = -3.81387,0.223792,-0.546184,0x370f2481;
-	}
-}
-[t:emt_sound_act,n:0x0070029b]
-{
-	[placement]
-	{
-	  q orientation = 0,-0.707107,0,0.707107;
-	  p position = 0.0427806,-1.18887,-0.00589371,0x7ca9b0b6;
-	}
-	[sound_emitter_act]
-	{
-		event_sound = "env_shrine_health";
-	  f max_dist = 25;
-	  b start_on_creation = false;
 	}
 }
 [t:emt_sound,n:0x007002a1]
@@ -64,18 +29,20 @@
 	  i time_chunk = 3;
 	}
 }
-[t:emt_sound,n:0x0070029c]
+[t:emitter_glb_smoke_01,n:0x00700216]
 {
 	[placement]
 	{
-	  p position = -1.83764,2.0477,8.47743,0x199bb232;
+	  q orientation = 0,0.66262,0,-0.748956;
+	  p position = 0.990374,-3.69799,-0.0832901,0x5ba19c85;
 	}
-	[sound_emitter]
+}
+[t:emitter_glb_smoke_01,n:0x00700217]
+{
+	[placement]
 	{
-	  b continual_loop = true;
-		event_sound = "env_brook";
-	  f max_dist = 15;
-	  f min_dist = 2;
+	  q orientation = 0,0.87462,0,-0.48481;
+	  p position = -3.81387,0.223792,-0.546184,0x370f2481;
 	}
 }
 [t:emt_sound,n:0x0070029f]
@@ -120,6 +87,20 @@
 	  f min_dist = 2;
 	}
 }
+[t:emt_sound,n:0x0070029c]
+{
+	[placement]
+	{
+	  p position = -1.83764,2.0477,8.47743,0x199bb232;
+	}
+	[sound_emitter]
+	{
+	  b continual_loop = true;
+		event_sound = "env_brook";
+	  f max_dist = 15;
+	  f min_dist = 2;
+	}
+}
 [t:emt_sound,n:0x0070029e]
 {
 	[placement]
@@ -135,16 +116,21 @@
 	  f min_dist = 2;
 	}
 }
-[t:emt_sound,n:0x007002a2]
+[t:emt_sound,n:0x007002a4]
 {
 	[placement]
 	{
-	  p position = 0.196238,-4.6,-3.15545,0x9590a564;
+	  q orientation = 0,0.707107,0,0.707107;
+	  p position = -0.589758,1.49769,0.786371,0x4b594430;
 	}
 	[sound_emitter]
 	{
-	  b continual_loop = true;
-		event_sound = "env_waterfall";
+		event_sound = "amb_crickets";
+	  f max_repeat_rate = 20;
 	  f min_dist = 2;
+	  f repeat_rate = 5;
+	  i start_hour = 1;
+	  i stop_hour = 4;
+	  i time_chunk = 1;
 	}
 }
