@@ -1,0 +1,245 @@
+[t:template,n:eos_fury]  // dsx_fury, edited
+{
+	category_name = "1W_evil_b";
+	doc = "dsx_fury";
+	specializes = dsx_base_fury;
+	[actor]
+	{
+		[skills]
+        {
+            strength 	 = 18, 0;
+            intelligence =  8, 0;
+            dexterity 	 = 11, 0;
+            melee 		 = 18, 0;
+            ranged 		 = 18, 0;
+            combat_magic = 18, 0;
+            nature_magic = 18, 0;
+        }
+	}
+	[aspect]
+	{
+        scale_base = 0.4;  // EDITED
+
+		experience_value = 1395;
+		life 			 = 1250;
+		max_life 		 = 1250;
+		max_mana 		 = 770;
+		mana 			 = 770;
+	}
+	[attack]
+	{
+		attack_range = 10;
+		damage_max 	 = 150;
+		damage_min	 = 110;
+	}
+	[common]
+	{
+		screen_name="Fury";
+		membership=monster,immune_charm,immune_control,immune_freeze,immune_polymorph,immune_align_change,immune_explode;
+		[template_triggers]
+		{
+            // EDITED: removed unique_ray_red & unique_light_red
+		}
+	}
+	[defend] { defense=450; }
+	[inventory]
+	{
+		drop_at_use_point = true;
+		[pcontent]
+		{
+			/* Generated: Tue Jun 17 11:13:15 2003
+			Level 24, Special */
+			[all*]
+			{
+				[gold*]
+				{
+					chance = 0.2;
+					min = 1671;
+					max = 3318;
+				}
+				[oneof*]
+				{
+					chance = 0.3;
+					il_main = potion_mana_small;
+					il_main = potion_health_small;
+				}
+				[oneof*]
+				{
+					chance = 0.3;
+					il_main = #weapon/52-68;
+					il_main = #armor/30-165;
+					il_main = #*/52-68;
+				}
+				[oneof*]
+				{
+					chance = 0.2;
+					il_main = #weapon/-rare(1)/68-77;
+					il_main = #armor/-rare(1)/128-230;
+					il_main = #*/-rare(1)/68-77;
+				}
+				[oneof*]
+				{
+					chance = 0.2;
+					il_main = #weapon/-unique(2)/68-77;
+					il_main = #armor/-unique(2)/128-230;
+					il_main = #*/-unique(2)/68-77;
+				}			
+			}
+		}
+		selected_active_location = il_active_primary_spell;
+		[other]
+		{
+			il_active_primary_spell= dsx_spell_fury_zap_1;
+			il_spell_2 = dsx_spell_fury_zap_2;
+			il_spell_3 = dsx_spell_fury_zap_3;
+			il_spell_4 = dsx_spell_fury_slam;
+			il_spell_5 = dsx_spell_fury_spin;
+			il_spell_6 = dsx_spell_fury_gas;
+			il_spell_7 = dsx_spell_fury_spit;
+		}		
+	}
+	[mind]
+	{
+		jat_cast 			= world\ai\jobs\common\job_cast.skrit
+			?rand_spell		= true
+			&check_range	= true
+			&spell_chances	= "0.15, 				0.14, 				 0.14, 				 0.15, 				  0.14, 				0.14,             	  0.14"
+			&spells			= "dsx_spell_fury_slam, dsx_spell_fury_spin, dsx_spell_fury_gas, dsx_spell_fury_spit, dsx_spell_fury_zap_1, dsx_spell_fury_zap_2, dsx_spell_fury_zap_3";
+
+		on_engaged_lost_consciousness_abort_attack = true;
+	}
+    // EDITED: medium frags fitting to size
+	[physics]
+	{
+		[break_particulate]
+		{
+			frag_glb_fury_17	= 1;
+			frag_glb_fury_18	= 1;
+			frag_glb_fury_19	= 1;
+			frag_glb_fury_20	= 1;
+			frag_glb_fury_21	= 1;
+			frag_glb_fury_22	= 1;
+			frag_glb_fury_23	= 1;
+			frag_glb_fury_24	= 1;
+		}
+	}
+}
+
+[t:template,n:eos_fury_boss_01]  // fury_lesser_02, edited
+{
+	category_name = "1W_evil_b";
+	doc = "fury_pest";
+	specializes = base_fury;
+	[actor]
+	{
+		[skills]
+		{
+			strength =  	17, 0;
+			intelligence =  12, 0;
+			dexterity =  	25, 0;
+			melee =  		35, 0;
+			combat_magic = 	35, 0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 17000;
+		life = 1960;
+		max_life = 1960;
+		max_mana = 330;
+		mana = 330;
+		scale_base = 0.9;  // EDITED (was 0.25)
+	}
+	[attack]
+	{
+		attack_range = 10;
+		damage_max = 169;
+		damage_min = 149;
+	}
+	[inventory]
+	{
+		selected_active_location = il_active_primary_spell;
+		[other]
+		{
+			il_active_primary_spell=spell_fury_zap_1;
+            // EDITED: added for attack variety
+			il_spell_2 = spell_fury_zap_2;
+			il_spell_3 = spell_fury_zap_3;
+			il_spell_4 = spell_fury_slam;
+			il_spell_5 = spell_fury_spin;
+			il_spell_6 = spell_fury_gas;
+			il_spell_7 = spell_fury_spit;
+		}
+		[pcontent]
+		{
+			[all*]
+			{
+				[oneof*]
+				{
+					il_main = #weapon/103-115;
+					il_main = #armor/52-257;
+					max = 1;
+					min = 1;
+   	    		}
+    			[gold*]
+				{
+					max = 15860;
+					min = 10972;
+					min_pile = 1719;
+					piles = 1 - 3;
+				}
+				[oneof*]
+				{
+                    chance = 0.01;
+	            	il_main = #weapon/-rare(1)/103-115;
+	                il_main = #armor/-rare(1)/250-340;
+                    il_main = #*/-rare(1)/103-115;
+					max = 1;
+					min = 1;
+
+                }
+				[oneof*]
+                {
+                    chance = 0.01;
+	                il_main = #weapon/-unique(2)/103-115;
+	                il_main = #armor/-unique(2)/250-340;
+                    il_main = #*/-unique(2)/103-115;
+					max = 1;
+					min = 1;
+	            }
+
+			}
+		}
+	}
+	[common]
+    {
+        screen_name="Fury Pest";
+    }
+	[defend] { defense=260; }
+	[physics]
+	{
+        // EDITED: big frags fitting to size
+		[break_particulate]
+		{
+			frag_glb_fury_01	= 1;
+			frag_glb_fury_02	= 1;
+			frag_glb_fury_03	= 1;
+			frag_glb_fury_04	= 1;
+			frag_glb_fury_05	= 1;
+			frag_glb_fury_06	= 1;
+			frag_glb_fury_07	= 1;
+			frag_glb_fury_08	= 1;
+		}
+	}
+    // EDITED: added for attack variety
+	[mind]
+	{
+		jat_cast 						= world\ai\jobs\common\job_cast.skrit
+			?rand_spell					= true
+			&check_range				= true
+			&spell_chances				= "0.15,            0.14,            0.14,           0.15, 			  0.14, 			0.14,             0.14"
+			&spells						= "spell_fury_slam, spell_fury_spin, spell_fury_gas, spell_fury_spit, spell_fury_zap_1, spell_fury_zap_2, spell_fury_zap_3";
+
+		on_engaged_lost_consciousness_abort_attack = true;
+	}
+}
