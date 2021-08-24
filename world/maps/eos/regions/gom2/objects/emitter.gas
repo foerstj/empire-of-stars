@@ -1,0 +1,903 @@
+[t:emt_sound,n:0x00200142]
+{
+	[placement]
+	{
+	  q orientation = 0,0.829038,0,0.559193;
+	  p position = 6.16118,6.19888e-006,-1.54982,0xc2e3d297;
+	}
+	[sound_emitter]
+	{
+	  b continual_loop = true;
+		event_sound = "amb_wind_monotonic";
+	}
+}
+[t:emt_sound,n:0x00200147]
+{
+	[placement]
+	{
+	  q orientation = 0,0.981627,0,-0.190809;
+	  p position = 25.352,7.99999,1.30423,0x5274d044;
+	}
+	[sound_emitter]
+	{
+	  b continual_loop = true;
+		event_sound = "amb_wind_monotonic";
+	}
+}
+[t:emt_sound,n:0x00200136]
+{
+	[placement]
+	{
+	  q orientation = 0,0.894934,0,-0.446198;
+	  p position = 0.790111,2.51814,-8.01768,0xc291937c;
+	}
+	[sound_emitter]
+	{
+		event_sound = "env_moaning";
+	  f max_repeat_rate = 20;
+	  f repeat_rate = 12;
+	}
+}
+[t:emt_sound,n:0x00200138]
+{
+	[placement]
+	{
+	  q orientation = 0,-0.317304,0,0.948324;
+	  p position = 0.378078,31.9379,0.726204,0xf38a9abf;
+	}
+	[sound_emitter]
+	{
+		event_sound = "env_moaning";
+	  f max_repeat_rate = 20;
+	  f repeat_rate = 12;
+	}
+}
+[t:emt_sound,n:0x0020013a]
+{
+	[placement]
+	{
+	  q orientation = 0,0.948324,0,0.317304;
+	  p position = -0.626125,33.9379,-1.79152,0x4cdcf67f;
+	}
+	[sound_emitter]
+	{
+		event_sound = "env_moaning";
+	  f max_repeat_rate = 20;
+	  f repeat_rate = 8;
+	}
+}
+[t:emt_sound,n:0x00200145]
+{
+	[placement]
+	{
+	  q orientation = 0,0.190809,0,0.981627;
+	  p position = 18.3897,4.4044,-37.278,0x9e44be69;
+	}
+	[sound_emitter]
+	{
+	  b continual_loop = true;
+		event_sound = "amb_wind_monotonic";
+	}
+}
+[t:emt_sound_act,n:0x002001f0]
+{
+	[common]
+	{
+		dev_instance_text = "SOUND: GOMVATOR MOVE (SP)";
+	  b is_multi_player = false;
+	}
+	[placement]
+	{
+	  p position = -9.8819,8.70475,0.223389,0xce1a8671;
+	}
+	[sound_emitter_act]
+	{
+		event_sound = "gom_elevator_move";
+	  b repeat = false;
+	  b start_on_creation = false;
+	}
+}
+[t:emt_fire,n:0x0020017e]
+{
+	[placement]
+	{
+	  q orientation = 0,1,0,0;
+	  p position = 3.47563,0.43956,-0.407898,0x89c93e92;
+	}
+}
+[t:emt_fire,n:0x00200187]
+{
+	[placement]
+	{
+	  q orientation = 0,0.707107,0,0.707107;
+	  p position = -0.852631,0.240143,-3.06911,0x89c93e92;
+	}
+}
+[t:emt_fire,n:0x0020018b]
+{
+	[placement]
+	{
+	  q orientation = 0,0.707107,0,0.707107;
+	  p position = -1.36386,0.240143,3.3519,0x89c93e92;
+	}
+}
+[t:emt_sound_act,n:0x00200235]
+{
+	[common]
+	{
+		dev_instance_text = "SOUND: ELEVATOR STOP (SP)";
+	  b is_multi_player = false;
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.707107,0,0.707107;
+	  p position = -1.76982,0,-0.14447,0xc26c77f7;
+	}
+	[sound_emitter_act]
+	{
+		event_sound = "gom_elevator_stop";
+	  b repeat = false;
+	  b start_on_creation = false;
+	}
+}
+[t:emt_fire,n:0x0020017f]
+{
+	[placement]
+	{
+	  q orientation = 0,-0.707107,0,0.707107;
+	  p position = 3.04721,759.811,1.99005,0xc9bc7ba4;
+	}
+}
+[t:emt_fire,n:0x002001dd]
+{
+	[placement]
+	{
+	  q orientation = 0,-0.707107,0,0.707107;
+	  p position = -2.69462,-1.43692,3.78865,0xc9bc7ba4;
+	}
+}
+[t:emt_fire,n:0x002001df]
+{
+	[placement]
+	{
+	  q orientation = 0,-0.707107,0,0.707107;
+	  p position = 2.6115,-1.4707,3.68559,0xc9bc7ba4;
+	}
+}
+[t:emt_fire,n:0x002001e0]
+{
+	[placement]
+	{
+	  q orientation = 0,-0.707107,0,0.707107;
+	  p position = 0.963181,-1.4707,5.07281,0xc9bc7ba4;
+	}
+}
+[t:emt_fire,n:0x002001e1]
+{
+	[placement]
+	{
+	  q orientation = 0,-0.707107,0,0.707107;
+	  p position = -1.09001,-1.4707,5.08147,0xc9bc7ba4;
+	}
+}
+[t:emt_generic_act,n:0x0020021e]
+{
+	[generic_emitter_act]
+	{
+	  b geyser = true;
+	  x target = 0x002001E0;
+	}
+	[placement]
+	{
+	  p position = 7.62233,-3.47635,0.687195,0xc9bc7ba4;
+	}
+}
+[t:emt_generic_act,n:0x0020021f]
+{
+	[generic_emitter_act]
+	{
+	  b geyser = true;
+	  x target = 0x002001E1;
+	}
+	[placement]
+	{
+	  p position = 6.64724,-3.47635,0.552383,0xc9bc7ba4;
+	}
+}
+[t:emt_generic_act,n:0x00200220]
+{
+	[generic_emitter_act]
+	{
+	  b geyser = true;
+	  x target = 0x002001DD;
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.71934,0,0.694659;
+	  p position = 5.69424,-3.47635,-0.450195,0xc9bc7ba4;
+	}
+}
+[t:emt_generic_act,n:0x0020021b]
+{
+	[generic_emitter_act]
+	{
+	  b geyser = true;
+	  x target = 0x002001DF;
+	}
+	[placement]
+	{
+	  p position = -0.656281,0,-1.54482,0x44edf23a;
+	}
+}
+[t:emt_sound,n:0x00200140]
+{
+	[placement]
+	{
+	  q orientation = 0,0.829038,0,0.559193;
+	  p position = -0.88652,4.73779,-10.8285,0x02355ebf;
+	}
+	[sound_emitter]
+	{
+	  b continual_loop = true;
+		event_sound = "env_crypt";
+	  f min_dist = 15;
+	}
+}
+[t:emt_fire,n:0x002001e6]
+{
+	[placement]
+	{
+	  p position = -0.626617,1.21686,0.547409,0x98217375;
+	}
+}
+[t:emt_fire,n:0x002001e7]
+{
+	[placement]
+	{
+	  p position = -0.0623779,1.5681,0.440536,0x98217375;
+	}
+}
+[t:emt_fire,n:0x002001ee]
+{
+	[placement]
+	{
+	  p position = 0.600487,1.22546,0.476273,0x98217375;
+	}
+}
+[t:emt_fire,n:0x00200179]
+{
+	[placement]
+	{
+	  p position = 3.06671,0.40123,0.503296,0xd793920e;
+	}
+}
+[t:emt_fire,n:0x00200185]
+{
+	[placement]
+	{
+	  p position = -2.0088,0.240143,-2.63574,0xd793920e;
+	}
+}
+[t:emt_fire,n:0x002001de]
+{
+	[placement]
+	{
+	  p position = -2.02037,0.240143,3.26012,0xd793920e;
+	}
+}
+[t:emt_fire,n:0x0020018c]
+{
+	[placement]
+	{
+	  q orientation = 0,0.707107,0,0.707107;
+	  p position = -1.27668,0.94014,-1.13217,0xb83957b8;
+	}
+}
+[t:emt_fire,n:0x0020018d]
+{
+	[placement]
+	{
+	  q orientation = 0,0.707107,0,0.707107;
+	  p position = 0.978661,0.94014,2.77414,0xb83957b8;
+	}
+}
+[t:emt_fire,n:0x0020017a]
+{
+	[placement]
+	{
+	  p position = 1.36969,0.94014,2.9721,0x7bca7246;
+	}
+}
+[t:emt_fire,n:0x0020018f]
+{
+	[placement]
+	{
+	  p position = -1.26088,0.94014,-1.36642,0x7bca7246;
+	}
+}
+[t:emt_fire,n:0x00200186]
+{
+	[placement]
+	{
+	  q orientation = 0,1,0,0;
+	  p position = 0.829315,0.94014,2.97832,0x954f0dbb;
+	}
+}
+[t:emt_fire,n:0x0020018e]
+{
+	[placement]
+	{
+	  p position = 0.780327,0.290146,-0.438557,0xe8637e8d;
+	}
+}
+[t:emt_fire,n:0x00200190]
+{
+	[placement]
+	{
+	  q orientation = 0,-0.707107,0,0.707107;
+	  p position = 1.52975,0.94014,3.31461,0x119ce839;
+	}
+}
+[t:emt_fire,n:0x00200191]
+{
+	[placement]
+	{
+	  q orientation = 0,-0.707107,0,0.707107;
+	  p position = -0.468552,0.94014,-1.63418,0x119ce839;
+	}
+}
+[t:emt_fire_act,n:0x0020003a]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_activate",0x002001C6,0f,"default","",0), doc("sound: fire light");
+				action* = send_world_message("we_req_activate",0x002001E4,0f,"default","",0), doc("sound: fire burning");
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_req_activate",0,"on_every_message");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+			[*]
+			{
+				action* = send_world_message("we_req_deactivate",0x002001E4,0f,"default","",0), doc("stop burning sound");
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_req_deactivate",0,"on_every_message");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[fire_emitter_act]
+	{
+	  i count = 80;
+	  f yacc = 30;
+	  f yvel = 30;
+	}
+	[placement]
+	{
+	  p position = 6.57294,0.830775,-5.33681,0x8daa367b;
+	}
+}
+[t:emt_fire_act,n:0x0020003c]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_activate",0x002001C7,0f,"default","",0), doc("sound: fire light");
+				action* = send_world_message("we_req_activate",0x002001D3,0f,"default","",0), doc("sound:fire burning");
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_req_activate",0,"on_every_message");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+			[*]
+			{
+				action* = send_world_message("we_req_deactivate",0x002001D3,0f,"default","",0), doc("stop burning sound");
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_req_deactivate",0,"on_every_message");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[fire_emitter_act]
+	{
+	  i count = 80;
+	  f yacc = 30;
+	  f yvel = 30;
+	}
+	[placement]
+	{
+	  p position = 8.38753,0.880759,2.36806,0x8daa367b;
+	}
+}
+[t:emt_fire_act,n:0x0020003d]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_activate",0x002001D0,0f,"default","",0), doc("sound: fire light");
+				action* = send_world_message("we_req_activate",0x002001D5,0f,"default","",0), doc("sound:fire burning");
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_req_activate",0,"on_every_message");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+			[*]
+			{
+				action* = send_world_message("we_req_deactivate",0x002001D5,0f,"default","",0), doc("stop sound burning");
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_req_deactivate",0,"on_every_message");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[fire_emitter_act]
+	{
+	  i count = 80;
+	  f yacc = 30;
+	  f yvel = 30;
+	}
+	[placement]
+	{
+	  p position = 0.167534,0.78029,10.0408,0x8daa367b;
+	}
+}
+[t:emt_fire_act,n:0x0020003e]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_activate",0x002001C2,0f,"default","",0), doc("sound:fire light");
+				action* = send_world_message("we_req_activate",0x002001D2,0f,"default","",0), doc("sound: fire burning");
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_req_activate",0,"on_every_message");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+			[*]
+			{
+				action* = send_world_message("we_req_deactivate",0x002001D2,0f,"default","",0), doc("stop burning sound");
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_req_deactivate",0,"on_every_message");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[fire_emitter_act]
+	{
+	  i count = 80;
+	  f yacc = 30;
+	  f yvel = 30;
+	}
+	[placement]
+	{
+	  p position = -9.42719,0.841152,2.41782,0x8daa367b;
+	}
+}
+[t:emt_fire_act,n:0x0020003f]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_activate",0x002001C5,0f,"default","",0), doc("sound: fire light");
+				action* = send_world_message("we_req_activate",0x002001E2,0f,"default","",0), doc("sound: fire burning");
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_req_activate",0,"on_every_message");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+			[*]
+			{
+				action* = send_world_message("we_req_deactivate",0x002001E2,0f,"default","",0), doc("stop burning sound");
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_req_deactivate",0,"on_every_message");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[fire_emitter_act]
+	{
+	  i count = 80;
+	  f yacc = 30;
+	  f yvel = 30;
+	}
+	[placement]
+	{
+	  p position = -6.58971,0.768075,-5.29063,0x8daa367b;
+	}
+}
+[t:emt_sound,n:0x00200146]
+{
+	[placement]
+	{
+	  q orientation = 0,0.981627,0,-0.190809;
+	  p position = 0.144363,5.22674,0.00666809,0x8daa367b;
+	}
+	[sound_emitter]
+	{
+	  b continual_loop = true;
+		event_sound = "amb_wind_monotonic";
+	}
+}
+[t:emt_sound_act,n:0x002001c2]
+{
+	[common]
+	{
+		dev_instance_text = "SOUND: FIRE LIGHT";
+	}
+	[placement]
+	{
+	  p position = -9.2597,-0.0500002,2.34779,0x8daa367b;
+	}
+	[sound_emitter_act]
+	{
+		event_sound = "env_torch_lighting";
+	  f min_dist = 10;
+	  b repeat = false;
+	  b start_on_creation = false;
+	}
+}
+[t:emt_sound_act,n:0x002001c5]
+{
+	[common]
+	{
+		dev_instance_text = "SOUND: FIRE LIGHT";
+	}
+	[placement]
+	{
+	  p position = -6.33149,-0.0500021,-5.41286,0x8daa367b;
+	}
+	[sound_emitter_act]
+	{
+		event_sound = "env_torch_lighting";
+	  f min_dist = 10;
+	  b repeat = false;
+	  b start_on_creation = false;
+	}
+}
+[t:emt_sound_act,n:0x002001c6]
+{
+	[common]
+	{
+		dev_instance_text = "SOUND: FIRE LIGHT";
+	}
+	[placement]
+	{
+	  p position = 6.78122,-0.0500002,-5.4427,0x8daa367b;
+	}
+	[sound_emitter_act]
+	{
+		event_sound = "env_torch_lighting";
+	  f min_dist = 10;
+	  b repeat = false;
+	  b start_on_creation = false;
+	}
+}
+[t:emt_sound_act,n:0x002001c7]
+{
+	[common]
+	{
+		dev_instance_text = "SOUND: FIRE LIGHT";
+	}
+	[placement]
+	{
+	  p position = 8.54408,-0.0500002,2.2317,0x8daa367b;
+	}
+	[sound_emitter_act]
+	{
+		event_sound = "env_torch_lighting";
+	  f min_dist = 10;
+	  b repeat = false;
+	  b start_on_creation = false;
+	}
+}
+[t:emt_sound_act,n:0x002001d0]
+{
+	[common]
+	{
+		dev_instance_text = "SOUND: FIRE LIGHT";
+	}
+	[placement]
+	{
+	  p position = 0.264038,-0.0499983,9.95468,0x8daa367b;
+	}
+	[sound_emitter_act]
+	{
+		event_sound = "env_torch_lighting";
+	  f min_dist = 10;
+	  b repeat = false;
+	  b start_on_creation = false;
+	}
+}
+[t:emt_sound_act,n:0x002001d2]
+{
+	[placement]
+	{
+	  p position = -9.72884,-0.0499983,2.36865,0x8daa367b;
+	}
+	[sound_emitter_act]
+	{
+	  b continual_loop = true;
+		event_sound = "env_burning_small";
+	  f max_dist = 25;
+	  f min_dist = 5;
+	  b start_on_creation = false;
+	  b stop_instantly = true;
+	}
+}
+[t:emt_sound_act,n:0x002001d3]
+{
+	[placement]
+	{
+	  p position = 8.03883,-0.0499983,2.20999,0x8daa367b;
+	}
+	[sound_emitter_act]
+	{
+	  b continual_loop = true;
+		event_sound = "env_burning_small";
+	  f max_dist = 25;
+	  f min_dist = 5;
+	  b start_on_creation = false;
+	  b stop_instantly = true;
+	}
+}
+[t:emt_sound_act,n:0x002001d5]
+{
+	[placement]
+	{
+	  p position = -0.294365,-0.0499992,9.91023,0x8daa367b;
+	}
+	[sound_emitter_act]
+	{
+	  b continual_loop = true;
+		event_sound = "env_burning_small";
+	  f max_dist = 25;
+	  f min_dist = 5;
+	  b start_on_creation = false;
+	  b stop_instantly = true;
+	}
+}
+[t:emt_sound_act,n:0x002001e2]
+{
+	[placement]
+	{
+	  p position = -6.80067,-0.0500002,-5.38704,0x8daa367b;
+	}
+	[sound_emitter_act]
+	{
+	  b continual_loop = true;
+		event_sound = "env_burning_small";
+	  f max_dist = 25;
+	  f min_dist = 5;
+	  b start_on_creation = false;
+	  b stop_instantly = true;
+	}
+}
+[t:emt_sound_act,n:0x002001e4]
+{
+	[placement]
+	{
+	  p position = 6.21419,-0.00946426,-5.42154,0x8daa367b;
+	}
+	[sound_emitter_act]
+	{
+	  b continual_loop = true;
+		event_sound = "env_burning_small";
+	  f max_dist = 25;
+	  f min_dist = 5;
+	  b start_on_creation = false;
+	  b stop_instantly = true;
+	}
+}
+[t:emt_sound,n:0x00200143]
+{
+	[placement]
+	{
+	  q orientation = 0,-0.559193,0,0.829038;
+	  p position = 2.3647,4.19999,1.19835,0x3da3d824;
+	}
+	[sound_emitter]
+	{
+	  b continual_loop = true;
+		event_sound = "amb_wind_monotonic";
+	}
+}
+[t:emt_sound,n:0x00200144]
+{
+	[placement]
+	{
+	  q orientation = 0,0.190809,0,0.981627;
+	  p position = 0.402527,8.2044,-0.510353,0x603c925b;
+	}
+	[sound_emitter]
+	{
+	  b continual_loop = true;
+		event_sound = "amb_wind_monotonic";
+	}
+}
+[t:emt_sound,n:0x0020013b]
+{
+	[placement]
+	{
+	  q orientation = 0,-0.317304,0,0.948324;
+	  p position = -7.75526,30.6181,0.787483,0xa304ca38;
+	}
+	[sound_emitter]
+	{
+		event_sound = "env_moaning";
+	  f max_repeat_rate = 20;
+	  f repeat_rate = 12;
+	}
+}
+[t:emt_sound,n:0x0020013d]
+{
+	[placement]
+	{
+	  q orientation = 0,0.948324,0,0.317304;
+	  p position = 2.50869,26.6181,24.0549,0x55c0579d;
+	}
+	[sound_emitter]
+	{
+		event_sound = "env_moaning";
+	  f max_repeat_rate = 25;
+	  f repeat_rate = 12;
+	}
+}
+[t:emt_sound,n:0x0020013c]
+{
+	[placement]
+	{
+	  q orientation = 0,-0.317304,0,0.948324;
+	  p position = 2.70077,6.61814,-1.71027,0x05f19255;
+	}
+	[sound_emitter]
+	{
+		event_sound = "env_moaning";
+	  f max_repeat_rate = 20;
+	  f repeat_rate = 8;
+	}
+}
+[t:emt_sound,n:0x00200137]
+{
+	[placement]
+	{
+	  q orientation = 0,0.446198,0,0.894934;
+	  p position = -13.776,26.3648,14.149,0xf751a09e;
+	}
+	[sound_emitter]
+	{
+		event_sound = "env_moaning";
+	  f max_repeat_rate = 30;
+	  f repeat_rate = 15;
+	}
+}
+[t:emt_sound,n:0x00200149]
+{
+	[placement]
+	{
+	  q orientation = 0,-0.559193,0,0.829038;
+	  p position = -15.5878,19.7,-19.1819,0xd8b07468;
+	}
+	[sound_emitter]
+	{
+	  b continual_loop = true;
+		event_sound = "amb_wind_monotonic";
+	}
+}
+[t:emt_sound,n:0x00200141]
+{
+	[placement]
+	{
+	  q orientation = 0,-0.559193,0,0.829038;
+	  p position = 0.00358772,4.00001,0.402435,0xac5a2952;
+	}
+	[sound_emitter]
+	{
+	  b continual_loop = true;
+		event_sound = "amb_wind_monotonic";
+	}
+}
+[t:emt_sound,n:0x0020013e]
+{
+	[placement]
+	{
+	  q orientation = 0,0.317304,0,-0.948324;
+	  p position = -0.212624,3.93789,-4.05878,0xd813c905;
+	}
+	[sound_emitter]
+	{
+		event_sound = "env_moaning";
+	  f max_repeat_rate = 20;
+	  f repeat_rate = 10;
+	}
+}
