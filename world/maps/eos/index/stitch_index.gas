@@ -13376,6 +13376,16 @@
 			* = 0,56 - 0,7;
 		}
 	}
+	[t:node_connect_info,n:0x2ed38e66]
+	{
+		[t:neighbor_connections,n:0x7f1387fd]
+		{
+			* = 0,0 - 1,0;
+			* = 0,0 - 1,1;
+			* = 0,1 - 1,0;
+			* = 0,1 - 1,1;
+		}
+	}
 	[t:node_connect_info,n:0x2ffa0ad4]
 	{
 		[t:neighbor_connections,n:0x86f14850]
@@ -21266,6 +21276,10 @@
 			* = 1,7 - 1,16;
 		}
 	}
+	[t:stitch_index,n:0x5a6be416]
+	{
+		* = 0x2ed38e66,1,0x7F1387FD,9;
+	}
 	[t:node_connect_info,n:0x5ab77dd2]
 	{
 		[t:neighbor_connections,n:0x3aa34699]
@@ -27952,6 +27966,16 @@
 			* = 0,1738 - 0,515;
 			* = 0,1738 - 0,516;
 			* = 0,1738 - 0,519;
+		}
+	}
+	[t:node_connect_info,n:0x7f1387fd]
+	{
+		[t:neighbor_connections,n:0x2ed38e66]
+		{
+			* = 1,0 - 0,0;
+			* = 1,0 - 0,1;
+			* = 1,1 - 0,0;
+			* = 1,1 - 0,1;
 		}
 	}
 	[t:node_connect_info,n:0x7f4980b4]
@@ -37719,15 +37743,15 @@
 		* = 0x10fc6391,2,0x11969e23,2;
 		* = 0x10fc6391,3,0x6dad2e3a,5;
 		* = 0x404811b8,1,0x6dad2e3a,4;
-		* = 0x20ad4ff2,6,0x434bd957,3;
-		* = 0x4d3019bd,3,0x1bc06b23,6;
-		* = 0x4d3019bd,4,0x1bc06b23,5;
-		* = 0x719cfee8,7,0xa3926e2c,3;
-		* = 0x719cfee8,8,0x5e89761f,2;
-		* = 0x951eacb1,3,0x81e5ed52,3;
-		* = 0x951eacb1,4,0x0d5c2e8b,6;
-		* = 0xa8563ee3,3,0xa78bfbb8,3;
-		* = 0xa8563ee3,4,0xce71243b,5;
+		* = 0x20ad4ff2,6,0x434BD957,3;
+		* = 0x4d3019bd,3,0x1BC06B23,6;
+		* = 0x4d3019bd,4,0x1BC06B23,5;
+		* = 0x719cfee8,7,0xA3926E2C,3;
+		* = 0x719cfee8,8,0x5E89761F,2;
+		* = 0x951eacb1,3,0x81E5ED52,3;
+		* = 0x951eacb1,4,0x0D5C2E8B,6;
+		* = 0xa8563ee3,3,0xA78BFBB8,3;
+		* = 0xa8563ee3,4,0xCE71243B,5;
 	}
 	[t:stitch_index,n:0xaab10100]
 	{
@@ -52979,15 +53003,16 @@
 	}
 	[t:stitch_index,n:0xefe83152]
 	{
-		* = 0x434bd957,3,0x20ad4ff2,6;
-		* = 0x1bc06b23,6,0x4d3019bd,3;
-		* = 0x1bc06b23,5,0x4d3019bd,4;
-		* = 0xa3926e2c,3,0x719cfee8,7;
-		* = 0x5e89761f,2,0x719cfee8,8;
-		* = 0x81e5ed52,3,0x951eacb1,3;
-		* = 0x0d5c2e8b,6,0x951eacb1,4;
-		* = 0xa78bfbb8,3,0xa8563ee3,3;
-		* = 0xce71243b,5,0xa8563ee3,4;
+		* = 0x434BD957,3,0x20ad4ff2,6;
+		* = 0x1BC06B23,6,0x4d3019bd,3;
+		* = 0x1BC06B23,5,0x4d3019bd,4;
+		* = 0xA3926E2C,3,0x719cfee8,7;
+		* = 0x5E89761F,2,0x719cfee8,8;
+		* = 0x81E5ED52,3,0x951eacb1,3;
+		* = 0x0D5C2E8B,6,0x951eacb1,4;
+		* = 0xA78BFBB8,3,0xa8563ee3,3;
+		* = 0xCE71243B,5,0xa8563ee3,4;
+		* = 0x7F1387FD,9,0x2ed38e66,1;
 	}
 	[t:node_connect_info,n:0xf0383fed]
 	{

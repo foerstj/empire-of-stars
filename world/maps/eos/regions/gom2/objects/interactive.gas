@@ -1,3 +1,21 @@
+[t:lever_gob_01,n:0x00200025]
+{
+	[on_off_lever]
+	{
+		off_message = we_req_activate;
+	  f off_message_delay = 1;
+	  x off_scid = 0x0890001F;
+	  f on_message_delay = 1;
+	  x on_scid = 0x0890001F;
+	  f reset_time = 10;
+	  f reset_time_2 = 10;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.707107,0,0.707107;
+	  p position = 0.741379,-16.2,1.96791,0x8771d60f;
+	}
+}
 [t:respawn_statue,n:0x002000f2]
 {
 	[placement]

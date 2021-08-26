@@ -609,19 +609,6 @@
 	  p position = -0.528496,198.985,0.393257,0x12154757;
 	}
 }
-[t:cmd_camera_command,n:0x00200210]
-{
-	[cmd_camera_command]
-	{
-	  f duration = 7.75;
-	  x next_scid = 0x00200211;
-	}
-	[placement]
-	{
-	  q orientation = 0.31079,-0.625179,0.292154,0.65361;
-	  p position = 0.477478,17.9636,-1.99244,0x84af4233;
-	}
-}
 [t:camera_quake,n:0x0020001c]
 {
 	[camera_quake]
@@ -916,5 +903,18 @@
 	[placement]
 	{
 	  p position = -0.175156,0.388376,7.07542,0x8daa367b;
+	}
+}
+[t:cmd_camera_command,n:0x00200210]
+{
+	[cmd_camera_command]
+	{
+	  f duration = 7.75;
+	  x next_scid = 0x00200211;
+	}
+	[placement]
+	{
+	  q orientation = 0.31079,-0.625179,0.292154,0.65361;
+	  p position = 0.477478,17.9636,-1.99244,0x84af4233;
 	}
 }
