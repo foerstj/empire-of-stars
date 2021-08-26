@@ -1,0 +1,154 @@
+[effect_script*]
+{
+	name	=eos_dragon_explosion;
+
+	script	=[[
+        set $dur 2.5;  // .3
+        set $flamesize 16;  // 5
+        set $fade .4;  // .4
+        set $pause .1;  // .03
+        
+        set $scalePS 8;  // 1
+        set $scalePN 10;  // 1.2
+        set $durP 2;  // 1
+        set $countF 64;  // 50
+
+        sfx create orbiter #TARGET
+            "iphi(0)radius(0)invisible()dur(30)";
+        set $orb #POP;
+        sfx freeze_targets $orb;
+        sfx start $orb;
+
+        get target_position $orb target;
+        // sound play s_e_FBFireball_hit at #POP dist 5 40;
+
+        // create a small explosion of particles with a sparkle texture
+        sfx create explosion #TARGET
+            "dur($durP)scale($scalePS)texture(b_sfx_sparkle01)offset(0,.2,0)
+            color0(.9,.3,.1)color1(.1,.2,.1)omni_dir()";
+        sfx target #PEEK $orb;
+        sfx start #POP;
+        // create a small explosion of particles
+        sfx create explosion #TARGET 
+            "dur($durP)scale($scalePN)offset(0,.2,0)color0(.9,.3,.1)color1(.1,.2,.1)
+            omni_dir()";
+        sfx target #PEEK $orb;
+        sfx start #POP;
+
+        sfx create fire #TARGET
+            "instant()scale(.2)dur($dur)flamesize($flamesize)count($countF)
+            color0(1,.5,.2)color1(0,0,0)velocity(0,10,0)accel(0,10,0)
+            alphafade($fade)min_displace(0)max_displace(1)radius(1)
+            max_radius(1)";
+        sfx target #PEEK $orb;
+        sfx freeze_targets #PEEK;
+        sfx start #POP;
+        pause $pause;
+
+        sfx create fire #TARGET
+            "instant()scale(.4)dur($dur)flamesize($flamesize)count($countF)
+            color0(1,.5,.2)color1(0,0,0)velocity(0,10,0)accel(0,10,0)
+            alphafade($fade)min_displace(0)max_displace(2)radius(2)
+            max_radius(1)";
+        sfx target #PEEK $orb;
+        sfx freeze_targets #PEEK;
+        sfx start #POP;
+        pause $pause;
+
+        sfx create fire #TARGET
+            "instant()scale(.6)dur($dur)flamesize($flamesize)count($countF)
+            color0(1,.5,.2)color1(0,0,0)velocity(0,10,0)accel(0,10,0)
+            alphafade($fade)min_displace(0)max_displace(3)radius(3)
+            max_radius(1)";
+        sfx target #PEEK $orb;
+        sfx freeze_targets #PEEK;
+        sfx start #POP;
+        pause $pause;
+
+        // create a small explosion of particles with a sparkle texture
+        sfx create explosion #TARGET 
+            "dur($durP)scale($scalePS)texture(b_sfx_sparkle01)offset(0,.2,0)
+            color0(.9,.3,.1)color1(.1,.2,.1)omni_dir()";
+        sfx target #PEEK $orb;
+        sfx start #POP;
+        // create a small explosion of particles
+        sfx create explosion #TARGET 
+            "dur($durP)scale($scalePN)offset(0,.2,0)color0(.9,.3,.1)color1(.1,.2,.1)
+            omni_dir()";
+        sfx target #PEEK $orb;
+        sfx start #POP;
+
+        sfx create fire #TARGET
+            "instant()scale(.8)dur($dur)flamesize($flamesize)count($countF)
+            color0(1,.5,.2)color1(0,0,0)velocity(0,10,0)accel(0,10,0)
+            alphafade($fade)min_displace(0)max_displace(4)radius(4)
+            max_radius(1)";
+        sfx target #PEEK $orb;
+        sfx freeze_targets #PEEK;
+        sfx start #POP;
+        pause $pause;
+
+        sfx create fire #TARGET
+            "instant()scale(1)dur($dur)flamesize($flamesize)count($countF)
+            color0(1,.5,.2)color1(0,0,0)velocity(0,10,0)accel(0,10,0)
+            alphafade($fade)min_displace(0)max_displace(5)radius(5)
+            max_radius(1)";
+        sfx target #PEEK $orb;
+        sfx freeze_targets #PEEK;
+        sfx start #POP;
+        pause $pause;
+
+        sfx create fire #TARGET
+            "instant()scale(1.2)dur($dur)flamesize($flamesize)count($countF)
+            color0(1,.5,.2)color1(0,0,0)velocity(0,10,0)accel(0,10,0)
+            alphafade($fade)min_displace(0)max_displace(6)radius(6)
+            max_radius(1)";
+        sfx target #PEEK $orb;
+        sfx freeze_targets #PEEK;
+        sfx start #POP;
+        pause $pause;
+
+        // create a small explosion of particles with a sparkle texture
+        sfx create explosion #TARGET 
+            "dur($durP)scale($scalePS)texture(b_sfx_sparkle01)offset(0,.2,0)
+            color0(.9,.3,.1)color1(.1,.2,.1)omni_dir()";
+        sfx target #PEEK $orb;
+        sfx start #POP;
+        // create a small explosion of particles
+        sfx create explosion #TARGET 
+            "dur($durP)scale($scalePN)offset(0,.2,0)color0(.9,.3,.1)color1(.1,.2,.1)
+            omni_dir()";
+        sfx target #PEEK $orb;
+        sfx start #POP;
+
+        sfx create fire #TARGET
+            "instant()scale(1.4)dur($dur)flamesize($flamesize)count($countF)
+            color0(1,.5,.2)color1(0,0,0)velocity(0,10,0)accel(0,10,0)
+            alphafade($fade)min_displace(0)max_displace(7)radius(7)
+            max_radius(1)";
+        sfx target #PEEK $orb;
+        sfx freeze_targets #PEEK;
+        sfx start #POP;
+        pause $pause;
+
+        sfx create fire #TARGET
+            "instant()scale(1.6)dur($dur)flamesize($flamesize)count($countF)
+            color0(1,.5,.2)color1(0,0,0)velocity(0,10,0)accel(0,10,0)
+            alphafade($fade)min_displace(0)max_displace(8)radius(8)
+            max_radius(1)";
+        sfx target #PEEK $orb;
+        sfx freeze_targets #PEEK;
+        sfx start #POP;
+        pause $pause;
+
+        sfx create fire #TARGET
+            "instant()scale(1.8)dur($dur)flamesize($flamesize)count($countF)
+            color0(1,.5,.2)color1(0,0,0)velocity(0,10,0)accel(0,10,0)
+            alphafade($fade)min_displace(0)max_displace(9)radius(9)
+            max_radius(1)";
+        sfx target #PEEK $orb;
+        sfx freeze_targets #PEEK;
+        sfx start #POP;
+        pause $pause;
+    ]];
+}

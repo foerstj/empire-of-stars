@@ -1,0 +1,18 @@
+[t:template,n:emt_eos_dragon_explosion_act]
+{
+	specializes	=	emitter_lightweight;
+    category_name = "emitter";
+	doc			=	"emt_eos_dragon_explosion_act";
+
+	[common]
+	{
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_REQ_ACTIVATE");
+				action*    = call_sfx_script("eos_dragon_explosion");
+			}
+		}
+	}
+}
