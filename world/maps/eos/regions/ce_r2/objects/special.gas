@@ -35,7 +35,7 @@
 		{
 			[*]
 			{
-				action* = fade_nodes(0xACA90100,1,-1,-1,"out:black");
+				action* = fade_nodes(0x5A6BE416,1,-1,-1,"out:black");
 			  b can_self_destruct = true;
 				condition* = party_member_within_bounding_box(5.000000,2.000000,5.000000,"on_every_enter");
 			  f delay = 0.000000;
@@ -3790,5 +3790,33 @@
 	{
 	  q orientation = 0,-0.382683,0,0.92388;
 	  p position = -1.35661,-2.25,0.208808,0xe7700650;
+	}
+}
+[t:trigger_change_mood_box,n:0x0460009d]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = mood_change("eos_sirius_planet_r2_3");
+			  b can_self_destruct = true;
+				condition* = party_member_within_bounding_box(2.000000,1.000000,2.000000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  p position = -0.325851,1,4.66575,0x118d7a69;
 	}
 }
