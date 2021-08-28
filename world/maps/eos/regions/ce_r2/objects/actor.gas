@@ -413,13 +413,6 @@
 	  p position = 0.628036,-2,-0.0105171,0xc909de8b;
 	}
 }
-[t:seck_archer_reveal_act,n:0x04600521]
-{
-	[placement]
-	{
-	  p position = -6.04311,9.53674e-007,15.8977,0x18837b2b;
-	}
-}
 [t:dsx_automaton_one,n:0x04600528]
 {
 	[placement]
@@ -1524,7 +1517,7 @@
 	  p position = -7.54938,-2,23.5924,0x2132fd48;
 	}
 }
-[t:seck_archer_reveal,n:0x04600522]
+[t:seck_archer_reveal_act,n:0x04600522]
 {
 	[placement]
 	{
@@ -1532,15 +1525,15 @@
 	  p position = -0.0449829,-2,-7.60948,0xc8fe5a82;
 	}
 }
-[t:seck_archer_reveal,n:0x04600535]
+[t:seck_archer_reveal_act,n:0x04600535]
 {
 	[placement]
 	{
 	  q orientation = 0,-0.83147,0,0.55557;
-	  p position = 0.0437622,-2,8.21088,0xc8fe5a82;
+	  p position = 0.0437622,-2,8.21087,0xc8fe5a82;
 	}
 }
-[t:seck_archer_reveal,n:0x04600667]
+[t:seck_archer_reveal_act,n:0x04600667]
 {
 	[placement]
 	{
@@ -1548,7 +1541,7 @@
 	  p position = -0.0756378,-2,4.10278,0xc8fe5a82;
 	}
 }
-[t:seck_archer_reveal,n:0x04600668]
+[t:seck_archer_reveal_act,n:0x04600668]
 {
 	[placement]
 	{
@@ -1556,7 +1549,7 @@
 	  p position = -0.121063,-2,-3.70974,0xc8fe5a82;
 	}
 }
-[t:seck_archer_reveal,n:0x046003d6]
+[t:seck_archer_reveal_act,n:0x046003d6]
 {
 	[placement]
 	{
@@ -1564,7 +1557,7 @@
 	  p position = -9.4084,9.53674e-007,4.1894,0x6d3173c7;
 	}
 }
-[t:seck_archer_reveal,n:0x04600539]
+[t:seck_archer_reveal_act,n:0x04600539]
 {
 	[placement]
 	{
@@ -1572,7 +1565,7 @@
 	  p position = -8.55278,0,-12.1826,0x6d3173c7;
 	}
 }
-[t:seck_archer_reveal,n:0x0460053b]
+[t:seck_archer_reveal_act,n:0x0460053b]
 {
 	[placement]
 	{
@@ -1580,7 +1573,7 @@
 	  p position = -8.94963,9.53674e-007,-4.48312,0x6d3173c7;
 	}
 }
-[t:seck_archer_reveal,n:0x04600663]
+[t:seck_archer_reveal_act,n:0x04600663]
 {
 	[placement]
 	{
@@ -1588,7 +1581,7 @@
 	  p position = -8.81146,0,-16.7322,0x6d3173c7;
 	}
 }
-[t:seck_archer_reveal,n:0x04600665]
+[t:seck_archer_reveal_act,n:0x04600665]
 {
 	[placement]
 	{
@@ -1644,9 +1637,57 @@
 }
 [t:gresh,n:0x046000b1]
 {
+	[actor]
+	{
+		alignment = aa_neutral;
+	}
 	[common]
 	{
 		screen_name = "Seth King";
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_activate",0x046000E5,0f,"default","every",0), doc("reveal bodyguards");
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_enemy_spotted",0,"on_every_message");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+			[*]
+			{
+				action* = send_world_message("we_req_activate",0x046000BE,0f,"default","every",0);
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_req_talk_end",0,"on_every_message");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[conversation]
+	{
+		[conversations]
+		{
+			* = seth_king;
+		}
+	}
+	[mind]
+	{
+		jat_talk = world\ai\jobs\common\job_talk.skrit;
 	}
 	[placement]
 	{
@@ -1670,24 +1711,32 @@
 {
 	[placement]
 	{
-	  q orientation = 0,0.92388,0,0.382683;
-	  p position = 0.591614,0,2.86476,0xb82338a9;
+	  q orientation = 0,0.923879,0,-0.382684;
+	  p position = 2.91067,0,3.40292,0xb82338a9;
 	}
 }
 [t:seck_mage_reveal_act,n:0x04600520]
 {
 	[placement]
 	{
-	  q orientation = 0,0.881921,0,-0.471397;
-	  p position = -1.67253,0,3.05076,0xb82338a9;
+	  q orientation = 0,0.95694,0,0.290284;
+	  p position = -3.78163,4.76837e-007,3.62361,0xb82338a9;
+	}
+}
+[t:seck_archer_reveal_act,n:0x04600521]
+{
+	[placement]
+	{
+	  q orientation = 0,1,0,-1.66939e-007;
+	  p position = -4.64258,0,6.61043,0xb82338a9;
 	}
 }
 [t:seck_archer_reveal_act,n:0x04600658]
 {
 	[placement]
 	{
-	  q orientation = 0,0.906308,0,0.422618;
-	  p position = -7.21646,0,5.76398,0xb82338a9;
+	  q orientation = 0,0.999048,0,0.043619;
+	  p position = 3.07219,0,6.73415,0xb82338a9;
 	}
 }
 [t:seck_grunt_reveal_act,n:0x0460065a]
@@ -1695,7 +1744,7 @@
 	[placement]
 	{
 	  q orientation = 0,-0.819152,0,0.573577;
-	  p position = 2.13634,-0.8,-0.520119,0xb82338a9;
+	  p position = 1.8865,-0.4,0.0539551,0xb82338a9;
 	}
 }
 [t:seck_grunt_reveal_act,n:0x0460065b]
@@ -1703,7 +1752,7 @@
 	[placement]
 	{
 	  q orientation = 0,-0.965926,0,-0.258819;
-	  p position = -2.09987,-1.2,-0.754616,0xb82338a9;
+	  p position = -2.87381,-0.4,0.217262,0xb82338a9;
 	}
 }
 [t:dsx_golem_clockwork,n:0x0460065c]

@@ -1,72 +1,9 @@
-[conversation_lord_bolingar_multiplayer]
+[seth_king]
 {
 	[text*]
 	{
-		activate_quest* = quest_find_king_mp;
-		sample = s_v_ce_lord_bolingarMP1;
-		screen_text = "By all the powers that be, a friendly face! The castle's overrun! The bloody Seck came up from below, but I don't know how. King Konreid was still alive when last I saw him, but I can't find him now. I hope he's in hiding and that those slimy Seck haven't got him bottled up somewhere in the Castle.";
-		quest_dialog = true;
-	}
-}
-[conversation_lord_bolingar_join]
-{
-	[text*]
-	{
-		choice = potential_member;
-		activate_quest* = quest_find_king;
-		sample = s_v_ce_lord_bolingar1;
-		screen_text = "By all the powers that be, a friendly face! The castle's overrun! The bloody Seck came up from below, but I don't know how. King Konreid was still alive when last I saw him, but I can't find him now. I hope he's in hiding and that those slimy Seck haven't got him bottled up somewhere in the Castle. Shall we join forces to find him or go on separately?";
-		quest_dialog = true;
-	}
-}
-[conversation_lord_bolingar_accept]
-{
-	[text*]
-	{
-		sample = s_v_ce_lord_bolingar2;
-		screen_text = "Let's not stand about then! King Konreid needs our help!";
-	}
-}
-[conversation_lord_bolingar_reject]
-{
-	[text*]
-	{
-		sample = s_v_ce_lord_bolingar3;
-		screen_text = "Aye, we'll probably cover more territory alone, but watch out. Those Seck are thick as thieves throughout the castle.";
-	}
-}
-[conversation_lord_bolingar_rejoin]
-{
-	[text*]
-	{
-		choice = potential_member;
-		sample = s_v_ce_lord_bolingar4;
-		screen_text = "We haven't time to be indecisive! Shall we find the king together or not?";
-	}
-}
-[conversation_lord_bolingar_disband]
-{
-	[text*]
-	{
-		sample = s_v_ce_lord_bolingar5;
-		screen_text = "You wish to search alone? Hmmmph. Very well. We can meet here again if you need me.";
-	}
-}
-[conversation_lord_bolingar_disband_rejoin_no_king]
-{
-	[text*]
-	{
-		choice = potential_member;
-		sample = s_v_ce_lord_bolingar6;
-		screen_text = "Have you found him? Nor have I. Let's search again together, shall we?";
-	}
-}
-[conversation_lord_bolingar_disband_rejoin_found_king]
-{
-	[text*]
-	{
-		choice = potential_member;
-		sample = s_v_ce_lord_bolingar7;
-		screen_text = "Praise be! You found the King! Now, we just need to unravel this Seck plot I'll assist you as best I may.";
+	  i order = 0;
+		screen_text = "Silence! I kill you!";
+	  f scroll_rate = 10.000000;
 	}
 }
