@@ -51,6 +51,30 @@
 	  p position = 0.218353,2.66341,3.77518,0x02355ebf;
 	}
 }
+[t:blocking_object,n:0x0020002c]
+{
+	[aspect]
+	{
+	  f scale_multiplier = 0.5;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.382683,0,0.92388;
+	  p position = 2.46559,-2.27895,0.563213,0xc9bc7ba4;
+	}
+}
+[t:blocking_object,n:0x0020002e]
+{
+	[aspect]
+	{
+	  f scale_multiplier = 0.5;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.382683,0,0.92388;
+	  p position = -2.26545,-2.28379,0.386786,0xc9bc7ba4;
+	}
+}
 [t:blocking_object,n:0x002001ef]
 {
 	[common]
@@ -80,7 +104,6 @@
 	[common]
 	{
 		dev_instance_text = "QUAKE EFFECT";
-	  b is_multi_player = false;
 		[instance_triggers]
 		{
 			[*]
@@ -89,15 +112,15 @@
 				action* = send_world_message("we_req_activate",0x0020021C,0f,"default","",0), doc("flares on");
 				action* = send_world_message("we_req_activate",0x00200221,0f,"default","",0), delay(2), doc("flares off");
 			  b can_self_destruct = true;
-				condition* = receive_world_message("we_req_activate",0,"on_first_message"), doc("[*one-shot check (trigger is one-shot)*]");
+				condition* = receive_world_message("we_req_activate",0,"on_every_message"), doc("[*one-shot check (trigger is one-shot)*]");
 			  f delay = 0.000000;
 			  b flip_flop = false;
-			  b multi_player = false;
+			  b multi_player = true;
 			  b no_trig_bits = false;
 				occupants_group = ;
 			  f reset_duration = 0.000000;
 			  b single_player = true;
-			  b single_shot = true;
+			  b single_shot = false;
 			  b start_active = true;
 			}
 		}
@@ -108,7 +131,7 @@
 	}
 	[placement]
 	{
-	  p position = 7.80905,-3.55016,-4.52933,0xc9bc7ba4;
+	  p position = 7.80905,-3.59045,-4.52933,0xc9bc7ba4;
 	}
 }
 [t:trigger_generic,n:0x0020021c]
@@ -128,15 +151,15 @@
 				action* = send_world_message("we_req_activate",0x00200222,0f,"default","",0), doc("light 1");
 				action* = send_world_message("we_req_activate",0x00200224,0f,"default","",0), doc("light 2");
 			  b can_self_destruct = true;
-				condition* = receive_world_message("we_req_activate",0,"on_first_message"), doc("[*one-shot check (trigger is one-shot)*]");
+				condition* = receive_world_message("we_req_activate",0,"on_every_message"), doc("[*one-shot check (trigger is one-shot)*]");
 			  f delay = 0.000000;
 			  b flip_flop = false;
-			  b multi_player = false;
+			  b multi_player = true;
 			  b no_trig_bits = false;
 				occupants_group = ;
 			  f reset_duration = 0.000000;
 			  b single_player = true;
-			  b single_shot = true;
+			  b single_shot = false;
 			  b start_active = true;
 			}
 		}
@@ -168,15 +191,15 @@
 				action* = send_world_message("we_req_deactivate",0x00200222,0f,"default","",0), doc("light 1 off");
 				action* = send_world_message("we_req_deactivate",0x00200224,0f,"default","",0), doc("light 2 off");
 			  b can_self_destruct = true;
-				condition* = receive_world_message("we_req_activate",0,"on_first_message"), doc("[*one-shot check (trigger is one-shot)*]");
+				condition* = receive_world_message("we_req_activate",0,"on_every_message"), doc("[*one-shot check (trigger is one-shot)*]");
 			  f delay = 0.000000;
 			  b flip_flop = false;
-			  b multi_player = false;
+			  b multi_player = true;
 			  b no_trig_bits = false;
 				occupants_group = ;
 			  f reset_duration = 0.000000;
 			  b single_player = true;
-			  b single_shot = true;
+			  b single_shot = false;
 			  b start_active = true;
 			}
 		}
