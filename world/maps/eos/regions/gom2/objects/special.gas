@@ -359,41 +359,6 @@
 	  p position = 0.0979767,0,-1.77119,0xad44dbc8;
 	}
 }
-[t:trigger_generic,n:0x002001b8]
-{
-	[common]
-	{
-		dev_instance_text = "FAKE-OUT MOOD";
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = mood_change("map_world_gom2_4"), doc("no more fight mood. gom dead?");
-				action* = mood_change("map_world_gom2_5"), delay(21), doc("fight mood again");
-			  b can_self_destruct = true;
-				condition* = receive_world_message("we_req_activate",0,"on_first_message"), doc("[*converted to one-shot*]");
-				condition* = party_member_within_node(0x5A6BE416,1,99,-1,"wait_for_every_message"), doc("[*message checker (trigger is non-pure )*]");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = true;
-			  b start_active = true;
-			}
-		}
-	}
-	[gizmo]
-	{
-	  v diffuse_color = 1,0.5,0.1;
-	}
-	[placement]
-	{
-	  p position = -1.93941,0,0.347839,0x861677d1;
-	}
-}
 [t:interest_point,n:0x0020023a]
 {
 	[placement]

@@ -21,21 +21,6 @@
 			}
 			[*]
 			{
-				action* = send_world_message("we_req_activate",0x002001B8,0f,"default","every",0), doc("mood change");
-			  b can_self_destruct = true;
-				condition* = receive_world_message("we_killed",0,"on_first_message"), doc("[*converted to one-shot*]");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = false;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = true;
-			  b start_active = true;
-			}
-			[*]
-			{
 				action* = send_world_message("we_req_activate",0x00200240,0f,"default","every",0), delay(2), doc("fight mood");
 			  b can_self_destruct = true;
 				condition* = receive_world_message("we_req_talk_end",0,"on_first_message"), doc("[*converted to one-shot*]");
@@ -51,7 +36,22 @@
 			}
 			[*]
 			{
-				action* = send_world_message("we_req_activate",0x0020024F,0f,"default","every",0), doc("client message for mood change");
+				action* = send_world_message("we_req_activate",0x002001BA,0f,"default","every",0), doc("mood change");
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_killed",0,"on_first_message"), doc("[*converted to one-shot*]");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = false;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = true;
+			  b start_active = true;
+			}
+			[*]
+			{
+				action* = send_world_message("we_req_activate",0x00200252,0f,"default","every",0), doc("client message for mood change");
 			  b can_self_destruct = true;
 				condition* = receive_world_message("we_killed",0,"on_first_message");
 			  f delay = 0.000000;
@@ -61,6 +61,25 @@
 				occupants_group = ;
 			  f reset_duration = 0.000000;
 			  b single_player = false;
+			  b single_shot = true;
+			  b start_active = true;
+			}
+			[*]
+			{
+				action* = send_world_message("we_req_activate",0x002000FD,0f,"default","every",0), doc("elevator down");
+				action* = send_world_message("we_trigger_activate",0x002000FB,0f,"default","every",0), doc("turn on upper elevator auto down");
+				action* = send_world_message("we_trigger_activate",0x00200162,0f,"default","every",0), doc("turn on lower elevator auto up");
+				action* = send_world_message("we_trigger_deactivate",0x002001B9,0f,"default","every",0), doc("turn off up elevator trigger");
+				action* = send_world_message("we_trigger_deactivate",0x00200228,0f,"default","every",0), doc("turn off fight mood trigger");
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_killed",0,"on_first_message"), doc("[*converted to one-shot*]");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
 			  b single_shot = true;
 			  b start_active = true;
 			}

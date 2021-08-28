@@ -121,30 +121,11 @@
 	{
 	  f duration = 3;
 	  x next_scid = 0x00200109;
-		order = cor_pan;
 	}
 	[placement]
 	{
 	  q orientation = 0.230783,0.688476,-0.247729,0.641382;
 	  p position = -6.30472,13.8054,15.1285,0x7bca7246;
-	}
-}
-[t:cmd_ai_c_send_message,n:0x0020024f]
-{
-	[cmd_send_world_message]
-	{
-		send_message = we_req_activate;
-	  b sendtoallclients = true;
-	  x sendtoscid = 0x002001B8;
-	}
-	[common]
-	{
-		dev_instance_text = "SEND WE_KILLED MOOD TO CLIENT";
-	  b is_single_player = false;
-	}
-	[placement]
-	{
-	  p position = -1.96458,0,-0.876778,0x861677d1;
 	}
 }
 [t:cmd_camera_command,n:0x0020010b]
