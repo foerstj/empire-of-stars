@@ -25,24 +25,6 @@
 	  p position = -0.537689,13.2855,-0.515488,0x02355ebf;
 	}
 }
-[t:cmd_animation_command,n:0x0020015f]
-{
-	[cmd_animation_command]
-	{
-	  i animation = 1953262385;
-	  x client_scid = 0x002001AD;
-	  b repeat_animation = false;
-	  b start_fidget = true;
-	}
-	[common]
-	{
-		dev_instance_text = "GOM TALK ANIM (SP)";
-	}
-	[placement]
-	{
-	  p position = -2.94802,-1.56607,1.70461,0xc9bc7ba4;
-	}
-}
 [t:cmd_camera_command,n:0x0020020f]
 {
 	[cmd_camera_command]
@@ -280,27 +262,6 @@
 	  f duration = 0.1;
 	  x next_scid = 0x0020010A;
 		order = cor_snap;
-	}
-	[common]
-	{
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = send_world_message("we_req_activate",0x0020015F,0f,"default","every",0), doc("begin gom sit / talk anim");
-			  b can_self_destruct = true;
-				condition* = receive_world_message("we_req_activate",0,"on_first_message"), doc("[*converted to one-shot*]");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = false;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = true;
-			  b start_active = true;
-			}
-		}
 	}
 	[placement]
 	{
@@ -721,6 +682,27 @@
 	  f duration = 0.1;
 	  x next_scid = 0x00200108;
 		order = cor_snap;
+	}
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_activate",0x002001AD,0f,"default","every",0);
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_camera_command_done",0,"on_every_message");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
 	}
 	[placement]
 	{

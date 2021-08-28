@@ -1,0 +1,176 @@
+[t:template,n:dragon_base]  // = dragon
+{
+	category_name = "1W_evil_b";
+	doc = "dragon";
+	specializes = actor_custom;
+	[actor]
+	{
+		[skills]
+		{
+			strength =  	120, 0;
+			intelligence =  40, 0;
+			dexterity =  	45, 0;
+			melee =  		52, 0;
+            combat_magic =  65, 0;
+		}
+	}
+	[aspect]
+	{
+        draw_selection_indicator = false;
+		experience_value = 200000;
+		life = 20260;
+		max_life = 20260;
+		mana = 15050;
+		max_mana = 15050;
+		model = m_c_ebb_dg_pos_1;
+		rollover_highlight = false;
+		[voice]
+		{
+			[die]			{ priority = high; * = s_e_die_dragon; }
+		}
+	}
+	[attack]
+	{
+		attack_range = 0.0;
+		damage_max = 320;
+		damage_min = 280;
+	}
+	[body]
+	{
+		avg_move_velocity = 0.000000;
+		[bone_translator]
+		{
+			body_anterior = bone_spine_1;
+			body_mid = bone_spine2;
+			body_posterior = bone_spine3;
+			kill_bone = bone_main;
+			shield_bone = bone_finger_lft;
+			weapon_bone = ap_tip;
+		}
+		[chore_dictionary]
+		{
+			initial_chore = chore_none;
+			chore_prefix = a_c_ebb_dg_fs;
+			[chore_magic]
+			{
+				chore_stances = 0;
+				skrit = select_attack;
+				[anim_files]
+				{
+					00 = at;
+					01 = at-02;
+					02 = at-03;
+				}
+			}
+			[chore_default]
+			{
+				chore_stances = 0;
+				skrit = infinite_loop;
+				[anim_files] { 00=sleep; }
+			}
+			[chore_misc]
+			{
+				chore_stances = 0;
+				skrit = select_transition;
+				[anim_files]
+				{
+					slep = sleep;
+					wake = wake;
+				}
+			}
+			[chore_die]
+			{
+				chore_stances = 0;
+				skrit = select_transition;
+				[anim_files] { 00=fall; }
+			}
+			[chore_fidget]
+			{
+				chore_stances = 0;
+				skrit = select_fidget;
+				[anim_files]
+				{
+					00=dff;
+					00=dff-02;
+				}
+			}
+		}
+	}
+	[common]
+	{
+		screen_name="Scorch";
+		auto_expiration_class = never;
+		forced_expiration_class = never;
+		membership=monster,immune_charm,immune_control,immune_freeze,immune_polymorph,immune_align_change,immune_explode;
+		[template_triggers]
+		{
+			[*]
+			{
+				action* = call_sfx_script("dragon_scream");
+				condition* = receive_world_message("we_anim_sfx",1);
+			}
+
+		}
+	}
+	[defend] { defense=900; }
+	[follower] {}
+	[inventory]
+	{
+    	spew_equipped_kill_count = ;
+		selected_active_location = il_active_primary_spell;
+		[other]
+		{
+			il_active_primary_spell=spell_dragon_breath_long;
+			il_spell_1=spell_dragon_breath_long;
+			il_spell_2=spell_dragon_stomp;
+			il_spell_3=spell_dragon_breath_short;
+		}
+	}
+
+	[mind]
+	{
+		jat_brain 						= world\ai\jobs\common\brain_hero.skrit;
+		jat_attack_object 				= world\ai\jobs\common\job_attack_object.skrit;
+		jat_cast	    				= world\ai\jobs\common\job_cast.skrit
+			?no_moveturn				= true
+			&spell_by_range				= true
+			&use_base_duration			= false
+		    &rand_target				= true;
+
+		jat_die 						= world\ai\jobs\actors\evil\job_die_delete.skrit;
+		jat_fidget 						= world\ai\jobs\common\job_fidget.skrit;
+		jat_startup 					= world\ai\jobs\common\job_startup_reveal.skrit
+			?activate					= true
+			&try_face					= false;
+
+		actor_weapon_preference			= WP_MAGIC;
+		actor_auto_switches_to_magic	= true;
+		movement_orders					= mo_hold;
+
+		melee_engage_range 				= 10;
+		personal_space_range 			= 4.5;
+		ranged_engage_range 			= 25.0;
+		sight_range 					= 30.0;
+		sight_origin_height				= 8;
+		actor_auto_fidgets 				= false;
+
+		on_engaged_lost_consciousness_abort_attack = true;
+	}
+	[physics]
+	{
+		fire_resistance = 1.0;
+		bone_box_collision = true;
+	}
+}
+
+[t:template,n:eos_dragon]
+{
+    specializes = dragon_base;
+    
+    [common]
+    {
+        screen_name = "Seth Queen";
+    }
+
+	[conversation] { }
+}
