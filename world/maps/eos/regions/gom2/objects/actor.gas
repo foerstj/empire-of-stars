@@ -6,7 +6,7 @@
 		{
 			[*]
 			{
-				action* = send_world_message("we_req_activate",0x0020021A,0f,"default","",0), delay(49.1), doc("nis quake effects");
+				action* = send_world_message("we_req_activate",0x0020021A,0f,"default","",0), delay(3), doc("nis quake effects");
 			  b can_self_destruct = true;
 				condition* = receive_world_message("we_req_talk_begin",0,"on_first_message"), doc("[*one-shot check (trigger is one-shot)*]");
 			  f delay = 0.000000;
@@ -72,10 +72,6 @@
 		{
 			* = conversation_gom;
 		}
-	}
-	[mind]
-	{
-		jat_talk = world\ai\jobs\common\job_talk.skrit;
 	}
 	[placement]
 	{

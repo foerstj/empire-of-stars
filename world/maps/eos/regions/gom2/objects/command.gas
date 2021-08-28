@@ -140,19 +140,6 @@
 	  p position = -1.54308,-0.82634,4.59439,0xc9bc7ba4;
 	}
 }
-[t:cmd_camera_command,n:0x0020020b]
-{
-	[cmd_camera_command]
-	{
-	  f duration = 3.7;
-	  x next_scid = 0x0020020E;
-	}
-	[placement]
-	{
-	  q orientation = -0.0119823,0.940351,-0.338359,-0.0333007;
-	  p position = 19.5896,18.7483,-0.474655,0x9be919d8;
-	}
-}
 [t:cmd_camera_command,n:0x002001ed]
 {
 	[cmd_camera_command]
@@ -227,9 +214,9 @@
 {
 	[cmd_camera_command]
 	{
-	  f duration = 0;
-	  x next_scid = 0x0020020B;
-		order = cor_snap;
+	  f duration = 3;
+	  x next_scid = 0x00200109;
+		order = cor_pan;
 	}
 	[placement]
 	{
@@ -632,34 +619,13 @@
 {
 	[cmd_camera_command]
 	{
-	  x next_scid = 0x0020020D;
-	}
-	[common]
-	{
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = send_world_message("we_req_talk_begin",0x002001AD,0f,"0x4003","single",0), doc("sp gresh speech[*labelled condition (party_member_within_node)*]");
-			  b can_self_destruct = true;
-				condition* = receive_world_message("we_camera_command_done",0,"on_first_message"), doc("[*one-shot check (trigger is one-shot)*]");
-				condition* = party_member_within_node(0x5A6BE416,1,99,-1,"wait_for_every_message"), doc("send to trigger[*message checker (trigger is non-pure )*]");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = false;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = true;
-			  b start_active = true;
-			}
-		}
+	  f duration = 3;
+	  x next_scid = 0x0020020A;
 	}
 	[placement]
 	{
 	  q orientation = -0.187045,0.120438,0.0231129,0.974666;
-	  p position = -2.50776,0.59082,-0.515152,0xbe50fb90;
+	  p position = -1.05789,4.14146,-0.749637,0xbe50fb90;
 	}
 }
 [t:cmd_camera_command,n:0x00200105]
@@ -717,23 +683,32 @@
 	  f duration = 3;
 	  x next_scid = 0x00200104;
 	}
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_talk_begin",0x002001AD,0f,"0x4003","single",0), doc("sp gresh speech[*labelled condition (party_member_within_node)*]");
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_camera_command_done",0,"on_first_message"), doc("[*one-shot check (trigger is one-shot)*]");
+				condition* = party_member_within_node(0x5A6BE416,1,99,-1,"wait_for_every_message"), doc("send to trigger[*message checker (trigger is non-pure )*]");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = false;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = true;
+			  b start_active = true;
+			}
+		}
+	}
 	[placement]
 	{
 	  q orientation = 0.320934,0.138294,-0.0474306,0.935749;
 	  p position = -2.93966,8.99236,-4.04654,0xbe50fb90;
-	}
-}
-[t:cmd_camera_command,n:0x0020020d]
-{
-	[cmd_camera_command]
-	{
-	  f duration = 6.3;
-	  x next_scid = 0x0020020A;
-	}
-	[placement]
-	{
-	  q orientation = -0.188348,0.035032,0.00672295,0.981454;
-	  p position = -1.06123,0.59082,-0.708786,0xbe50fb90;
 	}
 }
 [t:cmd_camera_command,n:0x0020020e]
