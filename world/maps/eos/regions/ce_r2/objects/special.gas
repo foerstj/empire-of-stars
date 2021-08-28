@@ -3441,6 +3441,40 @@
 	  p position = -1.83287,-2,17.9563,0x2132fd48;
 	}
 }
+[t:trigger_generic,n:0x046000e5]
+{
+	[common]
+	{
+		dev_instance_text = "activate reveals";
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_activate",0x046004F1,0f,"default","every",0), delay(0.1);
+				action* = send_world_message("we_req_activate",0x04600520,0f,"default","every",0), delay(0.2);
+				action* = send_world_message("we_req_activate",0x0460065A,0f,"default","every",0), delay(0.3);
+				action* = send_world_message("we_req_activate",0x0460065B,0f,"default","every",0), delay(0.4);
+				action* = send_world_message("we_req_activate",0x04600521,0f,"default","every",0), delay(0.5);
+				action* = send_world_message("we_req_activate",0x04600658,0f,"default","every",0), delay(0.6);
+			  b can_self_destruct = true;
+				condition* = party_member_within_bounding_box(8.000000,0.500000,1.000000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  p position = -0.523884,0,1.83267,0xb82338a9;
+	}
+}
 [t:trigger_snd_msg_activate,n:0x04600790]
 {
 	[common]
