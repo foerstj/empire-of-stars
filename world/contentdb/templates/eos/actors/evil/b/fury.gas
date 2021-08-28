@@ -89,13 +89,10 @@
 		selected_active_location = il_active_primary_spell;
 		[other]
 		{
-			il_active_primary_spell= dsx_spell_fury_zap_1;
-			il_spell_2 = dsx_spell_fury_zap_2;
-			il_spell_3 = dsx_spell_fury_zap_3;
-			il_spell_4 = dsx_spell_fury_slam;
-			il_spell_5 = dsx_spell_fury_spin;
-			il_spell_6 = dsx_spell_fury_gas;
-			il_spell_7 = dsx_spell_fury_spit;
+			il_active_primary_spell = dsx_spell_fury_slam;
+			il_spell_2 = dsx_spell_fury_spin;
+			il_spell_3 = dsx_spell_fury_gas;
+			il_spell_4 = dsx_spell_fury_spit;
 		}		
 	}
 	[mind]
@@ -103,8 +100,8 @@
 		jat_cast 			= world\ai\jobs\common\job_cast.skrit
 			?rand_spell		= true
 			&check_range	= true
-			&spell_chances	= "0.15, 				0.14, 				 0.14, 				 0.15, 				  0.14, 				0.14,             	  0.14"
-			&spells			= "dsx_spell_fury_slam, dsx_spell_fury_spin, dsx_spell_fury_gas, dsx_spell_fury_spit, dsx_spell_fury_zap_1, dsx_spell_fury_zap_2, dsx_spell_fury_zap_3";
+			&spell_chances	= "0.25, 				0.25, 				 0.25, 				 0.25"
+			&spells			= "dsx_spell_fury_slam, dsx_spell_fury_spin, dsx_spell_fury_gas, dsx_spell_fury_spit";
 
 		on_engaged_lost_consciousness_abort_attack = true;
 	}
