@@ -651,7 +651,7 @@
 	  p position = 5.07715,-3.89401,-11.6095,0x44986822;
 	}
 }
-[t:statue_csl_broken_03,n:0x046000c5]
+[t:monument_cav_04,n:0x046000c5]
 {
 	[aspect]
 	{
@@ -660,7 +660,7 @@
 	[placement]
 	{
 	  q orientation = 0,0.515038,0,0.857167;
-	  p position = 8.98756,-4.00001,-16.8448,0x44986822;
+	  p position = 9.40677,-4.00001,-18.6159,0x44986822;
 	}
 }
 [t:torch_csl_sconce,n:0x04600292]
@@ -2608,27 +2608,29 @@
 	  p position = -14.9791,-2.57547,3.29947,0xcf8307f4;
 	}
 }
-[t:statue_cav_02,n:0x046001d4]
+[t:monument_cav_03,n:0x046001d4]
 {
 	[aspect]
 	{
 	  b interest_only = true;
-	  f scale_multiplier = 2;
+	  f scale_multiplier = 0.5;
 	}
 	[placement]
 	{
+	  q orientation = 0,0.707107,0,0.707107;
 	  p position = 3.0791,-2.99999,-15.4895,0xcf8307f4;
 	}
 }
-[t:statue_cav_02,n:0x046001d6]
+[t:monument_cav_03,n:0x046001d6]
 {
 	[aspect]
 	{
 	  b interest_only = true;
-	  f scale_multiplier = 2;
+	  f scale_multiplier = 0.5;
 	}
 	[placement]
 	{
+	  q orientation = 0,0.707107,0,0.707107;
 	  p position = -10.9901,-3,-15.4578,0xcf8307f4;
 	}
 }
@@ -2655,7 +2657,7 @@
 	  p position = 14.5363,-4,-9.38448,0xcf8307f4;
 	}
 }
-[t:statue_csl_broken_03,n:0x046001dc]
+[t:monument_cav_04,n:0x046001dc]
 {
 	[aspect]
 	{
@@ -2752,7 +2754,7 @@
 	  p position = 3.54965,-4,16.9686,0x7778ec6c;
 	}
 }
-[t:statue_cav_01,n:0x04600197]
+[t:monument_cav_02,n:0x04600197]
 {
 	[aspect]
 	{
@@ -2760,11 +2762,11 @@
 	}
 	[placement]
 	{
-	  q orientation = 0,0.707107,0,0.707107;
+	  q orientation = 0,1,0,-5.96046e-008;
 	  p position = -10.3217,-4,8.47515,0x7778ec6c;
 	}
 }
-[t:statue_cav_01,n:0x046001cc]
+[t:monument_cav_02,n:0x046001cc]
 {
 	[aspect]
 	{
@@ -2772,7 +2774,7 @@
 	}
 	[placement]
 	{
-	  q orientation = 0,-0.707107,0,0.707107;
+	  q orientation = 0,5.96046e-008,0,1;
 	  p position = 10.3777,-4,8.47972,0x7778ec6c;
 	}
 }
@@ -2848,7 +2850,7 @@
 	  p position = -0.0226498,-4,0.451314,0xa194d7a4;
 	}
 }
-[t:statue_csl_02,n:0x046001cf]
+[t:monument_cav_02,n:0x046001cf]
 {
 	[aspect]
 	{
@@ -2856,7 +2858,7 @@
 	}
 	[placement]
 	{
-	  q orientation = 0,0.92388,0,0.382683;
+	  q orientation = 0,0.92388,0,-0.382684;
 	  p position = -13.3773,-3.4,1.03604,0xa194d7a4;
 	}
 }
@@ -2924,7 +2926,7 @@
 	  p position = 3.55602,-3.09287,6.49241,0xa194d7a4;
 	}
 }
-[t:statue_csl_broken_02,n:0x046001ff]
+[t:monument_cav_03,n:0x046001ff]
 {
 	[aspect]
 	{
@@ -3508,7 +3510,7 @@
 	  p position = -14.5352,-3,4.7679,0xfc81882e;
 	}
 }
-[t:statue_csl_02,n:0x046000d8]
+[t:monument_cav_02,n:0x046000d8]
 {
 	[aspect]
 	{
@@ -4887,7 +4889,7 @@
 	  p position = 0.145584,-1.95309,-5.26328,0xc970269c;
 	}
 }
-[t:statue_cav_01,n:0x04600192]
+[t:monument_cav_02,n:0x04600192]
 {
 	[aspect]
 	{
@@ -4896,10 +4898,11 @@
 	}
 	[placement]
 	{
+	  q orientation = 0,0.707107,0,0.707107;
 	  p position = 7.92998,-3,-3.52482,0xc970269c;
 	}
 }
-[t:statue_cav_01,n:0x04600196]
+[t:monument_cav_02,n:0x04600196]
 {
 	[aspect]
 	{
@@ -4908,7 +4911,8 @@
 	}
 	[placement]
 	{
-	  p position = -8.0322,-3,-3.48023,0xc970269c;
+	  q orientation = 0,0.707107,0,0.707107;
+	  p position = -8.03221,-14,-11.4802,0xc67acfde;
 	}
 }
 [t:bench_csl_01,n:0x046001dd]
@@ -5167,17 +5171,27 @@
 	  p position = -10.7215,0,-12.0769,0xe4d4b556;
 	}
 }
-[t:statue_csl_02,n:0x0460036f]
+[t:monument_cav_02,n:0x0460036f]
 {
+	[aspect]
+	{
+	  f scale_multiplier = 0.5;
+	}
 	[placement]
 	{
+	  q orientation = 0,0.707107,0,0.707107;
 	  p position = -12.1828,0.981293,-22.4067,0xe4d4b556;
 	}
 }
-[t:statue_csl_02,n:0x04600370]
+[t:monument_cav_02,n:0x04600370]
 {
+	[aspect]
+	{
+	  f scale_multiplier = 0.5;
+	}
 	[placement]
 	{
+	  q orientation = 0,0.707107,0,0.707107;
 	  p position = 11.9857,0.981293,-22.3654,0xe4d4b556;
 	}
 }
@@ -5517,7 +5531,7 @@
 	  p position = -7.17007,-0.658651,-0.47773,0xe32d01f5;
 	}
 }
-[t:statue_csl_01,n:0x04600202]
+[t:monument_cav_04,n:0x04600202]
 {
 	[aspect]
 	{
@@ -5715,7 +5729,7 @@
 	  p position = 3.83975,-1.41968,-6.9293,0x6b0fb6f3;
 	}
 }
-[t:statue_csl_broken_03,n:0x04600212]
+[t:monument_cav_04,n:0x04600212]
 {
 	[aspect]
 	{
@@ -5723,8 +5737,8 @@
 	}
 	[placement]
 	{
-	  q orientation = 0,0.382683,0,0.92388;
-	  p position = 6.05396,-2,-0.87904,0x6b0fb6f3;
+	  q orientation = 0,-5.96046e-007,0,1;
+	  p position = 6.50879,-2,0.603119,0x6b0fb6f3;
 	}
 }
 [t:candlestand_csl_02,n:0x04600230]
