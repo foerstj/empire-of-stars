@@ -1,0 +1,62 @@
+[t:template,n:chest_cav_02_fd_r1]
+{
+	category_name = "fd_r1";
+	doc = "1W_chest_cav_02_fd_r1";
+	specializes = base_chest;
+	[aspect]
+	{
+		model = m_i_glb_chest-03;
+		[textures]
+		{
+			0 = b_i_csl_chest-skull;
+		}
+	}
+	[attack]
+	{
+		damage_max = 127;
+		damage_min = 85;
+	}
+	[inventory]
+	{
+		[pcontent]
+		{
+			[all*]
+			{
+				[gold*]
+				{
+					chance = 0.4;
+					max = 12735;
+					min = 5117;
+					piles = 4 - 6;
+				}
+				[oneof*]
+				{
+					chance = 0.6;
+					il_main = #weapon/25-90;
+					il_main = #armor/35-300;
+					il_main = #*/25-90;
+					max = 2;
+					min = 1;
+				}
+				[oneof*]
+				{
+					chance = 0.004;
+					il_main = #weapon/-rare(1)/88-107;
+					il_main = #armor/-rare(1)/300-328;
+					il_main = #*/-rare(1)/88-107;
+				}
+				[oneof*]
+				{
+					il_main = #weapon/-unique(2)/88-107;
+					il_main = #armor/-unique(2)/300-328;
+					il_main = #*/-unique(2)/88-107;
+				}
+			}
+		}
+	}
+	[trapped]
+	{
+		trap = trp_generator_fireball_explosive_chest;
+		fire_event = WE_REQ_USE;
+	}
+}
