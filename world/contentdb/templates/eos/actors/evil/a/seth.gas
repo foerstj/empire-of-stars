@@ -1,8 +1,134 @@
-[t:template,n:seck_grunt_reveal_act]
+// Seck Grunt with stats of Water Lunger
+[t:template,n:seth_grunt_base]
 {
 	category_name = "1W_evil_a";
-	doc = "seck grunt reveal";
-	specializes = seck_grunt_base;
+	doc = "Seth Grunt";
+	specializes = base_seck;
+
+    [aspect]
+    {
+		model = m_c_eam_sg_pos_1;
+		[textures] { 0=b_c_eam_sg; }
+    }
+	[common]
+	{
+		screen_name="Seth Grunt";
+	}
+
+	[actor]
+	{
+		[skills]
+		{
+			strength =  15, 0;
+			intelligence =  7, 0;
+			dexterity =  16, 0;
+            melee =  31,  0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 10600;
+		life = 640;
+        max_life = 640;
+        mana = 26;
+        max_mana = 26;
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 145;
+		damage_min = 125;
+	}
+	[defend] { defense=360; }
+
+   	[inventory]
+	{
+		selected_active_location = IL_ACTIVE_MELEE_WEAPON;
+		[pcontent]
+		{
+			[oneof*]
+			{
+				es_weapon_hand = sd_un_seth_1h_avg;
+			}
+
+			[oneof*]
+			{
+				[oneof*]
+				{
+					chance = 0.2;
+					il_main = #*/55-103;
+					il_main = #armor/48-235;
+                	il_main = #nmagic/23-38;
+                	il_main = #cmagic/25-38;
+				}
+				[oneof*]
+				{
+	            	chance = 0.004;
+	                il_main = #weapon/-rare(1)/96-122;
+	                il_main = #armor/-rare(1)/199-262;
+                    il_main = #*/-rare(1)/96-122;
+                }
+				[oneof*]
+				{
+                	chance = 0.002;
+	                il_main = #weapon/-unique(2)/96-122;
+	                il_main = #armor/-unique(2)/199-262;
+                    il_main = #*/-unique(2)/96-122;
+	            }
+			}
+		}
+	}
+}
+[t:template,n:seth_grunt]
+{
+	category_name = "1W_evil_a";
+	doc = "seth grunt";
+	specializes = seth_grunt_base;
+}
+[t:template,n:seth_grunt_reveal]
+{
+	category_name = "1W_evil_a";
+	doc = "seth grunt reveal";
+	specializes = seth_grunt_base;
+
+	[mind]
+	{
+		jat_startup = world\ai\jobs\common\job_startup_reveal.skrit
+			?invisible = true
+			&vis_delay = 1.0;
+		sight_origin_height = 1;
+		actor_auto_fidgets = false;
+	}
+	[common]
+	{
+		[template_triggers]
+		{
+			[*]
+			{
+				single_shot = true;
+				action* = call_sfx_script("seck_reveal");
+				condition* = receive_world_message("we_enemy_spotted");
+			}
+			[*]
+			{
+				action* = call_sfx_script("seck_warrior_flames");
+				action* = call_sfx_script("seck_swap");
+				condition* = receive_world_message("we_killed");
+			}
+			[*]
+			{
+				action* = call_sfx_script("seck_explosion");
+				condition* = receive_world_message("we_anim_die");
+			}
+		}
+	}
+}
+[t:template,n:seth_grunt_reveal_act]
+{
+	category_name = "1W_evil_a";
+	doc = "seth grunt reveal";
+	specializes = seth_grunt_base;
+
 	[mind]
 	{
 		jat_startup = world\ai\jobs\common\job_startup_reveal.skrit
@@ -12,7 +138,6 @@
 		sight_origin_height = 1;
 		actor_auto_fidgets = false;
 	}
-
 	[common]
 	{
 		[template_triggers]
@@ -37,11 +162,143 @@
 		}
 	}
 }
-[t:template,n:seck_archer_reveal_act]
+
+// Seck Archer with stats of Water Slinger
+[t:template,n:seth_archer_base]
 {
 	category_name = "1W_evil_a";
-	doc = "seck archer reveal";
-	specializes = seck_archer_base;
+	doc = "Seth Archer";
+	specializes = base_seck;
+
+    [aspect]
+    {
+		model = m_c_eam_sa_pos_1;
+		[textures] { 0=b_c_eam_sa; }
+    }
+	[common] 
+	{ 
+		screen_name="Seth Archer";
+	}
+	[mind]
+	{
+		jat_fidget	= world\ai\jobs\common\job_fidget.skrit
+			?still	= false;
+	}
+
+	[actor]
+	{
+		[skills]
+		{
+			strength =  	13, 0;
+			intelligence =  7, 0;
+			dexterity =  	16, 0;
+            ranged =  		31,  0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 7000;
+		life = 130;
+        max_life = 130;
+        mana = 26;
+        max_mana = 26;
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 108;
+		damage_min = 104;
+	}
+	[defend] { defense=330; }
+
+	[inventory]
+	{
+		selected_active_location = IL_ACTIVE_RANGED_WEAPON;
+		[pcontent]
+		{
+			[oneof*]
+			{
+				es_shield_hand = bw_un_seth_avg;
+			}
+
+			[oneof*]
+			{
+				[oneof*]
+				{
+					chance = 0.2;
+					il_main = #*/55-103;
+					il_main = #armor/48-235;
+                	il_main = #nmagic/23-38;
+                	il_main = #cmagic/25-38;
+				}
+				[oneof*]
+				{
+	            	chance = 0.004;
+	                il_main = #weapon/-rare(1)/89-112;
+	                il_main = #armor/-rare(1)/201-262;
+                    il_main = #*/-rare(1)/89-112;
+                }
+				[oneof*]
+				{
+                	chance = 0.002;
+	                il_main = #weapon/-unique(2)/89-112;
+	                il_main = #armor/-unique(2)/201-262;
+                    il_main = #*/-unique(2)/89-112;
+	            }
+        	}
+		}
+	}
+}
+[t:template,n:seth_archer]
+{
+	category_name = "1W_evil_a";
+	doc = "seth archer";
+	specializes = seth_archer_base;
+}
+[t:template,n:seth_archer_reveal]
+{
+	category_name = "1W_evil_a";
+	doc = "seth archer reveal";
+	specializes = seth_archer_base;
+
+	[mind]
+	{
+		jat_startup = world\ai\jobs\common\job_startup_reveal.skrit
+			?invisible = true
+			&vis_delay = 1.0;
+		sight_origin_height = 1;
+		actor_auto_fidgets = false;
+	}
+	[common]
+	{
+		[template_triggers]
+		{
+			[*]
+			{
+				single_shot = true;
+				action* = call_sfx_script("seck_reveal");
+				condition* = receive_world_message("we_enemy_spotted");
+			}
+			[*]
+			{
+				action* = call_sfx_script("seck_warrior_flames");
+				action* = call_sfx_script("seck_swap");
+				condition* = receive_world_message("we_killed");
+			}
+			[*]
+			{
+				action* = call_sfx_script("seck_explosion");
+				condition* = receive_world_message("we_anim_die");
+			}
+		}
+	}
+}
+[t:template,n:seth_archer_reveal_act]
+{
+	category_name = "1W_evil_a";
+	doc = "seth archer reveal";
+	specializes = seth_archer_base;
+
 	[mind]
 	{
 		jat_startup = world\ai\jobs\common\job_startup_reveal.skrit
@@ -51,7 +308,6 @@
 		sight_origin_height = 1;
 		actor_auto_fidgets = false;
 	}
-
 	[common]
 	{
 		[template_triggers]
@@ -76,11 +332,231 @@
 		}
 	}
 }
-[t:template,n:seck_mage_reveal_act]
+
+// Seck Mage with stats of Wraith Mage
+[t:template,n:seth_mage_base]
 {
 	category_name = "1W_evil_a";
-	doc = "seck mage reveal";
-	specializes = seck_mage_base;
+	doc = "Seth Mage";
+	specializes = base_seck;
+    
+    [actor]
+    {
+        drops_spellbook = false;
+    }
+    [aspect]
+    {
+		model = m_c_eam_sm_pos_1;
+		[textures] { 0=b_c_eam_sm; }
+    }
+	[body]
+	{
+		[chore_dictionary]
+		{
+			chore_prefix = a_c_eam_sm_fs;
+			[chore_attack]
+			{
+				chore_stances = 5;
+				skrit = select_attack;
+				[anim_files]
+				{
+					0000 = at;
+					0001 = at-02;
+					qffg = dff;
+				}
+			}
+			[chore_default]
+			{
+				chore_stances = 5;
+				skrit = infinite_loop;
+				[anim_files] { 00=dfs; }
+			}
+			[chore_die]
+			{
+				chore_stances = 5;
+				skrit = select_transition;
+				[anim_files] { 00=di; }
+			}
+			[chore_fidget]
+			{
+				chore_stances = 5;
+				skrit = select_fidget;
+				[anim_files] { 00=dff; }
+			}
+			[chore_walk]
+			{
+				chore_stances = 5;
+				skrit = select_walk;
+				[anim_files] { 00=rl; }
+			}
+			[chore_misc]
+			{
+				chore_stances = ignore;
+				skrit = select_transition;
+				[anim_files]
+				{
+					slep = a_c_eam_sm_fs5_dfs;
+					wake = a_c_eam_sm_fs5_ds;
+				}
+			}
+			[chore_magic]
+			{
+				chore_stances = 5;
+				skrit = select_attack;
+				[anim_files] { 00=mg; }
+			}
+		}
+		[weapon_scales]
+		{
+			as_single_melee	= 1.3, 1.3, 1.3;
+		}
+	}
+	[common]
+	{
+		screen_name="Seth Mage";
+	}
+	[mind]
+	{
+        actor_weapon_preference			= WP_MAGIC;
+		actor_auto_switches_to_magic	= true;
+		actor_auto_switches_to_karate	= false;
+		actor_auto_switches_to_melee	= true;
+
+		melee_engage_range = 8;
+		personal_space_range = 0.7;
+		ranged_engage_range = 14.0;
+		sight_range = 14.0;
+
+		jat_fidget	= world\ai\jobs\common\job_fidget.skrit
+			?social	= 0.45
+			&still	= false;
+
+	}
+
+	[actor]
+	{
+		[skills]
+		{
+			strength = 		17, 0;
+			intelligence = 	12, 0;
+			dexterity = 	9, 0;
+   			combat_magic =  30,  0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 10515;
+		life = 450;
+		max_life = 450;
+		mana = 18;
+		max_mana = 18;
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 140;
+		damage_min = 107;
+	}
+   	[defend] { defense=400; }
+
+   	[inventory]
+	{
+		selected_active_location = il_active_primary_spell;
+		[other]
+		{
+			il_active_primary_spell = spell_wraith_hands;
+		}
+		[pcontent]
+		{
+			[all*]
+			{
+				es_weapon_hand = st_un_seth_mage;
+			}
+
+			[oneof*]
+			{
+				[oneof*]
+				{
+					chance = 0.35;
+					il_main = #*/78-105;
+                    il_main = #armor/51-253;
+                    il_main = #body,ro/151-253;
+	                il_main = #spell/26-45;
+				}
+				[oneof*]
+				{
+	            	chance = 0.004;
+	                il_main = #weapon/-rare(1)/87-115;
+	                il_main = #armor/-rare(1)/248-277;
+                    il_main = #*/-rare(1)/87-115;
+                }
+				[oneof*]
+				{
+                	chance = 0.002;
+	                il_main = #weapon/-unique(2)/87-115;
+	                il_main = #armor/-unique(2)/248-277;
+                    il_main = #*/-unique(2)/87-115;
+	            }
+				[gold*]
+				{
+					chance = 0.125;
+					max = 13001;
+					min = 12200;
+				}
+			}
+		}
+	}
+}
+[t:template,n:seth_mage]
+{
+	category_name = "1W_evil_a";
+	doc = "seth mage";
+	specializes = seth_mage_base;
+}
+[t:template,n:seth_mage_reveal]
+{
+	category_name = "1W_evil_a";
+	doc = "seth mage reveal";
+	specializes = seth_mage_base;
+
+	[mind]
+	{
+		jat_startup = world\ai\jobs\common\job_startup_reveal.skrit
+			?invisible = true
+			&vis_delay = 1.0;
+		sight_origin_height = 1;
+		actor_auto_fidgets = false;
+	}
+	[common]
+	{
+		[template_triggers]
+		{
+			[*]
+			{
+				single_shot = true;
+				action* = call_sfx_script("seck_reveal");
+				condition* = receive_world_message("we_enemy_spotted");
+			}
+			[*]
+			{
+				action* = call_sfx_script("seck_warrior_flames");
+				action* = call_sfx_script("seck_swap");
+				condition* = receive_world_message("we_killed");
+			}
+			[*]
+			{
+				action* = call_sfx_script("seck_explosion");
+				condition* = receive_world_message("we_anim_die");
+			}
+		}
+	}
+}
+[t:template,n:seth_mage_reveal_act]
+{
+	category_name = "1W_evil_a";
+	doc = "seth mage reveal";
+	specializes = seth_mage_base;
+
 	[mind]
 	{
 		jat_startup = world\ai\jobs\common\job_startup_reveal.skrit
@@ -90,7 +566,6 @@
 		sight_origin_height = 1;
 		actor_auto_fidgets = false;
 	}
-
 	[common]
 	{
 		[template_triggers]

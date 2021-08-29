@@ -1,0 +1,107 @@
+// Seck Sword with stats of Steel (used by skeleton mercenary)
+[t:template,n:sd_un_seth_1h_avg]
+{
+	doc = "Seth Sword";
+	specializes = base_sword;
+
+	[aspect]
+	{
+		model = m_w_swd_049;
+	}
+	[gui]
+	{
+		active_icon = b_gui_ig_i_ic_swd_005;
+		inventory_height = 4;
+		inventory_icon = b_gui_ig_i_w_swd_082;
+		inventory_width = 1;
+	}
+
+	[common]
+	{
+		is_pcontent_allowed = false;
+		screen_name = "Seth Sword";
+	}
+
+	[attack]
+	{
+	  f damage_max = 59.000000;
+	  f damage_min = 40.000000;
+	}
+	[gui]
+	{
+		equip_requirements = strength:20;
+	}
+}
+
+// Seck Bow with stats of Long Backed Bow (used by skeleton ranger)
+[t:template,n:bw_un_seth_avg]
+{
+	category_name = "weapon";
+	doc = "Seth Bow";
+	specializes = base_bow;
+
+	[aspect]
+	{
+		model = m_w_bow_035;
+	}
+	[gui]
+	{
+		active_icon = b_gui_ig_i_ic_bow_004;
+		inventory_height = 4;
+		inventory_icon = b_gui_ig_i_w_bow_053;
+		inventory_width = 1;
+	}
+
+	[common]
+	{
+		is_pcontent_allowed = false;
+		screen_name = "Seth Bow";
+	}
+
+	[attack]
+	{
+		attack_range = 13;
+	  f damage_max = 110.000000;
+	  f damage_min = 94.000000;
+		reload_delay = 0.3;
+	}
+	[gui]
+	{
+		equip_requirements = strength:16,dexterity:26;
+	}
+}
+
+// Seck Mage Staff with stats of Bladed Staff
+[t:template,n:st_un_seth_mage]
+{
+	doc = "Seth Mage Staff";
+	specializes = base_staff;
+
+	[aspect]
+	{
+		model = m_w_stf_036;
+	}
+	[gui]
+	{
+		active_icon = b_gui_ig_i_ic_stf_004;
+		inventory_height = 4;
+		inventory_icon = b_gui_ig_i_w_stf_076;
+		inventory_width = 1;
+	}
+
+	[common]
+	{
+		is_pcontent_allowed = false;
+		screen_name = "Seth Mage Staff";
+	}
+
+	[attack]
+	{
+	  f damage_max = 73.000000;
+	  f damage_min = 49.000000;
+	}
+	[gui]
+	{
+		equip_requirements = intelligence:23;
+	}
+}
