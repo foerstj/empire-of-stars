@@ -590,3 +590,145 @@
 		}
 	}
 }
+
+// Seth Mage with stats of Dark Wraith Mage & other texture
+[t:template,n:seth_mage_boss_01_base]
+{
+	category_name = "1W_evil_a";
+	doc = "seth mage boss";
+	specializes = seth_mage_base;
+    
+    [aspect]
+    {
+		[textures] { 0=b_c_eam_sm-02; }
+    }
+    [common]
+    {
+        screen_name = "Seth High Mage";
+		[template_triggers]
+		{
+			[*]
+			{
+				single_shot = true;
+				no_trig_bits = true;
+				condition* = receive_world_message("we_enemy_spotted");
+				action* = call_sfx_script("unique_light_red(sgx)");
+			}
+		}
+    }
+
+	[actor]
+	{
+		[skills]
+		{
+			strength = 		17, 0;
+			intelligence = 	12, 0;
+			dexterity = 	12, 0;
+   			combat_magic =  35,  0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 20999;
+		life = 667;
+		max_life = 667;
+		mana = 18;
+		max_mana = 18;
+    }
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 150;
+		damage_min = 130;
+	}
+   	[defend] { defense=582; }
+
+   	[inventory]
+	{
+    	selected_active_location = il_active_primary_spell;
+		[other] { il_active_primary_spell=spell_wraith_hands; }
+
+		[pcontent]
+		{
+			[all*]
+			{
+				[oneof*]
+				{
+					il_main = #*/105-125;
+                    il_main = #armor/260-310;
+                    il_main = #body,ro/251-323;
+	                il_main = #spell/46-50;
+				}
+
+				[oneof*]
+				{
+	            	chance = 0.004;
+	                il_main = #weapon/-rare(1)/111-133;
+	                il_main = #armor/-rare(1)/290-320;
+                    il_main = #*/-rare(1)/111-133;
+                }
+				[oneof*]
+				{
+                	chance = 0.002;
+	                il_main = #weapon/-unique(2)/111-133;
+	                il_main = #armor/-unique(2)/290-320;
+                    il_main = #*/-unique(2)/111-133;
+	            }
+				[gold*]
+				{
+					max = 26002;
+					min = 20100;
+					min_pile = 2210;
+					piles = 3 - 5;
+				}
+			}
+		}
+	}
+}
+[t:template,n:seth_mage_boss_01_reveal]
+{
+	category_name = "1W_evil_a";
+	doc = "seth mage boss reveal";
+	specializes = seth_mage_boss_01_base;
+
+	[mind]
+	{
+		jat_startup = world\ai\jobs\common\job_startup_reveal.skrit
+			?invisible = true
+			&vis_delay = 1.0;
+		sight_origin_height = 1;
+		actor_auto_fidgets = false;
+	}
+	[common]
+	{
+		[template_triggers]
+		{
+            // base
+			[*]
+			{
+				single_shot = true;
+				no_trig_bits = true;
+				condition* = receive_world_message("we_enemy_spotted");
+				action* = call_sfx_script("unique_light_red(sgx)");
+			}
+            // reveal
+			[*]
+			{
+				single_shot = true;
+				action* = call_sfx_script("seck_reveal");
+				condition* = receive_world_message("we_enemy_spotted");
+			}
+			[*]
+			{
+				action* = call_sfx_script("seck_warrior_flames");
+				action* = call_sfx_script("seck_swap");
+				condition* = receive_world_message("we_killed");
+			}
+			[*]
+			{
+				action* = call_sfx_script("seck_explosion");
+				condition* = receive_world_message("we_anim_die");
+			}
+		}
+	}
+}

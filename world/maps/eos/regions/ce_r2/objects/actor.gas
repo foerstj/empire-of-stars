@@ -1682,7 +1682,7 @@
 	  p position = -0.487778,-4,0.0233233,0xc970269c;
 	}
 }
-[t:seth_mage_reveal,n:0x04600429]
+[t:seth_mage_boss_01_reveal,n:0x04600429]
 {
 	[placement]
 	{
@@ -1929,8 +1929,9 @@
 			[*]
 			{
 				action* = send_world_message("we_req_activate",0x046000E5,0f,"default","every",0), doc("reveal bodyguards");
+				action* = call_sfx_script("unique_light_red(sgx)","","");
 			  b can_self_destruct = true;
-				condition* = receive_world_message("we_enemy_spotted",0,"on_every_message");
+				condition* = receive_world_message("we_enemy_spotted",0,"on_first_message");
 			  f delay = 0.000000;
 			  b flip_flop = false;
 			  b multi_player = true;
@@ -1938,7 +1939,7 @@
 				occupants_group = ;
 			  f reset_duration = 0.000000;
 			  b single_player = true;
-			  b single_shot = false;
+			  b single_shot = true;
 			  b start_active = true;
 			}
 			[*]
