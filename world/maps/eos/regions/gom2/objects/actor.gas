@@ -2,6 +2,7 @@
 {
 	[common]
 	{
+		screen_name = "Seth Queen Mother";
 		[instance_triggers]
 		{
 			[*]
@@ -22,6 +23,7 @@
 			[*]
 			{
 				action* = send_world_message("we_req_activate",0x00200240,0f,"default","every",0), delay(2), doc("fight mood");
+				action* = change_quest_state("sirius_queen","active",0);
 			  b can_self_destruct = true;
 				condition* = receive_world_message("we_req_talk_end",0,"on_first_message"), doc("[*converted to one-shot*]");
 			  f delay = 0.000000;
@@ -90,6 +92,7 @@
 				action* = send_world_message("we_req_activate",0x00200031,0f,"default","every",0), delay(0.25);
 				action* = send_world_message("we_req_activate",0x0020021A,0f,"default","",0), delay(0.5);
 				action* = send_world_message("we_req_activate",0x0020004A,0f,"default","every",0);
+				action* = change_quest_state("sirius_queen","completed",0);
 			  b can_self_destruct = true;
 				condition* = receive_world_message("we_killed",0,"on_every_message");
 			  f delay = 0.000000;
