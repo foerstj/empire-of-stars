@@ -1,5 +1,26 @@
 [t:starstone_aranna,n:0x046000bb]
 {
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = change_quest_state("find_way_home","active",3);
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_picked_up",0,"on_every_message");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
 	[placement]
 	{
 	  q orientation = 1.35087e-007,-0.382684,-5.59549e-008,0.92388;
