@@ -55,7 +55,7 @@
 		{
 			[*]
 			{
-				action* = mood_change("map_world_dc_r1_1");
+				action* = mood_change("eos_aranna_redplanet_1");
 			  b can_self_destruct = true;
 				condition* = party_member_within_bounding_box(3.000000,1.000000,3.000000,"on_every_enter");
 			  f delay = 0.000000;
@@ -171,7 +171,7 @@
 		{
 			[*]
 			{
-				action* = mood_change("map_world_dc_r1_1");
+				action* = mood_change("eos_aranna_redplanet_1");
 			  b can_self_destruct = true;
 				condition* = party_member_within_bounding_box(2.000000,1.000000,10.000000,"on_every_enter");
 			  f delay = 0.000000;
@@ -229,7 +229,7 @@
 		{
 			[*]
 			{
-				action* = mood_change("map_world_dc_r1_1");
+				action* = mood_change("eos_aranna_redplanet_1");
 			  b can_self_destruct = true;
 				condition* = party_member_within_bounding_box(3.000000,1.000000,3.000000,"on_every_enter");
 			  f delay = 0.000000;
@@ -247,6 +247,34 @@
 	[placement]
 	{
 	  p position = -0.118332,0,-0.845295,0x4e322011;
+	}
+}
+[t:trigger_change_mood_box,n:0x00a000aa]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = mood_change("eos_aranna_redplanet_1");
+			  b can_self_destruct = true;
+				condition* = party_member_within_bounding_box(2.000000,1.000000,2.000000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  p position = -0.98497,0.0834033,2.21816,0xd251cb38;
 	}
 }
 [t:use_point,n:0x00a007ed]
@@ -449,7 +477,7 @@
 		{
 			[*]
 			{
-				action* = mood_change("map_world_dc_r1_1");
+				action* = mood_change("eos_aranna_redplanet_1");
 			  b can_self_destruct = true;
 				condition* = party_member_within_bounding_box(3.000000,1.000000,1.000000,"on_every_enter");
 			  f delay = 0.000000;
@@ -771,7 +799,7 @@
 		{
 			[*]
 			{
-				action* = mood_change("map_world_dc_r1_1");
+				action* = mood_change("eos_aranna_redplanet_1");
 			  b can_self_destruct = true;
 				condition* = party_member_within_bounding_box(4.000000,2.000000,0.500000,"on_every_enter");
 			  f delay = 0.000000;
@@ -1960,7 +1988,7 @@
 	}
 	[placement]
 	{
-	  p position = -8.99067,-17.45,-4.65247,0x50945094;
+	  p position = -8.99066,-17.5,-4.65246,0x50945094;
 	}
 }
 [t:trigger_fade_node_box,n:0x00a0001b]

@@ -25,6 +25,7 @@
 		standard_track = "s_m_BesiegedTown_02";
 	}
 }
+
 [mood_setting*]
 {
   b interior = false;
@@ -379,5 +380,38 @@
 	{
 	  f wind_direction = 0.000000;
 	  f wind_velocity = 1.000000;
+	}
+}
+
+[mood_setting*]
+{
+	mood_name				= eos_aranna_redplanet_1;
+	transition_time			= 5.0f;
+	interior				= false;
+
+	[fog]
+	{
+		fog_near_dist		= 35.0f;
+		fog_far_dist		= 55.0f;
+		fog_lowdetail_near_dist		= 35.0f;
+		fog_lowdetail_far_dist		= 50.0f;
+// We had a lot of thoughts on the appropriate fog color for this region, including (but not limited to...)
+//0xFFa89090; //0xFFa89070; //(purple/grape) 0xFFa09070; //(sand/tan) 0xff9fabc5;  //(blue) used to be brighter;  ffbfcbe5 was old value*/
+		fog_color			= 0xff9fabc5; // this color was chosen by our lead artist, ending all debate  ;) 0xFFb09070
+		fog_density			= 0.5f;
+	}
+
+	[wind]
+	{
+		wind_velocity		= 1.5f;
+		wind_direction		= 4.7f;
+	}
+
+	[music]
+	{
+		ambient_track		= "";
+		standard_repeat_delay	= 0.0f;
+		standard_track		= "s_m_DesertCanyons_03";
+		room_type			= rt_arena;
 	}
 }
