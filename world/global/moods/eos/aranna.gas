@@ -1,8 +1,15 @@
 [mood_setting*]
 {
-	interior = false;
 	mood_name = eos_aranna_teleport;
 	transition_time = 20.0f;
+	interior = false;
+
+	[frustum]
+	{
+		frustum_height = 60.0f;
+		frustum_width = 45.0f;
+	}
+
 	[fog]
 	{
 		fog_color = 0xff757585;
@@ -12,11 +19,7 @@
 		fog_lowdetail_near_dist = 35.0f;
 		fog_near_dist = 35.0f;
 	}
-	[frustum]
-	{
-		frustum_height = 60.0f;
-		frustum_width = 45.0f;
-	}
+
 	[music]
 	{
 		ambient_track = "";
@@ -28,9 +31,31 @@
 
 [mood_setting*]
 {
-  b interior = false;
 	mood_name = eos_aranna_moon_teleport;
   f transition_time = 20.000000;
+  b interior = false;
+
+	[frustum]
+	{
+	  f frustum_height = 60.000000;
+	  f frustum_width = 45.000000;
+	}
+	[sun]
+	{
+		00h00m:color = 0xFF000000;
+		05h00m:color = 0xFF1A1A00;
+		06h00m:color = 0xFF66330D;
+		07h00m:color = 0xFFB39A40;
+		08h00m:color = 0xFFB3B3B3;
+		10h00m:color = 0xFFF0F0FF;
+		12h00m:color = 0xFFFFFFFF;
+		19h00m:color = 0xFFB39A9A;
+		20h00m:color = 0xFF66334D;
+		21h00m:color = 0xFF330D40;
+		22h00m:color = 0xFF000000;
+		23h00m:color = 0xFF000000;
+	}
+
 	[fog]
 	{
 	  x fog_color = 0xFFE2E2E2;
@@ -40,11 +65,12 @@
 	  f fog_lowdetail_near_dist = 25.000000;
 	  f fog_near_dist = 35.000000;
 	}
-	[frustum]
+	[wind]
 	{
-	  f frustum_height = 60.000000;
-	  f frustum_width = 45.000000;
+	  f wind_direction = 0.000000;
+	  f wind_velocity = 1.000000;
 	}
+
 	[music]
 	{
 	  f ambient_intro_delay = 0.000000;
@@ -58,68 +84,34 @@
 	  f standard_repeat_delay = 10.000000;
 		standard_track = "s_m_Glacern_01";
 	}
-	[sun]
-	{
-		[00h00m]
-		{
-			color = 0xff000000;
-		}
-		[05h00m]
-		{
-			color = 0xff1a1a00;
-		}
-		[06h00m]
-		{
-			color = 0xff66330d;
-		}
-		[07h00m]
-		{
-			color = 0xffb39a40;
-		}
-		[08h00m]
-		{
-			color = 0xffb3b3b3;
-		}
-		[10h00m]
-		{
-			color = 0xfff0f0ff;
-		}
-		[12h00m]
-		{
-			color = 0xffffffff;
-		}
-		[19h00m]
-		{
-			color = 0xffb39a9a;
-		}
-		[20h00m]
-		{
-			color = 0xff66334d;
-		}
-		[21h00m]
-		{
-			color = 0xff330d40;
-		}
-		[22h00m]
-		{
-			color = 0xff000000;
-		}
-		[23h00m]
-		{
-			color = 0xff000000;
-		}
-	}
-	[wind]
-	{
-	  f wind_direction = 0.000000;
-	  f wind_velocity = 1.000000;
-	}
 }
 [mood_setting*]
 {
-  b interior = false;
 	mood_name = eos_aranna_moon_1;
   f transition_time = 10.000000;
+  b interior = false;
+
+	[frustum]
+	{
+	  f frustum_height = 60.000000;
+	  f frustum_width = 45.000000;
+	}
+	[sun]
+	{
+		00h00m:color = 0xFF000000;
+		05h00m:color = 0xFF1A1A00;
+		06h00m:color = 0xFF66330D;
+		07h00m:color = 0xFFB39A40;
+		08h00m:color = 0xFFB3B3B3;
+		10h00m:color = 0xFFF0F0FF;
+		12h00m:color = 0xFFFFFFFF;
+		19h00m:color = 0xFFB39A9A;
+		20h00m:color = 0xFF66334D;
+		21h00m:color = 0xFF330D40;
+		22h00m:color = 0xFF000000;
+		23h00m:color = 0xFF000000;
+	}
+
 	[fog]
 	{
 	  x fog_color = 0xFFE2E2E2;
@@ -129,11 +121,12 @@
 	  f fog_lowdetail_near_dist = 25.000000;
 	  f fog_near_dist = 35.000000;
 	}
-	[frustum]
+	[wind]
 	{
-	  f frustum_height = 60.000000;
-	  f frustum_width = 45.000000;
+	  f wind_direction = 0.000000;
+	  f wind_velocity = 1.000000;
 	}
+
 	[music]
 	{
 	  f ambient_intro_delay = 0.000000;
@@ -147,68 +140,34 @@
 	  f standard_repeat_delay = 10.000000;
 		standard_track = "s_m_Glacern_01";
 	}
-	[sun]
-	{
-		[00h00m]
-		{
-			color = 0xff000000;
-		}
-		[05h00m]
-		{
-			color = 0xff1a1a00;
-		}
-		[06h00m]
-		{
-			color = 0xff66330d;
-		}
-		[07h00m]
-		{
-			color = 0xffb39a40;
-		}
-		[08h00m]
-		{
-			color = 0xffb3b3b3;
-		}
-		[10h00m]
-		{
-			color = 0xfff0f0ff;
-		}
-		[12h00m]
-		{
-			color = 0xffffffff;
-		}
-		[19h00m]
-		{
-			color = 0xffb39a9a;
-		}
-		[20h00m]
-		{
-			color = 0xff66334d;
-		}
-		[21h00m]
-		{
-			color = 0xff330d40;
-		}
-		[22h00m]
-		{
-			color = 0xff000000;
-		}
-		[23h00m]
-		{
-			color = 0xff000000;
-		}
-	}
-	[wind]
-	{
-	  f wind_direction = 0.000000;
-	  f wind_velocity = 1.000000;
-	}
 }
 [mood_setting*]
 {
-  b interior = false;
 	mood_name = eos_aranna_moon_2;
   f transition_time = 10.000000;
+  b interior = false;
+
+	[frustum]
+	{
+	  f frustum_height = 60.000000;
+	  f frustum_width = 45.000000;
+	}
+	[sun]
+	{
+		00h00m:color = 0xFF000000;
+		05h00m:color = 0xFF1A1A00;
+		06h00m:color = 0xFF66330D;
+		07h00m:color = 0xFFB39A40;
+		08h00m:color = 0xFFB3B3B3;
+		10h00m:color = 0xFFF0F0FF;
+		12h00m:color = 0xFFFFFFFF;
+		19h00m:color = 0xFFB39A9A;
+		20h00m:color = 0xFF66334D;
+		21h00m:color = 0xFF330D40;
+		22h00m:color = 0xFF000000;
+		23h00m:color = 0xFF000000;
+	}
+
 	[fog]
 	{
 	  x fog_color = 0xFFE2E2E2;
@@ -218,11 +177,12 @@
 	  f fog_lowdetail_near_dist = 25.000000;
 	  f fog_near_dist = 35.000000;
 	}
-	[frustum]
+	[wind]
 	{
-	  f frustum_height = 60.000000;
-	  f frustum_width = 45.000000;
+	  f wind_direction = 0.000000;
+	  f wind_velocity = 1.000000;
 	}
+
 	[music]
 	{
 	  f ambient_intro_delay = 0.000000;
@@ -236,68 +196,34 @@
 	  f standard_repeat_delay = 10.000000;
 		standard_track = "s_m_Glacern_02";
 	}
-	[sun]
-	{
-		[00h00m]
-		{
-			color = 0xff000000;
-		}
-		[05h00m]
-		{
-			color = 0xff1a1a00;
-		}
-		[06h00m]
-		{
-			color = 0xff66330d;
-		}
-		[07h00m]
-		{
-			color = 0xffb39a40;
-		}
-		[08h00m]
-		{
-			color = 0xffb3b3b3;
-		}
-		[10h00m]
-		{
-			color = 0xfff0f0ff;
-		}
-		[12h00m]
-		{
-			color = 0xffffffff;
-		}
-		[19h00m]
-		{
-			color = 0xffb39a9a;
-		}
-		[20h00m]
-		{
-			color = 0xff66334d;
-		}
-		[21h00m]
-		{
-			color = 0xff330d40;
-		}
-		[22h00m]
-		{
-			color = 0xff000000;
-		}
-		[23h00m]
-		{
-			color = 0xff000000;
-		}
-	}
-	[wind]
-	{
-	  f wind_direction = 0.000000;
-	  f wind_velocity = 1.000000;
-	}
 }
 [mood_setting*]
 {
-  b interior = true;
 	mood_name = eos_aranna_moon_tavern;
   f transition_time = 1.000000;
+  b interior = true;
+
+	[frustum]
+	{
+	  f frustum_height = 60.000000;
+	  f frustum_width = 45.000000;
+	}
+	[sun]
+	{
+		00h00m:color = 0xFF000000;
+		05h00m:color = 0xFF1A1A00;
+		06h00m:color = 0xFF66330D;
+		07h00m:color = 0xFFB39A40;
+		08h00m:color = 0xFFB3B3B3;
+		10h00m:color = 0xFFF0F0FF;
+		12h00m:color = 0xFFFFFFFF;
+		19h00m:color = 0xFFB39A9A;
+		20h00m:color = 0xFF66334D;
+		21h00m:color = 0xFF330D40;
+		22h00m:color = 0xFF000000;
+		23h00m:color = 0xFF000000;
+	}
+
 	[fog]
 	{
 	  x fog_color = 0xFFE2E2E2;
@@ -307,11 +233,12 @@
 	  f fog_lowdetail_near_dist = 25.000000;
 	  f fog_near_dist = 35.000000;
 	}
-	[frustum]
+	[wind]
 	{
-	  f frustum_height = 60.000000;
-	  f frustum_width = 45.000000;
+	  f wind_direction = 0.000000;
+	  f wind_velocity = 1.000000;
 	}
+
 	[music]
 	{
 	  f ambient_intro_delay = 0.000000;
@@ -325,93 +252,83 @@
 	  f standard_repeat_delay = 10.000000;
 		standard_track = "s_m_Glacern_02";
 	}
-	[sun]
-	{
-		[00h00m]
-		{
-			color = 0xff000000;
-		}
-		[05h00m]
-		{
-			color = 0xff1a1a00;
-		}
-		[06h00m]
-		{
-			color = 0xff66330d;
-		}
-		[07h00m]
-		{
-			color = 0xffb39a40;
-		}
-		[08h00m]
-		{
-			color = 0xffb3b3b3;
-		}
-		[10h00m]
-		{
-			color = 0xfff0f0ff;
-		}
-		[12h00m]
-		{
-			color = 0xffffffff;
-		}
-		[19h00m]
-		{
-			color = 0xffb39a9a;
-		}
-		[20h00m]
-		{
-			color = 0xff66334d;
-		}
-		[21h00m]
-		{
-			color = 0xff330d40;
-		}
-		[22h00m]
-		{
-			color = 0xff000000;
-		}
-		[23h00m]
-		{
-			color = 0xff000000;
-		}
-	}
-	[wind]
-	{
-	  f wind_direction = 0.000000;
-	  f wind_velocity = 1.000000;
-	}
 }
 
 [mood_setting*]
 {
-	mood_name				= eos_aranna_redplanet_1;
+	mood_name = eos_aranna_redplanet_1;
+	interior = false;
+	transition_time = 5.0f;
+
+	[fog]
+	{
+	  x fog_color = 0xFFB0DDF2;
+	  f fog_density = 0.500000;
+	  f fog_near_dist = 35.000000;
+	  f fog_far_dist = 55.000000;
+	  f fog_lowdetail_near_dist = 35.000000;
+	  f fog_lowdetail_far_dist = 50.000000;
+	}
+	[wind]
+	{
+		wind_direction = 4.7f;
+		wind_velocity = 1.5f;
+	}
+
+	[music]
+	{
+		ambient_track = "";
+		room_type = rt_arena;
+		standard_repeat_delay = 0.0f;
+		standard_track = "s_m_DesertCanyons_03";
+	}
+}
+[mood_setting*]
+{
+	// This is a windless mood for the village
+	mood_name				= eos_aranna_redplanet_2;
 	transition_time			= 5.0f;
 	interior				= false;
 
 	[fog]
 	{
-		fog_near_dist		= 35.0f;
-		fog_far_dist		= 55.0f;
-		fog_lowdetail_near_dist		= 35.0f;
-		fog_lowdetail_far_dist		= 50.0f;
-// We had a lot of thoughts on the appropriate fog color for this region, including (but not limited to...)
-//0xFFa89090; //0xFFa89070; //(purple/grape) 0xFFa09070; //(sand/tan) 0xff9fabc5;  //(blue) used to be brighter;  ffbfcbe5 was old value*/
-		fog_color			= 0xff9fabc5; // this color was chosen by our lead artist, ending all debate  ;) 0xFFb09070
-		fog_density			= 0.5f;
-	}
-
-	[wind]
-	{
-		wind_velocity		= 1.5f;
-		wind_direction		= 4.7f;
+	  x fog_color = 0xFFB0DDF2;
+	  f fog_density = 0.500000;
+	  f fog_near_dist = 35.000000;
+	  f fog_far_dist = 55.000000;
+	  f fog_lowdetail_near_dist = 35.000000;
+	  f fog_lowdetail_far_dist = 50.000000;
 	}
 
 	[music]
 	{
-		ambient_track		= "";
-		standard_repeat_delay	= 0.0f;
-		standard_track		= "s_m_DesertCanyons_03";
-		room_type			= rt_arena;
+		ambient_track = "";
+		room_type = rt_arena;
+		standard_repeat_delay = 0.0f;
+		standard_track = "s_m_DesertCanyons_03";
+	}
+}
+[mood_setting*]
+{
+	// Nonataya speech music
+	mood_name				= eos_aranna_redplanet_3;
+	transition_time			= 0.5f;
+	interior				= false;
+
+	[fog]
+	{
+	  x fog_color = 0xFFB0DDF2;
+	  f fog_density = 0.500000;
+	  f fog_near_dist = 35.000000;
+	  f fog_far_dist = 55.000000;
+	  f fog_lowdetail_near_dist = 35.000000;
+	  f fog_lowdetail_far_dist = 50.000000;
+	}
+	[music]
+	{
+		ambient_track = "";
+		room_type = rt_arena;
+		standard_repeat_delay	= 10.0f;
+		standard_track = "s_m_nonataya";
 	}
 }
