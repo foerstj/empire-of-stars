@@ -5,20 +5,20 @@
 	  b active = true;
 	  b affects_actors = true;
 	  b affects_items = true;
-	  b affects_terrain = true;
+	  b affects_terrain = false;
 	  x color = 0xFFFFFFFF;
 	  b draw_shadow = true;
 	  f inner_radius = 0.000000;
 	  f intensity = 1.000000;
 	  b occlude_geometry = true;
-	  b on_timer = true;
+	  b on_timer = false;
 	  f outer_radius = 0.000000;
 		[direction]
 		{
-		  x node = 0x10027F13;
+		  x node = 0x9C9D84E8;
 		  f x = -0.342812;
 		  f y = 0.874620;
-		  f z = 0.342812;
+		  f z = -0.342812;
 		}
 	}
 	[t:directional,n:light_0x000037ab]
@@ -27,7 +27,7 @@
 	  b affects_actors = true;
 	  b affects_items = true;
 	  b affects_terrain = true;
-	  x color = 0xFF4E77FC;
+	  x color = 0xFF8080E6;
 	  b draw_shadow = false;
 	  f inner_radius = 0.000000;
 	  f intensity = 0.700000;
@@ -36,10 +36,10 @@
 	  f outer_radius = 0.000000;
 		[direction]
 		{
-		  x node = 0x10027F13;
+		  x node = 0x9C9D84E8;
 		  f x = 0.342812;
 		  f y = 0.874620;
-		  f z = -0.342812;
+		  f z = 0.342812;
 		}
 	}
 	[t:point,n:light_0x06fe5ee8]
@@ -61,6 +61,27 @@
 		  f x = -1.560901;
 		  f y = -6.191910;
 		  f z = -0.845634;
+		}
+	}
+	[t:directional,n:light_0x0aeac0ca]
+	{
+	  b active = true;
+	  b affects_actors = false;
+	  b affects_items = false;
+	  b affects_terrain = true;
+	  x color = 0xFFFF3333;
+	  b draw_shadow = true;
+	  f inner_radius = 0.000000;
+	  f intensity = 0.700000;
+	  b occlude_geometry = true;
+	  b on_timer = false;
+	  f outer_radius = 0.000000;
+		[direction]
+		{
+		  x node = 0x9C9D84E8;
+		  f x = -0.342812;
+		  f y = 0.874620;
+		  f z = -0.342812;
 		}
 	}
 	[t:point,n:light_0x0d2f01aa]
@@ -267,7 +288,7 @@
 	  f outer_radius = 0.300000;
 		[direction]
 		{
-		  x node = 0xC960A895;
+		  x node = 0xB720C0B5;
 		  f x = 0.000000;
 		  f y = -1.000000;
 		  f z = 0.000000;
@@ -484,10 +505,10 @@
 	  f outer_radius = 4.000000;
 		[position]
 		{
-		  x node = 0x3A1C10C6;
+		  x node = 0x1435E999;
 		  f x = 2.590949;
-		  f y = -5.252735;
-		  f z = -1.064323;
+		  f y = -5.252731;
+		  f z = -1.064315;
 		}
 	}
 	[t:point,n:light_0xd57f2147]
