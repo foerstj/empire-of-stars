@@ -976,35 +976,6 @@
 	  p position = 22.2035,1.81465,17.6436,0x4a869ef4;
 	}
 }
-[t:trigger_generic,n:0x00a0078f]
-{
-	[common]
-	{
-		dev_instance_text = "AUTO SAVE";
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = send_world_message("we_req_activate",0x00A00796,0f,"default","",0);
-			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(1.000000,0.500000,1.500000,"on_first_enter"), doc("[*one-shot check (trigger is one-shot)*]");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = false;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = true;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  p position = 30.6648,7.51673,23.579,0x4a869ef4;
-	}
-}
 [t:trigger_generic,n:0x00a008f3]
 {
 	[common]
