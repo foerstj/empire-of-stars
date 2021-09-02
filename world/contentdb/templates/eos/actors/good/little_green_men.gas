@@ -1,0 +1,50 @@
+[t:template,n:little_green_man]
+{
+	category_name = "1W_good";
+	doc = "little green man";
+	specializes = base_goblin;
+	[actor]
+	{
+		alignment			= aa_good;
+		[skills]
+		{
+			strength =  	7, 0;
+			intelligence =  	12, 0;
+			dexterity =  	11, 0;
+			melee =  		9,  0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 300;
+		life = 320;
+		max_life = 320;
+		mana = 24;
+		max_mana = 24;
+		model = m_c_eam_ggt_pos_1;
+		scale_base = 1.2;
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 48;
+		damage_min = 42;
+	}
+	[common] { screen_name="Little Green Man"; }
+    [conversation] {}
+	[defend] { defense=140; }
+	[inventory]
+	{
+        [equipment]
+        {
+            es_weapon_hand = hm_g_c_1h1m_low;
+        }
+    }
+	[mind]
+	{
+		melee_engage_range = 10;
+		personal_space_range = 0.7;
+		ranged_engage_range = 10.0;
+		sight_range = 10.0;
+	}
+}
