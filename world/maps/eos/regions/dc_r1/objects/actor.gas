@@ -138,33 +138,12 @@
 }
 [t:little_green_man,n:0x00a001b0]
 {
-	[aspect]
-	{
-	  f life = 35;
-	  f mana = 30;
-	  f max_life = 35;
-	  f max_mana = 30;
-	}
-	[common]
-	{
-	  b is_multi_player = false;
-	}
 	[conversation]
 	{
 		[conversations]
 		{
-			* = conversation_ulfgrim_accept_have_money;
-			* = conversation_ulfgrim_accept_no_money;
-			* = conversation_ulfgrim_disband;
-			* = conversation_ulfgrim_disband_rejoin;
-			* = conversation_ulfgrim_join;
-			* = conversation_ulfgrim_reject;
-			* = conversation_ulfgrim_rejoin;
+			* = lgm_in_canyon;
 		}
-	}
-	[mind]
-	{
-		jat_talk = world\ai\jobs\actors\good\job_talk_ulfgrim.skrit;
 	}
 	[placement]
 	{
@@ -1537,6 +1516,13 @@
 }
 [t:little_green_man,n:0x00a007da]
 {
+	[conversation]
+	{
+		[conversations]
+		{
+			* = lgm_villager;
+		}
+	}
 	[placement]
 	{
 	  q orientation = 0,-0.707107,0,0.707107;
@@ -1545,6 +1531,13 @@
 }
 [t:little_green_man,n:0x00a007db]
 {
+	[conversation]
+	{
+		[conversations]
+		{
+			* = lgm_villager;
+		}
+	}
 	[placement]
 	{
 	  q orientation = 0,0.707107,0,0.707107;
@@ -1553,6 +1546,13 @@
 }
 [t:little_green_man,n:0x00a007d8]
 {
+	[conversation]
+	{
+		[conversations]
+		{
+			* = lgm_villager;
+		}
+	}
 	[placement]
 	{
 	  q orientation = 0,-0.707107,0,0.707107;
@@ -1561,6 +1561,13 @@
 }
 [t:little_green_man,n:0x00a007d9]
 {
+	[conversation]
+	{
+		[conversations]
+		{
+			* = lgm_villager;
+		}
+	}
 	[placement]
 	{
 	  q orientation = 0,0.707107,0,0.707107;
@@ -1593,6 +1600,13 @@
 }
 [t:little_green_man,n:0x00a007d7]
 {
+	[conversation]
+	{
+		[conversations]
+		{
+			* = lgm_villager;
+		}
+	}
 	[placement]
 	{
 	  q orientation = 0,-0.92388,0,0.382683;
@@ -1601,6 +1615,13 @@
 }
 [t:little_green_man,n:0x00a007dc]
 {
+	[conversation]
+	{
+		[conversations]
+		{
+			* = lgm_villager;
+		}
+	}
 	[placement]
 	{
 	  q orientation = 0,-1,0,-1.49012e-007;
@@ -1609,9 +1630,12 @@
 }
 [t:little_green_man,n:0x00a007d5]
 {
-	[aspect]
+	[conversation]
 	{
-	  b interest_only = true;
+		[conversations]
+		{
+			* = lgm_villager;
+		}
 	}
 	[placement]
 	{
@@ -1621,6 +1645,13 @@
 }
 [t:little_green_man,n:0x00a007d6]
 {
+	[conversation]
+	{
+		[conversations]
+		{
+			* = lgm_villager;
+		}
+	}
 	[placement]
 	{
 	  p position = -22.4332,0.550001,14.9055,0x0f8bca8a;
@@ -1628,6 +1659,13 @@
 }
 [t:little_green_man,n:0x00a007a2]
 {
+	[conversation]
+	{
+		[conversations]
+		{
+			* = lgm_villager;
+		}
+	}
 	[placement]
 	{
 	  q orientation = 0,0.707107,0,0.707107;
@@ -1636,6 +1674,13 @@
 }
 [t:little_green_man,n:0x00a007a7]
 {
+	[conversation]
+	{
+		[conversations]
+		{
+			* = lgm_villager;
+		}
+	}
 	[placement]
 	{
 	  q orientation = 0,0.92388,0,0.382683;
@@ -1644,6 +1689,13 @@
 }
 [t:little_green_man,n:0x00a0080e]
 {
+	[conversation]
+	{
+		[conversations]
+		{
+			* = lgm_villager;
+		}
+	}
 	[placement]
 	{
 	  q orientation = 0,0.92388,0,0.382683;
@@ -1652,6 +1704,13 @@
 }
 [t:little_green_man,n:0x00a0082d]
 {
+	[conversation]
+	{
+		[conversations]
+		{
+			* = lgm_villager;
+		}
+	}
 	[placement]
 	{
 	  q orientation = 0,1,0,-5.96046e-007;
@@ -1660,6 +1719,13 @@
 }
 [t:little_green_man,n:0x00a00834]
 {
+	[conversation]
+	{
+		[conversations]
+		{
+			* = lgm_villager;
+		}
+	}
 	[placement]
 	{
 	  q orientation = 0,0.707107,0,0.707107;
@@ -1668,6 +1734,13 @@
 }
 [t:little_green_man,n:0x00a00839]
 {
+	[conversation]
+	{
+		[conversations]
+		{
+			* = lgm_villager;
+		}
+	}
 	[placement]
 	{
 	  q orientation = 0,0.707107,0,0.707107;
@@ -1676,6 +1749,13 @@
 }
 [t:little_green_man,n:0x00a0083e]
 {
+	[conversation]
+	{
+		[conversations]
+		{
+			* = lgm_villager;
+		}
+	}
 	[placement]
 	{
 	  q orientation = 0,0.382684,0,0.923879;
@@ -1684,6 +1764,13 @@
 }
 [t:little_green_man,n:0x00a007a5]
 {
+	[conversation]
+	{
+		[conversations]
+		{
+			* = lgm_villager;
+		}
+	}
 	[placement]
 	{
 	  q orientation = 0,1,0,-5.96046e-008;
@@ -1692,6 +1779,13 @@
 }
 [t:little_green_man,n:0x00a00825]
 {
+	[conversation]
+	{
+		[conversations]
+		{
+			* = lgm_villager;
+		}
+	}
 	[placement]
 	{
 	  q orientation = 0,-0.92388,0,0.382683;
@@ -1700,6 +1794,13 @@
 }
 [t:little_green_man,n:0x00a0082e]
 {
+	[conversation]
+	{
+		[conversations]
+		{
+			* = lgm_villager;
+		}
+	}
 	[placement]
 	{
 	  q orientation = 0,1,0,-1.49012e-007;
@@ -1716,6 +1817,13 @@
 }
 [t:little_green_man,n:0x00a007cb]
 {
+	[conversation]
+	{
+		[conversations]
+		{
+			* = lgm_villager;
+		}
+	}
 	[placement]
 	{
 	  q orientation = 0,1,0,-1.49012e-007;
@@ -1724,6 +1832,13 @@
 }
 [t:little_green_man,n:0x00a007cc]
 {
+	[conversation]
+	{
+		[conversations]
+		{
+			* = lgm_villager;
+		}
+	}
 	[placement]
 	{
 	  q orientation = 0,0.707107,0,0.707107;
@@ -1732,9 +1847,12 @@
 }
 [t:little_green_man,n:0x00a007d3]
 {
-	[aspect]
+	[conversation]
 	{
-	  b interest_only = true;
+		[conversations]
+		{
+			* = lgm_villager;
+		}
 	}
 	[placement]
 	{
@@ -1743,9 +1861,12 @@
 }
 [t:little_green_man,n:0x00a007d4]
 {
-	[aspect]
+	[conversation]
 	{
-	  b interest_only = true;
+		[conversations]
+		{
+			* = lgm_villager;
+		}
 	}
 	[placement]
 	{
@@ -1755,6 +1876,13 @@
 }
 [t:little_green_man,n:0x00a007d2]
 {
+	[conversation]
+	{
+		[conversations]
+		{
+			* = lgm_villager;
+		}
+	}
 	[placement]
 	{
 	  q orientation = 0,-1,0,-1.49012e-007;
@@ -1763,6 +1891,13 @@
 }
 [t:little_green_man,n:0x00a007f7]
 {
+	[conversation]
+	{
+		[conversations]
+		{
+			* = lgm_villager;
+		}
+	}
 	[placement]
 	{
 	  p position = 16.5513,0.549999,13.7305,0xe8e17d2c;
@@ -1770,6 +1905,13 @@
 }
 [t:little_green_man,n:0x00a007d0]
 {
+	[conversation]
+	{
+		[conversations]
+		{
+			* = lgm_villager;
+		}
+	}
 	[placement]
 	{
 	  q orientation = 0,-1,0,-1.49012e-007;
@@ -1778,6 +1920,13 @@
 }
 [t:little_green_man,n:0x00a007d1]
 {
+	[conversation]
+	{
+		[conversations]
+		{
+			* = lgm_villager;
+		}
+	}
 	[placement]
 	{
 	  q orientation = 0,-0.707107,0,0.707107;
@@ -1786,6 +1935,13 @@
 }
 [t:little_green_man,n:0x00a007f9]
 {
+	[conversation]
+	{
+		[conversations]
+		{
+			* = lgm_villager;
+		}
+	}
 	[placement]
 	{
 	  p position = 29.103,0.550001,7.49702,0xf7d2e9a7;
@@ -1793,6 +1949,13 @@
 }
 [t:little_green_man,n:0x00a007a8]
 {
+	[conversation]
+	{
+		[conversations]
+		{
+			* = lgm_villager;
+		}
+	}
 	[placement]
 	{
 	  q orientation = 0,-1,0,-1.49012e-007;
@@ -1801,6 +1964,13 @@
 }
 [t:little_green_man,n:0x00a007a9]
 {
+	[conversation]
+	{
+		[conversations]
+		{
+			* = lgm_villager;
+		}
+	}
 	[placement]
 	{
 	  q orientation = 0,-1,0,-1.49012e-007;
@@ -1809,6 +1979,13 @@
 }
 [t:little_green_man,n:0x00a007ca]
 {
+	[conversation]
+	{
+		[conversations]
+		{
+			* = lgm_villager;
+		}
+	}
 	[placement]
 	{
 	  q orientation = 0,-0.92388,0,0.382683;
@@ -1817,6 +1994,13 @@
 }
 [t:little_green_man,n:0x00a007dd]
 {
+	[conversation]
+	{
+		[conversations]
+		{
+			* = lgm_villager;
+		}
+	}
 	[placement]
 	{
 	  q orientation = 0,1,0,1.49012e-007;
@@ -1825,6 +2009,13 @@
 }
 [t:little_green_man,n:0x00a007de]
 {
+	[conversation]
+	{
+		[conversations]
+		{
+			* = lgm_villager;
+		}
+	}
 	[placement]
 	{
 	  p position = 9.93903,0.550001,14.1807,0xbc8cadc0;
@@ -1832,6 +2023,13 @@
 }
 [t:little_green_man,n:0x00a007e3]
 {
+	[conversation]
+	{
+		[conversations]
+		{
+			* = lgm_villager;
+		}
+	}
 	[placement]
 	{
 	  q orientation = 0,-0.382683,0,0.92388;
@@ -1840,6 +2038,13 @@
 }
 [t:little_green_man,n:0x00a007fa]
 {
+	[conversation]
+	{
+		[conversations]
+		{
+			* = lgm_villager;
+		}
+	}
 	[placement]
 	{
 	  q orientation = 0,-0.707107,0,0.707107;
@@ -1848,6 +2053,13 @@
 }
 [t:little_green_man,n:0x00a007fb]
 {
+	[conversation]
+	{
+		[conversations]
+		{
+			* = lgm_villager;
+		}
+	}
 	[placement]
 	{
 	  q orientation = 0,-0.300706,0,0.953717;
@@ -1864,6 +2076,13 @@
 }
 [t:little_green_man,n:0x00a007cd]
 {
+	[conversation]
+	{
+		[conversations]
+		{
+			* = lgm_villager;
+		}
+	}
 	[placement]
 	{
 	  q orientation = 0,-1,0,-1.49012e-007;
@@ -1872,6 +2091,13 @@
 }
 [t:little_green_man,n:0x00a007ce]
 {
+	[conversation]
+	{
+		[conversations]
+		{
+			* = lgm_villager;
+		}
+	}
 	[placement]
 	{
 	  q orientation = 0,0.707107,0,0.707107;
@@ -1880,6 +2106,13 @@
 }
 [t:little_green_man,n:0x00a007cf]
 {
+	[conversation]
+	{
+		[conversations]
+		{
+			* = lgm_villager;
+		}
+	}
 	[placement]
 	{
 	  q orientation = 0,0.382683,0,0.92388;
