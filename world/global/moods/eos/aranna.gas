@@ -256,9 +256,44 @@
 
 [mood_setting*]
 {
-	mood_name = eos_aranna_redplanet_1;
+	mood_name = eos_aranna_redplanet_teleport;
+	transition_time = 20.0f;
 	interior = false;
+
+	[frustum]
+	{
+	  f frustum_height = 60.000000;
+	  f frustum_width = 45.000000;
+	}
+
+	[fog]
+	{
+	  x fog_color = 0xFFB0DDF2;
+	  f fog_density = 0.500000;
+	  f fog_near_dist = 35.000000;
+	  f fog_far_dist = 55.000000;
+	  f fog_lowdetail_near_dist = 35.000000;
+	  f fog_lowdetail_far_dist = 50.000000;
+	}
+	[wind]
+	{
+		wind_direction = 4.7f;
+		wind_velocity = 1.5f;
+	}
+
+	[music]
+	{
+		ambient_track = "";
+		room_type = rt_arena;
+		standard_repeat_delay = 0.0f;
+		standard_track = "s_m_DesertCanyons_03";
+	}
+}
+[mood_setting*]
+{
+	mood_name = eos_aranna_redplanet_1;
 	transition_time = 5.0f;
+	interior = false;
 
 	[fog]
 	{
