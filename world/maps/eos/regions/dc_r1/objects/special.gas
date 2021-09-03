@@ -378,41 +378,6 @@
 	  p position = -7.95586,5.7,3.74016,0x65a528ff;
 	}
 }
-[t:trigger_generic,n:0x00a00907]
-{
-	[common]
-	{
-		dev_instance_text = "MOOD FOR SPEECH";
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = mood_change("eos_aranna_redplanet_3"), doc("speech music");
-				action* = mood_change("eos_aranna_redplanet_2"), delay(56), doc("back to normal");
-			  b can_self_destruct = true;
-				condition* = receive_world_message("we_req_activate",0,"on_first_message"), doc("nonataya is talking[*one-shot check (trigger is one-shot)*]");
-				condition* = party_member_within_node(0xAAA60200,1,-1,-1,"wait_for_every_message"), doc("party is within region[*message checker (trigger is non-pure )*]");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = true;
-			  b start_active = true;
-			}
-		}
-	}
-	[gizmo]
-	{
-	  v diffuse_color = 0.4,0,0;
-	}
-	[placement]
-	{
-	  p position = -4.68752,5.7,13.7522,0x65a528ff;
-	}
-}
 [t:trigger_change_mood_box,n:0x00a008f7]
 {
 	[common]
