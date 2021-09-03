@@ -47,6 +47,35 @@
 	  p position = -3.50943,-2.38419e-007,-3.77256,0x7f040b74;
 	}
 }
+[t:trigger_change_mood_box,n:0x00a00140]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = mood_change("eos_aranna_redplanet_lvl2");
+			  b can_self_destruct = true;
+				condition* = party_member_within_bounding_box(3.000000,1.000000,3.000000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,1,0,-7.15256e-007;
+	  p position = -0.0107288,0,0.825886,0xc62f7bbc;
+	}
+}
 [t:trigger_change_mood_box,n:0x00a001b4]
 {
 	[common]
@@ -90,6 +119,64 @@
 	{
 	  q orientation = 0,0.707107,0,0.707107;
 	  p position = -1.36692,-0.35,-1.92268,0x2a647ca6;
+	}
+}
+[t:trigger_change_mood_box,n:0x00a00136]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = mood_change("eos_aranna_redplanet_lvl3_village");
+			  b can_self_destruct = true;
+				condition* = party_member_within_bounding_box(2.000000,1.000000,4.000000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,0.707106,0,0.707107;
+	  p position = 26.8475,9.42799,23.6743,0x23689bb9;
+	}
+}
+[t:trigger_change_mood_box,n:0x00a00083]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = mood_change("eos_aranna_redplanet_lvl4");
+			  b can_self_destruct = true;
+				condition* = party_member_within_bounding_box(2.000000,1.000000,4.000000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,0.707106,0,0.707107;
+	  p position = -1.57045,0,-1.01542,0x0cf9b38c;
 	}
 }
 [t:trigger_generic,n:0x00a0077a]
@@ -1714,6 +1801,64 @@
 	  p position = -0.0123425,-0.50394,-0.0558624,0x21f7e7ad;
 	}
 }
+[t:trigger_change_mood_box,n:0x00a0013f]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = mood_change("eos_aranna_redplanet_lvl2");
+			  b can_self_destruct = true;
+				condition* = party_member_within_bounding_box(4.000000,2.000000,0.500000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,0.707107,0,-0.707107;
+	  p position = -4.40086,2.96587,0.195091,0x7bbc8853;
+	}
+}
+[t:trigger_change_mood_box,n:0x00a0013e]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = mood_change("eos_aranna_redplanet_lvl3");
+			  b can_self_destruct = true;
+				condition* = party_member_within_bounding_box(4.000000,2.000000,0.500000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,1,0,-8.94069e-008;
+	  p position = 0.220299,-1.86873,-2.27095,0x295338df;
+	}
+}
 [t:use_point,n:0x00a00345]
 {
 	[placement]
@@ -1836,150 +1981,5 @@
 	[placement]
 	{
 	  p position = 0.962829,0.150001,-0.0282516,0xf237258c;
-	}
-}
-[t:trigger_change_mood_box,n:0x00a00083]
-{
-	[common]
-	{
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = mood_change("eos_aranna_redplanet_lvl4");
-			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(2.000000,1.000000,4.000000,"on_every_enter");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  q orientation = 0,0.707106,0,0.707107;
-	  p position = -1.57045,0,-1.01542,0x0cf9b38c;
-	}
-}
-[t:trigger_change_mood_box,n:0x00a00136]
-{
-	[common]
-	{
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = mood_change("eos_aranna_redplanet_lvl3_village");
-			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(2.000000,1.000000,4.000000,"on_every_enter");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  q orientation = 0,0.707106,0,0.707107;
-	  p position = 26.8475,9.42799,23.6743,0x23689bb9;
-	}
-}
-[t:trigger_change_mood_box,n:0x00a0013e]
-{
-	[common]
-	{
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = mood_change("eos_aranna_redplanet_lvl3");
-			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(4.000000,2.000000,0.500000,"on_every_enter");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  q orientation = 0,1,0,-8.94069e-008;
-	  p position = 0.220299,-1.86873,-2.27095,0x295338df;
-	}
-}
-[t:trigger_change_mood_box,n:0x00a0013f]
-{
-	[common]
-	{
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = mood_change("eos_aranna_redplanet_lvl2");
-			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(4.000000,2.000000,0.500000,"on_every_enter");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  q orientation = 0,0.707107,0,-0.707107;
-	  p position = -4.40086,2.96587,0.195091,0x7bbc8853;
-	}
-}
-[t:trigger_change_mood_box,n:0x00a00140]
-{
-	[common]
-	{
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = mood_change("eos_aranna_redplanet_lvl2");
-			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(3.000000,1.000000,3.000000,"on_every_enter");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  q orientation = 0,1,0,-7.15256e-007;
-	  p position = -0.0107288,0,0.825886,0xc62f7bbc;
 	}
 }
