@@ -254,6 +254,7 @@
 	}
 }
 
+// red planet moods differ by canyon lvl: 1 = lowest, 3 = village bottom, 4 = highest & teleport
 [mood_setting*]
 {
 	mood_name = eos_aranna_redplanet_teleport;
@@ -263,17 +264,107 @@
 	[frustum]
 	{
 	  f frustum_height = 60.000000;
-	  f frustum_width = 45.000000;
+	  f frustum_width = 60.000000;
 	}
 
 	[fog]
 	{
 	  x fog_color = 0xFFB0DDF2;
 	  f fog_density = 0.500000;
-	  f fog_near_dist = 35.000000;
-	  f fog_far_dist = 55.000000;
+	  f fog_near_dist = 45.000000;
+	  f fog_far_dist = 65.000000;
+	  f fog_lowdetail_near_dist = 40.000000;
+	  f fog_lowdetail_far_dist = 60.000000;
+	}
+	[wind]
+	{
+		wind_direction = 4.7f;
+		wind_velocity = 2;
+	}
+
+	[music]
+	{
+		ambient_track = "s_e_ambient_wind_01b";
+        standard_intro_delay = 10.0f;
+		standard_repeat_delay = 10.0f;
+		standard_track = "s_m_nonataya";
+		room_type = rt_arena;
+	}
+}
+[mood_setting*]
+{
+	mood_name = eos_aranna_redplanet_lvl4;
+	transition_time = 5.0f;
+	interior = false;
+
+	[fog]
+	{
+	  x fog_color = 0xFFB0DDF2;
+	  f fog_density = 0.500000;
+	  f fog_near_dist = 45.000000;
+	  f fog_far_dist = 65.000000;
+	  f fog_lowdetail_near_dist = 40.000000;
+	  f fog_lowdetail_far_dist = 60.000000;
+	}
+	[wind]
+	{
+		wind_direction = 4.7f;
+		wind_velocity = 2;
+	}
+
+	[music]
+	{
+		ambient_track = "s_e_ambient_wind_01b";
+        standard_intro_delay = 10.0f;
+		standard_repeat_delay = 10.0f;
+		standard_track = "s_m_nonataya";
+		room_type = rt_arena;
+	}
+}
+[mood_setting*]
+{
+	mood_name				= eos_aranna_redplanet_lvl3_village;
+	transition_time			= 5.0f;
+	interior				= false;
+
+	[fog]
+	{
+	  x fog_color = 0xFFB0DDF2;
+	  f fog_density = 0.500000;
+	  f fog_near_dist = 40.000000;
+	  f fog_far_dist = 60.000000;
 	  f fog_lowdetail_near_dist = 35.000000;
-	  f fog_lowdetail_far_dist = 50.000000;
+	  f fog_lowdetail_far_dist = 55.000000;
+	}
+	[wind]
+	{
+		wind_direction = 4.7f;
+		wind_velocity = 1;
+	}
+
+	[music]
+	{
+		ambient_track = "";
+        standard_intro_delay = 0.0f;
+		standard_repeat_delay = 10.0f;
+		standard_track = "s_m_desertcanyons_03";
+		room_type = rt_arena;
+	}
+}
+[mood_setting*]
+{
+	mood_name = eos_aranna_redplanet_lvl3;
+	transition_time = 5.0f;
+	interior = false;
+
+	[fog]
+	{
+	  x fog_color = 0xFFB0DDF2;
+	  f fog_density = 0.500000;
+	  f fog_near_dist = 40.000000;
+	  f fog_far_dist = 60.000000;
+	  f fog_lowdetail_near_dist = 35.000000;
+	  f fog_lowdetail_far_dist = 55.000000;
 	}
 	[wind]
 	{
@@ -283,15 +374,16 @@
 
 	[music]
 	{
-		ambient_track = "";
+		ambient_track = "s_e_ambient_bird2";
+        standard_intro_delay = 10.0f;
+		standard_repeat_delay = 10.0f;
+		standard_track = "s_m_jungle_battle";
 		room_type = rt_arena;
-		standard_repeat_delay = 0.0f;
-		standard_track = "s_m_DesertCanyons_03";
 	}
 }
 [mood_setting*]
 {
-	mood_name = eos_aranna_redplanet_1;
+	mood_name = eos_aranna_redplanet_lvl2;
 	transition_time = 5.0f;
 	interior = false;
 
@@ -301,69 +393,51 @@
 	  f fog_density = 0.500000;
 	  f fog_near_dist = 35.000000;
 	  f fog_far_dist = 55.000000;
-	  f fog_lowdetail_near_dist = 35.000000;
+	  f fog_lowdetail_near_dist = 30.000000;
 	  f fog_lowdetail_far_dist = 50.000000;
 	}
 	[wind]
 	{
 		wind_direction = 4.7f;
-		wind_velocity = 1.5f;
+		wind_velocity = 1;
 	}
 
 	[music]
 	{
-		ambient_track = "";
+		ambient_track = "s_e_ambient_bird1";
+        standard_intro_delay = 10.0f;
+		standard_repeat_delay = 10.0f;
+		standard_track = "s_m_jungle_battle";
 		room_type = rt_arena;
-		standard_repeat_delay = 0.0f;
-		standard_track = "s_m_DesertCanyons_03";
 	}
 }
 [mood_setting*]
 {
-	// This is a windless mood for the village
-	mood_name				= eos_aranna_redplanet_2;
-	transition_time			= 5.0f;
-	interior				= false;
+	mood_name = eos_aranna_redplanet_lvl1;
+	transition_time = 5.0f;
+	interior = false;
 
 	[fog]
 	{
 	  x fog_color = 0xFFB0DDF2;
 	  f fog_density = 0.500000;
-	  f fog_near_dist = 35.000000;
-	  f fog_far_dist = 55.000000;
-	  f fog_lowdetail_near_dist = 35.000000;
-	  f fog_lowdetail_far_dist = 50.000000;
+	  f fog_near_dist = 30.000000;
+	  f fog_far_dist = 50.000000;
+	  f fog_lowdetail_near_dist = 25.000000;
+	  f fog_lowdetail_far_dist = 45.000000;
+	}
+	[wind]
+	{
+		wind_direction = 4.7f;
+		wind_velocity = 0.5f;
 	}
 
 	[music]
 	{
-		ambient_track = "";
+		ambient_track = "s_e_ambient_jungle_1";
+        standard_intro_delay = 10.0f;
+		standard_repeat_delay = 10.0f;
+		standard_track = "s_m_jungle_battle";
 		room_type = rt_arena;
-		standard_repeat_delay = 0.0f;
-		standard_track = "s_m_DesertCanyons_03";
-	}
-}
-[mood_setting*]
-{
-	// Nonataya speech music
-	mood_name				= eos_aranna_redplanet_3;
-	transition_time			= 0.5f;
-	interior				= false;
-
-	[fog]
-	{
-	  x fog_color = 0xFFB0DDF2;
-	  f fog_density = 0.500000;
-	  f fog_near_dist = 35.000000;
-	  f fog_far_dist = 55.000000;
-	  f fog_lowdetail_near_dist = 35.000000;
-	  f fog_lowdetail_far_dist = 50.000000;
-	}
-	[music]
-	{
-		ambient_track = "";
-		room_type = rt_arena;
-		standard_repeat_delay	= 10.0f;
-		standard_track = "s_m_nonataya";
 	}
 }
