@@ -756,3 +756,63 @@
 		set_item_requirement = 1;
     }
 }
+
+[weak_ring_of_stars]
+{
+	[modifier*]
+	{
+		[enchantments]
+		{
+			[*]
+			{
+				is_set_item = true;
+				duration = #infinite;
+
+				alteration = ALTER_STRENGTH;
+				value = #itemsequipped / -2;
+				description = "Subtracts <ALTER_STRENGTH> from Strength";
+			}
+		}
+		set_item_requirement = 1;
+	}
+}
+
+[clumsy_ring_of_stars]
+{
+	[modifier*]
+	{
+		[enchantments]
+		{
+			[*]
+			{
+				is_set_item = true;
+				duration = #infinite;
+
+				alteration = ALTER_DEXTERITY;
+				value = #itemsequipped / -2;
+				description = "Subtracts <ALTER_DEXTERITY> from Dexterity";
+			}
+		}
+		set_item_requirement = 1;
+	}
+}
+
+[stupid_ring_of_stars]
+{
+	[modifier*]
+	{
+		[enchantments]
+		{
+			[*]
+			{
+				is_set_item = true;
+				duration = #infinite;
+
+				alteration = ALTER_INTELLIGENCE;
+				value = #itemsequipped / -2;
+				description = "Subtracts <ALTER_INTELLIGENCE> from Intelligence";
+			}
+		}
+		set_item_requirement = 1;
+	}
+}
