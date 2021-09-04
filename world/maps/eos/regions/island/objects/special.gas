@@ -538,11 +538,13 @@
 {
 	[common]
 	{
+		dev_instance_text = "find_way_home";
 		[instance_triggers]
 		{
 			[*]
 			{
 				action* = change_quest_state("find_way_home","completed",0);
+				action* = send_world_message("we_req_activate",0x07900325,0f,"default","every",0);
 			  b can_self_destruct = true;
 				condition* = party_member_within_sphere(10.000000,"on_every_enter");
 			  f delay = 0.000000;
@@ -1199,5 +1201,54 @@
 	[placement]
 	{
 	  p position = -0.385483,0.2,-0.434647,0x6e2471df;
+	}
+}
+[t:check_quest,n:0x07900325]
+{
+	[check_quest]
+	{
+	  b check_complete = true;
+		quest_name = "find_aunt_luna";
+	  x send_to_scid = 0x07900326;
+	}
+	[common]
+	{
+		dev_instance_text = "find_aunt_luna";
+	}
+	[placement]
+	{
+	  p position = -0.561991,-0.565638,-0.22335,0x4f23cd2e;
+	}
+}
+[t:check_quest,n:0x07900326]
+{
+	[check_quest]
+	{
+	  b check_complete = true;
+		quest_name = "find_way_home";
+	  x send_to_scid = 0x0790032D;
+	}
+	[common]
+	{
+		dev_instance_text = "find_way_home";
+	}
+	[placement]
+	{
+	  p position = -1.26196,-0.577504,-0.288137,0x4f23cd2e;
+	}
+}
+[t:tutorial_tip,n:0x0790032d]
+{
+	[common]
+	{
+		dev_instance_text = "VICTORY!";
+	}
+	[placement]
+	{
+	  p position = -1.98028,-0.6,-0.294043,0x4f23cd2e;
+	}
+	[tip]
+	{
+		tip = "victory";
 	}
 }
