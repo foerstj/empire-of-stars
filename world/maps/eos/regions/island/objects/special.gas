@@ -384,6 +384,37 @@
 	  p position = -1.44496,0.199999,-0.0620934,0x8f9829c7;
 	}
 }
+[t:trigger_generic,n:0x0790031e]
+{
+	[common]
+	{
+		dev_instance_text = "VICTORY!";
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_activate",0x0790032D,0f,"default","every",0);
+				action* = mood_change("eos_aranna_victory");
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_req_activate",0,"on_every_message");
+				condition* = party_member_within_sphere(32.000000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  p position = 1.94255,0,-0.255228,0xe2784d21;
+	}
+}
 [t:trigger_generic,n:0x079001a6]
 {
 	[common]
@@ -562,6 +593,51 @@
 	[placement]
 	{
 	  p position = 0.83889,-0.542235,-0.117462,0x4f23cd2e;
+	}
+}
+[t:check_quest,n:0x07900325]
+{
+	[check_quest]
+	{
+	  b check_complete = true;
+		quest_name = "find_aunt_luna";
+	  x send_to_scid = 0x07900326;
+	}
+	[common]
+	{
+		dev_instance_text = "find_aunt_luna";
+	}
+	[placement]
+	{
+	  p position = -0.561991,-0.565638,-0.22335,0x4f23cd2e;
+	}
+}
+[t:check_quest,n:0x07900326]
+{
+	[check_quest]
+	{
+	  b check_complete = true;
+		quest_name = "find_way_home";
+	  x send_to_scid = 0x0790031E;
+	}
+	[common]
+	{
+		dev_instance_text = "find_way_home";
+	}
+	[placement]
+	{
+	  p position = -1.26196,-0.577504,-0.288137,0x4f23cd2e;
+	}
+}
+[t:tutorial_tip,n:0x0790032d]
+{
+	[placement]
+	{
+	  p position = -1.93859,-0.6,-1.23241,0x4f23cd2e;
+	}
+	[tip]
+	{
+		tip = "victory";
 	}
 }
 [t:trigger_change_mood_box,n:0x07900d77]
@@ -1201,54 +1277,5 @@
 	[placement]
 	{
 	  p position = -0.385483,0.2,-0.434647,0x6e2471df;
-	}
-}
-[t:check_quest,n:0x07900325]
-{
-	[check_quest]
-	{
-	  b check_complete = true;
-		quest_name = "find_aunt_luna";
-	  x send_to_scid = 0x07900326;
-	}
-	[common]
-	{
-		dev_instance_text = "find_aunt_luna";
-	}
-	[placement]
-	{
-	  p position = -0.561991,-0.565638,-0.22335,0x4f23cd2e;
-	}
-}
-[t:check_quest,n:0x07900326]
-{
-	[check_quest]
-	{
-	  b check_complete = true;
-		quest_name = "find_way_home";
-	  x send_to_scid = 0x0790032D;
-	}
-	[common]
-	{
-		dev_instance_text = "find_way_home";
-	}
-	[placement]
-	{
-	  p position = -1.26196,-0.577504,-0.288137,0x4f23cd2e;
-	}
-}
-[t:tutorial_tip,n:0x0790032d]
-{
-	[common]
-	{
-		dev_instance_text = "VICTORY!";
-	}
-	[placement]
-	{
-	  p position = -1.98028,-0.6,-0.294043,0x4f23cd2e;
-	}
-	[tip]
-	{
-		tip = "victory";
 	}
 }

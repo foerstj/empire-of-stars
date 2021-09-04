@@ -28,6 +28,37 @@
 		standard_track = "s_m_BesiegedTown_02";
 	}
 }
+[mood_setting*]  // teleport(area) mood but with DK music
+{
+	mood_name = eos_aranna_victory;
+	transition_time = 5.0f;
+	interior = false;
+
+	[frustum]
+	{
+		frustum_height = 60.0f;
+		frustum_width = 45.0f;
+	}
+
+	[fog]
+	{
+		fog_color = 0xff757585;
+		fog_density = 0.5f;
+		fog_near_dist = 35.0f;
+		fog_far_dist = 50.0f;
+		fog_lowdetail_near_dist = 35.0f;
+		fog_lowdetail_far_dist = 45.0f;
+	}
+
+	[music]
+	{
+		ambient_track = "";
+		room_type = rt_generic;
+		standard_intro_delay = 0.0f;
+		standard_repeat_delay = 10.0f;
+		standard_track = "s_m_d_k_theme";
+	}
+}
 
 [mood_setting*]
 {

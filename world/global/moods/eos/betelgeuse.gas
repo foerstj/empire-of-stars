@@ -64,6 +64,42 @@
 		standard_track = "s_m_BesiegedTown_04";
 	}
 }
+[mood_setting*]  // palim palim mood but with DK music
+{
+	mood_name = eos_betelgeuse_victory;
+  f transition_time = 5.000000;
+  b interior = false;
+
+	[frustum]
+	{
+	  f frustum_height = 60.000000;
+	  f frustum_width = 45.000000;
+	}
+
+	[fog]
+	{
+	  x fog_color = 0xFFE0B0C0;
+	  f fog_density = 0.500000;
+	  f fog_far_dist = 60.000000;
+	  f fog_lowdetail_far_dist = 40.000000;
+	  f fog_lowdetail_near_dist = 20.000000;
+	  f fog_near_dist = 30.000000;
+	}
+
+	[music]
+	{
+	  f ambient_intro_delay = 0.000000;
+	  f ambient_repeat_delay = 0.000000;
+		ambient_track = "s_e_ambient_bird2";
+	  f battle_intro_delay = 10.000000;
+	  f battle_repeat_delay = 10.000000;
+		battle_track = 10.000000;
+		room_type = rt_generic;
+	  f standard_intro_delay = 0.000000;
+	  f standard_repeat_delay = 10.000000;
+		standard_track = "s_m_d_k_theme";
+	}
+}
 [mood_setting*]
 {
 	interior = false;
@@ -229,6 +265,7 @@
 		standard_track = "s_m_BesiegedTown_01";
 	}
 }
+
 [mood_setting*]
 {
   b interior = false;
