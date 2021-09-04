@@ -393,8 +393,7 @@
 		{
 			[*]
 			{
-				action* = send_world_message("we_req_activate",0x0790032D,0f,"default","every",0);
-				action* = send_world_message("we_req_activate",0x07900331,0f,"default","every",0);
+				action* = send_world_message("we_req_activate",0x07900331,0f,"default","every",0), doc("set_bool");
 			  b can_self_destruct = true;
 				condition* = receive_world_message("we_req_activate",0,"on_every_message");
 			  f delay = 0.000000;
@@ -409,10 +408,11 @@
 			}
 			[*]
 			{
+				action* = send_world_message("we_req_activate",0x0790032D,0f,"0x4004","party_member_within_sphere",0);
 				action* = mood_change("eos_aranna_victory");
 			  b can_self_destruct = true;
 				condition* = receive_world_message("we_req_activate",0,"on_every_message");
-				condition* = party_member_within_sphere(32.000000,"on_every_enter");
+				condition* = party_member_within_sphere(32.000000,"wait_for_every_message");
 			  f delay = 0.000000;
 			  b flip_flop = false;
 			  b multi_player = true;
@@ -428,6 +428,28 @@
 	[placement]
 	{
 	  p position = 1.28368,0,-0.198403,0xe2784d21;
+	}
+}
+[t:tutorial_tip,n:0x0790032d]
+{
+	[placement]
+	{
+	  p position = 1.23541,0,-1.18096,0xe2784d21;
+	}
+	[tip]
+	{
+		tip = "victory";
+	}
+}
+[t:set_bool,n:0x07900331]
+{
+	[placement]
+	{
+	  p position = 1.21011,0,0.69342,0xe2784d21;
+	}
+	[set_bool]
+	{
+		bool_variable = "eos_victory";
 	}
 }
 [t:trigger_generic,n:0x079001a6]
@@ -644,15 +666,18 @@
 	  p position = -1.26196,-0.577504,-0.288137,0x4f23cd2e;
 	}
 }
-[t:tutorial_tip,n:0x0790032d]
+[t:check_bool,n:0x07900330]
 {
+	[check_bool]
+	{
+		bool_variable = "eos_victory";
+		message_if_false = we_req_activate;
+		message_if_true = we_req_deactivate;
+	  x send_to_scid = 0x0790031E;
+	}
 	[placement]
 	{
-	  p position = 1.23541,0,-1.18096,0xe2784d21;
-	}
-	[tip]
-	{
-		tip = "victory";
+	  p position = -1.94785,-0.6,-0.247473,0x4f23cd2e;
 	}
 }
 [t:trigger_change_mood_box,n:0x07900d77]
@@ -1292,30 +1317,5 @@
 	[placement]
 	{
 	  p position = -0.385483,0.2,-0.434647,0x6e2471df;
-	}
-}
-[t:check_bool,n:0x07900330]
-{
-	[check_bool]
-	{
-		bool_variable = "eos_victory";
-		message_if_false = we_req_activate;
-		message_if_true = we_req_deactivate;
-	  x send_to_scid = 0x0790031E;
-	}
-	[placement]
-	{
-	  p position = -1.94785,-0.6,-0.247473,0x4f23cd2e;
-	}
-}
-[t:set_bool,n:0x07900331]
-{
-	[placement]
-	{
-	  p position = 1.21011,0,0.69342,0xe2784d21;
-	}
-	[set_bool]
-	{
-		bool_variable = "eos_victory";
 	}
 }

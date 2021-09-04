@@ -142,7 +142,6 @@
 		{
 			[*]
 			{
-				action* = send_world_message("we_req_activate",0x04C00365,0f,"default","every",0);
 				action* = send_world_message("we_req_activate",0x04C00379,0f,"default","every",0);
 			  b can_self_destruct = true;
 				condition* = receive_world_message("we_req_activate",0,"on_every_message");
@@ -158,10 +157,11 @@
 			}
 			[*]
 			{
+				action* = send_world_message("we_req_activate",0x04C00365,0f,"0x4004","party_member_within_sphere",0);
 				action* = mood_change("eos_betelgeuse_victory");
 			  b can_self_destruct = true;
 				condition* = receive_world_message("we_req_activate",0,"on_every_message");
-				condition* = party_member_within_sphere(32.000000,"on_every_enter");
+				condition* = party_member_within_sphere(32.000000,"wait_for_every_message");
 			  f delay = 0.000000;
 			  b flip_flop = false;
 			  b multi_player = true;
@@ -177,6 +177,20 @@
 	[placement]
 	{
 	  p position = 1.55315,0,0.0510559,0x5b2ca1cf;
+	}
+}
+[t:check_bool,n:0x04c0035c]
+{
+	[check_bool]
+	{
+		bool_variable = "eos_victory";
+		message_if_false = we_req_activate;
+		message_if_true = we_req_deactivate;
+	  x send_to_scid = 0x04C0035B;
+	}
+	[placement]
+	{
+	  p position = 0.761326,0,0.0458777,0x5b2ca1cf;
 	}
 }
 [t:check_quest,n:0x04c0035d]
@@ -222,6 +236,17 @@
 	[tip]
 	{
 		tip = "victory";
+	}
+}
+[t:set_bool,n:0x04c00379]
+{
+	[placement]
+	{
+	  p position = 1.54731,0,-0.796993,0x5b2ca1cf;
+	}
+	[set_bool]
+	{
+		bool_variable = "eos_victory";
 	}
 }
 [t:trigger_generic,n:0x04c00036]
@@ -677,30 +702,5 @@
 	[placement]
 	{
 	  p position = -1.4978,0.1,0.126437,0x6acff027;
-	}
-}
-[t:check_bool,n:0x04c0035c]
-{
-	[check_bool]
-	{
-		bool_variable = "eos_victory";
-		message_if_false = we_req_activate;
-		message_if_true = we_req_deactivate;
-	  x send_to_scid = 0x04C0035B;
-	}
-	[placement]
-	{
-	  p position = 0.761326,0,0.0458777,0x5b2ca1cf;
-	}
-}
-[t:set_bool,n:0x04c00379]
-{
-	[placement]
-	{
-	  p position = 1.54731,0,-0.796993,0x5b2ca1cf;
-	}
-	[set_bool]
-	{
-		bool_variable = "eos_victory";
 	}
 }
