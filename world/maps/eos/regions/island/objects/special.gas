@@ -394,6 +394,21 @@
 			[*]
 			{
 				action* = send_world_message("we_req_activate",0x0790032D,0f,"default","every",0);
+				action* = send_world_message("we_req_activate",0x07900331,0f,"default","every",0);
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_req_activate",0,"on_every_message");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+			[*]
+			{
 				action* = mood_change("eos_aranna_victory");
 			  b can_self_destruct = true;
 				condition* = receive_world_message("we_req_activate",0,"on_every_message");
@@ -412,7 +427,7 @@
 	}
 	[placement]
 	{
-	  p position = 1.94255,0,-0.255228,0xe2784d21;
+	  p position = 1.28368,0,-0.198403,0xe2784d21;
 	}
 }
 [t:trigger_generic,n:0x079001a6]
@@ -618,7 +633,7 @@
 	{
 	  b check_complete = true;
 		quest_name = "find_way_home";
-	  x send_to_scid = 0x0790031E;
+	  x send_to_scid = 0x07900330;
 	}
 	[common]
 	{
@@ -633,7 +648,7 @@
 {
 	[placement]
 	{
-	  p position = -1.93859,-0.6,-1.23241,0x4f23cd2e;
+	  p position = 1.23541,0,-1.18096,0xe2784d21;
 	}
 	[tip]
 	{
@@ -1277,5 +1292,30 @@
 	[placement]
 	{
 	  p position = -0.385483,0.2,-0.434647,0x6e2471df;
+	}
+}
+[t:check_bool,n:0x07900330]
+{
+	[check_bool]
+	{
+		bool_variable = "eos_victory";
+		message_if_false = we_req_activate;
+		message_if_true = we_req_deactivate;
+	  x send_to_scid = 0x0790031E;
+	}
+	[placement]
+	{
+	  p position = -1.94785,-0.6,-0.247473,0x4f23cd2e;
+	}
+}
+[t:set_bool,n:0x07900331]
+{
+	[placement]
+	{
+	  p position = 1.21011,0,0.69342,0xe2784d21;
+	}
+	[set_bool]
+	{
+		bool_variable = "eos_victory";
 	}
 }

@@ -133,6 +133,52 @@
 	  p position = -1.12505,-0.107803,1.46099,0x6a7d86ba;
 	}
 }
+[t:trigger_generic,n:0x04c0035b]
+{
+	[common]
+	{
+		dev_instance_text = "VICTORY!";
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_activate",0x04C00365,0f,"default","every",0);
+				action* = send_world_message("we_req_activate",0x04C00379,0f,"default","every",0);
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_req_activate",0,"on_every_message");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+			[*]
+			{
+				action* = mood_change("eos_betelgeuse_victory");
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_req_activate",0,"on_every_message");
+				condition* = party_member_within_sphere(32.000000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  p position = 1.55315,0,0.0510559,0x5b2ca1cf;
+	}
+}
 [t:check_quest,n:0x04c0035d]
 {
 	[check_quest]
@@ -147,7 +193,7 @@
 	}
 	[placement]
 	{
-	  p position = -0.129483,0,0.282945,0x5b2ca1cf;
+	  p position = -0.904348,0,0.106911,0x5b2ca1cf;
 	}
 }
 [t:check_quest,n:0x04c0035e]
@@ -156,7 +202,7 @@
 	{
 	  b check_complete = true;
 		quest_name = "find_way_home";
-	  x send_to_scid = 0x04C0035B;
+	  x send_to_scid = 0x04C0035C;
 	}
 	[common]
 	{
@@ -164,14 +210,14 @@
 	}
 	[placement]
 	{
-	  p position = 0.707613,0,0.173797,0x5b2ca1cf;
+	  p position = -0.00106621,0,0.123764,0x5b2ca1cf;
 	}
 }
 [t:tutorial_tip,n:0x04c00365]
 {
 	[placement]
 	{
-	  p position = 1.52141,0,-0.670864,0x5b2ca1cf;
+	  p position = 1.52709,0,0.917511,0x5b2ca1cf;
 	}
 	[tip]
 	{
@@ -633,34 +679,28 @@
 	  p position = -1.4978,0.1,0.126437,0x6acff027;
 	}
 }
-[t:trigger_generic,n:0x04c0035b]
+[t:check_bool,n:0x04c0035c]
 {
-	[common]
+	[check_bool]
 	{
-		dev_instance_text = "VICTORY!";
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = send_world_message("we_req_activate",0x04C00365,0f,"default","every",0);
-				action* = mood_change("eos_betelgeuse_victory");
-			  b can_self_destruct = true;
-				condition* = receive_world_message("we_req_activate",0,"on_every_message");
-				condition* = party_member_within_sphere(32.000000,"on_every_enter");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-		}
+		bool_variable = "eos_victory";
+		message_if_false = we_req_activate;
+		message_if_true = we_req_deactivate;
+	  x send_to_scid = 0x04C0035B;
 	}
 	[placement]
 	{
-	  p position = 1.50129,0,0.192704,0x5b2ca1cf;
+	  p position = 0.761326,0,0.0458777,0x5b2ca1cf;
+	}
+}
+[t:set_bool,n:0x04c00379]
+{
+	[placement]
+	{
+	  p position = 1.54731,0,-0.796993,0x5b2ca1cf;
+	}
+	[set_bool]
+	{
+		bool_variable = "eos_victory";
 	}
 }
