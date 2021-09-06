@@ -32,6 +32,9 @@
 	}
 }
 
+
+// BANDIT MOON
+
 [mood_setting*]
 {
 	mood_name				= eos_sirius_banditmoon_teleport;
@@ -164,7 +167,6 @@
 		room_type			= rt_cave;
 	}
 }
-
 [mood_setting*]
 {
 	mood_name				= eos_sirius_banditmoon_4;
@@ -201,7 +203,6 @@
 		room_type			= rt_generic;
 	}
 }
-
 [mood_setting*]
 {
 	mood_name				= eos_sirius_banditmoon_5;
@@ -298,6 +299,9 @@
 		room_type			= rt_generic;
 	}
 }
+
+
+// MACHINE MOON
 
 [mood_setting*]
 {
@@ -431,6 +435,9 @@
 		room_type			= rt_generic;
 	}
 }
+
+
+// DEATH MOON
 
 [mood_setting*]
 {
@@ -634,6 +641,9 @@
 		room_type			= rt_generic;
 	}
 }
+
+
+// PLANET
 
 [mood_setting*]
 {
@@ -882,5 +892,154 @@
 		standard_repeat_delay	= 10.0f;
 		standard_track		= "s_m_CastleEhb_02";
 		room_type			= rt_generic;
+	}
+}
+[mood_setting*]
+{
+	// this is the transition from gl_r1
+	mood_name				= eos_sirius_planet_dragon_1;
+	transition_time			= 10.0f;
+	interior				= true;
+
+	[fog]
+	{
+		fog_near_dist		= 35.0f;
+		fog_far_dist		= 45.0f;
+		fog_lowdetail_near_dist		= 35.0f;
+		fog_lowdetail_far_dist		= 40.0f;
+		fog_color			= 0xFF000000;
+		fog_density			= 0.2f;
+	}
+
+	[music]
+	{
+		ambient_track		= "s_e_ambient_crypt";
+		standard_repeat_delay = 0.0f;
+		standard_track		= "s_m_Drums_03";
+		room_type			= rt_concerthall;
+	}
+}
+[mood_setting*]
+{
+	// mid-region mood change; EAX change
+	mood_name				= eos_sirius_planet_dragon_2;
+	transition_time			= 2.0f;
+	interior				= true;
+
+	[fog]
+	{
+		fog_near_dist		= 35.0f;
+		fog_far_dist		= 45.0f;
+		fog_lowdetail_near_dist		= 35.0f;
+		fog_lowdetail_far_dist		= 40.0f;
+		fog_color			= 0xFF000000;
+		fog_density			= 0.2f;
+	}
+
+	[music]
+	{
+		ambient_track		= "s_e_ambient_crypt";
+		standard_repeat_delay = 0.0f;
+		standard_track		= "s_m_Drums_03";
+		room_type			= rt_arena;
+	}
+}
+[mood_setting*]
+{
+	// Gom NIS mood
+	mood_name				= eos_sirius_planet_dragon_3;
+	transition_time			= 2.0f;
+	interior				= true;
+
+	[fog]
+	{
+		fog_near_dist		= 60.0f;
+		fog_far_dist		= 70.0f;
+		fog_lowdetail_near_dist		= 60.0f;
+		fog_lowdetail_far_dist		= 65.0f;
+		fog_color			= 0xFF000000;
+		fog_density			= 0.2f;
+	}
+
+	[music]
+	{
+		ambient_track		= "";
+		standard_repeat_delay = 10.0f;
+		standard_track		= "s_m_Gom";
+		room_type			= rt_arena;
+	}
+}
+[mood_setting*]
+{
+	// No music after Gom dies, kind of a fake-out
+	mood_name				= eos_sirius_planet_dragon_4;
+	transition_time			= 2.0f;
+	interior				= true;
+
+	[fog]
+	{
+		fog_near_dist		= 35.0f;
+		fog_far_dist		= 45.0f;
+		fog_lowdetail_near_dist		= 35.0f;
+		fog_lowdetail_far_dist		= 40.0f;
+		fog_color			= 0xFF000000;
+		fog_density			= 0.2f;
+	}
+
+	[music]
+	{
+		ambient_track		= "";
+		standard_track		= "";
+		room_type			= rt_arena;
+	}
+}
+[mood_setting*]
+{
+	// Fighting Gom mood
+	mood_name				= eos_sirius_planet_dragon_5;
+	transition_time			= 0.5f;
+	interior				= true;
+
+	[fog]
+	{
+		fog_near_dist		= 35.0f;
+		fog_far_dist		= 45.0f;
+		fog_lowdetail_near_dist		= 35.0f;
+		fog_lowdetail_far_dist		= 40.0f;
+		fog_color			= 0xFF000000;
+		fog_density			= 0.2f;
+	}
+
+	[music]
+	{
+		ambient_track		= "";
+		standard_repeat_delay = 0.0f;
+		standard_track		= "s_m_gom_battle";
+		room_type			= rt_arena;
+	}
+}
+[mood_setting*]
+{
+	// Gom is killed mood
+	mood_name				= eos_sirius_planet_dragon_6;
+	transition_time			= 2.0f;
+	interior				= true;
+
+	[fog]
+	{
+		fog_near_dist		= 35.0f;
+		fog_far_dist		= 45.0f;
+		fog_lowdetail_near_dist		= 35.0f;
+		fog_lowdetail_far_dist		= 40.0f;
+		fog_color			= 0xFF000000;
+		fog_density			= 0.2f;
+	}
+
+	[music]
+	{
+		ambient_track		= "";
+		standard_repeat_delay = 10.0f;
+		standard_track		= "s_m_gom_victory";
+		room_type			= rt_arena;
 	}
 }

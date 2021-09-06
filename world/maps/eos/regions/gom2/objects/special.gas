@@ -24,7 +24,7 @@
 			}
 			[*]
 			{
-				action* = mood_change("map_world_gom2_5"), doc("fight mood for sp late arrivals and mp");
+				action* = mood_change("eos_sirius_planet_dragon_5"), doc("fight mood for sp late arrivals and mp");
 			  b can_self_destruct = true;
 				condition* = party_member_within_bounding_box(15.000000,3.000000,15.000000,"on_every_enter");
 			  f delay = 0.000000;
@@ -324,12 +324,12 @@
 		{
 			[*]
 			{
-				action* = mood_change("map_world_gom2_6"), delay(8), doc("super gom dead mood");
+				action* = mood_change("eos_sirius_planet_dragon_6"), delay(8), doc("super gom dead mood");
 				action* = change_quest_state("quest_destroy_gom","completed",0), doc("finish gom quest");
 				action* = change_quest_state("quest_destroy_gom2","completed",0), doc("finish gom quest");
 				action* = send_world_message("we_req_activate",0x00200229,0f,"default","every",0), doc("update journal");
-				action* = mood_change("map_world_gom2_4"), doc("no music while he dies");
-				action* = mood_change("map_world_gom2_2"), delay(29), doc("back to normal");
+				action* = mood_change("eos_sirius_planet_dragon_4"), doc("no music while he dies");
+				action* = mood_change("eos_sirius_planet_dragon_2"), delay(29), doc("back to normal");
 			  b can_self_destruct = true;
 				condition* = receive_world_message("we_req_activate",0,"on_first_message"), doc("[*converted to one-shot*]");
 				condition* = party_member_within_node(0x5A6BE416,1,99,-1,"wait_for_every_message"), doc("[*message checker (trigger is non-pure )*]");
@@ -400,7 +400,7 @@
 		{
 			[*]
 			{
-				action* = mood_change("map_world_gom2_5"), doc("fight mood");
+				action* = mood_change("eos_sirius_planet_dragon_5"), doc("fight mood");
 			  b can_self_destruct = true;
 				condition* = receive_world_message("we_req_activate",0,"on_first_message"), doc("[*converted to one-shot*]");
 				condition* = party_member_within_node(0x5A6BE416,1,99,-1,"wait_for_every_message"), doc("[*message checker (trigger is non-pure )*]");
@@ -499,7 +499,7 @@
 		{
 			[*]
 			{
-				action* = mood_change("map_world_gom2_3"), doc("gom nis mood");
+				action* = mood_change("eos_sirius_planet_dragon_3"), doc("gom nis mood");
 			  b can_self_destruct = true;
 				condition* = receive_world_message("we_req_activate",0,"on_first_message"), doc("[*one-shot check (trigger is one-shot)*]");
 				condition* = party_member_within_node(0x5A6BE416,2,-1,-1,"wait_for_every_message"), doc("[*message checker (trigger is non-pure )*]");
@@ -558,7 +558,7 @@
 		{
 			[*]
 			{
-				action* = mood_change("map_world_gom2_2");
+				action* = mood_change("eos_sirius_planet_dragon_2");
 			  b can_self_destruct = true;
 				condition* = party_member_within_bounding_box(5.000000,2.000000,1.000000,"on_every_enter");
 			  f delay = 0.000000;
@@ -1141,7 +1141,7 @@
 		{
 			[*]
 			{
-				action* = mood_change("map_world_gom2_2");
+				action* = mood_change("eos_sirius_planet_dragon_2");
 			  b can_self_destruct = true;
 				condition* = party_member_within_bounding_box(3.000000,3.000000,3.000000,"on_every_enter");
 			  f delay = 0.000000;
@@ -1191,7 +1191,7 @@
 		{
 			[*]
 			{
-				action* = mood_change("map_world_gom2_1");
+				action* = mood_change("eos_sirius_planet_dragon_1");
 			  b can_self_destruct = true;
 				condition* = party_member_within_bounding_box(6.000000,1.000000,10.000000,"on_every_enter");
 			  f delay = 0.000000;
@@ -1220,7 +1220,7 @@
 		{
 			[*]
 			{
-				action* = mood_change("map_world_gom2_2");
+				action* = mood_change("eos_sirius_planet_dragon_2");
 			  b can_self_destruct = true;
 				condition* = party_member_within_bounding_box(1.000000,2.000000,3.000000,"on_every_enter");
 			  f delay = 0.000000;
@@ -1249,7 +1249,7 @@
 		{
 			[*]
 			{
-				action* = mood_change("map_world_gom2_1");
+				action* = mood_change("eos_sirius_planet_dragon_1");
 			  b can_self_destruct = true;
 				condition* = party_member_within_bounding_box(1.000000,2.000000,3.000000,"on_every_enter");
 			  f delay = 0.000000;
@@ -1278,7 +1278,7 @@
 		{
 			[*]
 			{
-				action* = mood_change("map_world_gom2_1");
+				action* = mood_change("eos_sirius_planet_dragon_1");
 			  b can_self_destruct = true;
 				condition* = party_member_within_bounding_box(3.000000,3.000000,3.000000,"on_every_enter");
 			  f delay = 0.000000;
