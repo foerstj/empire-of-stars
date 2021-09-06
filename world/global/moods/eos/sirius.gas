@@ -950,6 +950,12 @@
 	mood_name				= eos_sirius_planet_dragon_3;
 	transition_time			= 2.0f;
 	interior				= true;
+    
+    [frustum]
+    {
+		frustum_width		= 45.0f;
+		frustum_height		= 1000.0f;  // Frustum needs to be high enough such that both levels are loaded during NIS
+    }
 
 	[fog]
 	{
