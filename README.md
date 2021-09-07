@@ -14,18 +14,16 @@ With help & content from:
 - Kathy CF & Bare Elf from Siege The Day,
 - Maps & resources from the original game and Project Britannia.
 
-## Release 0.7: Shit is getting Sirius
+## Release 0.8: The Planet of Evil
 
-This release includes Alpha Centauri, Vega, Betelgeuse, Altair, Rigel and Aldebaran from the 0.6 release and several new regions:
-- The Bandit Moon.\
-  Fight the savage Bandits in this picturesque forest.
-- The Machine Moon.\
-  Turn this bunch of bots into a scrapyard.
-- The Death Moon.\
-  Hack and slash through the horde of rotting flesh.
+This release includes Alpha Centauri, Vega, Betelgeuse, Altair, Rigel, Aldebaran and the Sirius moons from the 0.7 release and several new regions:
+- The Planet of the Reptiloids.\
+  Fight the evil Reptiloid tribe of the Seth and their terrible king - and finally find an Aranna Starstone that brings you home.
+- The Red Planet.\
+  Back on Aranna, you can visit this new gimmick region inhabited by little green men.
 
 Miscellaneous:
-- New enemies were made mostly for the Death Moon (simple re-textures & re-stats). Textures of gray zombie wolves and brown ursae are courtesy of Eksevis' Halloween Mod.
-- Each of the three moons has a quest to find and destroy a Dark Generator located there. You need to destroy all three Dark Generators to be able to teleport to the planet. You can test the condition, but the "planet" is just a dummmy region to be implemented in the next release.
-- On each moon you can find one friendly soul to talk to. They all ask you to kill the Seth King. This will be made into a quest in the next release.
+- Another 3 set items were added to the Astral Set - now altogether 21 items.
+- New enemies (simple re-stats): the Seth; dragon & furies.
+- When both main quests are fulfilled, you get a tutorial tip and funny music.
 - More small changes, of course.
