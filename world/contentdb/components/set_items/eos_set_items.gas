@@ -88,7 +88,7 @@
                 is_single_instance = false;
 
                 alteration = ALTER_CUSTOM_DAMAGE_MELEE;
-                value = 10 * (#itemsequipped);
+                value = 5 * (#itemsequipped);
                 custom_damage = poison;
                 custom_damage_skrit = world\global\skrits\weapon_poison.skrit?duration=4;
                 effect_script_equip = dam_poison_7_wh;
@@ -114,7 +114,7 @@
                 is_single_instance = false;
 
                 alteration = ALTER_CUSTOM_DAMAGE_RANGED;
-                value = 10 * (#itemsequipped);
+                value = 5 * (#itemsequipped);
                 custom_damage = poison;
                 custom_damage_skrit = world\global\skrits\weapon_poison.skrit?duration=4;
                 effect_script_equip = dam_poison_7_wh;
@@ -257,7 +257,7 @@
                 is_single_instance = false;
 
                 alteration = ALTER_CUSTOM_DAMAGE_MELEE;
-                value = 10 * (#itemsequipped);
+                value = 5 * (#itemsequipped);
                 custom_damage = cold;
                 effect_script_equip	= dam_ice_7_wh;
                 effect_script_hit	= hit_flash_10_lbl;
@@ -283,7 +283,7 @@
                 is_single_instance = false;
 
                 alteration = ALTER_CUSTOM_DAMAGE_RANGED;
-                value = 10 * (#itemsequipped);
+                value = 5 * (#itemsequipped);
                 custom_damage = cold;
                 effect_script_equip	= dam_ice_7_wh;
                 effect_script_hit	= hit_flash_10_lbl;
@@ -431,7 +431,7 @@
                 is_single_instance = false;
 
                 alteration = ALTER_CUSTOM_DAMAGE_MELEE;
-                value = 10 * (#itemsequipped);
+                value = 5 * (#itemsequipped);
                 custom_damage = petrify;
                 custom_damage_skrit = world\global\skrits\weapon_hold.skrit?hold_time=4&immunity=immune_freeze;
                 effect_script_equip	= dsx_modifier_stunning_melee;
@@ -457,7 +457,7 @@
                 is_single_instance = false;
 
                 alteration = ALTER_CUSTOM_DAMAGE_RANGED;
-                value = 10 * (#itemsequipped);
+                value = 5 * (#itemsequipped);
                 custom_damage = petrify;
                 custom_damage_skrit = world\global\skrits\weapon_hold.skrit?hold_time=4&immunity=immune_freeze;
                 effect_script_hit	= dsx_modifier_stunning_ranged;
@@ -725,7 +725,7 @@
 				
 				alteration = ALTER_CUSTOM_DAMAGE_MELEE;
 				custom_damage = acid;
-				value = 10 * (#itemsequipped);
+				value = 5 * (#itemsequipped);
 				custom_damage_skrit = world\global\skrits\weapon_poison.skrit?duration=4&manager_template="dsx_base_acid_manager";
 				effect_script_equip = dsx_modifier_misting_melee;
 				effect_script_hit = dsx_modifier_misting_hit;
@@ -748,7 +748,7 @@
 				
 				alteration = ALTER_CUSTOM_DAMAGE_RANGED;
 				custom_damage = acid;
-				value = 10 * (#itemsequipped);
+				value = 5 * (#itemsequipped);
 				custom_damage_skrit = world\global\skrits\weapon_poison.skrit?duration=4&manager_template="dsx_base_acid_manager";
 				effect_script_hit = dsx_modifier_misting_hit;
             }
