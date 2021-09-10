@@ -45,7 +45,7 @@
 		{
 			[*]
 			{
-				action* = mood_change("map_world_path2nt_2");
+				action* = mood_change("eos_altair_ele_2");
 				action* = fade_nodes(0xADA20100,3,-1,-1,"in");
 				action* = fade_nodes(0xADA20100,4,-1,-1,"in");
 			  b can_self_destruct = true;
@@ -103,7 +103,7 @@
 		{
 			[*]
 			{
-				action* = mood_change("map_world_path2nt_1");
+				action* = mood_change("eos_altair_ele_1");
 				action* = fade_nodes(0xADA20100,3,-1,-1,"out:black");
 				action* = fade_nodes(0xADA20100,4,-1,-1,"out:alpha");
 			  b can_self_destruct = true;
@@ -344,7 +344,7 @@
 		{
 			[*]
 			{
-				action* = mood_change("map_world_path2nt_2");
+				action* = mood_change("eos_altair_ele_2");
 			  b can_self_destruct = true;
 				condition* = party_member_within_bounding_box(3.000000,2.000000,0.500000,"on_every_enter");
 			  f delay = 0.000000;
@@ -373,7 +373,7 @@
 		{
 			[*]
 			{
-				action* = mood_change("map_world_path2nt_3");
+				action* = mood_change("eos_altair_ele_3");
 			  b can_self_destruct = true;
 				condition* = party_member_within_bounding_box(0.500000,2.000000,2.200000,"on_every_enter");
 			  f delay = 0.000000;
@@ -402,7 +402,7 @@
 		{
 			[*]
 			{
-				action* = mood_change("map_world_path2nt_3");
+				action* = mood_change("eos_altair_ele_3");
 			  b can_self_destruct = true;
 				condition* = party_member_within_bounding_box(7.000000,2.000000,0.500000,"on_every_enter");
 			  f delay = 0.000000;
