@@ -266,6 +266,72 @@
 		23h00m:color = 0xFF000022;
 	}
 }
+[mood_setting*]
+{
+	// music change from oasis_cave
+	mood_name				= eos_rigel_wet_pyramid_dungeon_1;
+	transition_time			= 4.0f;
+	interior				= true;
+
+	[frustum]
+	{
+		frustum_width		= 45.0f;
+		frustum_height		= 60.0f;
+	}
+
+	[fog]
+	{
+		fog_near_dist		= 35.0f;
+		fog_far_dist		= 45.0f;
+		fog_lowdetail_near_dist		= 35.0f;
+		fog_lowdetail_far_dist		= 40.0f;
+		fog_color			= 0xFF000000;
+		fog_density			= 0.5f;
+	}
+
+	[rain] {} // empty [rain] block for lightning manipulation
+
+	[music]
+	{
+		ambient_track		= "";
+		standard_repeat_delay	= 5.0f;
+		standard_track		= "s_m_WaterDungeon_02";
+		room_type			= rt_stonecorridor;
+	}
+}
+[mood_setting*]
+{
+	// music change again -- main theme loop
+	mood_name				= eos_rigel_wet_pyramid_dungeon_2;
+	transition_time			= 4.0f;
+	interior				= true;
+
+	[frustum]
+	{
+		frustum_width		= 45.0f;
+		frustum_height		= 60.0f;
+	}
+
+	[fog]
+	{
+		fog_near_dist		= 35.0f;
+		fog_far_dist		= 45.0f;
+		fog_lowdetail_near_dist		= 35.0f;
+		fog_lowdetail_far_dist		= 40.0f;
+		fog_color			= 0xFF000000;
+		fog_density			= 0.5f;
+	}
+
+	[rain] {} // empty [rain] block for lightning manipulation
+
+	[music]
+	{
+		ambient_track		= "";
+		standard_repeat_delay	= 0.0f;
+		standard_track		= "s_m_MainTheme_03";
+		room_type			= rt_stonecorridor;
+	}
+}
 
 [mood_setting*]
 {
@@ -858,5 +924,55 @@
 		21h00m:color = 0xFF224488;
 		22h00m:color = 0xFF002244;
 		23h00m:color = 0xFF000022;
+	}
+}
+[mood_setting*]
+{
+	mood_name				= eos_rigel_wet_drystorage_1;
+	transition_time			= 2.0f;
+	interior				= true;
+
+	[fog]
+	{
+		fog_near_dist		= 35.0f;
+		fog_far_dist		= 45.0f;
+		fog_lowdetail_near_dist		= 35.0f;
+		fog_lowdetail_far_dist		= 40.0f;
+		fog_color			= 0xFF000000;
+		fog_density			= 0.4f;
+	}
+
+	[music]
+	{
+		ambient_track		= "";
+		standard_repeat_delay	= 10.0f;
+		standard_track		= "s_m_Crypts_02";
+		room_type			= rt_stonecorridor;
+	}
+}
+
+[mood_setting*]
+{
+	//fast transition for sinkhole
+	mood_name				= eos_rigel_wet_drystorage_2;
+	transition_time			= .5f;
+	interior				= true;
+
+	[fog]
+	{
+		fog_near_dist		= 35.0f;
+		fog_far_dist		= 45.0f;
+		fog_lowdetail_near_dist		= 35.0f;
+		fog_lowdetail_far_dist		= 40.0f;
+		fog_color			= 0xFF000000;
+		fog_density			= 0.4f;
+	}
+
+	[music]
+	{
+		ambient_track		= "";
+		standard_repeat_delay	= 10.0f;
+		standard_track		= "s_m_Crypts_02";
+		room_type			= rt_stonecorridor;
 	}
 }
