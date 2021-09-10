@@ -14,6 +14,30 @@
 	  p position = 1.26395,-3.65,-3.64892,0xe1cbfd2b;
 	}
 }
+[t:sign_glb_01,n:0x01c00261]
+{
+	[common]
+	{
+		screen_name = "Old Ruins";
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.707106,0,0.707107;
+	  p position = -1.06326,0,-0.509354,0xdec8bdfa;
+	}
+}
+[t:sign_glb_01,n:0x01c00263]
+{
+	[common]
+	{
+		screen_name = "Chapel";
+	}
+	[placement]
+	{
+	  q orientation = 0,0.707107,0,0.707106;
+	  p position = -0.604927,0,-0.48578,0xdec8bdfa;
+	}
+}
 [t:dsx_sign_glb_coldstorage,n:0x01c001aa]
 {
 	[aspect]
@@ -31,6 +55,18 @@
 	[placement]
 	{
 	  p position = 0.0743623,-2.5,0.0302434,0x6d9e971e;
+	}
+}
+[t:sign_glb_01,n:0x01c00229]
+{
+	[common]
+	{
+		screen_name = "Old Ruins";
+	}
+	[placement]
+	{
+	  q orientation = 0,0.707107,0,0.707106;
+	  p position = -3.79056,-0.324416,3.70298,0x286944be;
 	}
 }
 [t:sign_glb_01,n:0x01c00db5]
@@ -120,6 +156,30 @@
 		use_point_scids = 0x01c00797,0x01c007c5;
 	}
 }
+[t:sign_glb_01,n:0x01c00231]
+{
+	[common]
+	{
+		screen_name = "Village of Eddiloo";
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.923879,0,0.382684;
+	  p position = -3.54415,0,0.187894,0x2e3a461a;
+	}
+}
+[t:sign_glb_01,n:0x01c00250]
+{
+	[common]
+	{
+		screen_name = "Old Ruins";
+	}
+	[placement]
+	{
+	  q orientation = 0,0.382684,0,0.923879;
+	  p position = -3.62855,-0.320647,0.367169,0x2e3a461a;
+	}
+}
 [t:respawn_statue,n:0x01c00b19]
 {
 	[placement]
@@ -147,6 +207,10 @@
 }
 [t:eos_teleport_statue_small,n:0x01c00041]
 {
+	[common]
+	{
+		screen_name = "Lunar Teleporter (requires Alpha Centauri starstone)";
+	}
 	[on_off_lever]
 	{
 	  x off_scid = 0x01C001A6;
@@ -158,65 +222,5 @@
 	{
 	  p position = 0.0402222,0.2,-0.0867863,0xa5ce3eb1;
 		use_point_scids = 0x01c001a7;
-	}
-}
-[t:sign_glb_01,n:0x01c00229]
-{
-	[common]
-	{
-		screen_name = "Old Ruins";
-	}
-	[placement]
-	{
-	  q orientation = 0,0.707107,0,0.707106;
-	  p position = -3.79056,-0.324416,3.70298,0x286944be;
-	}
-}
-[t:sign_glb_01,n:0x01c00231]
-{
-	[common]
-	{
-		screen_name = "Village of Eddiloo";
-	}
-	[placement]
-	{
-	  q orientation = 0,-0.923879,0,0.382684;
-	  p position = -3.54415,0,0.187894,0x2e3a461a;
-	}
-}
-[t:sign_glb_01,n:0x01c00250]
-{
-	[common]
-	{
-		screen_name = "Old Ruins";
-	}
-	[placement]
-	{
-	  q orientation = 0,0.382684,0,0.923879;
-	  p position = -3.62855,-0.320647,0.367169,0x2e3a461a;
-	}
-}
-[t:sign_glb_01,n:0x01c00261]
-{
-	[common]
-	{
-		screen_name = "Old Ruins";
-	}
-	[placement]
-	{
-	  q orientation = 0,-0.707106,0,0.707107;
-	  p position = -1.06326,0,-0.509354,0xdec8bdfa;
-	}
-}
-[t:sign_glb_01,n:0x01c00263]
-{
-	[common]
-	{
-		screen_name = "Chapel";
-	}
-	[placement]
-	{
-	  q orientation = 0,0.707107,0,0.707106;
-	  p position = -0.604927,0,-0.48578,0xdec8bdfa;
 	}
 }
