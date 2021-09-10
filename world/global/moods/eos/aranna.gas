@@ -28,6 +28,187 @@
 		standard_track = "s_m_BesiegedTown_02";
 	}
 }
+[mood_setting*]
+{
+	mood_name				= eos_aranna_island_1;
+	transition_time			= 5.0f;
+	interior				= false;
+
+	[frustum]
+	{
+		frustum_width		= 45.0f;
+		frustum_height		= 60.0f;
+	}
+
+	[fog]
+	{
+		fog_near_dist		= 35.0f;
+		fog_far_dist		= 50.0f;
+		fog_lowdetail_near_dist		= 35.0f;
+		fog_lowdetail_far_dist		= 45.0f;
+		fog_color			= 0xFF757585;
+		fog_density			= 0.5f;
+	}
+
+	[rain] {} // empty [rain] block for lightning manipulation
+
+	[music]
+	{
+		ambient_track		= "";
+		standard_repeat_delay	= 10.0f;
+		standard_track		= "s_m_BesiegedTown_02";
+		room_type			= rt_generic;
+	}
+}
+[mood_setting*]
+{
+	mood_name				= eos_aranna_island_2_1;
+	transition_time			= 5.0f;
+	interior				= false;
+
+	[frustum]
+	{
+		frustum_width		= 45.0f;
+		frustum_height		= 60.0f;
+	}
+
+	[fog]
+	{
+		fog_near_dist		= 20.0f;
+		fog_far_dist		= 50.0f;
+		fog_lowdetail_near_dist		= 20.0f;
+		fog_lowdetail_far_dist		= 45.0f;
+		fog_color			= 0xFF707080;
+		fog_density			= 0.5f;
+	}
+
+	[rain]
+	{
+		rain_density		= 75.0f;
+		lightning			= false;
+	}
+	[music]
+	{
+		ambient_track		= "";
+		standard_repeat_delay	= 10.0f;
+		standard_track		= "s_m_BesiegedTown_01";
+		room_type			= rt_generic;
+	}
+}
+[mood_setting*]
+{
+	//max rain
+	mood_name				= eos_aranna_island_2_2;
+	transition_time			= 11.0f;
+	interior				= false;
+
+	[frustum]
+	{
+		frustum_width		= 45.0f;
+		frustum_height		= 60.0f;
+	}
+
+	[fog]
+	{
+		fog_near_dist		= 2.0f;
+		fog_far_dist		= 45.0f;
+		fog_lowdetail_near_dist		= 2.0f;
+		fog_lowdetail_far_dist		= 40.0f;
+		fog_color			= 0xFF606063;
+		fog_density			= 0.5f;
+	}
+
+	[rain]
+	{
+		rain_density		= 400.0f;
+		lightning			= true;
+	}
+
+	[wind]
+	{
+		wind_velocity		= 3.0f;
+		wind_direction		= 2.0f;
+	}
+
+	[music]
+	{
+		ambient_track		= "";
+		standard_repeat_delay	= 10.0f;
+		standard_track		= "s_m_BesiegedTown_01";
+		room_type			= rt_generic;
+	}
+}
+[mood_setting*]
+{
+	mood_name				= eos_aranna_island_3;
+	transition_time			= 7.0f;
+	interior				= false;
+
+	[frustum]
+	{
+		frustum_width		= 45.0f;
+		frustum_height		= 60.0f;
+	}
+
+	[fog]
+	{
+		fog_near_dist		= 40.0f;
+		fog_far_dist		= 50.0f;
+		fog_lowdetail_near_dist		= 40.0f;
+		fog_lowdetail_far_dist		= 45.0f;
+		fog_color			= 0xFF757584;
+		fog_density			= 0.5f;
+	}
+
+	[wind]
+	{
+		wind_velocity		= 1.0f;
+		wind_direction		= 2.0f;
+	}
+
+	[rain] {} // empty [rain] block for lightning manipulation
+
+	[music]
+	{
+		ambient_track		= "";
+		standard_repeat_delay	= 10.0f;
+		standard_track		= "s_m_BesiegedTown_01";
+		room_type			= rt_generic;
+	}
+}
+[mood_setting*]
+{
+	// This mood has an extra-tall frustum to make sure that the elevator from mega_forest -> island works.
+	mood_name				= eos_aranna_island_4;
+	transition_time			= 1.0f;
+	interior				= true;
+
+	[frustum]
+	{
+		frustum_width		= 45.0f;
+		frustum_height		= 70.0f; // extra tall
+	}
+
+	[fog]
+	{
+		fog_near_dist		= 25.0f;
+		fog_far_dist		= 35.0f;
+		fog_lowdetail_near_dist		= 25.0f;
+		fog_lowdetail_far_dist		= 30.0f;
+		fog_color			= 0xFF000000;
+		fog_density			= 0.5f;
+	}
+
+	[rain] {} // empty [rain] block for lightning manipulation
+
+	[music]
+	{
+		ambient_track		= "";
+		standard_repeat_delay	= 10.0f;
+		standard_track		= "s_m_FarmHouse_04";
+		room_type			= rt_cave;
+	}
+}
 [mood_setting*]  // teleport(area) mood but with DK music
 {
 	mood_name = eos_aranna_victory;
