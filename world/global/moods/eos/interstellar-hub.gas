@@ -1,0 +1,31 @@
+[mood_setting*]
+{
+	mood_name				= eos_interstellar_hub_teleport;
+	transition_time			= 40.0f;
+	interior				= true;
+
+	[frustum]
+	{
+		frustum_width		= 45.0f;
+		frustum_height		= 60.0f;
+	}
+	
+	[fog]
+	{
+		fog_near_dist		= 50.0f;
+		fog_far_dist		= 60.0f;
+		fog_lowdetail_near_dist		= 50.0f;
+		fog_lowdetail_far_dist		= 55.0f;
+		fog_color			= 0xFF000000;
+		fog_density			= 0.5f;
+	}
+
+	[rain] {} // empty [rain] block for lightning manipulation
+
+	[music]
+	{
+		ambient_track		= "";
+		standard_track		= "s_m_Farmhouse_04";
+		room_type			= rt_parkinglot;
+	}
+}
