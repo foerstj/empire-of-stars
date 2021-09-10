@@ -896,6 +896,31 @@
 }
 [mood_setting*]
 {
+	// Mood for the barracks area
+	mood_name				= eos_sirius_planet_dragon_entrance;
+	transition_time			= 1.0f;
+	interior				= true;
+
+	[fog]
+	{
+		fog_near_dist		= 30.0f;
+		fog_far_dist		= 40.0f;
+		fog_lowdetail_near_dist		= 30.0f;
+		fog_lowdetail_far_dist		= 35.0f;
+		fog_color			= 0xFF000000;
+		fog_density			= 0.5f;
+	}
+
+	[music]
+	{
+		ambient_track		= "";
+		standard_repeat_delay = 10.0f;
+		standard_track		= "s_m_CastleDungeon_01";
+		room_type			= rt_stonecorridor;
+	}
+}
+[mood_setting*]
+{
 	// this is the transition from gl_r1
 	mood_name				= eos_sirius_planet_dragon_1;
 	transition_time			= 10.0f;
