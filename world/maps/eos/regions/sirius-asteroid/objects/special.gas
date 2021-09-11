@@ -194,7 +194,7 @@
 			{
 				action* = mood_change("eos_sirius_teleport");
 			  b can_self_destruct = true;
-				condition* = party_member_within_sphere(2.500000,"on_every_enter");
+				condition* = party_member_within_sphere(4.000000,"on_every_enter");
 			  f delay = 0.000000;
 			  b flip_flop = false;
 			  b multi_player = true;
@@ -210,7 +210,7 @@
 	[placement]
 	{
 	  q orientation = 0,2.98023e-008,0,1;
-	  p position = 0.00534248,0.0537954,-1.26631,0x6a89ca76;
+	  p position = -0.0775375,-0.0702965,-0.765678,0x6a89ca76;
 	}
 }
 [t:trigger_generic,n:0x0e00004f]
@@ -455,5 +455,92 @@
 	[placement]
 	{
 	  p position = -0.525078,0.2,-0.524624,0x4c9f7fdf;
+	}
+}
+[t:trigger_generic,n:0x0e000086]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = mood_change("eos_sirius_teleport");
+			  b can_self_destruct = true;
+				condition* = party_member_within_sphere(4.000000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,2.98023e-008,0,1;
+	  p position = -0.0125518,-0.0282657,-0.905781,0xc2053303;
+	}
+}
+[t:trigger_generic,n:0x0e000087]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = mood_change("eos_sirius_teleport");
+			  b can_self_destruct = true;
+				condition* = party_member_within_sphere(4.000000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,2.98023e-008,0,1;
+	  p position = -0.0937805,-0.3,0.397491,0x26986d71;
+	}
+}
+[t:trigger_generic,n:0x0e000088]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = mood_change("eos_sirius_teleport");
+			  b can_self_destruct = true;
+				condition* = party_member_within_sphere(4.000000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,2.98023e-008,0,1;
+	  p position = 0.129731,-0.3,0.916468,0x6b2023c4;
 	}
 }

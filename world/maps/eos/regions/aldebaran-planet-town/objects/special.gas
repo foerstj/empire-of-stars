@@ -342,94 +342,6 @@
 	  p position = 8.74209,-1.5,0.523514,0xed8ca793;
 	}
 }
-[t:trigger_change_mood_box,n:0x07200784]
-{
-	[common]
-	{
-		dev_instance_text = "MOOD PWL";
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = mood_change("eos_aldebaran_town_1");
-			  b can_self_destruct = true;
-				condition* = party_member_within_sphere(2.500000,"on_every_enter");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-			[*]
-			{
-				action* = set_player_world_location("ad_town");
-			  b can_self_destruct = true;
-				condition* = party_member_within_sphere(2.500000,"on_every_enter");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = false;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  p position = 1.58241,-1,-2.71705,0x33e40900;
-	}
-}
-[t:trigger_change_mood_box,n:0x07200785]
-{
-	[common]
-	{
-		dev_instance_text = "MOOD PWL";
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = mood_change("eos_aldebaran_town_1");
-			  b can_self_destruct = true;
-				condition* = party_member_within_sphere(2.500000,"on_every_enter");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-			[*]
-			{
-				action* = set_player_world_location("ad_town");
-			  b can_self_destruct = true;
-				condition* = party_member_within_sphere(2.500000,"on_every_enter");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = false;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  p position = -0.819801,0,0.627632,0xe907aaaa;
-	}
-}
 [t:trigger_fade_nodes_box,n:0x07200086]
 {
 	[common]
@@ -557,139 +469,6 @@
 	{
 	  q orientation = 0,-0.382683,0,0.92388;
 	  p position = -3.23786,-4.25,-2.24849,0x3909b301;
-	}
-}
-[t:trigger_change_mood_box,n:0x07200788]
-{
-	[common]
-	{
-		dev_instance_text = "MOOD PWL";
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = mood_change("eos_aldebaran_town_1");
-			  b can_self_destruct = true;
-				condition* = party_member_within_sphere(2.500000,"on_every_enter");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-			[*]
-			{
-				action* = set_player_world_location("ad_town");
-			  b can_self_destruct = true;
-				condition* = party_member_within_sphere(2.500000,"on_every_enter");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = false;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  p position = -0.638855,0,1.52969,0x2a2329ed;
-	}
-}
-[t:trigger_change_mood_box,n:0x07200787]
-{
-	[common]
-	{
-		dev_instance_text = "MOOD PWL";
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = mood_change("eos_aldebaran_town_1");
-			  b can_self_destruct = true;
-				condition* = party_member_within_sphere(2.500000,"on_every_enter");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-			[*]
-			{
-				action* = set_player_world_location("ad_town");
-			  b can_self_destruct = true;
-				condition* = party_member_within_sphere(2.500000,"on_every_enter");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = false;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  q orientation = 0,1,0,0;
-	  p position = -0.302658,0,-0.0228271,0x2fa6d20f;
-	}
-}
-[t:trigger_change_mood_box,n:0x07200786]
-{
-	[common]
-	{
-		dev_instance_text = "MOOD PWL";
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = mood_change("eos_aldebaran_town_1");
-			  b can_self_destruct = true;
-				condition* = party_member_within_sphere(2.500000,"on_every_enter");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-			[*]
-			{
-				action* = set_player_world_location("ad_town");
-			  b can_self_destruct = true;
-				condition* = party_member_within_sphere(2.500000,"on_every_enter");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = false;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  p position = -0.660957,0,-0.455521,0x59b6d363;
 	}
 }
 [t:trigger_generic,n:0x0720001c]
@@ -866,50 +645,6 @@
 	  p position = -0.6371,0,-1.9554,0x4d9807f0;
 	}
 }
-[t:trigger_change_mood_box,n:0x07200465]
-{
-	[common]
-	{
-		dev_instance_text = "MOOD PWL";
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = mood_change("eos_aldebaran_town_1");
-			  b can_self_destruct = true;
-				condition* = party_member_within_sphere(2.500000,"on_every_enter");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-			[*]
-			{
-				action* = set_player_world_location("ad_town");
-			  b can_self_destruct = true;
-				condition* = party_member_within_sphere(2.500000,"on_every_enter");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = false;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  p position = -0.817703,0,0.664604,0xb5546768;
-	}
-}
 [t:trigger_fade_nodes_box,n:0x07200082]
 {
 	[common]
@@ -1041,50 +776,6 @@
 	  p position = 3.54651,-3.1,0.313076,0x1fae5174;
 	}
 }
-[t:trigger_change_mood_box,n:0x072002a4]
-{
-	[common]
-	{
-		dev_instance_text = "MOOD PWL";
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = mood_change("eos_aldebaran_town_1");
-			  b can_self_destruct = true;
-				condition* = party_member_within_sphere(2.500000,"on_every_enter");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-			[*]
-			{
-				action* = set_player_world_location("ad_town");
-			  b can_self_destruct = true;
-				condition* = party_member_within_sphere(2.500000,"on_every_enter");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = false;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  p position = -6.90458,-3.5,4.70731,0x1fae5174;
-	}
-}
 [t:use_point,n:0x072005db]
 {
 	[placement]
@@ -1099,18 +790,18 @@
 	  p position = 3.88705,-3.1,-5.31835,0x1fae5174;
 	}
 }
-[t:trigger_change_mood_box,n:0x07200783]
+[t:trigger_generic,n:0x07200177]
 {
 	[common]
 	{
-		dev_instance_text = "MOOD PWL";
+		dev_instance_text = "START POS";
 		[instance_triggers]
 		{
 			[*]
 			{
 				action* = mood_change("eos_aldebaran_town_1");
 			  b can_self_destruct = true;
-				condition* = party_member_within_sphere(2.500000,"on_every_enter");
+				condition* = party_member_within_sphere(16.000000,"on_every_enter");
 			  f delay = 0.000000;
 			  b flip_flop = false;
 			  b multi_player = true;
@@ -1125,7 +816,7 @@
 			{
 				action* = set_player_world_location("ad_town");
 			  b can_self_destruct = true;
-				condition* = party_member_within_sphere(2.500000,"on_every_enter");
+				condition* = party_member_within_sphere(16.000000,"on_every_enter");
 			  f delay = 0.000000;
 			  b flip_flop = false;
 			  b multi_player = true;
@@ -1140,65 +831,8 @@
 	}
 	[placement]
 	{
-	  p position = 2.1263,0,1.16655,0x85ebe68c;
-	}
-}
-[t:trigger_change_mood_box,n:0x07200546]
-{
-	[common]
-	{
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = mood_change("eos_aldebaran_town_1");
-			  b can_self_destruct = true;
-				condition* = party_member_within_sphere(4.000000,"on_every_enter");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  q orientation = 0,1,0,0;
-	  p position = -3.46407,0,-1.09742,0x43f8eb15;
-	}
-}
-[t:trigger_generic,n:0x07200177]
-{
-	[common]
-	{
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = mood_change("eos_aldebaran_town_1");
-			  b can_self_destruct = true;
-				condition* = party_member_within_sphere(10.000000,"on_every_enter");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
 	  q orientation = 0,-0.685932,0,0.727666;
-	  p position = 1.37333,-0.999998,-2.25253,0xad333f0f;
+	  p position = 3.14168,-1,-3.26047,0xad333f0f;
 	}
 }
 [t:trigger_fade_nodes_box,n:0x0720007e]
@@ -1914,6 +1548,34 @@
 	  p position = -0.0113016,-0.6,-1.60268,0x36acff35;
 	}
 }
+[t:trigger_generic,n:0x072001fb]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = set_player_world_location("ad_town");
+			  b can_self_destruct = true;
+				condition* = party_member_within_sphere(6.000000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = false;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  p position = 0.173382,-0.599998,-0.00369835,0x36acff35;
+	}
+}
 [t:use_point,n:0x0720081f]
 {
 	[placement]
@@ -1962,33 +1624,5 @@
 	[placement]
 	{
 	  p position = -2.4872,-2.65,-2.17723,0x2dbbce59;
-	}
-}
-[t:trigger_generic,n:0x072001fb]
-{
-	[common]
-	{
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = set_player_world_location("ad_town");
-			  b can_self_destruct = true;
-				condition* = party_member_within_sphere(6.000000,"on_every_enter");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = false;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  p position = 0.173382,-0.599998,-0.00369835,0x36acff35;
 	}
 }
