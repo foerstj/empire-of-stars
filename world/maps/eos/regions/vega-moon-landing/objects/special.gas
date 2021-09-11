@@ -29,6 +29,34 @@
 	  p position = 0.119727,0.2,-1.4809,0x049399c2;
 	}
 }
+[t:trigger_generic,n:0x08000176]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = set_player_world_location("vg_moon");
+			  b can_self_destruct = true;
+				condition* = party_member_within_sphere(6.000000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = false;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  p position = -0.0884571,0,-1.18964,0x28d9c664;
+	}
+}
 [t:use_point,n:0x08001b33]
 {
 	[placement]
@@ -1034,33 +1062,5 @@
 	[placement]
 	{
 	  p position = 0.79318,-0.934252,-1.58605,0x83c9a091;
-	}
-}
-[t:trigger_generic,n:0x08000176]
-{
-	[common]
-	{
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = set_player_world_location("vg_moon");
-			  b can_self_destruct = true;
-				condition* = party_member_within_sphere(6.000000,"on_every_enter");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = false;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  p position = -0.0884571,0,-1.18964,0x28d9c664;
 	}
 }
