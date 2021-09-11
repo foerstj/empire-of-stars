@@ -2773,3 +2773,119 @@
 	  p position = 2.75139,-1.4,-0.450359,0xb4c52026;
 	}
 }
+[t:trigger_generic,n:0x0270055b]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = set_player_world_location("at_town");
+			  b can_self_destruct = true;
+				condition* = party_member_within_sphere(8.000000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = false;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  p position = -0.847809,0,0.518262,0xdac7514d;
+	}
+}
+[t:trigger_generic,n:0x02700562]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = set_player_world_location("at_town");
+			  b can_self_destruct = true;
+				condition* = party_member_within_bounding_box(6.000000,0.500000,1.000000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = false;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  p position = 0.0512943,15.9252,0.854015,0x54dde062;
+	}
+}
+[t:trigger_generic,n:0x02700563]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = set_player_world_location("at_town_area");
+			  b can_self_destruct = true;
+				condition* = party_member_within_bounding_box(6.000000,0.500000,1.000000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = false;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  p position = -0.026329,-6,-1.98193,0x3e77f433;
+	}
+}
+[t:trigger_generic,n:0x02700564]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = set_player_world_location("at_town_area");
+			  b can_self_destruct = true;
+				condition* = party_member_within_bounding_box(6.000000,0.500000,1.000000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = false;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[gizmo]
+	{
+	  v diffuse_color = 0,0,0;
+	}
+	[placement]
+	{
+	  p position = -0.583802,0,-1.266,0xc6de0945;
+	}
+}
