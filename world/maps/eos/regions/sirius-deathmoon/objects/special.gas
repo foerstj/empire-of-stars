@@ -55,6 +55,34 @@
 	  p position = -1.57727,-1,-2.48377,0x6d91e2a9;
 	}
 }
+[t:trigger_generic,n:0x00200093]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = set_player_world_location("sr_deathmoon");
+			  b can_self_destruct = true;
+				condition* = party_member_within_sphere(6.000000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = false;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  p position = 3.39405,0,-0.11273,0x7e2476b1;
+	}
+}
 [t:trigger_generic,n:0x0020001d]
 {
 	[common]
@@ -3034,33 +3062,5 @@
 	{
 	  q orientation = 0,0.707107,0,0.707107;
 	  p position = 2.62159,-1,-2.81721,0x2ecb949e;
-	}
-}
-[t:trigger_generic,n:0x00200093]
-{
-	[common]
-	{
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = set_player_world_location("sr_deathmoon");
-			  b can_self_destruct = true;
-				condition* = party_member_within_sphere(6.000000,"on_every_enter");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = false;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  p position = 3.39405,0,-0.11273,0x7e2476b1;
 	}
 }
