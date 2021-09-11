@@ -351,7 +351,7 @@
 			[*]
 			{
 				action* = mood_change("eos_aldebaran_town_1");
-				action* = set_player_world_location("hiroth");
+				action* = set_player_world_location("ad_town");
 			  b can_self_destruct = true;
 				condition* = party_member_within_sphere(2.500000,"on_every_enter");
 			  f delay = 0.000000;
@@ -380,7 +380,7 @@
 			[*]
 			{
 				action* = mood_change("eos_aldebaran_town_1");
-				action* = set_player_world_location("hiroth");
+				action* = set_player_world_location("ad_town");
 			  b can_self_destruct = true;
 				condition* = party_member_within_sphere(2.500000,"on_every_enter");
 			  f delay = 0.000000;
@@ -538,7 +538,7 @@
 			[*]
 			{
 				action* = mood_change("eos_aldebaran_town_1");
-				action* = set_player_world_location("hiroth");
+				action* = set_player_world_location("ad_town");
 			  b can_self_destruct = true;
 				condition* = party_member_within_sphere(2.500000,"on_every_enter");
 			  f delay = 0.000000;
@@ -567,7 +567,7 @@
 			[*]
 			{
 				action* = mood_change("eos_aldebaran_town_1");
-				action* = set_player_world_location("hiroth");
+				action* = set_player_world_location("ad_town");
 			  b can_self_destruct = true;
 				condition* = party_member_within_sphere(2.500000,"on_every_enter");
 			  f delay = 0.000000;
@@ -597,7 +597,7 @@
 			[*]
 			{
 				action* = mood_change("eos_aldebaran_town_1");
-				action* = set_player_world_location("hiroth");
+				action* = set_player_world_location("ad_town");
 			  b can_self_destruct = true;
 				condition* = party_member_within_sphere(2.500000,"on_every_enter");
 			  f delay = 0.000000;
@@ -800,7 +800,7 @@
 			[*]
 			{
 				action* = mood_change("eos_aldebaran_town_1");
-				action* = set_player_world_location("hiroth");
+				action* = set_player_world_location("ad_town");
 			  b can_self_destruct = true;
 				condition* = party_member_within_sphere(2.500000,"on_every_enter");
 			  f delay = 0.000000;
@@ -960,7 +960,7 @@
 			[*]
 			{
 				action* = mood_change("eos_aldebaran_town_1");
-				action* = set_player_world_location("hiroth");
+				action* = set_player_world_location("ad_town");
 			  b can_self_destruct = true;
 				condition* = party_member_within_sphere(2.500000,"on_every_enter");
 			  f delay = 0.000000;
@@ -1003,7 +1003,7 @@
 			[*]
 			{
 				action* = mood_change("eos_aldebaran_town_1");
-				action* = set_player_world_location("hiroth");
+				action* = set_player_world_location("ad_town");
 			  b can_self_destruct = true;
 				condition* = party_member_within_sphere(2.500000,"on_every_enter");
 			  f delay = 0.000000;
@@ -1590,7 +1590,7 @@
 		{
 			[*]
 			{
-				action* = set_player_world_location("hiroth");
+				action* = set_player_world_location("ad_town");
 			  b can_self_destruct = true;
 				condition* = party_member_within_bounding_box(0.500000,2.000000,20.000000,"on_every_enter");
 			  f delay = 0.000000;
@@ -1667,36 +1667,6 @@
 	{
 	  q orientation = 0,-0.707107,0,0.707107;
 	  p position = 0.807068,-0.461716,-0.968348,0xfef5f10c;
-	}
-}
-[t:trigger_change_mood_box,n:0x072006d7]
-{
-	[common]
-	{
-		dev_instance_text = "PLAYER LOCATION";
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = set_player_world_location("hiroth_ravine");
-			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(0.500000,1.200000,20.000000,"on_every_enter");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  q orientation = 0,0.92388,0,0.382683;
-	  p position = 0.861923,0,2.31772,0x7d0ecc5c;
 	}
 }
 [t:trigger_change_mood_box,n:0x07200464]

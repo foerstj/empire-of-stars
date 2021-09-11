@@ -2,13 +2,12 @@
 {
 	[common]
 	{
-		dev_instance_text = "MOOD, PLAYER LOCATION";
+		dev_instance_text = "MOOD";
 		[instance_triggers]
 		{
 			[*]
 			{
 				action* = mood_change("eos_sirius_deathmoon_3");
-				action* = set_player_world_location("elddim_glade");
 			  b can_self_destruct = true;
 				condition* = party_member_within_bounding_box(20.000000,2.000000,1.000000,"on_every_enter");
 			  f delay = 0.000000;
@@ -306,13 +305,12 @@
 {
 	[common]
 	{
-		dev_instance_text = "MOOD, PLAYER LOCATION, FADE";
+		dev_instance_text = "MOOD, FADE";
 		[instance_triggers]
 		{
 			[*]
 			{
 				action* = mood_change("eos_sirius_deathmoon_3");
-				action* = set_player_world_location("elddim_glade");
 				action* = fade_nodes(0xE0A672FE,55,-1,-1,"in"), doc("gd_r1_bad_nodes");
 				action* = fade_nodes(0xE0A672FE,1,-1,-1,"in"), doc("gd_r1");
 				action* = fade_nodes(0xE0A672FE,5,-1,-1,"in"), doc("gd_r1_l");
@@ -515,35 +513,6 @@
 	{
 	  q orientation = 0,0.195091,0,0.980785;
 	  p position = -1.99303,1,2.1084,0x65b3bb01;
-	}
-}
-[t:trigger_change_mood_box,n:0x002005d1]
-{
-	[common]
-	{
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = set_player_world_location("elddim_glade");
-			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(3.000000,1.000000,1.000000,"on_every_enter");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  q orientation = 0,-0.55557,0,0.83147;
-	  p position = 6.95681,-3.71979,-1.02273,0xbd13d160;
 	}
 }
 [t:trigger_change_mood_box,n:0x00200900]
@@ -2571,13 +2540,12 @@
 {
 	[common]
 	{
-		dev_instance_text = "MOOD, PLAYER LOCATION";
+		dev_instance_text = "MOOD";
 		[instance_triggers]
 		{
 			[*]
 			{
 				action* = mood_change("eos_sirius_deathmoon_4");
-				action* = set_player_world_location("elddim_glade");
 			  b can_self_destruct = true;
 				condition* = party_member_within_bounding_box(25.000000,3.000000,1.000000,"on_every_enter");
 			  f delay = 0.000000;
@@ -2689,13 +2657,12 @@
 {
 	[common]
 	{
-		dev_instance_text = "MOOD, PLAYER LOCATION";
+		dev_instance_text = "MOOD";
 		[instance_triggers]
 		{
 			[*]
 			{
 				action* = mood_change("eos_sirius_deathmoon_4");
-				action* = set_player_world_location("elddim_glade");
 			  b can_self_destruct = true;
 				condition* = party_member_within_bounding_box(3.000000,2.000000,1.000000,"on_every_enter");
 			  f delay = 0.000000;
@@ -2747,13 +2714,12 @@
 {
 	[common]
 	{
-		dev_instance_text = "MOOD, PLAYER LOCATION";
+		dev_instance_text = "MOOD";
 		[instance_triggers]
 		{
 			[*]
 			{
 				action* = mood_change("eos_sirius_deathmoon_4");
-				action* = set_player_world_location("elddim_glade");
 			  b can_self_destruct = true;
 				condition* = party_member_within_bounding_box(3.000000,2.000000,1.000000,"on_every_enter");
 			  f delay = 0.000000;
@@ -3049,13 +3015,12 @@
 {
 	[common]
 	{
-		dev_instance_text = "MOOD, PLAYER LOCATION";
+		dev_instance_text = "MOOD";
 		[instance_triggers]
 		{
 			[*]
 			{
 				action* = mood_change("eos_sirius_deathmoon_2");
-				action* = set_player_world_location("elddim_glade");
 			  b can_self_destruct = true;
 				condition* = party_member_within_bounding_box(20.000000,3.000000,1.000000,"on_every_enter");
 			  f delay = 0.000000;

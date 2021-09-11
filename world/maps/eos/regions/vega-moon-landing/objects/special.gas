@@ -73,7 +73,6 @@
 			[*]
 			{
 				action* = mood_change("eos_vega_moon_darkdarkjungle");
-				action* = set_player_world_location("cloud_forest");
 			  b can_self_destruct = true;
 				condition* = party_member_within_bounding_box(1.000000,1.000000,4.000000,"on_every_enter");
 			  f delay = 0.000000;
@@ -92,36 +91,6 @@
 	{
 	  q orientation = 0,-5.96046e-008,0,1;
 	  p position = -1.8262,7.92162,4.40672,0xb9a0a95f;
-	}
-}
-[t:trigger_change_mood_box,n:0x080000fb]
-{
-	[common]
-	{
-		dev_instance_text = "PLAYER LOCATION";
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = set_player_world_location("cloud_forest");
-			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(7.000000,1.000000,1.000000,"on_every_enter");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  q orientation = 0,0.707107,0,0.707107;
-	  p position = 0.738907,0,-1.16016,0x73c4ceb5;
 	}
 }
 [t:use_point,n:0x08001aca]
@@ -275,13 +244,12 @@
 {
 	[common]
 	{
-		dev_instance_text = "MOOD, PLAYER LOCATION";
+		dev_instance_text = "MOOD";
 		[instance_triggers]
 		{
 			[*]
 			{
 				action* = mood_change("eos_vega_moon_darkjungle2");
-				action* = set_player_world_location("foothills_utrae");
 			  b can_self_destruct = true;
 				condition* = party_member_within_bounding_box(1.000000,1.000000,24.000000,"on_every_enter");
 			  f delay = 0.000000;
@@ -306,13 +274,12 @@
 {
 	[common]
 	{
-		dev_instance_text = "MOOD, PLAYER LOCATION";
+		dev_instance_text = "MOOD";
 		[instance_triggers]
 		{
 			[*]
 			{
 				action* = mood_change("eos_vega_moon_darkjungle");
-				action* = set_player_world_location("cloud_forest");
 			  b can_self_destruct = true;
 				condition* = party_member_within_bounding_box(1.000000,1.000000,24.000000,"on_every_enter");
 			  f delay = 0.000000;
@@ -337,13 +304,12 @@
 {
 	[common]
 	{
-		dev_instance_text = "MOOD, PLAYER LOCATION";
+		dev_instance_text = "MOOD";
 		[instance_triggers]
 		{
 			[*]
 			{
 				action* = mood_change("eos_vega_moon_darkjungle2");
-				action* = set_player_world_location("foothills_utrae");
 			  b can_self_destruct = true;
 				condition* = party_member_within_bounding_box(1.000000,1.000000,20.000000,"on_every_enter");
 			  f delay = 0.000000;
@@ -368,13 +334,12 @@
 {
 	[common]
 	{
-		dev_instance_text = "MOOD, PLAYER LOCATION";
+		dev_instance_text = "MOOD";
 		[instance_triggers]
 		{
 			[*]
 			{
 				action* = mood_change("eos_vega_moon_darkjungle");
-				action* = set_player_world_location("cloud_forest");
 			  b can_self_destruct = true;
 				condition* = party_member_within_bounding_box(1.000000,1.000000,20.000000,"on_every_enter");
 			  f delay = 0.000000;
@@ -559,7 +524,6 @@
 			[*]
 			{
 				action* = mood_change("eos_vega_moon_darkjungle2");
-				action* = set_player_world_location("foothills_utrae");
 			  b can_self_destruct = true;
 				condition* = party_member_within_bounding_box(1.000000,1.000000,2.000000,"on_every_enter");
 			  f delay = 0.000000;
@@ -589,7 +553,6 @@
 			[*]
 			{
 				action* = mood_change("eos_vega_moon_darkjungle2");
-				action* = set_player_world_location("foothills_utrae");
 			  b can_self_destruct = true;
 				condition* = party_member_within_bounding_box(1.000000,1.000000,2.000000,"on_every_enter");
 			  f delay = 0.000000;
@@ -675,13 +638,12 @@
 {
 	[common]
 	{
-		dev_instance_text = "MOOD, PLAYER LOCATION";
+		dev_instance_text = "MOOD";
 		[instance_triggers]
 		{
 			[*]
 			{
 				action* = mood_change("eos_vega_moon_darkjungle2");
-				action* = set_player_world_location("foothills_utrae");
 			  b can_self_destruct = true;
 				condition* = party_member_within_bounding_box(1.000000,1.000000,5.000000,"on_every_enter");
 			  f delay = 0.000000;
