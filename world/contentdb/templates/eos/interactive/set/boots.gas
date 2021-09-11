@@ -9,6 +9,14 @@
         b allow_modifiers = false;
         is_pcontent_allowed = false;
 		screen_name = "Serpent Boots of Stars";
+		[template_triggers]
+		{
+			[*]
+			{
+				action* = call_sfx_script( "sparkle_cyan" );
+				condition* = receive_world_message("we_dropped");
+			}
+		}
 	}
 	[defend]
 	{

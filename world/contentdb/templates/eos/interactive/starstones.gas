@@ -1,6 +1,17 @@
 [t:template,n:starstone_base]
 {
     specializes = base_stone_glb;
+    [common]
+    {
+		[template_triggers]
+		{
+			[*]
+			{
+				action* = call_sfx_script( "sparkle_yellow" );
+				condition* = receive_world_message("we_dropped");
+			}
+		}
+    }
 }
 [t:template,n:starstone_aranna]
 {

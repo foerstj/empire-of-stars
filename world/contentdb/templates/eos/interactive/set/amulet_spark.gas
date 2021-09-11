@@ -8,6 +8,14 @@
     {
         b allow_modifiers = false;
         screen_name = "Spark Amulet of Stars";
+		[template_triggers]
+		{
+			[*]
+			{
+				action* = call_sfx_script( "sparkle_cyan" );
+				condition* = receive_world_message("we_dropped");
+			}
+		}
     }
     [set_item]
     {

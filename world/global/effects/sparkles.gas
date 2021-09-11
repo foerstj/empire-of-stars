@@ -1,0 +1,29 @@
+[effect_script*]
+{
+	name	=sparkle_cyan;
+
+	script	=[[
+        sfx create sparkles #TARGET 
+            "color0(.2,.5,.5)count(7)offset(0,.2,0)psize(.75)yvel(.2)
+            scale(.5)";
+        sfx start #POP;
+        sfx create sparkles #TARGET 
+            "color0(.2,.5,.5)count(3)offset(0,.2,0)psize(.80)scale(.4)
+            ts(1.5)";
+        sfx start #POP;
+        ]];
+}
+
+[effect_script*]
+{
+	name	=sparkle_yellow;
+
+	script	=[[
+        sfx create sparkles #TARGET 
+        "color0(.75,.6,0)count(7)psize(.75)yvel(.2)scale(.5)";
+        sfx start #POP;
+        sfx create sparkles #TARGET 
+            "color0(.75,.6,0)count(3)psize(.80)scale(.4)ts(1.5)";
+        sfx start #POP;
+    ]];
+}
