@@ -56,35 +56,6 @@
 	  p position = -0.280574,-0.294483,0.220234,0x86bae060;
 	}
 }
-[t:trigger_generic,n:0x046007b3]
-{
-	[common]
-	{
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = send_world_message("we_req_activate",0x04600795,0f,"default","party_member_within_bounding_box",0);
-			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(1.000000,1.000000,5.000000,"on_first_enter"), doc("[*one-shot check (trigger is one-shot)*]");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = true;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  q orientation = 0,-0.707107,0,0.707107;
-	  p position = -0.393521,-0.886838,-0.881489,0x86bae060;
-	}
-}
 [t:trigger_generic,n:0x046003a7]
 {
 	[common]

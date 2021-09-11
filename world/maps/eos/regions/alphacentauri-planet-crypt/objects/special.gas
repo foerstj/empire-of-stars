@@ -3644,21 +3644,6 @@
 		{
 			[*]
 			{
-				action* = send_world_message("we_req_activate",0x060003A8,0f,"default","party_member_within_bounding_box",0);
-			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(1.000000,1.000000,4.000000,"on_first_enter"), doc("[*one-shot check (trigger is one-shot)*]");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = true;
-			  b start_active = true;
-			}
-			[*]
-			{
 				action* = set_player_world_location("ac_crypt");
 			  b can_self_destruct = true;
 				condition* = party_member_within_bounding_box(1.000000,1.000000,4.000000,"on_every_enter");
