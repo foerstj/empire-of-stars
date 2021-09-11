@@ -2,6 +2,17 @@
 {
 	source_region_guid = 0xAAB20200;
 	source_region_name = rigel-wetplanet-wetlands-skull;
+	[t:stitch_editor,n:rigel-wetplanet-drystorage]
+	{
+		dest_region = rigel-wetplanet-drystorage;
+		[node_ids]
+		{
+			0xaab20b23 = 0x0EDB408D,10;
+			0xaab20b24 = 0x5ED3130D,6;
+			0xaab20b25 = 0x5ED3130D,7;
+			0xaab20b26 = 0x5ED3130D,8;
+		}
+	}
 	[t:stitch_editor,n:rigel-wetplanet-wetlands-shrine]
 	{
 		dest_region = rigel-wetplanet-wetlands-shrine;
@@ -52,17 +63,6 @@
 			0xaab20045 = 0x873E513A,1;
 			0xaab20046 = 0x873E513A,2;
 			0xaab20a10 = 0xC06FD329,12;
-		}
-	}
-	[t:stitch_editor,n:rigel-wetplanet-drystorage]
-	{
-		dest_region = rigel-wetplanet-drystorage;
-		[node_ids]
-		{
-			0xaab20b23 = 0x0EDB408D,10;
-			0xaab20b24 = 0x5ED3130D,6;
-			0xaab20b25 = 0x5ED3130D,7;
-			0xaab20b26 = 0x5ED3130D,8;
 		}
 	}
 }
