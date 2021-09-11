@@ -112,7 +112,6 @@
 			[*]
 			{
 				action* = mood_change("eos_rigel_wet_town_2");
-				action* = send_world_message("we_req_activate",0x01900434,0f,"all_conditions","every",0);
 			  b can_self_destruct = true;
 				condition* = party_member_within_bounding_box(3.000000,2.100000,3.000000,"on_every_enter");
 			  f delay = 0.000000;
@@ -220,17 +219,6 @@
 	[placement]
 	{
 	  p position = -2.8275,-2.12715,-7.07869,0x7aaba6d0;
-	}
-}
-[t:update_map_marker,n:0x01900434]
-{
-	[placement]
-	{
-	  p position = 9.69453,-1.87699,-1.15233,0x7aaba6d0;
-	}
-	[update_map_marker]
-	{
-		marker_name = "illicor";
 	}
 }
 [t:blocking_object,n:0x019004a3]
@@ -487,13 +475,12 @@
 {
 	[common]
 	{
-		dev_instance_text = "MOOD & MAP MARKER";
+		dev_instance_text = "MOOD";
 		[instance_triggers]
 		{
 			[*]
 			{
 				action* = mood_change("eos_rigel_wet_town_1"), delay(5);
-				action* = send_world_message("we_req_activate",0x01900421,0f,"all_conditions","every",0);
 			  b can_self_destruct = true;
 				condition* = party_member_within_bounding_box(0.500000,2.500000,2.500000,"on_every_enter");
 			  f delay = 0.000000;
@@ -625,7 +612,6 @@
 			[*]
 			{
 				action* = mood_change("eos_rigel_wet_town_backtrack"), delay(5);
-				action* = send_world_message("we_req_activate",0x019006BD,0f,"all_conditions","every",0);
 			  b can_self_destruct = true;
 				condition* = party_member_within_bounding_box(0.500000,2.500000,2.500000,"on_every_enter");
 			  f delay = 0.000000;
@@ -644,33 +630,6 @@
 	{
 	  q orientation = 0,-7.30454e-006,0,1;
 	  p position = 13.8032,0.985088,0.0366753,0xa33a6216;
-	}
-}
-[t:update_map_marker,n:0x01900421]
-{
-	[common]
-	{
-		dev_instance_text = "WIZARD_CITY";
-	}
-	[placement]
-	{
-	  q orientation = 0,1,0,1.57595e-006;
-	  p position = 5.91563,2.13343,-0.045589,0xa33a6216;
-	}
-	[update_map_marker]
-	{
-		marker_name = "illicor";
-	}
-}
-[t:update_map_marker,n:0x019006bd]
-{
-	[placement]
-	{
-	  p position = 13.0322,1.13634,-0.343825,0xa33a6216;
-	}
-	[update_map_marker]
-	{
-		marker_name = "bluffs";
 	}
 }
 [t:trigger_generic,n:0x019000ea]
@@ -1803,13 +1762,12 @@
 {
 	[common]
 	{
-		dev_instance_text = "MOOD, MAP MARKER, & MP LOCATOR";
+		dev_instance_text = "MOOD & MP LOCATOR";
 		[instance_triggers]
 		{
 			[*]
 			{
 				action* = mood_change("eos_rigel_wet_wetlands_begin_1");
-				action* = send_world_message("we_req_activate",0x0190041F,0f,"all_conditions","every",0), doc("map marker");
 			  b can_self_destruct = true;
 				condition* = party_member_within_bounding_box(2.000000,1.000000,1.000000,"on_every_enter");
 			  f delay = 0.000000;
@@ -1849,13 +1807,12 @@
 {
 	[common]
 	{
-		dev_instance_text = "MOOD & MAP MARKER";
+		dev_instance_text = "MOOD";
 		[instance_triggers]
 		{
 			[*]
 			{
 				action* = mood_change("eos_rigel_wet_town_2");
-				action* = send_world_message("we_req_activate",0x01900420,0f,"all_conditions","every",0);
 			  b can_self_destruct = true;
 				condition* = party_member_within_bounding_box(0.500000,2.500000,2.500000,"on_every_enter");
 			  f delay = 0.000000;
@@ -1920,34 +1877,6 @@
 	{
 	  q orientation = 0,1,0,-7.16174e-006;
 	  p position = 0.235476,1.91445,-0.231006,0x0c0f8538;
-	}
-}
-[t:update_map_marker,n:0x0190041f]
-{
-	[placement]
-	{
-	  q orientation = 0,0.707106,0,0.707108;
-	  p position = 14.2249,0.913477,0.533402,0x0c0f8538;
-	}
-	[update_map_marker]
-	{
-		marker_name = "jungle";
-	}
-}
-[t:update_map_marker,n:0x01900420]
-{
-	[common]
-	{
-		dev_instance_text = "WIZARD_CITY";
-	}
-	[placement]
-	{
-	  q orientation = 0,0.707106,0,0.707108;
-	  p position = 10.0882,1.63004,0.0725849,0x0c0f8538;
-	}
-	[update_map_marker]
-	{
-		marker_name = "illicor";
 	}
 }
 [t:trigger_generic,n:0x019000e9]
