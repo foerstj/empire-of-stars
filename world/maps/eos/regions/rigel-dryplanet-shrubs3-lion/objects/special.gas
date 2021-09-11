@@ -26,7 +26,7 @@
 	  p position = -44.1858,6.9,-20.6382,0x520a5761;
 	}
 }
-[t:trigger_generic,n:0x0d306a15]
+[t:trigger_generic,n:0x0d306a1c]
 {
 	[common]
 	{
@@ -51,10 +51,10 @@
 	}
 	[placement]
 	{
-	  p position = -16.4081,3.91173,-51.3634,0x7461f618;
+	  p position = -14.2443,6.4234,7.35834,0x10de8063;
 	}
 }
-[t:trigger_generic,n:0x0d306a17]
+[t:trigger_generic,n:0x0d306a1d]
 {
 	[common]
 	{
@@ -79,7 +79,7 @@
 	}
 	[placement]
 	{
-	  p position = 16.0544,5.9808,-23.8036,0xd0088b20;
+	  p position = -18.1925,5.53318,-21.7317,0xdd812b26;
 	}
 }
 [t:trigger_generic,n:0x0d306a18]
@@ -108,6 +108,34 @@
 	[placement]
 	{
 	  p position = -11.8939,5.25271,-24.279,0xa8163443;
+	}
+}
+[t:trigger_generic,n:0x0d306a17]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = mood_change("eos_rigel_dry_lion");
+			  b can_self_destruct = true;
+				condition* = party_member_within_sphere(50.000000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  p position = 16.0544,5.9808,-23.8036,0xd0088b20;
 	}
 }
 [t:trigger_generic,n:0x0d306a1a]
@@ -166,7 +194,7 @@
 	  p position = -42.8196,3.27116,-22.267,0x5b23f718;
 	}
 }
-[t:trigger_generic,n:0x0d306a1c]
+[t:trigger_generic,n:0x0d306a15]
 {
 	[common]
 	{
@@ -191,34 +219,13 @@
 	}
 	[placement]
 	{
-	  p position = -14.2443,6.4234,7.35834,0x10de8063;
+	  p position = -16.4081,3.91173,-51.3634,0x7461f618;
 	}
 }
-[t:trigger_generic,n:0x0d306a1d]
+[t:use_point,n:0x0d306a30]
 {
-	[common]
-	{
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = mood_change("eos_rigel_dry_lion");
-			  b can_self_destruct = true;
-				condition* = party_member_within_sphere(50.000000,"on_every_enter");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-		}
-	}
 	[placement]
 	{
-	  p position = -18.1925,5.53318,-21.7317,0xdd812b26;
+	  p position = 17.7424,4.96116,-47.5572,0x5f85dfb8;
 	}
 }

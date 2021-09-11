@@ -406,11 +406,22 @@
 	  p position = 0.979954,7.62939e-006,-0.719097,0x6ef6d458;
 	}
 }
-[t:chest_csl_03_sd_r1,n:0x04c00286]
+[t:chest_csl_02,n:0x04c00286]
 {
 	[aspect]
 	{
 	  f scale_multiplier = 0.985523;
+	}
+	[common]
+	{
+	  b is_single_player = false;
+	}
+	[inventory]
+	{
+		[other]
+		{
+			il_main = starstone_betelgeuse;
+		}
 	}
 	[placement]
 	{

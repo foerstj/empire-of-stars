@@ -62,7 +62,6 @@
 				action* = send_world_message("we_trigger_activate",0x0270065E,0f,"default","",0);
 				action* = send_world_message("we_trigger_activate",0x07C000DA,0f,"default","",0), doc("cave fade triggers on");
 				action* = send_world_message("we_trigger_activate",0x07C00101,0f,"default","",0), doc("cave fade triggers on");
-				action* = send_world_message("we_req_activate",0x07C001E9,0f,"default","",0), doc("cave sound emitters on");
 				action* = send_world_message("we_req_activate",0x07C001E8,0f,"default","",0), doc("cave sound emitters on");
 			  b can_self_destruct = true;
 				condition* = receive_world_message("we_exploded",0,"on_first_message"), doc("[*one-shot check (trigger is one-shot)*]");
