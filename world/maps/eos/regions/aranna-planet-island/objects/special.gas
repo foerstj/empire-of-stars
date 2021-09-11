@@ -1250,7 +1250,7 @@
 				action* = mood_change("eos_aranna_island_2_2");
 				action* = change_quest_state("find_aunt_luna","active",0);
 			  b can_self_destruct = true;
-				condition* = party_member_within_sphere(10.000000,"on_every_enter");
+				condition* = party_member_within_sphere(16.000000,"on_every_enter");
 			  f delay = 0.000000;
 			  b flip_flop = false;
 			  b multi_player = true;
@@ -1265,7 +1265,7 @@
 			{
 				action* = set_player_world_location("ar_island");
 			  b can_self_destruct = true;
-				condition* = party_member_within_sphere(10.000000,"on_every_enter");
+				condition* = party_member_within_sphere(16.000000,"on_every_enter");
 			  f delay = 0.000000;
 			  b flip_flop = false;
 			  b multi_player = true;
