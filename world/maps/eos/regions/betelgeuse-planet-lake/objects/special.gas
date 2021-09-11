@@ -168,6 +168,35 @@
 	  p position = 6.79259,-17.85,-1.34977,0x359392e8;
 	}
 }
+[t:trigger_generic,n:0x04d00208]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = set_player_world_location("bg_lakeshore");
+			  b can_self_destruct = true;
+				condition* = party_member_within_bounding_box(16.000000,8.000000,4.000000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = false;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.382683,0,0.92388;
+	  p position = 1.48276,0.651879,1.7594,0x4ac8b15f;
+	}
+}
 [t:trigger_generic,n:0x04d00723]
 {
 	[common]
@@ -276,6 +305,34 @@
 	{
 	  q orientation = 0,0.707107,0,0.707107;
 	  p position = -1.16731,0,0.887802,0x14f96e15;
+	}
+}
+[t:trigger_generic,n:0x04d00209]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = set_player_world_location("bg_laketown");
+			  b can_self_destruct = true;
+				condition* = party_member_within_bounding_box(20.000000,1.000000,1.000000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = false;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  p position = 3.82009,0,0.874233,0x3f0306ac;
 	}
 }
 [t:trigger_generic,n:0x04d0011d]
@@ -395,62 +452,5 @@
 	{
 	  q orientation = 0,0.748956,0,0.66262;
 	  p position = -1.07859,0,-1.32823,0x1b0f5416;
-	}
-}
-[t:trigger_generic,n:0x04d00208]
-{
-	[common]
-	{
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = set_player_world_location("bg_lakeshore");
-			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(16.000000,8.000000,4.000000,"on_every_enter");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = false;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  q orientation = 0,-0.382683,0,0.92388;
-	  p position = 1.48276,0.651879,1.7594,0x4ac8b15f;
-	}
-}
-[t:trigger_generic,n:0x04d00209]
-{
-	[common]
-	{
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = set_player_world_location("bg_laketown");
-			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(20.000000,1.000000,1.000000,"on_every_enter");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = false;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  p position = 3.82009,0,0.874233,0x3f0306ac;
 	}
 }

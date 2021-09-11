@@ -56,6 +56,62 @@
 	  p position = -0.280574,-0.294483,0.220234,0x86bae060;
 	}
 }
+[t:trigger_generic,n:0x046000fa]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = set_player_world_location("sr_castle");
+			  b can_self_destruct = true;
+				condition* = party_member_within_bounding_box(2.000000,1.000000,6.000000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = false;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  p position = -4.23396,4.5,0.000444293,0xdf60cb57;
+	}
+}
+[t:trigger_generic,n:0x046000b4]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = set_player_world_location("sr_castle_area");
+			  b can_self_destruct = true;
+				condition* = party_member_within_bounding_box(2.000000,1.000000,6.000000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = false;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  p position = 9.47825,-0.992853,0.0735465,0xdec908a6;
+	}
+}
 [t:trigger_generic,n:0x046003a7]
 {
 	[common]
@@ -631,6 +687,34 @@
 	[placement]
 	{
 	  p position = 1.22562,-1.55,7.73642,0xf0613fe5;
+	}
+}
+[t:trigger_generic,n:0x0460010e]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = set_player_world_location("sr_castle");
+			  b can_self_destruct = true;
+				condition* = party_member_within_bounding_box(12.000000,1.000000,12.000000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = false;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  p position = -0.198567,-1.55,6.15291,0xf0613fe5;
 	}
 }
 [t:trigger_fade_nodes_box,n:0x0460030a]
@@ -3868,89 +3952,5 @@
 	{
 	  q orientation = 0,-0.382683,0,0.92388;
 	  p position = -1.35661,-2.25,0.208808,0xe7700650;
-	}
-}
-[t:trigger_generic,n:0x046000b4]
-{
-	[common]
-	{
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = set_player_world_location("sr_castle_area");
-			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(2.000000,1.000000,6.000000,"on_every_enter");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = false;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  p position = 9.47825,-0.992853,0.0735465,0xdec908a6;
-	}
-}
-[t:trigger_generic,n:0x046000fa]
-{
-	[common]
-	{
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = set_player_world_location("sr_castle");
-			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(2.000000,1.000000,6.000000,"on_every_enter");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = false;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  p position = -4.23396,4.5,0.000444293,0xdf60cb57;
-	}
-}
-[t:trigger_generic,n:0x0460010e]
-{
-	[common]
-	{
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = set_player_world_location("sr_castle");
-			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(12.000000,1.000000,12.000000,"on_every_enter");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = false;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  p position = -0.198567,-1.55,6.15291,0xf0613fe5;
 	}
 }

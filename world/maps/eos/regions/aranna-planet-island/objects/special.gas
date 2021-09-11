@@ -452,6 +452,34 @@
 		bool_variable = "eos_victory";
 	}
 }
+[t:trigger_generic,n:0x07900320]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = set_player_world_location("ar_island");
+			  b can_self_destruct = true;
+				condition* = party_member_within_sphere(16.000000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = false;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  p position = 0.87643,0.0391769,1.56907,0x34341e46;
+	}
+}
 [t:trigger_generic,n:0x079001a6]
 {
 	[common]
@@ -1333,33 +1361,5 @@
 	[placement]
 	{
 	  p position = -0.385483,0.2,-0.434647,0x6e2471df;
-	}
-}
-[t:trigger_generic,n:0x07900320]
-{
-	[common]
-	{
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = set_player_world_location("ar_island");
-			  b can_self_destruct = true;
-				condition* = party_member_within_sphere(16.000000,"on_every_enter");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = false;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  p position = 0.87643,0.0391769,1.56907,0x34341e46;
 	}
 }
