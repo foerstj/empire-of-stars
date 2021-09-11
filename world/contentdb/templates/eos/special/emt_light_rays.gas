@@ -1,0 +1,55 @@
+[t:template,n:emt_light_ray_cyan] { specializes = emt_light_ray_cyan_base; }
+[t:template,n:emt_light_ray_cyan_base]
+{
+	specializes	=	emitter_lightweight;
+    category_name = "emitter";
+	doc			=	"emit light ray cyan";
+
+	[common]
+	{
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action*    = call_sfx_script("light_rays_cyan");
+			}
+		}
+	}
+	[gizmo]
+	{
+		model				=	m_i_glb_object-waypoint;
+		texture				=	;
+		diffuse_color		=	0, 1, 1;
+		use_diffuse_color	=	true;
+	}
+}
+[t:template,n:emt_light_ray_eos_setitem] { specializes = emt_light_ray_cyan_base; }
+
+[t:template,n:emt_light_ray_yellow] { specializes = emt_light_ray_yellow_base; }
+[t:template,n:emt_light_ray_yellow_base]
+{
+	specializes	=	emitter_lightweight;
+    category_name = "emitter";
+	doc			=	"emit light ray yellow";
+
+	[common]
+	{
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action*    = call_sfx_script("light_rays_yellow");
+			}
+		}
+	}
+	[gizmo]
+	{
+		model				=	m_i_glb_object-waypoint;
+		texture				=	;
+		diffuse_color		=	1, 1, 0;
+		use_diffuse_color	=	true;
+	}
+}
+[t:template,n:emt_light_ray_eos_starstone] { specializes = emt_light_ray_yellow_base; }

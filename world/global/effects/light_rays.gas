@@ -1,0 +1,68 @@
+[effect_script*]
+{
+	name	=light_rays_cyan;
+
+	script	=[[
+        sfx create cylinder #TARGET
+        "segments(10)alpha(.05)hp0(-6,-6,0)hp1(30,30,0)rp1(3,3,0)
+        rp0(3,3,0)texture(b_sfx_lightray_01)spin(0.03)color0(1,1,1)
+        bone_orient()rotate(90,0,0)";
+
+        sfx start #POP;
+
+        sfx create cylinder #TARGET
+        "segments(10)alpha(.05)hp0(-6,-6,0)hp1(30,30,0)rp1(2.2,2.2,0)
+        rp0(2.2,2.2,0)texture(b_sfx_lightray_02)spin(-0.04)
+        color0(.5,1,1)bone_orient()rotate(90,0,0)";
+
+        sfx start #POP;
+
+        sfx create cylinder #TARGET
+        "segments(10)alpha(.05)hp0(-6,-6,0)hp1(30,30,0)rp1(1.7,1.7,0)
+        rp0(1.7,1.7,0)texture(b_sfx_lightray_01)spin(0.05)color0(1,1,1)
+        bone_orient()rotate(90,0,0)";
+
+        sfx start #POP;
+
+        sfx create cylinder #TARGET
+        "segments(10)alpha(.05)hp0(-6,-6,0)hp1(30,30,0)rp1(1,1,0)
+        rp0(1,1,0)texture(b_sfx_lightray_02)spin(-0.07)color0(.5,1,1)
+        bone_orient()rotate(90,0,0)";
+
+        sfx start #POP;
+    ]];
+}
+[effect_script*]
+{
+	name	=light_rays_yellow;
+
+	script	=[[			
+        sfx create cylinder #TARGET
+        "segments(10)alpha(.05)hp0(-6,-6,0)hp1(30,30,0)rp1(3,3,0)
+        rp0(3,3,0)texture(b_sfx_lightray_01)spin(0.03)color0(1,1,1)
+        bone_orient()rotate(90,0,0)";
+
+        sfx start #POP;
+
+        sfx create cylinder #TARGET
+        "segments(10)alpha(.05)hp0(-6,-6,0)hp1(30,30,0)rp1(2.2,2.2,0)
+        rp0(2.2,2.2,0)texture(b_sfx_lightray_02)spin(-0.04)
+        color0(1,1,0)bone_orient()rotate(90,0,0)";
+
+        sfx start #POP;
+
+        sfx create cylinder #TARGET
+        "segments(10)alpha(.05)hp0(-6,-6,0)hp1(30,30,0)rp1(1.7,1.7,0)
+        rp0(1.7,1.7,0)texture(b_sfx_lightray_01)spin(0.05)color0(1,1,1)
+        bone_orient()rotate(90,0,0)";
+
+        sfx start #POP;
+
+        sfx create cylinder #TARGET
+        "segments(10)alpha(.05)hp0(-6,-6,0)hp1(30,30,0)rp1(1,1,0)
+        rp0(1,1,0)texture(b_sfx_lightray_02)spin(-0.07)color0(1,1,0)
+        bone_orient()rotate(90,0,0)";
+
+        sfx start #POP;
+    ]];
+}
