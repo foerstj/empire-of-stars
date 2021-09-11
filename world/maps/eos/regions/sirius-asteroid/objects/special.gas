@@ -428,3 +428,32 @@
 	  p position = -0.525078,0.2,-0.524624,0x4c9f7fdf;
 	}
 }
+[t:trigger_generic,n:0x0e00004f]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = set_player_world_location("sr_asteroid");
+			  b can_self_destruct = true;
+				condition* = party_member_within_bounding_box(16.000000,2.000000,16.000000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = false;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,0.707107,0,0.707107;
+	  p position = -0.158526,-0.3,-3.99182,0x6b2023c4;
+	}
+}

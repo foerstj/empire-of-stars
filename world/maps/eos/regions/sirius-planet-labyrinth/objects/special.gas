@@ -86,3 +86,89 @@
 	  p position = -1.95838,0,-0.612167,0x81e5ed52;
 	}
 }
+[t:trigger_generic,n:0x08900023]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = set_player_world_location("sr_labyrinth");
+			  b can_self_destruct = true;
+				condition* = party_member_within_bounding_box(4.000000,0.500000,4.000000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = false;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  p position = 0.0733156,-15.4,-2.49692,0x7f1387fd;
+	}
+}
+[t:trigger_generic,n:0x08900024]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = set_player_world_location("sr_labyrinth");
+			  b can_self_destruct = true;
+				condition* = party_member_within_bounding_box(8.000000,0.500000,2.000000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = false;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,9.55219e-008,0,1;
+	  p position = 0.508736,0,-0.010643,0xe5ef7607;
+	}
+}
+[t:trigger_generic,n:0x08900025]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = set_player_world_location("sr_castle_area");
+			  b can_self_destruct = true;
+				condition* = party_member_within_bounding_box(8.000000,0.500000,2.000000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = false;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,0.92388,0,0.382683;
+	  p position = 2.10096,0,-0.700901,0x0723febc;
+	}
+}
