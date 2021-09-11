@@ -392,3 +392,32 @@
 	  p position = -1.26614,0.1,0.202792,0xc1b7a681;
 	}
 }
+[t:trigger_generic,n:0x07f00025]
+{
+	[common]
+	{
+		dev_instance_text = "PLAYER LOCATION";
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = set_player_world_location("hub");
+			  b can_self_destruct = true;
+				condition* = party_member_within_sphere(12.000000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = false;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  p position = -0.00920931,-7.30542,-0.366751,0xd14939a4;
+	}
+}
