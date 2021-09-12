@@ -1,0 +1,79 @@
+[t:template,n:bookcase_glb_gen] { specializes = bookcase_glb_gen_base; }
+[t:template,n:bookcase_glb_gen_base]  // bookcase_glb_gen_01 with dummy lore book
+{
+	specializes	= prop;
+	category_name =	"container";
+	doc	= "bookcase for lorebooks";
+
+	[aspect]
+	{
+		model = m_i_glb_bookcase-01;
+		lodfi_lower = -1;
+		lodfi_upper = -1;
+		does_block_path = true;
+	}
+	[generator_object_pcontent]
+	{
+		create_msg = WE_REQ_USE;
+		one_shot = true;
+	}
+	[common]
+	{
+		screen_name = "Bookcase";
+		rollover_display = true;
+	}
+	[inventory]
+	{
+	}
+}
+
+[t:template,n:bookcase_ee_gen_01]
+{
+    specializes = bookcase_glb_gen_base;
+    [aspect] { model = m_i_ee_bookcase-01; }
+}
+[t:template,n:bookcase_ee_gen_02]
+{
+    specializes = bookcase_glb_gen_base;
+    [aspect] { model = m_i_ee_bookcase-02; }
+}
+[t:template,n:bookcase_ee_gen_03]
+{
+    specializes = bookcase_glb_gen_base;
+    [aspect] { model = m_i_ee_bookcase-03; }
+}
+[t:template,n:bookcase_ee_gen_04]
+{
+    specializes = bookcase_glb_gen_base;
+    [aspect] { model = m_i_ee_bookcase-04; }
+}
+[t:template,n:bookcase_ee_gen_05]
+{
+    specializes = bookcase_glb_gen_base;
+    [aspect] { model = m_i_ee_bookcase-05; }
+}
+[t:template,n:bookcase_ee_gen_06]
+{
+    specializes = bookcase_glb_gen_base;
+    [aspect] { model = m_i_ee_bookcase-06; }
+}
+[t:template,n:bookcase_ee_gen_07]
+{
+    specializes = bookcase_glb_gen_base;
+    [aspect] { model = m_i_ee_bookcase-07; }
+}
+[t:template,n:bookcase_ee_gen_08]
+{
+    specializes = bookcase_glb_gen_base;
+    [aspect] { model = m_i_ee_bookcase-08; }
+}
+[t:template,n:bookcase_ee_gen_09]
+{
+    specializes = bookcase_glb_gen_base;
+    [aspect] { model = m_i_ee_bookcase-09; }
+}
+[t:template,n:bookcase_ee_gen_10]
+{
+    specializes = bookcase_glb_gen_base;
+    [aspect] { model = m_i_ee_bookcase-10; }
+}
