@@ -753,6 +753,51 @@
 	  p position = 2.27145,0,-1.78624,0x0847bf15;
 	}
 }
+[t:trigger_generic,n:0x06602820]
+{
+	[common]
+	{
+		dev_instance_text = "START POS MOOD";
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = mood_change("eos_vega_forest_2");
+			  b can_self_destruct = true;
+				condition* = party_member_within_sphere(16.000000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+			[*]
+			{
+				action* = set_player_world_location("vg_jungle");
+			  b can_self_destruct = true;
+				condition* = party_member_within_sphere(16.000000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = false;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.707107,0,0.707107;
+	  p position = -0.844868,0,0.47419,0x48b4049a;
+	}
+}
 [t:trigger_generic,n:0x066027f8]
 {
 	[common]
@@ -810,6 +855,51 @@
 	[placement]
 	{
 	  p position = -0.175302,-9.53674e-007,-1.40617,0xcfb83efc;
+	}
+}
+[t:trigger_generic,n:0x06602821]
+{
+	[common]
+	{
+		dev_instance_text = "START POS MOOD";
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = mood_change("eos_vega_forest_2");
+			  b can_self_destruct = true;
+				condition* = party_member_within_sphere(16.000000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+			[*]
+			{
+				action* = set_player_world_location("vg_jungle");
+			  b can_self_destruct = true;
+				condition* = party_member_within_sphere(16.000000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = false;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.707107,0,0.707107;
+	  p position = 2.63221,-0.3,-3.4924,0xf5355311;
 	}
 }
 [t:trigger_change_mood_box,n:0x0660211a]
@@ -1049,95 +1139,5 @@
 	[placement]
 	{
 	  p position = -0.488482,0.2,-0.456638,0x5d139bb6;
-	}
-}
-[t:trigger_generic,n:0x06602820]
-{
-	[common]
-	{
-		dev_instance_text = "START POS MOOD";
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = mood_change("eos_vega_forest_2");
-			  b can_self_destruct = true;
-				condition* = party_member_within_sphere(16.000000,"on_every_enter");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-			[*]
-			{
-				action* = set_player_world_location("vg_jungle");
-			  b can_self_destruct = true;
-				condition* = party_member_within_sphere(16.000000,"on_every_enter");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = false;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  q orientation = 0,-0.707107,0,0.707107;
-	  p position = -0.844868,0,0.47419,0x48b4049a;
-	}
-}
-[t:trigger_generic,n:0x06602821]
-{
-	[common]
-	{
-		dev_instance_text = "START POS MOOD";
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = mood_change("eos_vega_forest_2");
-			  b can_self_destruct = true;
-				condition* = party_member_within_sphere(16.000000,"on_every_enter");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-			[*]
-			{
-				action* = set_player_world_location("vg_jungle");
-			  b can_self_destruct = true;
-				condition* = party_member_within_sphere(16.000000,"on_every_enter");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = false;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  q orientation = 0,-0.707107,0,0.707107;
-	  p position = 2.63221,-0.3,-3.4924,0xf5355311;
 	}
 }

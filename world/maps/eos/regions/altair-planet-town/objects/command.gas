@@ -114,6 +114,7 @@
 {
 	[common]
 	{
+	  b is_multi_player = false;
 		[instance_triggers]
 		{
 			[*]
@@ -123,7 +124,7 @@
 				condition* = party_member_within_sphere(10.000000,"on_first_enter");
 			  f delay = 0.000000;
 			  b flip_flop = false;
-			  b multi_player = true;
+			  b multi_player = false;
 			  b no_trig_bits = false;
 				occupants_group = ;
 			  f reset_duration = 0.000000;
