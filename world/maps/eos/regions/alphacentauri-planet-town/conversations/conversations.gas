@@ -1,30 +1,3 @@
-[aunt_luna]
-{
-	[text*]
-	{
-		activate_quest* = find_way_home,1;
-		choice = more;
-		complete_quest* = find_aunt_luna;
-	  i order = 0;
-		screen_text = "What took you so long?";
-	  f scroll_rate = 10.000000;
-	}
-	[text*]
-	{
-		choice = more;
-	  i order = 1;
-		screen_text = "I'm actually so happy to see you, my dearest!
-See what I discovered - the ancient Empire of Stars had contact with Beings from other actual stars! Extraterrestrials! It was an interstellar empire spanning across a whole eight star systems! It's truly incredible!";
-	  f scroll_rate = 10.000000;
-	}
-	[text*]
-	{
-		choice = potential_member;
-		screen_text = "What do you mean, you want to go HOME of all places?
-...Alright let's go then... But we need to find an Aranna Starstone first...";
-	  f scroll_rate = 10.000000;
-	}
-}
 [conversation_edgaar]
 {
 	[text*]
@@ -40,7 +13,7 @@ Oh hello there, stranger. Welcome to our little chapel...";
 		order = 1;
 		quest_dialog = true;
 		screen_text = "I am the sacristan here. But I don't know for how long still...
-I forgot again to lock the door to the cellar, and now it's full of Krugs! It would be my job to chase them off but... Truth is I'm a fat old man and I got it in the shoulders, and... I'm afraid of them. Say, could you help me?";
+I forgot again to lock the door to the cellar, and now it's full of Krug! It would be my job to chase them off but... Truth is I'm a fat old man and I got it in the shoulders, and... I'm afraid of them. Say, could you help me?";
 	}
 	[text*]
 	{
@@ -147,7 +120,7 @@ As the mayor of this village I want to welcome you to Eddiloo... and Alpha Centa
 	  i order = 1;
 	  b quest_dialog = true;
 		screen_text = "You are looking for an ancient artifact with a hammer or fish symbol on it? Not sure I can help you...
-Maybe a good place to go looking for ancient artifacts would be the Crypt... yes. It's right in the forest. Be careful though - it's a New Moon, and the woods are full of Krugs, and in the Crypt, the dead might be... awake.";
+Maybe a good place to go looking for ancient artifacts would be the Crypt... yes. It's right in the forest. Be careful though - it's a New Moon, and the woods are full of Krug, and in the Crypt, the dead might be... awake.";
 	  f scroll_rate = 10.000000;
 	}
 	[text*]
