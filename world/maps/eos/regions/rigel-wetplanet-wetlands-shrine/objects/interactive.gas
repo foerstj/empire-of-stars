@@ -1,21 +1,25 @@
-[t:respawn_statue,n:0x01600d32]
+[t:sign_swp_01,n:0x01600036]
 {
+	[common]
+	{
+		screen_name = "Orionis";
+	}
 	[placement]
 	{
-	  q orientation = 0,-0.382683,0,0.92388;
-	  p position = 2.81381,2.86102e-006,1.51087,0x76edc38b;
-		use_point_scids = 0x01600d66;
+	  q orientation = 0,-0.707107,0,0.707107;
+	  p position = -0.374832,-0.573155,1.56116,0xb589d824;
 	}
 }
-[t:door_swp_breakable,n:0x0160006f]
+[t:sign_swp_01,n:0x01600037]
 {
-	[generator_object_exploding]
+	[common]
 	{
-	  f health_modifier = 100;
+		screen_name = "Skull of the Fallen God";
 	}
 	[placement]
 	{
-	  p position = 1.30454,-1.95001,-2.49714,0x4a21146e;
+	  q orientation = 0,0.707107,0,0.707107;
+	  p position = 0.731796,-0.572284,1.55022,0xb589d824;
 	}
 }
 [t:door_swp_cemetary_left,n:0x016005fe]
@@ -44,6 +48,47 @@
 		use_point_scids = 0x01600d41,0x01600d40;
 	}
 }
+[t:respawn_statue,n:0x01600d33]
+{
+	[placement]
+	{
+	  q orientation = 0,0.92388,0,0.382683;
+	  p position = -0.120102,-0.562608,1.61578,0x44fce0a6;
+		use_point_scids = 0x01600d2e;
+	}
+}
+[t:respawn_statue,n:0x01600d32]
+{
+	[placement]
+	{
+	  q orientation = 0,-0.382683,0,0.92388;
+	  p position = 2.81381,2.86102e-006,1.51087,0x76edc38b;
+		use_point_scids = 0x01600d66;
+	}
+}
+[t:door_swp_breakable,n:0x0160006f]
+{
+	[generator_object_exploding]
+	{
+	  f health_modifier = 100;
+	}
+	[placement]
+	{
+	  p position = 1.30454,-1.95001,-2.49714,0x4a21146e;
+	}
+}
+[t:sign_glb_no_return,n:0x01600065]
+{
+	[common]
+	{
+		screen_name = "Shrine built by Humans in Antiquity - Was presumably used for Pagan fertility rites.";
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.92388,0,0.382683;
+	  p position = -2.48312,-1.6,-2.5076,0xdc2d03bd;
+	}
+}
 [t:door_swp_cemetary_left,n:0x016005fc]
 {
 	[door_basic]
@@ -68,50 +113,5 @@
 	  q orientation = 0,1,0,-1.78814e-007;
 	  p position = 2.10896,-1.5,0.089508,0xd4ace1e0;
 		use_point_scids = 0x01600d45,0x01600d42;
-	}
-}
-[t:sign_swp_01,n:0x01600036]
-{
-	[common]
-	{
-		screen_name = "Orionis";
-	}
-	[placement]
-	{
-	  q orientation = 0,-0.707107,0,0.707107;
-	  p position = -0.374832,-0.573155,1.56116,0xb589d824;
-	}
-}
-[t:sign_swp_01,n:0x01600037]
-{
-	[common]
-	{
-		screen_name = "Skull of the Fallen God";
-	}
-	[placement]
-	{
-	  q orientation = 0,0.707107,0,0.707107;
-	  p position = 0.731796,-0.572284,1.55022,0xb589d824;
-	}
-}
-[t:sign_glb_no_return,n:0x01600065]
-{
-	[common]
-	{
-		screen_name = "Shrine built by Humans in Antiquity - Was presumably used for Pagan fertility rites.";
-	}
-	[placement]
-	{
-	  q orientation = 0,-0.92388,0,0.382683;
-	  p position = -2.48312,-1.6,-2.5076,0xdc2d03bd;
-	}
-}
-[t:respawn_statue,n:0x01600d33]
-{
-	[placement]
-	{
-	  q orientation = 0,0.92388,0,0.382683;
-	  p position = -0.120102,-0.562608,1.61578,0x44fce0a6;
-		use_point_scids = 0x01600d2e;
 	}
 }
