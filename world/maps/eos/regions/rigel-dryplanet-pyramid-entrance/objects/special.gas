@@ -2,7 +2,7 @@
 {
 	[common]
 	{
-		dev_instance_text = "FADES";
+		dev_instance_text = "FADE -2 -S4";
 		[instance_triggers]
 		{
 			[*]
@@ -92,7 +92,7 @@
 {
 	[common]
 	{
-		dev_instance_text = "FADES";
+		dev_instance_text = "FADE +2 +S4";
 		[instance_triggers]
 		{
 			[*]
@@ -118,10 +118,40 @@
 	  p position = -0.0289516,-1.7,-0.146915,0x9f82207c;
 	}
 }
+[t:trigger_generic,n:0x0df0002f]
+{
+	[common]
+	{
+		dev_instance_text = "PWL";
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = set_player_world_location("rl_d_pyramid");
+			  b can_self_destruct = true;
+				condition* = party_member_within_bounding_box(4.000000,1.000000,1.000000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = false;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  p position = -0.138973,0.5,5.69768,0x9f82207c;
+	}
+}
 [t:trigger_generic,n:0x0df0001b]
 {
 	[common]
 	{
+		dev_instance_text = "FADE -2 -S4";
 		[instance_triggers]
 		{
 			[*]
@@ -152,6 +182,7 @@
 {
 	[common]
 	{
+		dev_instance_text = "FADE +2 +S4";
 		[instance_triggers]
 		{
 			[*]
@@ -181,6 +212,7 @@
 {
 	[common]
 	{
+		dev_instance_text = "MOOD PWL";
 		[instance_triggers]
 		{
 			[*]
@@ -218,33 +250,5 @@
 	[placement]
 	{
 	  p position = 0.160838,1.90735e-006,0.82371,0xced9844a;
-	}
-}
-[t:trigger_generic,n:0x0df0002f]
-{
-	[common]
-	{
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = set_player_world_location("rl_d_pyramid");
-			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(4.000000,1.000000,1.000000,"on_every_enter");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = false;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  p position = -0.138973,0.5,5.69768,0x9f82207c;
 	}
 }

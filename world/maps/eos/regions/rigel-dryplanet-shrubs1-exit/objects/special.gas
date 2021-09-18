@@ -2,6 +2,7 @@
 {
 	[common]
 	{
+		dev_instance_text = "MOOD: ruins";
 		[instance_triggers]
 		{
 			[*]
@@ -30,6 +31,7 @@
 {
 	[common]
 	{
+		dev_instance_text = "MOOD: ruins";
 		[instance_triggers]
 		{
 			[*]
@@ -59,6 +61,7 @@
 {
 	[common]
 	{
+		dev_instance_text = "MOOD: ruins";
 		[instance_triggers]
 		{
 			[*]
@@ -87,6 +90,7 @@
 {
 	[common]
 	{
+		dev_instance_text = "MOOD: ruins";
 		[instance_triggers]
 		{
 			[*]
@@ -115,6 +119,7 @@
 {
 	[common]
 	{
+		dev_instance_text = "MOOD: ruins";
 		[instance_triggers]
 		{
 			[*]
@@ -171,14 +176,14 @@
 {
 	[common]
 	{
-		dev_instance_text = "FADE CAVE+SHAFT+DGN";
+		dev_instance_text = "FADE -cave -ele -dungeon";
 		[instance_triggers]
 		{
 			[*]
 			{
-				action* = fade_nodes(0xE0D3DEC9,1,-1,-1,"out:black");
-				action* = when_false fade_nodes(0x39B22300,2,-1,-1,"out:black");
-				action* = fade_nodes(0x39B22300,1,-1,-1,"out:black");
+				action* = fade_nodes(0xE0D3DEC9,1,-1,-1,"out:black"), doc("-cave");
+				action* = when_false fade_nodes(0x39B22300,2,-1,-1,"out:black"), doc("-ele");
+				action* = fade_nodes(0x39B22300,1,-1,-1,"out:black"), doc("-dungeon");
 			  b can_self_destruct = true;
 				condition* = party_member_within_node(0x000000D1,1,-1,-1,"on_every_enter");
 			  f delay = 0.000000;
@@ -202,7 +207,7 @@
 {
 	[common]
 	{
-		dev_instance_text = "FADE CAVE";
+		dev_instance_text = "FADE -cave";
 		[instance_triggers]
 		{
 			[*]
@@ -227,10 +232,40 @@
 	  p position = -2.6943,-5.42617,-0.142297,0xa0cec499;
 	}
 }
+[t:trigger_generic,n:0x0d106933]
+{
+	[common]
+	{
+		dev_instance_text = "PWL: shrubs";
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = set_player_world_location("rl_d_shrubs");
+			  b can_self_destruct = true;
+				condition* = party_member_within_bounding_box(4.000000,0.500000,1.000000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = false;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  p position = -2.61025,0,-12.1714,0xa0cec499;
+	}
+}
 [t:trigger_generic,n:0x0d102493]
 {
 	[common]
 	{
+		dev_instance_text = "STARTPOS MOOD: ruins";
 		[instance_triggers]
 		{
 			[*]
@@ -315,7 +350,7 @@
 {
 	[common]
 	{
-		dev_instance_text = "FADE CAVE";
+		dev_instance_text = "FADE +cave";
 		[instance_triggers]
 		{
 			[*]
@@ -344,7 +379,7 @@
 {
 	[common]
 	{
-		dev_instance_text = "FADE SHAFT";
+		dev_instance_text = "FADE +ele";
 		[instance_triggers]
 		{
 			[*]
@@ -373,7 +408,7 @@
 {
 	[common]
 	{
-		dev_instance_text = "FADE DUNES";
+		dev_instance_text = "FADE +shrubs .1&.4";
 		[instance_triggers]
 		{
 			[*]
@@ -403,7 +438,7 @@
 {
 	[common]
 	{
-		dev_instance_text = "FADE DUNES";
+		dev_instance_text = "FADE -shrubs .1&.4";
 		[instance_triggers]
 		{
 			[*]
@@ -492,6 +527,7 @@
 {
 	[common]
 	{
+		dev_instance_text = "MOOD: ruins";
 		[instance_triggers]
 		{
 			[*]
@@ -520,6 +556,7 @@
 {
 	[common]
 	{
+		dev_instance_text = "MOOD: ruins";
 		[instance_triggers]
 		{
 			[*]
@@ -543,33 +580,5 @@
 	{
 	  q orientation = 0,0.707107,0,0.707107;
 	  p position = 17.1208,6.00684,-45.4194,0x8b2c0fbe;
-	}
-}
-[t:trigger_generic,n:0x0d106933]
-{
-	[common]
-	{
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = set_player_world_location("rl_d_shrubs");
-			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(4.000000,0.500000,1.000000,"on_every_enter");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = false;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  p position = -2.61025,0,-12.1714,0xa0cec499;
 	}
 }
