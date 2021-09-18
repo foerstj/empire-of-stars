@@ -41,7 +41,7 @@
 
                 alteration = ALTER_CUSTOM_DAMAGE_CHANCE_MELEE;
                 custom_damage = flee;
-                value = 5 * (#itemsequipped);
+                value = 4 * (#itemsequipped);
                 description = "+<ALTER_CUSTOM_DAMAGE_CHANCE_MELEE>% Chance To Flee And";
             }
             [*]
@@ -53,7 +53,7 @@
                 
                 alteration = ALTER_CUSTOM_DAMAGE_MELEE;
                 custom_damage = flee;
-                value = 10 * (#itemsequipped);
+                value = 8 * (#itemsequipped);
                 custom_damage_skrit = world\global\skrits\weapon_flee.skrit;
                 effect_script_equip = dsx_modifier_blustering_melee;
                 effect_script_hit = dsx_modifier_blustering_hit;
@@ -77,7 +77,7 @@
 
                 alteration = ALTER_CUSTOM_DAMAGE_CHANCE_MELEE;
                 custom_damage = poison;
-                value = 5 * (#itemsequipped);
+                value = 4 * (#itemsequipped);
                 description = "+<ALTER_CUSTOM_DAMAGE_CHANCE_MELEE>% Chance To Poison And";
             }
 			[*]
@@ -88,7 +88,7 @@
                 is_single_instance = false;
 
                 alteration = ALTER_CUSTOM_DAMAGE_MELEE;
-                value = 5 * (#itemsequipped);
+                value = 4 * (#itemsequipped);
                 custom_damage = poison;
                 custom_damage_skrit = world\global\skrits\weapon_poison.skrit?duration=4;
                 effect_script_equip = dam_poison_7_wh;
@@ -104,7 +104,7 @@
 
                 alteration = ALTER_CUSTOM_DAMAGE_CHANCE_RANGED;
                 custom_damage = poison;
-                value = 5 * (#itemsequipped);
+                value = 4 * (#itemsequipped);
             }
 			[*]
             {
@@ -114,7 +114,7 @@
                 is_single_instance = false;
 
                 alteration = ALTER_CUSTOM_DAMAGE_RANGED;
-                value = 5 * (#itemsequipped);
+                value = 4 * (#itemsequipped);
                 custom_damage = poison;
                 custom_damage_skrit = world\global\skrits\weapon_poison.skrit?duration=4;
                 effect_script_equip = dam_poison_7_wh;
@@ -158,7 +158,7 @@
 				duration = #infinite;
 				
 				alteration = ALTER_REFLECT_DAMAGE;
-				value = 5 * (#itemsequipped);
+				value = 4 * (#itemsequipped);
 				description = "<ALTER_REFLECT_DAMAGE>% of Damage Reflected to Enemy";
             }
         }
@@ -183,7 +183,7 @@
                 imbued_spell_group = spells_ice;
                 is_imbued = true;
                 multiply_value = true;
-                value = 5 * (#itemsequipped);
+                value = 4 * (#itemsequipped);
                 description = "Increase the damage of Cold spells in this spellbook by <ALTER_SPELL_DAMAGE>%";
             }
             [*]
@@ -197,7 +197,7 @@
                 imbued_spell_group = spells_fire;
                 is_imbued = true;
                 multiply_value = true;
-                value = 5 * (#itemsequipped);
+                value = 4 * (#itemsequipped);
                 description = "Increase the damage of Fire spells in this spellbook by <ALTER_SPELL_DAMAGE>%";
             }
             [*]
@@ -211,7 +211,7 @@
                 imbued_spell_group = spells_electric;
                 is_imbued = true;
                 multiply_value = true;
-                value = 5 * (#itemsequipped);
+                value = 4 * (#itemsequipped);
                 description = "Increase the damage of electric spells in this spellbook by <ALTER_SPELL_DAMAGE>%";
             }
             [*]
@@ -225,7 +225,7 @@
                 is_imbued = true;
                 imbued_spell_group = spells_summon;
                 multiply_value = true;
-                value = 5 * (#itemsequipped);
+                value = 4 * (#itemsequipped);
                 description = "Reduces the cost of Summoning Spells in this spellbook by <ALTER_SPELL_COST>%";
             }
         }
@@ -246,7 +246,7 @@
 
                 alteration = ALTER_CUSTOM_DAMAGE_CHANCE_MELEE;
                 custom_damage = cold;
-                value = 5 * (#itemsequipped);
+                value = 4 * (#itemsequipped);
                 description = "+<ALTER_CUSTOM_DAMAGE_CHANCE_MELEE>% Chance To Freeze And";
             }
 			[*]
@@ -257,7 +257,7 @@
                 is_single_instance = false;
 
                 alteration = ALTER_CUSTOM_DAMAGE_MELEE;
-                value = 5 * (#itemsequipped);
+                value = 4 * (#itemsequipped);
                 custom_damage = cold;
                 effect_script_equip	= dam_ice_7_wh;
                 effect_script_hit	= hit_flash_10_lbl;
@@ -273,7 +273,7 @@
 
                 alteration = ALTER_CUSTOM_DAMAGE_CHANCE_RANGED;
                 custom_damage = cold;
-                value = 5 * (#itemsequipped);
+                value = 4 * (#itemsequipped);
             }
 			[*]
             {
@@ -283,7 +283,7 @@
                 is_single_instance = false;
 
                 alteration = ALTER_CUSTOM_DAMAGE_RANGED;
-                value = 5 * (#itemsequipped);
+                value = 4 * (#itemsequipped);
                 custom_damage = cold;
                 effect_script_equip	= dam_ice_7_wh;
                 effect_script_hit	= hit_flash_10_lbl;
@@ -308,7 +308,7 @@
                 is_single_instance	= false;
 
                 alteration			= ALTER_CUSTOM_DAMAGE_MELEE;
-                value = 5 * (#itemsequipped);
+                value = 4 * (#itemsequipped);
                 custom_damage		= fire;
                 effect_script_equip	= dam_fire_7_re;
                 effect_script_hit	= fire_weapon;
@@ -323,7 +323,7 @@
                 is_single_instance	= false;
 
                 alteration			= ALTER_CUSTOM_DAMAGE_RANGED;
-                value = 5 * (#itemsequipped);
+                value = 4 * (#itemsequipped);
                 custom_damage		= fire;
                 effect_script_hit	= bow_fire_15_or;
             }
@@ -347,8 +347,8 @@
 
                 alteration = ALTER_SPECIAL_DEFENSE;
                 special_defense = zap;
-                value = 5 * (#itemsequipped);
-                special_defense_skrit = world\global\skrits\special_defense.skrit?damage_min=5&damage_max=10&is_lightning=true&effect_script="zap";
+                value = 4 * (#itemsequipped);
+                special_defense_skrit = world\global\skrits\special_defense.skrit?damage_min=8&damage_max=16&is_lightning=true&effect_script="zap";
                 description = "+<ALTER_SPECIAL_DEFENSE>% Chance to Cast Zap on Taking Damage";
             }
             [*]
@@ -360,8 +360,8 @@
 
                 alteration = ALTER_SPECIAL_DEFENSE;
                 special_defense = spark_multi;
-                value = 5 * (#itemsequipped);
-                special_defense_skrit = world\global\skrits\special_defense.skrit?damage_min=40&damage_max=45&effect_script="spark_multi";
+                value = 4 * (#itemsequipped);
+                special_defense_skrit = world\global\skrits\special_defense.skrit?damage_min=16&damage_max=32&effect_script="spark_multi";
                 description = "+<ALTER_SPECIAL_DEFENSE>% Chance to Cast Multispark on Taking Damage";
             }
         }
@@ -383,7 +383,7 @@
                 is_single_instance	= false;
 
                 alteration			= ALTER_CUSTOM_DAMAGE_MELEE;
-                value = 5 * (#itemsequipped);
+                value = 4 * (#itemsequipped);
                 custom_damage		= lightning;
                 effect_script_equip	= dam_zap_7_wh;
                 effect_script_hit	= hit_circuit_10_lbl;
@@ -398,7 +398,7 @@
                 is_single_instance	= false;
 
                 alteration			= ALTER_CUSTOM_DAMAGE_RANGED;
-                value = 5 * (#itemsequipped);
+                value = 4 * (#itemsequipped);
                 custom_damage		= lightning;
                 effect_script_hit	= bow_glitter_15_wt;
             }
@@ -420,7 +420,7 @@
 
                 alteration = ALTER_CUSTOM_DAMAGE_CHANCE_MELEE;
                 custom_damage = petrify;
-                value = 5 * (#itemsequipped);
+                value = 4 * (#itemsequipped);
                 description = "+<ALTER_CUSTOM_DAMAGE_CHANCE_MELEE>% Chance To Stun And";
             }
 			[*]
@@ -431,7 +431,7 @@
                 is_single_instance = false;
 
                 alteration = ALTER_CUSTOM_DAMAGE_MELEE;
-                value = 5 * (#itemsequipped);
+                value = 4 * (#itemsequipped);
                 custom_damage = petrify;
                 custom_damage_skrit = world\global\skrits\weapon_hold.skrit?hold_time=4&immunity=immune_freeze;
                 effect_script_equip	= dsx_modifier_stunning_melee;
@@ -447,7 +447,7 @@
 
                 alteration = ALTER_CUSTOM_DAMAGE_CHANCE_RANGED;
                 custom_damage = petrify;
-                value = 5 * (#itemsequipped);
+                value = 4 * (#itemsequipped);
             }
 			[*]
             {
@@ -457,7 +457,7 @@
                 is_single_instance = false;
 
                 alteration = ALTER_CUSTOM_DAMAGE_RANGED;
-                value = 5 * (#itemsequipped);
+                value = 4 * (#itemsequipped);
                 custom_damage = petrify;
                 custom_damage_skrit = world\global\skrits\weapon_hold.skrit?hold_time=4&immunity=immune_freeze;
                 effect_script_hit	= dsx_modifier_stunning_ranged;
@@ -482,8 +482,8 @@
 
                 alteration = ALTER_SPECIAL_DEFENSE;
                 special_defense = fireshot;
-                value = 5 * (#itemsequipped);
-                special_defense_skrit = world\global\skrits\special_defense.skrit?damage_min=10&damage_max=15;
+                value = 4 * (#itemsequipped);
+                special_defense_skrit = world\global\skrits\special_defense.skrit?damage_min=8&damage_max=16;
                 description = "+<ALTER_SPECIAL_DEFENSE>% Chance to Cast Fireshot on Taking Damage";
             }
             [*]
@@ -495,8 +495,8 @@
 
                 alteration = ALTER_SPECIAL_DEFENSE;
                 special_defense = fire_spray;
-                value = 5 * (#itemsequipped);
-                special_defense_skrit = world\global\skrits\special_defense.skrit?damage_min=20&damage_max=25&effect_script="fire_spray";
+                value = 4 * (#itemsequipped);
+                special_defense_skrit = world\global\skrits\special_defense.skrit?damage_min=16&damage_max=32&effect_script="fire_spray";
                 description = "+<ALTER_SPECIAL_DEFENSE>% Chance to Cast Firespray on Taking Damage";
             }
         }
@@ -518,7 +518,7 @@
                 is_single_instance = false;
 
                 alteration = ALTER_RANGED_DAMAGE_MAX;
-                value = 5 * (#itemsequipped);
+                value = 4 * (#itemsequipped);
                 effect_script_hit	= bow_sparkglow_15_wh;
                 description = "Adds <ALTER_RANGED_DAMAGE_MAX> to Max Damage";
             }
@@ -542,7 +542,7 @@
                 is_single_instance = false;
 
                 alteration = ALTER_PIERCING_DAMAGE_CHANCE_RANGED;
-                value = 5 * (#itemsequipped);
+                value = 4 * (#itemsequipped);
                 effect_script_hit	= bow_sparkglow_15_wh;
                 description = "+<ALTER_PIERCING_DAMAGE_CHANCE_RANGED>% Chance to Inflict a Piercing Hit";
             }
@@ -554,7 +554,7 @@
                 is_single_instance = false;
 
                 alteration = ALTER_LIFE_STEAL;
-                value = 5 * (#itemsequipped);
+                value = 4 * (#itemsequipped);
                 effect_script_equip	= steal_drip_05_lre;
                 effect_script_hit	= hit_spark_10_lre;
                 description = "<ALTER_LIFE_STEAL> Health Stolen Per Hit";
@@ -578,7 +578,7 @@
                 is_single_instance = false;
 
                 alteration = ALTER_MELEE_DAMAGE_MAX;
-                value = 5 * (#itemsequipped);
+                value = 4 * (#itemsequipped);
                 effect_script_equip	= dam_haze_05_lbl;
                 effect_script_hit	= hit_spark_10_lbl;
                 description = "Adds <ALTER_MELEE_DAMAGE_MAX> to Max Damage";
@@ -591,7 +591,7 @@
                 is_single_instance = false;
 
                 alteration = ALTER_PIERCING_DAMAGE_CHANCE_MELEE;
-                value = 5 * (#itemsequipped);
+                value = 4 * (#itemsequipped);
                 effect_script_equip	= dam_haze_05_lgr;
                 effect_script_hit	= hit_spark_10_lgr;
                 description = "+<ALTER_PIERCING_DAMAGE_CHANCE_MELEE>% Chance to Inflict a Piercing Hit";
@@ -604,7 +604,7 @@
                 is_single_instance = false;
 
                 alteration = ALTER_LIFE_STEAL;
-                value = 5 * (#itemsequipped);
+                value = 4 * (#itemsequipped);
                 effect_script_equip	= steal_drip_05_lre;
                 effect_script_hit	= hit_spark_10_lre;
                 description = "<ALTER_LIFE_STEAL> Health Stolen Per Hit";
@@ -626,7 +626,7 @@
 				duration = #infinite;
 				
 				alteration = ALTER_MAX_LIFE;
-				value = 10 * (#itemsequipped);
+				value = 8 * (#itemsequipped);
 				description = "Adds <ALTER_MAX_LIFE> to Health";
             }
         }
@@ -646,7 +646,7 @@
 				duration = #infinite;
 				
 				alteration = ALTER_MAX_MANA;
-				value = 10 * (#itemsequipped);
+				value = 8 * (#itemsequipped);
 				description = "Adds <ALTER_MAX_MANA> to Mana";
             }
         }
@@ -666,7 +666,7 @@
 				duration = #infinite;
 				
 				alteration = ALTER_BLOCK_MELEE_DAMAGE;
-				value = 5 * (#itemsequipped);
+				value = 4 * (#itemsequipped);
 				description = "Melee Damage Reduced by <ALTER_BLOCK_MELEE_DAMAGE>%";
             }
             [*]
@@ -675,7 +675,7 @@
 				duration = #infinite;
 				
 				alteration = ALTER_BLOCK_RANGED_DAMAGE;
-				value = 5 * (#itemsequipped);
+				value = 4 * (#itemsequipped);
 				effect_script_equip	= arm_beam_05_lgr;
 				effect_script_hit	= hit_spark_10_lgr;
 				description = "Ranged Damage Reduced by <ALTER_BLOCK_RANGED_DAMAGE>%";
@@ -686,7 +686,7 @@
 				duration = #infinite;
 				
 				alteration = ALTER_BLOCK_NATURE_MAGIC_DAMAGE;
-				value = 5 * (#itemsequipped);
+				value = 4 * (#itemsequipped);
             }
             [*]
             {
@@ -694,7 +694,7 @@
 				duration = #infinite;
 				
 				alteration = ALTER_BLOCK_COMBAT_MAGIC_DAMAGE;
-				value = 5 * (#itemsequipped);
+				value = 4 * (#itemsequipped);
 				description = "Magic Damage Reduced by <ALTER_BLOCK_COMBAT_MAGIC_DAMAGE>%";
             }
         }
@@ -715,7 +715,7 @@
 				
 				alteration = ALTER_CUSTOM_DAMAGE_CHANCE_MELEE;
 				custom_damage = acid;
-				value = 5 * (#itemsequipped);
+				value = 4 * (#itemsequipped);
 				description = "+<ALTER_CUSTOM_DAMAGE_CHANCE_MELEE>% Chance to Acidify And";
             }
             [*]
@@ -725,7 +725,7 @@
 				
 				alteration = ALTER_CUSTOM_DAMAGE_MELEE;
 				custom_damage = acid;
-				value = 5 * (#itemsequipped);
+				value = 4 * (#itemsequipped);
 				custom_damage_skrit = world\global\skrits\weapon_poison.skrit?duration=4&manager_template="dsx_base_acid_manager";
 				effect_script_equip = dsx_modifier_misting_melee;
 				effect_script_hit = dsx_modifier_misting_hit;
@@ -739,7 +739,7 @@
 				
 				alteration = ALTER_CUSTOM_DAMAGE_CHANCE_RANGED;
 				custom_damage = acid;
-				value = 5 * (#itemsequipped);
+				value = 4 * (#itemsequipped);
             }
             [*]
             {
@@ -748,7 +748,7 @@
 				
 				alteration = ALTER_CUSTOM_DAMAGE_RANGED;
 				custom_damage = acid;
-				value = 5 * (#itemsequipped);
+				value = 4 * (#itemsequipped);
 				custom_damage_skrit = world\global\skrits\weapon_poison.skrit?duration=4&manager_template="dsx_base_acid_manager";
 				effect_script_hit = dsx_modifier_misting_hit;
             }
