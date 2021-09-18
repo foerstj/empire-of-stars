@@ -218,14 +218,15 @@
 {
 	[common]
 	{
-		dev_instance_text = "REVERT FADE +cave +shrubs1 +shaft";
+		dev_instance_text = "REVERT FADE +shaft +cave +shrubs1";
 		[instance_triggers]
 		{
 			[*]
 			{
-				action* = fade_nodes(0xE0D3DEC9,1,-1,-1,"in:instant"), doc("+cave");
-				action* = fade_nodes(0x000000D1,1,-1,-1,"in:instant"), doc("+shrubs1");
-				action* = fade_nodes(0x39B22300,3,-1,-1,"in:instant");
+				action* = fade_nodes(0x39B22300,3,-1,-1,"in:instant"), doc("+.shaft");
+				action* = fade_nodes(0xE0D3DEC9,1,-1,-1,"in:instant"), doc("+cave.main");
+				action* = fade_nodes(0x000000D1,1,-1,-1,"in:instant"), doc("+shrubs1.main");
+				action* = fade_nodes(0x000000D1,4,-1,-1,"in:instant"), doc("+shrubs1.ruins");
 			  b can_self_destruct = true;
 				condition* = party_member_within_bounding_box(5.000000,0.500000,1.000000,"on_every_enter");
 			  f delay = 0.000000;
@@ -249,16 +250,17 @@
 {
 	[common]
 	{
-		dev_instance_text = "MOOD, FADE -shaft -cave -shrubs1";
+		dev_instance_text = "MOOD, FADE -shaft -cave -shrubs1 +ele";
 		[instance_triggers]
 		{
 			[*]
 			{
 				action* = mood_change("eos_rigel_dry_pyramid_dungeon_2");
-				action* = fade_nodes(0x39B22300,3,-1,-1,"out:instant"), doc("-shaft");
-				action* = fade_nodes(0x39B22300,1,2,-1,"out:instant"), doc("-caps");
-				action* = fade_nodes(0xE0D3DEC9,1,-1,-1,"out:instant"), doc("-cave");
-				action* = fade_nodes(0x000000D1,1,-1,-1,"out:instant"), doc("-shrubs1");
+				action* = fade_nodes(0x39B22300,3,-1,-1,"out:instant"), doc("-.shaft");
+				action* = fade_nodes(0xE0D3DEC9,1,-1,-1,"out:instant"), doc("-cave.main");
+				action* = fade_nodes(0x000000D1,1,-1,-1,"out:instant"), doc("-shrubs1.main");
+				action* = fade_nodes(0x000000D1,4,-1,-1,"out:instant"), doc("-shrubs1.ruins");
+				action* = fade_nodes(0x39B22300,2,-1,-1,"in:instant"), doc("+.ele");
 			  b can_self_destruct = true;
 				condition* = party_member_within_bounding_box(5.000000,0.500000,1.000000,"on_every_enter");
 			  f delay = 0.000000;

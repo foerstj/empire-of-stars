@@ -58,12 +58,13 @@
 {
 	[common]
 	{
-		dev_instance_text = "PWL; FADE +entr.upper";
+		dev_instance_text = "PWL; FADE +entr.upper +dgn.main";
 		[instance_triggers]
 		{
 			[*]
 			{
-				action* = fade_nodes(0x5C3929B4,2,-1,-1,"in:instant");
+				action* = fade_nodes(0x5C3929B4,2,-1,-1,"in:instant"), doc("+entr.upper");
+				action* = fade_nodes(0x39B22300,1,-1,-1,"in:instant"), doc("+dgn.main");
 			  b can_self_destruct = true;
 				condition* = party_member_within_sphere(16.000000,"on_every_enter");
 			  f delay = 0.000000;

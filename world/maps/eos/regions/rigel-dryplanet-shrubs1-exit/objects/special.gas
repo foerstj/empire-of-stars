@@ -176,14 +176,14 @@
 {
 	[common]
 	{
-		dev_instance_text = "FADE -cave -ele -dungeon";
+		dev_instance_text = "FADE IN NODE: -cave !:-ele -dungeon";
 		[instance_triggers]
 		{
 			[*]
 			{
-				action* = fade_nodes(0xE0D3DEC9,1,-1,-1,"out:black"), doc("-cave");
-				action* = when_false fade_nodes(0x39B22300,2,-1,-1,"out:black"), doc("-ele");
-				action* = fade_nodes(0x39B22300,1,-1,-1,"out:black"), doc("-dungeon");
+				action* = fade_nodes(0xE0D3DEC9,1,-1,-1,"out:black"), doc("-cave.main");
+				action* = when_false fade_nodes(0x39B22300,2,-1,-1,"out:black"), doc("!:-dgn.ele");
+				action* = fade_nodes(0x39B22300,1,-1,-1,"out:black"), doc("-dgn.main");
 			  b can_self_destruct = true;
 				condition* = party_member_within_node(0x000000D1,1,-1,-1,"on_every_enter");
 			  f delay = 0.000000;
@@ -212,7 +212,7 @@
 		{
 			[*]
 			{
-				action* = fade_nodes(0xE0D3DEC9,1,-1,-1,"out:black");
+				action* = fade_nodes(0xE0D3DEC9,1,-1,-1,"out:black"), doc("-cave.main");
 			  b can_self_destruct = true;
 				condition* = party_member_within_bounding_box(3.000000,2.000000,1.000000,"on_every_enter");
 			  f delay = 0.000000;
@@ -355,7 +355,7 @@
 		{
 			[*]
 			{
-				action* = fade_nodes(0xE0D3DEC9,1,-1,-1,"in");
+				action* = fade_nodes(0xE0D3DEC9,1,-1,-1,"in"), doc("+cave.main");
 			  b can_self_destruct = true;
 				condition* = party_member_within_bounding_box(3.000000,2.000000,1.000000,"on_every_enter");
 			  f delay = 0.000000;
@@ -384,7 +384,7 @@
 		{
 			[*]
 			{
-				action* = fade_nodes(0x39B22300,2,-1,-1,"in");
+				action* = fade_nodes(0x39B22300,2,-1,-1,"in"), doc("+dgn.ele");
 			  b can_self_destruct = true;
 				condition* = party_member_within_bounding_box(3.000000,2.000000,1.000000,"on_every_enter");
 			  f delay = 0.000000;
@@ -408,13 +408,13 @@
 {
 	[common]
 	{
-		dev_instance_text = "FADE +shrubs .1&.4";
+		dev_instance_text = "FADE +shrubs";
 		[instance_triggers]
 		{
 			[*]
 			{
-				action* = fade_nodes(0x000000D1,1,-1,-1,"in");
-				action* = fade_nodes(0x000000D1,4,-1,-1,"in");
+				action* = fade_nodes(0x000000D1,1,-1,-1,"in"), doc("+.main");
+				action* = fade_nodes(0x000000D1,4,-1,-1,"in"), doc("+.ruins");
 			  b can_self_destruct = true;
 				condition* = party_member_within_bounding_box(3.000000,2.000000,1.000000,"on_every_enter");
 			  f delay = 0.000000;
@@ -438,13 +438,13 @@
 {
 	[common]
 	{
-		dev_instance_text = "FADE -shrubs .1&.4";
+		dev_instance_text = "FADE -shrubs";
 		[instance_triggers]
 		{
 			[*]
 			{
-				action* = fade_nodes(0x000000D1,1,-1,-1,"out:black");
-				action* = fade_nodes(0x000000D1,4,-1,-1,"out:black");
+				action* = fade_nodes(0x000000D1,1,-1,-1,"out:black"), doc("-.main");
+				action* = fade_nodes(0x000000D1,4,-1,-1,"out:black"), doc("-.ruins");
 			  b can_self_destruct = true;
 				condition* = party_member_within_bounding_box(3.000000,2.000000,1.000000,"on_every_enter");
 			  f delay = 0.000000;

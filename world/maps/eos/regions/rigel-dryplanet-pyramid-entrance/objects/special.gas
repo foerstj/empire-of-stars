@@ -2,13 +2,13 @@
 {
 	[common]
 	{
-		dev_instance_text = "FADE -2 -S4";
+		dev_instance_text = "FADE -.upper -shrubs4";
 		[instance_triggers]
 		{
 			[*]
 			{
-				action* = fade_nodes(0x5C3929B4,2,-1,-1,"out:instant");
-				action* = fade_nodes(0x000000D4,-1,-1,-1,"out:instant");
+				action* = fade_nodes(0x5C3929B4,2,-1,-1,"out:instant"), doc("-.upper");
+				action* = fade_nodes(0x000000D4,-1,-1,-1,"out:instant"), doc("-shrubs4");
 			  b can_self_destruct = true;
 				condition* = party_member_within_bounding_box(4.000000,0.500000,1.000000,"on_every_enter");
 			  f delay = 0.000000;
@@ -92,13 +92,13 @@
 {
 	[common]
 	{
-		dev_instance_text = "FADE +2 +S4";
+		dev_instance_text = "FADE +.upper +.shrubs4";
 		[instance_triggers]
 		{
 			[*]
 			{
-				action* = fade_nodes(0x5C3929B4,2,-1,-1,"in:instant");
-				action* = fade_nodes(0x000000D4,-1,-1,-1,"in:instant");
+				action* = fade_nodes(0x5C3929B4,2,-1,-1,"in:instant"), doc("+.upper");
+				action* = fade_nodes(0x000000D4,-1,-1,-1,"in:instant"), doc("+shrubs4");
 			  b can_self_destruct = true;
 				condition* = party_member_within_bounding_box(4.000000,0.500000,1.000000,"on_every_enter");
 			  f delay = 0.000000;
@@ -151,13 +151,13 @@
 {
 	[common]
 	{
-		dev_instance_text = "FADE -2 -S4";
+		dev_instance_text = "FADE -.upper -shrubs4";
 		[instance_triggers]
 		{
 			[*]
 			{
-				action* = fade_nodes(0x5C3929B4,2,-1,-1,"out:black");
-				action* = fade_nodes(0x000000D4,-1,-1,-1,"out:black");
+				action* = fade_nodes(0x5C3929B4,2,-1,-1,"out:black"), doc("-.upper");
+				action* = fade_nodes(0x000000D4,-1,-1,-1,"out:black"), doc("-shrubs4");
 			  b can_self_destruct = true;
 				condition* = party_member_within_bounding_box(3.000000,2.000000,1.000000,"on_every_enter");
 			  f delay = 0.000000;
@@ -182,13 +182,13 @@
 {
 	[common]
 	{
-		dev_instance_text = "FADE +2 +S4";
+		dev_instance_text = "FADE +.upper +shrubs4";
 		[instance_triggers]
 		{
 			[*]
 			{
-				action* = fade_nodes(0x5C3929B4,2,-1,-1,"in");
-				action* = fade_nodes(0x000000D4,-1,-1,-1,"in");
+				action* = fade_nodes(0x5C3929B4,2,-1,-1,"in"), doc("+.upper");
+				action* = fade_nodes(0x000000D4,-1,-1,-1,"in"), doc("+shrubs4");
 			  b can_self_destruct = true;
 				condition* = party_member_within_bounding_box(3.000000,2.000000,1.000000,"on_every_enter");
 			  f delay = 0.000000;
