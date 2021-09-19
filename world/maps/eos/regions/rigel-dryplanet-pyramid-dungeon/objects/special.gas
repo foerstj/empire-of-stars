@@ -69,6 +69,94 @@
 	  p position = 1.79906,-2,4.76793,0xd4b02c50;
 	}
 }
+[t:trigger_change_mood_box,n:0x02d001a1]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = mood_change("eos_rigel_dry_pyramid_dungeon_1");
+			  b can_self_destruct = true;
+				condition* = party_member_within_bounding_box(5.000000,2.000000,0.250000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,0.707107,0,-0.707107;
+	  p position = 1.46083,0,0.0928726,0x9efd9ac1;
+	}
+}
+[t:trigger_generic,n:0x02d00148]
+{
+	[common]
+	{
+		dev_instance_text = "FADE";
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = fade_nodes_global(0x39B22300,1,8,-1,"out:black");
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_req_activate",0,"on_first_message"), doc("[*one-shot check (trigger is one-shot)*]");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = true;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,1.2207e-007,0,1;
+	  p position = 0.774541,0.0318639,1.96841,0x4e89c5a3;
+	}
+}
+[t:trigger_change_mood_box,n:0x02d001a4]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = mood_change("eos_rigel_dry_pyramid_dungeon_2");
+			  b can_self_destruct = true;
+				condition* = party_member_within_bounding_box(5.000000,2.000000,0.250000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,-9.68575e-008,0,-1;
+	  p position = 0.139201,0,0.00338009,0x4e89c5a3;
+	}
+}
 [t:trigger_fade_nodes_global_box,n:0x02d00146]
 {
 	[common]
@@ -161,8 +249,8 @@
 {
 	[placement]
 	{
-	  q orientation = 0,-0.707107,0,0.707107;
-	  p position = -4.53676,-1.5,-0.702333,0x766a06c3;
+	  q orientation = 0,2.98023e-008,0,1;
+	  p position = 6.8945,-2,3.98079,0x52212cc1;
 	}
 }
 [t:trigger_generic,n:0x02d0001e]
@@ -634,94 +722,6 @@
 	{
 	  q orientation = 0,1,0,0;
 	  p position = 1.85101,-1.5,1.89725,0x4c9f7c5d;
-	}
-}
-[t:trigger_change_mood_box,n:0x02d001a1]
-{
-	[common]
-	{
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = mood_change("eos_rigel_dry_pyramid_dungeon_1");
-			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(5.000000,2.000000,0.250000,"on_every_enter");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  q orientation = 0,0.707107,0,-0.707107;
-	  p position = 1.46083,0,0.0928726,0x9efd9ac1;
-	}
-}
-[t:trigger_generic,n:0x02d00148]
-{
-	[common]
-	{
-		dev_instance_text = "FADE";
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = fade_nodes_global(0x39B22300,1,8,-1,"out:black");
-			  b can_self_destruct = true;
-				condition* = receive_world_message("we_req_activate",0,"on_first_message"), doc("[*one-shot check (trigger is one-shot)*]");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = true;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  q orientation = 0,1.2207e-007,0,1;
-	  p position = 0.774541,0.0318639,1.96841,0x4e89c5a3;
-	}
-}
-[t:trigger_change_mood_box,n:0x02d001a4]
-{
-	[common]
-	{
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = mood_change("eos_rigel_dry_pyramid_dungeon_2");
-			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(5.000000,2.000000,0.250000,"on_every_enter");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  q orientation = 0,-9.68575e-008,0,-1;
-	  p position = 0.139201,0,0.00338009,0x4e89c5a3;
 	}
 }
 [t:trigger_generic,n:0x02d00147]

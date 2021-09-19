@@ -1,0 +1,52 @@
+[t:template,n:respawn_statue_base]  // = respawn_statue
+{
+	specializes 		= interactive;
+	doc 				= "statue_respawn";
+	category_name       = "interactive";
+
+	[aspect]
+	{
+		model = m_i_glb_statue-azunai-02;
+		is_ghost_usable = true;
+		draw_selection_indicator = false;
+	}
+
+	[respawn_shrine] { }
+
+	[common]
+	{
+		screen_name      = "Resurrection Shrine";
+		is_multi_player  = true;
+		is_single_player = false;
+		rollover_display = true;
+		[template_triggers]
+		{
+			[*]
+			{
+				action* = call_sfx_script("respawn_shrine");
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				single_shot = true;
+			}
+			[*]
+			{
+				action* = call_sfx_script("respawn_shrine_charge");
+				condition* = receive_world_message("we_req_use");
+			}
+		}
+	}
+}
+
+[t:template,n:respawn_statue_cat_gold]
+{
+    specializes = respawn_statue_base;
+
+	[aspect]
+	{
+		model = m_i_glb_statue-cat-01;
+        scale_base = 3;
+		[textures]
+		{
+			0 = b_i_glb_statue-cat-02;
+		}
+    }
+}
