@@ -190,6 +190,8 @@
 	}
 	[common]
 	{
+		dev_instance_text = "SP HIREABLE";
+	  b is_multi_player = false;
 		[instance_triggers]
 		{
 			[*]
@@ -238,6 +240,49 @@
 	  p position = 3.31395,1.90735e-006,1.64644,0x5b2ca1cf;
 	}
 }
+[t:aunt_luna,n:0x04c00424]
+{
+	[aspect]
+	{
+	  f max_life = 98;
+	  f max_mana = 60;
+	}
+	[common]
+	{
+		dev_instance_text = "MP";
+	  b is_single_player = false;
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_activate",0x04C0035D,0f,"default","every",0);
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_req_talk_end",0,"on_every_message");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[conversation]
+	{
+		[conversations]
+		{
+			* = aunt_luna_mp;
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.382683,0,0.92388;
+	  p position = -0.767326,0,1.2211,0x5b2ca1cf;
+	}
+}
 [t:eos_utraean_male_a2_3a,n:0x04c00093]
 {
 	[aspect]
@@ -271,6 +316,8 @@
 	}
 	[common]
 	{
+		dev_instance_text = "SP HIREABLE";
+	  b is_multi_player = false;
 		screen_name = "Dar's";
 	}
 	[conversation]
@@ -324,6 +371,32 @@
 	  p position = 0.104654,1.90735e-006,-0.422455,0xf1671d2a;
 	}
 }
+[t:eos_bg_hire_m_r,n:0x04c00419]
+{
+	[aspect]
+	{
+	  f max_life = 58.8;
+	  f max_mana = 34;
+	}
+	[common]
+	{
+		dev_instance_text = "MP";
+	  b is_single_player = false;
+		screen_name = "Dar's";
+	}
+	[conversation]
+	{
+		[conversations]
+		{
+			* = hire_bg_m_r_mp;
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,0.945911,0,-0.324425;
+	  p position = 2.94655,0,1.03723,0xf1671d2a;
+	}
+}
 [t:eos_utraean_female_a2_2_bald,n:0x04c000a1]
 {
 	[aspect]
@@ -333,6 +406,8 @@
 	}
 	[common]
 	{
+		dev_instance_text = "SP MULESHOP";
+	  b is_multi_player = false;
 		screen_name = "Norothy";
 	}
 	[conversation]
@@ -387,6 +462,32 @@
 	{
 	  q orientation = 0,0.998946,0,0.0459065;
 	  p position = -3.55531,-0.0499973,1.74623,0x92ad36da;
+	}
+}
+[t:eos_utraean_female_a2_2_bald,n:0x04c0041f]
+{
+	[aspect]
+	{
+	  f max_life = 196;
+	  f max_mana = 289;
+	}
+	[common]
+	{
+		dev_instance_text = "MP";
+	  b is_single_player = false;
+		screen_name = "Norothy";
+	}
+	[conversation]
+	{
+		[conversations]
+		{
+			* = mule_shop_mp;
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.998002,0,0.0631867;
+	  p position = 2.51514,-0.05,-2.365,0x92ad36da;
 	}
 }
 [t:pb_cat_gray,n:0x04c00077]

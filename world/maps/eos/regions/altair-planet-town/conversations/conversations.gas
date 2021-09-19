@@ -144,6 +144,7 @@ Here, have some Krug blood wine!";
 	{
 		choice = buy_packmule;
 		screen_text = "Stuff yourself! Here to buy a mule, are you? You want a nice docile beastie you can leave out in the rain, pack a house-worth of stuff onto its back, and feed whenever you feel it's convenient? Hah! It's no wonder we went out of the sodding yak business! Do me a favor: take one of these worthless mules I got in trade for its equal in gold, and I'll be one step closer to getting out of this blighted kingdom for good.";
+	  f scroll_rate = 10.000000;
 	}
 }
 [conversation_ghilbertnor_has_packmules]
@@ -301,6 +302,15 @@ Here, have some Krug blood wine!";
 	{
 		choice = potential_member;
 		screen_text = "Bloodsucking barnacle! Chieftain tell Sig of Mugmort 'bring caravan safe to kingdom of Borea.' I bring to Javlakallt... then mule-eating Krug attack caravan! Driver steals wagon, driver takes Sig gold, and driver runs away. Sig tracks to Lagomsno, but cannot chase further. Sig help you if you help him. Sig good at smashing, beating, crushing... anything! You like?";
+	  f scroll_rate = 10.000000;
+	}
+}
+[conversation_kroduk_mp]
+{
+	[text*]
+	{
+		screen_text = "Bloodsucking barnacle! Chieftain tell Sig of Mugmort 'bring caravan safe to kingdom of Borea.' I bring to Javlakallt... then mule-eating Krug attack caravan! Driver steals wagon, driver takes Sig gold, and driver runs away. Sig tracks to Lagomsno, but cannot chase further.";
+	  f scroll_rate = 10.000000;
 	}
 }
 [conversation_kroduk_reject]
@@ -374,6 +384,7 @@ Here, have some Krug blood wine!";
 	{
 		choice = potential_member;
 		screen_text = "Sewer pipe! If the King sees fit to send you oot on a madman's quest into the Fireheart Caverns, I should at least see you've a chance at living through it. I'm the best mage in these parts and I may be old, but I was roasting furoks with mage fire when yer daddy's daddy was a whelp! If you've the gold so's I kin settle my accounts here, we can get moving afore you can say bless the Fireheart. Will ye have me along?";
+	  f scroll_rate = 10.000000;
 	}
 }
 [conversation_lorun_multiplayer]
@@ -388,6 +399,7 @@ Here, have some Krug blood wine!";
 	[text*]
 	{
 		screen_text = "Burned gravy! If you really come from another star, I suggest you speak with the King. This should interest him; also he might guide you to whatever help you may need.";
+	  f scroll_rate = 10.000000;
 	}
 }
 [conversation_lorun_reject]
@@ -468,6 +480,14 @@ Speaking of food, I can really recommend the Royal Gremal Stew they serve here, 
 	{
 		screen_text = "Frozen furok on a flying gremal! It's said that the Queensmen's sigil appeared here last week. I asked the Captain about it, and he gave me extra patrol duty for a week. And I still don't know why everyone's so hush-hush about it!
 Have some stout and green cheese!";
+	  f scroll_rate = 10.000000;
+	}
+}
+[mule_shop_mp]
+{
+	[text*]
+	{
+		screen_text = "Stuff yourself! These mules are not for sale! If I sell them, we're gonna move back to Javlakallt. You know what that name means? It means: shitty cold!";
 	  f scroll_rate = 10.000000;
 	}
 }

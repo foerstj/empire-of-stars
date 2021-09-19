@@ -11,10 +11,6 @@
 			* = starter_shop;
 		}
 	}
-	[mind]
-	{
-		jat_talk = world\ai\jobs\common\job_talk.skrit;
-	}
 	[placement]
 	{
 	  q orientation = 0,-0.267239,0,0.963631;
@@ -117,6 +113,8 @@
 {
 	[common]
 	{
+		dev_instance_text = "SP MULESHOP";
+	  b is_multi_player = false;
 		screen_name = "Eduard";
 	}
 	[conversation]
@@ -135,6 +133,27 @@
 	{
 	  q orientation = 0,-0.902159,0,0.431404;
 	  p position = 2.96999,0,0.460463,0xcd07dd8c;
+	}
+}
+[t:smithy_liorne,n:0x01c00340]
+{
+	[common]
+	{
+		dev_instance_text = "MP";
+	  b is_single_player = false;
+		screen_name = "Eduard";
+	}
+	[conversation]
+	{
+		[conversations]
+		{
+			* = mule_shop_mp;
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.902159,0,0.431404;
+	  p position = 3.21986,0,0.68754,0xcd07dd8c;
 	}
 }
 [t:mule_bt_r1,n:0x01c0003a]
@@ -581,6 +600,8 @@
 	}
 	[common]
 	{
+		dev_instance_text = "SP HIREABLE";
+	  b is_multi_player = false;
 		screen_name = "Laura";
 	}
 	[conversation]
@@ -602,6 +623,33 @@
 	{
 	  q orientation = 0,0.893591,0,-0.448882;
 	  p position = -3.10318,0,1.97691,0x56d2c577;
+	}
+}
+[t:eos_ulora,n:0x01c0033c]
+{
+	[aspect]
+	{
+	  i gold_value = 100;
+	  f max_life = 49;
+	  f max_mana = 30;
+	}
+	[common]
+	{
+		dev_instance_text = "MP";
+	  b is_single_player = false;
+		screen_name = "Laura";
+	}
+	[conversation]
+	{
+		[conversations]
+		{
+			* = ulora_mp;
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,0.893591,0,-0.448882;
+	  p position = -3.37027,0,1.90303,0x56d2c577;
 	}
 }
 [t:dog_sleeping,n:0x01c005b2]

@@ -62,7 +62,8 @@
 {
 	[common]
 	{
-		dev_instance_text = "C2";
+		dev_instance_text = "C2 - SP HIREABLE";
+	  b is_multi_player = false;
 		screen_name = "10th Legion Guard Thril";
 		[instance_triggers]
 		{
@@ -114,11 +115,201 @@
 	  p position = 4.49938,-1.5,-6.07511,0xed8ca793;
 	}
 }
+[t:ad_hg_hire_m2,n:0x07200400]
+{
+	[aspect]
+	{
+	  f max_life = 597.8;
+	  f max_mana = 120;
+	}
+	[common]
+	{
+		dev_instance_text = "M2 - MP";
+	  b is_single_player = false;
+		screen_name = "10th Legion Guard Ukens";
+	}
+	[conversation]
+	{
+		[conversations]
+		{
+			* = hire_m2_join_mp;
+			* = hire_talk2overseer;
+		}
+	}
+	[inventory]
+	{
+		[equipment]
+		{
+			es_chest = bd_un_pl_f_g_c_eos_m2;
+			es_weapon_hand = sd_g_c_st_2h_avg;
+		}
+	}
+	[mind]
+	{
+		jat_talk = world\ai\jobs\eos\job_talk_ad_hire_m2.skrit;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.819152,0,0.573576;
+	  p position = 11.9955,-2.5,-2.39777,0xed8ca793;
+	}
+}
+[t:ad_hg_hire_c1,n:0x0720040b]
+{
+	[aspect]
+	{
+	  f max_life = 274.4;
+	  f max_mana = 394;
+	}
+	[common]
+	{
+		dev_instance_text = "C1 - MP";
+	  b is_single_player = false;
+		screen_name = "10th Legion Guard Crerkrins";
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_deactivate",0x0720040D,0f,"default","every",0);
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_selected",0,"on_first_message");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = true;
+			  b start_active = true;
+			}
+		}
+	}
+	[conversation]
+	{
+		[conversations]
+		{
+			* = hire_c1_join_mp;
+			* = hire_talk2overseer;
+		}
+	}
+	[inventory]
+	{
+		[equipment]
+		{
+			es_chest = bd_ro_un_m_g_c_eos_c1;
+			es_spellbook = book_glb_magic_01;
+		}
+	}
+	[mind]
+	{
+	  b actor_auto_fidgets = false;
+		jat_talk = world\ai\jobs\eos\job_talk_ad_hire_c1.skrit;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.92388,0,0.382683;
+	  p position = 2.88047,-1.5,-4.65746,0xed8ca793;
+	}
+}
+[t:ad_hg_hire_c2,n:0x0720040c]
+{
+	[aspect]
+	{
+	  f max_life = 343;
+	  f max_mana = 474;
+	}
+	[common]
+	{
+		dev_instance_text = "C2 - MP";
+	  b is_single_player = false;
+		screen_name = "10th Legion Guard Thril";
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_deactivate",0x0720040E,0f,"default","every",0);
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_selected",0,"on_first_message");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = true;
+			  b start_active = true;
+			}
+		}
+	}
+	[conversation]
+	{
+		[conversations]
+		{
+			* = hire_c2_join_mp;
+			* = hire_talk2overseer;
+		}
+	}
+	[inventory]
+	{
+		[equipment]
+		{
+			es_chest = bd_ro_un_m_g_c_eos_c2;
+			es_spellbook = book_glb_magic_01;
+		}
+	}
+	[mind]
+	{
+	  b actor_auto_fidgets = false;
+		jat_talk = world\ai\jobs\eos\job_talk_ad_hire_c2.skrit;
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.382683,0,0.92388;
+	  p position = 4.56527,-1.5,-6.12437,0xed8ca793;
+	}
+}
+[t:half_giant_townfolk_02,n:0x0720040f]
+{
+	[aspect]
+	{
+	  b interest_only = true;
+	  f scale_multiplier = 1.2;
+	}
+	[common]
+	{
+		dev_instance_text = "MP";
+	  b is_single_player = false;
+		screen_name = "10th Legion Decurio Eekir";
+	}
+	[conversation]
+	{
+		[conversations]
+		{
+			* = overseer_mp;
+		}
+	}
+	[inventory]
+	{
+		[equipment]
+		{
+			es_chest = bd_un_pl_f_g_c_fun;
+			es_head = he_un_op_pl_guard_captain;
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,0.909961,0,0.414693;
+	  p position = -6.43765,-1.5,0.409531,0xed8ca793;
+	}
+}
 [t:ad_hg_hire_m2,n:0x07200583]
 {
 	[common]
 	{
-		dev_instance_text = "M2";
+		dev_instance_text = "M2 - SP HIREABLE";
+	  b is_multi_player = false;
 		screen_name = "10th Legion Guard Ukens";
 	}
 	[conversation]
@@ -155,7 +346,8 @@
 {
 	[common]
 	{
-		dev_instance_text = "C1";
+		dev_instance_text = "C1 - SP HIREABLE";
+	  b is_multi_player = false;
 		screen_name = "10th Legion Guard Crerkrins";
 		[instance_triggers]
 		{
@@ -239,6 +431,8 @@
 	}
 	[common]
 	{
+		dev_instance_text = "SP GRANT HIRE";
+	  b is_multi_player = false;
 		screen_name = "10th Legion Decurio Eekir";
 	}
 	[conversation]
@@ -364,11 +558,90 @@
 	  p position = 0.285919,-4.25,-1.4666,0x3909b301;
 	}
 }
+[t:ad_hg_hire_r1,n:0x07200409]
+{
+	[aspect]
+	{
+	  f max_life = 333.2;
+	  f max_mana = 133;
+	}
+	[common]
+	{
+		dev_instance_text = "R1 - MP";
+	  b is_single_player = false;
+		screen_name = "10th Legion Guard Screlzar";
+	}
+	[conversation]
+	{
+		[conversations]
+		{
+			* = hire_r1_join_mp;
+			* = hire_talk2overseer;
+		}
+	}
+	[inventory]
+	{
+		[equipment]
+		{
+			es_chest = bd_un_pl_f_g_c_eos_r1;
+			es_shield_hand = bw_g_c_c_m_4_avg;
+		}
+	}
+	[mind]
+	{
+		jat_talk = world\ai\jobs\eos\job_talk_ad_hire_r1.skrit;
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.48481,0,-0.874619;
+	  p position = -3.44672,0,-0.937759,0x4d9807f0;
+	}
+}
+[t:ad_hg_hire_m1,n:0x0720040a]
+{
+	[aspect]
+	{
+	  f max_life = 460.6;
+	  f max_mana = 87;
+	}
+	[common]
+	{
+		dev_instance_text = "M1 - MP";
+	  b is_single_player = false;
+		screen_name = "10th Legion Guard Eeddieds";
+	}
+	[conversation]
+	{
+		[conversations]
+		{
+			* = hire_m1_join_mp;
+			* = hire_talk2overseer;
+		}
+	}
+	[inventory]
+	{
+		[equipment]
+		{
+			es_chest = bd_un_pl_f_g_c_eos_m1;
+			es_weapon_hand = sd_g_c_sc_1h_avg;
+		}
+	}
+	[mind]
+	{
+		jat_talk = world\ai\jobs\eos\job_talk_ad_hire_m1.skrit;
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.350207,0,0.936672;
+	  p position = 3.10278,0,-0.671921,0x4d9807f0;
+	}
+}
 [t:ad_hg_hire_r1,n:0x07200580]
 {
 	[common]
 	{
-		dev_instance_text = "R1";
+		dev_instance_text = "R1 - SP HIREABLE";
+	  b is_multi_player = false;
 		screen_name = "10th Legion Guard Screlzar";
 	}
 	[conversation]
@@ -405,7 +678,8 @@
 {
 	[common]
 	{
-		dev_instance_text = "M1";
+		dev_instance_text = "M1 - SP HIREABLE";
+	  b is_multi_player = false;
 		screen_name = "10th Legion Guard Eeddieds";
 	}
 	[conversation]
@@ -571,11 +845,51 @@
 	  p position = -1.66357,0,2.02332,0xa0465982;
 	}
 }
+[t:ad_hg_hire_r2,n:0x072003f3]
+{
+	[aspect]
+	{
+	  f max_life = 401.8;
+	  f max_mana = 171;
+	}
+	[common]
+	{
+		dev_instance_text = "R2 - MP";
+	  b is_single_player = false;
+		screen_name = "10th Legion Guard Avul";
+	}
+	[conversation]
+	{
+		[conversations]
+		{
+			* = hire_r2_join_mp;
+			* = hire_talk2overseer;
+		}
+	}
+	[inventory]
+	{
+		[equipment]
+		{
+			es_chest = bd_un_pl_f_g_c_eos_r2;
+			es_shield_hand = bw_g_c_c_l_r_avg;
+		}
+	}
+	[mind]
+	{
+		jat_talk = world\ai\jobs\eos\job_talk_ad_hire_r2.skrit;
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.382683,0,0.92388;
+	  p position = -3.04095,-1.5,-3.62297,0x5e713a86;
+	}
+}
 [t:ad_hg_hire_r2,n:0x07200669]
 {
 	[common]
 	{
-		dev_instance_text = "R2";
+		dev_instance_text = "R2 - SP HIREABLE";
+	  b is_multi_player = false;
 		screen_name = "10th Legion Guard Avul";
 	}
 	[conversation]
@@ -719,11 +1033,52 @@
 	  p position = -0.976124,0,-0.0664673,0x8bd4a00c;
 	}
 }
+[t:ad_hg_hire_n1,n:0x07200408]
+{
+	[aspect]
+	{
+	  f max_life = 245;
+	  f max_mana = 393;
+	}
+	[common]
+	{
+		dev_instance_text = "N1 - MP";
+	  b is_single_player = false;
+		screen_name = "10th Legion Guard Aequk";
+	}
+	[conversation]
+	{
+		[conversations]
+		{
+			* = hire_n1_join_mp;
+			* = hire_talk2overseer;
+		}
+	}
+	[inventory]
+	{
+		[equipment]
+		{
+			es_chest = bd_ro_un_m_g_c_eos_n1;
+			es_spellbook = book_glb_magic_01;
+			es_weapon_hand = st_un_eos_legion_1;
+		}
+	}
+	[mind]
+	{
+		jat_talk = world\ai\jobs\eos\job_talk_ad_hire_n1.skrit;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.777146,0,0.62932;
+	  p position = -1.94145,-0.0211105,-2.547,0x4ba22d29;
+	}
+}
 [t:ad_hg_hire_n1,n:0x07200581]
 {
 	[common]
 	{
-		dev_instance_text = "N1";
+		dev_instance_text = "N1 - SP HIREABLE";
+	  b is_multi_player = false;
 		screen_name = "10th Legion Guard Aequk";
 	}
 	[conversation]
@@ -1116,11 +1471,52 @@
 	  p position = 2.76101,0,-1.97773,0xb3a2641a;
 	}
 }
+[t:ad_hg_hire_n2,n:0x07200407]
+{
+	[aspect]
+	{
+	  f max_life = 323.4;
+	  f max_mana = 498;
+	}
+	[common]
+	{
+		dev_instance_text = "N2 - MP";
+	  b is_single_player = false;
+		screen_name = "10th Legion Guard Thrisquiks";
+	}
+	[conversation]
+	{
+		[conversations]
+		{
+			* = hire_n2_join_mp;
+			* = hire_talk2overseer;
+		}
+	}
+	[inventory]
+	{
+		[equipment]
+		{
+			es_chest = bd_ro_un_m_g_c_eos_n2;
+			es_spellbook = book_glb_magic_01;
+			es_weapon_hand = st_un_eos_legion_2;
+		}
+	}
+	[mind]
+	{
+		jat_talk = world\ai\jobs\eos\job_talk_ad_hire_n2.skrit;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.19081,0,0.981627;
+	  p position = -2.68629,0,-3.20244,0x7d0ecc5c;
+	}
+}
 [t:ad_hg_hire_n2,n:0x0720057f]
 {
 	[common]
 	{
-		dev_instance_text = "N2";
+		dev_instance_text = "N2 - SP HIREABLE";
+	  b is_multi_player = false;
 		screen_name = "10th Legion Guard Thrisquiks";
 	}
 	[conversation]

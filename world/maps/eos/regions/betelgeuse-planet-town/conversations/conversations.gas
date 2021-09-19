@@ -25,6 +25,33 @@ See what I discovered - the ancient Empire of Stars had contact with Beings from
 	  f scroll_rate = 10.000000;
 	}
 }
+[aunt_luna_mp]
+{
+	[text*]
+	{
+		activate_quest* = find_way_home,1;
+		choice = more;
+		complete_quest* = find_aunt_luna;
+	  i order = 0;
+		screen_text = "What took you so long?";
+	  f scroll_rate = 10.000000;
+	}
+	[text*]
+	{
+		choice = more;
+	  i order = 1;
+		screen_text = "I'm actually so happy to see you, my dearest!
+See what I discovered - the ancient Empire of Stars had contact with Beings from other actual stars! Extraterrestrials! It was an interstellar empire spanning across a whole eight star systems! It's truly incredible!";
+	  f scroll_rate = 10.000000;
+	}
+	[text*]
+	{
+		screen_text = "What do you mean, you want to go HOME of all places?
+But I don't have an Aranna Starstone...
+Anyways I'm staying here. Just look around - this place is amazing!";
+	  f scroll_rate = 10.000000;
+	}
+}
 [beetles]
 {
 	[text*]
@@ -53,6 +80,16 @@ Unrelatedly, ...";
 	  f scroll_rate = 10.000000;
 	}
 }
+[hire_bg_m_r_mp]
+{
+	[text*]
+	{
+		screen_text = "Blessings to you!
+So you come from the stars? Dope.
+You know, this place is a paradise for us. Except if you're afraid of spiders, I guess...";
+	  f scroll_rate = 10.000000;
+	}
+}
 [intro]
 {
 	[text*]
@@ -72,6 +109,14 @@ Anyways hope you like it here!";
 		screen_text = "Blessings, stranger, welcome to Betelgeuse.
 Do you happen to be interested in a pack animal? Will come in handy when you go out and find more treasure than you can carry...
 I can spare good Dingaling here. She's well-behaved and also brave, she'll defend you and follow you wherever you go.";
+	  f scroll_rate = 10.000000;
+	}
+}
+[mule_shop_mp]
+{
+	[text*]
+	{
+		screen_text = "Blessings, stranger, welcome to Betelgeuse.";
 	  f scroll_rate = 10.000000;
 	}
 }

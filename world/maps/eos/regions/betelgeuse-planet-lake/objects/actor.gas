@@ -208,6 +208,32 @@
 	  p position = 1.12518,-0.949973,-1.47675,0xafbdaa35;
 	}
 }
+[t:eos_utraean_male_a2_3d,n:0x04d0025f]
+{
+	[aspect]
+	{
+	  f max_life = 88.2;
+	  f max_mana = 109;
+	}
+	[common]
+	{
+		dev_instance_text = "MP";
+	  b is_single_player = false;
+		screen_name = "Ulou";
+	}
+	[conversation]
+	{
+		[conversations]
+		{
+			* = mule_shop_mp;
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,0.942641,0,-0.333807;
+	  p position = -1.48094,-0.85,-1.35878,0x951e9075;
+	}
+}
 [t:eos_utraean_male_a2_3d,n:0x04d005fe]
 {
 	[aspect]
@@ -217,6 +243,8 @@
 	}
 	[common]
 	{
+		dev_instance_text = "SP MULESHOP";
+	  b is_multi_player = false;
 		screen_name = "Ulou";
 	}
 	[conversation]
@@ -326,6 +354,8 @@
 	}
 	[common]
 	{
+		dev_instance_text = "SP HIREABLE";
+	  b is_multi_player = false;
 		screen_name = "Blayze";
 	}
 	[conversation]
@@ -347,6 +377,32 @@
 	{
 	  q orientation = 0,0.995027,0,-0.0996055;
 	  p position = 0.00660706,0,0.647049,0x8cdef75b;
+	}
+}
+[t:eos_bg_hire_f_nm,n:0x04d0025e]
+{
+	[aspect]
+	{
+	  f max_life = 68.6;
+	  f max_mana = 80;
+	}
+	[common]
+	{
+		dev_instance_text = "MP";
+	  b is_single_player = false;
+		screen_name = "Blayze";
+	}
+	[conversation]
+	{
+		[conversations]
+		{
+			* = hire_bg_f_nm_mp;
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,0.995027,0,-0.0996055;
+	  p position = 0.0688896,0,1.01911,0x8cdef75b;
 	}
 }
 [t:eos_bg_shop_m,n:0x04d0012e]
