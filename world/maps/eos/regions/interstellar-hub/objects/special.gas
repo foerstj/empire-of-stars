@@ -33,14 +33,15 @@
 {
 	[common]
 	{
-		description = "QUEST";
+		dev_instance_text = "QUEST";
 		[instance_triggers]
 		{
 			[*]
 			{
 				action* = change_quest_state("find_way_home","active",0);
+				action* = send_world_message("we_req_activate",0x07F00092,0.5f,"default","every",0);
 			  b can_self_destruct = true;
-				condition* = party_member_within_sphere(10.000000,"on_every_enter");
+				condition* = party_member_within_bounding_box(16.000000,1.000000,16.000000,"on_every_enter");
 			  f delay = 0.000000;
 			  b flip_flop = false;
 			  b multi_player = true;
@@ -56,6 +57,35 @@
 	[placement]
 	{
 	  p position = 2.65373,-9.25,2.63857,0xd14939a4;
+	}
+}
+[t:trigger_generic,n:0x07f00025]
+{
+	[common]
+	{
+		dev_instance_text = "PLAYER LOCATION";
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = set_player_world_location("hub");
+			  b can_self_destruct = true;
+				condition* = party_member_within_sphere(12.000000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = false;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  p position = -0.00920931,-7.30542,-0.366751,0xd14939a4;
 	}
 }
 [t:trigger_rec_msg_activate,n:0x07f00047]
@@ -392,25 +422,41 @@
 	  p position = -1.26614,0.1,0.202792,0xc1b7a681;
 	}
 }
-[t:trigger_generic,n:0x07f00025]
+[t:check_quest,n:0x07f00092]
+{
+	[check_quest]
+	{
+	  b check_complete = true;
+		quest_name = "find_aunt_luna";
+	  x send_to_scid = 0x07F00093;
+	}
+	[common]
+	{
+		dev_instance_text = "find_aunt_luna";
+	}
+	[placement]
+	{
+	  p position = 3.35396,-9.5,1.38593,0xd14939a4;
+	}
+}
+[t:trigger_generic,n:0x07f00093]
 {
 	[common]
 	{
-		dev_instance_text = "PLAYER LOCATION";
 		[instance_triggers]
 		{
 			[*]
 			{
-				action* = set_player_world_location("hub");
+				action* = change_quest_state("find_way_home","active",1);
 			  b can_self_destruct = true;
-				condition* = party_member_within_sphere(12.000000,"on_every_enter");
+				condition* = receive_world_message("we_req_activate",0,"on_every_message");
 			  f delay = 0.000000;
 			  b flip_flop = false;
 			  b multi_player = true;
 			  b no_trig_bits = false;
 				occupants_group = ;
 			  f reset_duration = 0.000000;
-			  b single_player = false;
+			  b single_player = true;
 			  b single_shot = false;
 			  b start_active = true;
 			}
@@ -418,6 +464,6 @@
 	}
 	[placement]
 	{
-	  p position = -0.00920931,-7.30542,-0.366751,0xd14939a4;
+	  p position = 4.10326,-9.5,1.62504,0xd14939a4;
 	}
 }

@@ -188,11 +188,16 @@
 {
 	[common]
 	{
+		dev_instance_text = "STARTPOS MOOD QUEST";
 		[instance_triggers]
 		{
 			[*]
 			{
 				action* = mood_change("eos_sirius_teleport");
+				action* = change_quest_state("find_aunt_luna","active",0);
+				action* = change_quest_state("find_way_home","active",0);
+				action* = change_quest_state("find_way_home","active",1);
+				action* = change_quest_state("find_way_home","active",2);
 			  b can_self_destruct = true;
 				condition* = party_member_within_sphere(4.000000,"on_every_enter");
 			  f delay = 0.000000;
@@ -217,11 +222,16 @@
 {
 	[common]
 	{
+		dev_instance_text = "STARTPOS MOOD QUEST";
 		[instance_triggers]
 		{
 			[*]
 			{
 				action* = mood_change("eos_sirius_teleport");
+				action* = change_quest_state("find_aunt_luna","active",0);
+				action* = change_quest_state("find_way_home","active",0);
+				action* = change_quest_state("find_way_home","active",1);
+				action* = change_quest_state("find_way_home","active",2);
 			  b can_self_destruct = true;
 				condition* = party_member_within_sphere(4.000000,"on_every_enter");
 			  f delay = 0.000000;
@@ -246,11 +256,16 @@
 {
 	[common]
 	{
+		dev_instance_text = "STARTPOS MOOD QUEST";
 		[instance_triggers]
 		{
 			[*]
 			{
 				action* = mood_change("eos_sirius_teleport");
+				action* = change_quest_state("find_aunt_luna","active",0);
+				action* = change_quest_state("find_way_home","active",0);
+				action* = change_quest_state("find_way_home","active",1);
+				action* = change_quest_state("find_way_home","active",2);
 			  b can_self_destruct = true;
 				condition* = party_member_within_sphere(4.000000,"on_every_enter");
 			  f delay = 0.000000;
@@ -304,11 +319,16 @@
 {
 	[common]
 	{
+		dev_instance_text = "STARTPOS MOOD QUEST";
 		[instance_triggers]
 		{
 			[*]
 			{
 				action* = mood_change("eos_sirius_teleport");
+				action* = change_quest_state("find_aunt_luna","active",0);
+				action* = change_quest_state("find_way_home","active",0);
+				action* = change_quest_state("find_way_home","active",1);
+				action* = change_quest_state("find_way_home","active",2);
 			  b can_self_destruct = true;
 				condition* = party_member_within_sphere(4.000000,"on_every_enter");
 			  f delay = 0.000000;

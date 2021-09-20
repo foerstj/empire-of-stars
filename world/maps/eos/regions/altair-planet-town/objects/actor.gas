@@ -501,6 +501,58 @@
 	  p position = 0.922104,0,2.2455,0xa568bf85;
 	}
 }
+[t:at_hire_m,n:0x027006fb]
+{
+	[aspect]
+	{
+	  f max_life = 215.6;
+	  f max_mana = 43;
+	}
+	[common]
+	{
+		dev_instance_text = "MP";
+	  b is_single_player = false;
+		screen_name = "Sig of Mugmort";
+	}
+	[conversation]
+	{
+		[conversations]
+		{
+			* = conversation_kroduk_mp;
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,0.382683,0,0.923879;
+	  p position = 4.99319,0,0.198921,0xa568bf85;
+	}
+}
+[t:at_hire_cm,n:0x027006fc]
+{
+	[aspect]
+	{
+	  f max_life = 147;
+	  f max_mana = 185;
+	}
+	[common]
+	{
+		dev_instance_text = "MP";
+	  b is_single_player = false;
+		screen_name = "Areianus";
+	}
+	[conversation]
+	{
+		[conversations]
+		{
+			* = conversation_lorun_overseer;
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,0.92388,0,-0.382683;
+	  p position = 6.58976,0,1.65085,0xa568bf85;
+	}
+}
 [t:dwarf_townfolk_01,n:0x027005bf]
 {
 	[common]
@@ -1030,6 +1082,35 @@
 	  p position = -1.4443,-1.25,-3.05351,0xa8e5585f;
 	}
 }
+[t:dwarf_mule_shop,n:0x027006fa]
+{
+	[common]
+	{
+		dev_instance_text = "MP";
+	  b is_single_player = false;
+		screen_name = "Katla";
+	}
+	[conversation]
+	{
+		[conversations]
+		{
+			* = mule_shop_mp;
+		}
+	}
+	[inventory]
+	{
+		[equipment]
+		{
+			es_chest = bd_ra_ro_m_d_c_004;
+			es_feet = bo_bo_le_light;
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,0.608762,0,0.793354;
+	  p position = 2.75561,-1.25,-0.724838,0xa8e5585f;
+	}
+}
 [t:dwarf_guard_ranged,n:0x0270055c]
 {
 	[common]
@@ -1113,86 +1194,5 @@
 	{
 	  q orientation = 0,0.382684,0,0.92388;
 	  p position = 0.717201,-1.4,6.01352,0xb4c52026;
-	}
-}
-[t:dwarf_mule_shop,n:0x027006fa]
-{
-	[common]
-	{
-		dev_instance_text = "MP";
-	  b is_single_player = false;
-		screen_name = "Katla";
-	}
-	[conversation]
-	{
-		[conversations]
-		{
-			* = mule_shop_mp;
-		}
-	}
-	[inventory]
-	{
-		[equipment]
-		{
-			es_chest = bd_ra_ro_m_d_c_004;
-			es_feet = bo_bo_le_light;
-		}
-	}
-	[placement]
-	{
-	  q orientation = 0,0.608762,0,0.793354;
-	  p position = 2.75561,-1.25,-0.724838,0xa8e5585f;
-	}
-}
-[t:at_hire_m,n:0x027006fb]
-{
-	[aspect]
-	{
-	  f max_life = 215.6;
-	  f max_mana = 43;
-	}
-	[common]
-	{
-		dev_instance_text = "MP";
-	  b is_single_player = false;
-		screen_name = "Sig of Mugmort";
-	}
-	[conversation]
-	{
-		[conversations]
-		{
-			* = conversation_kroduk_mp;
-		}
-	}
-	[placement]
-	{
-	  q orientation = 0,0.382683,0,0.923879;
-	  p position = 4.99319,0,0.198921,0xa568bf85;
-	}
-}
-[t:at_hire_cm,n:0x027006fc]
-{
-	[aspect]
-	{
-	  f max_life = 147;
-	  f max_mana = 185;
-	}
-	[common]
-	{
-		dev_instance_text = "MP";
-	  b is_single_player = false;
-		screen_name = "Areianus";
-	}
-	[conversation]
-	{
-		[conversations]
-		{
-			* = conversation_lorun_overseer;
-		}
-	}
-	[placement]
-	{
-	  q orientation = 0,0.92388,0,-0.382683;
-	  p position = 6.58976,0,1.65085,0xa568bf85;
 	}
 }

@@ -138,12 +138,13 @@
 {
 	[common]
 	{
-		dev_instance_text = "STARTPOS MOOD";
+		dev_instance_text = "STARTPOS MOOD QUEST PWL";
 		[instance_triggers]
 		{
 			[*]
 			{
 				action* = mood_change("eos_alphacentauri_eddiloo");
+				action* = change_quest_state("find_aunt_luna","active",0);
 			  b can_self_destruct = true;
 				condition* = party_member_within_sphere(16.000000,"on_every_enter");
 			  f delay = 0.000000;
