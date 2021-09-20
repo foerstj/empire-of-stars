@@ -1,0 +1,149 @@
+//////////////////////////////////////////////////////////////////////////////
+// public definitions
+
+// reserved tags
+property bool   _server_only$        = true;
+property string _doc$                = "Basic Open/Closed Chest";
+property string _required_component$ = "placement";
+
+// exported properties
+property scid 			msg_scid_opening$ 							doc = "Scid to send message to when door is opening";
+property eWorldEvent 	msg_type_opening$		= WE_REQ_ACTIVATE	doc = "message to send when door is opening, ***DOORS CAN ONLY SEND WE_REQ_ACTIVATE/DEACTIVE and WE_TRIGGER_ACTIVATE/DEACTIVE FOR MULTIPLAYER***";
+property scid 			msg_scid_open$ 								doc = "Scid to send message to when door is opened";
+property eWorldEvent 	msg_type_open$			= WE_REQ_ACTIVATE	doc = "message to send when door is opened, ***DOORS CAN ONLY SEND WE_REQ_ACTIVATE/DEACTIVE and WE_TRIGGER_ACTIVATE/DEACTIVE FOR MULTIPLAYER***";
+// figured msg 2 & 3 aren't very necessary
+
+property bool			wait_for_activate$		= false				doc = "This chest cannot be opened until it is sent an activate.";
+
+// new
+property bool			stay_selectable$		= false				doc = "This chest stays selectable after opening.";
+
+owner                                = GoSkritComponent;
+
+//////////////////////////////////////////////////////////////////////////////
+event OnGoDrawDebugHud$
+{
+	if ( msg_scid_opening$.goid.isvalid() )
+    {
+		World.DrawDebugDirectedLine( owner.go.Placement.Position,
+									 msg_scid_opening$.go.Placement.Position,
+                                     MakeColor( 1.0, 1.0, 0.0 ),
+                                     "msg_type_opening" );
+    }
+	if ( msg_scid_open$.goid.isvalid() )
+    {
+		World.DrawDebugDirectedLine( owner.go.Placement.Position,
+									 msg_scid_open$.go.Placement.Position,
+                                     MakeColor( 1.0, 1.0, 0.0 ),
+                                     "msg_type_open" );
+    }
+}
+
+#only( game )
+[[
+
+startup state WaitForSetup$
+{	
+	transition -> Closed$:OnGoHandleMessage( WE_REQ_ACTIVATE )=
+    {
+		if( msg_scid_opening$.IsValid )
+		{
+			SSendWorldMessage( msg_type_opening$, owner.Goid, msg_scid_opening$ );
+		}
+		
+		// set the ready bits.
+		Godb.SetScidBit( owner.scid, 1, true );
+	}
+
+	event OnGoHandleMessage$( eWorldEvent e$, WorldMessage msg$ )
+	{
+		if( e$ == WE_ENTERED_WORLD )
+		{
+			int bits$ = Godb.GetScidBits( owner.scid );
+			
+			if( bits$ == 0 ) // nothing has changed. In the default state.
+			{
+				// If the chest doesn't have a body, then it can't open so we bail out.
+				if( !owner.go.Hasbody() )
+				{
+					SetState Finished$;
+				}
+				else if ( !wait_for_activate$ )
+				{
+					SetState Closed$;
+				}
+			}
+			else if ( Godb.GetScidBit( owner.scid, 0 ) ) // Check to see if we are used up.
+			{
+				MCPManager.MakeRequest( owner.Goid, PL_OPEN);
+				SetState Finished$;
+			}
+			else if ( Godb.GetScidBit( owner.scid, 1 ) ) // Check to see if we have been activated.
+			{
+				SetState Closed$;
+			}
+			
+		}
+		else if( e$ == WE_REQ_USE ) 
+		{
+			if( wait_for_activate$ )
+			{
+				Goid user$ = msg$.GetSendFrom();
+			
+				if( user$.IsValid)
+				{
+					Report.SScreen( user$.Go.Player.MachineId, Report.Translate( owner.go.getmessage( "locked" ) ) );
+					owner.Go.RCPlayVoiceSound( user$.Go.Player.MachineId, "chest_blocked", true);
+					owner.Go.RCPlayVoiceSound( user$.Go.Player.MachineId, "chest_locked", true);
+				}
+			}
+		}
+	}
+}
+
+State Closed$
+{
+	event OnGoHandleMessage$( eWorldEvent e$, WorldMessage msg$ )
+	{
+		if( e$ == WE_REQ_USE )
+		{
+			// Set the used Bits
+			Godb.SetScidBit( owner.scid, 0, true );
+			
+			MCPManager.MakeRequest( owner.Goid, PL_OPEN);
+			
+			owner.Go.SPlayMaterialSound( "chest_open", "generic", true);
+
+ 	 		if (owner.Go.HasInventory())
+	 		{
+		 		owner.Go.Inventory.DropItemsFor( msg$.SendFrom );
+	 		}
+	 		
+	 		// removed checks to see if the goid is valid before sending the message. This way we should be able to
+	 		// send a message to something that isn't loaded yet. The only thing we are really going to worry about
+	 		// is if the object has a valid scid. -ET
+	 		
+			if ( msg_scid_open$.isvalid() )
+			{
+				SSendWorldMessage( msg_type_open$, owner.Goid, msg_scid_open$ );
+			}
+			SetState Finished$;
+		}
+	}
+}
+
+State Finished$
+{
+	event OnEnterState$
+    {
+        if (!stay_selectable$)  // here we go
+        {
+            Owner.Go.Aspect.SSetIsSelectable( false );
+        }
+		Owner.Go.Aspect.SSetIsUsable( false );
+    }
+}
+
+]]
+
+//////////////////////////////////////////////////////////////////////////////

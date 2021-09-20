@@ -1,8 +1,52 @@
+[t:template,n:base_chest_staying_selectable]
+{
+	category_name = "base template";
+	doc = "chest base template";
+	specializes = container;
+	[aspect]
+	{
+		material = steel;
+		does_block_path = true;
+	}
+	[common]
+	{
+		rollover_display = true;
+		forced_expiration_class = immediate;
+		auto_expiration_class = immediate;
+		screen_name="Chest";
+	}
+	[body]
+	{
+		[chore_dictionary]
+		{
+			chore_prefix = a_i_ice;
+			[chore_open]
+			{
+				skrit = transition;
+				[anim_files] { 00=chest-open; }
+			}
+		}
+	}
+	[gizmo]
+	{
+		model				=	m_i_glb_object-waypoint;
+		texture				=	;
+		diffuse_color		=	0.0, 1, 0.0;
+		use_diffuse_color	=	true;
+	}
+	[base_chest_staying_selectable]  {}
+}
+
 [t:template,n:chest_eos_initial_luggage]
 {
+	specializes = base_chest_staying_selectable;
 	category_name = "container";
 	doc = "eos initial luggage";
-	specializes = base_chest;
+
+	[base_chest_staying_selectable]
+    {
+      b stay_selectable = true;
+    }
 	[common]
 	{
 		screen_name = "YOUR LUGGAGE";
