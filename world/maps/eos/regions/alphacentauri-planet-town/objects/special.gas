@@ -146,7 +146,7 @@
 				action* = mood_change("eos_alphacentauri_eddiloo");
 				action* = change_quest_state("find_aunt_luna","active",0);
 			  b can_self_destruct = true;
-				condition* = party_member_within_sphere(16.000000,"on_every_enter");
+				condition* = party_member_within_bounding_box(12.000000,1.000000,12.000000,"on_every_enter");
 			  f delay = 0.000000;
 			  b flip_flop = false;
 			  b multi_player = true;
@@ -161,7 +161,7 @@
 			{
 				action* = set_player_world_location("ac_town");
 			  b can_self_destruct = true;
-				condition* = party_member_within_sphere(16.000000,"on_every_enter");
+				condition* = party_member_within_bounding_box(12.000000,1.000000,12.000000,"on_every_enter");
 			  f delay = 0.000000;
 			  b flip_flop = false;
 			  b multi_player = true;
@@ -257,42 +257,11 @@
 	  p position = 0.916355,0,-0.484337,0x5887a45f;
 	}
 }
-[t:trigger_fade_node_box,n:0x01c007bf]
-{
-	[common]
-	{
-		dev_instance_text = "MOODS";
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = mood_change("eos_alphacentauri_bearcave"), group(1);
-				action* = mood_change("eos_alphacentauri_eddiloo"), group(2);
-			  b can_self_destruct = true;
-				condition* = party_member_entered_trigger_group("fh_r1_bear_cave","on_every_enter"), group(1);
-				condition* = party_member_left_trigger_group("fh_r1_bear_cave","on_every_leave"), group(2);
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  q orientation = 0,0.707107,0,0.707107;
-	  p position = 1.60367,-3.8147e-006,2.70666,0x50d1030f;
-	}
-}
 [t:trigger_fade_node_box,n:0x01c001df]
 {
 	[common]
 	{
+		dev_instance_text = "FADE ROOF";
 		[instance_triggers]
 		{
 			[*]
@@ -336,23 +305,40 @@
 	  p position = -0.102974,-11.949,-0.265411,0xded15d89;
 	}
 }
-[t:trigger_fade_node_box,n:0x01c0025c]
+[t:trigger_change_mood_box,n:0x01c00341]
 {
 	[common]
 	{
+		dev_instance_text = "MOOD PWL";
 		[instance_triggers]
 		{
 			[*]
 			{
+				action* = mood_change("eos_alphacentauri_eddiloo");
 			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(4.000000,2.000000,3.300000,"on_every_enter");
+				condition* = party_member_within_bounding_box(2.000000,1.000000,1.000000,"on_every_enter");
 			  f delay = 0.000000;
 			  b flip_flop = false;
 			  b multi_player = true;
 			  b no_trig_bits = false;
-				occupants_group = fh_r1_bear_cave;
+				occupants_group = ;
 			  f reset_duration = 0.000000;
 			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+			[*]
+			{
+				action* = set_player_world_location("ac_town");
+			  b can_self_destruct = true;
+				condition* = party_member_within_bounding_box(2.000000,1.000000,1.000000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = false;
 			  b single_shot = false;
 			  b start_active = true;
 			}
@@ -360,11 +346,10 @@
 	}
 	[placement]
 	{
-	  q orientation = 0,0.707106,0,0.707107;
-	  p position = -0.0955429,-11.973,-1.9716,0xded15d89;
+	  p position = -0.198204,-11.9888,-3.95504,0xded15d89;
 	}
 }
-[t:trigger_fade_node_box,n:0x01c007be]
+[t:trigger_change_mood_box,n:0x01c00343]
 {
 	[common]
 	{
@@ -372,13 +357,14 @@
 		{
 			[*]
 			{
+				action* = mood_change("eos_alphacentauri_bearcave");
 			  b can_self_destruct = true;
-				condition* = party_member_within_node(0xACA60100,-1,-1,-1,"on_every_enter");
+				condition* = party_member_within_bounding_box(2.000000,1.000000,1.000000,"on_every_enter");
 			  f delay = 0.000000;
 			  b flip_flop = false;
 			  b multi_player = true;
 			  b no_trig_bits = false;
-				occupants_group = fh_r1_bear_cave;
+				occupants_group = ;
 			  f reset_duration = 0.000000;
 			  b single_player = true;
 			  b single_shot = false;
@@ -388,8 +374,7 @@
 	}
 	[placement]
 	{
-	  q orientation = 0,0.707107,0,0.707107;
-	  p position = 1.48008,-11.9257,-3.40369,0xded15d89;
+	  p position = -0.0695305,-11.9448,-1.36795,0xded15d89;
 	}
 }
 [t:trigger_generic,n:0x01c0012f]

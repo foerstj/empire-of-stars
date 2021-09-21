@@ -10,7 +10,7 @@
 				action* = fade_nodes(0xACA60100,2,-1,-1,"out:black"), doc("-.entry");
 				action* = fade_nodes(0xAAA10100,-1,-1,-1,"out:black"), doc("-town");
 			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(4.000000,4.000000,4.000000,"on_every_enter");
+				condition* = party_member_within_bounding_box(4.000000,2.000000,4.000000,"on_every_enter");
 			  f delay = 0.000000;
 			  b flip_flop = false;
 			  b multi_player = true;
@@ -32,6 +32,7 @@
 {
 	[common]
 	{
+		dev_instance_text = "FADE MOOD";
 		[instance_triggers]
 		{
 			[*]
@@ -39,6 +40,7 @@
 				action* = fade_nodes(0xACA60100,1,-1,-1,"in"), doc("+.main");
 				action* = fade_nodes(0xACA60100,2,-1,-1,"in"), doc("+.entry");
 				action* = fade_nodes(0xAAA10100,-1,-1,-1,"in"), doc("+town");
+				action* = mood_change("eos_alphacentauri_bearcave");
 			  b can_self_destruct = true;
 				condition* = party_member_within_bounding_box(4.000000,0.500000,1.000000,"on_every_enter");
 			  f delay = 0.000000;
