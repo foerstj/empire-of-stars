@@ -1,3 +1,32 @@
+[t:trigger_generic,n:0x06700072]
+{
+	[common]
+	{
+		dev_instance_text = "ELE 1-shot";
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_activate",0x06700070,0f,"default","every",0);
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_req_activate",0,"on_first_message");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = true;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  p position = -1.81414,-0.35,-4.30459,0x2e6ddca1;
+	}
+}
 [t:trigger_generic,n:0x06700073]
 {
 	[common]
@@ -10,7 +39,7 @@
 				action* = fade_nodes(0xACA60100,1,-1,-1,"out:black"), doc("-.main");
 				action* = fade_nodes(0xACA60100,2,-1,-1,"out:black"), doc("-.entry");
 				action* = fade_nodes(0xAAA10100,-1,-1,-1,"out:black"), doc("-town");
-				action* = mood_change("eos_alphacentauri_crypt_4");
+				action* = mood_change("eos_alphacentauri_crypt_3");
 			  b can_self_destruct = true;
 				condition* = party_member_within_bounding_box(4.000000,2.000000,4.000000,"on_every_enter");
 			  f delay = 0.000000;
@@ -59,6 +88,6 @@
 	}
 	[placement]
 	{
-	  p position = -0.150031,1.5,-6.54685,0x52310919;
+	  p position = 2.61322,-1,-0.0389042,0xa9068ae7;
 	}
 }
