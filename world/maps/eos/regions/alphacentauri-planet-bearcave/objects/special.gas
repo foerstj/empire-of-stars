@@ -37,7 +37,6 @@
 			[*]
 			{
 				action* = fade_nodes(0xACA60100,1,-1,-1,"out:black"), doc("-.main");
-				action* = fade_nodes(0xACA60100,2,-1,-1,"out:black"), doc("-.entry");
 				action* = fade_nodes(0xAAA10100,-1,-1,-1,"out:black"), doc("-town");
 				action* = mood_change("eos_alphacentauri_crypt_3");
 			  b can_self_destruct = true;
@@ -69,7 +68,6 @@
 			[*]
 			{
 				action* = fade_nodes(0xACA60100,1,-1,-1,"in"), doc("+.main");
-				action* = fade_nodes(0xACA60100,2,-1,-1,"in"), doc("+.entry");
 				action* = fade_nodes(0xAAA10100,-1,-1,-1,"in"), doc("+town");
 				action* = mood_change("eos_alphacentauri_bearcave");
 			  b can_self_destruct = true;
