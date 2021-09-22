@@ -2928,13 +2928,13 @@
 {
 	[common]
 	{
-		dev_instance_text = "FADE +exit";
+		dev_instance_text = "FADE +exit +bc";
 		[instance_triggers]
 		{
 			[*]
 			{
-				action* = fade_nodes(0xACA10100,2,-1,-1,"in:instant");
-				action* = when_false fade_nodes(0x00000000,-1,-1,-1,"in");
+				action* = fade_nodes(0xACA10100,2,-1,-1,"in:instant"), doc("+.exit");
+				action* = fade_nodes(0xACA60100,1,-1,-1,"in:instant"), doc("+bc.main");
 			  b can_self_destruct = true;
 				condition* = party_member_within_bounding_box(8.000000,1.000000,1.000000,"on_every_enter");
 			  f delay = 0.000000;
@@ -2990,13 +2990,13 @@
 {
 	[common]
 	{
-		dev_instance_text = "FADE -exit";
+		dev_instance_text = "FADE -exit -bc";
 		[instance_triggers]
 		{
 			[*]
 			{
-				action* = fade_nodes(0xACA10100,2,-1,-1,"out:instant");
-				action* = when_false fade_nodes(0x00000000,-1,-1,-1,"in");
+				action* = fade_nodes(0xACA10100,2,-1,-1,"out:instant"), doc("-.exit");
+				action* = fade_nodes(0xACA60100,1,-1,-1,"out:instant"), doc("-bc.main");
 			  b can_self_destruct = true;
 				condition* = party_member_within_bounding_box(8.000000,1.000000,1.000000,"on_every_enter");
 			  f delay = 0.000000;
@@ -3331,7 +3331,8 @@
 	}
 	[placement]
 	{
-	  p position = 1.43906,0,0.399522,0xbe7fd641;
+	  q orientation = 0,4.69147e-008,0,1;
+	  p position = 1.38763,0,-0.373506,0xcacbc963;
 	}
 }
 [t:trigger_change_mood_box,n:0x06000243]
@@ -3456,6 +3457,7 @@
 				action* = fade_nodes(0xACA10100,1,31,-1,"out:instant"), doc("-.cap31");
 				action* = fade_nodes(0xAAA10100,-1,-1,-1,"out:instant"), doc("-town");
 				action* = fade_nodes(0xACA10100,2,-1,-1,"out:instant"), doc("-.exit");
+				action* = fade_nodes(0xACA60100,1,-1,-1,"out:instant"), doc("-bc.main");
 			  b can_self_destruct = true;
 				condition* = party_member_within_bounding_box(2.000000,0.500000,2.000000,"on_every_enter");
 			  f delay = 0.000000;
