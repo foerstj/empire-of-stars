@@ -3071,6 +3071,7 @@
 {
 	[common]
 	{
+		dev_instance_text = "PWL";
 		[instance_triggers]
 		{
 			[*]
@@ -3115,58 +3116,6 @@
 	[placement]
 	{
 	  p position = 0.11269,5.96046e-007,1.5791,0x41e77b0e;
-	}
-}
-[t:trigger_generic,n:0x06000402]
-{
-	[placement]
-	{
-	  p position = -1.05235,0,1.37095,0xdd3da689;
-	}
-}
-[t:trigger_generic,n:0x060003ff]
-{
-	[common]
-	{
-		dev_instance_text = "SCRIPTED EVENT - TIP ACTIVATOR";
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = send_world_message("we_req_activate",0x06000447,0f,"16386","go_within_bounding_box",0), doc("[*labelled condition (go_within_bounding_box)*]");
-			  b can_self_destruct = true;
-				condition* = go_within_bounding_box(1.000000,0.500000,7.200000,0x06000050,"","on_first_enter"), doc("[*one-shot check (trigger is one-shot)*]");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = false;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = true;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  q orientation = 0,1,0,0;
-	  p position = 0.208206,-3.57628e-007,0.0639562,0x5b3f0844;
-	}
-}
-[t:tutorial_tip,n:0x06000447]
-{
-	[common]
-	{
-		dev_instance_text = "TIP_8";
-	}
-	[placement]
-	{
-	  p position = -1.34887,0,-0.16382,0x5b3f0844;
-	}
-	[tip]
-	{
-		tip = "tip_8";
 	}
 }
 [t:use_point,n:0x06000439]
@@ -3222,8 +3171,8 @@
 	}
 	[placement]
 	{
-	  q orientation = 0,1,0,2.5434e-009;
-	  p position = -1.28248,-4.17233e-006,-0.60415,0x2dd5498e;
+	  q orientation = 0,1,0,-8.04903e-014;
+	  p position = 1.72551,-4.17233e-006,-0.0164422,0xa9daf626;
 	}
 }
 [t:use_point,n:0x0600038f]
