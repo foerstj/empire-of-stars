@@ -447,17 +447,53 @@
 	  p position = 0.0846784,-1.5,-0.0194864,0xe7bac242;
 	}
 }
+[t:door_glb_crypt_01,n:0x06000244]
+{
+	[common]
+	{
+		dev_instance_text = "SP";
+	  b is_multi_player = false;
+	}
+	[door_basic]
+	{
+	  x msg_scid_opening = 0x06000247;
+	}
+	[placement]
+	{
+	  p position = -0.0188525,-1.5,-0.0513457,0xee76a85d;
+		use_point_scids = 0x0600024b;
+	}
+}
+[t:door_glb_crypt_01,n:0x06000250]
+{
+	[common]
+	{
+		dev_instance_text = "MP";
+	  b is_single_player = false;
+	}
+	[door_basic]
+	{
+	  b can_use = false;
+	  x msg_scid_opening = 0x06000247;
+	}
+	[placement]
+	{
+	  q orientation = 0,1,0,1.78814e-007;
+	  p position = -0.0252156,-1.5,-0.0930937,0xee76a85d;
+	}
+}
 [t:lever_cav_stone_01,n:0x060003e7]
 {
 	[common]
 	{
+		dev_instance_text = "MP";
 	  b is_single_player = false;
 	}
 	[on_off_lever]
 	{
 		off_message = we_req_activate;
-	  x off_scid = 0x060003E4;
-	  x on_scid = 0x060003E4;
+	  x off_scid = 0x06000250;
+	  x on_scid = 0x06000250;
 	  b one_shot = true;
 	}
 	[placement]
@@ -477,38 +513,5 @@
 	{
 	  p position = 0.075802,-1.5,0.002629,0x4b59a82a;
 		use_point_scids = 0x6000314;
-	}
-}
-[t:door_glb_crypt_01,n:0x06000244]
-{
-	[common]
-	{
-	  b is_multi_player = false;
-	}
-	[door_basic]
-	{
-	  x msg_scid_opening = 0x06000247;
-	}
-	[placement]
-	{
-	  p position = -0.0188525,-1.5,-0.0513457,0xee76a85d;
-		use_point_scids = 0x0600024b;
-	}
-}
-[t:door_glb_crypt_01,n:0x06000250]
-{
-	[common]
-	{
-	  b is_single_player = false;
-	}
-	[door_basic]
-	{
-	  b can_use = false;
-	  x msg_scid_opening = 0x06000247;
-	}
-	[placement]
-	{
-	  q orientation = 0,1,0,1.78814e-007;
-	  p position = -0.0252156,-1.5,-0.0930937,0xee76a85d;
 	}
 }

@@ -293,6 +293,7 @@
 {
 	[common]
 	{
+		dev_instance_text = "FADE ROOF";
 		[instance_triggers]
 		{
 			[*]
@@ -311,8 +312,8 @@
 			}
 			[*]
 			{
-				action* = fade_nodes(0xACA60100,1,-1,-1,"out:black"), group(1);
-				action* = fade_nodes(0xACA60100,1,-1,-1,"in"), group(2);
+				action* = fade_nodes(0xACA60100,2,-1,-1,"out:black"), group(1);
+				action* = fade_nodes(0xACA60100,2,-1,-1,"in"), group(2);
 				action* = fade_nodes(0xAAA10100,2,-1,-1,"out:black"), group(1);
 				action* = fade_nodes(0xAAA10100,2,-1,-1,"in"), group(2);
 			  b can_self_destruct = true;
