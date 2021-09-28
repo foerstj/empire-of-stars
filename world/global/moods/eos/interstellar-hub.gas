@@ -29,3 +29,34 @@
 		room_type			= rt_parkinglot;
 	}
 }
+
+[mood_setting*]
+{
+	mood_name				= eos_teleport;
+	transition_time			= 2.0f;
+	interior				= true;
+
+	[frustum]
+	{
+		frustum_width		= 5.0f;
+		frustum_height		= 60.0f;
+	}
+
+	[fog]
+	{
+		fog_near_dist		= 20.0f;
+		fog_far_dist		= 25.0f;
+		fog_lowdetail_near_dist		= 15.0f;
+		fog_lowdetail_far_dist		= 20.0f;
+		fog_color			= 0xFF000000;
+		fog_density			= 0.5f;
+	}
+
+	[rain] {}
+
+	[music]
+	{
+		ambient_track		= "";
+		room_type			= rt_generic;
+	}
+}
