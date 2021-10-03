@@ -138,7 +138,7 @@
 		{
 			[*]
 			{
-				action* = change_quest_state("altair_shrine","completed",0);
+				action* = change_quest_state("altair_aurora_shrine","completed",0);
 			  b can_self_destruct = true;
 				condition* = receive_world_message("we_req_activate",0,"on_every_message");
 			  f delay = 0.000000;
@@ -153,7 +153,7 @@
 			}
 			[*]
 			{
-				action* = change_quest_state("altair_shrine","active",0);
+				action* = change_quest_state("altair_aurora_shrine","active",0);
 			  b can_self_destruct = true;
 				condition* = party_member_within_sphere(10.000000,"on_every_enter");
 			  f delay = 0.000000;

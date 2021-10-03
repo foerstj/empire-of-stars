@@ -2995,7 +2995,7 @@
 			[*]
 			{
 				action* = send_world_message("we_req_activate",0x016006CB,0f,"default","",0);
-				action* = change_quest_state("rigel_artifact","active",1);
+				action* = change_quest_state("rigel_wet_shrine_artifact","active",1);
 			  b can_self_destruct = true;
 				condition* = receive_world_message("we_killed",0,"on_first_message"), doc("[*one-shot check (trigger is one-shot)*]");
 			  f delay = 0.000000;
