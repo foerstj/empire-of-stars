@@ -22,7 +22,6 @@ if %errorlevel% neq 0 exit /b
 rmdir /S /Q "%tc%\Bits"
 :: exclude .psd that might be present locally; exclude nn files
 robocopy "%doc_dsloa%\Bits\art" "%tc%\Bits\art" /E /xf *.psd /xf *-nn.raw
-robocopy "%doc_dsloa%\Bits\language" "%tc%\Bits\language" /E
 robocopy "%doc_dsloa%\Bits\sound" "%tc%\Bits\sound" /E
 :: in case where I have other resources in Bits as well, I made a subfolder
 robocopy "%doc_dsloa%\Bits\world\ai\jobs\%map%" "%tc%\Bits\world\ai\jobs\%map%" /E
@@ -34,9 +33,14 @@ robocopy "%doc_dsloa%\Bits\world\global\effects" "%tc%\Bits\world\global\effects
 if %errorlevel% neq 0 pause
 rmdir /S /Q "%tc%\Bits"
 
+:: Compile German language resource file
+robocopy "%doc_dsloa%\Bits\language" "%tc%\Bits\language" /E
+%tc%\RTC.exe -source "%tc%\Bits" -out "%ds%\DSLOA\%map_cs%-de.dsres"
+if %errorlevel% neq 0 pause
+rmdir /S /Q "%tc%\Bits"
+
 :: Compile non-nude overlay resource file
 :: (uncomment these if those polygon boobs are too much for you)
-::rmdir /S /Q "%tc%\Bits"
 ::robocopy "%doc_dsloa%\Bits\art" "%tc%\Bits\art" *-nn.raw /S
 ::pushd "%tc%\Bits\art\bitmaps\characters\body_armor\type1"
 ::setlocal enableDelayedExpansion
@@ -56,4 +60,5 @@ rmdir /S /Q "%tc%\Bits"
 
 :: Cleanup resources so as not to confuse Siege Editor
 del "%ds%\DSLOA\%map_cs%.dsres"
+del "%ds%\DSLOA\%map_cs%-de.dsres"
 del "%ds%\DSLOA\%map_cs%-nn.dsres"
