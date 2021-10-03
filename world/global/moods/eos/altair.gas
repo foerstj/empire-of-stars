@@ -3,12 +3,26 @@
 	mood_name				= eos_altair_teleport;
 	transition_time			= 20.0f;
 	interior				= false;
+
 	[frustum]
 	{
 		frustum_height = 60.0f;
 		frustum_width = 45.0f;
 	}
 
+	[fog]
+	{
+		fog_color			= 0xFFc0c0c8;
+		fog_density			= 0.5f;
+		fog_near_dist		= 25.0f;
+		fog_far_dist		= 50.0f;
+		fog_lowdetail_near_dist		= 25.0f;
+		fog_lowdetail_far_dist		= 45.0f;
+	}
+	[snow]
+	{
+		snow_density		= 250;
+	}
 	[sun]
 	{
 		00h00m:color = 0xFF000000;
@@ -23,21 +37,6 @@
 		21h00m:color = 0xFF330D40;
 		22h00m:color = 0xFF000000;
 		23h00m:color = 0xFF000000;
-	}
-
-	[fog]
-	{
-		fog_near_dist		= 25.0f;
-		fog_far_dist		= 50.0f;
-		fog_lowdetail_near_dist		= 25.0f;
-		fog_lowdetail_far_dist		= 45.0f;
-		fog_color			= 0xFFc0c0c8;
-		fog_density			= 0.5f;
-	}
-
-	[snow]
-	{
-		snow_density		= 250;
 	}
 
 	[music]
@@ -54,6 +53,16 @@
 	transition_time			= 1.0f;
 	interior				= false;
 
+	[fog]
+	{
+		fog_color			= 0xFFc0c0c8;
+		fog_density			= 0.5f;
+		fog_near_dist		= 25.0f;
+		fog_far_dist		= 50.0f;
+		fog_lowdetail_near_dist		= 25.0f;
+		fog_lowdetail_far_dist		= 45.0f;
+	}
+	// No snow while in buildings
 	[sun]
 	{
 		00h00m:color = 0xFF000000;
@@ -69,18 +78,6 @@
 		22h00m:color = 0xFF000000;
 		23h00m:color = 0xFF000000;
 	}
-
-	[fog]
-	{
-		fog_near_dist		= 25.0f;
-		fog_far_dist		= 50.0f;
-		fog_lowdetail_near_dist		= 25.0f;
-		fog_lowdetail_far_dist		= 45.0f;
-		fog_color			= 0xFFc0c0c8;
-		fog_density			= 0.5f;
-	}
-
-	// No snow while in buildings
 
 	[music]
 	{
@@ -96,6 +93,20 @@
 	transition_time			= 2.0f;
 	interior				= false;
 
+	[fog]
+	{
+		fog_color			= 0xFFc0c0c8;
+		fog_density			= 0.5f;
+		fog_near_dist		= 25.0f;
+		fog_far_dist		= 50.0f;
+		fog_lowdetail_near_dist		= 25.0f;
+		fog_lowdetail_far_dist		= 45.0f;
+	}
+	// Snowing
+	[snow]
+	{
+		snow_density		= 250;
+	}
 	[sun]
 	{
 		00h00m:color = 0xFF000000;
@@ -110,22 +121,6 @@
 		21h00m:color = 0xFF330D40;
 		22h00m:color = 0xFF000000;
 		23h00m:color = 0xFF000000;
-	}
-
-	[fog]
-	{
-		fog_near_dist		= 25.0f;
-		fog_far_dist		= 50.0f;
-		fog_lowdetail_near_dist		= 25.0f;
-		fog_lowdetail_far_dist		= 45.0f;
-		fog_color			= 0xFFc0c0c8;
-		fog_density			= 0.5f;
-	}
-
-	// Snowing
-	[snow]
-	{
-		snow_density		= 250;
 	}
 
 	[music]
@@ -142,6 +137,16 @@
 	transition_time			= 1.0f;
 	interior				= false;
 
+	[fog]
+	{
+		fog_color			= 0xFFc0c0c8;
+		fog_density			= 0.5f;
+		fog_near_dist		= 25.0f;
+		fog_far_dist		= 50.0f;
+		fog_lowdetail_near_dist		= 25.0f;
+		fog_lowdetail_far_dist		= 45.0f;
+	}
+	// No snow while in buildings
 	[sun]
 	{
 		00h00m:color = 0xFF000000;
@@ -157,18 +162,6 @@
 		22h00m:color = 0xFF000000;
 		23h00m:color = 0xFF000000;
 	}
-
-	[fog]
-	{
-		fog_near_dist		= 25.0f;
-		fog_far_dist		= 50.0f;
-		fog_lowdetail_near_dist		= 25.0f;
-		fog_lowdetail_far_dist		= 45.0f;
-		fog_color			= 0xFFc0c0c8;
-		fog_density			= 0.5f;
-	}
-
-	// No snow while in buildings
 
 	[music]
 	{
@@ -184,6 +177,19 @@
 	transition_time			= 5.0f;
 	interior				= false;
 
+	[fog]
+	{
+		fog_color			= 0xFFc0c0c8;
+		fog_density			= 0.5f;
+		fog_near_dist		= 25.0f;
+		fog_far_dist		= 50.0f;
+		fog_lowdetail_near_dist		= 25.0f;
+		fog_lowdetail_far_dist		= 45.0f;
+	}
+	[snow]
+	{
+		snow_density		= 250;
+	}
 	[sun]
 	{
 		00h00m:color = 0xFF000000;
@@ -199,27 +205,10 @@
 		22h00m:color = 0xFF000000;
 		23h00m:color = 0xFF000000;
 	}
-
-	[fog]
-	{
-		fog_near_dist		= 25.0f;
-		fog_far_dist		= 50.0f;
-		fog_lowdetail_near_dist		= 25.0f;
-		fog_lowdetail_far_dist		= 45.0f;
-		fog_color			= 0xFFc0c0c8;
-		fog_density			= 0.5f;
-	}
-
 	[wind]
 	{
 		wind_velocity		= 1.5f;
 		wind_direction		= 3.14f;
-	}
-
-	// Snowing
-	[snow]
-	{
-		snow_density		= 250;
 	}
 
 	[music]
@@ -236,6 +225,19 @@
 	transition_time			= 1.0f;
 	interior				= false;
 
+	[fog]
+	{
+		fog_color			= 0xFFb7b7c8;
+		fog_density			= 0.5f;
+		fog_near_dist		= 20.0f;
+		fog_far_dist		= 50.0f;
+		fog_lowdetail_near_dist		= 20.0f;
+		fog_lowdetail_far_dist		= 45.0f;
+	}
+	[snow]
+	{
+		snow_density		= 250;
+	}
 	[sun]
 	{
 		00h00m:color = 0xFF000000;
@@ -251,34 +253,15 @@
 		22h00m:color = 0xFF000000;
 		23h00m:color = 0xFF000000;
 	}
-
-	[fog]
-	{
-		fog_near_dist		= 20.0f;
-		fog_far_dist		= 50.0f;
-		fog_lowdetail_near_dist		= 20.0f;
-		fog_lowdetail_far_dist		= 45.0f;
-		fog_color			= 0xFFb7b7c8;
-		fog_density			= 0.5f;
-	}
-
 	[wind]
 	{
 		wind_velocity		= 1.5f;
 		wind_direction		= 3.14f;
 	}
 
-	// Snowing
-	[snow]
-	{
-		snow_density		= 250;
-	}
-
 	[music]
 	{
 		ambient_track		= "";
-//		standard_repeat_delay = 10.0f;
-//		standard_track		= "s_m_Crypts_02";
 		room_type			= rt_generic;
 	}
 }
@@ -288,6 +271,19 @@
 	transition_time			= 3.0f;
 	interior				= false;
 
+	[fog]
+	{
+		fog_color			= 0xFFb7b7c8;
+		fog_density			= 0.5f;
+		fog_near_dist		= 20.0f;
+		fog_far_dist		= 50.0f;
+		fog_lowdetail_near_dist		= 20.0f;
+		fog_lowdetail_far_dist		= 45.0f;
+	}
+	[snow]
+	{
+		snow_density		= 250;
+	}
 	[sun]
 	{
 		00h00m:color = 0xFF000000;
@@ -303,27 +299,10 @@
 		22h00m:color = 0xFF000000;
 		23h00m:color = 0xFF000000;
 	}
-
-	[fog]
-	{
-		fog_near_dist		= 20.0f;
-		fog_far_dist		= 50.0f;
-		fog_lowdetail_near_dist		= 20.0f;
-		fog_lowdetail_far_dist		= 45.0f;
-		fog_color			= 0xFFb7b7c8;
-		fog_density			= 0.5f;
-	}
-
 	[wind]
 	{
 		wind_velocity		= 1.5f;
 		wind_direction		= 3.14f;
-	}
-
-	// Snowing
-	[snow]
-	{
-		snow_density		= 250;
 	}
 
 	[music]
@@ -341,6 +320,15 @@
 	transition_time			= 0.5f;
 	interior				= true;
 
+	[fog]
+	{
+		fog_color			= 0xFF000000;
+		fog_density			= 0.5f;
+		fog_near_dist		= 40.0f;
+		fog_far_dist		= 50.0f;
+		fog_lowdetail_near_dist		= 40.0f;
+		fog_lowdetail_far_dist		= 45.0f;
+	}
 	[sun]
 	{
 		00h00m:color = 0xFF000000;
@@ -356,17 +344,6 @@
 		22h00m:color = 0xFF000000;
 		23h00m:color = 0xFF000000;
 	}
-
-	[fog]
-	{
-		fog_near_dist		= 40.0f;
-		fog_far_dist		= 50.0f;
-		fog_lowdetail_near_dist		= 40.0f;
-		fog_lowdetail_far_dist		= 45.0f;
-		fog_color			= 0xFF000000;
-		fog_density			= 0.5f;
-	}
-
 	[wind]
 	{
 		wind_velocity		= 0.0f;
@@ -376,8 +353,6 @@
 	[music]
 	{
 		ambient_track		= "";
-//		standard_repeat_delay = 10.0f;
-//		standard_track		= "s_m_Glacern_02";
 		room_type			= rt_auditorium;
 	}
 }
@@ -387,6 +362,15 @@
 	transition_time			= 3.0f;
 	interior				= true;
 
+	[fog]
+	{
+		fog_color			= 0xFF000000;
+		fog_density			= 0.5f;
+		fog_near_dist		= 40.0f;
+		fog_far_dist		= 50.0f;
+		fog_lowdetail_near_dist		= 40.0f;
+		fog_lowdetail_far_dist		= 45.0f;
+	}
 	[sun]
 	{
 		00h00m:color = 0xFF000000;
@@ -402,17 +386,6 @@
 		22h00m:color = 0xFF000000;
 		23h00m:color = 0xFF000000;
 	}
-
-	[fog]
-	{
-		fog_near_dist		= 40.0f;
-		fog_far_dist		= 50.0f;
-		fog_lowdetail_near_dist		= 40.0f;
-		fog_lowdetail_far_dist		= 45.0f;
-		fog_color			= 0xFF000000;
-		fog_density			= 0.5f;
-	}
-
 	[wind]
 	{
 		wind_velocity		= 0.0f;
@@ -433,6 +406,15 @@
 	transition_time			= 3.0f;
 	interior				= true;
 
+	[fog]
+	{
+		fog_color			= 0xFF000000;
+		fog_density			= 0.5f;
+		fog_near_dist		= 40.0f;
+		fog_far_dist		= 50.0f;
+		fog_lowdetail_near_dist		= 40.0f;
+		fog_lowdetail_far_dist		= 45.0f;
+	}
 	[sun]
 	{
 		00h00m:color = 0xFF000000;
@@ -448,17 +430,6 @@
 		22h00m:color = 0xFF000000;
 		23h00m:color = 0xFF000000;
 	}
-
-	[fog]
-	{
-		fog_near_dist		= 40.0f;
-		fog_far_dist		= 50.0f;
-		fog_lowdetail_near_dist		= 40.0f;
-		fog_lowdetail_far_dist		= 45.0f;
-		fog_color			= 0xFF000000;
-		fog_density			= 0.5f;
-	}
-
 	[wind]
 	{
 		wind_velocity		= 0.0f;
@@ -481,12 +452,12 @@
 
 	[fog]
 	{
+		fog_color			= 0xFF000000;
+		fog_density			= 0.5f;
 		fog_near_dist		= 20.0f;
 		fog_far_dist		= 30.0f;
 		fog_lowdetail_near_dist		= 20.0f;
 		fog_lowdetail_far_dist		= 25.0f;
-		fog_color			= 0xFF000000;
-		fog_density			= 0.5f;
 	}
 	[sun]
 	{
@@ -520,12 +491,12 @@
 
 	[fog]
 	{
+		fog_color			= 0xFF000000;
+		fog_density			= 0.5f;
 		fog_near_dist		= 21.0f;
 		fog_far_dist		= 31.0f;
 		fog_lowdetail_near_dist		= 20.0f;
 		fog_lowdetail_far_dist		= 25.0f;
-		fog_color			= 0xFF000000;
-		fog_density			= 0.5f;
 	}
 	[sun]
 	{
@@ -559,12 +530,12 @@
 
 	[fog]
 	{
+		fog_color			= 0xFF000000;
+		fog_density			= 0.5f;
 		fog_near_dist		= 20.0f;
 		fog_far_dist		= 30.0f;
 		fog_lowdetail_near_dist		= 20.0f;
 		fog_lowdetail_far_dist		= 25.0f;
-		fog_color			= 0xFF000000;
-		fog_density			= 0.5f;
 	}
 	[sun]
 	{
@@ -596,6 +567,19 @@
 	transition_time			= 5.0f;
 	interior				= false;
 
+	[fog]
+	{
+		fog_color			= 0xFF505080;
+		fog_density			= 0.5f;
+		fog_near_dist		= 25.0f;
+		fog_far_dist		= 50.0f;
+		fog_lowdetail_near_dist		= 25.0f;
+		fog_lowdetail_far_dist		= 45.0f;
+	}
+	[snow]
+	{
+		snow_density		= 250;
+	}
 	[sun]
 	{
 		00h00m:color = 0xFF000000;
@@ -610,21 +594,6 @@
 		21h00m:color = 0xFF330D40;
 		22h00m:color = 0xFF000000;
 		23h00m:color = 0xFF000000;
-	}
-
-	[fog]
-	{
-		fog_near_dist		= 25.0f;
-		fog_far_dist		= 50.0f;
-		fog_lowdetail_near_dist		= 25.0f;
-		fog_lowdetail_far_dist		= 45.0f;
-		fog_color			= 0xFF505080;
-		fog_density			= 0.5f;
-	}
-
-	[snow]
-	{
-		snow_density		= 250;
 	}
 
 	[music]
@@ -641,6 +610,19 @@
 	transition_time			= 5.0f;
 	interior				= false;
 
+	[fog]
+	{
+		fog_color			= 0xFF505080;
+		fog_density			= 0.5f;
+		fog_near_dist		= 25.0f;
+		fog_far_dist		= 50.0f;
+		fog_lowdetail_near_dist		= 25.0f;
+		fog_lowdetail_far_dist		= 45.0f;
+	}
+	[snow]
+	{
+		snow_density		= 100;
+	}
 	[sun]
 	{
 		00h00m:color = 0xFF000000;
@@ -655,21 +637,6 @@
 		21h00m:color = 0xFF330D40;
 		22h00m:color = 0xFF000000;
 		23h00m:color = 0xFF000000;
-	}
-
-	[fog]
-	{
-		fog_near_dist		= 25.0f;
-		fog_far_dist		= 50.0f;
-		fog_lowdetail_near_dist		= 25.0f;
-		fog_lowdetail_far_dist		= 45.0f;
-		fog_color			= 0xFF505080;
-		fog_density			= 0.5f;
-	}
-
-	[snow]
-	{
-		snow_density		= 100;
 	}
 
 	[music]
@@ -686,6 +653,15 @@
 	transition_time			= 1.0f;
 	interior				= true;
 
+	[fog]
+	{
+		fog_color			= 0xFF505080;
+		fog_density			= 0.5f;
+		fog_near_dist		= 25.0f;
+		fog_far_dist		= 50.0f;
+		fog_lowdetail_near_dist		= 25.0f;
+		fog_lowdetail_far_dist		= 45.0f;
+	}
 	[sun]
 	{
 		00h00m:color = 0xFF000000;
@@ -700,16 +676,6 @@
 		21h00m:color = 0xFF330D40;
 		22h00m:color = 0xFF000000;
 		23h00m:color = 0xFF000000;
-	}
-
-	[fog]
-	{
-		fog_near_dist		= 25.0f;
-		fog_far_dist		= 50.0f;
-		fog_lowdetail_near_dist		= 25.0f;
-		fog_lowdetail_far_dist		= 45.0f;
-		fog_color			= 0xFF505080;
-		fog_density			= 0.5f;
 	}
 
 	[music]
@@ -726,6 +692,15 @@
 	transition_time			= 1.0f;
 	interior				= true;
 
+	[fog]
+	{
+		fog_color			= 0xFF505080;
+		fog_density			= 0.5f;
+		fog_near_dist		= 25.0f;
+		fog_far_dist		= 50.0f;
+		fog_lowdetail_near_dist		= 25.0f;
+		fog_lowdetail_far_dist		= 45.0f;
+	}
 	[sun]
 	{
 		00h00m:color = 0xFF000000;
@@ -740,16 +715,6 @@
 		21h00m:color = 0xFF330D40;
 		22h00m:color = 0xFF000000;
 		23h00m:color = 0xFF000000;
-	}
-
-	[fog]
-	{
-		fog_near_dist		= 25.0f;
-		fog_far_dist		= 50.0f;
-		fog_lowdetail_near_dist		= 25.0f;
-		fog_lowdetail_far_dist		= 45.0f;
-		fog_color			= 0xFF505080;
-		fog_density			= 0.5f;
 	}
 
 	[music]
@@ -766,6 +731,16 @@
 	transition_time			= 0.5f;
 	interior				= false;
 
+	[fog]
+	{
+		fog_color			= 0xFFc0c0c8;
+		fog_density			= 0.5f;
+		fog_near_dist		= 25.0f;
+		fog_far_dist		= 40.0f;
+		fog_lowdetail_near_dist		= 25.0f;
+		fog_lowdetail_far_dist		= 35.0f;
+	}
+	// No snow while in buildings
 	[sun]
 	{
 		00h00m:color = 0xFF000000;
@@ -781,18 +756,6 @@
 		22h00m:color = 0xFF000000;
 		23h00m:color = 0xFF000000;
 	}
-
-	[fog]
-	{
-		fog_near_dist		= 25.0f;
-		fog_far_dist		= 40.0f;
-		fog_lowdetail_near_dist		= 25.0f;
-		fog_lowdetail_far_dist		= 35.0f;
-		fog_color			= 0xFFc0c0c8;
-		fog_density			= 0.5f;
-	}
-
-	// No snow while in buildings
 
 	[music]
 	{
@@ -808,6 +771,19 @@
 	transition_time			= 1.0f;
 	interior				= false;
 
+	[fog]
+	{
+		fog_color			= 0xFFc0c0c8;
+		fog_density			= 0.5f;
+		fog_near_dist		= 25.0f;
+		fog_far_dist		= 40.0f;
+		fog_lowdetail_near_dist		= 25.0f;
+		fog_lowdetail_far_dist		= 35.0f;
+	}
+	[snow]
+	{
+		snow_density		= 250;
+	}
 	[sun]
 	{
 		00h00m:color = 0xFF000000;
@@ -823,27 +799,10 @@
 		22h00m:color = 0xFF000000;
 		23h00m:color = 0xFF000000;
 	}
-
-	[fog]
-	{
-		fog_near_dist		= 25.0f;
-		fog_far_dist		= 40.0f;
-		fog_lowdetail_near_dist		= 25.0f;
-		fog_lowdetail_far_dist		= 35.0f;
-		fog_color			= 0xFFc0c0c8;
-		fog_density			= 0.5f;
-	}
-
 	[wind]
 	{
 		wind_velocity		= 2.0f;
 		wind_direction		= 3.14f;
-	}
-
-	// Snowing
-	[snow]
-	{
-		snow_density		= 250;
 	}
 
 	[music]
@@ -860,6 +819,19 @@
 	transition_time			= 2.0f;
 	interior				= false;
 
+	[fog]
+	{
+		fog_color			= 0xFFc0c0c8;
+		fog_density			= 0.5f;
+		fog_near_dist		= 25.0f;
+		fog_far_dist		= 40.0f;
+		fog_lowdetail_near_dist		= 25.0f;
+		fog_lowdetail_far_dist		= 35.0f;
+	}
+	[snow]
+	{
+		snow_density		= 250;
+	}
 	[sun]
 	{
 		00h00m:color = 0xFF000000;
@@ -874,22 +846,6 @@
 		21h00m:color = 0xFF330D40;
 		22h00m:color = 0xFF000000;
 		23h00m:color = 0xFF000000;
-	}
-
-	[fog]
-	{
-		fog_near_dist		= 25.0f;
-		fog_far_dist		= 40.0f;
-		fog_lowdetail_near_dist		= 25.0f;
-		fog_lowdetail_far_dist		= 35.0f;
-		fog_color			= 0xFFc0c0c8;
-		fog_density			= 0.5f;
-	}
-
-	// Snowing
-	[snow]
-	{
-		snow_density		= 250;
 	}
 
 	[music]
@@ -902,19 +858,18 @@
 }
 [mood_setting*]
 {
-// Dwarven Mines 
 	mood_name				= eos_altair_fhc_r10_1;
 	transition_time			= 1.0f;
 	interior				= true;
 
 	[fog]
 	{
+		fog_color			= 0xFF000000;
+		fog_density			= 0.5f;
 		fog_near_dist		= 35.0f;
 		fog_far_dist		= 45.0f;
 		fog_lowdetail_near_dist		= 35.0f;
 		fog_lowdetail_far_dist		= 40.0f;
-		fog_color			= 0xFF000000;
-		fog_density			= 0.5f;
 	}
 
 	[music]
@@ -927,19 +882,18 @@
 }
 [mood_setting*]
 {
-// Dwarven Mines 
 	mood_name				= eos_altair_fhc_r2_1;
 	transition_time			= 2.0f;
 	interior				= true;
 
 	[fog]
 	{
+		fog_color			= 0xFF000000;
+		fog_density			= 0.5f;
 		fog_near_dist		= 35.0f;
 		fog_far_dist		= 45.0f;
 		fog_lowdetail_near_dist		= 35.0f;
 		fog_lowdetail_far_dist		= 40.0f;
-		fog_color			= 0xFF000000;
-		fog_density			= 0.5f;
 	}
 
 	[music]
@@ -952,19 +906,18 @@
 }
 [mood_setting*]
 {
-// Dwarven Mines 
 	mood_name				= eos_altair_fhc_r8_1;
 	transition_time			= 2.0f;
 	interior				= true;
 
 	[fog]
 	{
+		fog_color			= 0xFF000000;
+		fog_density			= 0.5f;
 		fog_near_dist		= 35.0f;
 		fog_far_dist		= 45.0f;
 		fog_lowdetail_near_dist		= 35.0f;
 		fog_lowdetail_far_dist		= 40.0f;
-		fog_color			= 0xFF000000;
-		fog_density			= 0.5f;
 	}
 
 	[music]
@@ -977,19 +930,18 @@
 }
 [mood_setting*]
 {
-// Dwarven Mines side area, using dramatic castle music
 	mood_name				= eos_altair_fhc_r8a_1;
 	transition_time			= 2.0f;
 	interior				= true;
 
 	[fog]
 	{
+		fog_color			= 0xFF000000;
+		fog_density			= 0.5f;
 		fog_near_dist		= 35.0f;
 		fog_far_dist		= 45.0f;
 		fog_lowdetail_near_dist		= 35.0f;
 		fog_lowdetail_far_dist		= 40.0f;
-		fog_color			= 0xFF000000;
-		fog_density			= 0.5f;
 	}
 
 	[music]
@@ -1002,19 +954,18 @@
 }
 [mood_setting*]
 {
-// Dwarven Mines 
 	mood_name				= eos_altair_fhc_r8_2;
 	transition_time			= 2.0f;
 	interior				= true;
 
 	[fog]
 	{
+		fog_color			= 0xFF000000;
+		fog_density			= 0.5f;
 		fog_near_dist		= 35.0f;
 		fog_far_dist		= 45.0f;
 		fog_lowdetail_near_dist		= 35.0f;
 		fog_lowdetail_far_dist		= 40.0f;
-		fog_color			= 0xFF000000;
-		fog_density			= 0.5f;
 	}
 
 	[music]
@@ -1027,19 +978,18 @@
 }
 [mood_setting*]
 {
-// Dwarven Mines 
 	mood_name				= eos_altair_fhc_r11_1;
 	transition_time			= 2.0f;
 	interior				= true;
 
 	[fog]
 	{
+		fog_color			= 0xFF000000;
+		fog_density			= 0.5f;
 		fog_near_dist		= 35.0f;
 		fog_far_dist		= 45.0f;
 		fog_lowdetail_near_dist		= 35.0f;
 		fog_lowdetail_far_dist		= 40.0f;
-		fog_color			= 0xFF000000;
-		fog_density			= 0.5f;
 	}
 
 	[music]
@@ -1052,19 +1002,19 @@
 }
 [mood_setting*]
 {
-// Different music for second half of region
+    // Different music for second half of region
 	mood_name				= eos_altair_fhc_r11_1_1;
 	transition_time			= 2.0f;
 	interior				= true;
 
 	[fog]
 	{
+		fog_color			= 0xFF000000;
+		fog_density			= 0.5f;
 		fog_near_dist		= 35.0f;
 		fog_far_dist		= 45.0f;
 		fog_lowdetail_near_dist		= 35.0f;
 		fog_lowdetail_far_dist		= 40.0f;
-		fog_color			= 0xFF000000;
-		fog_density			= 0.5f;
 	}
 
 	[music]
@@ -1077,12 +1027,21 @@
 }
 [mood_setting*]
 {
-// Dwarven Mines elevator mood (going up)
+    // Dwarven Mines elevator mood (going up)
 	mood_name				= eos_altair_fhc_r11_2;
 	transition_time			= 2.0f;
 	interior				= true;
 
-// Set the sun table early, so that there is no transition when the surface is reached
+	[fog]
+	{
+		fog_color			= 0xFF000000;
+		fog_density			= 0.5f;
+		fog_near_dist		= 35.0f;
+		fog_far_dist		= 45.0f;
+		fog_lowdetail_near_dist		= 35.0f;
+		fog_lowdetail_far_dist		= 40.0f;
+	}
+    // Set the sun table early, so that there is no transition when the surface is reached
 	[sun]
 	{
 		00h00m:color = 0xFF000000;
@@ -1099,16 +1058,6 @@
 		23h00m:color = 0xFF000000;
 	}
 
-	[fog]
-	{
-		fog_near_dist		= 35.0f;
-		fog_far_dist		= 45.0f;
-		fog_lowdetail_near_dist		= 35.0f;
-		fog_lowdetail_far_dist		= 40.0f;
-		fog_color			= 0xFF000000;
-		fog_density			= 0.5f;
-	}
-
 	[music]
 	{
 		ambient_track		= "s_e_ambient_wind_mines";
@@ -1119,12 +1068,21 @@
 }
 [mood_setting*]
 {
-// Dwarven Mines with NO transition time (instant fog--elevator going down)
+    // Dwarven Mines with NO transition time (instant fog--elevator going down)
 	mood_name				= eos_altair_fhc_r11_3;
 	transition_time			= 0.0f;
 	interior				= true;
 
-// Keep the sun table for the descent, to prevent a jarring transition
+	[fog]
+	{
+		fog_color			= 0xFF000000;
+		fog_density			= 0.5f;
+		fog_near_dist		= 35.0f;
+		fog_far_dist		= 45.0f;
+		fog_lowdetail_near_dist		= 35.0f;
+		fog_lowdetail_far_dist		= 40.0f;
+	}
+    // Keep the sun table for the descent, to prevent a jarring transition
 	[sun]
 	{
 		00h00m:color = 0xFF000000;
@@ -1139,16 +1097,6 @@
 		21h00m:color = 0xFF330D40;
 		22h00m:color = 0xFF000000;
 		23h00m:color = 0xFF000000;
-	}
-
-	[fog]
-	{
-		fog_near_dist		= 35.0f;
-		fog_far_dist		= 45.0f;
-		fog_lowdetail_near_dist		= 35.0f;
-		fog_lowdetail_far_dist		= 40.0f;
-		fog_color			= 0xFF000000;
-		fog_density			= 0.5f;
 	}
 
 	[music]
@@ -1162,29 +1110,73 @@
 
 [mood_setting*]
 {
-	interior = false;
 	mood_name = eos_altair_moon_teleport;
 	transition_time = 20.0f;
-	[fog]
-	{
-	  x fog_color = 0xFFD2E6F0;
-	  f fog_density = 0.500000;
-	  f fog_far_dist = 50.000000;
-	  f fog_lowdetail_far_dist = 45.000000;
-	  f fog_lowdetail_near_dist = 25.000000;
-	  f fog_near_dist = 25.000000;
-	}
+	interior = false;
+
 	[frustum]
 	{
 		frustum_height = 60.0f;
 		frustum_width = 45.0f;
 	}
+
+	[fog]
+	{
+	  x fog_color = 0xFFD2E6F0;
+	  f fog_density = 0.500000;
+	  f fog_near_dist = 25.000000;
+	  f fog_far_dist = 50.000000;
+	  f fog_lowdetail_near_dist = 25.000000;
+	  f fog_lowdetail_far_dist = 45.000000;
+	}
+	[snow]
+	{
+	  f snow_density = 450.000000;
+	}
+	[sun]
+	{
+		00h00m:color = 0xFF000000;
+		05h00m:color = 0xFF1A1A00;
+		06h00m:color = 0xFF66330D;
+		07h00m:color = 0xFFB39A40;
+		08h00m:color = 0xFFB3B3B3;
+		10h00m:color = 0xFFF0F0FF;
+		12h00m:color = 0xFFFFFFFF;
+		19h00m:color = 0xFFB39A9A;
+		20h00m:color = 0xFF66334D;
+		21h00m:color = 0xFF330D40;
+		22h00m:color = 0xFF000000;
+		23h00m:color = 0xFF000000;
+	}
+
 	[music]
 	{
 		ambient_track = "s_e_ambient_wind_ice_cavern";
-		room_type = rt_mountains;
 		standard_repeat_delay = 10.0f;
 		standard_track = "s_m_ArcticCaverns_07";
+		room_type = rt_mountains;
+	}
+}
+[mood_setting*]
+{
+	mood_name = eos_altair_moon_default;
+	transition_time = 5.0f;
+	interior = false;
+
+	[frustum]
+	{
+		frustum_height = 60.0f;
+		frustum_width = 45.0f;
+	}
+
+	[fog]
+	{
+	  x fog_color = 0xFFD2E6F0;
+	  f fog_density = 0.500000;
+	  f fog_near_dist = 25.000000;
+	  f fog_far_dist = 50.000000;
+	  f fog_lowdetail_near_dist = 25.000000;
+	  f fog_lowdetail_far_dist = 45.000000;
 	}
 	[snow]
 	{
@@ -1205,82 +1197,88 @@
 		22h00m:color = 0xFF000000;
 		23h00m:color = 0xFF000000;
 	}
-}
-[mood_setting*]
-{
-	interior = false;
-	mood_name = eos_altair_moon_default;
-	transition_time = 5.0f;
-	[fog]
-	{
-	  x fog_color = 0xFFD2E6F0;
-	  f fog_density = 0.500000;
-	  f fog_far_dist = 50.000000;
-	  f fog_lowdetail_far_dist = 45.000000;
-	  f fog_lowdetail_near_dist = 25.000000;
-	  f fog_near_dist = 25.000000;
-	}
-	[frustum]
-	{
-		frustum_height = 60.0f;
-		frustum_width = 45.0f;
-	}
+
 	[music]
 	{
 		ambient_track = "s_e_ambient_wind_ice_cavern";
-		room_type = rt_mountains;
 		standard_repeat_delay = 10.0f;
 		standard_track = "s_m_ArcticCaverns_06";
-	}
-	[snow]
-	{
-	  f snow_density = 450.000000;
-	}
-	[sun]
-	{
-		00h00m:color = 0xFF000000;
-		05h00m:color = 0xFF1A1A00;
-		06h00m:color = 0xFF66330D;
-		07h00m:color = 0xFFB39A40;
-		08h00m:color = 0xFFB3B3B3;
-		10h00m:color = 0xFFF0F0FF;
-		12h00m:color = 0xFFFFFFFF;
-		19h00m:color = 0xFFB39A9A;
-		20h00m:color = 0xFF66334D;
-		21h00m:color = 0xFF330D40;
-		22h00m:color = 0xFF000000;
-		23h00m:color = 0xFF000000;
+		room_type = rt_mountains;
 	}
 }
 [mood_setting*]
 {
-	interior = false;
 	mood_name = eos_altair_moon_mountaintop;
 	transition_time = 5.0f;
-	[fog]
-	{
-	  x fog_color = 0xFFD2E6F0;
-	  f fog_density = 0.500000;
-	  f fog_far_dist = 50.000000;
-	  f fog_lowdetail_far_dist = 45.000000;
-	  f fog_lowdetail_near_dist = 25.000000;
-	  f fog_near_dist = 25.000000;
-	}
+	interior = false;
+
 	[frustum]
 	{
 		frustum_height = 60.0f;
 		frustum_width = 45.0f;
+	}
+
+	[fog]
+	{
+	  x fog_color = 0xFFD2E6F0;
+	  f fog_density = 0.500000;
+	  f fog_near_dist = 25.000000;
+	  f fog_far_dist = 50.000000;
+	  f fog_lowdetail_near_dist = 25.000000;
+	  f fog_lowdetail_far_dist = 45.000000;
 	}
 	[snow]
 	{
 	  f snow_density = 600.000000;
 	}
+	[sun]
+	{
+		00h00m:color = 0xFF000000;
+		05h00m:color = 0xFF1A1A00;
+		06h00m:color = 0xFF66330D;
+		07h00m:color = 0xFFB39A40;
+		08h00m:color = 0xFFB3B3B3;
+		10h00m:color = 0xFFF0F0FF;
+		12h00m:color = 0xFFFFFFFF;
+		19h00m:color = 0xFFB39A9A;
+		20h00m:color = 0xFF66334D;
+		21h00m:color = 0xFF330D40;
+		22h00m:color = 0xFF000000;
+		23h00m:color = 0xFF000000;
+	}
+
 	[music]
 	{
 		ambient_track = "s_e_ambient_wind_ice_cavern";
-		room_type = rt_mountains;
 		standard_repeat_delay = 10.0f;
 		standard_track = "s_m_ArcticCaverns_01";
+		room_type = rt_mountains;
+	}
+}
+[mood_setting*]
+{
+	mood_name = eos_altair_moon_haunted;
+  f transition_time = 2.000000;
+  b interior = true;
+
+	[frustum]
+	{
+	  f frustum_height = 60.000000;
+	  f frustum_width = 45.000000;
+	}
+
+	[fog]
+	{
+	  x fog_color = 0xFFD2E6F0;
+	  f fog_density = 1.000000;
+	  f fog_near_dist = 17.000000;
+	  f fog_far_dist = 40.000000;
+	  f fog_lowdetail_near_dist = 17.000000;
+	  f fog_lowdetail_far_dist = 35.000000;
+	}
+	[snow]
+	{
+	  f snow_density = 450.000000;
 	}
 	[sun]
 	{
@@ -1297,42 +1295,42 @@
 		22h00m:color = 0xFF000000;
 		23h00m:color = 0xFF000000;
 	}
-}
-[mood_setting*]
-{
-  b interior = true;
-	mood_name = eos_altair_moon_haunted;
-  f transition_time = 2.000000;
-	[fog]
-	{
-	  x fog_color = 0xFFD2E6F0;
-	  f fog_density = 1.000000;
-	  f fog_far_dist = 40.000000;
-	  f fog_lowdetail_far_dist = 35.000000;
-	  f fog_lowdetail_near_dist = 17.000000;
-	  f fog_near_dist = 17.000000;
-	}
-	[frustum]
-	{
-	  f frustum_height = 60.000000;
-	  f frustum_width = 45.000000;
-	}
+
 	[music]
 	{
 	  f ambient_intro_delay = 0.000000;
 	  f ambient_repeat_delay = 0.000000;
 		ambient_track = ;
-	  f battle_intro_delay = 0.000000;
-	  f battle_repeat_delay = 10.000000;
-		battle_track = s_m_battle;
-		room_type = rt_mountains;
 	  f standard_intro_delay = 0.000000;
 	  f standard_repeat_delay = 0.000000;
 		standard_track = s_m_icebridge;
+		room_type = rt_mountains;
+	}
+}
+[mood_setting*]
+{
+	mood_name = eos_altair_moon_snow_heavy;
+  f transition_time = 5.000000;
+  b interior = true;
+
+	[frustum]
+	{
+	  f frustum_height = 60.000000;
+	  f frustum_width = 45.000000;
+	}
+
+	[fog]
+	{
+	  x fog_color = 0xFFD2E6F0;
+	  f fog_density = 1.000000;
+	  f fog_near_dist = 17.000000;
+	  f fog_far_dist = 40.000000;
+	  f fog_lowdetail_near_dist = 17.000000;
+	  f fog_lowdetail_far_dist = 35.000000;
 	}
 	[snow]
 	{
-	  f snow_density = 450.000000;
+	  f snow_density = 600.000000;
 	}
 	[sun]
 	{
@@ -1348,92 +1346,44 @@
 		21h00m:color = 0xFF330D40;
 		22h00m:color = 0xFF000000;
 		23h00m:color = 0xFF000000;
-	}
-}
-[mood_setting*]
-{
-  b interior = true;
-	mood_name = eos_altair_moon_snow_heavy;
-  f transition_time = 5.000000;
-	[fog]
-	{
-	  x fog_color = 0xFFD2E6F0;
-	  f fog_density = 1.000000;
-	  f fog_far_dist = 40.000000;
-	  f fog_lowdetail_far_dist = 35.000000;
-	  f fog_lowdetail_near_dist = 17.000000;
-	  f fog_near_dist = 17.000000;
-	}
-	[frustum]
-	{
-	  f frustum_height = 60.000000;
-	  f frustum_width = 45.000000;
-	}
-	[music]
-	{
-	  f ambient_intro_delay = 0.000000;
-	  f ambient_repeat_delay = 0.000000;
-		ambient_track = ;
-	  f battle_intro_delay = 0.000000;
-	  f battle_repeat_delay = 0.000000;
-		battle_track = s_m_battle;
-		room_type = rt_forest;
-	  f standard_intro_delay = 0.000000;
-	  f standard_repeat_delay = 10.000000;
-		standard_track = s_m_arcticcaverns_01;
-	}
-	[snow]
-	{
-	  f snow_density = 600.000000;
 	}
 	[wind]
 	{
 	  f wind_direction = 1.140000;
 	  f wind_velocity = 4.000000;
 	}
-	[sun]
+
+	[music]
 	{
-		00h00m:color = 0xFF000000;
-		05h00m:color = 0xFF1A1A00;
-		06h00m:color = 0xFF66330D;
-		07h00m:color = 0xFFB39A40;
-		08h00m:color = 0xFFB3B3B3;
-		10h00m:color = 0xFFF0F0FF;
-		12h00m:color = 0xFFFFFFFF;
-		19h00m:color = 0xFFB39A9A;
-		20h00m:color = 0xFF66334D;
-		21h00m:color = 0xFF330D40;
-		22h00m:color = 0xFF000000;
-		23h00m:color = 0xFF000000;
+	  f ambient_intro_delay = 0.000000;
+	  f ambient_repeat_delay = 0.000000;
+		ambient_track = ;
+	  f standard_intro_delay = 0.000000;
+	  f standard_repeat_delay = 10.000000;
+		standard_track = s_m_arcticcaverns_01;
+		room_type = rt_forest;
 	}
 }
 [mood_setting*]
 {
-	interior = false;
 	mood_name = eos_altair_moon_cave;
 	transition_time = 2.0f;
-	[fog]
-	{
-	  x fog_color = 0xFF000000;
-	  f fog_density = 50.000000;
-	  f fog_far_dist = 50.000000;
-	  f fog_lowdetail_far_dist = 45.000000;
-	  f fog_lowdetail_near_dist = 30.000000;
-	  f fog_near_dist = 30.000000;
-	}
+	interior = false;
+
 	[frustum]
 	{
 		frustum_height = 60.0f;
 		frustum_width = 45.0f;
 	}
-	[music]
+
+	[fog]
 	{
-	  f ambient_intro_delay = 0.000000;
-	  f ambient_repeat_delay = 0.000000;
-		ambient_track = "s_e_ambient_wind_ice_cavern";
-		room_type = rt_cave;
-		standard_repeat_delay = 10.0f;
-		standard_track = "s_m_ArcticCaverns_04";
+	  x fog_color = 0xFF000000;
+	  f fog_density = 50.000000;
+	  f fog_near_dist = 30.000000;
+	  f fog_far_dist = 50.000000;
+	  f fog_lowdetail_near_dist = 30.000000;
+	  f fog_lowdetail_far_dist = 45.000000;
 	}
 	[sun]
 	{
@@ -1449,5 +1399,15 @@
 		21h00m:color = 0xFF330D40;
 		22h00m:color = 0xFF000000;
 		23h00m:color = 0xFF000000;
+	}
+
+	[music]
+	{
+	  f ambient_intro_delay = 0.000000;
+	  f ambient_repeat_delay = 0.000000;
+		ambient_track = "s_e_ambient_wind_ice_cavern";
+		standard_repeat_delay = 10.0f;
+		standard_track = "s_m_ArcticCaverns_04";
+		room_type = rt_cave;
 	}
 }
