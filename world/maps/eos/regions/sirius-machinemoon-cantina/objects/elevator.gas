@@ -40,107 +40,6 @@
 	  p position = 0.935252,0.230654,-0.867208,0x821d9027;
 	}
 }
-[t:elevator_instant_4s_1c,n:0x052000cb]
-{
-	[elevator_instant_4s_1c]
-	{
-	  i connect_door_location1_level1 = 5;
-	  i connect_door_location1_level2 = 8;
-	  i connect_door_location2_level1 = 5;
-	  i connect_door_location2_level2 = 8;
-	  x connect_node_location1 = 0xB2B4C9CD;
-	  x connect_node_location2 = 0x8A78827D;
-		down_effect = "eos_displacer_plate_down";
-	  f duration_location1_moving_to_lv1 = 16;
-	  f duration_location2_moving_to_lv1 = 16;
-	  i e2_connect_door_location1_level1 = 5;
-	  i e2_connect_door_location1_level2 = 8;
-	  i e2_connect_door_location2_level1 = 5;
-	  i e2_connect_door_location2_level2 = 8;
-	  x e2_elevator_node = 0x4C9F7FDF;
-	  x elevator_node = 0x1FE29358;
-		location1_moving_to_lv1_actioninfo = "eos_sirius_machinemoon_teleport";
-		location1_moving_to_lv1_hint = ah_yaxis_negative;
-		location1_moving_to_lv2_actioninfo = "eos_teleport";
-		location1_moving_to_lv2_hint = ah_yaxis_positive;
-		location2_moving_to_lv1_actioninfo = "eos_sirius_teleport";
-		location2_moving_to_lv1_hint = ah_yaxis_negative;
-		location2_moving_to_lv2_actioninfo = "eos_teleport";
-		location2_moving_to_lv2_hint = ah_yaxis_positive;
-		material = "hub";
-	  x other_elevator = 0x0E000030;
-		up_effect = "eos_displacer_plate_up";
-	}
-	[placement]
-	{
-	  p position = 0,0.2,0,0x1fe29358;
-	}
-}
-[t:elevator_2s_2c_1n,n:0x05200063]
-{
-	[elevator_2s_2c_1n]
-	{
-	  i additional_door_level2 = 11;
-	  x additional_node_level2 = 0x47BAD77E;
-	  i connect_door_level1 = 2;
-	  i connect_door_level2 = 2;
-	  x connect_node = 0x309567F3;
-	  f duration = 1;
-	  i elevator_additionaldoor_level2 = 4;
-	  i elevator_door_level1 = 1;
-	  i elevator_door_level2 = 2;
-	  x elevator_node = 0xF7D8718A;
-	  x level2_scid = 0x0520007B;
-	}
-	[placement]
-	{
-	  q orientation = 0,0.707107,0,0.707107;
-	  p position = 0.095863,0,0.736565,0xf22a4704;
-	}
-}
-[t:elevator_2s_1c_1n,n:0x0520006d]
-{
-	[common]
-	{
-		screen_name = "door1";
-	}
-	[elevator_2s_1c_1n]
-	{
-	  i connect_door_level1 = 7;
-	  i connect_door_level2 = 9;
-	  x connect_node = 0xBBD148BC;
-	  f duration = 0.5;
-	  i elevator_door_level1 = 1;
-	  i elevator_door_level2 = 1;
-	  x elevator_node = 0x5B17D144;
-	}
-	[placement]
-	{
-	  p position = 0.781555,6,2.02164,0x4e57e226;
-	}
-}
-[t:elevator_2s_1c_1n,n:0x0520006e]
-{
-	[common]
-	{
-		screen_name = "door2";
-	}
-	[elevator_2s_1c_1n]
-	{
-	  i connect_door_level1 = 15;
-	  i connect_door_level2 = 7;
-	  x connect_node = 0xBBD148BC;
-	  f duration = 1;
-	  i elevator_door_level1 = 2;
-	  i elevator_door_level2 = 2;
-	  x elevator_node = 0x378216F2;
-	  x level2_scid = 0x05200123;
-	}
-	[placement]
-	{
-	  p position = 2.59067,6,2.05772,0x4e57e226;
-	}
-}
 [t:elevator_2s_1c_1n,n:0x05200064]
 {
 	[common]
@@ -225,5 +124,106 @@
 	[placement]
 	{
 	  p position = -1.96734,0,0.953175,0x0c9b7671;
+	}
+}
+[t:elevator_2s_1c_1n,n:0x0520006d]
+{
+	[common]
+	{
+		screen_name = "door1";
+	}
+	[elevator_2s_1c_1n]
+	{
+	  i connect_door_level1 = 7;
+	  i connect_door_level2 = 9;
+	  x connect_node = 0xBBD148BC;
+	  f duration = 0.5;
+	  i elevator_door_level1 = 1;
+	  i elevator_door_level2 = 1;
+	  x elevator_node = 0x5B17D144;
+	}
+	[placement]
+	{
+	  p position = 0.781555,6,2.02164,0x4e57e226;
+	}
+}
+[t:elevator_2s_1c_1n,n:0x0520006e]
+{
+	[common]
+	{
+		screen_name = "door2";
+	}
+	[elevator_2s_1c_1n]
+	{
+	  i connect_door_level1 = 15;
+	  i connect_door_level2 = 7;
+	  x connect_node = 0xBBD148BC;
+	  f duration = 1;
+	  i elevator_door_level1 = 2;
+	  i elevator_door_level2 = 2;
+	  x elevator_node = 0x378216F2;
+	  x level2_scid = 0x05200123;
+	}
+	[placement]
+	{
+	  p position = 2.59067,6,2.05772,0x4e57e226;
+	}
+}
+[t:elevator_2s_2c_1n,n:0x05200063]
+{
+	[elevator_2s_2c_1n]
+	{
+	  i additional_door_level2 = 11;
+	  x additional_node_level2 = 0x47BAD77E;
+	  i connect_door_level1 = 2;
+	  i connect_door_level2 = 2;
+	  x connect_node = 0x309567F3;
+	  f duration = 1;
+	  i elevator_additionaldoor_level2 = 4;
+	  i elevator_door_level1 = 1;
+	  i elevator_door_level2 = 2;
+	  x elevator_node = 0xF7D8718A;
+	  x level2_scid = 0x0520007B;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.707107,0,0.707107;
+	  p position = 0.095863,0,0.736565,0xf22a4704;
+	}
+}
+[t:elevator_instant_4s_1c,n:0x052000cb]
+{
+	[elevator_instant_4s_1c]
+	{
+	  i connect_door_location1_level1 = 5;
+	  i connect_door_location1_level2 = 8;
+	  i connect_door_location2_level1 = 5;
+	  i connect_door_location2_level2 = 8;
+	  x connect_node_location1 = 0xB2B4C9CD;
+	  x connect_node_location2 = 0x8A78827D;
+		down_effect = "eos_displacer_plate_down";
+	  f duration_location1_moving_to_lv1 = 16;
+	  f duration_location2_moving_to_lv1 = 16;
+	  i e2_connect_door_location1_level1 = 5;
+	  i e2_connect_door_location1_level2 = 8;
+	  i e2_connect_door_location2_level1 = 5;
+	  i e2_connect_door_location2_level2 = 8;
+	  x e2_elevator_node = 0x4C9F7FDF;
+	  x elevator_node = 0x1FE29358;
+		location1_moving_to_lv1_actioninfo = "eos_sirius_machinemoon_teleport";
+		location1_moving_to_lv1_hint = ah_yaxis_negative;
+		location1_moving_to_lv2_actioninfo = "eos_teleport";
+		location1_moving_to_lv2_hint = ah_yaxis_positive;
+		location2_moving_to_lv1_actioninfo = "eos_sirius_teleport";
+		location2_moving_to_lv1_hint = ah_yaxis_negative;
+		location2_moving_to_lv2_actioninfo = "eos_teleport";
+		location2_moving_to_lv2_hint = ah_yaxis_positive;
+		material = "hub";
+	  x other_elevator = 0x0E000030;
+		up_effect = "eos_displacer_plate_up";
+	}
+	[placement]
+	{
+	  p position = 0,0.2,0,0x1fe29358;
 	}
 }

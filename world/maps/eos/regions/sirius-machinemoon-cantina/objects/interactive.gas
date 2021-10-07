@@ -48,26 +48,6 @@
 	  p position = 16.6999,5.60001,-45.2916,0x1474c893;
 	}
 }
-[t:eos_teleport_statue_small,n:0x05200092]
-{
-	[common]
-	{
-		screen_name = "Machine Moon Teleporter (requires Sirius starstone)";
-	}
-	[on_off_lever]
-	{
-	  x off_scid = 0x052000CA;
-	  x off_scid_2 = 0x0E000037;
-	  x on_scid = 0x052000CA;
-	  x on_scid_2 = 0x0E000037;
-	}
-	[placement]
-	{
-	  q orientation = 0,1,0,-1.66939e-007;
-	  p position = 0,0.2,0,0x1fe29358;
-		use_point_scids = 0x05200076;
-	}
-}
 [t:coil_gob_02,n:0x05200149]
 {
 	[placement]
@@ -89,13 +69,24 @@
 	  p position = -2.09421,0,-0.160154,0xd00566e3;
 	}
 }
-[t:respawn_statue,n:0x052002f4]
+[t:eos_teleport_statue_small,n:0x05200092]
 {
+	[common]
+	{
+		screen_name = "Machine Moon Teleporter (requires Sirius starstone)";
+	}
+	[on_off_lever]
+	{
+	  x off_scid = 0x052000CA;
+	  x off_scid_2 = 0x0E000037;
+	  x on_scid = 0x052000CA;
+	  x on_scid_2 = 0x0E000037;
+	}
 	[placement]
 	{
-	  q orientation = 0,0.382683,0,0.92388;
-	  p position = -0.671444,0,-0.684792,0xcda0ce26;
-		use_point_scids = 0x052002f7;
+	  q orientation = 0,1,0,-1.66939e-007;
+	  p position = 0,0.2,0,0x1fe29358;
+		use_point_scids = 0x05200076;
 	}
 }
 [t:coil_gob_02,n:0x05200128]
@@ -104,5 +95,14 @@
 	{
 	  q orientation = 0,-0.707107,0,0.707107;
 	  p position = -2.87455,0,1.5186,0xb6e39810;
+	}
+}
+[t:respawn_statue,n:0x052002f4]
+{
+	[placement]
+	{
+	  q orientation = 0,0.382683,0,0.92388;
+	  p position = -0.671444,0,-0.684792,0xcda0ce26;
+		use_point_scids = 0x052002f7;
 	}
 }
