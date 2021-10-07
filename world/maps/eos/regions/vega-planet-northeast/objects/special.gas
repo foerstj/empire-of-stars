@@ -423,6 +423,36 @@
 	  p position = 1.72658,0,-3.57008,0x160b1f19;
 	}
 }
+[t:trigger_change_mood_box,n:0x06501e62]
+{
+	[common]
+	{
+		dev_instance_text = "StartPos: MOOD";
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = mood_change("eos_vega_forest_5");
+			  b can_self_destruct = true;
+				condition* = party_member_within_bounding_box(4.000000,2.000000,4.000000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,0.999998,0,0.00218171;
+	  p position = 2.66615,0,0.618029,0xc5a406d6;
+	}
+}
 [t:trigger_change_mood_box,n:0x06501bd8]
 {
 	[common]
@@ -597,33 +627,10 @@
 	  p position = 0.0411162,0,-0.474014,0x84708286;
 	}
 }
-[t:trigger_change_mood_box,n:0x06501e62]
+[t:blocking_object,n:0x06501e64]
 {
-	[common]
-	{
-		dev_instance_text = "StartPos: MOOD";
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = mood_change("eos_vega_forest_5");
-			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(4.000000,2.000000,4.000000,"on_every_enter");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-		}
-	}
 	[placement]
 	{
-	  q orientation = 0,0.999998,0,0.00218171;
-	  p position = 2.66615,0,0.618029,0xc5a406d6;
+	  p position = -0.725128,1.95,3.74717,0x33e88b07;
 	}
 }
