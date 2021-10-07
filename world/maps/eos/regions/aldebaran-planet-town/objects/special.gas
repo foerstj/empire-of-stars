@@ -1366,7 +1366,7 @@
 	  p position = -2.40125,-0.150048,1.37488,0xffb78392;
 	}
 }
-[t:trigger_change_mood_box,n:0x07200469]
+[t:trigger_change_mood_box,n:0x07200466]
 {
 	[common]
 	{
@@ -1374,9 +1374,9 @@
 		{
 			[*]
 			{
-				action* = mood_change("eos_aldebaran_town_3");
+				action* = mood_change("eos_aldebaran_town_1");
 			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(0.500000,1.000000,10.000000,"on_every_enter");
+				condition* = party_member_within_bounding_box(0.500000,1.500000,6.000000,"on_every_enter");
 			  f delay = 0.000000;
 			  b flip_flop = false;
 			  b multi_player = true;
@@ -1392,7 +1392,7 @@
 	[placement]
 	{
 	  q orientation = 0,-0.707107,0,0.707107;
-	  p position = -4.68261,1.85,-1.0011,0xb86458f5;
+	  p position = -2.81002,-0.990586,-1.98117,0x088e18d3;
 	}
 }
 [t:trigger_change_mood_box,n:0x0720058a]
@@ -1482,7 +1482,7 @@
 	  p position = 0.411227,1,3.64433,0x02e46457;
 	}
 }
-[t:trigger_change_mood_box,n:0x07200466]
+[t:trigger_change_mood_box,n:0x07200469]
 {
 	[common]
 	{
@@ -1490,9 +1490,9 @@
 		{
 			[*]
 			{
-				action* = mood_change("eos_aldebaran_town_1");
+				action* = mood_change("eos_aldebaran_town_3");
 			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(0.500000,1.500000,6.000000,"on_every_enter");
+				condition* = party_member_within_bounding_box(0.500000,1.000000,10.000000,"on_every_enter");
 			  f delay = 0.000000;
 			  b flip_flop = false;
 			  b multi_player = true;
@@ -1508,7 +1508,7 @@
 	[placement]
 	{
 	  q orientation = 0,-0.707107,0,0.707107;
-	  p position = -2.81002,-0.990586,-1.98117,0x088e18d3;
+	  p position = -4.68261,1.85,-1.0011,0xb86458f5;
 	}
 }
 [t:use_point,n:0x07200821]
