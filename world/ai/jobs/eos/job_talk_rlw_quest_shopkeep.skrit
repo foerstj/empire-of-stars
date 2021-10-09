@@ -2,11 +2,11 @@
   ============================================================================
   ----------------------------------------------------------------------------
 
-	File		: 	job_talk_ezmera.skrit
+	File		: 	job_talk_shopkeep_questgiver.skrit
 
 	Author(s)	: 	Anu Kirk (ripping off Chad Queen)
 
-	Purpose		: 	ezmera (a1_r1) talk skrit
+	Purpose		: 	shopkeep_questgiver (a1_r1) talk skrit
 
 	(C)opyright 2003 Mad Doc Software, LLC/Gas Powered Games, Inc.
 
@@ -97,23 +97,23 @@ state Talk$
 		if ( !Victory.IsQuestCompleted( "rigel_wet_1_townsafety" , m_Target$) )
 		{
 			// haven't saved the city, need to go away
-			 m_Go$.GetConversation.RSSelectConversation( "ezmera_during_a2_citysafety" );
+			 m_Go$.GetConversation.RSSelectConversation( "shopkeep_questgiver_during_townsafety" );
 			 TryAnim$('talk');
 		}
 		else if ( Victory.IsQuestCompleted( "rigel_missing_shopkeep", m_Target$ ) )
 		{
-			 m_Go$.GetConversation.RSSelectConversation( "ezmera_after_a2_scribe" );
+			 m_Go$.GetConversation.RSSelectConversation( "shopkeep_questgiver_after_shopkeep" );
 			 TryAnim$('talk');
 		}			
 		else if ( Victory.IsQuestActive( "rigel_missing_shopkeep" , m_Target$) )
 		{
-			 m_Go$.GetConversation.RSSelectConversation( "ezmera_during_a2_scribe" );
+			 m_Go$.GetConversation.RSSelectConversation( "shopkeep_questgiver_during_shopkeep" );
 			 TryAnim$('talk');
 		}
 		else
 		{
 			// give the scribe quest
-			m_Go$.GetConversation.RSSelectConversation( "ezmera_before_a2_scribe" );
+			m_Go$.GetConversation.RSSelectConversation( "shopkeep_questgiver_before_shopkeep" );
 			TryAnim$('talk');
 		}
 		m_Go$.GetConversation.RSActivateDialogue();

@@ -2,11 +2,11 @@
   ============================================================================
   ----------------------------------------------------------------------------
 
-	File		: 	job_talk_jhay.skrit
+	File		: 	job_talk_mule_shop2.skrit
 
 	Author(s)	: 	Bartosz Kijanka / Anu
 
-	Purpose		: 	Make jhay (A2 NPC) talk goodly
+	Purpose		: 	Make mule_shop2 (A2 NPC) talk goodly
 
 	(C)opyright 2003 Gas Powered Games, Inc. / Mad Doc Software, LLC
 
@@ -95,21 +95,21 @@ state Talk$
 		// if the city is unsafe, never even try to sell
 		if ( !Victory.IsQuestCompleted( "rigel_wet_1_townsafety" , m_Target$) )
 		{
-			 m_Go$.GetConversation.RSSelectConversation( "jhay_during_a2_citysafety" );
+			 m_Go$.GetConversation.RSSelectConversation( "mule_shop2_during_townsafety" );
 			 TryAnim$('talk');
 		}		
 		// if the city is safe, check to see if we have one to sell
 		else if ( 	Victory.IsQuestCompleted( "rigel_wet_1_townsafety" , m_Target$) &&
 				( 	m_Go$.GetStore().GetNumHires() == 1 ) )				
 			{		
-				m_Go$.GetConversation.RSSelectConversation( "jhay_after_a2_citysafety" );
+				m_Go$.GetConversation.RSSelectConversation( "mule_shop2_after_townsafety" );
 				TryAnim$('talk');
 			}
 			
 			// none left..can't sell you any	
 			else if ( m_Go$.GetStore().GetNumHires() == 0 )
 			{		
-					m_Go$.GetConversation.RSSelectConversation( "jhay_after_a2_citysafety_sold" );
+					m_Go$.GetConversation.RSSelectConversation( "mule_shop2_after_townsafety_sold" );
 					TryAnim$('talk');
 			}	
 

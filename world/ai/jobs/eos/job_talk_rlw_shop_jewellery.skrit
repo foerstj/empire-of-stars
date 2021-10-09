@@ -2,11 +2,11 @@
   ============================================================================
   ----------------------------------------------------------------------------
 
-	File		: 	job_talk_daon.skrit
+	File		: 	job_talk_shop_jewellery.skrit
 
 	Author(s)	: 	Anu Kirk (ripping off Chad Queen)
 
-	Purpose		: 	daon (a1_r1) talk skrit
+	Purpose		: 	shop_jewellery (a1_r1) talk skrit
 
 	(C)opyright 2003 Mad Doc Software, LLC/Gas Powered Games, Inc.
 
@@ -96,12 +96,12 @@ state Talk$
 	{
 		if ( !Victory.IsQuestCompleted( "rigel_wet_1_townsafety" , m_Target$) )
 		{
-			 m_Go$.GetConversation.RSSelectConversation( "daon_during_a2_citysafety" );
+			 m_Go$.GetConversation.RSSelectConversation( "shop_jewellery_during_townsafety" );
 			 TryAnim$('talk');
 		}		
 		else
 		{
-			m_Go$.GetConversation.RSSelectConversation( "daon_after_a2_citysafety" );
+			m_Go$.GetConversation.RSSelectConversation( "shop_jewellery_after_townsafety" );
 			TryAnim$('talk');
 		}
 		m_Go$.GetConversation.RSActivateDialogue();

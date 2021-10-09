@@ -2,11 +2,11 @@
   ============================================================================
   ----------------------------------------------------------------------------
 
-	File		: 	job_talk_kamik.skrit
+	File		: 	job_talk_shop_potions.skrit
 
 	Author(s)	: 	Matthew Nordhaus (Ripping off Anu Kirk)
 
-	Purpose		: 	Kamik (a2_r6) talk skrit
+	Purpose		: 	shop_potions (a2_r6) talk skrit
 
 	(C)opyright 2003 Mad Doc Software, LLC/Gas Powered Games, Inc.
 
@@ -96,12 +96,12 @@ state Talk$
 	{
 		if ( !Victory.IsQuestCompleted( "rigel_wet_1_townsafety" , m_Target$) )
 		{
-			 m_Go$.GetConversation.RSSelectConversation( "kamik_during_a2_citysafety" );
+			 m_Go$.GetConversation.RSSelectConversation( "shop_potions_during_townsafety" );
 			 TryAnim$('talk');
 		}		
 		else
 		{
-			m_Go$.GetConversation.RSSelectConversation( "kamik_after_a2_citysafety" );
+			m_Go$.GetConversation.RSSelectConversation( "shop_potions_after_townsafety" );
 			TryAnim$('talk');
 		}
 		m_Go$.GetConversation.RSActivateDialogue();
