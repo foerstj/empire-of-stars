@@ -1281,6 +1281,46 @@
 	  p position = -0.582287,0.1,-1.22179,0x6ee8e4c0;
 	}
 }
+[t:tutorial_tip,n:0x07900463]
+{
+	[placement]
+	{
+	  p position = -1.95753,0.0999994,0.214828,0x6ee8e4c0;
+	}
+	[tip]
+	{
+		tip = "starstones_not_in_backpack";
+	}
+}
+[t:trigger_generic,n:0x07900465]
+{
+	[common]
+	{
+		dev_instance_text = "TOOLTIP";
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_activate",0x07900463,0f,"0x4002","party_member_within_sphere",0);
+			  b can_self_destruct = true;
+				condition* = party_member_within_sphere(2.500000,"on_first_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = true;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  p position = 0.00346565,0.1,0.0277252,0x6ee8e4c0;
+	}
+}
 [t:use_point,n:0x079001b5]
 {
 	[placement]
