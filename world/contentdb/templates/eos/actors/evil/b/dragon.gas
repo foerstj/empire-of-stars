@@ -206,6 +206,11 @@
 	[conversation] { }
 	[mind]
 	{
+		jat_cast	    				= world\ai\jobs\common\job_cast.skrit
+			?spell_by_range				= true
+			&use_base_duration			= false
+		    &rand_target				= true;
+
 		jat_talk = world\ai\jobs\common\job_talk.skrit;
 	}
 }
