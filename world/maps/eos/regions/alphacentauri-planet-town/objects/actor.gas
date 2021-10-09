@@ -1071,22 +1071,6 @@
 	  p position = -1.79845,0,-1.20127,0x968f21ce;
 	}
 }
-[t:gremal,n:0x01c00069]
-{
-	[placement]
-	{
-	  q orientation = 0,-0.382683,0,0.92388;
-	  p position = 0.676967,-2e-006,-0.920536,0xb28a3247;
-	}
-}
-[t:phrak,n:0x01c00577]
-{
-	[placement]
-	{
-	  q orientation = 0,-0.707107,0,0.707107;
-	  p position = -0.913804,-0.116374,0.41616,0x24ece97c;
-	}
-}
 [t:dog_sleeping,n:0x01c001dd]
 {
 	[aspect]
@@ -1107,6 +1091,95 @@
 	[placement]
 	{
 	  p position = -3.26433,0,3.29307,0xb8225c38;
+	}
+}
+[t:phrak,n:0x01c00499]
+{
+	[placement]
+	{
+	  p position = -1.14332,0.026833,-0.277238,0xddb21515;
+	}
+}
+[t:gremal,n:0x01c00069]
+{
+	[placement]
+	{
+	  q orientation = 0,-0.382683,0,0.92388;
+	  p position = 0.676967,-2e-006,-0.920536,0xb28a3247;
+	}
+}
+[t:chicken_red,n:0x01c00312]
+{
+	[aspect]
+	{
+	  b is_selectable = true;
+	}
+	[common]
+	{
+		screen_name = "Kelly";
+	}
+	[mind]
+	{
+	  b on_enemy_entered_weapon_engage_range_attack = true;
+	}
+	[placement]
+	{
+	  p position = -3.94222,0,1.37129,0x1fbc7e16;
+	}
+}
+[t:phrak,n:0x01c00488]
+{
+	[placement]
+	{
+	  q orientation = 0,-0.707107,0,0.707107;
+	  p position = 1.70145,1.90735e-006,1.76631,0x1fbc7e16;
+	}
+}
+[t:phrak,n:0x01c0048a]
+{
+	[placement]
+	{
+	  q orientation = 0,-0.707107,0,0.707107;
+	  p position = 2.22496,0,0.518463,0x1fbc7e16;
+	}
+}
+[t:skrubb_farm,n:0x01c00b42]
+{
+	[placement]
+	{
+	  q orientation = 0,0.173648,0,0.984808;
+	  p position = 1.99638,0,-1.30463,0x2d3f939a;
+	}
+}
+[t:skrubb_farm,n:0x01c00b64]
+{
+	[placement]
+	{
+	  q orientation = 0,0.996195,0,0.0871561;
+	  p position = 2.66066,-8.05,-1.66304,0x33213d78;
+	}
+}
+[t:phrak,n:0x01c003e2]
+{
+	[placement]
+	{
+	  q orientation = 0,0.707107,0,0.707107;
+	  p position = 0.869904,-0.005169,-0.311099,0xeca251a9;
+	}
+}
+[t:phrak_piercer,n:0x01c00b30]
+{
+	[placement]
+	{
+	  p position = -0.971649,-0.07722,0.385603,0xeca251a9;
+	}
+}
+[t:phrak,n:0x01c00577]
+{
+	[placement]
+	{
+	  q orientation = 0,-0.707107,0,0.707107;
+	  p position = -0.913804,-0.116374,0.41616,0x24ece97c;
 	}
 }
 [t:chicken_red,n:0x01c00262]
@@ -1346,13 +1419,6 @@
 	  p position = 1.55528,-2e-006,1.80997,0x7b0d3b8d;
 	}
 }
-[t:phrak,n:0x01c00499]
-{
-	[placement]
-	{
-	  p position = -1.14332,0.026833,-0.277238,0xddb21515;
-	}
-}
 [t:krug_scout,n:0x01c0025f]
 {
 	[placement]
@@ -1416,72 +1482,6 @@
 	[placement]
 	{
 	  p position = 3.05355,-0.991915,3.94187,0x048ba5d0;
-	}
-}
-[t:phrak,n:0x01c003e2]
-{
-	[placement]
-	{
-	  q orientation = 0,0.707107,0,0.707107;
-	  p position = 0.869904,-0.005169,-0.311099,0xeca251a9;
-	}
-}
-[t:phrak_piercer,n:0x01c00b30]
-{
-	[placement]
-	{
-	  p position = -0.971649,-0.07722,0.385603,0xeca251a9;
-	}
-}
-[t:chicken_red,n:0x01c00312]
-{
-	[aspect]
-	{
-	  b is_selectable = true;
-	}
-	[common]
-	{
-		screen_name = "Kelly";
-	}
-	[mind]
-	{
-	  b on_enemy_entered_weapon_engage_range_attack = true;
-	}
-	[placement]
-	{
-	  p position = -3.94222,0,1.37129,0x1fbc7e16;
-	}
-}
-[t:phrak,n:0x01c00488]
-{
-	[placement]
-	{
-	  q orientation = 0,-0.707107,0,0.707107;
-	  p position = 1.70145,1.90735e-006,1.76631,0x1fbc7e16;
-	}
-}
-[t:phrak,n:0x01c0048a]
-{
-	[placement]
-	{
-	  q orientation = 0,-0.707107,0,0.707107;
-	  p position = 2.22496,0,0.518463,0x1fbc7e16;
-	}
-}
-[t:skrubb_farm,n:0x01c00b42]
-{
-	[placement]
-	{
-	  q orientation = 0,0.173648,0,0.984808;
-	  p position = 1.99638,0,-1.30463,0x2d3f939a;
-	}
-}
-[t:skrubb_farm,n:0x01c00b64]
-{
-	[placement]
-	{
-	  q orientation = 0,0.996195,0,0.0871561;
-	  p position = 2.66066,-8.05,-1.66304,0x33213d78;
 	}
 }
 [t:krug_scavenger,n:0x01c005cd]
