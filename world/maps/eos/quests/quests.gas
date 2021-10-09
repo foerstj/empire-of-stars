@@ -240,21 +240,28 @@
 
 		[*]
 		{
-			description = "Clear Orionis of the savage Droog - south, east, and south-west from the teleporter.";
+			description = "Clear Orionis of the savage Droog - speak with Gucup Cakix near the teleporter.";
 		  	b is_consumable = true;
 		  	i order = 0;
 		  	b required = false;
 		}
 		[*]
 		{
-			description = "Speak again with Gucup Cakix near the teleporter.";
+			description = "Clear Orionis of the savage Droog - south, east, and south-west from the teleporter.";
+		  	b is_consumable = true;
 		  	i order = 1;
 		  	b required = false;
 		}
 		[*]
 		{
-			description = "Orionis is safe.";
+			description = "Speak again with Gucup Cakix near the teleporter.";
 		  	i order = 2;
+		  	b required = false;
+		}
+		[*]
+		{
+			description = "Orionis is safe.";
+		  	i order = 3;
 		  	b required = false;
 		}
     }
