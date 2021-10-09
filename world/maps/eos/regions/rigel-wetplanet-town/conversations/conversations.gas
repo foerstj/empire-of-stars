@@ -101,30 +101,30 @@
 	  f scroll_rate = 20.0;
 	}
 }
-[ranwor_after_a2_citysafety]
+[jhay_after_a2_citysafety]
 {
 	[text*]
 	{
 		choice = buy_packmule;
-		screen_text = "While others may sell 'beasts' - I offer beautiful, healthy, and pestilence-free creatures!  Are you in need of a good pack animal, friend?";
+		screen_text = "These poor beasts are all I have. Are you in need of a good pack-animal, good sirs? Try the mare... she has a kick, but is loyal and true!";
 	  f scroll_rate = 20.000000;
 	}
 }
-[ranwor_after_a2_citysafety_sold]
+[jhay_after_a2_citysafety_sold]
 {
 	[text*]
 	{
-		screen_text = "Unfortunately, I am unable to sell you my remaining tragg.  You see, she is 'with child.' If you return in a day or two, however, I will have several more creatures to sell!";
+		screen_text = "Alas, I have no more animals.";
 	  f scroll_rate = 20.000000;
 	}
 }
-[ranwor_during_a2_citysafety]
+[jhay_during_a2_citysafety]
 {
 	[text*]
 	{
 		activate_quest* = rigel_wet_1_townsafety,0;
 	  b quest_dialog = true;
-		screen_text = "Ah!  Greetings, greetings, greetings!  I would be delighted to sell an animal to you...  however, with the Savages running about, I am wary.  Should your pack animal get killed, there are no refunds.  Come back once the threat of the Savages has been taken care of.";
+		screen_text = "An alien! Then the light of the Angels shines on us again! Though with these Savage-Folk attacking, I would not feel safe letting you take one of my animals .. When the threat is over come talk to me again and I will gladly sell one of them to you.";
 	  f scroll_rate = 20.000000;
 	}
 }
@@ -174,7 +174,7 @@
 	  f scroll_rate = 20.000000;
 	}
 }
-[quayhdar_after_a1_staff_update]
+[mayor_during_skull]
 {
 	[text*]
 	{
@@ -182,7 +182,27 @@
 	  f scroll_rate = 20.0;
 	}
 }
-[quayhdar_after_therg]
+[mayor_after_townsafety_skull]
+{
+	[text*]
+	{
+		activate_quest* = rigel_wet_1_townsafety,2;
+		choice = more;
+		complete_quest* = rigel_wet_1_townsafety;
+	  i order = 0;
+		screen_text = "I and my people thank you, alien. This is no doubt a sign from the Angels that our redemption is close at hand. Your mission is quite troubling, though.  I know of no such Starstone item as you describe.";
+	  f scroll_rate = 20.000000;
+	}
+	[text*]
+	{
+		activate_quest* = rigel_wet_skull,0;
+	  i order = 1;
+	  b quest_dialog = true;
+		screen_text = "You must seek the Skull of the Fallen God. It is out in the Wetlands. You cannot miss it, it is really huge. According to tradition, it is the fossil of a Creator God that fell from the sky. It is a place of miracles - you might find what you search for there. Be warned that the area is also overrun with Savage-Folk, though.";
+	  f scroll_rate = 20.0;
+	}
+}
+[mayor_after_skull]
 {
 	[text*]
 	{
@@ -190,31 +210,13 @@
 	  f scroll_rate = 20.0;
 	}
 }
-[quayhdar_after_a2_citysafety]
+[mayor_during_townsafety]
 {
 	[text*]
 	{
-		choice = more;
 	  i order = 0;
-		screen_text = "I and my people thank you, alien. This is no doubt a sign from the Angels that our redemption is close at hand. Your mission is quite troubling, though.  I know of no such Starstone item as you describe.";
-	  f scroll_rate = 20.0;
-	}
-	[text*]
-	{
-		activate_quest* = rigel_wet_skull,0;
-	  b quest_dialog = true;
-	  i order = 1;
-		screen_text = "You must seek the Skull of the Fallen God. It is out in the Wetlands. You cannot miss it, it is really huge. According to tradition, it is the fossil of a Creator God that fell from the sky. It is a place of miracles - you might find what you search for there. Be warned that the area is also overrun with Savage-Folk, though.";
-	  f scroll_rate = 20.0;
-	}
-}
-[quayhdar_during_a2_citysafety]
-{
-	[text*]
-	{
-	  	i order = 0;
 		screen_text = "It must have been an aeon that humans have set foot on this world. Our scriptures prophesy star-folk coming down to save our ancient city. Might this be you? I suspect so, as there is no such thing as coincidence... I hope you will do as foretold, and help us, for we have been unable to help ourselves.";
-	  	f scroll_rate = 20.0;
+	  f scroll_rate = 20.0;
 	}
 	[text*]
 	{
@@ -222,7 +224,7 @@
 	  f scroll_rate = 20.0;
 	}
 }
-[quayhdar_hello]
+[mayor_hello_townsafety]
 {
 	[text*]
 	{
@@ -233,30 +235,30 @@
 	  f scroll_rate = 20.0;
 	}
 }
-[jhay_after_a2_citysafety]
+[ranwor_after_a2_citysafety]
 {
 	[text*]
 	{
 		choice = buy_packmule;
-		screen_text = "These poor beasts are all I have. Are you in need of a good pack-animal, good sirs? Try the mare... she has a kick, but is loyal and true!";
+		screen_text = "While others may sell 'beasts' - I offer beautiful, healthy, and pestilence-free creatures!  Are you in need of a good pack animal, friend?";
 	  f scroll_rate = 20.000000;
 	}
 }
-[jhay_after_a2_citysafety_sold]
+[ranwor_after_a2_citysafety_sold]
 {
 	[text*]
 	{
-		screen_text = "Alas, I have no more animals.";
+		screen_text = "Unfortunately, I am unable to sell you my remaining tragg.  You see, she is 'with child.' If you return in a day or two, however, I will have several more creatures to sell!";
 	  f scroll_rate = 20.000000;
 	}
 }
-[jhay_during_a2_citysafety]
+[ranwor_during_a2_citysafety]
 {
 	[text*]
 	{
 		activate_quest* = rigel_wet_1_townsafety,0;
 	  b quest_dialog = true;
-		screen_text = "An alien! Then the light of the Angels shines on us again! Though with these Savage-Folk attacking, I would not feel safe letting you take one of my animals .. When the threat is over come talk to me again and I will gladly sell one of them to you.";
+		screen_text = "Ah!  Greetings, greetings, greetings!  I would be delighted to sell an animal to you...  however, with the Savages running about, I am wary.  Should your pack animal get killed, there are no refunds.  Come back once the threat of the Savages has been taken care of.";
 	  f scroll_rate = 20.000000;
 	}
 }

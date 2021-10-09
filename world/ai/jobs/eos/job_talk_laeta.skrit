@@ -94,7 +94,7 @@ state Talk$
 
 	event OnEnterState$
 	{
-		if ( !Victory.IsQuestCompleted( "rigel_townsafety" , m_Target$) )
+		if ( !Victory.IsQuestCompleted( "rigel_wet_1_townsafety" , m_Target$) )
 		{
 			 m_Go$.GetConversation.RSSelectConversation( "laeta_during_a2_citysafety" );
 			 TryAnim$('talk');

@@ -95,41 +95,35 @@ state Talk$
 	event OnEnterState$
 	{
 		// have they saved the city yet?
-		if ( Victory.IsQuestCompleted( "rigel_townsafety" , m_Target$) )
+		if ( Victory.GetQuestOrder( "rigel_wet_1_townsafety", m_Target$) > 0 )
 		{
-			// yes - have they seen therg yet?
-			if ( Victory.IsQuestCompleted( "a1_staff" , m_Target$) 
-					|| Victory.GetQuestOrder( "a1_staff", m_Target$) > 10 )
+			// yes - have they found the starstone yet?
+			if ( Victory.IsQuestCompleted( "rigel_wet_skull" , m_Target$) )
 			{
-				// yup - just say done with therg stuff
-				 m_Go$.GetConversation.RSSelectConversation( "quayhdar_after_therg" );
-				 TryAnim$('talk');
+				// yup - just say done with starstone stuff
+				m_Go$.GetConversation.RSSelectConversation( "mayor_after_skull" );
 			}
-			else if ( Victory.GetQuestOrder( "a1_staff", m_Target$ ) >= 5 )
+			else if ( Victory.IsQuestActive( "rigel_wet_skull", m_Target$ ) )
 			{
-				// i already told them to see therg
-				 m_Go$.GetConversation.RSSelectConversation( "quayhdar_after_a1_staff_update" );
-				 TryAnim$('talk');
+				// i already told them to see the skull
+				m_Go$.GetConversation.RSSelectConversation( "mayor_during_skull" );
 			}		
 			else
 			{
-				m_Go$.GetConversation.RSSelectConversation( "quayhdar_after_a2_citysafety" );
-				TryAnim$('talk');
+				m_Go$.GetConversation.RSSelectConversation( "mayor_after_townsafety_skull" );
 			}
 		}
-		else if ( Victory.IsQuestActive( "rigel_townsafety", m_Target$ ) )
+		else if ( Victory.IsQuestActive( "rigel_wet_1_townsafety", m_Target$ ) )
 		{
 			// they have the quest but haven't completed it
-			m_Go$.GetConversation.RSSelectConversation( "quayhdar_during_a2_citysafety" );
-			TryAnim$('talk');
+			m_Go$.GetConversation.RSSelectConversation( "mayor_during_townsafety" );
 		}
 		else
 		{
 			// they don't have the quest yet
-			m_Go$.GetConversation.RSSelectConversation( "quayhdar_hello" );
-			TryAnim$('talk');
+			m_Go$.GetConversation.RSSelectConversation( "mayor_hello_townsafety" );
 		}
-		
+        TryAnim$('talk');
 		
 		m_Go$.GetConversation.RSActivateDialogue();
 	}

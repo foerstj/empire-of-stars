@@ -93,13 +93,13 @@ state Talk$
 	event OnEnterState$
 	{
 		// if the city is unsafe, never even try to sell
-		if ( !Victory.IsQuestCompleted( "rigel_townsafety" , m_Target$) )
+		if ( !Victory.IsQuestCompleted( "rigel_wet_1_townsafety" , m_Target$) )
 		{
 			 m_Go$.GetConversation.RSSelectConversation( "jhay_during_a2_citysafety" );
 			 TryAnim$('talk');
 		}		
 		// if the city is safe, check to see if we have one to sell
-		else if ( 	Victory.IsQuestCompleted( "rigel_townsafety" , m_Target$) &&
+		else if ( 	Victory.IsQuestCompleted( "rigel_wet_1_townsafety" , m_Target$) &&
 				( 	m_Go$.GetStore().GetNumHires() == 1 ) )				
 			{		
 				m_Go$.GetConversation.RSSelectConversation( "jhay_after_a2_citysafety" );

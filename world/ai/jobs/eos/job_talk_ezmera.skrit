@@ -94,18 +94,18 @@ state Talk$
 
 	event OnEnterState$
 	{
-		if ( !Victory.IsQuestCompleted( "rigel_townsafety" , m_Target$) )
+		if ( !Victory.IsQuestCompleted( "rigel_wet_1_townsafety" , m_Target$) )
 		{
 			// haven't saved the city, need to go away
 			 m_Go$.GetConversation.RSSelectConversation( "ezmera_during_a2_citysafety" );
 			 TryAnim$('talk');
 		}
-		else if ( Victory.IsQuestCompleted( "a2_scribe", m_Target$ ) )
+		else if ( Victory.IsQuestCompleted( "rigel_missing_shopkeep", m_Target$ ) )
 		{
 			 m_Go$.GetConversation.RSSelectConversation( "ezmera_after_a2_scribe" );
 			 TryAnim$('talk');
 		}			
-		else if ( Victory.IsQuestActive( "a2_scribe" , m_Target$) )
+		else if ( Victory.IsQuestActive( "rigel_missing_shopkeep" , m_Target$) )
 		{
 			 m_Go$.GetConversation.RSSelectConversation( "ezmera_during_a2_scribe" );
 			 TryAnim$('talk');
