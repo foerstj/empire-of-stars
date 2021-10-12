@@ -1337,7 +1337,6 @@
 		{
 			[*]
 			{
-				action* = mood_change("eos_aranna_island_2_2");
 				action* = change_quest_state("find_aunt_luna","active",0);
 			  b can_self_destruct = true;
 				condition* = party_member_within_sphere(16.000000,"on_every_enter");
@@ -1364,6 +1363,21 @@
 			  f reset_duration = 0.000000;
 			  b single_player = false;
 			  b single_shot = false;
+			  b start_active = true;
+			}
+			[*]
+			{
+				action* = mood_change("eos_aranna_island_init");
+			  b can_self_destruct = true;
+				condition* = party_member_within_sphere(16.000000,"on_first_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = false;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = true;
 			  b start_active = true;
 			}
 		}
