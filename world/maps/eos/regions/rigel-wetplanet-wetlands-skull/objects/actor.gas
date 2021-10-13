@@ -565,6 +565,11 @@
 }
 [t:dsx_krakbone_greater,n:0x01700333]
 {
+	[body]
+	{
+	  f angular_turning_velocity = 360;
+	  b can_turn_and_move = true;
+	}
 	[common]
 	{
 		[instance_triggers]
@@ -585,6 +590,17 @@
 			  b start_active = true;
 			}
 		}
+	}
+	[mind]
+	{
+		jat_attack_object_melee = world\ai\jobs\common\job_attack_object_melee.skrit;
+		jat_cast = world\ai\jobs\common\job_cast.skrit
+		?spell_by_range		= true
+		&use_base_duration	= false
+		&rand_target		= true;
+		jat_face = world\ai\jobs\common\job_face.skrit;
+	  f melee_engage_range = 24;
+	  f sight_fov = 360;
 	}
 	[placement]
 	{
