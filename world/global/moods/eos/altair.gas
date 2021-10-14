@@ -47,7 +47,7 @@
 		room_type			= rt_generic;
 	}
 }
-[mood_setting*]
+[mood_setting*]  // indoor
 {
 	mood_name				= eos_altair_lagomsno_1;
 	transition_time			= 1.0f;
@@ -93,7 +93,7 @@
 		room_type			= rt_generic;
 	}
 }
-[mood_setting*]
+[mood_setting*]  // outdoor
 {
 	mood_name				= eos_altair_lagomsno_2;
 	transition_time			= 2.0f;
@@ -143,7 +143,7 @@
 		room_type			= rt_generic;
 	}
 }
-[mood_setting*]
+[mood_setting*]  // tavern
 {
 	mood_name				= eos_altair_lagomsno_tavern;
 	transition_time			= 1.0f;
@@ -189,7 +189,7 @@
 		room_type			= rt_generic;
 	}
 }
-[mood_setting*]
+[mood_setting*]  // outside town
 {
 	mood_name				= eos_altair_lagomsno_3;
 	transition_time			= 5.0f;
@@ -243,7 +243,7 @@
 		room_type			= rt_generic;
 	}
 }
-[mood_setting*]
+[mood_setting*]  // transition lava cavern -> further out
 {
 	mood_name				= eos_altair_lagomsno_cellarcave_1;
 	transition_time			= 1.0f;
@@ -295,7 +295,7 @@
 		room_type			= rt_generic;
 	}
 }
-[mood_setting*]
+[mood_setting*]  // out of the lava cavern
 {
 	mood_name				= eos_altair_lagomsno_cellarcave_1a;
 	transition_time			= 3.0f;
@@ -349,8 +349,7 @@
 		room_type			= rt_generic;
 	}
 }
-
-[mood_setting*]
+[mood_setting*]  // transition lava cavern -> a bit out
 {
 	mood_name				= eos_altair_lagomsno_cellarcave_2;
 	transition_time			= 0.5f;
@@ -398,7 +397,7 @@
 		room_type			= rt_auditorium;
 	}
 }
-[mood_setting*]
+[mood_setting*]  // lava cavern
 {
 	mood_name				= eos_altair_lagomsno_cellarcave_2a;
 	transition_time			= 3.0f;
@@ -448,57 +447,7 @@
 		room_type			= rt_auditorium;
 	}
 }
-[mood_setting*]
-{
-	mood_name				= eos_altair_lagomsno_cellarcave_2b;
-	transition_time			= 3.0f;
-	interior				= true;
-
-	[frustum]
-	{
-		frustum_width		= 60.0f;
-		frustum_height		= 60.0f;
-	}
-
-	[fog]
-	{
-		fog_color			= 0xFF000000;
-		fog_density			= 0.5f;
-		fog_near_dist		= 40.0f;
-		fog_far_dist		= 50.0f;
-		fog_lowdetail_near_dist		= 40.0f;
-		fog_lowdetail_far_dist		= 45.0f;
-	}
-	[sun]
-	{
-		00h00m:color = 0xFF000000;
-		05h00m:color = 0xFF1A1A00;
-		06h00m:color = 0xFF66330D;
-		07h00m:color = 0xFFB39A40;
-		08h00m:color = 0xFFB3B3B3;
-		10h00m:color = 0xFFF0F0FF;
-		12h00m:color = 0xFFFFFFFF;
-		19h00m:color = 0xFFB39A9A;
-		20h00m:color = 0xFF66334D;
-		21h00m:color = 0xFF330D40;
-		22h00m:color = 0xFF000000;
-		23h00m:color = 0xFF000000;
-	}
-	[wind]
-	{
-		wind_velocity		= 0.0f;
-		wind_direction		= 0.0f;
-	}
-	
-	[music]
-	{
-		ambient_track		= "";
-		standard_repeat_delay = 10.0f;
-		standard_track		= "s_m_Glacern_02";
-		room_type			= rt_auditorium;
-	}
-}
-[mood_setting*]
+[mood_setting*]  // cellarcave exit town
 {
 	mood_name				= eos_altair_lagomsno_cellarcave_3;
 	transition_time			= 0.25f;
@@ -543,7 +492,7 @@
 		room_type			= rt_stoneroom;
 	}
 }
-[mood_setting*]
+[mood_setting*]  // cellar room
 {
 	mood_name				= eos_altair_lagomsno_cellarcave_3a;
 	transition_time			= 3.25f;
@@ -588,7 +537,7 @@
 		room_type			= rt_stoneroom;
 	}
 }
-[mood_setting*]
+[mood_setting*]  // transition cellar room / exit town
 {
 	mood_name				= eos_altair_lagomsno_cellarcave_3b;
 	transition_time			= 3.25f;
@@ -821,7 +770,7 @@
 		room_type			= rt_generic;
 	}
 }
-[mood_setting*]
+[mood_setting*]  // under ele building roof
 {
 	mood_name				= eos_altair_ele_1;
 	transition_time			= 0.5f;
@@ -867,7 +816,7 @@
 		room_type			= rt_generic;
 	}
 }
-[mood_setting*]
+[mood_setting*]  // near ele building
 {
 	mood_name				= eos_altair_ele_2;
 	transition_time			= 1.0f;
@@ -921,7 +870,7 @@
 		room_type			= rt_generic;
 	}
 }
-[mood_setting*]
+[mood_setting*]  // near furok cave to WNW
 {
 	mood_name				= eos_altair_ele_3;
 	transition_time			= 2.0f;
@@ -970,7 +919,7 @@
 		room_type			= rt_generic;
 	}
 }
-[mood_setting*]
+[mood_setting*]  // FHC end room with starstone
 {
 	mood_name				= eos_altair_fhc_r10_1;
 	transition_time			= 1.0f;
@@ -1000,7 +949,7 @@
 		room_type			= rt_cave;
 	}
 }
-[mood_setting*]
+[mood_setting*]  // caverns1
 {
 	mood_name				= eos_altair_fhc_r2_1;
 	transition_time			= 2.0f;
@@ -1030,7 +979,7 @@
 		room_type			= rt_cave;
 	}
 }
-[mood_setting*]
+[mood_setting*]  // caverns1
 {
 	mood_name				= eos_altair_fhc_r8_1;
 	transition_time			= 2.0f;
@@ -1060,7 +1009,7 @@
 		room_type			= rt_cave;
 	}
 }
-[mood_setting*]
+[mood_setting*]  // ele landing
 {
 	mood_name				= eos_altair_fhc_r8a_1;
 	transition_time			= 2.0f;
@@ -1086,11 +1035,11 @@
 	{
 		ambient_track		= "";
 		standard_repeat_delay = 5.0f;
-		standard_track		= "s_m_CastleEhb_04";
+		standard_track		= "s_m_DwarvenMines_01";
 		room_type			= rt_cave;
 	}
 }
-[mood_setting*]
+[mood_setting*]  // stitch area caverns1 / caverns2
 {
 	mood_name				= eos_altair_fhc_r8_2;
 	transition_time			= 2.0f;
@@ -1120,7 +1069,7 @@
 		room_type			= rt_cave;
 	}
 }
-[mood_setting*]
+[mood_setting*]  // caverns2 pt1
 {
 	mood_name				= eos_altair_fhc_r11_1;
 	transition_time			= 2.0f;
@@ -1150,7 +1099,7 @@
 		room_type			= rt_cave;
 	}
 }
-[mood_setting*]
+[mood_setting*]  // caverns2 pt2
 {
     // Different music for second half of region
 	mood_name				= eos_altair_fhc_r11_1_1;
@@ -1181,7 +1130,7 @@
 		room_type			= rt_cave;
 	}
 }
-[mood_setting*]
+[mood_setting*]  // ele up
 {
     // Dwarven Mines elevator mood (going up)
 	mood_name				= eos_altair_fhc_r11_2;
@@ -1228,7 +1177,7 @@
 		room_type			= rt_cave;
 	}
 }
-[mood_setting*]
+[mood_setting*]  // ele down
 {
     // Dwarven Mines with NO transition time (instant fog--elevator going down)
 	mood_name				= eos_altair_fhc_r11_3;

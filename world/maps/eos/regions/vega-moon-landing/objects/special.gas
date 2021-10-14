@@ -33,6 +33,7 @@
 {
 	[common]
 	{
+		dev_instance_text = "PWL";
 		[instance_triggers]
 		{
 			[*]
@@ -68,6 +69,7 @@
 {
 	[common]
 	{
+		dev_instance_text = "Startpos: MOOD";
 		[instance_triggers]
 		{
 			[*]
@@ -483,7 +485,7 @@
 		{
 			[*]
 			{
-				action* = mood_change("eos_vega_dark_forest_4");
+				action* = mood_change("eos_vega_moon_cave");
 			  b can_self_destruct = true;
 				condition* = party_member_within_bounding_box(4.000000,4.000000,4.000000,"on_every_enter");
 			  f delay = 0.000000;
@@ -637,7 +639,7 @@
 			}
 			[*]
 			{
-				action* = mood_change("eos_vega_dark_forest_4");
+				action* = mood_change("eos_vega_moon_cave");
 			  b can_self_destruct = true;
 				condition* = party_member_within_bounding_box(6.000000,2.000000,3.000000,"on_every_enter");
 			  f delay = 0.000000;

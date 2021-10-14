@@ -70,34 +70,6 @@
 	  p position = 2.55752,0,-2.56392,0x49c489a2;
 	}
 }
-[t:trigger_generic,n:0x08100009]
-{
-	[common]
-	{
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = mood_change("eos_altair_moon_mountaintop");
-			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(14.000000,2.100000,2.000000,"on_every_enter");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  p position = -0.407269,0,-0.137002,0xdd5ca07d;
-	}
-}
 [t:chunks_ice_spire_04,n:0x08100682]
 {
 	[aspect]
@@ -448,6 +420,35 @@
 	[placement]
 	{
 	  p position = -0.107491,0,-0.20343,0xc8d0786c;
+	}
+}
+[t:trigger_change_mood_box,n:0x08100076]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = mood_change("eos_altair_moon_mountaintop");
+			  b can_self_destruct = true;
+				condition* = party_member_within_bounding_box(4.000000,1.000000,2.000000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,0.707107,0,0.707107;
+	  p position = -1.07491,0,0.416153,0xd40494e5;
 	}
 }
 [t:chunks_ice_spire_04,n:0x08100635]
@@ -1345,6 +1346,34 @@
 	  p position = -1.56007,-5.9389,-4.4062,0x1c51ba2c;
 	}
 }
+[t:trigger_change_mood_box,n:0x08100074]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = mood_change("eos_altair_moon_default");
+			  b can_self_destruct = true;
+				condition* = party_member_within_bounding_box(4.000000,1.000000,2.000000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  p position = 0.162365,-1.95453,-3.66442,0xa6def3b5;
+	}
+}
 [t:chunks_ice_spire_05,n:0x0810061a]
 {
 	[aspect]
@@ -1388,6 +1417,35 @@
 	[placement]
 	{
 	  p position = -3.62885,0,2.55038,0x6de0359b;
+	}
+}
+[t:trigger_change_mood_box,n:0x08100075]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = mood_change("eos_altair_moon_mountaintop");
+			  b can_self_destruct = true;
+				condition* = party_member_within_bounding_box(4.000000,1.000000,2.000000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,0.707107,0,0.707107;
+	  p position = 7.29192,4,1.64106,0xa7e23ce0;
 	}
 }
 [t:chunks_ice_spire_04,n:0x08100647]

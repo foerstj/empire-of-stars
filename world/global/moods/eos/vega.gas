@@ -117,7 +117,7 @@
 		room_type = rt_parkinglot;
 	}
 }
-[mood_setting*]
+[mood_setting*]  // happy lawn
 {
 	mood_name = eos_vega_forest_3;
   f transition_time = 4.000000;
@@ -154,7 +154,7 @@
 		room_type = rt_parkinglot;
 	}
 }
-[mood_setting*]
+[mood_setting*]  // around riff
 {
 	mood_name = eos_vega_forest_4;
   f transition_time = 4.000000;
@@ -192,7 +192,7 @@
 		room_type = rt_parkinglot;
 	}
 }
-[mood_setting*]
+[mood_setting*]  // far east & far north
 {
 	mood_name = eos_vega_forest_5;
   f transition_time = 4.000000;
@@ -230,7 +230,7 @@
 		room_type = rt_parkinglot;
 	}
 }
-[mood_setting*]
+[mood_setting*]  // field of ruins
 {
 	mood_name = eos_vega_forest_6;
   f transition_time = 4.000000;
@@ -266,34 +266,6 @@
 	  f standard_repeat_delay = 0.000000;
 		standard_track = s_m_zaurask_theme;
 		room_type = rt_parkinglot;
-	}
-}
-[mood_setting*]
-{
-	mood_name				= eos_vega_dark_forest_4;
-	transition_time			= 1.0f;
-	interior				= true;
-
-	[frustum]
-	{
-		frustum_width		= 60.0f;
-		frustum_height		= 60.0f;
-	}
-
-	[fog]
-	{
-		fog_color			= 0xFF000000;
-		fog_density			= 0.5f;
-		fog_near_dist		= 25.0f;
-		fog_far_dist		= 40.0f;
-		fog_lowdetail_near_dist		= 25.0f;
-		fog_lowdetail_far_dist		= 35.0f;
-	}
-
-	[music]
-	{
-		ambient_track		= "";
-		standard_track		= "s_m_Crypts_02"; 
 	}
 }
 
@@ -335,7 +307,7 @@
 		room_type = rt_mountains;
 	}
 }
-[mood_setting*]
+[mood_setting*]  // around landing & ruins
 {
 	mood_name = eos_vega_moon_darkdarkjungle;
   f transition_time = 3.000000;
@@ -373,7 +345,7 @@
 		room_type = rt_mountains;
 	}
 }
-[mood_setting*]
+[mood_setting*]  // after cave
 {
 	mood_name = eos_vega_moon_darkjunglespooky;
   f transition_time = 2.000000;
@@ -411,7 +383,7 @@
 		room_type = rt_forest;
 	}
 }
-[mood_setting*]
+[mood_setting*]  // main dark jungle
 {
 	mood_name = eos_vega_moon_darkjungle;
   f transition_time = 5.000000;
@@ -454,7 +426,7 @@
 		room_type = rt_forest;
 	}
 }
-[mood_setting*]
+[mood_setting*]  // brighter spots (cliffs, bridge)
 {
 	mood_name = eos_vega_moon_darkjungle2;
   f transition_time = 3.000000;
@@ -490,5 +462,33 @@
 	  f standard_repeat_delay = 10.000000;
 		standard_track = s_m_dark_jungle_2_theme;
 		room_type = rt_forest;
+	}
+}
+[mood_setting*]  // cave
+{
+	mood_name				= eos_vega_moon_cave;
+	transition_time			= 1.0f;
+	interior				= true;
+
+	[frustum]
+	{
+		frustum_width		= 60.0f;
+		frustum_height		= 60.0f;
+	}
+
+	[fog]
+	{
+		fog_color			= 0xFF000000;
+		fog_density			= 0.5f;
+		fog_near_dist		= 25.0f;
+		fog_far_dist		= 40.0f;
+		fog_lowdetail_near_dist		= 25.0f;
+		fog_lowdetail_far_dist		= 35.0f;
+	}
+
+	[music]
+	{
+		ambient_track		= "";
+		standard_track		= "s_m_Crypts_02"; 
 	}
 }

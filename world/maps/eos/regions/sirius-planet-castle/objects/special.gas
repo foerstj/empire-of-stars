@@ -8,7 +8,7 @@
 			{
 				action* = mood_change("eos_sirius_planet_r2_1");
 			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(3.000000,1.000000,3.000000,"on_every_enter");
+				condition* = party_member_within_bounding_box(5.000000,1.000000,1.000000,"on_every_enter");
 			  f delay = 0.000000;
 			  b flip_flop = false;
 			  b multi_player = true;
@@ -23,8 +23,8 @@
 	}
 	[placement]
 	{
-	  q orientation = 0,1,0,0;
-	  p position = 1.45098,0,0.54137,0x36e9ee35;
+	  q orientation = 0,1,0,-2.98023e-008;
+	  p position = 0.0789719,-2,-3.03347,0x86bae060;
 	}
 }
 [t:trigger_fade_nodes_box,n:0x04600285]
@@ -60,6 +60,7 @@
 {
 	[common]
 	{
+		dev_instance_text = "PWL";
 		[instance_triggers]
 		{
 			[*]
@@ -88,6 +89,7 @@
 {
 	[common]
 	{
+		dev_instance_text = "PWL";
 		[instance_triggers]
 		{
 			[*]
@@ -146,35 +148,6 @@
 	[placement]
 	{
 	  p position = 1.95278,1.36417,2.76076,0xdec908a6;
-	}
-}
-[t:trigger_generic,n:0x04600440]
-{
-	[common]
-	{
-		dev_instance_text = "QUEST";
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = change_quest_state("quest_journey_castle","completed",0);
-			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(4.000000,2.000000,4.500000,"on_first_enter"), doc("[*one-shot check (trigger is one-shot)*]");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = true;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  p position = -4.49467,2.50032,-0.0708733,0xdec908a6;
 	}
 }
 [t:trigger_generic,n:0x0460086e]
@@ -553,6 +526,7 @@
 {
 	[common]
 	{
+		dev_instance_text = "MOOD";
 		[instance_triggers]
 		{
 			[*]
@@ -721,6 +695,7 @@
 {
 	[common]
 	{
+		dev_instance_text = "FADE + MOOD";
 		[instance_triggers]
 		{
 			[*]
@@ -930,6 +905,7 @@
 {
 	[common]
 	{
+		dev_instance_text = "FADE + MOOD";
 		[instance_triggers]
 		{
 			[*]
@@ -2288,6 +2264,7 @@
 {
 	[common]
 	{
+		dev_instance_text = "FADE + MOOD";
 		[instance_triggers]
 		{
 			[*]
@@ -2323,6 +2300,7 @@
 {
 	[common]
 	{
+		dev_instance_text = "FADE + MOOD";
 		[instance_triggers]
 		{
 			[*]
