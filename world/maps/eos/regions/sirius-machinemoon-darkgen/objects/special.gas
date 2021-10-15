@@ -281,7 +281,7 @@
 		{
 			[*]
 			{
-				action* = mood_change("eos_sirius_machinemoon_r5_2");
+				action* = mood_change("eos_sirius_machinemoon_lookout");
 			  b can_self_destruct = true;
 				condition* = party_member_within_bounding_box(2.000000,1.000000,2.000000,"on_every_enter");
 			  f delay = 0.000000;
@@ -777,6 +777,35 @@
 	  p position = 0.173759,-4,1.50859,0x31fb0b5e;
 	}
 }
+[t:trigger_change_mood_box,n:0x05500345]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = mood_change("eos_sirius_machinemoon_r5_1");
+			  b can_self_destruct = true;
+				condition* = party_member_within_bounding_box(0.500000,1.000000,12.000000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,0.382684,0,0.923879;
+	  p position = 1.89553,0,-3.59935,0xf40ea64e;
+	}
+}
 [t:trigger_generic,n:0x0550020b]
 {
 	[common]
@@ -1127,7 +1156,7 @@
 	  p position = -0.207466,-5,0.00717926,0x46222af5;
 	}
 }
-[t:trigger_change_mood_box,n:0x05500345]
+[t:trigger_change_mood_box,n:0x05500346]
 {
 	[common]
 	{
@@ -1135,9 +1164,9 @@
 		{
 			[*]
 			{
-				action* = mood_change("eos_sirius_machinemoon_r5_1");
+				action* = mood_change("eos_sirius_machinemoon_r5_2");
 			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(0.500000,1.000000,12.000000,"on_every_enter");
+				condition* = party_member_within_bounding_box(6.000000,1.000000,1.000000,"on_every_enter");
 			  f delay = 0.000000;
 			  b flip_flop = false;
 			  b multi_player = true;
@@ -1152,7 +1181,36 @@
 	}
 	[placement]
 	{
-	  q orientation = 0,0.382684,0,0.923879;
-	  p position = 1.89553,0,-3.59935,0xf40ea64e;
+	  q orientation = 0,0.92388,0,0.382684;
+	  p position = 0.0175934,0,0.000686646,0x77549d18;
+	}
+}
+[t:trigger_change_mood_box,n:0x05500347]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = mood_change("eos_sirius_machinemoon_lookout");
+			  b can_self_destruct = true;
+				condition* = party_member_within_bounding_box(6.000000,1.000000,1.000000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,0.92388,0,0.382684;
+	  p position = 3.09688,0,-0.870171,0xa0b33da4;
 	}
 }

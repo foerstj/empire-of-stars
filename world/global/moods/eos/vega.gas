@@ -150,7 +150,7 @@
 		ambient_track = s_e_ambient_jungle_1;
 	  f standard_intro_delay = 0.000000;
 	  f standard_repeat_delay = 10.000000;
-		standard_track = s_m_subriver_03;
+		standard_track = s_m_farmhouse_04;
 		room_type = rt_parkinglot;
 	}
 }
@@ -192,7 +192,7 @@
 		room_type = rt_parkinglot;
 	}
 }
-[mood_setting*]  // far east & far north
+[mood_setting*]  // far east
 {
 	mood_name = eos_vega_forest_5;
   f transition_time = 4.000000;
@@ -264,7 +264,45 @@
 		ambient_track = s_e_ambient_jungle_2;
 	  f standard_intro_delay = 0.000000;
 	  f standard_repeat_delay = 0.000000;
-		standard_track = s_m_zaurask_theme;
+		standard_track = s_m_tropicalbeach_01;
+		room_type = rt_parkinglot;
+	}
+}
+[mood_setting*]  // far north (braak)
+{
+	mood_name = eos_vega_forest_braak;
+  f transition_time = 4.000000;
+  b interior = true;
+
+	[frustum]
+	{
+	  f frustum_height = 60.000000;
+	  f frustum_width = 60.000000;
+	}
+
+	[fog]
+	{
+	  x fog_color = 0xFF86A496;
+	  f fog_density = 1.000000;
+	  f fog_near_dist = 30.000000;
+	  f fog_far_dist = 50.000000;
+	  f fog_lowdetail_near_dist = 30.000000;
+	  f fog_lowdetail_far_dist = 45.000000;
+	}
+	[wind]
+	{
+	  f wind_direction = 0.500000;
+	  f wind_velocity = 2.000000;
+	}
+
+	[music]
+	{
+	  f ambient_intro_delay = 0.000000;
+	  f ambient_repeat_delay = 0.000000;
+		ambient_track = s_e_ambient_jungle_1;
+	  f standard_intro_delay = 0.000000;
+	  f standard_repeat_delay = 10.000000;
+		standard_track = s_m_coastaloutpost_01;
 		room_type = rt_parkinglot;
 	}
 }
@@ -379,7 +417,7 @@
 		ambient_track = s_e_ambient_wind_01;
 	  f standard_intro_delay = 0.000000;
 	  f standard_repeat_delay = 0.000000;
-		standard_track = s_m_zaurask_theme;
+		standard_track = s_m_dark_jungle_2_theme;
 		room_type = rt_forest;
 	}
 }
@@ -460,7 +498,7 @@
 		ambient_track = s_e_ambient_jungle_2;
 	  f standard_intro_delay = 0.000000;
 	  f standard_repeat_delay = 10.000000;
-		standard_track = s_m_dark_jungle_2_theme;
+		standard_track = s_m_darkforest_01;
 		room_type = rt_forest;
 	}
 }
@@ -489,6 +527,6 @@
 	[music]
 	{
 		ambient_track		= "";
-		standard_track		= "s_m_Crypts_02"; 
+		standard_track		= "s_m_drums_01"; 
 	}
 }

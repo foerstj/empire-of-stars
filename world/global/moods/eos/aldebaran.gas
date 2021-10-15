@@ -23,7 +23,7 @@
 	[music]
 	{
 		ambient_track = "";
-		standard_track = "s_m_BesiegedTown_04";
+		standard_track = "s_m_fortkroth_02";
 		room_type = rt_generic;
 	}
 }
@@ -52,11 +52,11 @@
 	[music]
 	{
 		ambient_track = "";
-		standard_track = "s_m_BesiegedTown_04";
+		standard_track = "s_m_fortkroth_02";
 		room_type = rt_generic;
 	}
 }
-[mood_setting*]
+[mood_setting*]  // woods
 {
 	mood_name = eos_aldebaran_town_3;
 	transition_time = 4.0f;
@@ -80,7 +80,7 @@
 	[music]
 	{
 		ambient_track = "s_e_ambient_woods_01";
-		standard_track = "s_m_Path2Crypts_03";
+		standard_track = "s_m_misc_02";
 		room_type = rt_generic;
 	}
 }
@@ -109,7 +109,7 @@
 	[music]
 	{
 		ambient_track = "s_e_env_tavern";
-		standard_track = "s_m_BesiegedTown_04";
+		standard_track = "s_m_fortkroth_02";
 		room_type = rt_generic;
 	}
 }
@@ -138,7 +138,36 @@
 	{
 		ambient_track = "";
 		standard_intro_delay = 0.0f;
-		standard_track = "s_m_CastleEhb_02";
+		standard_track = "s_m_misc_01";
+		room_type = rt_generic;
+	}
+}
+[mood_setting*]
+{
+	mood_name = eos_aldebaran_palace_house;
+	transition_time = 6.0f;
+	interior = true;
+
+	[frustum]
+	{
+		frustum_height = 60.0f;
+		frustum_width = 60.0f;
+	}
+
+	[fog]
+	{
+		fog_color = 0xFFD8C898;
+		fog_density = 0.5f;
+		fog_near_dist = 40.0f;
+		fog_far_dist = 50.0f;
+		fog_lowdetail_near_dist = 30.0f;
+		fog_lowdetail_far_dist = 45.0f;
+	}
+	[music]
+	{
+		ambient_track = "";
+		standard_intro_delay = 0.0f;
+		standard_track = "s_m_misc_01";
 		room_type = rt_generic;
 	}
 }
@@ -172,7 +201,7 @@
 	[music]
 	{
 		ambient_track = "";
-		standard_track = "s_m_CastleEhb_03";
+		standard_track = "s_m_fortkroth_01";
 		room_type = rt_generic;
 	}
 }
@@ -201,7 +230,36 @@
 	{
 		ambient_track = "";
 		standard_repeat_delay = 10.0f;
-		standard_track = "s_m_CastleEhb_04";
+		standard_track = "s_m_chamber_02";
+		room_type = rt_generic;
+	}
+}
+[mood_setting*]
+{
+	mood_name = eos_aldebaran_palace_roof;
+	transition_time = 1.0f;
+	interior = true;
+
+	[frustum]
+	{
+		frustum_height = 60.0f;
+		frustum_width = 60.0f;
+	}
+
+	[fog]
+	{
+		fog_color = 0xFFD8C898;
+		fog_density = 0.5f;
+		fog_near_dist = 40.0f;
+		fog_far_dist = 50.0f;
+		fog_lowdetail_near_dist = 20.0f;
+		fog_lowdetail_far_dist = 25.0f;
+	}
+	[music]
+	{
+		ambient_track = "";
+		standard_repeat_delay = 10.0f;
+		standard_track = "s_m_chamber_03";
 		room_type = rt_generic;
 	}
 }

@@ -367,7 +367,7 @@
 	{
 		ambient_track		= "s_e_ambient_wind_02";
 		standard_repeat_delay	= 10.0f;
-		standard_track		= "s_m_GoblinInventor_02";
+		standard_track		= "s_m_GoblinInventor_08";
 		room_type			= rt_generic;
 	}
 }
@@ -402,7 +402,7 @@
 	{
 		ambient_track		= "s_e_ambient_wind_02";
 		standard_repeat_delay	= 10.0f;
-		standard_track		= "s_m_GoblinInventor_02";
+		standard_track		= "s_m_GoblinInventor_08";
 		room_type			= rt_generic;
 	}
 }
@@ -482,6 +482,41 @@
 		room_type			= rt_generic;
 	}
 }
+[mood_setting*]  // lookout
+{
+	mood_name				= eos_sirius_machinemoon_lookout;
+	transition_time			= 5.0f;
+	interior				= false;
+
+	[frustum]
+	{
+		frustum_width		= 60.0f;
+		frustum_height		= 60.0f;
+	}
+
+	[fog]
+	{
+		fog_color			= 0xFF90C9FF;
+		fog_density			= 0.4f;
+		fog_near_dist		= 40.0f;
+		fog_far_dist		= 50.0f;
+		fog_lowdetail_near_dist		= 35.0f;
+		fog_lowdetail_far_dist		= 40.0f;
+	}
+	[wind]
+	{
+		wind_velocity		= 0.5f;
+		wind_direction		= 4.7f;
+	}
+
+	[music]
+	{
+		ambient_track		= "s_e_ambient_wind_02";
+		standard_repeat_delay	= 10.0f;
+		standard_track		= "s_m_GoblinInventor_07";
+		room_type			= rt_generic;
+	}
+}
 
 
 // DEATH MOON
@@ -523,7 +558,7 @@
 	{
 		ambient_track		= "";
 		standard_repeat_delay = 10.0f;
-		standard_track		= "s_m_DwarvenMines_01";
+		standard_track		= "s_m_the_mountain_theme";
 		room_type			= rt_generic;
 	}
 }
@@ -559,7 +594,7 @@
 	[music]
 	{
 		ambient_track		= "";
-		standard_track		= "s_m_maintheme";
+		standard_track		= "s_m_the_skull_theme_cicatrix_theme";
 		room_type			= rt_generic;
 	}
 }
@@ -601,7 +636,7 @@
 	{
 		ambient_track		= "";
 		standard_repeat_delay = 10.0f;
-		standard_track		= "s_m_DwarvenMines_01";
+		standard_track		= "s_m_the_mountain_theme";
 		room_type			= rt_generic;
 	}
 }
@@ -643,7 +678,7 @@
 	{
 		ambient_track		= "";
 		standard_repeat_delay = 10.0f;
-		standard_track		= "s_m_Path2Crypts_01";
+		standard_track		= "s_m_the_dead_theme";
 		room_type			= rt_generic;
 	}
 }
@@ -673,7 +708,7 @@
 	{
 		ambient_track		= "";
 		standard_repeat_delay = 10.0f;
-		standard_track		= "s_m_DwarvenMines_01";
+		standard_track		= "s_m_the_mountain_theme";
 		room_type			= rt_generic;
 	}
 }
@@ -707,7 +742,7 @@
 	{
 		ambient_track		= "";
 		standard_repeat_delay	= 10.0f;
-		standard_track		= "s_m_CastleEhb_01";
+		standard_track		= "s_m_haunted_ruins_accents_2";
 		room_type			= rt_generic;
 	}
 }
@@ -737,7 +772,7 @@
 	{
 		ambient_track		= "";
 		standard_repeat_delay	= 10.0f;
-		standard_track		= "s_m_CastleEhb_01";
+		standard_track		= "s_m_haunted_ruins_accents_2";
 		room_type			= rt_generic;
 	}
 }
@@ -767,7 +802,7 @@
 	{
 		ambient_track		= "";
 		standard_repeat_delay	= 10.0f;
-		standard_track		= "s_m_CastleEhb_01";
+		standard_track		= "s_m_furyden_02";
 		room_type			= rt_cave;
 	}
 }
@@ -797,7 +832,7 @@
 	{
 		ambient_track		= "";
 		standard_repeat_delay	= 10.0f;
-		standard_track		= "s_m_CastleEhb_02";
+		standard_track		= "s_m_haunted_ruins_battle";
 		room_type			= rt_generic;
 	}
 }
@@ -827,7 +862,37 @@
 	{
 		ambient_track		= "";
 		standard_repeat_delay	= 10.0f;
-		standard_track		= "s_m_CastleEhb_06";
+		standard_track		= "s_m_misc_03";
+		room_type			= rt_generic;
+	}
+}
+[mood_setting*]  // castle interior, lower level
+{
+	mood_name				= eos_sirius_planet_r2_1_2;
+	transition_time			= 2.0f;
+	interior				= false;
+
+	[frustum]
+	{
+		frustum_width		= 60.0f;
+		frustum_height		= 60.0f;
+	}
+
+	[fog]
+	{
+		fog_color			= 0xFF602020;
+		fog_density			= 0.5f;
+		fog_near_dist		= 30.0f;
+		fog_far_dist		= 50.0f;
+		fog_lowdetail_near_dist		= 30.0f;
+		fog_lowdetail_far_dist		= 45.0f;
+	}
+
+	[music]
+	{
+		ambient_track		= "";
+		standard_repeat_delay	= 10.0f;
+		standard_track		= "s_m_CastleEhb_02";
 		room_type			= rt_generic;
 	}
 }
@@ -947,7 +1012,7 @@
 	{
 		ambient_track		= "";
 		standard_repeat_delay	= 10.0f;
-		standard_track		= "s_m_CastleEhb_02";
+		standard_track		= "s_m_haunted_ruins_accents_2";
 		room_type			= rt_generic;
 	}
 }
@@ -977,7 +1042,7 @@
 	{
 		ambient_track		= "";
 		standard_repeat_delay	= 10.0f;
-		standard_track		= "s_m_CastleEhb_02";
+		standard_track		= "s_m_haunted_ruins_accents_2";
 		room_type			= rt_generic;
 	}
 }
@@ -1007,7 +1072,7 @@
 	{
 		ambient_track		= "";
 		standard_repeat_delay = 10.0f;
-		standard_track		= "s_m_CastleDungeon_01";
+		standard_track		= "s_m_dragonlair_01";
 		room_type			= rt_stonecorridor;
 	}
 }
@@ -1037,7 +1102,7 @@
 	{
 		ambient_track		= "s_e_ambient_crypt";
 		standard_repeat_delay = 0.0f;
-		standard_track		= "s_m_Drums_03";
+		standard_track		= "s_m_the_shadowjumper_theme";
 		room_type			= rt_concerthall;
 	}
 }
@@ -1068,7 +1133,7 @@
 	{
 		ambient_track		= "s_e_ambient_crypt";
 		standard_repeat_delay = 0.0f;
-		standard_track		= "s_m_Drums_03";
+		standard_track		= "s_m_the_shadowjumper_theme";
 		room_type			= rt_arena;
 	}
 }
@@ -1157,7 +1222,7 @@
 	{
 		ambient_track		= "";
 		standard_repeat_delay = 0.0f;
-		standard_track		= "s_m_gom_battle";
+		standard_track		= "s_m_dragonlair_02";
 		room_type			= rt_arena;
 	}
 }
@@ -1187,7 +1252,37 @@
 	{
 		ambient_track		= "";
 		standard_repeat_delay = 10.0f;
-		standard_track		= "s_m_gom_victory";
+		standard_track		= "s_m_dragonlair_03";
+		room_type			= rt_arena;
+	}
+}
+[mood_setting*]  // behind dragon, path to labyrinth exit
+{
+	mood_name				= eos_sirius_planet_dragon_exit;
+	transition_time			= 2.0f;
+	interior				= true;
+
+	[frustum]
+	{
+		frustum_width		= 60.0f;
+		frustum_height		= 60.0f;
+	}
+
+	[fog]
+	{
+		fog_color			= 0xFF000000;
+		fog_density			= 0.2f;
+		fog_near_dist		= 35.0f;
+		fog_far_dist		= 45.0f;
+		fog_lowdetail_near_dist		= 35.0f;
+		fog_lowdetail_far_dist		= 40.0f;
+	}
+
+	[music]
+	{
+		ambient_track		= "s_e_ambient_crypt";
+		standard_repeat_delay = 0.0f;
+		standard_track		= "s_m_drums_02";
 		room_type			= rt_arena;
 	}
 }

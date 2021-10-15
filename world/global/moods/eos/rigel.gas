@@ -286,9 +286,8 @@
 		room_type = rt_stonecorridor;
 	}
 }
-[mood_setting*]
+[mood_setting*]  // pyramid dungeon
 {
-	// music change from oasis_cave
 	mood_name				= eos_rigel_dry_pyramid_dungeon_1;
 	transition_time			= 4.0f;
 	interior				= true;
@@ -313,13 +312,12 @@
 	{
 		ambient_track		= "";
 		standard_repeat_delay	= 5.0f;
-		standard_track		= "s_m_WaterDungeon_02";
+		standard_track		= "s_m_drums_03";
 		room_type			= rt_stonecorridor;
 	}
 }
-[mood_setting*]
+[mood_setting*]  // pyramid dungeon
 {
-	// music change again -- main theme loop
 	mood_name				= eos_rigel_dry_pyramid_dungeon_2;
 	transition_time			= 4.0f;
 	interior				= true;
@@ -344,7 +342,7 @@
 	{
 		ambient_track		= "";
 		standard_repeat_delay	= 0.0f;
-		standard_track		= "s_m_MainTheme_03";
+		standard_track		= "s_m_drums_03";
 		room_type			= rt_stonecorridor;
 	}
 }
@@ -751,7 +749,7 @@
 		ambient_track = s_e_ambient_swamp;
 	  f standard_intro_delay = 0.000000;
 	  f standard_repeat_delay = 10.000000;
-		standard_track = s_m_DarkForest_02;
+		standard_track = s_m_darkswamp_03;
 		room_type = rt_generic;
 	}
 }
@@ -992,7 +990,7 @@
 	{
 		ambient_track		= "";
 		standard_repeat_delay	= 10.0f;
-		standard_track		= "s_m_Crypts_02";
+		standard_track		= "s_m_swanny";
 		room_type			= rt_stonecorridor;
 	}
 }
@@ -1023,7 +1021,7 @@
 	{
 		ambient_track		= "";
 		standard_repeat_delay	= 10.0f;
-		standard_track		= "s_m_Crypts_02";
+		standard_track		= "s_m_swanny";
 		room_type			= rt_stonecorridor;
 	}
 }
