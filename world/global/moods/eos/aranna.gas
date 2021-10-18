@@ -42,12 +42,22 @@
 
 	[fog]
 	{
-		fog_color			= 0xFF757585;
+		fog_color			= 0xFF606063;
 		fog_density			= 0.5f;
-		fog_near_dist		= 35.0f;
-		fog_far_dist		= 50.0f;
-		fog_lowdetail_near_dist		= 35.0f;
-		fog_lowdetail_far_dist		= 45.0f;
+		fog_near_dist		= 2.0f;
+		fog_far_dist		= 45.0f;
+		fog_lowdetail_near_dist		= 2.0f;
+		fog_lowdetail_far_dist		= 40.0f;
+	}
+	[rain]
+	{
+		rain_density		= 400.0f;
+		lightning			= true;
+	}
+	[wind]
+	{
+		wind_velocity		= 3.0f;
+		wind_direction		= 2.0f;
 	}
 
 	[music]
