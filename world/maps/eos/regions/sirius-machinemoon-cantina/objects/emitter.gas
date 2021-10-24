@@ -48,6 +48,18 @@
 		event_sound = "env_pipe_steam_constant";
 	}
 }
+[t:emt_sound,n:0x052001cf]
+{
+	[placement]
+	{
+	  p position = 0.0974502,0.1,-0.0571573,0xab70ffb5;
+	}
+	[sound_emitter]
+	{
+	  b continual_loop = true;
+		event_sound = "env_pipe_liquid";
+	}
+}
 [t:emitter_glb_smoke_01,n:0x05200077]
 {
 	[placement]
@@ -65,17 +77,5 @@
 	{
 	  b continual_loop = true;
 		event_sound = "env_pipe_steam_constant";
-	}
-}
-[t:emt_sound,n:0x052001cf]
-{
-	[placement]
-	{
-	  p position = 0.0974502,0.1,-0.0571573,0xab70ffb5;
-	}
-	[sound_emitter]
-	{
-	  b continual_loop = true;
-		event_sound = "env_pipe_liquid";
 	}
 }

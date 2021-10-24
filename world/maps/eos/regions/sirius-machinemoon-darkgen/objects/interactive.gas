@@ -39,46 +39,6 @@
 	  p position = -2.78333,3.8147e-006,0.572424,0x5fc33a01;
 	}
 }
-[t:door_gob_metal_01,n:0x05500060]
-{
-	[aspect]
-	{
-	  f scale_multiplier = 1.05;
-	}
-	[door_basic]
-	{
-	  x second_door = 0x05500282;
-	}
-	[placement]
-	{
-	  p position = -0.0379334,-4,0.199348,0x23566d28;
-		use_point_scids = 0x0550023f , 0x0550023e;
-	}
-}
-[t:door_gob_metal_01_right,n:0x05500282]
-{
-	[aspect]
-	{
-	  f scale_multiplier = 1.05;
-	}
-	[door_basic]
-	{
-	  x second_door = 0x05500060;
-	}
-	[placement]
-	{
-	  q orientation = 0,5.96046e-008,0,1;
-	  p position = -0.0617886,-4,0.229851,0x23566d28;
-		use_point_scids = 0x0550023f , 0x0550023e;
-	}
-}
-[t:coil_gob_02,n:0x055002f7]
-{
-	[placement]
-	{
-	  p position = -2.42023,2,1.42818,0x2ec9c80b;
-	}
-}
 [t:coil_gob_02,n:0x055002fd]
 {
 	[placement]
@@ -158,6 +118,55 @@
 		use_point_scids = 0x05500238 , 0x0550023d;
 	}
 }
+[t:coil_gob_02,n:0x055002f7]
+{
+	[placement]
+	{
+	  p position = -2.42023,2,1.42818,0x2ec9c80b;
+	}
+}
+[t:respawn_statue,n:0x05500263]
+{
+	[placement]
+	{
+	  q orientation = 0,0.382683,0,0.923879;
+	  p position = -0.955063,2,0.195267,0xedde86a1;
+		use_point_scids = 0x0550027c;
+	}
+}
+[t:door_gob_metal_01,n:0x05500060]
+{
+	[aspect]
+	{
+	  f scale_multiplier = 1.05;
+	}
+	[door_basic]
+	{
+	  x second_door = 0x05500282;
+	}
+	[placement]
+	{
+	  p position = -0.0379334,-4,0.199348,0x23566d28;
+		use_point_scids = 0x0550023f , 0x0550023e;
+	}
+}
+[t:door_gob_metal_01_right,n:0x05500282]
+{
+	[aspect]
+	{
+	  f scale_multiplier = 1.05;
+	}
+	[door_basic]
+	{
+	  x second_door = 0x05500060;
+	}
+	[placement]
+	{
+	  q orientation = 0,5.96046e-008,0,1;
+	  p position = -0.0617886,-4,0.229851,0x23566d28;
+		use_point_scids = 0x0550023f , 0x0550023e;
+	}
+}
 [t:coil_gob_02,n:0x0550026a]
 {
 	[placement]
@@ -165,42 +174,53 @@
 	  p position = 0.281353,0,0.553569,0x52ddbccb;
 	}
 }
-[t:lever_gob_01,n:0x0550001c]
+[t:door_gob_metal_01,n:0x0550006f]
 {
-	[body]
+	[aspect]
 	{
-		terrain_movement_permissions = lf_none;
+	  f scale_multiplier = 1.05;
 	}
-	[on_off_lever]
+	[door_basic]
 	{
-		off_message = we_req_activate;
-	  x off_scid = 0x0550001B;
-	  x on_scid = 0x0550001B;
+	  x msg_scid_opening = 0x055000F5;
+	  x second_door = 0x05500284;
 	}
 	[placement]
 	{
-	  p position = -0.471717,6.00901,-0.38499,0xdaf68934;
+	  p position = -0.062508,-4,0.197884,0x31fb0b5e;
+		use_point_scids = 0x0550023b , 0x0550023c;
 	}
 }
-[t:lever_gob_01,n:0x055002f5]
+[t:door_gob_metal_01_right,n:0x05500284]
 {
-	[body]
+	[aspect]
 	{
-		terrain_movement_permissions = lf_none;
+	  f scale_multiplier = 1.05;
 	}
-	[common]
+	[door_basic]
 	{
-		dev_instance_text = "ELEVATOR";
-	}
-	[on_off_lever]
-	{
-		off_message = we_req_activate;
-	  x off_scid = 0x0550001B;
-	  x on_scid = 0x0550001B;
+	  x msg_scid_opening = 0x055000F5;
+	  x second_door = 0x0550006F;
 	}
 	[placement]
 	{
-	  p position = -0.626759,6,0.59449,0x7715a0d2;
+	  q orientation = 0,-5.96046e-008,0,1;
+	  p position = -0.0554886,-4,0.200264,0x31fb0b5e;
+		use_point_scids = 0x0550023b , 0x0550023c;
+	}
+}
+[t:coil_gob_02,n:0x055002f8]
+{
+	[placement]
+	{
+	  p position = 14.3029,5.89281,-40.8936,0xca35a699;
+	}
+}
+[t:coil_gob_02,n:0x055002f9]
+{
+	[placement]
+	{
+	  p position = 11.4244,5.89175,-50.6133,0xca35a699;
 	}
 }
 [t:door_gob_metal_01,n:0x0550002e]
@@ -332,55 +352,6 @@
 	  p position = 3.84248,0,-1.59872,0x237240bc;
 	}
 }
-[t:coil_gob_02,n:0x055002f8]
-{
-	[placement]
-	{
-	  p position = 14.3029,5.89281,-40.8936,0xca35a699;
-	}
-}
-[t:coil_gob_02,n:0x055002f9]
-{
-	[placement]
-	{
-	  p position = 11.4244,5.89175,-50.6133,0xca35a699;
-	}
-}
-[t:door_gob_metal_01,n:0x0550006f]
-{
-	[aspect]
-	{
-	  f scale_multiplier = 1.05;
-	}
-	[door_basic]
-	{
-	  x msg_scid_opening = 0x055000F5;
-	  x second_door = 0x05500284;
-	}
-	[placement]
-	{
-	  p position = -0.062508,-4,0.197884,0x31fb0b5e;
-		use_point_scids = 0x0550023b , 0x0550023c;
-	}
-}
-[t:door_gob_metal_01_right,n:0x05500284]
-{
-	[aspect]
-	{
-	  f scale_multiplier = 1.05;
-	}
-	[door_basic]
-	{
-	  x msg_scid_opening = 0x055000F5;
-	  x second_door = 0x0550006F;
-	}
-	[placement]
-	{
-	  q orientation = 0,-5.96046e-008,0,1;
-	  p position = -0.0554886,-4,0.200264,0x31fb0b5e;
-		use_point_scids = 0x0550023b , 0x0550023c;
-	}
-}
 [t:coil_gob_02,n:0x05500162]
 {
 	[placement]
@@ -426,12 +397,41 @@
 	  p position = -0.23784,6,-0.250578,0xc744e4eb;
 	}
 }
-[t:respawn_statue,n:0x05500263]
+[t:lever_gob_01,n:0x055002f5]
 {
+	[body]
+	{
+		terrain_movement_permissions = lf_none;
+	}
+	[common]
+	{
+		dev_instance_text = "ELEVATOR";
+	}
+	[on_off_lever]
+	{
+		off_message = we_req_activate;
+	  x off_scid = 0x0550001B;
+	  x on_scid = 0x0550001B;
+	}
 	[placement]
 	{
-	  q orientation = 0,0.382683,0,0.923879;
-	  p position = -0.955063,2,0.195267,0xedde86a1;
-		use_point_scids = 0x0550027c;
+	  p position = -0.626759,6,0.59449,0x7715a0d2;
+	}
+}
+[t:lever_gob_01,n:0x0550001c]
+{
+	[body]
+	{
+		terrain_movement_permissions = lf_none;
+	}
+	[on_off_lever]
+	{
+		off_message = we_req_activate;
+	  x off_scid = 0x0550001B;
+	  x on_scid = 0x0550001B;
+	}
+	[placement]
+	{
+	  p position = -0.471717,6.00901,-0.38499,0xdaf68934;
 	}
 }
