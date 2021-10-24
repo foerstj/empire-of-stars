@@ -27,6 +27,36 @@
 	  p position = -14.3214,6.52533,-21.8201,0x5a3615de;
 	}
 }
+[t:trigger_generic,n:0x0d202784]
+{
+	[common]
+	{
+		dev_instance_text = "TIP";
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_activate",0x0D202782,0f,"0x4002","party_member_within_sphere",0);
+			  b can_self_destruct = true;
+				condition* = party_member_within_sphere(34.000000,"on_first_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = true;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,-0.707107,0,0.707107;
+	  p position = -35.3528,5.41766,-15.625,0x5a3615de;
+	}
+}
 [t:trigger_generic,n:0x0d206843]
 {
 	[common]
@@ -116,6 +146,17 @@
 	{
 	  q orientation = 0,0.707107,0,0.707107;
 	  p position = 1.18908,6.69049,-53.6492,0xc1edce4e;
+	}
+}
+[t:tutorial_tip,n:0x0d202782]
+{
+	[placement]
+	{
+	  p position = 0.971605,-0.70064,22.5038,0x2857115c;
+	}
+	[tip]
+	{
+		tip = "endless_shrubs";
 	}
 }
 [t:trigger_generic,n:0x0d20227a]
