@@ -15,6 +15,20 @@ With help & content from:
 - Antonio R. (Hi-Res mod),
 - Maps & resources from the original game and Project Britannia.
 
-Welcome to the repo. For editing, the repo checkout is supposed to be your "%USERPROFILE%\Documents\Dungeon Siege LoA\Bits" folder.
+## Attribution
 
-For building & running the map, you can use the /run.bat. It's supposed to be called from your DS installation folder, and TankCreator is supposed to be next to it. I hope it works for you; if not, regard it as "documentation as code".
+- Cats & sheep: Project Britannia
+- Dress of the seeress: Kathy CF
+- Utraeans in white dresses/nude: based on GirlArmor textures
+- Legionnaire robes: Tristanzz
+- Little white spiders: Eksevis
+- Vega jungle phraks: Eksevis
+- Black manglers & crabs of Lake Chalice: Eksevis
+- Brown ursae & gray zombie wolf: Eksevis
+- Improved texture of giant skrubb: Antonio R
+- Upscaled textures of flowers: Antonio R
+- Dark Fae & Sprite: Kathy CF
+- Decal for blank hub: Eksevis
+- Ivy-brick keep terrain carpet fixes: Eksevis
+- Black seashore terrain: Eksevis
+- Bookcases in lore library: Sadowson (Eden's End)
