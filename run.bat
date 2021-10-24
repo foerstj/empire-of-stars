@@ -23,7 +23,7 @@ if %errorlevel% neq 0 pause
 :: Compile main resource file
 rmdir /S /Q "%tmp%\Bits"
 :: exclude .psd that might be present locally; exclude nn files
-robocopy "%doc_dsloa%\Bits\art" "%tmp%\Bits\art" /E /xf *.psd /xf *-nn.raw
+robocopy "%doc_dsloa%\Bits\art" "%tmp%\Bits\art" /E /xf .gitignore /xf *.psd /xf *-nn.raw
 robocopy "%doc_dsloa%\Bits\sound" "%tmp%\Bits\sound" /E
 :: in case where I have other resources in Bits as well, I made a subfolder
 robocopy "%doc_dsloa%\Bits\world\ai\jobs\%map%" "%tmp%\Bits\world\ai\jobs\%map%" /E
