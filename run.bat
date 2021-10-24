@@ -5,8 +5,6 @@
 set map_cs=EoS
 :: map name, lowercase
 set map=eos
-:: path of vanilla DS1 documents dir (where map gets saved into)
-set doc_ds=%USERPROFILE%\Documents\Dungeon Siege
 :: path of DSLOA documents dir (where Bits are)
 set doc_dsloa=%USERPROFILE%\Documents\Dungeon Siege LoA
 :: path of DS installation
