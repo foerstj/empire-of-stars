@@ -6,31 +6,30 @@
 
 	[frustum]
 	{
-		frustum_width		= 45.0f;
+		frustum_width		= 60.0f;
 		frustum_height		= 60.0f;
 	}
 	
 	[fog]
 	{
+		fog_color			= 0xFF000000;
+		fog_density			= 0.5f;
 		fog_near_dist		= 50.0f;
 		fog_far_dist		= 60.0f;
 		fog_lowdetail_near_dist		= 50.0f;
 		fog_lowdetail_far_dist		= 55.0f;
-		fog_color			= 0xFF000000;
-		fog_density			= 0.5f;
 	}
-
-	[rain] {} // empty [rain] block for lightning manipulation
+	[rain] {}
 
 	[music]
 	{
 		ambient_track		= "";
-		standard_track		= "s_m_Farmhouse_04";
+		standard_track		= "s_m_chamber_01";
 		room_type			= rt_parkinglot;
 	}
 }
 
-[mood_setting*]
+[mood_setting*]  // all going dark while flying up. re-defining multiplayer_world_teleport here for me because I don't like what SeeFar does with it
 {
 	mood_name				= eos_teleport;
 	transition_time			= 2.0f;
@@ -44,14 +43,13 @@
 
 	[fog]
 	{
+		fog_color			= 0xFF000000;
+		fog_density			= 0.5f;
 		fog_near_dist		= 20.0f;
 		fog_far_dist		= 25.0f;
 		fog_lowdetail_near_dist		= 15.0f;
 		fog_lowdetail_far_dist		= 20.0f;
-		fog_color			= 0xFF000000;
-		fog_density			= 0.5f;
 	}
-
 	[rain] {}
 
 	[music]

@@ -1,34 +1,34 @@
 [mood_setting*]
 {
-	interior = false;
 	mood_name = eos_sirius_teleport;
-	transition_time = 22.0f;
+	transition_time = 20.0f;
+	interior = false;
+
+	[frustum]
+	{
+		frustum_height = 60.0f;
+		frustum_width = 60.0f;
+	}
+
 	[fog]
 	{
 	  x fog_color = 0xFF000000;
 		fog_density = 0.5f;
-	  f fog_far_dist = 50.0f;
-		fog_lowdetail_far_dist = 45.0f;
-		fog_lowdetail_near_dist = 30.0f;
 	  f fog_near_dist = 40.0f;
+	  f fog_far_dist = 50.0f;
+		fog_lowdetail_near_dist = 30.0f;
+		fog_lowdetail_far_dist = 45.0f;
 	}
-	[frustum]
-	{
-		frustum_height = 60.0f;
-		frustum_width = 45.0f;
-	}
+
 	[music]
 	{
 	  f ambient_intro_delay = 0.000000;
 	  f ambient_repeat_delay = 0.000000;
 		ambient_track = "";
-	  f battle_intro_delay = 0.000000;
-	  f battle_repeat_delay = 0.000000;
-		battle_track = 0.000000;
-		room_type = rt_dizzy;
-	  f standard_intro_delay = 0.000000;
+	  f standard_intro_delay = 2.000000;
 	  f standard_repeat_delay = 0.000000;
 		standard_track = s_m_furyden_01;
+		room_type = rt_dizzy;
 	}
 }
 
@@ -44,25 +44,23 @@
 	[frustum]
 	{
 		frustum_height = 60.0f;
-		frustum_width = 45.0f;
+		frustum_width = 60.0f;
 	}
 
 	[fog]
 	{
+		fog_color			= 0xFF80B0E0;
+		fog_density			= 0.5f;
 		fog_near_dist		= 30.0f;
 		fog_far_dist		= 50.0f;
 		fog_lowdetail_near_dist		= 30.0f;
 		fog_lowdetail_far_dist		= 45.0f;
-		fog_color			= 0xFF80B0E0;
-		fog_density			= 0.5f;
 	}
-
 	[rain]
 	{
 		rain_density		= 150.0f;
 		lightning			= false;
 	}
-
 	[wind]
 	{
 		wind_velocity		= 0.5f;
@@ -72,6 +70,7 @@
 	[music]
 	{
 		ambient_track		= "s_e_ambient_woods_01";
+		standard_intro_delay	= 2.0f;
 		standard_repeat_delay	= 10.0f;
 		standard_track		= "s_m_DarkForest_02";
 		room_type			= rt_generic;
@@ -82,6 +81,12 @@
 	mood_name				= eos_sirius_banditmoon_1;
 	transition_time			= 6.0f;
 	interior				= false;
+
+	[frustum]
+	{
+		frustum_width		= 60.0f;
+		frustum_height		= 60.0f;
+	}
 
 	[fog]
 	{
@@ -119,16 +124,21 @@
 	transition_time			= 5.0f;
 	interior				= false;
 
+	[frustum]
+	{
+		frustum_width		= 60.0f;
+		frustum_height		= 60.0f;
+	}
+
 	[fog]
 	{
+		fog_color			= 0xFF80B0E0;
+		fog_density			= 0.5f;
 		fog_near_dist		= 30.0f;
 		fog_far_dist		= 50.0f;
 		fog_lowdetail_near_dist		= 30.0f;
 		fog_lowdetail_far_dist		= 45.0f;
-		fog_color			= 0xFF80B0E0;
-		fog_density			= 0.5f;
 	}
-	
 	[wind]
 	{
 		wind_velocity		= 1.0f;
@@ -149,14 +159,20 @@
 	transition_time			= 1.0f;
 	interior				= false;
 
+	[frustum]
+	{
+		frustum_width		= 60.0f;
+		frustum_height		= 60.0f;
+	}
+
 	[fog]
 	{
+		fog_color			= 0xFF000000;
+		fog_density			= 0.5f;
 		fog_near_dist		= 20.0f;
 		fog_far_dist		= 30.0f;
 		fog_lowdetail_near_dist		= 20.0f;
 		fog_lowdetail_far_dist		= 25.0f;
-		fog_color			= 0xFF000000;
-		fog_density			= 0.5f;
 	}
 
 	[music]
@@ -173,22 +189,26 @@
 	transition_time			= 4.0f;
 	interior				= true;
 
+	[frustum]
+	{
+		frustum_width		= 60.0f;
+		frustum_height		= 60.0f;
+	}
+
 	[fog]
 	{
+		fog_color			= 0xFF80B0E0;
+		fog_density			= 0.5f;
 		fog_near_dist		= 30.0f;
 		fog_far_dist		= 50.0f;
 		fog_lowdetail_near_dist		= 30.0f;
 		fog_lowdetail_far_dist		= 45.0f;
-		fog_color			= 0xFF80B0E0;
-		fog_density			= 0.5f;
 	}
-
 	[rain]
 	{
 		rain_density		= 30.0f;
 		lightning			= false;
 	}
-
 	[wind]
 	{
 		wind_velocity		= 0.5f;
@@ -209,22 +229,26 @@
 	transition_time			= 4.0f;
 	interior				= true;
 
+	[frustum]
+	{
+		frustum_width		= 60.0f;
+		frustum_height		= 60.0f;
+	}
+
 	[fog]
 	{
+		fog_color			= 0xFF80B0E0;
+		fog_density			= 0.5f;
 		fog_near_dist		= 10.0f;
 		fog_far_dist		= 50.0f;
 		fog_lowdetail_near_dist		= 10.0f;
 		fog_lowdetail_far_dist		= 45.0f;
-		fog_color			= 0xFF80B0E0;
-		fog_density			= 0.5f;
 	}
-
 	[rain]
 	{
 		rain_density		= 150.0f;
 		lightning			= false;
 	}
-
 	[wind]
 	{
 		wind_velocity		= 0.5f;
@@ -245,14 +269,20 @@
 	transition_time			= 0.0f;
 	interior				= true;
 
+	[frustum]
+	{
+		frustum_width		= 60.0f;
+		frustum_height		= 60.0f;
+	}
+
 	[fog]
 	{
+		fog_color			= 0xFF80B0E0;
+		fog_density			= 0.5f;
 		fog_near_dist		= 20.0f;
 		fog_far_dist		= 50.0f;
 		fog_lowdetail_near_dist		= 20.0f;
 		fog_lowdetail_far_dist		= 45.0f;
-		fog_color			= 0xFF80B0E0;
-		fog_density			= 0.5f;
 	}
 
 	[music]
@@ -269,22 +299,26 @@
 	transition_time			= 0.0f;
 	interior				= true;
 
+	[frustum]
+	{
+		frustum_width		= 60.0f;
+		frustum_height		= 60.0f;
+	}
+
 	[fog]
 	{
+		fog_color			= 0xFF80B0E0;
+		fog_density			= 0.5f;
 		fog_near_dist		= 30.0f;
 		fog_far_dist		= 50.0f;
 		fog_lowdetail_near_dist		= 30.0f;
 		fog_lowdetail_far_dist		= 45.0f;
-		fog_color			= 0xFF80B0E0;
-		fog_density			= 0.5f;
 	}
-
 	[rain]
 	{
 		rain_density		= 30.0f;
 		lightning			= false;
 	}
-
 	[wind]
 	{
 		wind_velocity		= 0.5f;
@@ -312,19 +346,18 @@
 	[frustum]
 	{
 		frustum_height = 60.0f;
-		frustum_width = 45.0f;
+		frustum_width = 60.0f;
 	}
 
 	[fog]
 	{
+		fog_color			= 0xFF90C9FF;
+		fog_density			= 0.4f;
 		fog_near_dist		= 40.0f;
 		fog_far_dist		= 50.0f;
 		fog_lowdetail_near_dist		= 35.0f;
 		fog_lowdetail_far_dist		= 40.0f;
-		fog_color			= 0xFF90C9FF;
-		fog_density			= 0.4f;
 	}
-
 	[wind]
 	{
 		wind_velocity		= 0.5f;
@@ -334,8 +367,9 @@
 	[music]
 	{
 		ambient_track		= "s_e_ambient_wind_02";
+		standard_intro_delay	= 2.0f;
 		standard_repeat_delay	= 10.0f;
-		standard_track		= "s_m_GoblinInventor_02";
+		standard_track		= "s_m_GoblinInventor_08";
 		room_type			= rt_generic;
 	}
 }
@@ -345,16 +379,21 @@
 	transition_time			= 5.0f;
 	interior				= false;
 
+	[frustum]
+	{
+		frustum_width		= 60.0f;
+		frustum_height		= 60.0f;
+	}
+
 	[fog]
 	{
+		fog_color			= 0xFF90C9FF;
+		fog_density			= 0.4f;
 		fog_near_dist		= 40.0f;
 		fog_far_dist		= 50.0f;
 		fog_lowdetail_near_dist		= 35.0f;
 		fog_lowdetail_far_dist		= 40.0f;
-		fog_color			= 0xFF90C9FF;
-		fog_density			= 0.4f;
 	}
-
 	[wind]
 	{
 		wind_velocity		= 0.5f;
@@ -365,7 +404,7 @@
 	{
 		ambient_track		= "s_e_ambient_wind_02";
 		standard_repeat_delay	= 10.0f;
-		standard_track		= "s_m_GoblinInventor_02";
+		standard_track		= "s_m_GoblinInventor_08";
 		room_type			= rt_generic;
 	}
 }
@@ -375,16 +414,21 @@
 	transition_time			= 5.0f;
 	interior				= false;
 
+	[frustum]
+	{
+		frustum_width		= 60.0f;
+		frustum_height		= 60.0f;
+	}
+
 	[fog]
 	{
+		fog_color			= 0xFF90C9FF;
+		fog_density			= 0.4f;
 		fog_near_dist		= 40.0f;
 		fog_far_dist		= 50.0f;
 		fog_lowdetail_near_dist		= 35.0f;
 		fog_lowdetail_far_dist		= 40.0f;
-		fog_color			= 0xFF90C9FF;
-		fog_density			= 0.4f;
 	}
-
 	[rain]
 	{
 		rain_density		= 150.0f;
@@ -411,16 +455,21 @@
 	transition_time			= 5.0f;
 	interior				= false;
 
+	[frustum]
+	{
+		frustum_width		= 60.0f;
+		frustum_height		= 60.0f;
+	}
+
 	[fog]
 	{
+		fog_color			= 0xFF90C9FF;
+		fog_density			= 0.4f;
 		fog_near_dist		= 40.0f;
 		fog_far_dist		= 50.0f;
 		fog_lowdetail_near_dist		= 35.0f;
 		fog_lowdetail_far_dist		= 40.0f;
-		fog_color			= 0xFF90C9FF;
-		fog_density			= 0.4f;
 	}
-
 	[wind]
 	{
 		wind_velocity		= 0.5f;
@@ -432,6 +481,41 @@
 		ambient_track		= "s_e_ambient_wind_02";
 		standard_repeat_delay	= 10.0f;
 		standard_track		= "s_m_GoblinInventor_05";
+		room_type			= rt_generic;
+	}
+}
+[mood_setting*]  // lookout
+{
+	mood_name				= eos_sirius_machinemoon_lookout;
+	transition_time			= 5.0f;
+	interior				= false;
+
+	[frustum]
+	{
+		frustum_width		= 60.0f;
+		frustum_height		= 60.0f;
+	}
+
+	[fog]
+	{
+		fog_color			= 0xFF90C9FF;
+		fog_density			= 0.4f;
+		fog_near_dist		= 40.0f;
+		fog_far_dist		= 50.0f;
+		fog_lowdetail_near_dist		= 35.0f;
+		fog_lowdetail_far_dist		= 40.0f;
+	}
+	[wind]
+	{
+		wind_velocity		= 0.5f;
+		wind_direction		= 4.7f;
+	}
+
+	[music]
+	{
+		ambient_track		= "s_e_ambient_wind_02";
+		standard_repeat_delay	= 10.0f;
+		standard_track		= "s_m_GoblinInventor_07";
 		room_type			= rt_generic;
 	}
 }
@@ -447,42 +531,41 @@
 
 	[frustum]
 	{
-		frustum_width		= 45.0f;
+		frustum_width		= 60.0f;
 		frustum_height		= 60.0f;
 	}
 
 	[fog]
 	{
+		fog_color			= 0xFFC8F0FF;
+		fog_density			= 0.5f;
 		fog_near_dist		= 10.0f;
 		fog_far_dist		= 40.0f;
 		fog_lowdetail_near_dist		= 10.0f;
 		fog_lowdetail_far_dist		= 30.0f;
-		fog_color			= 0xFFC8F0FF;
-		fog_density			= 0.5f;
 	}
-
 	[rain]
 	{
 		rain_density		= 100.0f;
 		lightning			= false;
 	}
-
-	[music]
-	{
-		ambient_track		= "";
-		standard_repeat_delay = 10.0f;
-		standard_track		= "s_m_DwarvenMines_01";
-		room_type			= rt_generic;
-	}
-
 	// 5 MPH wind blowing south
 	[wind]
 	{
 		wind_velocity		= 2.0f;
 		wind_direction		= 3.14f;
 	}
+
+	[music]
+	{
+		ambient_track		= "";
+		standard_intro_delay	= 2.0f;
+		standard_repeat_delay = 10.0f;
+		standard_track		= "s_m_the_mountain_theme";
+		room_type			= rt_generic;
+	}
 }
-[mood_setting*]
+[mood_setting*]  // towers area
 {
     // generic mood
 	mood_name				= eos_sirius_deathmoon_1;
@@ -491,34 +574,31 @@
 
 	[frustum]
 	{
-		frustum_width		= 45.0f;
+		frustum_width		= 60.0f;
 		frustum_height		= 60.0f;
 	}
 
 	[fog]
 	{
+		fog_color			= 0xFFC8F0FF;
+		fog_density			= 0.6f;
 		fog_near_dist		= 10.0f;
 		fog_far_dist		= 40.0f;
 		fog_lowdetail_near_dist		= 10.0f;
 		fog_lowdetail_far_dist		= 30.0f;
-		fog_color			= 0xFFC8F0FF;
-		fog_density			= 0.6f;
 	}
-
-	[rain] {} // empty [rain] block for lightning manipulation
-
-	[music]
-	{
-		ambient_track		= "";
-		standard_track		= "s_m_maintheme";
-		room_type			= rt_generic;
-	}
-    
     // 1 MPH wind blowing south
 	[wind]
 	{
 		wind_velocity		= 0.5f;
 		wind_direction		= 3.14f;
+	}
+
+	[music]
+	{
+		ambient_track		= "";
+		standard_track		= "s_m_the_skull_theme_cicatrix_theme";
+		room_type			= rt_generic;
 	}
 }
 [mood_setting*]
@@ -530,86 +610,82 @@
 
 	[frustum]
 	{
-		frustum_width		= 45.0f;
+		frustum_width		= 60.0f;
 		frustum_height		= 60.0f;
 	}
 
 	[fog]
 	{
+		fog_color			= 0xFFC8F0FF;
+		fog_density			= 0.5f;
 		fog_near_dist		= 10.0f;
 		fog_far_dist		= 40.0f;
 		fog_lowdetail_near_dist		= 10.0f;
 		fog_lowdetail_far_dist		= 30.0f;
-		fog_color			= 0xFFC8F0FF;
-		fog_density			= 0.5f;
 	}
-
 	[rain]
 	{
 		rain_density		= 100.0f;
 		lightning			= false;
 	}
-
-	[music]
-	{
-		ambient_track		= "";
-		standard_repeat_delay = 10.0f;
-		standard_track		= "s_m_DwarvenMines_01";
-		room_type			= rt_generic;
-	}
-
 	// 5 MPH wind blowing south
 	[wind]
 	{
 		wind_velocity		= 2.0f;
 		wind_direction		= 3.14f;
 	}
+
+	[music]
+	{
+		ambient_track		= "";
+		standard_repeat_delay = 10.0f;
+		standard_track		= "s_m_the_mountain_theme";
+		room_type			= rt_generic;
+	}
 }
-[mood_setting*]
+[mood_setting*]  // cemetery & lower/swamp
 {
-    //heavy rain/lightning
+    // heavy rain/lightning
 	mood_name				= eos_sirius_deathmoon_3;
 	transition_time			= 4.0f;
 	interior				= true;
 
 	[frustum]
 	{
-		frustum_width		= 45.0f;
+		frustum_width		= 60.0f;
 		frustum_height		= 60.0f;
 	}
 
 	[fog]
 	{
+		fog_color			= 0xFFC8F0FF;
+		fog_density			= 0.5f;
 		fog_near_dist		= 10.0f;
 		fog_far_dist		= 40.0f;
 		fog_lowdetail_near_dist		= 10.0f;
 		fog_lowdetail_far_dist		= 30.0f;
-		fog_color			= 0xFFC8F0FF;
-		fog_density			= 0.5f;
 	}
-
 	[rain]
 	{
 		rain_density		= 400.0f;
 		lightning			= true;
 	}
-
-	[music]
-	{
-		ambient_track		= "";
-		standard_repeat_delay = 10.0f;
-		standard_track		= "s_m_Path2Crypts_01";
-		room_type			= rt_generic;
-	}
-
 	// 10 MPH wind blowing south
 	[wind]
 	{
 		wind_velocity		= 4.0f;
 		wind_direction		= 3.14f;
 	}
+
+	[music]
+	{
+		ambient_track		= "";
+		standard_repeat_delay = 10.0f;
+		standard_track		= "s_m_the_dead_theme";
+		room_type			= rt_generic;
+	}
 }
-[mood_setting*]
+[mood_setting*]  // north
 {
 	mood_name				= eos_sirius_deathmoon_4;
 	transition_time			= 4.0f;
@@ -617,27 +693,25 @@
 
 	[frustum]
 	{
-		frustum_width		= 45.0f;
+		frustum_width		= 60.0f;
 		frustum_height		= 60.0f;
 	}
 
 	[fog]
 	{
+		fog_color			= 0xFFC8F0FF;
+		fog_density			= 0.5f;
 		fog_near_dist		= 10.0f;
 		fog_far_dist		= 40.0f;
 		fog_lowdetail_near_dist		= 10.0f;
 		fog_lowdetail_far_dist		= 30.0f;
-		fog_color			= 0xFFC8F0FF;
-		fog_density			= 0.5f;
 	}
-
-	[rain] {} // empty [rain] block for lightning manipulation
 
 	[music]
 	{
 		ambient_track		= "";
 		standard_repeat_delay = 10.0f;
-		standard_track		= "s_m_DwarvenMines_01";
+		standard_track		= "s_m_the_mountain_theme";
 		room_type			= rt_generic;
 	}
 }
@@ -653,25 +727,26 @@
 
 	[frustum]
 	{
-		frustum_width		= 45.0f;
+		frustum_width		= 60.0f;
 		frustum_height		= 60.0f;
 	}
 
 	[fog]
 	{
+		fog_color			= 0xFF602020;
+		fog_density			= 0.5f;
 		fog_near_dist		= 30.0f;
 		fog_far_dist		= 50.0f;
 		fog_lowdetail_near_dist		= 30.0f;
 		fog_lowdetail_far_dist		= 45.0f;
-		fog_color			= 0xFF602020;
-		fog_density			= 0.5f;
 	}
 
 	[music]
 	{
 		ambient_track		= "";
+		standard_intro_delay	= 2.0f;
 		standard_repeat_delay	= 10.0f;
-		standard_track		= "s_m_CastleEhb_01";
+		standard_track		= "s_m_haunted_ruins_accents_2";
 		room_type			= rt_generic;
 	}
 }
@@ -681,45 +756,57 @@
 	transition_time			= 4.0f;
 	interior				= false;
 
+	[frustum]
+	{
+		frustum_width		= 60.0f;
+		frustum_height		= 60.0f;
+	}
+
 	[fog]
 	{
+		fog_color			= 0xFF602020;
+		fog_density			= 0.5f;
 		fog_near_dist		= 30.0f;
 		fog_far_dist		= 50.0f;
 		fog_lowdetail_near_dist		= 30.0f;
 		fog_lowdetail_far_dist		= 45.0f;
-		fog_color			= 0xFF602020;
-		fog_density			= 0.5f;
 	}
 
 	[music]
 	{
 		ambient_track		= "";
 		standard_repeat_delay	= 10.0f;
-		standard_track		= "s_m_CastleEhb_01";
+		standard_track		= "s_m_haunted_ruins_accents_2";
 		room_type			= rt_generic;
 	}
 }
-[mood_setting*]
+[mood_setting*]  // fury cave
 {
 	mood_name				= eos_sirius_planet_r1a_1;
 	transition_time			= 1.0f;
 	interior				= false;
 
+	[frustum]
+	{
+		frustum_width		= 60.0f;
+		frustum_height		= 60.0f;
+	}
+
 	[fog]
 	{
+		fog_color			= 0xFF000000;
+		fog_density			= 0.5f;
 		fog_near_dist		= 30.0f;
 		fog_far_dist		= 50.0f;
 		fog_lowdetail_near_dist		= 30.0f;
 		fog_lowdetail_far_dist		= 45.0f;
-		fog_color			= 0xFF000000;
-		fog_density			= 0.5f;
 	}
 
 	[music]
 	{
 		ambient_track		= "";
 		standard_repeat_delay	= 10.0f;
-		standard_track		= "s_m_CastleEhb_01";
+		standard_track		= "s_m_furyden_02";
 		room_type			= rt_cave;
 	}
 }
@@ -729,14 +816,80 @@
 	transition_time			= 2.0f;
 	interior				= false;
 
+	[frustum]
+	{
+		frustum_width		= 60.0f;
+		frustum_height		= 60.0f;
+	}
+
 	[fog]
 	{
+		fog_color			= 0xFF602020;
+		fog_density			= 0.5f;
 		fog_near_dist		= 30.0f;
 		fog_far_dist		= 50.0f;
 		fog_lowdetail_near_dist		= 30.0f;
 		fog_lowdetail_far_dist		= 45.0f;
+	}
+
+	[music]
+	{
+		ambient_track		= "";
+		standard_repeat_delay	= 10.0f;
+		standard_track		= "s_m_haunted_ruins_battle";
+		room_type			= rt_generic;
+	}
+}
+[mood_setting*]  // Castle NIS music
+{
+	mood_name				= eos_sirius_planet_r2_1_1;
+	transition_time			= 1.5f;
+	interior				= false;
+
+	[frustum]
+	{
+		frustum_width		= 60.0f;
+		frustum_height		= 60.0f;
+	}
+
+	[fog]
+	{
 		fog_color			= 0xFF602020;
 		fog_density			= 0.5f;
+		fog_near_dist		= 30.0f;
+		fog_far_dist		= 50.0f;
+		fog_lowdetail_near_dist		= 30.0f;
+		fog_lowdetail_far_dist		= 45.0f;
+	}
+
+	[music]
+	{
+		ambient_track		= "";
+		standard_repeat_delay	= 10.0f;
+		standard_track		= "s_m_misc_03";
+		room_type			= rt_generic;
+	}
+}
+[mood_setting*]  // castle interior, lower level
+{
+	mood_name				= eos_sirius_planet_r2_1_2;
+	transition_time			= 2.0f;
+	interior				= false;
+
+	[frustum]
+	{
+		frustum_width		= 60.0f;
+		frustum_height		= 60.0f;
+	}
+
+	[fog]
+	{
+		fog_color			= 0xFF602020;
+		fog_density			= 0.5f;
+		fog_near_dist		= 30.0f;
+		fog_far_dist		= 50.0f;
+		fog_lowdetail_near_dist		= 30.0f;
+		fog_lowdetail_far_dist		= 45.0f;
 	}
 
 	[music]
@@ -747,45 +900,26 @@
 		room_type			= rt_generic;
 	}
 }
-[mood_setting*]
-{
-	// Castle Ehb NIS music. kinda violating naming convention a tad, sorry Dave :)
-	mood_name				= eos_sirius_planet_r2_1_1;
-	transition_time			= 1.5f;
-	interior				= false;
-
-	[fog]
-	{
-		fog_near_dist		= 30.0f;
-		fog_far_dist		= 50.0f;
-		fog_lowdetail_near_dist		= 30.0f;
-		fog_lowdetail_far_dist		= 45.0f;
-		fog_color			= 0xFF602020;
-		fog_density			= 0.5f;
-	}
-
-	[music]
-	{
-		ambient_track		= "";
-		standard_repeat_delay	= 10.0f;
-		standard_track		= "s_m_CastleEhb_06";
-		room_type			= rt_generic;
-	}
-}
-[mood_setting*]
+[mood_setting*]  // big courtyard & wall
 {
 	mood_name				= eos_sirius_planet_r2_2;
 	transition_time			= 2.0f;
 	interior				= false;
 
+	[frustum]
+	{
+		frustum_width		= 60.0f;
+		frustum_height		= 60.0f;
+	}
+
 	[fog]
 	{
+		fog_color			= 0xFF602020;
+		fog_density			= 0.5f;
 		fog_near_dist		= 30.0f;
 		fog_far_dist		= 50.0f;
 		fog_lowdetail_near_dist		= 30.0f;
 		fog_lowdetail_far_dist		= 45.0f;
-		fog_color			= 0xFF602020;
-		fog_density			= 0.5f;
 	}
 
 	[music]
@@ -796,21 +930,26 @@
 		room_type			= rt_generic;
 	}
 }
-[mood_setting*]
+[mood_setting*]  // castle interior, upper level (cathedral, throne room)
 {
-	//castle interior, upper level
 	mood_name				= eos_sirius_planet_r2_3;
 	transition_time			= 2.0f;
 	interior				= false;
 
+	[frustum]
+	{
+		frustum_width		= 60.0f;
+		frustum_height		= 60.0f;
+	}
+
 	[fog]
 	{
+		fog_color			= 0xFF602020;
+		fog_density			= 0.5f;
 		fog_near_dist		= 30.0f;
 		fog_far_dist		= 50.0f;
 		fog_lowdetail_near_dist		= 30.0f;
 		fog_lowdetail_far_dist		= 45.0f;
-		fog_color			= 0xFF602020;
-		fog_density			= 0.5f;
 	}
 
 	[music]
@@ -821,21 +960,26 @@
 		room_type			= rt_generic;
 	}
 }
-[mood_setting*]
+[mood_setting*]  // castle roof
 {
-	//castle roof
 	mood_name				= eos_sirius_planet_r2_4;
 	transition_time			= 2.0f;
 	interior				= false;
 
+	[frustum]
+	{
+		frustum_width		= 60.0f;
+		frustum_height		= 60.0f;
+	}
+
 	[fog]
 	{
+		fog_color			= 0xFF602020;
+		fog_density			= 0.5f;
 		fog_near_dist		= 30.0f;
 		fog_far_dist		= 50.0f;
 		fog_lowdetail_near_dist		= 30.0f;
 		fog_lowdetail_far_dist		= 45.0f;
-		fog_color			= 0xFF602020;
-		fog_density			= 0.5f;
 	}
 
 	[music]
@@ -846,101 +990,123 @@
 		room_type			= rt_generic;
 	}
 }
-[mood_setting*]
+[mood_setting*]  // labyrinth
 {
 	mood_name				= eos_sirius_planet_r2a_1;
 	transition_time			= 5.0f;
 	interior				= false;
 
+	[frustum]
+	{
+		frustum_width		= 60.0f;
+		frustum_height		= 60.0f;
+	}
+
 	[fog]
 	{
+		fog_color			= 0xFF602020;
+		fog_density			= 0.5f;
 		fog_near_dist		= 2.0f;
 		fog_far_dist		= 40.0f;
 		fog_lowdetail_near_dist		= 2.0f;
 		fog_lowdetail_far_dist		= 35.0f;
-		fog_color			= 0xFF602020;
-		fog_density			= 0.5f;
 	}
 
 	[music]
 	{
 		ambient_track		= "";
 		standard_repeat_delay	= 10.0f;
-		standard_track		= "s_m_CastleEhb_02";
+		standard_track		= "s_m_haunted_ruins_accents_2";
 		room_type			= rt_generic;
 	}
 }
-[mood_setting*]
+[mood_setting*]  // labyrinth
 {
 	mood_name				= eos_sirius_planet_r2a_2;
 	transition_time			= 5.0f;
 	interior				= false;
 
+	[frustum]
+	{
+		frustum_width		= 60.0f;
+		frustum_height		= 60.0f;
+	}
+
 	[fog]
 	{
+		fog_color			= 0xFF602020;
+		fog_density			= 0.5f;
 		fog_near_dist		= 10.0f;
 		fog_far_dist		= 45.0f;
 		fog_lowdetail_near_dist		= 10.0f;
 		fog_lowdetail_far_dist		= 40.0f;
-		fog_color			= 0xFF602020;
-		fog_density			= 0.5f;
 	}
 
 	[music]
 	{
 		ambient_track		= "";
 		standard_repeat_delay	= 10.0f;
-		standard_track		= "s_m_CastleEhb_02";
+		standard_track		= "s_m_haunted_ruins_accents_2";
 		room_type			= rt_generic;
 	}
 }
 [mood_setting*]
 {
-	// Mood for the barracks area
 	mood_name				= eos_sirius_planet_dragon_entrance;
 	transition_time			= 1.0f;
 	interior				= true;
 
+	[frustum]
+	{
+		frustum_width		= 60.0f;
+		frustum_height		= 60.0f;
+	}
+
 	[fog]
 	{
+		fog_color			= 0xFF000000;
+		fog_density			= 0.5f;
 		fog_near_dist		= 30.0f;
 		fog_far_dist		= 40.0f;
 		fog_lowdetail_near_dist		= 30.0f;
 		fog_lowdetail_far_dist		= 35.0f;
-		fog_color			= 0xFF000000;
-		fog_density			= 0.5f;
 	}
 
 	[music]
 	{
 		ambient_track		= "";
 		standard_repeat_delay = 10.0f;
-		standard_track		= "s_m_CastleDungeon_01";
+		standard_track		= "s_m_dragonlair_01";
 		room_type			= rt_stonecorridor;
 	}
 }
 [mood_setting*]
 {
-	// this is the transition from gl_r1
 	mood_name				= eos_sirius_planet_dragon_1;
 	transition_time			= 10.0f;
 	interior				= true;
 
+	[frustum]
+	{
+		frustum_width		= 60.0f;
+		frustum_height		= 60.0f;
+	}
+
 	[fog]
 	{
+		fog_color			= 0xFF000000;
+		fog_density			= 0.2f;
 		fog_near_dist		= 35.0f;
 		fog_far_dist		= 45.0f;
 		fog_lowdetail_near_dist		= 35.0f;
 		fog_lowdetail_far_dist		= 40.0f;
-		fog_color			= 0xFF000000;
-		fog_density			= 0.2f;
 	}
 
 	[music]
 	{
 		ambient_track		= "s_e_ambient_crypt";
 		standard_repeat_delay = 0.0f;
-		standard_track		= "s_m_Drums_03";
+		standard_track		= "s_m_the_shadowjumper_theme";
 		room_type			= rt_concerthall;
 	}
 }
@@ -951,45 +1117,50 @@
 	transition_time			= 2.0f;
 	interior				= true;
 
+	[frustum]
+	{
+		frustum_width		= 60.0f;
+		frustum_height		= 60.0f;
+	}
+
 	[fog]
 	{
+		fog_color			= 0xFF000000;
+		fog_density			= 0.2f;
 		fog_near_dist		= 35.0f;
 		fog_far_dist		= 45.0f;
 		fog_lowdetail_near_dist		= 35.0f;
 		fog_lowdetail_far_dist		= 40.0f;
-		fog_color			= 0xFF000000;
-		fog_density			= 0.2f;
 	}
 
 	[music]
 	{
 		ambient_track		= "s_e_ambient_crypt";
 		standard_repeat_delay = 0.0f;
-		standard_track		= "s_m_Drums_03";
+		standard_track		= "s_m_the_shadowjumper_theme";
 		room_type			= rt_arena;
 	}
 }
-[mood_setting*]
+[mood_setting*]  // down to SQM NIS mood
 {
-	// Gom NIS mood
 	mood_name				= eos_sirius_planet_dragon_3;
 	transition_time			= 2.0f;
 	interior				= true;
     
     [frustum]
     {
-		frustum_width		= 45.0f;
+		frustum_width		= 60.0f;
 		frustum_height		= 1000.0f;  // Frustum needs to be high enough such that both levels are loaded during NIS
     }
 
 	[fog]
 	{
+		fog_color			= 0xFF000000;
+		fog_density			= 0.2f;
 		fog_near_dist		= 60.0f;
 		fog_far_dist		= 70.0f;
 		fog_lowdetail_near_dist		= 60.0f;
 		fog_lowdetail_far_dist		= 65.0f;
-		fog_color			= 0xFF000000;
-		fog_density			= 0.2f;
 	}
 
 	[music]
@@ -1000,21 +1171,26 @@
 		room_type			= rt_arena;
 	}
 }
-[mood_setting*]
+[mood_setting*]  // No music after SQM dies, kind of a fake-out
 {
-	// No music after Gom dies, kind of a fake-out
 	mood_name				= eos_sirius_planet_dragon_4;
 	transition_time			= 2.0f;
 	interior				= true;
 
+	[frustum]
+	{
+		frustum_width		= 60.0f;
+		frustum_height		= 1000.0f;  // Frustum needs to be high enough such that both levels are loaded
+	}
+
 	[fog]
 	{
+		fog_color			= 0xFF000000;
+		fog_density			= 0.2f;
 		fog_near_dist		= 35.0f;
 		fog_far_dist		= 45.0f;
 		fog_lowdetail_near_dist		= 35.0f;
 		fog_lowdetail_far_dist		= 40.0f;
-		fog_color			= 0xFF000000;
-		fog_density			= 0.2f;
 	}
 
 	[music]
@@ -1024,53 +1200,93 @@
 		room_type			= rt_arena;
 	}
 }
-[mood_setting*]
+[mood_setting*]  // Fighting SQM mood
 {
-	// Fighting Gom mood
 	mood_name				= eos_sirius_planet_dragon_5;
 	transition_time			= 0.5f;
 	interior				= true;
 
+	[frustum]
+	{
+		frustum_width		= 60.0f;
+		frustum_height		= 1000.0f;  // Frustum needs to be high enough such that both levels are loaded
+	}
+
 	[fog]
 	{
+		fog_color			= 0xFF000000;
+		fog_density			= 0.2f;
 		fog_near_dist		= 35.0f;
 		fog_far_dist		= 45.0f;
 		fog_lowdetail_near_dist		= 35.0f;
 		fog_lowdetail_far_dist		= 40.0f;
-		fog_color			= 0xFF000000;
-		fog_density			= 0.2f;
 	}
 
 	[music]
 	{
 		ambient_track		= "";
 		standard_repeat_delay = 0.0f;
-		standard_track		= "s_m_gom_battle";
+		standard_track		= "s_m_dragonlair_02";
 		room_type			= rt_arena;
 	}
 }
-[mood_setting*]
+[mood_setting*]  // SQM is killed mood
 {
-	// Gom is killed mood
 	mood_name				= eos_sirius_planet_dragon_6;
 	transition_time			= 2.0f;
 	interior				= true;
 
+	[frustum]
+	{
+		frustum_width		= 60.0f;
+		frustum_height		= 1000.0f;  // Frustum needs to be high enough such that both levels are loaded
+	}
+
 	[fog]
 	{
+		fog_color			= 0xFF000000;
+		fog_density			= 0.2f;
 		fog_near_dist		= 35.0f;
 		fog_far_dist		= 45.0f;
 		fog_lowdetail_near_dist		= 35.0f;
 		fog_lowdetail_far_dist		= 40.0f;
-		fog_color			= 0xFF000000;
-		fog_density			= 0.2f;
 	}
 
 	[music]
 	{
 		ambient_track		= "";
 		standard_repeat_delay = 10.0f;
-		standard_track		= "s_m_gom_victory";
+		standard_track		= "s_m_dragonlair_03";
+		room_type			= rt_arena;
+	}
+}
+[mood_setting*]  // behind dragon, path to labyrinth exit
+{
+	mood_name				= eos_sirius_planet_dragon_exit;
+	transition_time			= 2.0f;
+	interior				= true;
+
+	[frustum]
+	{
+		frustum_width		= 60.0f;
+		frustum_height		= 60.0f;
+	}
+
+	[fog]
+	{
+		fog_color			= 0xFF000000;
+		fog_density			= 0.2f;
+		fog_near_dist		= 35.0f;
+		fog_far_dist		= 45.0f;
+		fog_lowdetail_near_dist		= 35.0f;
+		fog_lowdetail_far_dist		= 40.0f;
+	}
+
+	[music]
+	{
+		ambient_track		= "s_e_ambient_crypt";
+		standard_repeat_delay = 0.0f;
+		standard_track		= "s_m_drums_02";
 		room_type			= rt_arena;
 	}
 }

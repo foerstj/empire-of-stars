@@ -206,6 +206,21 @@
 	  i stop_hour = 4;
 	}
 }
+[t:emt_sound,n:0x072005bc]
+{
+	[placement]
+	{
+	  q orientation = 0,1,0,2.98023e-007;
+	  p position = -1.51439,0,0.56961,0x51102775;
+	}
+	[sound_emitter]
+	{
+		event_sound = "amb_crickets";
+	  f max_repeat_rate = 15;
+	  i start_hour = 22;
+	  i stop_hour = 4;
+	}
+}
 [t:emt_sound,n:0x072005b6]
 {
 	[placement]
@@ -317,26 +332,11 @@
 		event_sound = "env_waterfall";
 	}
 }
-[t:emt_sound,n:0x072005bc]
+[t:emt_sound,n:0x07200587]
 {
 	[placement]
 	{
-	  q orientation = 0,1,0,2.98023e-007;
-	  p position = -1.51439,0,0.56961,0x51102775;
-	}
-	[sound_emitter]
-	{
-		event_sound = "amb_crickets";
-	  f max_repeat_rate = 15;
-	  i start_hour = 22;
-	  i stop_hour = 4;
-	}
-}
-[t:emt_sound,n:0x07200589]
-{
-	[placement]
-	{
-	  p position = -1.83766,2.71688,8.37997,0x2c001c5a;
+	  p position = -1.65766,1.48845,3.60651,0xa9ec71e0;
 	}
 	[sound_emitter]
 	{
@@ -344,23 +344,11 @@
 		event_sound = "env_brook";
 	}
 }
-[t:emt_sound,n:0x07200598]
+[t:emt_sound,n:0x07200596]
 {
 	[placement]
 	{
-	  p position = -3.12517,1.40594,0.813274,0x2c001c5a;
-	}
-	[sound_emitter]
-	{
-	  b continual_loop = true;
-		event_sound = "env_brook";
-	}
-}
-[t:emt_sound,n:0x07200595]
-{
-	[placement]
-	{
-	  p position = -5.37609,1.45292,1.52911,0xff215bd3;
+	  p position = 1.21768,-0.0531006,7.74004,0x210949ec;
 	}
 	[sound_emitter]
 	{
@@ -404,11 +392,11 @@
 		event_sound = "env_brook";
 	}
 }
-[t:emt_sound,n:0x07200596]
+[t:emt_sound,n:0x07200595]
 {
 	[placement]
 	{
-	  p position = 1.21768,-0.0531006,7.74004,0x210949ec;
+	  p position = -5.37609,1.45292,1.52911,0xff215bd3;
 	}
 	[sound_emitter]
 	{
@@ -416,11 +404,23 @@
 		event_sound = "env_brook";
 	}
 }
-[t:emt_sound,n:0x07200587]
+[t:emt_sound,n:0x07200589]
 {
 	[placement]
 	{
-	  p position = -1.65766,1.48845,3.60651,0xa9ec71e0;
+	  p position = -1.83766,2.71688,8.37997,0x2c001c5a;
+	}
+	[sound_emitter]
+	{
+	  b continual_loop = true;
+		event_sound = "env_brook";
+	}
+}
+[t:emt_sound,n:0x07200598]
+{
+	[placement]
+	{
+	  p position = -3.12517,1.40594,0.813274,0x2c001c5a;
 	}
 	[sound_emitter]
 	{

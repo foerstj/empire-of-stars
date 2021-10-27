@@ -183,6 +183,18 @@
 			description = "Find the first two volumes in the Thawhorn's Way trilogy.";
 		}
 	}
+    [altair_aurora_shrine]
+    {
+		chapter			= c4_altair;
+		screen_name		= "The Shrine";
+		victory_sample	= s_e_level_up_quest;
+
+		[*]
+		{
+			order		= 0;
+			description = "Clear the Braak from the Aurora Shrine in the Winternight Woods.";
+		}
+    }
     [altair_caverns]
     {
 		chapter			= c4_altair;
@@ -207,20 +219,8 @@
 			description = "Look for Starstones on the Ice Moon.";
 		}
     }
-    [altair_shrine]
-    {
-		chapter			= c4_altair;
-		screen_name		= "The Shrine";
-		victory_sample	= s_e_level_up_quest;
 
-		[*]
-		{
-			order		= 0;
-			description = "Clear the Braak from the Aurora Shrine in the Winternight Woods.";
-		}
-    }
-
-    [rigel_pyramid]
+    [rigel_dry_pyramid]
     {
 		chapter			= c5_rigel;
 		screen_name		= "The Pyramid";
@@ -232,7 +232,7 @@
 			description = "Look for Starstones in the Pyramid.";
 		}
     }
-    [rigel_townsafety]
+    [rigel_wet_1_townsafety]
     {
 		chapter			= c5_rigel;
 		screen_name		= "Orionis";
@@ -240,51 +240,32 @@
 
 		[*]
 		{
-			description = "Clear Orionis of the savage Droog.";
+			description = "Clear Orionis of the savage Droog - speak with Gucup Cakix near the teleporter.";
 		  	b is_consumable = true;
 		  	i order = 0;
 		  	b required = false;
 		}
 		[*]
 		{
-			description = "Orionis is safe.";
+			description = "Clear Orionis of the savage Droog - south, east, and south-west from the teleporter.";
+		  	b is_consumable = true;
 		  	i order = 1;
 		  	b required = false;
 		}
+		[*]
+		{
+			description = "Speak again with Gucup Cakix near the teleporter.";
+		  	i order = 2;
+		  	b required = false;
+		}
+		[*]
+		{
+			description = "Orionis is safe.";
+		  	i order = 3;
+		  	b required = false;
+		}
     }
-	[rigel_artifact]
-	{
-		chapter			= c5_rigel;		
-		screen_name		= "Purify the Altar";
-		victory_sample	= s_e_level_up_quest;
-
-		[*]
-		{
-			order			= 0;
-			description     = "Destroy the Fleshrender.";
-			required		= true;
-		}
-		[*]
-		{
-			order			= 1;
-			description		= "Place the holy icon on the Altar.";
-			required		= true;
-		}
-	}
-	[rigel_artifact_2]
-	{
-		chapter			= c5_rigel;		
-		screen_name		= "Purify the Altar";
-		victory_sample	= s_e_level_up_quest;
-
-		[*]
-		{
-			order			= 0;
-			description		= "Place the holy icon on the Altar.";
-			required		= true;
-		}
-	}
-	[rigel_missing_shopkeep]
+	[rigel_wet_missing_shopkeep]
 	{
 		chapter = c5_rigel;
 		screen_name = "Missing Shopkeep";
@@ -303,7 +284,39 @@
 			b required = false;
 		}
 	}
-	[rigel_skull]
+	[rigel_wet_shrine_artifact]
+	{
+		chapter			= c5_rigel;		
+		screen_name		= "Purify the Altar";
+		victory_sample	= s_e_level_up_quest;
+
+		[*]
+		{
+			order			= 0;
+			description     = "Destroy the Fleshrender.";
+			required		= true;
+		}
+		[*]
+		{
+			order			= 1;
+			description		= "Place the holy icon on the Altar.";
+			required		= true;
+		}
+	}
+	[rigel_wet_shrine_artifact_2]
+	{
+		chapter			= c5_rigel;		
+		screen_name		= "Purify the Altar";
+		victory_sample	= s_e_level_up_quest;
+
+		[*]
+		{
+			order			= 0;
+			description		= "Place the holy icon on the Altar.";
+			required		= true;
+		}
+	}
+	[rigel_wet_skull]
 	{
 		chapter			= c5_rigel;		
 		screen_name		= "The Skull of the Fallen God";
@@ -330,7 +343,7 @@
 			required		= false;
 		}
     }
-    [aldebaran_alchemyroom]
+    [aldebaran_starstone_alchemyroom]
     {
         chapter = c6_aldebaran;
         screen_name = "Sirius Starstone";

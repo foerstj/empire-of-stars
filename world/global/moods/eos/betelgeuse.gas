@@ -7,9 +7,18 @@
 	[frustum]
 	{
 	  f frustum_height = 60.000000;
-	  f frustum_width = 45.000000;
+	  f frustum_width = 60.000000;
 	}
 
+	[fog]
+	{
+	  x fog_color = 0xFFE0A0E0;
+	  f fog_density = 0.500000;
+	  f fog_near_dist = 30.000000;
+	  f fog_far_dist = 60.000000;
+	  f fog_lowdetail_near_dist = 20.000000;
+	  f fog_lowdetail_far_dist = 40.000000;
+	}
 	[sun]
 	{
 		00h00m:color = 0xFF000000;
@@ -26,31 +35,18 @@
 		23h00m:color = 0xFF000000;
 	}
 
-	[fog]
-	{
-	  x fog_color = 0xFFF090E0;
-	  f fog_density = 0.500000;
-	  f fog_far_dist = 60.000000;
-	  f fog_lowdetail_far_dist = 40.000000;
-	  f fog_lowdetail_near_dist = 20.000000;
-	  f fog_near_dist = 30.000000;
-	}
-
 	[music]
 	{
 	  f ambient_intro_delay = 0.000000;
 	  f ambient_repeat_delay = 0.000000;
 		ambient_track = "s_e_ambient_bird2";
-	  f battle_intro_delay = 10.000000;
-	  f battle_repeat_delay = 10.000000;
-		battle_track = 10.000000;
+	  f standard_intro_delay = 2.000000;
+	  f standard_repeat_delay = 20.000000;
+		standard_track = "s_m_subriver_05";
 		room_type = rt_generic;
-	  f standard_intro_delay = 0.000000;
-	  f standard_repeat_delay = 10.000000;
-		standard_track = "s_m_Path2Stonebridge_01";
 	}
 }
-[mood_setting*]
+[mood_setting*]  // palim palim town
 {
 	mood_name = eos_betelgeuse_palimpalim;
   f transition_time = 5.000000;
@@ -59,9 +55,18 @@
 	[frustum]
 	{
 	  f frustum_height = 60.000000;
-	  f frustum_width = 45.000000;
+	  f frustum_width = 60.000000;
 	}
 
+	[fog]
+	{
+	  x fog_color = 0xFFE0A0E0;
+	  f fog_density = 0.500000;
+	  f fog_near_dist = 30.000000;
+	  f fog_far_dist = 60.000000;
+	  f fog_lowdetail_near_dist = 20.000000;
+	  f fog_lowdetail_far_dist = 40.000000;
+	}
 	[sun]
 	{
 		00h00m:color = 0xFF000000;
@@ -78,28 +83,15 @@
 		23h00m:color = 0xFF000000;
 	}
 
-	[fog]
-	{
-	  x fog_color = 0xFFF090E0;
-	  f fog_density = 0.500000;
-	  f fog_far_dist = 60.000000;
-	  f fog_lowdetail_far_dist = 40.000000;
-	  f fog_lowdetail_near_dist = 20.000000;
-	  f fog_near_dist = 30.000000;
-	}
-
 	[music]
 	{
 	  f ambient_intro_delay = 0.000000;
 	  f ambient_repeat_delay = 0.000000;
 		ambient_track = "s_e_ambient_bird2";
-	  f battle_intro_delay = 10.000000;
-	  f battle_repeat_delay = 10.000000;
-		battle_track = 10.000000;
+	  f standard_intro_delay = 5.000000;
+	  f standard_repeat_delay = 10.000000;
+		standard_track = "s_m_subriver_03";
 		room_type = rt_generic;
-	  f standard_intro_delay = 0.000000;
-	  f standard_repeat_delay = 5.000000;
-		standard_track = "s_m_BesiegedTown_04";
 	}
 }
 [mood_setting*]  // palim palim mood but with DK music
@@ -111,9 +103,18 @@
 	[frustum]
 	{
 	  f frustum_height = 60.000000;
-	  f frustum_width = 45.000000;
+	  f frustum_width = 60.000000;
 	}
 
+	[fog]
+	{
+	  x fog_color = 0xFFE0A0E0;
+	  f fog_density = 0.500000;
+	  f fog_near_dist = 30.000000;
+	  f fog_far_dist = 60.000000;
+	  f fog_lowdetail_near_dist = 20.000000;
+	  f fog_lowdetail_far_dist = 40.000000;
+	}
 	[sun]
 	{
 		00h00m:color = 0xFF000000;
@@ -128,16 +129,6 @@
 		21h00m:color = 0xFF330D40;
 		22h00m:color = 0xFF000000;
 		23h00m:color = 0xFF000000;
-	}
-
-	[fog]
-	{
-	  x fog_color = 0xFFF090E0;
-	  f fog_density = 0.500000;
-	  f fog_far_dist = 60.000000;
-	  f fog_lowdetail_far_dist = 40.000000;
-	  f fog_lowdetail_near_dist = 20.000000;
-	  f fog_near_dist = 30.000000;
 	}
 
 	[music]
@@ -145,21 +136,33 @@
 	  f ambient_intro_delay = 0.000000;
 	  f ambient_repeat_delay = 0.000000;
 		ambient_track = "s_e_ambient_bird2";
-	  f battle_intro_delay = 10.000000;
-	  f battle_repeat_delay = 10.000000;
-		battle_track = 10.000000;
-		room_type = rt_generic;
-	  f standard_intro_delay = 0.000000;
+	  f standard_intro_delay = 2.000000;
 	  f standard_repeat_delay = 10.000000;
 		standard_track = "s_m_d_k_theme";
+		room_type = rt_generic;
 	}
 }
-[mood_setting*]
+[mood_setting*]  // landing around palim palim
 {
 	mood_name = eos_betelgeuse_1;
 	transition_time = 5.0f;
 	interior = false;
 
+	[frustum]
+	{
+		frustum_width		= 60.0f;
+		frustum_height		= 60.0f;
+	}
+
+	[fog]
+	{
+	  x fog_color = 0xFFE0A0E0;
+	  f fog_density = 0.500000;
+	  f fog_near_dist = 30.000000;
+	  f fog_far_dist = 60.000000;
+	  f fog_lowdetail_near_dist = 20.000000;
+	  f fog_lowdetail_far_dist = 40.000000;
+	}
 	[sun]
 	{
 		00h00m:color = 0xFF000000;
@@ -174,16 +177,6 @@
 		21h00m:color = 0xFF330D40;
 		22h00m:color = 0xFF000000;
 		23h00m:color = 0xFF000000;
-	}
-
-	[fog]
-	{
-	  x fog_color = 0xFFF090E0;
-	  f fog_density = 0.500000;
-	  f fog_far_dist = 60.000000;
-	  f fog_lowdetail_far_dist = 40.000000;
-	  f fog_lowdetail_near_dist = 20.000000;
-	  f fog_near_dist = 30.000000;
 	}
 	[wind]
 	{
@@ -196,21 +189,33 @@
 	  f ambient_intro_delay = 0.000000;
 	  f ambient_repeat_delay = 0.000000;
 		ambient_track = "s_e_ambient_bird2";
-	  f battle_intro_delay = 10.000000;
-	  f battle_repeat_delay = 10.000000;
-		battle_track = 10.000000;
+	  f standard_intro_delay = 10.000000;
+	  f standard_repeat_delay = 20.000000;
+		standard_track = "s_m_subriver_05";
 		room_type = rt_generic;
-	  f standard_intro_delay = 0.000000;
-	  f standard_repeat_delay = 10.000000;
-		standard_track = "s_m_Path2Stonebridge_01";
 	}
 }
-[mood_setting*]
+[mood_setting*]  // flower forest
 {
 	mood_name = eos_betelgeuse_2;
 	transition_time = 15.0f;
 	interior = false;
 
+	[frustum]
+	{
+		frustum_width		= 60.0f;
+		frustum_height		= 60.0f;
+	}
+
+	[fog]
+	{
+	  x fog_color = 0xFFE0A0E0;
+	  f fog_density = 0.500000;
+	  f fog_near_dist = 30.000000;
+	  f fog_far_dist = 60.000000;
+	  f fog_lowdetail_near_dist = 20.000000;
+	  f fog_lowdetail_far_dist = 40.000000;
+	}
 	[sun]
 	{
 		00h00m:color = 0xFF000000;
@@ -225,16 +230,6 @@
 		21h00m:color = 0xFF330D40;
 		22h00m:color = 0xFF000000;
 		23h00m:color = 0xFF000000;
-	}
-
-	[fog]
-	{
-	  x fog_color = 0xFFF090E0;
-	  f fog_density = 0.500000;
-	  f fog_far_dist = 60.000000;
-	  f fog_lowdetail_far_dist = 40.000000;
-	  f fog_lowdetail_near_dist = 20.000000;
-	  f fog_near_dist = 30.000000;
 	}
 	[wind]
 	{
@@ -247,16 +242,13 @@
 	  f ambient_intro_delay = 0.000000;
 	  f ambient_repeat_delay = 0.000000;
 		ambient_track = "s_e_ambient_bird1";
-	  f battle_intro_delay = 10.000000;
-	  f battle_repeat_delay = 10.000000;
-		battle_track = 10.000000;
+	  f standard_intro_delay = 10.000000;
+	  f standard_repeat_delay = 20.000000;
+		standard_track = "s_m_subriver_05";
 		room_type = rt_generic;
-	  f standard_intro_delay = 0.000000;
-	  f standard_repeat_delay = 10.000000;
-		standard_track = "s_m_Path2Stonebridge_02";
 	}
 }
-[mood_setting*]
+[mood_setting*]  // mucosa cave
 {
 	mood_name				= eos_betelgeuse_cave;
 	transition_time			= 1.0f;
@@ -264,10 +256,19 @@
 
 	[frustum]
 	{
-		frustum_width		= 45.0f;
+		frustum_width		= 60.0f;
 		frustum_height		= 60.0f;
 	}
 
+	[fog]
+	{
+		fog_color			= 0xFF202028;
+		fog_density			= 0.5f;
+		fog_near_dist		= 25.0f;
+		fog_far_dist		= 50.0f;
+		fog_lowdetail_near_dist		= 25.0f;
+		fog_lowdetail_far_dist		= 45.0f;
+	}
 	[sun]
 	{
 		00h00m:color = 0xFF000000;
@@ -284,31 +285,36 @@
 		23h00m:color = 0xFF000000;
 	}
 
-	[fog]
-	{
-		fog_near_dist		= 25.0f;
-		fog_far_dist		= 50.0f;
-		fog_lowdetail_near_dist		= 25.0f;
-		fog_lowdetail_far_dist		= 45.0f;
-		fog_color			= 0xFF202028;
-		fog_density			= 0.5f;
-	}
-	[rain] {} // empty [rain] block for lightning manipulation
-
 	[music]
 	{
 		ambient_track		= "";
-		standard_repeat_delay	= 5.0f;
-		standard_track		= "s_m_Glacern_03";
+        standard_intro_delay = 5.0f;
+		standard_repeat_delay	= 10.0f;
+		standard_track		= "s_m_subriver_01";
 		room_type			= rt_cave;
 	}
 }
-[mood_setting*]
+[mood_setting*]  // flower forest (mucosa cave exit)
 {
 	mood_name = eos_betelgeuse_2_from_cave;
 	transition_time = 3.0f;
 	interior = false;
 
+	[frustum]
+	{
+		frustum_width		= 60.0f;
+		frustum_height		= 60.0f;
+	}
+
+	[fog]
+	{
+	  x fog_color = 0xFFE0A0E0;
+	  f fog_density = 0.600000;
+	  f fog_near_dist = 30.000000;
+	  f fog_far_dist = 60.000000;
+	  f fog_lowdetail_near_dist = 20.000000;
+	  f fog_lowdetail_far_dist = 40.000000;
+	}
 	[sun]
 	{
 		00h00m:color = 0xFF000000;
@@ -323,16 +329,6 @@
 		21h00m:color = 0xFF330D40;
 		22h00m:color = 0xFF000000;
 		23h00m:color = 0xFF000000;
-	}
-
-	[fog]
-	{
-	  x fog_color = 0xFFF090E0;
-	  f fog_density = 0.600000;
-	  f fog_far_dist = 60.000000;
-	  f fog_lowdetail_far_dist = 40.000000;
-	  f fog_lowdetail_near_dist = 20.000000;
-	  f fog_near_dist = 30.000000;
 	}
 	[wind]
 	{
@@ -345,16 +341,13 @@
 	  f ambient_intro_delay = 0.000000;
 	  f ambient_repeat_delay = 0.000000;
 		ambient_track = "s_e_ambient_bird1";
-	  f battle_intro_delay = 10.000000;
-	  f battle_repeat_delay = 10.000000;
-		battle_track = 10.000000;
+	  f standard_intro_delay = 10.000000;
+	  f standard_repeat_delay = 20.000000;
+		standard_track = "s_m_subriver_05";
 		room_type = rt_generic;
-	  f standard_intro_delay = 0.000000;
-	  f standard_repeat_delay = 10.000000;
-		standard_track = "s_m_Path2Stonebridge_02";
 	}
 }
-[mood_setting*]
+[mood_setting*]  // wishy-washy town
 {
 	mood_name = eos_betelgeuse_wishywashy;
   f transition_time = 5.000000;
@@ -363,9 +356,18 @@
 	[frustum]
 	{
 	  f frustum_height = 60.000000;
-	  f frustum_width = 45.000000;
+	  f frustum_width = 60.000000;
 	}
 
+	[fog]
+	{
+	  x fog_color = 0xFFE0A0E0;
+	  f fog_density = 0.500000;
+	  f fog_near_dist = 30.000000;
+	  f fog_far_dist = 60.000000;
+	  f fog_lowdetail_near_dist = 20.000000;
+	  f fog_lowdetail_far_dist = 40.000000;
+	}
 	[sun]
 	{
 		00h00m:color = 0xFF000000;
@@ -382,31 +384,18 @@
 		23h00m:color = 0xFF000000;
 	}
 
-	[fog]
-	{
-	  x fog_color = 0xFFF090E0;
-	  f fog_density = 0.500000;
-	  f fog_far_dist = 60.000000;
-	  f fog_lowdetail_far_dist = 40.000000;
-	  f fog_lowdetail_near_dist = 20.000000;
-	  f fog_near_dist = 30.000000;
-	}
-
 	[music]
 	{
 	  f ambient_intro_delay = 0.000000;
 	  f ambient_repeat_delay = 0.000000;
 		ambient_track = "s_e_ambient_bird2";
-	  f battle_intro_delay = 10.000000;
-	  f battle_repeat_delay = 10.000000;
-		battle_track = 10.000000;
+	  f standard_intro_delay = 5.000000;
+	  f standard_repeat_delay = 10.000000;
+		standard_track = "s_m_subriver_03";
 		room_type = rt_generic;
-	  f standard_intro_delay = 0.000000;
-	  f standard_repeat_delay = 5.000000;
-		standard_track = "s_m_BesiegedTown_04";
 	}
 }
-[mood_setting*]
+[mood_setting*]  // lakeshore
 {
 	mood_name = eos_betelgeuse_lakeshore;
   f transition_time = 5.000000;
@@ -415,9 +404,18 @@
 	[frustum]
 	{
 	  f frustum_height = 60.000000;
-	  f frustum_width = 45.000000;
+	  f frustum_width = 60.000000;
 	}
 
+	[fog]
+	{
+	  x fog_color = 0xFFE0A0E0;
+	  f fog_density = 0.500000;
+	  f fog_near_dist = 30.000000;
+	  f fog_far_dist = 60.000000;
+	  f fog_lowdetail_near_dist = 20.000000;
+	  f fog_lowdetail_far_dist = 40.000000;
+	}
 	[sun]
 	{
 		00h00m:color = 0xFF000000;
@@ -434,28 +432,15 @@
 		23h00m:color = 0xFF000000;
 	}
 
-	[fog]
-	{
-	  x fog_color = 0xFFF090E0;
-	  f fog_density = 0.500000;
-	  f fog_far_dist = 60.000000;
-	  f fog_lowdetail_far_dist = 40.000000;
-	  f fog_lowdetail_near_dist = 20.000000;
-	  f fog_near_dist = 30.000000;
-	}
-
 	[music]
 	{
 	  f ambient_intro_delay = 0.000000;
 	  f ambient_repeat_delay = 0.000000;
 		ambient_track = "s_e_ambient_bird2";
-	  f battle_intro_delay = 10.000000;
-	  f battle_repeat_delay = 10.000000;
-		battle_track = 10.000000;
+	  f standard_intro_delay = 5.000000;
+	  f standard_repeat_delay = 10.000000;
+		standard_track = "s_m_subriver_03";
 		room_type = rt_generic;
-	  f standard_intro_delay = 0.000000;
-	  f standard_repeat_delay = 5.000000;
-		standard_track = "s_m_BesiegedTown_01";
 	}
 }
 
@@ -468,9 +453,18 @@
 	[frustum]
 	{
 	  f frustum_height = 60.000000;
-	  f frustum_width = 45.000000;
+	  f frustum_width = 60.000000;
 	}
 
+	[fog]
+	{
+	  x fog_color = 0xFFD090D0;
+	  f fog_density = 0.500000;
+	  f fog_near_dist = 30.000000;
+	  f fog_far_dist = 60.000000;
+	  f fog_lowdetail_near_dist = 20.000000;
+	  f fog_lowdetail_far_dist = 40.000000;
+	}
 	[sun]
 	{
 		00h00m:color = 0xFF000000;
@@ -487,28 +481,15 @@
 		23h00m:color = 0xFF000000;
 	}
 
-	[fog]
-	{
-	  x fog_color = 0xFFE080D0;
-	  f fog_density = 0.500000;
-	  f fog_far_dist = 60.000000;
-	  f fog_lowdetail_far_dist = 40.000000;
-	  f fog_lowdetail_near_dist = 20.000000;
-	  f fog_near_dist = 30.000000;
-	}
-
 	[music]
 	{
 	  f ambient_intro_delay = 0.000000;
 	  f ambient_repeat_delay = 0.000000;
 		ambient_track = "s_e_ambient_wind_01";
-	  f battle_intro_delay = 10.000000;
-	  f battle_repeat_delay = 10.000000;
-		battle_track = 10.000000;
-		room_type = rt_generic;
-	  f standard_intro_delay = 0.000000;
+	  f standard_intro_delay = 2.000000;
 	  f standard_repeat_delay = 10.000000;
-		standard_track = "s_m_Path2Crypts_01";
+		standard_track = "s_m_subriver_02";
+		room_type = rt_generic;
 	}
 }
 [mood_setting*]
@@ -520,9 +501,18 @@
 	[frustum]
 	{
 	  f frustum_height = 60.000000;
-	  f frustum_width = 45.000000;
+	  f frustum_width = 60.000000;
 	}
 
+	[fog]
+	{
+	  x fog_color = 0xFFD090D0;
+	  f fog_density = 0.500000;
+	  f fog_near_dist = 30.000000;
+	  f fog_far_dist = 60.000000;
+	  f fog_lowdetail_near_dist = 20.000000;
+	  f fog_lowdetail_far_dist = 40.000000;
+	}
 	[sun]
 	{
 		00h00m:color = 0xFF000000;
@@ -539,28 +529,15 @@
 		23h00m:color = 0xFF000000;
 	}
 
-	[fog]
-	{
-	  x fog_color = 0xFFE080D0;
-	  f fog_density = 0.500000;
-	  f fog_far_dist = 60.000000;
-	  f fog_lowdetail_far_dist = 40.000000;
-	  f fog_lowdetail_near_dist = 20.000000;
-	  f fog_near_dist = 30.000000;
-	}
-
 	[music]
 	{
 	  f ambient_intro_delay = 0.000000;
 	  f ambient_repeat_delay = 0.000000;
 		ambient_track = "s_e_ambient_wind_01";
-	  f battle_intro_delay = 10.000000;
-	  f battle_repeat_delay = 10.000000;
-		battle_track = 10.000000;
-		room_type = rt_generic;
-	  f standard_intro_delay = 0.000000;
+	  f standard_intro_delay = 10.000000;
 	  f standard_repeat_delay = 10.000000;
-		standard_track = "s_m_Path2Crypts_01";
+		standard_track = "s_m_subriver_02";
+		room_type = rt_generic;
 	}
 }
 [mood_setting*]
@@ -572,9 +549,23 @@
 	[frustum]
 	{
 	  f frustum_height = 60.000000;
-	  f frustum_width = 45.000000;
+	  f frustum_width = 60.000000;
 	}
 
+	[fog]
+	{
+	  x fog_color = 0xFFD090D0;
+	  f fog_density = 0.500000;
+	  f fog_near_dist = 30.000000;
+	  f fog_far_dist = 60.000000;
+	  f fog_lowdetail_near_dist = 20.000000;
+	  f fog_lowdetail_far_dist = 40.000000;
+	}
+	[rain]
+	{
+	  b lightning = false;
+	  f rain_density = 100.000000;
+	}
 	[sun]
 	{
 		00h00m:color = 0xFF000000;
@@ -591,33 +582,15 @@
 		23h00m:color = 0xFF000000;
 	}
 
-	[fog]
-	{
-	  x fog_color = 0xFFE080D0;
-	  f fog_density = 0.500000;
-	  f fog_far_dist = 60.000000;
-	  f fog_lowdetail_far_dist = 40.000000;
-	  f fog_lowdetail_near_dist = 20.000000;
-	  f fog_near_dist = 30.000000;
-	}
-	[rain]
-	{
-	  b lightning = false;
-	  f rain_density = 100.000000;
-	}
-
 	[music]
 	{
 	  f ambient_intro_delay = 0.000000;
 	  f ambient_repeat_delay = 0.000000;
 		ambient_track = "s_e_ambient_wind_01b";
-	  f battle_intro_delay = 10.000000;
-	  f battle_repeat_delay = 10.000000;
-		battle_track = 10.000000;
-		room_type = rt_generic;
-	  f standard_intro_delay = 0.000000;
+	  f standard_intro_delay = 10.000000;
 	  f standard_repeat_delay = 10.000000;
-		standard_track = "s_m_Path2Crypts_01";
+		standard_track = "s_m_subriver_02";
+		room_type = rt_generic;
 	}
 }
 [mood_setting*]
@@ -629,9 +602,23 @@
 	[frustum]
 	{
 	  f frustum_height = 60.000000;
-	  f frustum_width = 45.000000;
+	  f frustum_width = 60.000000;
 	}
 
+	[fog]
+	{
+	  x fog_color = 0xFFD090D0;
+	  f fog_density = 0.500000;
+	  f fog_near_dist = 30.000000;
+	  f fog_far_dist = 60.000000;
+	  f fog_lowdetail_near_dist = 20.000000;
+	  f fog_lowdetail_far_dist = 40.000000;
+	}
+	[rain]
+	{
+	  b lightning = false;
+	  f rain_density = 100.000000;
+	}
 	[sun]
 	{
 		00h00m:color = 0xFF000000;
@@ -648,33 +635,15 @@
 		23h00m:color = 0xFF000000;
 	}
 
-	[fog]
-	{
-	  x fog_color = 0xFFE080D0;
-	  f fog_density = 0.500000;
-	  f fog_far_dist = 60.000000;
-	  f fog_lowdetail_far_dist = 40.000000;
-	  f fog_lowdetail_near_dist = 20.000000;
-	  f fog_near_dist = 30.000000;
-	}
-	[rain]
-	{
-	  b lightning = false;
-	  f rain_density = 100.000000;
-	}
-
 	[music]
 	{
 	  f ambient_intro_delay = 0.000000;
 	  f ambient_repeat_delay = 0.000000;
 		ambient_track = "s_e_ambient_wind_01";
-	  f battle_intro_delay = 10.000000;
-	  f battle_repeat_delay = 10.000000;
-		battle_track = 10.000000;
-		room_type = rt_generic;
-	  f standard_intro_delay = 0.000000;
+	  f standard_intro_delay = 10.000000;
 	  f standard_repeat_delay = 10.000000;
-		standard_track = "s_m_Path2Crypts_04";
+		standard_track = "s_m_waterdungeon_01";
+		room_type = rt_generic;
 	}
 }
 [mood_setting*]
@@ -686,9 +655,23 @@
 	[frustum]
 	{
 	  f frustum_height = 60.000000;
-	  f frustum_width = 45.000000;
+	  f frustum_width = 60.000000;
 	}
 
+	[fog]
+	{
+	  x fog_color = 0xFFD090D0;
+	  f fog_density = 0.500000;
+	  f fog_near_dist = 30.000000;
+	  f fog_far_dist = 60.000000;
+	  f fog_lowdetail_near_dist = 20.000000;
+	  f fog_lowdetail_far_dist = 40.000000;
+	}
+	[rain]
+	{
+	  b lightning = false;
+	  f rain_density = 200.000000;
+	}
 	[sun]
 	{
 		00h00m:color = 0xFF000000;
@@ -705,36 +688,18 @@
 		23h00m:color = 0xFF000000;
 	}
 
-	[fog]
-	{
-	  x fog_color = 0xFFE080D0;
-	  f fog_density = 0.500000;
-	  f fog_far_dist = 60.000000;
-	  f fog_lowdetail_far_dist = 40.000000;
-	  f fog_lowdetail_near_dist = 20.000000;
-	  f fog_near_dist = 30.000000;
-	}
-	[rain]
-	{
-	  b lightning = false;
-	  f rain_density = 200.000000;
-	}
-
 	[music]
 	{
 	  f ambient_intro_delay = 0.000000;
 	  f ambient_repeat_delay = 0.000000;
 		ambient_track = "s_e_ambient_wind_01b";
-	  f battle_intro_delay = 10.000000;
-	  f battle_repeat_delay = 10.000000;
-		battle_track = 10.000000;
-		room_type = rt_generic;
-	  f standard_intro_delay = 0.000000;
+	  f standard_intro_delay = 10.000000;
 	  f standard_repeat_delay = 10.000000;
-		standard_track = "s_m_Path2Crypts_04";
+		standard_track = "s_m_waterdungeon_01";
+		room_type = rt_generic;
 	}
 }
-[mood_setting*]
+[mood_setting*]  // bottom
 {
 	mood_name = eos_betelgeuse_moon_5;
   f transition_time = 5.000000;
@@ -743,9 +708,23 @@
 	[frustum]
 	{
 	  f frustum_height = 60.000000;
-	  f frustum_width = 45.000000;
+	  f frustum_width = 60.000000;
 	}
 
+	[fog]
+	{
+	  x fog_color = 0xFFD090D0;
+	  f fog_density = 0.500000;
+	  f fog_near_dist = 30.000000;
+	  f fog_far_dist = 60.000000;
+	  f fog_lowdetail_near_dist = 20.000000;
+	  f fog_lowdetail_far_dist = 40.000000;
+	}
+	[rain]
+	{
+	  b lightning = false;
+	  f rain_density = 100.000000;
+	}
 	[sun]
 	{
 		00h00m:color = 0xFF000000;
@@ -762,36 +741,18 @@
 		23h00m:color = 0xFF000000;
 	}
 
-	[fog]
-	{
-	  x fog_color = 0xFFE080D0;
-	  f fog_density = 0.500000;
-	  f fog_far_dist = 60.000000;
-	  f fog_lowdetail_far_dist = 40.000000;
-	  f fog_lowdetail_near_dist = 20.000000;
-	  f fog_near_dist = 30.000000;
-	}
-	[rain]
-	{
-	  b lightning = false;
-	  f rain_density = 100.000000;
-	}
-
 	[music]
 	{
 	  f ambient_intro_delay = 0.000000;
 	  f ambient_repeat_delay = 0.000000;
 		ambient_track = "s_e_ambient_wind_01";
-	  f battle_intro_delay = 10.000000;
-	  f battle_repeat_delay = 10.000000;
-		battle_track = 10.000000;
-		room_type = rt_generic;
-	  f standard_intro_delay = 0.000000;
+	  f standard_intro_delay = 10.000000;
 	  f standard_repeat_delay = 10.000000;
-		standard_track = "s_m_Path2Crypts_03";
+		standard_track = "s_m_waterdungeon_02";
+		room_type = rt_generic;
 	}
 }
-[mood_setting*]
+[mood_setting*]  // bottom
 {
 	mood_name = eos_betelgeuse_moon_6;
   f transition_time = 5.000000;
@@ -800,9 +761,23 @@
 	[frustum]
 	{
 	  f frustum_height = 60.000000;
-	  f frustum_width = 45.000000;
+	  f frustum_width = 60.000000;
 	}
 
+	[fog]
+	{
+	  x fog_color = 0xFFD090D0;
+	  f fog_density = 0.500000;
+	  f fog_near_dist = 30.000000;
+	  f fog_far_dist = 60.000000;
+	  f fog_lowdetail_near_dist = 20.000000;
+	  f fog_lowdetail_far_dist = 40.000000;
+	}
+	[rain]
+	{
+	  b lightning = true;
+	  f rain_density = 500.000000;
+	}
 	[sun]
 	{
 		00h00m:color = 0xFF000000;
@@ -819,32 +794,14 @@
 		23h00m:color = 0xFF000000;
 	}
 
-	[fog]
-	{
-	  x fog_color = 0xFFE080D0;
-	  f fog_density = 0.500000;
-	  f fog_far_dist = 60.000000;
-	  f fog_lowdetail_far_dist = 40.000000;
-	  f fog_lowdetail_near_dist = 20.000000;
-	  f fog_near_dist = 30.000000;
-	}
-	[rain]
-	{
-	  b lightning = true;
-	  f rain_density = 500.000000;
-	}
-
 	[music]
 	{
 	  f ambient_intro_delay = 0.000000;
 	  f ambient_repeat_delay = 0.000000;
 		ambient_track = "s_e_ambient_rain1";
-	  f battle_intro_delay = 10.000000;
-	  f battle_repeat_delay = 10.000000;
-		battle_track = 10.000000;
-		room_type = rt_generic;
-	  f standard_intro_delay = 0.000000;
+	  f standard_intro_delay = 10.000000;
 	  f standard_repeat_delay = 10.000000;
-		standard_track = "s_m_Path2Crypts_03";
+		standard_track = "s_m_waterdungeon_02";
+		room_type = rt_generic;
 	}
 }

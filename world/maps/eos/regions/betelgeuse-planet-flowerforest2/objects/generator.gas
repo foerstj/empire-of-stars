@@ -134,6 +134,40 @@
 	  p position = -2.41251,0,1.76497,0x427731f9;
 	}
 }
+[t:generator_generic,n:0x03700782]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_activate",0x03700782,0f,"default","every",0);
+			  b can_self_destruct = true;
+				condition* = party_member_within_sphere(50.000000,"on_every_enter");
+				condition* = has_go_in_inventory("local",0x00000000,"starstone_altair");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[generator_basic]
+	{
+		child_template_name = "spider_adolescent";
+	}
+	[placement]
+	{
+	  q orientation = 0,0.909145,0,0.41648;
+	  p position = -0.635862,0,1.48874,0xb3d565ad;
+	}
+}
 [t:generator_generic,n:0x03700780]
 {
 	[common]
@@ -200,74 +234,6 @@
 	{
 	  q orientation = 0,0.909145,0,0.41648;
 	  p position = 0.758755,0,-1.88545,0x8f9dde30;
-	}
-}
-[t:generator_generic,n:0x03700782]
-{
-	[common]
-	{
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = send_world_message("we_req_activate",0x03700782,0f,"default","every",0);
-			  b can_self_destruct = true;
-				condition* = party_member_within_sphere(50.000000,"on_every_enter");
-				condition* = has_go_in_inventory("local",0x00000000,"starstone_altair");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-		}
-	}
-	[generator_basic]
-	{
-		child_template_name = "spider_adolescent";
-	}
-	[placement]
-	{
-	  q orientation = 0,0.909145,0,0.41648;
-	  p position = -0.635862,0,1.48874,0xb3d565ad;
-	}
-}
-[t:generator_generic,n:0x03700784]
-{
-	[common]
-	{
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = send_world_message("we_req_activate",0x03700784,0f,"default","every",0);
-			  b can_self_destruct = true;
-				condition* = party_member_within_sphere(50.000000,"on_every_enter");
-				condition* = has_go_in_inventory("local",0x00000000,"starstone_altair");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-		}
-	}
-	[generator_basic]
-	{
-		child_template_name = "spider_adolescent";
-	}
-	[placement]
-	{
-	  q orientation = 0,0.909145,0,0.41648;
-	  p position = 3.50082,0,1.95626,0xf54f37c6;
 	}
 }
 [t:gen_bush_grass-wolf_gray,n:0x037008d4]
@@ -444,5 +410,39 @@
 	{
 	  q orientation = 0,0.909145,0,0.41648;
 	  p position = -0.215759,0,-0.927399,0x436c80a6;
+	}
+}
+[t:generator_generic,n:0x03700784]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_activate",0x03700784,0f,"default","every",0);
+			  b can_self_destruct = true;
+				condition* = party_member_within_sphere(50.000000,"on_every_enter");
+				condition* = has_go_in_inventory("local",0x00000000,"starstone_altair");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[generator_basic]
+	{
+		child_template_name = "spider_adolescent";
+	}
+	[placement]
+	{
+	  q orientation = 0,0.909145,0,0.41648;
+	  p position = 3.50082,0,1.95626,0xf54f37c6;
 	}
 }

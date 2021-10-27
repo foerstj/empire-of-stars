@@ -1,3 +1,24 @@
+[t:emt_sound,n:0x0550023a]
+{
+	[placement]
+	{
+	  q orientation = 0,-0.707107,0,0.707107;
+	  p position = -3.46596,-1.87238,-2.95354,0x46a17b64;
+	}
+	[sound_emitter]
+	{
+	  b continual_loop = true;
+		event_sound = "env_machinery";
+	}
+}
+[t:emt_light_ray_eos_setitem,n:0x05500305]
+{
+	[placement]
+	{
+	  q orientation = -0.0957874,0.003345,-0.0347388,0.99479;
+	  p position = 0.0116882,-0.45,-3.92651,0xe36f466d;
+	}
+}
 [t:emt_sound,n:0x05500192]
 {
 	[common]
@@ -13,48 +34,6 @@
 	{
 	  b continual_loop = true;
 		event_sound = "env_motors";
-	}
-}
-[t:emt_sound,n:0x0550023a]
-{
-	[placement]
-	{
-	  q orientation = 0,-0.707107,0,0.707107;
-	  p position = -3.46596,-1.87238,-2.95354,0x46a17b64;
-	}
-	[sound_emitter]
-	{
-	  b continual_loop = true;
-		event_sound = "env_machinery";
-	}
-}
-[t:emt_sound,n:0x05500186]
-{
-	[placement]
-	{
-	  p position = -0.231064,0.16391,-2.0918,0xf07d4ba0;
-	}
-	[sound_emitter]
-	{
-	  b continual_loop = true;
-		event_sound = "env_machinery";
-	}
-}
-[t:emt_sound,n:0x0550018d]
-{
-	[common]
-	{
-		dev_instance_text = "SOUND- conveyer";
-	}
-	[placement]
-	{
-	  q orientation = 0,0.707107,0,0.707107;
-	  p position = 1.89955,4.04804,-1.79414,0xad0d39c0;
-	}
-	[sound_emitter]
-	{
-	  b continual_loop = true;
-		event_sound = "env_conveyer";
 	}
 }
 [t:emt_sound,n:0x0550018b]
@@ -74,11 +53,32 @@
 		event_sound = "env_conveyer";
 	}
 }
-[t:emt_light_ray_eos_setitem,n:0x05500305]
+[t:emt_sound,n:0x0550018d]
+{
+	[common]
+	{
+		dev_instance_text = "SOUND- conveyer";
+	}
+	[placement]
+	{
+	  q orientation = 0,0.707107,0,0.707107;
+	  p position = 1.89955,4.04804,-1.79414,0xad0d39c0;
+	}
+	[sound_emitter]
+	{
+	  b continual_loop = true;
+		event_sound = "env_conveyer";
+	}
+}
+[t:emt_sound,n:0x05500186]
 {
 	[placement]
 	{
-	  q orientation = -0.0957874,0.003345,-0.0347388,0.99479;
-	  p position = 0.0116882,-0.45,-3.92651,0xe36f466d;
+	  p position = -0.231064,0.16391,-2.0918,0xf07d4ba0;
+	}
+	[sound_emitter]
+	{
+	  b continual_loop = true;
+		event_sound = "env_machinery";
 	}
 }

@@ -94,14 +94,14 @@ state Talk$
 
 	event OnEnterState$
 	{
-		if ( !Victory.IsQuestCompleted( "rigel_townsafety" , m_Target$) )
+		if ( !Victory.IsQuestCompleted( "rigel_wet_1_townsafety" , m_Target$) )
 		{
-			m_Go$.GetConversation.RSSelectConversation( "guardsman_during_a2_citysafety" );
+			m_Go$.GetConversation.RSSelectConversation( "guardsman_during_townsafety" );
 			TryAnim$('talk');
 		}		
 		else
 		{
-			m_Go$.GetConversation.RSSelectConversation( "guardsman_after_a2_citysafety" );
+			m_Go$.GetConversation.RSSelectConversation( "guardsman_after_townsafety" );
 			TryAnim$('talk');
 		}
 		m_Go$.GetConversation.RSActivateDialogue();

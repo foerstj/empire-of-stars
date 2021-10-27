@@ -1897,6 +1897,34 @@
 	  p position = -1.39799,0.2,-1.35343,0x4796af26;
 	}
 }
+[t:trigger_generic,n:0x00a005dc]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = set_player_world_location("ar_redplanet");
+			  b can_self_destruct = true;
+				condition* = party_member_within_sphere(8.000000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = false;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  p position = -2.86546,0,0.354065,0x081dd134;
+	}
+}
 [t:trigger_change_mood_box,n:0x00a000aa]
 {
 	[common]
@@ -1981,33 +2009,5 @@
 	[placement]
 	{
 	  p position = 0.962829,0.150001,-0.0282516,0xf237258c;
-	}
-}
-[t:trigger_generic,n:0x00a005dc]
-{
-	[common]
-	{
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = set_player_world_location("ar_redplanet");
-			  b can_self_destruct = true;
-				condition* = party_member_within_sphere(8.000000,"on_every_enter");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = false;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  p position = -2.86546,0,0.354065,0x081dd134;
 	}
 }

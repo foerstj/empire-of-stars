@@ -101,6 +101,34 @@
 	  p position = 0.496693,0,1.53178,0xefa61e45;
 	}
 }
+[t:trigger_generic,n:0x05200190]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = set_player_world_location("sr_machinemoon");
+			  b can_self_destruct = true;
+				condition* = party_member_within_sphere(6.000000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = false;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  p position = -2.06195,-4,-3.35266,0xc91703b8;
+	}
+}
 [t:use_point,n:0x052000ce]
 {
 	[placement]
@@ -113,79 +141,6 @@
 	[placement]
 	{
 	  p position = -0.97271,0,1.97658,0x3ba743c8;
-	}
-}
-[t:use_point,n:0x0520014b]
-{
-	[placement]
-	{
-	  p position = -0.750448,0,0.363052,0x1d6e5ec1;
-	}
-}
-[t:trigger_change_mood_box,n:0x0520002a]
-{
-	[common]
-	{
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = mood_change("eos_sirius_machinemoon_teleport");
-			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(2.000000,2.000000,2.000000,"on_every_enter");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  q orientation = 0,0.707106,0,0.707107;
-	  p position = 1.28072,0,0.8661,0xae570525;
-	}
-}
-[t:trigger_generic,n:0x052000ca]
-{
-	[common]
-	{
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = send_world_message("we_req_activate",0x052000CB,0f,"default","every",0);
-				action* = send_world_message("we_req_activate",0x0E000030,0f,"default","every",0);
-			  b can_self_destruct = true;
-				condition* = receive_world_message("we_req_activate",0,"on_every_message");
-				condition* = has_go_in_inventory("local",0x00000000,"starstone_sirius");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  p position = -0.00212288,0.199999,-1.63438,0xb2b4c9cd;
-	}
-}
-[t:use_point,n:0x05200076]
-{
-	[placement]
-	{
-	  p position = -0.402678,0.200001,-0.412758,0x1fe29358;
 	}
 }
 [t:trigger_generic,n:0x05200049]
@@ -250,6 +205,79 @@
 	  p position = -0.706745,0,0.640869,0xf22a4704;
 	}
 }
+[t:trigger_generic,n:0x052000ca]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_activate",0x052000CB,0f,"default","every",0);
+				action* = send_world_message("we_req_activate",0x0E000030,0f,"default","every",0);
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_req_activate",0,"on_every_message");
+				condition* = has_go_in_inventory("local",0x00000000,"starstone_sirius");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  p position = -0.00212288,0.199999,-1.63438,0xb2b4c9cd;
+	}
+}
+[t:use_point,n:0x05200076]
+{
+	[placement]
+	{
+	  p position = -0.402678,0.200001,-0.412758,0x1fe29358;
+	}
+}
+[t:trigger_change_mood_box,n:0x0520002a]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = mood_change("eos_sirius_machinemoon_teleport");
+			  b can_self_destruct = true;
+				condition* = party_member_within_bounding_box(2.000000,2.000000,2.000000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,0.707106,0,0.707107;
+	  p position = 1.28072,0,0.8661,0xae570525;
+	}
+}
+[t:use_point,n:0x0520014b]
+{
+	[placement]
+	{
+	  p position = -0.750448,0,0.363052,0x1d6e5ec1;
+	}
+}
 [t:use_point,n:0x052001a2]
 {
 	[placement]
@@ -270,6 +298,13 @@
 	[placement]
 	{
 	  p position = 3.54259,-2,-1.41691,0x73339ea8;
+	}
+}
+[t:use_point,n:0x052002f7]
+{
+	[placement]
+	{
+	  p position = -0.348562,0,0.312508,0xcda0ce26;
 	}
 }
 [t:trigger_generic,n:0x0520011c]
@@ -448,40 +483,5 @@
 	{
 	  q orientation = 0,1,0,0;
 	  p position = 1.07898,0,-0.674873,0x0c9b7671;
-	}
-}
-[t:use_point,n:0x052002f7]
-{
-	[placement]
-	{
-	  p position = -0.348562,0,0.312508,0xcda0ce26;
-	}
-}
-[t:trigger_generic,n:0x05200190]
-{
-	[common]
-	{
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = set_player_world_location("sr_machinemoon");
-			  b can_self_destruct = true;
-				condition* = party_member_within_sphere(6.000000,"on_every_enter");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = false;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  p position = -2.06195,-4,-3.35266,0xc91703b8;
 	}
 }

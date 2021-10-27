@@ -129,6 +129,7 @@
 {
 	[common]
 	{
+		dev_instance_text = "Lever";
 		[instance_triggers]
 		{
 			[*]
@@ -154,6 +155,35 @@
 	[placement]
 	{
 	  p position = 1.58048,-1.35,-1.68773,0x0a3c25f9;
+	}
+}
+[t:trigger_generic,n:0x04c00601]
+{
+	[common]
+	{
+		dev_instance_text = "PWL";
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = set_player_world_location("at_bigele");
+			  b can_self_destruct = true;
+				condition* = party_member_within_sphere(10.000000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = false;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  p position = -2.22379,-1.35,-1.41562,0x0a3c25f9;
 	}
 }
 [t:trigger_fade_node_box,n:0x04c0068d]
@@ -479,6 +509,35 @@
 	  p position = -0.243759,-11.8266,0.216507,0x4adea0b4;
 	}
 }
+[t:trigger_generic,n:0x04c00602]
+{
+	[common]
+	{
+		dev_instance_text = "PWL";
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = set_player_world_location("at_bigele");
+			  b can_self_destruct = true;
+				condition* = party_member_within_bounding_box(6.000000,1.000000,1.000000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = false;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  p position = -0.702644,-11.3461,7.18051,0x4adea0b4;
+	}
+}
 [t:trigger_fade_node_box,n:0x04c0068e]
 {
 	[common]
@@ -669,61 +728,5 @@
 	[placement]
 	{
 	  p position = -0.59494,0,1.55424,0x4ceb766a;
-	}
-}
-[t:trigger_generic,n:0x04c00601]
-{
-	[common]
-	{
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = set_player_world_location("at_bigele");
-			  b can_self_destruct = true;
-				condition* = party_member_within_sphere(10.000000,"on_every_enter");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = false;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  p position = -2.22379,-1.35,-1.41562,0x0a3c25f9;
-	}
-}
-[t:trigger_generic,n:0x04c00602]
-{
-	[common]
-	{
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = set_player_world_location("at_bigele");
-			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(6.000000,1.000000,1.000000,"on_every_enter");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = false;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  p position = -0.702644,-11.3461,7.18051,0x4adea0b4;
 	}
 }

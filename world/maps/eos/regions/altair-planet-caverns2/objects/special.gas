@@ -2,6 +2,7 @@
 {
 	[common]
 	{
+		dev_instance_text = "PWL";
 		[instance_triggers]
 		{
 			[*]
@@ -108,6 +109,36 @@
 	{
 	  q orientation = 0,0.707107,0,0.707107;
 	  p position = -0.135437,-5.5,0.453117,0x0a097dda;
+	}
+}
+[t:trigger_change_mood_box,n:0x0420024f]
+{
+	[common]
+	{
+		dev_instance_text = "StartPos: MOOD";
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = mood_change("eos_altair_fhc_r10_1");
+			  b can_self_destruct = true;
+				condition* = party_member_within_bounding_box(2.000000,1.000000,2.000000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,1,0,-1.3411e-007;
+	  p position = 0.245024,0,-3.61999,0x3cd4ac8a;
 	}
 }
 [t:blocking_object,n:0x04200184]
@@ -1111,7 +1142,7 @@
 		{
 			[*]
 			{
-				action* = mood_change("eos_altair_fhc_r8_2");
+				action* = mood_change("eos_altair_fhc_r11_1_1");
 			  b can_self_destruct = true;
 				condition* = party_member_within_bounding_box(5.500000,1.000000,0.700000,"on_every_enter");
 			  f delay = 0.000000;

@@ -1,0 +1,33 @@
+[effect_script*]
+{
+    name = pb_cat_meow;
+
+    script = [[
+        sound play s_e_gen_meow1 at #SOURCE_POSITION dist 1 8;
+    ]];
+}
+
+[effect_script*]
+{
+    name = pb_cat_meow_maybe;
+
+    script = [[
+        randrange 0 2;
+        set $temp #POP;
+
+        if ( $temp == 0 )
+        {
+            sound play s_e_gen_meow1 at #SOURCE_POSITION dist 1 8;
+        }
+        // other half of the cases stay quiet
+    ]];
+}
+
+[effect_script*]
+{
+    name = pb_cat_screech;
+
+    script = [[
+        sound play s_e_cat_die at #SOURCE_POSITION dist 1 8;
+    ]];
+}

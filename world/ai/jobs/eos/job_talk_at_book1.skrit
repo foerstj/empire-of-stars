@@ -2,11 +2,11 @@
   ============================================================================
   ----------------------------------------------------------------------------
 
-	File		: 	job_talk_elio.skrit
+	File		: 	job_talk_ardun.skrit
 
 	Author(s)	: 	Eric Tams, Chad Queen, Bartosz Kijanka
 
-	Purpose		: 	Custom talk job for Elio part of the Apprentice Ardun quest.
+	Purpose		: 	Custom talk job for a talking guard part of the Apprentice Ardun quest.
 
 	(C)opyright 2001 Gas Powered Games, Inc.
 
@@ -59,16 +59,16 @@ state Talk$
 	{
 		#only( game )
 		[[
-			if( ( Goid.InValidGoid != UIPartyManager.DoesActivePartyHaveTemplate( "book_glb_lore_altair_3", m_Target$ ) ) && !GameAuditor.GetDb.GetBool( "elio_gave_book" ) )
+			if( (Goid.InValidGoid != UIPartyManager.DoesActivePartyHaveTemplate( "book_glb_lore_altair_3", m_Target$ )) && !GameAuditor.GetDb.GetBool( "gave_book1" ) )
 			{
 				if( m_Target$.IsValid() ) 
 				{	
-					GameAuditor.GetDb.SetBool( "elio_gave_book", true );
+					GameAuditor.GetDb.SetBool( "gave_book1", true );
 					
 					SiegePos SpawnPos$;
 					
 					// make an amulet
-					GoCloneReq cloneReq$ = MakeGoCloneReq( "book_glb_lore_altair_2" );
+					GoCloneReq cloneReq$ = MakeGoCloneReq( "book_glb_lore_altair_1" );
 					
 					SpawnPos$ = m_Target$.go.placement.position;
 					cloneReq$.StartingPos	= SpawnPos$;
@@ -83,10 +83,11 @@ state Talk$
 					cloneReq$.SnapToTerrain = true;
 			        GoDb.SCloneGo( cloneReq$ );
 				}
-				m_Go$.GetConversation.RSSelectConversation( "conversation_book2" );
+				
+				m_Go$.GetConversation.RSSelectConversation( "conversation_book1" );
 				TryAnim$('talk');
 			} else {
-				m_Go$.GetConversation.RSSelectConversation( "conversation_book_no_quest" );
+				m_Go$.GetConversation.RSSelectConversation( "conversation_archer_guard2" );
 				TryAnim$('talk');
 			}
 		]]		

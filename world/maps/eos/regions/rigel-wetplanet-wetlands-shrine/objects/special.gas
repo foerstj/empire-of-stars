@@ -384,8 +384,8 @@
 				action* = send_world_message("we_req_activate",0x01601226,2f,"default","",0), doc("new room light on");
 				action* = send_world_message("we_req_activate",0x01601227,3f,"default","",0);
 				action* = send_world_message("we_trigger_activate",0x0160099F,0f,"default","",0), doc("quest/monster state checker off");
-				action* = change_quest_state("rigel_artifact","completed",0);
-				action* = change_quest_state("rigel_artifact_2","completed",0);
+				action* = change_quest_state("rigel_wet_shrine_artifact","completed",0);
+				action* = change_quest_state("rigel_wet_shrine_artifact_2","completed",0);
 			  b can_self_destruct = true;
 				condition* = receive_world_message("we_req_activate",0,"on_first_message"), doc("[*one-shot check (trigger is one-shot)*]");
 			  f delay = 0.000000;
@@ -485,7 +485,7 @@
 {
 	[check_quest]
 	{
-		quest_name = "rigel_artifact";
+		quest_name = "rigel_wet_shrine_artifact";
 	  x send_to_scid = 0x01600D7F;
 	}
 	[placement]
@@ -511,7 +511,7 @@
 {
 	[check_quest]
 	{
-		quest_name = "rigel_artifact_2";
+		quest_name = "rigel_wet_shrine_artifact_2";
 	  x send_to_scid = 0x01600D7B;
 	}
 	[placement]

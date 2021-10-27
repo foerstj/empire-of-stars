@@ -144,7 +144,7 @@ state Talk$
 				
 				m_Go$.GetConversation.RSSelectConversation( "conversation_apprentice_two_books" );
 				TryAnim$('talk');
-			} else if ( Victory.IsQuestCompleted( "quest_apprentice_books" ) ) {
+			} else if ( Victory.IsQuestCompleted( "altair_apprentice_books" ) ) {
 				m_Go$.GetConversation.RSSelectConversation( "conversation_apprentice_complete" );
 				TryAnim$('talk');
 			} else {

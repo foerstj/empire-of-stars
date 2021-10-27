@@ -166,7 +166,38 @@
 [t:template,n:eos_dragon]
 {
     specializes = dragon_base;
-    
+
+    // stats reduced
+	[actor]
+	{
+		[skills]
+		{
+			strength =  	110, 0;
+			intelligence =  37, 0;
+			dexterity =  	41, 0;
+			melee =  		48, 0;
+            combat_magic =  59, 0;
+		}
+	}
+    [aspect]
+    {
+		experience_value = 131072;
+		life = 16384;
+		max_life = 16384;
+		mana = 16384;
+		max_mana = 16384;
+    }
+	[inventory]
+	{
+		[other]
+		{
+			il_active_primary_spell=spell_eos_dragon_breath_long;
+			il_spell_1=spell_eos_dragon_breath_long;
+			il_spell_2=spell_eos_dragon_stomp;
+			il_spell_3=spell_eos_dragon_breath_short;
+		}
+	}
+
     [common]
     {
         screen_name = "Seth Queen";
@@ -175,6 +206,11 @@
 	[conversation] { }
 	[mind]
 	{
+		jat_cast	    				= world\ai\jobs\common\job_cast.skrit
+			?spell_by_range				= true
+			&use_base_duration			= false
+		    &rand_target				= true;
+
 		jat_talk = world\ai\jobs\common\job_talk.skrit;
 	}
 }

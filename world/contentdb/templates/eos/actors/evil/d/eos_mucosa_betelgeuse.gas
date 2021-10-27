@@ -1,0 +1,33 @@
+[t:template,n:eos_mucosa_betelgeuse]
+{
+	specializes = mucosa_base;
+	category_name = "1W_evil_d";
+	doc = "eos mucosa betelgeuse";
+
+	[aspect]
+	{
+		textures:0 = b_c_edm_mu-04;
+    }
+    [common]
+    {
+        screen_name = "Purple Mucosa";
+    }
+	[generator_in_object]
+	{
+		spawn_chance = 0.5;
+		child_template_name = body_glb_mucosa_04;
+	}
+	[physics]
+	{
+		[break_particulate]
+		{
+			frag_glb_mucosa_predator_01 = 1;
+			frag_glb_mucosa_predator_02 = 1;
+			frag_glb_mucosa_predator_03 = 2;
+			frag_glb_mucosa_predator_04 = 3;
+			frag_glb_mucosa_predator_05 = 1;
+			frag_glb_mucosa_predator_06 = 1;
+			frag_glb_mucosa_predator_07 = 3;
+		}
+	}
+}

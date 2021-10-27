@@ -2,23 +2,23 @@
   ============================================================================
   ----------------------------------------------------------------------------
 
-	File		: 	job_talk_jhay.skrit
+	File		: 	job_talk_shop_jewellery.skrit
 
-	Author(s)	: 	Bartosz Kijanka / Anu
+	Author(s)	: 	Anu Kirk (ripping off Chad Queen)
 
-	Purpose		: 	Make jhay (A2 NPC) talk goodly
+	Purpose		: 	shop_jewellery (a1_r1) talk skrit
 
-	(C)opyright 2003 Gas Powered Games, Inc. / Mad Doc Software, LLC
+	(C)opyright 2003 Mad Doc Software, LLC/Gas Powered Games, Inc.
 
   ----------------------------------------------------------------------------
   ============================================================================
 */
 
-Go			m_Go$;
-GoMind		m_Mind$;
-GoBody  	m_Body$;
-Job			m_Job$;
-Goid		m_Target$;
+Go		m_Go$;
+GoMind	m_Mind$;
+GoBody  m_Body$;
+Job		m_Job$;
+Goid	m_Target$;
 
 #include "k_job_c_mcp_fidget_utils"
 #include "k_job_c_talk_utils"
@@ -29,6 +29,7 @@ startup state STARTUP$
 
 ////////////////////////////////////////////////////////////////////////////////
 //	init
+
 event OnJobInitPointers$( Job job$ )
 {
 	m_Job$		= job$;
@@ -44,8 +45,9 @@ event OnJobInit$( Job job$ )
 
 	m_Target$	= job$.GoalObject;
 
-	SetState Face$;
+	SetState Talk$;  
 }
+
 
 ////////////////////////////////////////////////////////////////////////////////
 //	face the audience
@@ -57,7 +59,7 @@ state Face$
 	}
 
 	event OnEnterState$
-	{
+	{		
 		if( !m_Go$.HasConversation )
 		{
 			report.errorf( "Actor '%s', scid:0x%08x was told to run job_talk but he doesn't have a conversation component.",
@@ -65,7 +67,7 @@ state Face$
 							m_Go$.Goid );
 			SetState Exiting$;
 		}
-		MCPManager.MakeRequest( m_Go$.Goid, PL_FACE, m_Target$ );
+		MCPManager.MakeRequest( m_Go$.Goid, PL_FACE, m_Target$ );	
 	}
 }
 
@@ -92,27 +94,16 @@ state Talk$
 
 	event OnEnterState$
 	{
-		// if the city is unsafe, never even try to sell
-		if ( !Victory.IsQuestCompleted( "rigel_townsafety" , m_Target$) )
+		if ( !Victory.IsQuestCompleted( "rigel_wet_1_townsafety" , m_Target$) )
 		{
-			 m_Go$.GetConversation.RSSelectConversation( "jhay_during_a2_citysafety" );
+			 m_Go$.GetConversation.RSSelectConversation( "shop_jewellery_during_townsafety" );
 			 TryAnim$('talk');
 		}		
-		// if the city is safe, check to see if we have one to sell
-		else if ( 	Victory.IsQuestCompleted( "rigel_townsafety" , m_Target$) &&
-				( 	m_Go$.GetStore().GetNumHires() == 1 ) )				
-			{		
-				m_Go$.GetConversation.RSSelectConversation( "jhay_after_a2_citysafety" );
-				TryAnim$('talk');
-			}
-			
-			// none left..can't sell you any	
-			else if ( m_Go$.GetStore().GetNumHires() == 0 )
-			{		
-					m_Go$.GetConversation.RSSelectConversation( "jhay_after_a2_citysafety_sold" );
-					TryAnim$('talk');
-			}	
-
+		else
+		{
+			m_Go$.GetConversation.RSSelectConversation( "shop_jewellery_after_townsafety" );
+			TryAnim$('talk');
+		}
 		m_Go$.GetConversation.RSActivateDialogue();
 	}
 }
@@ -124,12 +115,6 @@ state Exiting$
 {
 	event OnEnterState$
 	{
-		// $$$ close up any dialogs here...
-
-		// Send a PL_FACE reguest without a target so that they no longer
-		// continue to face the character they were talking to
-		MCPManager.MakeRequest( m_Go$.Goid, PL_FACE );
-
 		m_Job$.MarkForDeletion();
 	}
 }
