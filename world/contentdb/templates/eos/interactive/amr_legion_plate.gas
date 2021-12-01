@@ -20,28 +20,6 @@
 		inventory_icon = b_gui_ig_i_a_pos_a3_016;
 	}
 }
-[t:template,n:bd_ro_un_m_g_c_eos_base]
-{
-	doc = "Legionnaire Robe";
-	specializes = base_body_armor_cloth;
-	[common]
-	{
-	  b allow_modifiers = false;
-        is_pcontent_allowed = false;
-		screen_name = "Legionnaire Robe";
-	}
-	[defend]
-	{
-		armor_style = rdlegro;
-		armor_type = a7;
-	}
-	[gui]
-	{
-		inventory_height = 2;
-		inventory_width = 2;
-		inventory_icon = b_gui_ig_i_a_pos_a7_rdlegro;
-	}
-}
 
 [t:template,n:bd_un_pl_f_g_c_eos_m1]
 {
@@ -67,30 +45,6 @@
 		equip_requirements = dexterity:22;
 	}
 }
-[t:template,n:bd_ro_un_m_g_c_eos_c1]
-{
-	specializes = bd_ro_un_m_g_c_eos_base;
-	[defend]
-	{
-	  f defense = 50;
-	}
-	[gui]
-	{
-		equip_requirements = intelligence:24;
-	}
-}
-[t:template,n:bd_ro_un_m_g_c_eos_n1]
-{
-	specializes = bd_ro_un_m_g_c_eos_base;
-	[defend]
-	{
-	  f defense = 50;
-	}
-	[gui]
-	{
-		equip_requirements = intelligence:24;
-	}
-}
 
 [t:template,n:bd_un_pl_f_g_c_eos_2_base]
 {
@@ -114,6 +68,7 @@
 		inventory_icon = b_gui_ig_i_a_pos_a3_014;
 	}
 }
+
 [t:template,n:bd_un_pl_f_g_c_eos_m2]
 {
 	specializes = bd_un_pl_f_g_c_eos_2_base;
@@ -136,29 +91,5 @@
 	[gui]
 	{
 		equip_requirements = dexterity:25;
-	}
-}
-[t:template,n:bd_ro_un_m_g_c_eos_c2]
-{
-	specializes = bd_ro_un_m_g_c_eos_base;
-	[defend]
-	{
-	  f defense = 100;
-	}
-	[gui]
-	{
-		equip_requirements = intelligence:25;
-	}
-}
-[t:template,n:bd_ro_un_m_g_c_eos_n2]
-{
-	specializes = bd_ro_un_m_g_c_eos_base;
-	[defend]
-	{
-	  f defense = 100;
-	}
-	[gui]
-	{
-		equip_requirements = intelligence:25;
 	}
 }
