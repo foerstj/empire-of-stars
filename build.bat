@@ -33,7 +33,7 @@ if %errorlevel% neq 0 pause
 venv\Scripts\python -m build.check_tips %map%
 if %errorlevel% neq 0 pause
 setlocal enableDelayedExpansion
-if not "%mode%"=="light" (
+if "%mode%"=="release" (
   venv\Scripts\python -m build.check_cam_blocks %map%
   if !errorlevel! neq 0 pause
 )
@@ -67,9 +67,10 @@ if %errorlevel% neq 0 pause
 if not "%mode%"=="light" (
   :: Compile German language resource file
   call "%doc_dsloa%\Bits\build-de.bat"
+)
+if "%mode%"=="release" (
   :: Compile non-nude overlay resource file
-  :: (uncomment this if those polygon boobs are too much for you)
-  ::call "%doc_dsloa%\Bits\build-nn.bat"
+  call "%doc_dsloa%\Bits\build-nn.bat"
 )
 
 :: Cleanup
