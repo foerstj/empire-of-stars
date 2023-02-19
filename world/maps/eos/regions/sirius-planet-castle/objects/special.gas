@@ -162,7 +162,7 @@
 				action* = send_world_message("we_req_activate",0x0460085F,0f,"0x4003","",0), doc("nis");
 				action* = send_world_message("we_req_activate",0x046003A7,0f,"default","every",0), doc("nis mood");
 			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(1.000000,0.500000,4.000000,"on_first_enter"), doc("[*one-shot check (trigger is one-shot)*]");
+				condition* = party_member_within_bounding_box(1.000000,1.000000,4.000000,"on_first_enter"), doc("[*one-shot check (trigger is one-shot)*]");
 			  f delay = 0.000000;
 			  b flip_flop = false;
 			  b multi_player = false;
@@ -191,7 +191,7 @@
 			{
 				action* = set_interest_radius(10f,"party_member_within_bounding_box");
 			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(2.000000,0.500000,1.000000,"on_every_enter");
+				condition* = party_member_within_bounding_box(2.000000,1.000000,1.000000,"on_every_enter");
 			  f delay = 0.000000;
 			  b flip_flop = false;
 			  b multi_player = true;
@@ -225,7 +225,7 @@
 			{
 				action* = set_interest_radius(30f,"party_member_within_bounding_box");
 			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(2.000000,0.500000,1.000000,"on_every_enter");
+				condition* = party_member_within_bounding_box(2.000000,1.000000,1.000000,"on_every_enter");
 			  f delay = 0.000000;
 			  b flip_flop = false;
 			  b multi_player = true;
@@ -259,7 +259,7 @@
 			{
 				action* = send_world_message("we_req_deactivate",0x04600773,0f,"default","",0);
 			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(8.000000,0.500000,0.500000,"on_every_enter");
+				condition* = party_member_within_bounding_box(8.000000,1.000000,1.000000,"on_every_enter");
 			  f delay = 0.000000;
 			  b flip_flop = false;
 			  b multi_player = true;
@@ -288,7 +288,7 @@
 			{
 				action* = send_world_message("we_req_activate",0x04600773,0f,"default","",0);
 			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(8.000000,0.500000,0.500000,"on_every_enter");
+				condition* = party_member_within_bounding_box(8.000000,1.000000,1.000000,"on_every_enter");
 			  f delay = 0.000000;
 			  b flip_flop = false;
 			  b multi_player = true;
@@ -375,7 +375,7 @@
 			{
 				action* = set_interest_radius(20f,"party_member_within_bounding_box");
 			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(2.500000,1.000000,0.500000,"on_every_enter");
+				condition* = party_member_within_bounding_box(2.500000,1.000000,1.000000,"on_every_enter");
 			  f delay = 0.000000;
 			  b flip_flop = false;
 			  b multi_player = true;
@@ -409,7 +409,7 @@
 			{
 				action* = set_interest_radius(30f,"party_member_within_bounding_box");
 			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(2.500000,1.000000,0.500000,"on_every_enter");
+				condition* = party_member_within_bounding_box(2.500000,1.000000,1.000000,"on_every_enter");
 			  f delay = 0.000000;
 			  b flip_flop = false;
 			  b multi_player = true;
@@ -442,7 +442,7 @@
 			{
 				action* = send_world_message("we_req_activate",0x04600774,0f,"default","",0);
 			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(2.000000,1.000000,0.500000,"on_every_enter");
+				condition* = party_member_within_bounding_box(2.000000,1.000000,1.000000,"on_every_enter");
 			  f delay = 0.000000;
 			  b flip_flop = false;
 			  b multi_player = true;
@@ -471,7 +471,7 @@
 			{
 				action* = send_world_message("we_req_deactivate",0x04600774,0f,"default","",0);
 			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(2.000000,1.000000,0.500000,"on_every_enter");
+				condition* = party_member_within_bounding_box(2.000000,1.000000,1.000000,"on_every_enter");
 			  f delay = 0.000000;
 			  b flip_flop = false;
 			  b multi_player = true;
@@ -562,7 +562,7 @@
 			{
 				action* = set_interest_radius(10f,"party_member_within_bounding_box");
 			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(3.000000,0.500000,1.000000,"on_every_enter");
+				condition* = party_member_within_bounding_box(3.000000,1.000000,1.000000,"on_every_enter");
 			  f delay = 0.000000;
 			  b flip_flop = false;
 			  b multi_player = true;
@@ -596,7 +596,7 @@
 			{
 				action* = set_interest_radius(20f,"party_member_within_bounding_box");
 			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(3.000000,0.500000,1.000000,"on_every_enter");
+				condition* = party_member_within_bounding_box(3.000000,1.000000,1.000000,"on_every_enter");
 			  f delay = 0.000000;
 			  b flip_flop = false;
 			  b multi_player = true;
@@ -611,7 +611,7 @@
 			{
 				action* = send_world_message("we_req_activate",0x046003B1,0f,"default","every",0);
 			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(3.000000,0.500000,1.000000,"on_first_enter");
+				condition* = party_member_within_bounding_box(3.000000,1.000000,1.000000,"on_first_enter");
 			  f delay = 0.000000;
 			  b flip_flop = false;
 			  b multi_player = false;
@@ -1254,7 +1254,7 @@
 			{
 				action* = set_interest_radius(20f,"party_member_within_bounding_box");
 			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(2.500000,1.000000,0.500000,"on_every_enter");
+				condition* = party_member_within_bounding_box(2.500000,1.000000,1.000000,"on_every_enter");
 			  f delay = 0.000000;
 			  b flip_flop = false;
 			  b multi_player = true;
@@ -1288,7 +1288,7 @@
 			{
 				action* = set_interest_radius(10f,"party_member_within_bounding_box");
 			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(2.500000,1.000000,0.500000,"on_every_enter");
+				condition* = party_member_within_bounding_box(2.500000,1.000000,1.000000,"on_every_enter");
 			  f delay = 0.000000;
 			  b flip_flop = false;
 			  b multi_player = true;
@@ -1322,7 +1322,7 @@
 			{
 				action* = send_world_message("we_req_deactivate",0x04600783,0f,"default","",0);
 			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(2.100000,0.500000,0.500000,"on_every_enter");
+				condition* = party_member_within_bounding_box(2.100000,1.000000,1.000000,"on_every_enter");
 			  f delay = 0.000000;
 			  b flip_flop = false;
 			  b multi_player = true;
@@ -1352,7 +1352,7 @@
 			{
 				action* = send_world_message("we_req_activate",0x04600783,0f,"default","",0);
 			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(2.100000,0.500000,0.500000,"on_every_enter");
+				condition* = party_member_within_bounding_box(2.100000,1.000000,1.000000,"on_every_enter");
 			  f delay = 0.000000;
 			  b flip_flop = false;
 			  b multi_player = true;
@@ -1410,7 +1410,7 @@
 			{
 				action* = set_interest_radius(10f,"party_member_within_bounding_box");
 			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(2.500000,1.000000,0.500000,"on_every_enter");
+				condition* = party_member_within_bounding_box(2.500000,1.000000,1.000000,"on_every_enter");
 			  f delay = 0.000000;
 			  b flip_flop = false;
 			  b multi_player = true;
@@ -1444,7 +1444,7 @@
 			{
 				action* = set_interest_radius(20f,"party_member_within_bounding_box");
 			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(2.500000,1.000000,0.500000,"on_every_enter");
+				condition* = party_member_within_bounding_box(2.500000,1.000000,1.000000,"on_every_enter");
 			  f delay = 0.000000;
 			  b flip_flop = false;
 			  b multi_player = true;
@@ -1478,7 +1478,7 @@
 			{
 				action* = set_interest_radius(20f,"party_member_within_bounding_box");
 			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(2.500000,1.000000,0.500000,"on_every_enter");
+				condition* = party_member_within_bounding_box(2.500000,1.000000,1.000000,"on_every_enter");
 			  f delay = 0.000000;
 			  b flip_flop = false;
 			  b multi_player = true;
@@ -1512,7 +1512,7 @@
 			{
 				action* = set_interest_radius(10f,"party_member_within_bounding_box");
 			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(2.500000,1.000000,0.500000,"on_every_enter");
+				condition* = party_member_within_bounding_box(2.500000,1.000000,1.000000,"on_every_enter");
 			  f delay = 0.000000;
 			  b flip_flop = false;
 			  b multi_player = true;
@@ -1546,7 +1546,7 @@
 			{
 				action* = send_world_message("we_req_deactivate",0x04600772,0f,"default","",0);
 			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(2.000000,0.500000,0.500000,"on_every_enter");
+				condition* = party_member_within_bounding_box(2.000000,1.000000,1.000000,"on_every_enter");
 			  f delay = 0.000000;
 			  b flip_flop = false;
 			  b multi_player = true;
@@ -1576,7 +1576,7 @@
 			{
 				action* = send_world_message("we_req_activate",0x04600772,0f,"default","",0);
 			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(2.000000,0.500000,0.500000,"on_every_enter");
+				condition* = party_member_within_bounding_box(2.000000,1.000000,1.000000,"on_every_enter");
 			  f delay = 0.000000;
 			  b flip_flop = false;
 			  b multi_player = true;
@@ -1607,7 +1607,7 @@
 				action* = send_world_message("we_req_activate",0x0460077C,0f,"default","",0);
 				action* = send_world_message("we_req_activate",0x04600794,0f,"default","",0);
 			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(2.000000,0.500000,0.500000,"on_every_enter");
+				condition* = party_member_within_bounding_box(2.000000,1.000000,1.000000,"on_every_enter");
 			  f delay = 0.000000;
 			  b flip_flop = false;
 			  b multi_player = true;
@@ -1638,7 +1638,7 @@
 				action* = send_world_message("we_req_activate",0x0460077C,0f,"default","",0);
 				action* = send_world_message("we_req_activate",0x04600794,0f,"default","",0);
 			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(2.000000,0.500000,0.500000,"on_every_enter");
+				condition* = party_member_within_bounding_box(2.000000,1.000000,1.000000,"on_every_enter");
 			  f delay = 0.000000;
 			  b flip_flop = false;
 			  b multi_player = true;
@@ -1668,7 +1668,7 @@
 			{
 				action* = send_world_message("we_req_deactivate",0x04600783,0f,"default","",0);
 			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(2.000000,0.500000,0.500000,"on_every_enter");
+				condition* = party_member_within_bounding_box(2.000000,1.000000,1.000000,"on_every_enter");
 			  f delay = 0.000000;
 			  b flip_flop = false;
 			  b multi_player = true;
@@ -1698,7 +1698,7 @@
 			{
 				action* = send_world_message("we_req_activate",0x04600783,0f,"default","",0);
 			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(2.000000,0.500000,0.500000,"on_every_enter");
+				condition* = party_member_within_bounding_box(2.000000,1.000000,1.000000,"on_every_enter");
 			  f delay = 0.000000;
 			  b flip_flop = false;
 			  b multi_player = true;
@@ -1813,7 +1813,7 @@
 				action* = send_world_message("we_req_deactivate",0x0460077C,0f,"default","",0);
 				action* = send_world_message("we_req_deactivate",0x04600794,0f,"default","",0);
 			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(2.000000,0.500000,0.500000,"on_every_enter");
+				condition* = party_member_within_bounding_box(2.000000,1.000000,1.000000,"on_every_enter");
 			  f delay = 0.000000;
 			  b flip_flop = false;
 			  b multi_player = true;
@@ -1981,7 +1981,7 @@
 			{
 				action* = send_world_message("we_req_deactivate",0x04600782,0f,"default","",0);
 			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(2.000000,0.500000,0.500000,"on_every_enter");
+				condition* = party_member_within_bounding_box(2.000000,1.000000,1.000000,"on_every_enter");
 			  f delay = 0.000000;
 			  b flip_flop = false;
 			  b multi_player = true;
@@ -2011,7 +2011,7 @@
 			{
 				action* = send_world_message("we_req_activate",0x04600782,0f,"default","",0);
 			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(2.000000,0.500000,0.500000,"on_every_enter");
+				condition* = party_member_within_bounding_box(2.000000,1.000000,1.000000,"on_every_enter");
 			  f delay = 0.000000;
 			  b flip_flop = false;
 			  b multi_player = true;
@@ -2113,7 +2113,7 @@
 			{
 				action* = send_world_message("we_req_deactivate",0x04600782,0f,"default","",0);
 			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(2.000000,0.500000,0.500000,"on_every_enter");
+				condition* = party_member_within_bounding_box(2.000000,1.000000,1.000000,"on_every_enter");
 			  f delay = 0.000000;
 			  b flip_flop = false;
 			  b multi_player = true;
@@ -2143,7 +2143,7 @@
 			{
 				action* = send_world_message("we_req_activate",0x04600782,0f,"default","",0);
 			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(2.000000,0.500000,0.500000,"on_every_enter");
+				condition* = party_member_within_bounding_box(2.000000,1.000000,1.000000,"on_every_enter");
 			  f delay = 0.000000;
 			  b flip_flop = false;
 			  b multi_player = true;
@@ -2173,7 +2173,7 @@
 			{
 				action* = send_world_message("we_req_deactivate",0x0460077D,0f,"default","",0);
 			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(2.000000,0.500000,0.500000,"on_every_enter");
+				condition* = party_member_within_bounding_box(2.000000,1.000000,1.000000,"on_every_enter");
 			  f delay = 0.000000;
 			  b flip_flop = false;
 			  b multi_player = true;
@@ -2204,7 +2204,7 @@
 				action* = send_world_message("we_req_deactivate",0x0460077C,0f,"default","",0);
 				action* = send_world_message("we_req_deactivate",0x04600794,0f,"default","",0);
 			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(2.000000,0.500000,0.500000,"on_every_enter");
+				condition* = party_member_within_bounding_box(2.000000,1.000000,1.000000,"on_every_enter");
 			  f delay = 0.000000;
 			  b flip_flop = false;
 			  b multi_player = true;
@@ -2241,7 +2241,7 @@
 			{
 				action* = send_world_message("we_req_activate",0x0460077D,0f,"default","",0);
 			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(2.000000,0.500000,0.500000,"on_every_enter");
+				condition* = party_member_within_bounding_box(2.000000,1.000000,1.000000,"on_every_enter");
 			  f delay = 0.000000;
 			  b flip_flop = false;
 			  b multi_player = true;
@@ -2343,7 +2343,7 @@
 			{
 				action* = set_interest_radius(4f,"party_member_within_bounding_box");
 			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(2.500000,1.000000,0.500000,"on_every_enter");
+				condition* = party_member_within_bounding_box(2.500000,1.000000,1.000000,"on_every_enter");
 			  f delay = 0.000000;
 			  b flip_flop = false;
 			  b multi_player = true;
@@ -2377,7 +2377,7 @@
 			{
 				action* = set_interest_radius(20f,"party_member_within_bounding_box");
 			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(2.500000,1.000000,0.500000,"on_every_enter");
+				condition* = party_member_within_bounding_box(2.500000,1.000000,1.000000,"on_every_enter");
 			  f delay = 0.000000;
 			  b flip_flop = false;
 			  b multi_player = true;
@@ -2447,7 +2447,7 @@
 			{
 				action* = send_world_message("we_req_activate",0x0460078D,0f,"default","",0);
 			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(2.000000,1.000000,0.500000,"on_every_enter");
+				condition* = party_member_within_bounding_box(2.000000,1.000000,1.000000,"on_every_enter");
 			  f delay = 0.000000;
 			  b flip_flop = false;
 			  b multi_player = true;
@@ -2477,7 +2477,7 @@
 			{
 				action* = send_world_message("we_req_deactivate",0x0460078D,0f,"default","",0);
 			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(2.000000,1.000000,0.500000,"on_every_enter");
+				condition* = party_member_within_bounding_box(2.000000,1.000000,1.000000,"on_every_enter");
 			  f delay = 0.000000;
 			  b flip_flop = false;
 			  b multi_player = true;
@@ -2551,7 +2551,7 @@
 			{
 				action* = send_world_message("we_req_activate",0x0460078D,0f,"default","",0);
 			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(2.000000,1.000000,0.500000,"on_every_enter");
+				condition* = party_member_within_bounding_box(2.000000,1.000000,1.000000,"on_every_enter");
 			  f delay = 0.000000;
 			  b flip_flop = false;
 			  b multi_player = true;
@@ -2580,7 +2580,7 @@
 			{
 				action* = send_world_message("we_req_deactivate",0x0460078D,0f,"default","",0);
 			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(2.000000,1.000000,0.500000,"on_every_enter");
+				condition* = party_member_within_bounding_box(2.000000,1.000000,1.000000,"on_every_enter");
 			  f delay = 0.000000;
 			  b flip_flop = false;
 			  b multi_player = true;
@@ -2653,7 +2653,7 @@
 			{
 				action* = set_interest_radius(20f,"party_member_within_bounding_box");
 			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(2.500000,1.000000,0.500000,"on_every_enter");
+				condition* = party_member_within_bounding_box(2.500000,1.000000,1.000000,"on_every_enter");
 			  f delay = 0.000000;
 			  b flip_flop = false;
 			  b multi_player = true;
@@ -2687,7 +2687,7 @@
 			{
 				action* = set_interest_radius(10f,"party_member_within_bounding_box");
 			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(2.500000,1.000000,0.500000,"on_every_enter");
+				condition* = party_member_within_bounding_box(2.500000,1.000000,1.000000,"on_every_enter");
 			  f delay = 0.000000;
 			  b flip_flop = false;
 			  b multi_player = true;
@@ -2722,7 +2722,7 @@
 				action* = send_world_message("we_req_deactivate",0x0460078E,0f,"default","",0);
 				action* = send_world_message("we_req_deactivate",0x0460078C,0f,"default","",0);
 			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(8.000000,1.000000,0.500000,"on_every_enter");
+				condition* = party_member_within_bounding_box(8.000000,1.000000,1.000000,"on_every_enter");
 			  f delay = 0.000000;
 			  b flip_flop = false;
 			  b multi_player = true;
@@ -2753,7 +2753,7 @@
 				action* = send_world_message("we_req_activate",0x0460078E,0f,"default","",0);
 				action* = send_world_message("we_req_activate",0x0460078C,0f,"default","",0);
 			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(8.000000,1.000000,0.500000,"on_every_enter");
+				condition* = party_member_within_bounding_box(8.000000,1.000000,1.000000,"on_every_enter");
 			  f delay = 0.000000;
 			  b flip_flop = false;
 			  b multi_player = true;
@@ -2785,7 +2785,7 @@
 				action* = send_world_message("we_req_activate",0x0460078E,0f,"default","",0);
 				action* = send_world_message("we_req_activate",0x0460078C,0f,"default","",0);
 			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(8.000000,1.000000,0.500000,"on_every_enter");
+				condition* = party_member_within_bounding_box(8.000000,1.000000,1.000000,"on_every_enter");
 			  f delay = 0.000000;
 			  b flip_flop = false;
 			  b multi_player = true;
@@ -2815,7 +2815,7 @@
 			{
 				action* = send_world_message("we_req_deactivate",0x0460078D,0f,"default","",0);
 			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(2.000000,1.000000,0.500000,"on_every_enter");
+				condition* = party_member_within_bounding_box(2.000000,1.000000,1.000000,"on_every_enter");
 			  f delay = 0.000000;
 			  b flip_flop = false;
 			  b multi_player = true;
@@ -2845,7 +2845,7 @@
 			{
 				action* = send_world_message("we_req_activate",0x0460078D,0f,"default","",0);
 			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(2.000000,1.000000,0.500000,"on_every_enter");
+				condition* = party_member_within_bounding_box(2.000000,1.000000,1.000000,"on_every_enter");
 			  f delay = 0.000000;
 			  b flip_flop = false;
 			  b multi_player = true;
@@ -2877,7 +2877,7 @@
 				action* = send_world_message("we_req_activate",0x04600794,0f,"default","",0);
 				action* = send_world_message("we_req_deactivate",0x04600778,0f,"default","",0);
 			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(2.000000,0.500000,0.500000,"on_every_enter");
+				condition* = party_member_within_bounding_box(2.000000,1.000000,1.000000,"on_every_enter");
 			  f delay = 0.000000;
 			  b flip_flop = false;
 			  b multi_player = true;
@@ -2907,7 +2907,7 @@
 			{
 				action* = send_world_message("we_req_deactivate",0x04600791,0f,"default","",0);
 			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(4.000000,0.500000,0.500000,"on_every_enter");
+				condition* = party_member_within_bounding_box(4.000000,1.000000,1.000000,"on_every_enter");
 			  f delay = 0.000000;
 			  b flip_flop = false;
 			  b multi_player = true;
@@ -2936,7 +2936,7 @@
 			{
 				action* = send_world_message("we_req_activate",0x04600791,0f,"default","",0);
 			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(4.000000,0.500000,0.500000,"on_every_enter");
+				condition* = party_member_within_bounding_box(4.000000,1.000000,1.000000,"on_every_enter");
 			  f delay = 0.000000;
 			  b flip_flop = false;
 			  b multi_player = true;
@@ -3064,7 +3064,7 @@
 				action* = send_world_message("we_req_deactivate",0x04600794,0f,"default","",0);
 				action* = send_world_message("we_req_activate",0x04600778,0f,"default","",0);
 			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(2.000000,0.500000,0.500000,"on_every_enter");
+				condition* = party_member_within_bounding_box(2.000000,1.000000,1.000000,"on_every_enter");
 			  f delay = 0.000000;
 			  b flip_flop = false;
 			  b multi_player = true;
@@ -3095,7 +3095,7 @@
 				action* = send_world_message("we_req_deactivate",0x04600792,0f,"default","",0);
 				action* = send_world_message("we_req_deactivate",0x04600793,0f,"default","",0);
 			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(8.000000,0.500000,0.500000,"on_every_enter");
+				condition* = party_member_within_bounding_box(8.000000,1.000000,1.000000,"on_every_enter");
 			  f delay = 0.000000;
 			  b flip_flop = false;
 			  b multi_player = true;
@@ -3125,7 +3125,7 @@
 				action* = send_world_message("we_req_activate",0x04600792,0f,"default","",0);
 				action* = send_world_message("we_req_activate",0x04600793,0f,"default","",0);
 			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(8.000000,0.500000,0.500000,"on_every_enter");
+				condition* = party_member_within_bounding_box(8.000000,1.000000,1.000000,"on_every_enter");
 			  f delay = 0.000000;
 			  b flip_flop = false;
 			  b multi_player = true;
@@ -3155,7 +3155,7 @@
 				action* = send_world_message("we_req_deactivate",0x04600791,0f,"default","",0);
 				action* = send_world_message("we_req_deactivate",0x04600778,0f,"default","",0);
 			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(2.000000,0.500000,0.500000,"on_every_enter");
+				condition* = party_member_within_bounding_box(2.000000,1.000000,1.000000,"on_every_enter");
 			  f delay = 0.000000;
 			  b flip_flop = false;
 			  b multi_player = true;
@@ -3186,7 +3186,7 @@
 				action* = send_world_message("we_req_activate",0x04600791,0f,"default","",0);
 				action* = send_world_message("we_req_activate",0x04600778,0f,"default","",0);
 			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(2.000000,0.500000,0.500000,"on_every_enter");
+				condition* = party_member_within_bounding_box(2.000000,1.000000,1.000000,"on_every_enter");
 			  f delay = 0.000000;
 			  b flip_flop = false;
 			  b multi_player = true;
@@ -3229,7 +3229,7 @@
 			{
 				action* = send_world_message("we_req_deactivate",0x04600774,0f,"default","",0);
 			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(2.000000,1.000000,0.500000,"on_every_enter");
+				condition* = party_member_within_bounding_box(2.000000,1.000000,1.000000,"on_every_enter");
 			  f delay = 0.000000;
 			  b flip_flop = false;
 			  b multi_player = true;
@@ -3257,7 +3257,7 @@
 			{
 				action* = send_world_message("we_req_activate",0x04600774,0f,"default","",0);
 			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(2.000000,1.000000,0.500000,"on_every_enter");
+				condition* = party_member_within_bounding_box(2.000000,1.000000,1.000000,"on_every_enter");
 			  f delay = 0.000000;
 			  b flip_flop = false;
 			  b multi_player = true;
@@ -3285,7 +3285,7 @@
 			{
 				action* = send_world_message("we_req_activate",0x04600774,0f,"default","",0);
 			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(2.000000,0.500000,0.500000,"on_every_enter");
+				condition* = party_member_within_bounding_box(2.000000,1.000000,1.000000,"on_every_enter");
 			  f delay = 0.000000;
 			  b flip_flop = false;
 			  b multi_player = true;
@@ -3314,7 +3314,7 @@
 			{
 				action* = send_world_message("we_req_deactivate",0x04600774,0f,"default","",0);
 			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(2.000000,0.500000,0.500000,"on_every_enter");
+				condition* = party_member_within_bounding_box(2.000000,1.000000,1.000000,"on_every_enter");
 			  f delay = 0.000000;
 			  b flip_flop = false;
 			  b multi_player = true;
@@ -3566,7 +3566,7 @@
 				action* = send_world_message("we_req_deactivate",0x0460078E,0f,"default","",0);
 				action* = send_world_message("we_req_deactivate",0x0460078C,0f,"default","",0);
 			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(8.000000,1.000000,0.500000,"on_every_enter");
+				condition* = party_member_within_bounding_box(8.000000,1.000000,1.000000,"on_every_enter");
 			  f delay = 0.000000;
 			  b flip_flop = false;
 			  b multi_player = true;
@@ -3596,7 +3596,7 @@
 			{
 				action* = set_interest_radius(4f,"party_member_within_bounding_box");
 			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(2.500000,1.000000,0.500000,"on_every_enter");
+				condition* = party_member_within_bounding_box(2.500000,1.000000,1.000000,"on_every_enter");
 			  f delay = 0.000000;
 			  b flip_flop = false;
 			  b multi_player = true;
@@ -3630,7 +3630,7 @@
 			{
 				action* = set_interest_radius(20f,"party_member_within_bounding_box");
 			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(2.500000,1.000000,0.500000,"on_every_enter");
+				condition* = party_member_within_bounding_box(2.500000,1.000000,1.000000,"on_every_enter");
 			  f delay = 0.000000;
 			  b flip_flop = false;
 			  b multi_player = true;
@@ -3882,7 +3882,7 @@
 			[*]
 			{
 			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(1.000000,2.000000,0.700000,"on_every_enter");
+				condition* = party_member_within_bounding_box(1.000000,2.000000,1.000000,"on_every_enter");
 			  f delay = 0.000000;
 			  b flip_flop = false;
 			  b multi_player = true;
