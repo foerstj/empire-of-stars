@@ -8,8 +8,6 @@
 			[*]
 			{
 				action* = send_world_message("we_req_talk_end",0x002001AD,0f,"default","",0), doc("make gom evil");
-				action* = change_quest_state("quest_destroy_gom","active",1);
-				action* = change_quest_state("quest_destroy_gom2","active",1);
 			  b can_self_destruct = true;
 				condition* = party_member_within_bounding_box(15.000000,3.000000,15.000000,"on_first_enter"), doc("[*one-shot check (trigger is one-shot)*]");
 			  f delay = 0.000000;
@@ -415,8 +413,6 @@
 			[*]
 			{
 				action* = mood_change("eos_sirius_planet_dragon_6"), delay(8), doc("super gom dead mood");
-				action* = change_quest_state("quest_destroy_gom","completed",0), doc("finish gom quest");
-				action* = change_quest_state("quest_destroy_gom2","completed",0), doc("finish gom quest");
 				action* = send_world_message("we_req_activate",0x00200229,0f,"default","every",0), doc("update journal");
 				action* = mood_change("eos_sirius_planet_dragon_4"), doc("no music while he dies");
 				action* = mood_change("eos_sirius_planet_dragon_2"), delay(29), doc("back to normal");

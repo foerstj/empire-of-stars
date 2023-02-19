@@ -898,9 +898,6 @@
 		{
 			[*]
 			{
-				action* = change_quest_state("quest_gyorn_seek_overseer_mp","completed",0);
-				action* = change_quest_state("quest_gyorn_seek_overseer","completed",0);
-				action* = change_quest_state("quest_torg_seek_overseer","completed",0);
 				action* = send_world_message("we_trigger_deactivate",0x027006EC,0f,"default","every",0);
 			  b can_self_destruct = true;
 				condition* = receive_world_message("we_req_activate",0,"on_every_message");
