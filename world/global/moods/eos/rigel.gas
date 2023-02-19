@@ -913,6 +913,59 @@
 }
 [mood_setting*]
 {
+    // no music during speech
+	mood_name = eos_rigel_wet_wetlands_r2_1_1;
+	transition_time			= 0.5f;
+  b interior = false;
+
+	[frustum]
+	{
+		frustum_width		= 60.0f;
+		frustum_height		= 60.0f;
+	}
+
+	[fog]
+	{
+	  x fog_color = 0xFF70B0E0;
+	  f fog_density = 1.000000;
+	  f fog_near_dist = 20.000000;
+	  f fog_far_dist = 40.000000;
+	  f fog_lowdetail_near_dist = 20.000000;
+	  f fog_lowdetail_far_dist = 40.000000;
+	}
+	[rain]
+	{
+	  b lightning = true;
+	  f rain_density = 300.000000;
+	}
+	[sun]
+	{
+		00h00m:color = 0xFF000000;
+		04h00m:color = 0xFF000022;
+		05h00m:color = 0xFF002244;
+		06h00m:color = 0xFF224488;
+		07h00m:color = 0xFF4488FF;
+		08h00m:color = 0xFF88FFFF;
+		09h00m:color = 0xFFFFFFFF;
+		19h00m:color = 0xFF88FFFF;
+		20h00m:color = 0xFF4488FF;
+		21h00m:color = 0xFF224488;
+		22h00m:color = 0xFF002244;
+		23h00m:color = 0xFF000022;
+	}
+	[music]
+	{
+	  f ambient_intro_delay = 0.000000;
+	  f ambient_repeat_delay = 0.000000;
+		ambient_track = s_e_ambient_swamp;
+	    //f standard_intro_delay = 0.000000;
+	    //f standard_repeat_delay = 10.000000;
+		//standard_track = s_m_DarkSwamp_02;
+		room_type = rt_generic;
+	}
+}
+[mood_setting*]
+{
 	mood_name = eos_rigel_wet_wetlands_r2_2;
   f transition_time = 5.000000;
   b interior = false;
