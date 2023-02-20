@@ -1,33 +1,25 @@
-// Giant Skrubb, stats from white drake
-[t:template,n:eos_giant_skrubb]
+[t:template,n:skrubb_base]  // = skrubb
 {
 	category_name = "1W_evil_d";
-	doc = "pg_skrubb";
+	doc = "skrubb";
 	specializes = base_skrubb;
-	[common]
-	{
-		screen_name="Giant Skrubb";
-		membership = monster,immune_freeze;
-	}
 	[actor]
 	{
 		[skills]
 		{
-			strength =  21, 0;
-			intelligence =  13, 0;
-			dexterity =  12, 0;
-            melee =  20,  0;
-            combat_magic = 20, 0;
+			strength =  15, 0;
+			intelligence =  3, 0;
+			dexterity =  2, 0;
 		}
 	}
 	[aspect]
 	{
 		draw_shadow = false;
-		experience_value = 370;
-		life = 936;
-		max_life = 936;
-		mana = 26;
-        max_mana = 26;
+		experience_value = 100;
+		life = 30;
+		max_life = 30;
+		mana = 10;
+		max_mana = 10;
 		model = m_c_edm_sb_pos_1;
 		[voice]
 		{
@@ -40,24 +32,20 @@
 	[attack]
 	{
 		attack_range = 3;
-		damage_max = 120;
-		damage_min = 100;
+		damage_max = 1;
+		damage_min = 1;
 		reload_delay = 1;
 	}
-   	[defend] { defense=102; }
+    [defend] { defense=21; }
 	[inventory]
 	{
 		selected_active_location = il_active_primary_spell;
-		[other] { il_active_primary_spell=spell_giant_skrubb_spit; }
-
-		[pcontent]
-		{
-			[oneof*]
-			{
-				chance = 0.8;
-				il_main = #*/38-42;
-			}
-		}
+		[other] { il_active_primary_spell=spell_skrubb_spit; }
+	}
+	[common]
+	{
+		screen_name="Skrubb";
+		membership = monster,immune_freeze;
 	}
 	[mind]
 	{
@@ -75,4 +63,20 @@
 		sight_range = 10.0;
 		sight_origin_height	= 2;
 	}
+}
+
+[t:template,n:giant_skrubb] { specializes = giant_skrubb_base; }
+[t:template,n:giant_skrubb_base]
+{
+    specializes = skrubb_base;
+
+	doc = "giant_skrubb";
+	[common]
+	{
+		screen_name = "Giant Skrubb";
+	}
+    [inventory]
+    {
+		[other] { il_active_primary_spell = spell_giant_skrubb_spit; }
+    }
 }

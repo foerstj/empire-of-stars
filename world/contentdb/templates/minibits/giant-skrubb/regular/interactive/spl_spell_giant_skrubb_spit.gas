@@ -1,4 +1,4 @@
-[t:template,n:spell_giant_skrubb_spit]
+[t:template,n:spell_skrubb_spit_base]  // = spell_skrubb_spit
 {
 	category_name = "magic";
 	doc = "spell skrubb spit";
@@ -7,8 +7,8 @@
 	{
 		ammo_attach_bone = lowerjawBone10;
 		ammo_template = skrub_spit;
-		damage_max = 120;  // dmg from white drake melee attack
-		damage_min = 100;
+		damage_max = 10;
+		damage_min = 4;
 		ammo_appears_jit = true;
 	}
 	[magic]
@@ -29,4 +29,9 @@
 	{
 		number = 1;
 	}
+}
+
+[t:template,n:spell_giant_skrubb_spit]
+{
+    specializes = spell_skrubb_spit_base;
 }
