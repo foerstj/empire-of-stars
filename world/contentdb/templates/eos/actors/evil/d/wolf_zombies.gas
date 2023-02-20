@@ -1,0 +1,19 @@
+[t:template,n:eos_wolf_black_zombie]
+{
+    specializes = wolf_black_zombie_base;
+}
+
+[t:template,n:eos_wolf_gray_zombie] { specializes = eos_wolf_gray_zombie_base; }
+[t:template,n:eos_wolf_gray_zombie_base]
+{
+	specializes = wolf_black_zombie_base;
+
+	[aspect]
+	{
+		textures:0 = b_c_edm_wf-05_gz;
+	}
+	[common]
+	{
+		screen_name="Undead Gray Wolf";
+	}
+}
