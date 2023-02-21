@@ -18,5 +18,5 @@ for %%F in (*-nn.raw) do (
 )
 endlocal
 popd
-%tc%\RTC.exe -source "%tmp%\Bits" -out "%ds%\DSLOA\%map_cs%-nn.dsres" -copyright "CC-BY-SA 2021" -title "Empire of Stars" -author "Johannes Förstner"
+%tc%\RTC.exe -source "%tmp%\Bits" -out "%ds%\DSLOA\%map_cs%-nn.dsres" -copyright "CC-BY-SA 2023" -title "Empire of Stars" -author "Johannes Förstner"
 if %errorlevel% neq 0 pause
