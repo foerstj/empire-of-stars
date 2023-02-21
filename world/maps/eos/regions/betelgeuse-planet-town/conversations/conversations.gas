@@ -63,7 +63,7 @@ We keep them for the delicious Beetlejuice, of course. Fancy a glass?";
 	  f scroll_rate = 10.000000;
 	}
 }
-[hire_bg_m_r]
+[dars_join]
 {
 	[text*]
 	{
@@ -82,7 +82,49 @@ Unrelatedly, ...";
 	  f scroll_rate = 10.000000;
 	}
 }
-[hire_bg_m_r_mp]
+[dars_rejoin]
+{
+	[text*]
+	{
+		choice = potential_member;
+		screen_text = "Would you like me to join you? I'd love to see the stars and stuff... I'm not bad with a bow, which might come in handy. So what do you think?";
+	  f scroll_rate = 10.000000;
+	}
+}
+[dars_reject]
+{
+	[text*]
+	{
+		screen_text = "Pff then not!";
+	  f scroll_rate = 10.000000;
+	}
+}
+[dars_accept_have_money]
+{
+	[text*]
+	{
+		screen_text = "Yay let's go!";
+	  f scroll_rate = 10.000000;
+	}
+}
+[dars_disband]
+{
+	[text*]
+	{
+		screen_text = "Wait, what?";
+	  f scroll_rate = 10.000000;
+	}
+}
+[dars_disband_rejoin]
+{
+	[text*]
+	{
+		choice = potential_member;
+		screen_text = "No hard feelings mate... Wanna go together again?";
+	  f scroll_rate = 10.000000;
+	}
+}
+[dars_mp]
 {
 	[text*]
 	{

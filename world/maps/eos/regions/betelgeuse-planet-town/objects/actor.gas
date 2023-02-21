@@ -324,16 +324,17 @@
 	{
 		[conversations]
 		{
-			* = hire_bg_m_r;
-			* = pm_accept;
-			* = pm_disband;
-			* = pm_reject;
-			* = pm_rejoin;
+			* = dars_join;
+			* = dars_rejoin;
+			* = dars_reject;
+			* = dars_accept_have_money;
+			* = dars_disband;
+			* = dars_disband_rejoin;
 		}
 	}
 	[mind]
 	{
-		jat_talk = world\ai\jobs\eos\job_talk_bg_hire_m_r.skrit;
+		jat_talk = world\ai\jobs\minibits\generic-talk-skrits\job_talk_companion.skrit?oid=0x4c00081&namespace=dars;
 	}
 	[placement]
 	{
@@ -388,7 +389,7 @@
 	{
 		[conversations]
 		{
-			* = hire_bg_m_r_mp;
+			* = dars_mp;
 		}
 	}
 	[placement]

@@ -43,7 +43,7 @@ Have some Beetlejuice. Hahaha, you look funny. What are all these colors? Have s
 	  f scroll_rate = 10.000000;
 	}
 }
-[hire_bg_f_nm]
+[blayze_join]
 {
 	[text*]
 	{
@@ -53,7 +53,49 @@ Your story sounds amazing! Would you like me coming along? I can do some nature 
 	  f scroll_rate = 10.000000;
 	}
 }
-[hire_bg_f_nm_mp]
+[blayze_rejoin]
+{
+	[text*]
+	{
+		choice = potential_member;
+		screen_text = "Would you like me coming along? I can do some nature magic...";
+	  f scroll_rate = 10.000000;
+	}
+}
+[blayze_reject]
+{
+	[text*]
+	{
+		screen_text = "Pff then not!";
+	  f scroll_rate = 10.000000;
+	}
+}
+[blayze_accept_have_money]
+{
+	[text*]
+	{
+		screen_text = "Yay let's go!";
+	  f scroll_rate = 10.000000;
+	}
+}
+[blayze_disband]
+{
+	[text*]
+	{
+		screen_text = "Wait, what?";
+	  f scroll_rate = 10.000000;
+	}
+}
+[blayze_disband_rejoin]
+{
+	[text*]
+	{
+		choice = potential_member;
+		screen_text = "No hard feelings mate... Wanna go together again?";
+	  f scroll_rate = 10.000000;
+	}
+}
+[blayze_mp]
 {
 	[text*]
 	{
@@ -111,39 +153,6 @@ Sorry, we need the other pack animal ourselves.";
 	{
 		screen_text = "Blessings, stranger, welcome to Betelgeuse.
 Sorry, we need the pack animals ourselves.";
-	  f scroll_rate = 10.000000;
-	}
-}
-[pm_accept]
-{
-	[text*]
-	{
-		screen_text = "Yay let's go!";
-	  f scroll_rate = 10.000000;
-	}
-}
-[pm_disband]
-{
-	[text*]
-	{
-		screen_text = "Wait, what?";
-	  f scroll_rate = 10.000000;
-	}
-}
-[pm_reject]
-{
-	[text*]
-	{
-		screen_text = "Pff then not!";
-	  f scroll_rate = 10.000000;
-	}
-}
-[pm_rejoin]
-{
-	[text*]
-	{
-		choice = potential_member;
-		screen_text = "No hard feelings mate... Wanna go together again?";
 	  f scroll_rate = 10.000000;
 	}
 }
