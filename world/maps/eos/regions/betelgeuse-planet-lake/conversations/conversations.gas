@@ -85,7 +85,7 @@ Here we have all we could ever wish for - lots of flowers, a warm pink sun... an
 	  f scroll_rate = 10.000000;
 	}
 }
-[mule_shop]
+[mule_merchant_has_packmules]
 {
 	[text*]
 	{
@@ -96,12 +96,21 @@ I can spare good Beau here. He's well-behaved and also brave, he'll defend you a
 	  f scroll_rate = 10.000000;
 	}
 }
-[mule_shop_sold_out]
+[mule_merchant_no_packmules]
 {
 	[text*]
 	{
 		screen_text = "I hope Beau is doing well?
 Sorry, we need the other pack animal ourselves.";
+	  f scroll_rate = 10.000000;
+	}
+}
+[mule_merchant_mp]
+{
+	[text*]
+	{
+		screen_text = "Blessings, stranger, welcome to Betelgeuse.
+Sorry, we need the pack animals ourselves.";
 	  f scroll_rate = 10.000000;
 	}
 }
@@ -181,15 +190,6 @@ Do greet them from us and send the blessings of the Great Mother. If She wills, 
 	{
 		choice = shop;
 		screen_text = "Blessings, stranger. I have some equipment here that you might be interested in, have a look... Glad if I can help!";
-	  f scroll_rate = 10.000000;
-	}
-}
-[mule_shop_mp]
-{
-	[text*]
-	{
-		screen_text = "Blessings, stranger, welcome to Betelgeuse.
-Sorry, we need the pack animals ourselves.";
 	  f scroll_rate = 10.000000;
 	}
 }

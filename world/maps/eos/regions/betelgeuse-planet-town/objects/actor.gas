@@ -414,13 +414,13 @@
 	{
 		[conversations]
 		{
-			* = mule_shop;
-			* = mule_shop_sold_out;
+			* = mule_merchant_has_packmules;
+			* = mule_merchant_no_packmules;
 		}
 	}
 	[mind]
 	{
-		jat_talk = world\ai\jobs\eos\job_talk_mule_shop.skrit;
+		jat_talk = world\ai\jobs\minibits\generic-talk-skrits\job_talk_mule_merchant.skrit;
 	}
 	[placement]
 	{
@@ -481,7 +481,7 @@
 	{
 		[conversations]
 		{
-			* = mule_shop_mp;
+			* = mule_merchant_mp;
 		}
 	}
 	[placement]
