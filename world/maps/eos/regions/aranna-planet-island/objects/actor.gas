@@ -568,13 +568,13 @@
 	{
 		[conversations]
 		{
-			* = hermit_loggerman;
-			* = hermit_loggerman_back;
+			* = hermit_loggerman_activate;
+			* = hermit_loggerman_complete;
 		}
 	}
 	[mind]
 	{
-		jat_talk = world\ai\jobs\eos\job_talk_hermit_loggerman.skrit;
+		jat_talk = world\ai\jobs\minibits\generic-talk-skrits\job_talk_quest.skrit?namespace=hermit_loggerman&quest=find_way_home;
 	}
 	[placement]
 	{
