@@ -36,14 +36,14 @@
 	{
 		[conversations]
 		{
-			* = mule_shop1_after_townsafety;
-			* = mule_shop1_after_townsafety_sold;
-			* = mule_shop1_during_townsafety;
+			* = mule_merchant1_during_townsafety;
+			* = mule_merchant1_has_packmules;
+			* = mule_merchant1_no_packmules;
 		}
 	}
 	[mind]
 	{
-		jat_talk = world\ai\jobs\eos\job_talk_rlw_mule_shop1.skrit;
+		jat_talk = world\ai\jobs\eos\job_talk_rlw_mule_shop.skrit?namespace=mule_merchant1;
 	}
 	[placement]
 	{
@@ -62,14 +62,14 @@
 	{
 		[conversations]
 		{
-			* = mule_shop2_after_townsafety;
-			* = mule_shop2_after_townsafety_sold;
-			* = mule_shop2_during_townsafety;
+			* = mule_merchant2_during_townsafety;
+			* = mule_merchant2_has_packmules;
+			* = mule_merchant2_no_packmules;
 		}
 	}
 	[mind]
 	{
-		jat_talk = world\ai\jobs\eos\job_talk_rlw_mule_shop2.skrit;
+		jat_talk = world\ai\jobs\eos\job_talk_rlw_mule_shop.skrit?namespace=mule_merchant2;
 	}
 	[placement]
 	{
