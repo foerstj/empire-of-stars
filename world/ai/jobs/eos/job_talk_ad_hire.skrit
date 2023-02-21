@@ -7,12 +7,15 @@ Goid		m_Target$;
 #include "k_job_c_mcp_fidget_utils"
 #include "k_job_c_talk_utils"
 
+
+property    string  namespace$  = "companion"   doc = "Namespace for conversations and flags";
+property    string  oid$                        doc = "Object ID, lower-case hex, no leading zeroes, e.g. 0x17001af";
+
+
 startup state STARTUP$
 {
 }
 
-////////////////////////////////////////////////////////////////////////////////
-//	init
 event OnJobInit$( Job job$ )
 {
 	m_Job$		= job$;
@@ -24,9 +27,6 @@ event OnJobInit$( Job job$ )
 	SetState Face$;
 }
 
-
-////////////////////////////////////////////////////////////////////////////////
-//	face the audience
 state Face$
 {
 	transition
@@ -47,9 +47,6 @@ state Face$
 	}
 }
 
-
-////////////////////////////////////////////////////////////////////////////////
-//	blab blab away... pretend you're Lee
 state Talk$
 {
 	transition
@@ -70,59 +67,51 @@ state Talk$
 
 	event OnEnterState$
 	{
-		// $$$ read/write variables from the Game Auditor here, and bring up the appropriate dialogs...
         if ( ! Victory.IsQuestCompleted( "aldebaran_overseer" ) )
         {
             m_Go$.GetConversation.RSSelectConversation( "hire_talk2overseer" );
         }
         else
         {
-            m_Go$.GetConversation.RSSelectConversation( "hire_m1_join" );
+            m_Go$.GetConversation.RSSelectConversation( MakeStringF( "hire_%s_join", namespace$ ) );
         }
 
-		if ( GameAuditor.GetDb.GetBool( "party_accept_0x7200582" ) )
+		if ( GameAuditor.GetDb.GetBool( MakeStringF( "party_accept_%s", oid$ ) ) )
 		{
-			GameAuditor.GetDb.SetBool( "party_accept_0x7200582", false );
+			GameAuditor.GetDb.SetBool(  MakeStringF( "party_accept_%s", oid$ ), false );
 			m_Go$.GetConversation.RSSelectConversation( "hire_accept_have_money" );
 		}
-		else if ( GameAuditor.GetDb.GetBool( "party_accept_no_money_0x7200582" ) )
+		else if ( GameAuditor.GetDb.GetBool( MakeStringF( "%s_accept_no_money", namespace$ ) ) )
 		{
-			GameAuditor.GetDb.SetBool( "party_accept_no_money_0x7200582", false );
+			GameAuditor.GetDb.SetBool( MakeStringF( "%s_accept_no_money", namespace$ ), false );
 			m_Go$.GetConversation.RSSelectConversation( "hire_accept_no_money" );
 		}
-		else if ( GameAuditor.GetDb.GetBool( "party_decline_0x7200582" ) )
+		else if ( GameAuditor.GetDb.GetBool( MakeStringF( "party_decline_%s", oid$ ) ) )
 		{
-			GameAuditor.GetDb.SetBool( "party_decline_0x7200582", false );
+			GameAuditor.GetDb.SetBool( MakeStringF( "party_decline_%s", oid$ ), false );
 			m_Go$.GetConversation.RSSelectConversation( "hire_reject" );
 		}
-		else if ( GameAuditor.GetDb.GetBool( "party_disband_0x7200582" ) )
+		else if ( GameAuditor.GetDb.GetBool( MakeStringF( "party_disband_%s", oid$ ) ) )
 		{
-			GameAuditor.GetDb.SetBool( "party_disband_0x7200582", false );
+			GameAuditor.GetDb.SetBool( MakeStringF( "party_disband_%s", oid$ ), false );
 			m_Go$.GetConversation.RSSelectConversation( "hire_disband" );
-			GameAuditor.GetDb.SetBool( "party_disbanded_0x7200582", true );
+			GameAuditor.GetDb.SetBool( MakeStringF( "party_disbanded_%s", oid$ ), true );
 		}
-		else if ( GameAuditor.GetDb.GetBool( "party_disbanded_0x7200582" ) )
+		else if ( GameAuditor.GetDb.GetBool( MakeStringF( "party_disbanded_%s", oid$ ) ) )
 		{
-			m_Go$.GetConversation.RSSelectConversation( "hire_m1_join" );
+			m_Go$.GetConversation.RSSelectConversation( MakeStringF( "hire_%s_join", namespace$ ) );
 		}
-
-        TryAnim$('talk');
 
 		m_Go$.GetConversation.RSActivateDialogue();
+
+        TryAnim$('talk');
 	}
 }
 
-
-////////////////////////////////////////////////////////////////////////////////
-//	finish blabbing
 state Exiting$
 {
 	event OnEnterState$
 	{
-		// $$$ close up any dialogs here...
-
-		// Send a PL_FACE reguest without a target so that they no longer
-		// continue to face the character they were talking to
 		MCPManager.MakeRequest( m_Go$.Goid, PL_FACE );
 
 		m_Job$.MarkForDeletion();
