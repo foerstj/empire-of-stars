@@ -43,12 +43,70 @@ I forgot again to lock the door to the cellar, and now it's full of Krug! It wou
 	  f scroll_rate = 10.000000;
 	}
 }
-[hire_ulora]
+[laura_join]
 {
 	[text*]
 	{
 		choice = potential_member;
 		screen_text = "Is it true you came from the stars? Oh please take me with you! I have a few debts to pay but then I'm all yours. Take me away from here, will you? This is the middle of nowhere. There's not a single tavern within a week's march! I want to see the world and have adventures...";
+	  f scroll_rate = 10.000000;
+	}
+}
+[laura_rejoin]
+{
+	[text*]
+	{
+		choice = potential_member;
+		screen_text = "Take me away from here, will you? This is the middle of nowhere. There's not a single tavern within a week's march! I want to see the world and have adventures...";
+	  f scroll_rate = 10.000000;
+	}
+}
+[laura_reject]
+{
+	[text*]
+	{
+		screen_text = "Pff then not!";
+	  f scroll_rate = 10.000000;
+	}
+}
+[laura_accept_no_money]
+{
+	[text*]
+	{
+		screen_text = "I have a few debts to pay but then I'm all yours.";
+	  f scroll_rate = 10.000000;
+	}
+}
+[laura_accept_have_money]
+{
+	[text*]
+	{
+		screen_text = "Yay let's go!";
+	  f scroll_rate = 10.000000;
+	}
+}
+[laura_disband]
+{
+	[text*]
+	{
+		screen_text = "Wait, what?";
+	  f scroll_rate = 10.000000;
+	}
+}
+[laura_disband_rejoin]
+{
+	[text*]
+	{
+		choice = potential_member;
+		screen_text = "No hard feelings mate... Wanna go together again?";
+	  f scroll_rate = 10.000000;
+	}
+}
+[laura_mp]
+{
+	[text*]
+	{
+		screen_text = "Is it true you came from the stars? Oh how I envy you! This is the middle of nowhere. There's not a single tavern within a week's march! I would love to see the world and have adventures... but I have obligations here. Farewell!";
 	  f scroll_rate = 10.000000;
 	}
 }
@@ -78,39 +136,6 @@ Do you happen to be interested in a packmule? Will come in handy when you go out
 	  f scroll_rate = 10.000000;
 	}
 }
-[pm_accept]
-{
-	[text*]
-	{
-		screen_text = "Yay let's go!";
-	  f scroll_rate = 10.000000;
-	}
-}
-[pm_disband]
-{
-	[text*]
-	{
-		screen_text = "Wait, what?";
-	  f scroll_rate = 10.000000;
-	}
-}
-[pm_reject]
-{
-	[text*]
-	{
-		screen_text = "Pff then not!";
-	  f scroll_rate = 10.000000;
-	}
-}
-[pm_rejoin]
-{
-	[text*]
-	{
-		choice = potential_member;
-		screen_text = "No hard feelings mate... Wanna go together again?";
-	  f scroll_rate = 10.000000;
-	}
-}
 [starter_shop]
 {
 	[text*]
@@ -135,14 +160,6 @@ Maybe a good place to go looking for ancient artifacts would be the Crypt... yes
 	{
 		choice = shop;
 		screen_text = "Apart from ancient artifacts, is there anything I can help you with?";
-	  f scroll_rate = 10.000000;
-	}
-}
-[ulora_mp]
-{
-	[text*]
-	{
-		screen_text = "Is it true you came from the stars? Oh how I envy you! This is the middle of nowhere. There's not a single tavern within a week's march! I would love to see the world and have adventures... but I have obligations here. Farewell!";
 	  f scroll_rate = 10.000000;
 	}
 }

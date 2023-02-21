@@ -473,16 +473,18 @@
 	{
 		[conversations]
 		{
-			* = hire_ulora;
-			* = pm_accept;
-			* = pm_disband;
-			* = pm_reject;
-			* = pm_rejoin;
+			* = laura_join;
+			* = laura_rejoin;
+			* = laura_reject;
+			* = laura_accept_no_money;
+			* = laura_accept_have_money;
+			* = laura_disband;
+			* = laura_disband_rejoin;
 		}
 	}
 	[mind]
 	{
-		jat_talk = world\ai\jobs\eos\job_talk_ulora.skrit;
+		jat_talk = world\ai\jobs\minibits\generic-talk-skrits\job_talk_companion.skrit?oid=0x1c00028&namespace=laura;
 	}
 	[placement]
 	{
@@ -508,7 +510,7 @@
 	{
 		[conversations]
 		{
-			* = ulora_mp;
+			* = laura_mp;
 		}
 	}
 	[placement]
