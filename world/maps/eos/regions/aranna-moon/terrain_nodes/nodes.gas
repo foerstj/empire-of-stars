@@ -2,14 +2,12 @@
 {
   x actor_ambient_color = 0xFFFFFFFF;
   f actor_ambient_intensity = 0.350000;
-	ambience = 0.150000;
   x ambient_color = 0xFFFFFFFF;
   f ambient_intensity = 0.250000;
 	environment_map = b_em_sphere;
   x object_ambient_color = 0xFFFFFFFF;
   f object_ambient_intensity = 0.250000;
   x targetnode = 0x08B198D1;
-	type = terrain_nodes;
 	[t:snode,n:0x001e2e86]
 	{
 	  b bounds_camera = true;
@@ -40461,7 +40459,7 @@
 	}
 	[t:snode,n:0xa6eeb1bc]
 	{
-	  b bounds_camera = true;
+	  b bounds_camera = false;
 	  b camera_fade = false;
 	  x guid = 0xA6EEB1BC;
 	  x mesh_guid = 0x01D00FE2;

@@ -1,10 +1,11 @@
 [t:terrain_nodes,n:siege_node_list]
 {
-  i actor_ambient_color = 4294967295;
+  x actor_ambient_color = 0xFFFFFFFF;
   f actor_ambient_intensity = 0.350000;
-  i ambient_color = 4294967295;
+  x ambient_color = 0xFFFFFFFF;
   f ambient_intensity = 0.250000;
-  i object_ambient_color = 4294967295;
+	environment_map = b_em_sphere;
+  x object_ambient_color = 0xFFFFFFFF;
   f object_ambient_intensity = 0.300000;
   x targetnode = 0x69493204;
 	[t:snode,n:0x00a3ca13]
@@ -1294,7 +1295,7 @@
 	}
 	[t:snode,n:0x63fe0bd9]
 	{
-	  b bounds_camera = true;
+	  b bounds_camera = false;
 	  b camera_fade = false;
 	  x guid = 0x63FE0BD9;
 	  x mesh_guid = 0x0D1001A0;
