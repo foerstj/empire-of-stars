@@ -273,7 +273,7 @@
 	  p position = 2.02042,0,-1.6387,0x14b85437;
 	}
 }
-[t:eos_utraean_female_a1_21a_l026,n:0x04d00595]
+[t:eos_utraean_female_a1_21a_l026_mug_talkable,n:0x04d00595]
 {
 	[aspect]
 	{
@@ -290,10 +290,6 @@
 		{
 			* = beetlejuice;
 		}
-	}
-	[mind]
-	{
-	  b actor_auto_fidgets = false;
 	}
 	[placement]
 	{
@@ -362,12 +358,12 @@
 	{
 		[conversations]
 		{
-			* = blayze_join;
-			* = blayze_rejoin;
-			* = blayze_reject;
 			* = blayze_accept_have_money;
 			* = blayze_disband;
 			* = blayze_disband_rejoin;
+			* = blayze_join;
+			* = blayze_reject;
+			* = blayze_rejoin;
 		}
 	}
 	[mind]
