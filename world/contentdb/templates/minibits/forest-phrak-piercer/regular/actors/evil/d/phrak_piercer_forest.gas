@@ -1,40 +1,20 @@
-[t:template,n:phrak_piercer_forest]
+[t:template,n:phrak_piercer_forest] { specializes = phrak_piercer_forest_base; }
+[t:template,n:phrak_piercer_forest_base]
 {
+	specializes = base_phrak;
+
 	category_name = "1W_evil_d";
 	doc = "phrak_forest";
-	specializes = base_phrak;
-	[actor]
-	{
-		[skills]
-		{
-			strength =  	6, 0;
-			intelligence =  2, 0;
-			dexterity =  	17, 0;
-            melee = 		12, 0;
-		}
-	}
 	[aspect]
 	{
-		experience_value = 2000;
-		life = 180;
-        max_life = 180;
-        mana = 2;
-		max_mana = 2;
 		scale_base = 0.40;
 		textures:0 = b_c_edm_ph-02;
-	}
-	[attack]
-	{
-		attack_range = 0.5;
-		damage_max = 105;
-		damage_min = 95;
 	}
 	[common]
 	{
 		screen_name="Forest Phrak Piercer";
 		membership = monster, party_spiked_dweller;
 	}
-    [defend] { defense=100; }
 
 	[inventory]
 	{
@@ -64,4 +44,31 @@
 			frag_glb_phrak_piercer_05 = 2;
 		}
 	}
+
+    // stats from phrak_forest
+	[actor]
+	{
+		[skills]
+		{
+			strength =  	6, 0;
+			intelligence =  2, 0;
+			dexterity =  	17, 0;
+            melee = 		12, 0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 2000;
+		life = 180;
+        max_life = 180;
+        mana = 2;
+		max_mana = 2;
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 105;
+		damage_min = 95;
+	}
+    [defend] { defense=100; }
 }

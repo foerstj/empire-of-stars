@@ -1,23 +1,16 @@
-[t:template,n:eos_phrak_vega]
+[t:template,n:eos_phrak_vega] { specializes = eos_phrak_vega_base; }
+[t:template,n:eos_phrak_vega_base]
 {
+	specializes = base_phrak;
+
 	category_name = "1W_evil_d";
 	doc = "eos phrak vega";
-	specializes = base_phrak;
 
     [aspect]
     {
-		experience_value = 10;
-		life = 12;
-        max_life = 12;
 		scale_base = 0.8;
 		textures:0 = b_c_edm_ph-vg;
     }
-	[attack]
-	{
-		attack_range = 0.5;
-		damage_max = 20;
-		damage_min = 12;
-	}
 	[common]
 	{
 		membership = phrak,monster;
@@ -29,7 +22,6 @@
 			&guard							= true
 			&friends						= phrak;
 	}
-
 	[physics]
 	{
 		[break_particulate]
@@ -40,5 +32,19 @@
 			frag_eos_phrak_vega_04 = 1;
 			frag_eos_phrak_vega_05 = 2;
 		}
+	}
+
+    // stats from TBD
+    [aspect]
+    {
+		experience_value = 10;
+		life = 12;
+        max_life = 12;
+    }
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 20;
+		damage_min = 12;
 	}
 }

@@ -1,8 +1,14 @@
-[t:template,n:eos_phrak_large]
+[t:template,n:eos_phrak_large] { specializes = eos_phrak_large_base; }
+[t:template,n:eos_phrak_large_base]
 {
+	specializes = base_phrak;
+
 	category_name = "1W_evil_d";
 	doc = "eos phrak_large";
-	specializes = base_phrak;
+	[common] { screen_name="Large Phrak"; }
+    [aspect] { scale_base = 1.05; }
+
+    // stats from TBD
 	[aspect]
 	{
 		experience_value = 6;
@@ -10,7 +16,6 @@
         max_life = 12;
         mana = 2;
 		max_mana = 2;
-		scale_base = 1.05;
 	}
 	[attack]
 	{
@@ -18,5 +23,4 @@
 		damage_max = 12;
 		damage_min = 8;
 	}
-	[common] { screen_name="Large Phrak"; }
 }

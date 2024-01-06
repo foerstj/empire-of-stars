@@ -1,7 +1,8 @@
 [t:template,n:pb_base_cat]
 {
-	doc = "Base Cat Template";
 	specializes = actor_ambient;
+
+	doc = "Base Cat Template";
 	category_name = "1W_ambients";
 
 	[actor] { race=other; }
@@ -98,12 +99,17 @@
 	[inventory]
 	{
 	}
+	[physics]
+	{
+	}
 }
 
-[t:template,n:pb_cat_gray]
+[t:template,n:pb_cat_gray] { specializes = pb_cat_gray_base; }
+[t:template,n:pb_cat_gray_base]
 {
-	doc = "Cat, Gray";
 	specializes = pb_base_cat;
+
+	doc = "Cat, Gray";
 	[aspect]
 	{
 		[textures] { 0=b_c_na_cat-gray; }
@@ -124,14 +130,14 @@
             }
         }
 	}
-	[physics]
-	{
-	}
 }
-[t:template,n:pb_cat_black]
+
+[t:template,n:pb_cat_black] { specializes = pb_cat_black_base; }
+[t:template,n:pb_cat_black_base]
 {
-	doc = "Cat, Black";
 	specializes = pb_base_cat;
+
+	doc = "Cat, Black";
 	[aspect]
 	{
 		[textures] { 0=b_c_na_cat-black; }
@@ -152,14 +158,14 @@
             }
         }
 	}
-	[physics]
-	{
-	}
 }
-[t:template,n:pb_cat_calico]
+
+[t:template,n:pb_cat_calico] { specializes = pb_cat_calico_base; }
+[t:template,n:pb_cat_calico_base]
 {
-	doc = "Cat, Calico";
 	specializes = pb_base_cat;
+
+	doc = "Cat, Calico";
 	[aspect]
 	{
 		[textures] { 0=b_c_na_cat-calico; }
@@ -179,8 +185,5 @@
                 action* = call_sfx_script("pb_cat_meow");
             }
         }
-	}
-	[physics]
-	{
 	}
 }

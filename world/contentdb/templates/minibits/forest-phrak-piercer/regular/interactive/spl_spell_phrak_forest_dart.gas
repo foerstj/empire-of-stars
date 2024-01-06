@@ -1,8 +1,10 @@
-[t:template,n:spell_phrak_forest_dart]
+[t:template,n:spell_phrak_forest_dart] { specializes = spell_phrak_forest_dart_base; }
+[t:template,n:spell_phrak_forest_dart_base]
 {
+	specializes = base_spell_monster;
+
 	category_name = "magic";
 	doc = "spell phrak forest dart";
-	specializes = base_spell_monster;
 	[attack]
 	{
 		ammo_attach_bone = Nose;

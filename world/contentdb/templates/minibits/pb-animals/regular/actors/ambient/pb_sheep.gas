@@ -1,7 +1,8 @@
 [t:template,n:pb_base_sheep]
 {
-	doc = "Sheep";
 	specializes = actor_ambient;
+
+	doc = "Sheep";
 	category_name = "1W_ambients";
 
 	[actor] { race=other; }
@@ -120,19 +121,21 @@
 	}
 }
 
-[t:template,n:pb_sheep]
+[t:template,n:pb_sheep] { specializes = pb_sheep_base; }
+[t:template,n:pb_sheep_base]
 {
-	doc = "Sheep";
 	specializes = pb_base_sheep;
 
+	doc = "Sheep";
 	[common] { screen_name="Sheep";}
 }
 
-[t:template,n:pb_lamb]
+[t:template,n:pb_lamb] { specializes = pb_lamb_base; }
+[t:template,n:pb_lamb_base]
 {
-	doc = "Lamb";
 	specializes = pb_base_sheep;
 
+	doc = "Lamb";
 	[aspect]
 	{
 		scale_base = .6;

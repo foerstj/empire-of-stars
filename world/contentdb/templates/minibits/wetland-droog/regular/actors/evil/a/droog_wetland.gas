@@ -1,10 +1,55 @@
 // Droog archer with stats of ice archer increased
 [t:template,n:eos_rlw_droog_archer_base]
 {
-	category_name = "1W_evil_a";
-	doc = "droog archer";
 	specializes = base_droog;
 
+	category_name = "1W_evil_a";
+	doc = "droog archer";
+	[aspect]
+	{
+		[textures] { 0=b_c_eam_dga-eos; }
+        
+        scale_base = 1.1;  // bigger
+	}
+	[common] { screen_name="Droog Archer"; }
+	[guts_manager]
+	{
+		effect_name = melee_hit_2;
+	}
+	[inventory]
+	{
+		selected_active_location = IL_ACTIVE_RANGED_WEAPON;
+    	[equipment]
+		{
+			es_shield_hand = bw_un_droog_avg_eos;
+        }
+    }
+	[mind]
+	{
+		actor_auto_switches_to_melee         = false;
+		actor_auto_switches_to_ranged        = true;
+		actor_auto_uses_stored_items		 = true;
+
+		actor_weapon_preference				 = WP_RANGED;
+
+		on_enemy_entered_icz_switch_to_melee = false;
+		inner_comfort_zone_range             = 2;
+		outer_comfort_zone_range             = 4.0;
+		melee_engage_range                   = 2;
+		ranged_engage_range                  = 13.5;
+		sight_range                          = 14.0;
+
+		jat_brain						= world\ai\jobs\common\brain_hero.skrit
+			?actor_joins_existing_party		= true
+			&actor_creates_own_party		= true
+			&party_template					= "party_droog";
+		jat_fidget						= world\ai\jobs\common\job_fidget.skrit
+			?social							= 0.45
+			&delay_min						= 7.0
+			&still							= false;
+	}
+
+    // stats from ice_archer, EDITED
 	[actor]
 	{
 		[skills]
@@ -22,10 +67,6 @@
         max_life = 243;
         mana = 10;
 		max_mana = 10;
-
-		[textures] { 0=b_c_eam_dga-eos; }
-        
-        scale_base = 1.1;  // bigger
 	}
 	[attack]
 	{
@@ -33,20 +74,13 @@
 		damage_max = 51;
 		damage_min = 48;
 	}
-	[common] { screen_name="Droog Archer"; }
 	[defend] { defense=100; }  // 75+25
-	[guts_manager]
-	{
-		effect_name = melee_hit_2;
-	}
+
+    // loot from trog
 	[inventory]
 	{
-		selected_active_location = IL_ACTIVE_RANGED_WEAPON;
     	[pcontent]
 		{
-			[oneof*] { es_shield_hand = bw_un_droog_avg_eos; }
-
-            // drops from trog
    			[oneof*]
 			{
 				[oneof*]
@@ -84,41 +118,12 @@
             }
 		}
 	}
-	[mind]
-	{
-		actor_auto_switches_to_melee         = false;
-		actor_auto_switches_to_ranged        = true;
-		actor_auto_uses_stored_items		 = true;
-
-		actor_weapon_preference				 = WP_RANGED;
-
-		on_enemy_entered_icz_switch_to_melee = false;
-		inner_comfort_zone_range             = 2;
-		outer_comfort_zone_range             = 4.0;
-		melee_engage_range                   = 2;
-		ranged_engage_range                  = 13.5;
-		sight_range                          = 14.0;
-
-		jat_brain						= world\ai\jobs\common\brain_hero.skrit
-			?actor_joins_existing_party		= true
-			&actor_creates_own_party		= true
-			&party_template					= "party_droog";
-		jat_fidget						= world\ai\jobs\common\job_fidget.skrit
-			?social							= 0.45
-			&delay_min						= 7.0
-			&still							= false;
-	}
 }
 [t:template,n:eos_rlw_droog_archer]
 {
 	category_name = "1W_evil_a";
 	doc = "droog archer";
 	specializes = eos_rlw_droog_archer_base;
-
-	[guts_manager]
-	{
-		effect_name = melee_hit_2;
-	}
 }
 [t:template,n:eos_rlw_droog_archer_reveal]
 {
@@ -149,10 +154,30 @@
 // Droog grunt with stats of trog
 [t:template,n:eos_rlw_droog_grunt_base]
 {
-	category_name = "1W_evil_a";
-	doc = "droog grunt";
 	specializes = base_droog;
 
+	category_name = "1W_evil_a";
+	doc = "droog grunt";
+	[aspect]
+	{
+		[textures] { 0=b_c_eam_dgg-eos; }
+        
+        scale_base = 1.1;  // bigger
+	}
+	[common] { screen_name="Droog Grunt"; }
+	[guts_manager]
+	{
+		effect_name = melee_hit_2;
+	}
+    [inventory]
+    {
+        [equipment]
+        {
+            es_weapon_hand = sd_un_droog_1h_avg_eos;
+        }
+    }
+
+    // stats & loot from trog
 	[actor]
 	{
 		[skills]
@@ -170,10 +195,6 @@
         max_life = 297;
         mana = 14;
 		max_mana = 14;
-
-		[textures] { 0=b_c_eam_dgg-eos; }
-        
-        scale_base = 1.1;  // bigger
 	}
 	[attack]
 	{
@@ -181,25 +202,11 @@
 		damage_max = 22;
 		damage_min = 18;
 	}
-	[common] { screen_name="Droog Grunt"; }
     [defend] { defense=78; }
-	[guts_manager]
-	{
-		effect_name = melee_hit_2;
-	}
 	[inventory]
 	{
 		[pcontent]
 		{
-			[all*]
-			{
-				[oneof*]
-				{
-    				es_weapon_hand = sd_un_droog_1h_avg_eos;
-				}
-			}
-
-            // drops from trog
    			[oneof*]
 			{
 				[oneof*]
@@ -281,9 +288,46 @@
 // Droog grunt boss with stats of trog warrior
 [t:template,n:eos_rlw_droog_grunt_boss_01]
 {
+	specializes = eos_rlw_droog_grunt_base;
+
 	category_name = "1W_evil_a";
 	doc = "droog grunt boss 01";
-	specializes = eos_rlw_droog_grunt_base;
+	[aspect]
+	{
+		[textures] { 0=b_c_eam_dgg-02-eos; }
+	}
+	[common]
+	{
+		screen_name="Droog Captain";
+		membership=monster,droog,immune_charm,immune_control,immune_freeze,immune_polymorph,immune_align_change,immune_explode;
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				single_shot = true;
+				no_trig_bits = true;
+				action* = call_sfx_script("unique_light_blue(sgx)");
+			}
+		}
+	}
+    [inventory]
+    {
+        [equipment]
+        {
+            es_weapon_hand = sd_un_droog_1h_avg_eos;
+        }
+    }
+    [mind]
+    {
+		jat_brain							 = world\ai\jobs\common\brain_hero.skrit
+			?actor_creates_own_party		 = true
+			&form_party_on_friend_entered_OCZ	= true
+			&form_party_on_friend_entered_ICZ	= true
+			&party_template					 = "party_droog";
+	}
+
+    // stats & loot from trog_warrior
 	[actor]
 	{
 		[skills]
@@ -301,8 +345,6 @@
         max_life = 325;
         mana = 14;
 		max_mana = 14;
-
-		[textures] { 0=b_c_eam_dgg-02-eos; }
 	}
 	[attack]
 	{
@@ -310,35 +352,11 @@
 		damage_max = 30;
 		damage_min = 20;
 	}
-	[common]
-	{
-		screen_name="Droog Captain";
-		membership=monster,droog,immune_charm,immune_control,immune_freeze,immune_polymorph,immune_align_change,immune_explode;
-		[template_triggers]
-		{
-			[*]
-			{
-				condition* = receive_world_message("WE_ENTERED_WORLD");
-				single_shot = true;
-				no_trig_bits = true;
-				action* = call_sfx_script("unique_light_blue(sgx)");
-			}
-		}
-	}
 	[defend] { defense=93; }
 	[inventory]
 	{
 		[pcontent]
 		{
-			[all*]
-			{
-				[oneof*]
-				{
-    				es_weapon_hand = sd_un_droog_1h_avg_eos;
-				}
-			}
-
-            // drops from trog warrior
    			[oneof*]
 			{
 				[oneof*]
@@ -376,23 +394,48 @@
             }
 		}
     }
-    [mind]
-    {
-		jat_brain							 = world\ai\jobs\common\brain_hero.skrit
-			?actor_creates_own_party		 = true
-			&form_party_on_friend_entered_OCZ	= true
-			&form_party_on_friend_entered_ICZ	= true
-			&party_template					 = "party_droog";
-	}
 }
 
 // Droog mage with stats of ice mage increased
 [t:template,n:eos_rlw_droog_mage_base]
 {
-	category_name = "1W_evil_a";
-	doc = "droog mage";
 	specializes = base_droog;
 
+	category_name = "1W_evil_a";
+	doc = "droog mage";
+	[aspect]
+	{
+		[textures] { 0=b_c_eam_dgm-eos; }
+        
+        scale_base = 1.1;  // bigger
+	}
+	[common] { screen_name="Droog Mage"; }
+	[guts_manager]
+	{
+		effect_name = melee_hit_2;
+	}
+    [inventory]
+    {
+        selected_active_location = il_active_primary_spell;
+		[other]
+		{
+			il_active_primary_spell = spell_droog_starburst_eos;
+		}
+    }
+    [mind]
+	{
+		jat_brain						 = world\ai\jobs\common\brain_hero.skrit
+			?actor_joins_existing_party		 = true
+			&actor_creates_own_party		 = true
+			&party_template					 = "party_droog";
+
+		actor_weapon_preference			= WP_MAGIC;
+		actor_auto_switches_to_magic	= true;
+		actor_auto_switches_to_karate	= false;
+		actor_auto_switches_to_melee	= false;
+	}
+
+    // stats from ice_mage, EDITED
 	[actor]
 	{
 		[skills]
@@ -410,10 +453,6 @@
 		max_life = 100;
 		mana = 56;
 		max_mana = 56;
-
-		[textures] { 0=b_c_eam_dgm-eos; }
-        
-        scale_base = 1.1;  // bigger
 	}
 	[attack]
 	{
@@ -421,21 +460,11 @@
 		damage_max = 60;
 		damage_min = 55;
 	}
-	[common] { screen_name="Droog Mage"; }
 	[defend] { defense=100; }  // 74+26
-	[guts_manager]
-	{
-		effect_name = melee_hit_2;
-	}
+
+    // loot from trog
 	[inventory]
 	{
-        selected_active_location = il_active_primary_spell;
-		[other]
-		{
-			il_active_primary_spell = spell_droog_starburst_eos;
-		}
-
-        // drops from trog
 		[pcontent]
 		{
    			[oneof*]
@@ -474,18 +503,6 @@
 				}
             }
 		}
-	}
-    [mind]
-	{
-		jat_brain						 = world\ai\jobs\common\brain_hero.skrit
-			?actor_joins_existing_party		 = true
-			&actor_creates_own_party		 = true
-			&party_template					 = "party_droog";
-
-		actor_weapon_preference			= WP_MAGIC;
-		actor_auto_switches_to_magic	= true;
-		actor_auto_switches_to_karate	= false;
-		actor_auto_switches_to_melee	= false;
 	}
 }
 [t:template,n:eos_rlw_droog_mage]

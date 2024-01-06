@@ -1,8 +1,10 @@
-[t:template,n:ice_golem]
+[t:template,n:ice_golem] { specializes = ice_golem_base; }
+[t:template,n:ice_golem_base]
 {
+	specializes = golem_frost_base;
+
 	category_name = "1W_evil_d";
 	doc = "ice golem";
-	specializes = golem_frost_base;
 	[aspect]
 	{
 		textures:0 = b_c_edm_iw;

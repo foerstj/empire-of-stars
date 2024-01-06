@@ -189,7 +189,9 @@
 		}
 	}
 }
-[t:template,n:eos_ice_king]
+
+[t:template,n:eos_ice_king] { specializes = eos_ice_king_base; }
+[t:template,n:eos_ice_king_base]
 {
     specializes = ice_warrior_boss_01_base;
     
@@ -381,7 +383,9 @@
 		}
 	}
 }
-[t:template,n:eos_ice_queen]
+
+[t:template,n:eos_ice_queen] { specializes = eos_ice_queen_base; }
+[t:template,n:eos_ice_queen_base]
 {
     specializes = ice_archer_boss_01_base;
     

@@ -163,7 +163,8 @@
 	}
 }
 
-[t:template,n:eos_dragon]
+[t:template,n:eos_dragon] { specializes = eos_dragon_base; }
+[t:template,n:eos_dragon_base]
 {
     specializes = dragon_base;
 
@@ -187,6 +188,7 @@
 		mana = 16384;
 		max_mana = 16384;
     }
+
 	[inventory]
 	{
 		[other]

@@ -125,11 +125,13 @@
 }
 
 // A good-aligned npc that can talk
-[t:template,n:wise_tretch]
+[t:template,n:wise_tretch] { specializes = wise_tretch_base; }
+[t:template,n:wise_tretch_base]
 {
+	specializes = tretch_base;
+
 	category_name = "1W_character";
 	doc = "wise tretch";
-	specializes = tretch_base;
 
 	[actor]
 	{

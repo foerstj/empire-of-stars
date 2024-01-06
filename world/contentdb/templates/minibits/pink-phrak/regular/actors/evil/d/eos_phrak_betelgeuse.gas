@@ -1,45 +1,25 @@
-[t:template,n:eos_phrak_betelgeuse]
+[t:template,n:eos_phrak_betelgeuse] { specializes = eos_phrak_betelgeuse_base; }
+[t:template,n:eos_phrak_betelgeuse_base]
 {
+	specializes = base_phrak;
+
 	category_name = "1W_evil_d";
 	doc = "eos phrak betelgeuse";
-	specializes = base_phrak;
-	[actor]
-	{
-		[skills]
-		{
-			strength =  4, 0;
-			intelligence =  1, 0;
-			dexterity =  19, 0;
-		}
-	}
 	[aspect]
 	{
-		experience_value = 10;
-		life = 15;
-        max_life = 15;
-        mana = 2;
-		max_mana = 2;
 		scale_base = 0.55;
 		textures:0 = b_c_edm_ph-03;
-	}
-	[attack]
-	{
-		attack_range = 0.5;
-		damage_max = 6;
-		damage_min = 4;
 	}
 	[common]
 	{
 		membership = phrak,monster;
 		screen_name="Pink Phrak";
 	}
-	[defend] { defense=15; }
 	[inventory]
 	{
 		selected_active_location = il_active_primary_spell;
 		[other] { il_active_primary_spell=spell_phrak_dart; }
 	}
-
 	[mind]
 	{
 		actor_weapon_preference			= WP_MAGIC;
@@ -63,4 +43,30 @@
 			frag_glb_pink_phrak_05 = 2;
 		}
 	}
+
+    // stats (but not loot) from phrak_piercer_boss_01
+	[actor]
+	{
+		[skills]
+		{
+			strength =  4, 0;
+			intelligence =  1, 0;
+			dexterity =  19, 0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 10;
+		life = 15;
+        max_life = 15;
+        mana = 2;
+		max_mana = 2;
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 6;
+		damage_min = 4;
+	}
+	[defend] { defense=15; }
 }

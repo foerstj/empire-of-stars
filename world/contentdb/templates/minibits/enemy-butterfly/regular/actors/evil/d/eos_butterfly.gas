@@ -139,7 +139,8 @@
 }
 
 // Basically dsx_moth just not called Ice Moth... and with colorful texture
-[t:template,n:eos_butterfly]
+[t:template,n:eos_butterfly] { specializes = eos_butterfly_base; }
+[t:template,n:eos_butterfly_base]
 {
     specializes = dsx_moth_base;
 	doc = "eos moth";

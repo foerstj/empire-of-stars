@@ -1,15 +1,22 @@
-// Desert Braak with stats of kikclaw_2
-[t:template,n:eos_braak_vega]
+[t:template,n:eos_braak_vega] { specializes = eos_braak_vega_base; }
+[t:template,n:eos_braak_vega_base]
 {
+	specializes = base_braak;
+
 	category_name = "1W_evil_c";
 	doc = "braak, melee (desert)";
-	specializes = base_braak;
 	[common]
 	{
 		screen_name="Jungle Braak";
 		membership = party_braak_boss, monster;
 	}
+	[aspect]
+	{
+        scale_base = 0.8;  // smaller
+		[textures] { 0 = b_c_ecm_bk-04; }  // edited
+	}
 
+    // stats from dsx_kikclaw_2
 	[actor]
 	{
 		[skills]
@@ -27,9 +34,6 @@
 		max_life 		= 173;
 		mana 			= 10;
 		max_mana 		= 10;
-
-        scale_base = 0.8;  // smaller
-		[textures] { 0 = b_c_ecm_bk-04; }  // edited
 	}
 	[attack]
 	{
@@ -39,9 +43,9 @@
 	}
 	[defend] { defense = 101; }
 
+    // loot from normal snow braak
 	[inventory]
 	{
-        // pcontent from normal snow braak
 		[pcontent]
 		{
 			[oneof*]
@@ -81,6 +85,7 @@
 			}
 		}
 	}
+
 	[mind]
 	{
 		jat_brain							= world\ai\jobs\common\brain_hero.skrit
@@ -88,39 +93,17 @@
 	}
 }
 
-// Ferocious Braak with stats of Ice Warrior Boss
-[t:template,n:eos_braak_vega_boss_01]
+[t:template,n:eos_braak_vega_boss_01] { specializes = eos_braak_vega_boss_01_base; }
+[t:template,n:eos_braak_vega_boss_01_base]
 {
+	specializes = base_braak;
+
 	category_name = "1W_evil_c";
 	doc = "braak, melee (desert)boss 01";
-	specializes = base_braak;
-	[actor]
-	{
-		[skills]
-		{
-			strength 	=  18, 0;
-			intelligence =  5, 0;
-			dexterity 	=  11, 0;
-            melee 		=  13,  0;
-		}
-	}
 	[aspect]
 	{
-		experience_value = 550;
-		life = 327;
-        max_life = 327;
-        mana = 8;
-		max_mana = 8;
-
         scale_base = 0.9;  // smaller
 		[textures] { 0 = b_c_ecm_bk-04; }
-	}
-	[attack]
-	{
-		attack_range = 0.5;
-        // dmg a bit higher than the normal jungle braak above
-		damage_max = 100;
-		damage_min = 75;
 	}
 	[body]
 	{
@@ -141,10 +124,50 @@
 			}
 		}
 	}
+	[mind]
+	{
+		jat_fidget			= world\ai\jobs\common\job_fidget.skrit
+			?social				= 0.75
+			&friend_template 	= false
+			&friends			= party_braak_boss
+			&still				= false;
+
+		jat_brain							= world\ai\jobs\common\brain_hero.skrit
+			?actor_creates_own_party			= true
+			&party_template						= "party_braak_boss";
+	}
+
+    // stats from ice_warrior_boss_01, EDITED
+	[actor]
+	{
+		[skills]
+		{
+			strength 	=  18, 0;
+			intelligence =  5, 0;
+			dexterity 	=  11, 0;
+            melee 		=  13,  0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 550;
+		life = 327;
+        max_life = 327;
+        mana = 8;
+		max_mana = 8;
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+        // dmg a bit higher than the normal jungle braak above
+		damage_max = 100;
+		damage_min = 75;
+	}
 	[defend] { defense=202; }
+
+    // loot of snow braak boss (pitiful braak)
 	[inventory]
 	{
-        // pcontent of snow braak boss (pitiful braak)
 		[pcontent]
 		{
 			[all*]
@@ -182,31 +205,45 @@
 			}
 		}
 	}
-	[mind]
-	{
-		jat_fidget			= world\ai\jobs\common\job_fidget.skrit
-			?social				= 0.75
-			&friend_template 	= false
-			&friends			= party_braak_boss
-			&still				= false;
-
-		jat_brain							= world\ai\jobs\common\brain_hero.skrit
-			?actor_creates_own_party			= true
-			&party_template						= "party_braak_boss";
-	}
 }
 
-[t:template,n:eos_braak_vega_mage]
+[t:template,n:eos_braak_vega_mage] { specializes = eos_braak_vega_mage_base; }
+[t:template,n:eos_braak_vega_mage_base]
 {
+	specializes = base_braak;
+
 	category_name = "1W_evil_c";
 	doc = "braak, melee (desert)";
-	specializes = base_braak;
 	[common]
 	{
 		screen_name="Jungle Braak";
 		membership = party_braak_desert_boss, monster;
 	}
+	[aspect]
+	{
+        scale_base = 0.7;  // smaller
+		[textures] { 0 = b_c_ecm_bk-04; }  // edited
+	}
+	[inventory]
+	{
+    	selected_active_location = il_active_primary_spell;
+		[other] { il_active_primary_spell=spell_braak_vega_boulder; }
+    }
+	[mind]
+	{
+		jat_brain							= world\ai\jobs\common\brain_hero.skrit
+			?actor_joins_existing_party			= true;
 
+		jat_attack_object_melee 			= world\ai\jobs\common\job_attack_object_melee.skrit
+			?run_chance 					= 1.0;
+
+		actor_weapon_preference			= WP_MAGIC;
+		actor_auto_switches_to_magic	= true;
+		actor_auto_switches_to_karate	= false;
+		actor_auto_switches_to_melee	= false;
+	}
+
+    // stats from dsx_kikclaw_2
 	[actor]
 	{
 		[skills]
@@ -224,9 +261,6 @@
 		max_life 		= 173;
 		mana 			= 10;
 		max_mana 		= 10;
-
-        scale_base = 0.7;  // smaller
-		[textures] { 0 = b_c_ecm_bk-04; }  // edited
 	}
 	[attack]
 	{
@@ -236,12 +270,9 @@
 	}
 	[defend] { defense = 101; }
 
+    // loot from snow braak mage
 	[inventory]
 	{
-    	selected_active_location = il_active_primary_spell;
-		[other] { il_active_primary_spell=spell_braak_vega_boulder; }
-
-        // pcontent from snow braak mage
 		[pcontent]
 		{
 			[oneof*]
@@ -287,18 +318,5 @@
 				}
 			}
 		}
-	}
-	[mind]
-	{
-		jat_brain							= world\ai\jobs\common\brain_hero.skrit
-			?actor_joins_existing_party			= true;
-
-		jat_attack_object_melee 			= world\ai\jobs\common\job_attack_object_melee.skrit
-			?run_chance 					= 1.0;
-
-		actor_weapon_preference			= WP_MAGIC;
-		actor_auto_switches_to_magic	= true;
-		actor_auto_switches_to_karate	= false;
-		actor_auto_switches_to_melee	= false;
 	}
 }

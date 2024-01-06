@@ -1,10 +1,10 @@
 // Seck Grunt with stats of Water Lunger
 [t:template,n:seth_grunt_base]
 {
-	category_name = "1W_evil_a";
-	doc = "Seth Grunt";
 	specializes = base_seck;
 
+	category_name = "1W_evil_a";
+	doc = "Seth Grunt";
     [aspect]
     {
 		model = m_c_eam_sg_pos_1;
@@ -14,7 +14,16 @@
 	{
 		screen_name="Seth Grunt";
 	}
+    [inventory]
+    {
+		selected_active_location = IL_ACTIVE_MELEE_WEAPON;
+        [equipment]
+        {
+            es_weapon_hand = sd_un_seth_1h_avg;
+        }
+    }
 
+    // stats & loot from water_lunger
 	[actor]
 	{
 		[skills]
@@ -40,17 +49,10 @@
 		damage_min = 125;
 	}
 	[defend] { defense=360; }
-
    	[inventory]
 	{
-		selected_active_location = IL_ACTIVE_MELEE_WEAPON;
 		[pcontent]
 		{
-			[oneof*]
-			{
-				es_weapon_hand = sd_un_seth_1h_avg;
-			}
-
 			[oneof*]
 			{
 				[oneof*]
@@ -166,9 +168,10 @@
 // Seck Archer with stats of Water Slinger
 [t:template,n:seth_archer_base]
 {
+	specializes = base_seck;
+
 	category_name = "1W_evil_a";
 	doc = "Seth Archer";
-	specializes = base_seck;
 
     [aspect]
     {
@@ -184,7 +187,16 @@
 		jat_fidget	= world\ai\jobs\common\job_fidget.skrit
 			?still	= false;
 	}
+    [inventory]
+    {
+		selected_active_location = IL_ACTIVE_RANGED_WEAPON;
+        [equipment]
+        {
+            es_shield_hand = bw_un_seth_avg;
+        }
+    }
 
+    // stats & loot of water_slinger, EDITED
 	[actor]
 	{
 		[skills]
@@ -210,17 +222,10 @@
 		damage_min = 104;
 	}
 	[defend] { defense=330; }
-
 	[inventory]
 	{
-		selected_active_location = IL_ACTIVE_RANGED_WEAPON;
 		[pcontent]
 		{
-			[oneof*]
-			{
-				es_shield_hand = bw_un_seth_avg;
-			}
-
 			[oneof*]
 			{
 				[oneof*]
@@ -336,9 +341,10 @@
 // Seck Mage with stats of Wraith Mage
 [t:template,n:seth_mage_base]
 {
+	specializes = base_seck;
+
 	category_name = "1W_evil_a";
 	doc = "Seth Mage";
-	specializes = base_seck;
     
     [actor]
     {
@@ -432,7 +438,20 @@
 			&still	= false;
 
 	}
+   	[inventory]
+	{
+		selected_active_location = il_active_primary_spell;
+		[other]
+		{
+			il_active_primary_spell = spell_wraith_hands;
+		}
+        [equipment]
+        {
+            es_weapon_hand = st_un_seth_mage;
+        }
+    }
 
+    // stats & loot from wraith_mage
 	[actor]
 	{
 		[skills]
@@ -458,21 +477,10 @@
 		damage_min = 107;
 	}
    	[defend] { defense=400; }
-
    	[inventory]
 	{
-		selected_active_location = il_active_primary_spell;
-		[other]
-		{
-			il_active_primary_spell = spell_wraith_hands;
-		}
 		[pcontent]
 		{
-			[all*]
-			{
-				es_weapon_hand = st_un_seth_mage;
-			}
-
 			[oneof*]
 			{
 				[oneof*]
@@ -594,9 +602,10 @@
 // Seth Mage with stats of Dark Wraith Mage & other texture
 [t:template,n:seth_mage_boss_01_base]
 {
+	specializes = seth_mage_base;
+
 	category_name = "1W_evil_a";
 	doc = "seth mage boss";
-	specializes = seth_mage_base;
     
     [aspect]
     {
@@ -616,7 +625,20 @@
 			}
 		}
     }
+   	[inventory]
+	{
+		selected_active_location = il_active_primary_spell;
+		[other]
+		{
+			il_active_primary_spell = spell_wraith_hands;
+		}
+        [equipment]
+        {
+            es_weapon_hand = st_un_seth_mage;
+        }
+    }
 
+    // stats & loot from wraith_mage_boss_01
 	[actor]
 	{
 		[skills]
@@ -645,16 +667,8 @@
 
    	[inventory]
 	{
-    	selected_active_location = il_active_primary_spell;
-		[other] { il_active_primary_spell=spell_wraith_hands; }
-
 		[pcontent]
 		{
-			[all*]
-			{
-				es_weapon_hand = st_un_seth_mage;
-			}
-
 			[all*]
 			{
 				[oneof*]

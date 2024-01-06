@@ -1,7 +1,16 @@
-[t:template,n:cos_snapper]
+[t:template,n:base_cos_snapper]
 {
-	doc = "snapper";
 	specializes = base_mangler;
+
+	doc = "CoS snapper";
+	[common] { screen_name="Black Lake Chalice Snapper"; }
+	[mind] 
+	{ 
+		jat_fidget	= world\ai\jobs\common\job_fidget.skrit;
+        personal_space_range = 0.2;
+	}
+
+    // stats from snapper
 	[actor]
 	{
 		[skills]
@@ -20,7 +29,6 @@
 		mana = 4;
 		max_mana = 4;
 		scale_base = 0.60;
-		[textures]	{0=b_c_edm_mn-02blk;}
 	}
 	[attack]
 	{
@@ -28,50 +36,27 @@
 		damage_max = 6;
 		damage_min = 3;
 	}
-	[common] { screen_name="Black Lake Chalice Snapper"; }
 	[defend] { defense=12; }
-	[mind] 
-	{ 
-		jat_fidget	= world\ai\jobs\common\job_fidget.skrit;
-        personal_space_range = 0.2;
+}
+
+[t:template,n:cos_snapper] { specializes = cos_snapper_base; }
+[t:template,n:cos_snapper_base]
+{
+	specializes = base_cos_snapper;
+
+	[aspect]
+	{
+		[textures]	{0=b_c_edm_mn-02blk;}
 	}
 }
 
-[t:template,n:cos_snapper_bw]
+[t:template,n:cos_snapper_bw] { specializes = cos_snapper_bw_base; }
+[t:template,n:cos_snapper_bw_base]
 {
-	doc = "snapper";
-	specializes = base_mangler;
-	[actor]
-	{
-		[skills]
-		{
-			strength = 	4, 0;
-			intelligence = 	2, 0;
-			dexterity = 	3, 0;
-			melee =  		1,  0;
-		}
-	}
+	specializes = base_cos_snapper;
+
 	[aspect]
 	{
-		experience_value = 5;
-		life = 7;
-		max_life = 7;
-		mana = 4;
-		max_mana = 4;
-		scale_base = 0.60;
 		[textures]	{0=b_c_edm_mn-02blk01;}
-	}
-	[attack]
-	{
-		attack_range = 0.5;
-		damage_max = 6;
-		damage_min = 3;
-	}
-	[common] { screen_name="Black Lake Chalice Snapper"; }
-	[defend] { defense=12; }
-	[mind] 
-	{ 
-		jat_fidget	= world\ai\jobs\common\job_fidget.skrit;
-        personal_space_range = 0.2;
 	}
 }
