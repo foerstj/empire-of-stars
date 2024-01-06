@@ -1,0 +1,62 @@
+[t:template,n:base_townfolk_m_drink]
+{
+	specializes = base_npc_fb_mug;
+
+	category_name = "1W_townsperson";
+	doc = "fb_drinker";
+	[common]
+	{
+		screen_name = "Townsperson";
+	}
+	[inventory]
+	{
+		[equipment]
+		{
+			es_feet = bo_bo_le_f_g_c_satin;
+			es_weapon_hand = mug_pewter;
+		}
+	}
+}
+
+[t:template,n:townfolk_m_drink_01]
+{
+	specializes = base_townfolk_m_drink;
+
+	doc = "fb_drinker_01";
+	[aspect]
+	{
+		[textures]
+		{
+			0 = b_c_gah_fb_skin_05;
+			1 = b_c_pos_a1_003;
+		}
+	}
+}
+[t:template,n:townfolk_m_drink_02]
+{
+	specializes = base_townfolk_m_drink;
+
+	doc = "fb_drinker_02";
+	[aspect]
+	{
+		[textures]
+		{
+			0 = b_c_gah_fb_skin_03;
+			1 = b_c_pos_a1_015;
+		}
+	}
+}
+[t:template,n:townfolk_m_drink_03]
+{
+	specializes = base_townfolk_m_drink;
+
+	doc = "fb_drinker_03";
+	[aspect]
+	{
+		[textures]
+		{
+			0 = b_c_gah_fb_skin_01;
+			1 = b_c_pos_a1_011;
+		}
+	}
+}

@@ -1,0 +1,46 @@
+[t:template,n:base_npc_fg_mug]
+{
+	specializes = base_npc_fg;
+
+	category_name = "1W_townsperson";
+	doc = "Base template for non-hero actors designed to drink alcohol";
+
+	[body]
+	{
+		[chore_dictionary]
+		{
+			chore_prefix = a_c_gah_fg_fs;
+			[chore_default]
+			{
+				chore_stances = 0,1,2,3,4,5,6,7;
+				skrit = infinite_loop;
+				[anim_files]
+				{
+					00 = ds;
+				}
+			}
+			[chore_fidget]
+			{
+				chore_stances = 0,1;
+				skrit = select_fidget;
+				[anim_files]
+				{
+					00 = mug-00;  // static
+					01 = mug-01;  // short idle
+					02 = mug-02;  // long idle
+					03 = mug-03;  // talk
+					04 = mug-04;  // drink
+				}
+			}
+			[chore_walk]
+			{
+				chore_stances = 0,1,2,3,4,5,6;
+				skrit = select_walk;
+				[anim_files]
+				{
+					00 = rl;
+				}
+			}
+		}
+	}
+}
