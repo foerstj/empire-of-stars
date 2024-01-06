@@ -19,10 +19,28 @@
     }
 }
 
-[t:template,n:eos_beetle_male]
+[t:template,n:eos_beetle_male] { specializes = eos_beetle_male_base; }
+[t:template,n:eos_beetle_male_base]
 {
-	doc = "eos_beetle_male";
     specializes = eos_beetle_base;
+
+	doc = "eos_beetle_male";
+	[aspect]
+	{
+		model = m_c_edm_chs_pos_1;
+		textures:0 = b_c_edm_chs;
+	}
+	[common]
+	{
+		screen_name = "Beetle (male)";
+		membership = monster;
+	}
+	[body]
+	{
+		avg_move_velocity = 1.5;
+	}
+
+    // stats (but not loot) from dsx_chitterskrag_one
 	[actor]
 	{
 		[skills]
@@ -40,8 +58,6 @@
 		max_life         = 314;
 		mana             = 50;
 		max_mana         = 50;
-		model = m_c_edm_chs_pos_1;
-		textures:0 = b_c_edm_chs;
 	}
 	[attack]
 	{
@@ -49,22 +65,37 @@
 		damage_max 	= 77; 
 		damage_min 	= 66;
 	}
-	[common]
-	{
-		screen_name = "Beetle (male)";
-		membership = monster;
-	}
 	[defend] { defense = 154; }
-	[body]
-	{
-		avg_move_velocity = 1.5;
-	}
 }
 
-[t:template,n:eos_beetle_baby]
+[t:template,n:eos_beetle_baby] { specializes = eos_beetle_baby_base; }
+[t:template,n:eos_beetle_baby_base]
 {
-	doc = "eos_beetle_baby";
     specializes = eos_beetle_base;
+
+	doc = "eos_beetle_baby";
+	[aspect]
+	{
+		model = m_c_edm_chs_pos_1;
+		scale_base = 0.35;
+		[voice]
+		{
+			[die]			{ priority = high;	* = s_e_die_baby_chitterskrag_SED;		}
+			[enemy_spotted]	{ priority = high; * = s_e_call_baby_chitterskrag_SED; }
+		}
+		textures:0 = b_c_edm_chs;
+	}
+	[common]
+	{
+		screen_name = "Beetle (baby)"; //--
+		membership = monster; //--
+	}
+	[body]
+	{
+		avg_move_velocity = 2;
+	}
+
+    // stats (but not loot) from dsx_chitterskrag_baby
 	[actor]
 	{
 		[skills]
@@ -82,14 +113,6 @@
 		max_life         = 157;
 		mana             = 50;
 		max_mana         = 50;
-		model = m_c_edm_chs_pos_1;
-		scale_base = 0.35;
-		[voice]
-		{
-			[die]			{ priority = high;	* = s_e_die_baby_chitterskrag_SED;		}
-			[enemy_spotted]	{ priority = high; * = s_e_call_baby_chitterskrag_SED; }
-		}
-		textures:0 = b_c_edm_chs;
 	}
 	[attack]
 	{
@@ -97,58 +120,26 @@
 		damage_max = 53;
 		damage_min = 47;
 	}
-	[common]
-	{
-		screen_name = "Beetle (baby)"; //--
-		membership = monster; //--
-	}
 	[defend] { defense = 90; }
-	[body]
-	{
-		avg_move_velocity = 2;
-	}
 }
  
-
-[t:template,n:eos_beetle_female]
+[t:template,n:eos_beetle_female] { specializes = eos_beetle_female_base; }
+[t:template,n:eos_beetle_female_base]
 {
-	doc = "eos_beetle_female";
     specializes = eos_beetle_base;
-	[actor]
-		{
-		[skills]
-		{
-			strength 		= 14, 0;
-			intelligence 	= 8, 0;
-			dexterity 		= 10, 0;
-			ranged 			= 11, 0;
-			combat_magic	= 11, 0;
-			nature_magic	= 11, 0;
-		}
-	}
+
+	doc = "eos_beetle_female";
 	[aspect]
 	{
-		experience_value = 406;
-		life             = 313;
-		max_life         = 313;
-		mana             = 50;
-		max_mana         = 50;
 		model = m_c_edm_chs_pos_2;
 		scale_base = 1.0;
 		textures:0 = b_c_edm_chs-03;
-	}
-	[attack]
-	{
-		attack_range = 0.5;
-		damage_max = 56; 
-		damage_min = 40;
 	}
 	[common]
 	{
 		screen_name = "Beetle (female)"; //--
 		membership = monster; //--
 	}
-	[defend] { defense = 105; }
 	[body]
 	{
 		avg_move_velocity = 1.5;
@@ -213,4 +204,32 @@
 		personal_space_range = 0.75;
 	}
 
+    // stats (but not loot) from dsx_chitterskrag_two
+	[actor]
+    {
+		[skills]
+		{
+			strength 		= 14, 0;
+			intelligence 	= 8, 0;
+			dexterity 		= 10, 0;
+			ranged 			= 11, 0;
+			combat_magic	= 11, 0;
+			nature_magic	= 11, 0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 406;
+		life             = 313;
+		max_life         = 313;
+		mana             = 50;
+		max_mana         = 50;
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 56; 
+		damage_min = 40;
+	}
+	[defend] { defense = 105; }
 }
