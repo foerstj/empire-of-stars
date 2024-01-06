@@ -196,7 +196,12 @@
 			}
 		}
     }
-    [inventory] {}  // clear inventory - no spell needed, no loot desired
+    [inventory]
+    {
+        // clear inventory - no spell needed, no loot desired
+        [other] {}
+        [pcontent] {}
+    }
     [conversation] {}
     [mind]
     {
