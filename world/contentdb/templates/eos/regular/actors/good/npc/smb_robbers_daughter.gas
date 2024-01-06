@@ -1,8 +1,10 @@
-[t:template,n:smb_robbers_daughter]
+[t:template,n:smb_robbers_daughter] { specializes = smb_robbers_daughter_base; }
+[t:template,n:smb_robbers_daughter_base]
 {
+	specializes = base_pm_fg;
+
 	category_name = "1W_character";
 	doc = "lyssa";
-	specializes = base_pm_fg;
 
 	[actor]
 	{

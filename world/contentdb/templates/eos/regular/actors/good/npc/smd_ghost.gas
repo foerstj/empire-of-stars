@@ -159,10 +159,12 @@
 	}
 }
 
-[t:template,n:ghost_npc]
+[t:template,n:ghost_npc] { specializes = ghost_npc_base; }
+[t:template,n:ghost_npc_base]
 {
-	category_name = "1W_character";
     specializes = ghost_base;
+
+	category_name = "1W_character";
     
     [actor]
     {

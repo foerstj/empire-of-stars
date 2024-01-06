@@ -1,9 +1,12 @@
-// Guards
-[t:template,n:dwarf_guard]
+// Guards (actor skills based on non-dwarf guards)
+
+[t:template,n:dwarf_guard] { specializes = dwarf_guard_base; }
+[t:template,n:dwarf_guard_base]
 {
+	specializes = base_dwarf;
+
 	category_name = "1W_character";
 	doc = "dwarf_legionnaire_guard";
-	specializes = base_dwarf;
 	[actor]
 	{
 		[skills]
@@ -53,11 +56,14 @@
 		effect_name = melee_hit_2;
 	}
 }
-[t:template,n:dwarf_guard_ranged]
+
+[t:template,n:dwarf_guard_ranged] { specializes = dwarf_guard_ranged_base; }
+[t:template,n:dwarf_guard_ranged_base]
 {
+	specializes = base_dwarf;
+
 	category_name = "1W_character";
 	doc = "dwarf_legionnaire_archer";
-	specializes = base_dwarf;
 	[actor]
 	{
 		[skills]
@@ -108,11 +114,14 @@
 		jat_talk = world\ai\jobs\common\job_talk.skrit;
 	}
 }
-[t:template,n:dwarf_guard_captain]
+
+[t:template,n:dwarf_guard_captain] { specializes = dwarf_guard_captain_base; }
+[t:template,n:dwarf_guard_captain_base]
 {
+	specializes = base_dwarf;
+
 	category_name = "1W_character";
 	doc = "mp_dwarf_guard_captain_crystwind";
-	specializes = base_dwarf;
 	[actor]
 	{
 		[skills]
@@ -163,12 +172,16 @@
 	}
 }
 
+
 // Townfolk
-[t:template,n:dwarf_townfolk_01]
+
+[t:template,n:dwarf_townfolk_01] { specializes = dwarf_townfolk_01_base; }
+[t:template,n:dwarf_townfolk_01_base]
 {
+	specializes = base_dwarf;
+
 	category_name = "1W_townsperson";
 	doc = "mp_dwarf";
-	specializes = base_dwarf;
 	[aspect]
 	{
 		[textures]
@@ -196,11 +209,14 @@
 		jat_talk = world\ai\jobs\common\job_talk.skrit;
 	}
 }
-[t:template,n:dwarf_townfolk_02]
+
+[t:template,n:dwarf_townfolk_02] { specializes = dwarf_townfolk_02_base; }
+[t:template,n:dwarf_townfolk_02_base]
 {
+	specializes = base_dwarf;
+
 	category_name = "1W_townsperson";
 	doc = "dwarf_worker";
-	specializes = base_dwarf;
 	[aspect]
 	{
 		[textures]
@@ -230,11 +246,13 @@
 }
 
 // Mule shop
-[t:template,n:dwarf_mule_shop]
+[t:template,n:dwarf_mule_shop] { specializes = dwarf_mule_shop_base; }
+[t:template,n:dwarf_mule_shop_base]
 {
+	specializes = base_dwarf;
+
 	category_name = "1W_shopkeep";
 	doc = "mp_npc_dwarf_02";
-	specializes = base_dwarf;
 	[actor] { portrait_icon = b_gui_ig_i_ic_c_go; }
 	[aspect]
 	{

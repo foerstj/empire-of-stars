@@ -1,8 +1,10 @@
-[t:template,n:ad_shop_magic]
+[t:template,n:ad_shop_magic] { specializes = ad_shop_magic; }
+[t:template,n:ad_shop_magic_base]
 {
+	specializes = base_giant;
+
 	category_name = "1W_shopkeep";
 	doc = "potion-healer, tass (HG)";
-	specializes = base_giant;
 
 	[actor]
 	{
@@ -148,11 +150,13 @@
 	}
 }
 
-[t:template,n:ad_shop_smith]
+[t:template,n:ad_shop_smith] { specializes = ad_shop_smith_base; }
+[t:template,n:ad_shop_smith_base]
 {
+	specializes = base_giant;
+
 	category_name = "1W_shopkeep";
 	doc = "blacksmith, acha (HG)";
-	specializes = base_giant;
 	[actor] { portrait_icon = b_gui_ig_i_ic_c_acha; }
 	[aspect]
 	{

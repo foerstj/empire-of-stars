@@ -1,8 +1,10 @@
-[t:template,n:half_giant_townfolk_01]
+[t:template,n:half_giant_townfolk_01] { specializes = half_giant_townfolk_01_base; }
+[t:template,n:half_giant_townfolk_01_base]
 {
+	specializes = base_giant;
+
 	category_name = "1W_townsperson";
 	doc = "half_giant_townfolk";
-	specializes = base_giant;
 	
 	[aspect]
 	{
@@ -34,11 +36,13 @@
  	}
 }
 
-[t:template,n:half_giant_townfolk_02]
+[t:template,n:half_giant_townfolk_02] { specializes = half_giant_townfolk_02_base; }
+[t:template,n:half_giant_townfolk_02_base]
 {
+	specializes = base_giant;
+
 	category_name = "1W_townsperson";
 	doc = "half_giant_townfolk";
-	specializes = base_giant;
 	
 	[aspect]
 	{

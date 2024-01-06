@@ -59,10 +59,12 @@
     }
 }
 
-[t:template,n:eos_smm_barkeeper]
+[t:template,n:eos_smm_barkeeper] { specializes = eos_smm_barkeeper_base; }
+[t:template,n:eos_smm_barkeeper_base]
 {
-	category_name = "1W_character";
     specializes = dsx_golem_clockwork_base;
+
+	category_name = "1W_character";
     
     [actor]
     {

@@ -1,11 +1,33 @@
-[t:template,n:little_green_man]
+[t:template,n:little_green_man] { specializes = little_green_man_base; }
+[t:template,n:little_green_man_base]
 {
+	specializes = base_goblin;
+
 	category_name = "1W_good";
 	doc = "little green man";
-	specializes = base_goblin;
 	[actor]
 	{
 		alignment			= aa_good;
+    }
+	[aspect]
+	{
+		model = m_c_eam_ggt_pos_1;
+		scale_base = 1.2;
+	}
+	[common] { screen_name="Little Green Man"; }
+    [conversation] {}
+	[mind]
+	{
+        jat_talk = world\ai\jobs\common\job_talk.skrit;
+		melee_engage_range = 10;
+		personal_space_range = 0.7;
+		ranged_engage_range = 10.0;
+		sight_range = 10.0;
+	}
+
+    // stats from goblin_grunt
+    [actor]
+    {
 		[skills]
 		{
 			strength =  	7, 0;
@@ -21,8 +43,6 @@
 		max_life = 320;
 		mana = 24;
 		max_mana = 24;
-		model = m_c_eam_ggt_pos_1;
-		scale_base = 1.2;
 	}
 	[attack]
 	{
@@ -30,15 +50,5 @@
 		damage_max = 48;
 		damage_min = 42;
 	}
-	[common] { screen_name="Little Green Man"; }
-    [conversation] {}
 	[defend] { defense=140; }
-	[mind]
-	{
-        jat_talk = world\ai\jobs\common\job_talk.skrit;
-		melee_engage_range = 10;
-		personal_space_range = 0.7;
-		ranged_engage_range = 10.0;
-		sight_range = 10.0;
-	}
 }
