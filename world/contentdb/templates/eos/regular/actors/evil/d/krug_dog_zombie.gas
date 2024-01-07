@@ -1,9 +1,10 @@
-[t:template,n:krug_dog_zombie]
+[t:template,n:krug_dog_zombie] { specializes = krug_dog_zombie_base; }
+[t:template,n:krug_dog_zombie_base]
 {
-	category_name = "1W_evil_d";
-	doc = "krug dog zombie";
 	specializes = base_krug_dog;
 
+	category_name = "1W_evil_d";
+	doc = "krug dog zombie";
 	[aspect]
 	{
 		model = m_c_edm_kd_pos_1;

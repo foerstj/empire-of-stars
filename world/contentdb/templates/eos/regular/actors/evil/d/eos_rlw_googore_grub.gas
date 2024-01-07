@@ -1,5 +1,4 @@
-// Googore grub with stats of dsx_spider_stalagnid_island
-[t:template,n:eos_rlw_googore_grub]
+[t:template,n:googore_grub_base]  // = googore_grub
 {
 	doc = "googore_grub";
 	specializes = actor_evil;
@@ -10,21 +9,20 @@
 
 		[skills]
 		{
-			strength =  13, 0;
-			intelligence =  8, 0;
-			dexterity = 9, 0;
-			melee =  10,  0;
+			strength =  	8, 0;
+			intelligence =  3, 0;
+			dexterity =  	6, 0;
+			melee =  		17, 0;
 		}
 	}
 	[aspect]
 	{
-		experience_value = 196;
-		life = 130;
-		max_life = 130;
-		mana = 12;
-		max_mana = 12;
-
 		model			= m_c_edm_gb_pos_1;
+		experience_value	= 2000;
+		life				= 260;
+		max_life			= 260;
+		mana = 6;
+        max_mana = 6;
         [voice]
 		{
 			[die] { * = s_e_die_googore_grub; }
@@ -32,9 +30,9 @@
 	}
 	[attack]
 	{
-		attack_range = 0.5;
-		damage_max = 46;
-		damage_min = 40;
+		damage_min		= 125;
+		damage_max		= 135;
+		attack_range	= 0.5;
 	}
 
 	[body]
@@ -98,7 +96,7 @@
 		}
 	}
 	[common] { screen_name = "Googore Grub"; }
-	[defend] { defense=70; }
+	[defend] { defense=190; }
 	[mind]
 	{
 		jat_fidget	= world\ai\jobs\common\job_fidget.skrit;
@@ -124,3 +122,36 @@
 	}
 }
 
+// Googore grub with stats of LoA stalagnid
+[t:template,n:eos_rlw_googore_grub] { specializes = eos_rlw_googore_grub_base; }
+[t:template,n:eos_rlw_googore_grub_base]
+{
+	specializes = googore_grub_base;
+
+    // stats from dsx_spider_stalagnid_island
+	[actor]
+	{
+		[skills]
+		{
+			strength =  13, 0;
+			intelligence =  8, 0;
+			dexterity = 9, 0;
+			melee =  10,  0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 196;
+		life = 130;
+		max_life = 130;
+		mana = 12;
+		max_mana = 12;
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 46;
+		damage_min = 40;
+	}
+	[defend] { defense=70; }
+}

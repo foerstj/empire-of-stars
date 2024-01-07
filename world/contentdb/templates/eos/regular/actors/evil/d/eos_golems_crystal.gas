@@ -1,10 +1,82 @@
 // LoA crystal golems with stats of LoA marble/rock golem
 
-[t:template,n:eos_golem_crystal_one]
+[t:template,n:dsx_golem_crystal_one_base]  // = dsx_golem_crystal_one
 {
 	category_name = "1W_evil_d";
-	doc = "eos_golem_crystal_one";
+	doc = "dsx_golem_crystal_one";
 	specializes = dsx_golem_base;
+	[actor]
+		{
+			[skills]
+				{
+					strength = 		90, 0;
+					intelligence = 	90, 0;
+					dexterity = 	90, 0;
+					melee =         90, 0;
+				}
+		}
+	[aspect]
+		{
+			experience_value = 2752;
+			life = 275;
+			max_life = 275;
+			mana = 275;
+			max_mana = 275;
+		textures:0 = b_c_edm_crg-02;
+			material = ice;
+			[voice]
+				{
+					[die]			{ priority = high;	* = s_e_die_rector;		}
+			[enemy_spotted]	{ priority = high; * = s_e_attack_rock_beast; }
+
+				}
+		}
+	[attack]
+		{
+			attack_range = 0.5;
+			damage_max = 100;
+			damage_min = 100;
+			reload_delay = 0;
+		}
+	[common] { screen_name="Crystal Golem"; }
+	[defend] { defense=275; }
+	[mind]
+		{
+			jat_guard = world\ai\jobs\common\job_guard.skrit;
+			melee_engage_range = 14;
+			personal_space_range = 0.7;
+			ranged_engage_range = 14.0;
+			sight_range = 14.0;
+		}
+	[physics]
+    {
+		explode_when_killed = true;
+		explosion_magnitude = .25;
+		gib_gore_good = false;
+
+		[break_particulate]
+		{
+			frag_glb_frag_crg2_01 = 1;
+			frag_glb_frag_crg2_02 = 1;
+			frag_glb_frag_crg2_03 = 1;
+			frag_glb_frag_crg2_04 = 1;
+			frag_glb_frag_crg2_05 = 1;
+			frag_glb_frag_crg2_06 = 1;
+			frag_glb_frag_crg2_07 = 1;
+			frag_glb_frag_crg2_08 = 1;
+			frag_glb_frag_crg2_09 = 1;
+		}
+    }
+}
+
+[t:template,n:eos_golem_crystal_one] { specializes = eos_golem_crystal_one_base; }
+[t:template,n:eos_golem_crystal_one_base]
+{
+	specializes = dsx_golem_crystal_one_base;
+
+	doc = "eos_golem_crystal_one";
+
+    // stats & loot from dsx_golem_marble
 	[actor]
 	{
 		[skills]
@@ -22,14 +94,6 @@
 		max_life = 470;
 		mana = 50;
 		max_mana = 50;
-		textures:0 = b_c_edm_crg-02;
-		material = ice;
-		scale_base = 0.9;
-		[voice]
-		{
-			[die]			{ priority = high;	* = s_e_die_rector;		}
-			[enemy_spotted]	{ priority = high; * = s_e_attack_rock_beast; }
-		}
 	}
 	[attack]
 	{
@@ -38,7 +102,6 @@
 		damage_min 	= 100;
 		reload_delay = 0;
 	}
-	[common] { screen_name="Crystal Golem"; }
 	[defend] { defense=156; }
 	[inventory]
 	{
@@ -85,14 +148,56 @@
 			}
 		}
 	}
+}
+
+
+[t:template,n:dsx_golem_crystal_two_base]  // = dsx_golem_crystal_two
+{
+	category_name = "1W_evil_d";
+	doc = "dsx_golem_crystal_two";
+	specializes = dsx_golem_base;
+	[actor]
+		{
+			[skills]
+				{
+					strength = 		90, 0;
+					intelligence = 	90, 0;
+					dexterity = 	90, 0;
+					melee =         90, 0;
+				}
+		}
+	[aspect]
+		{
+			experience_value = 2752;
+			life = 275;
+			max_life = 275;
+			mana = 275;
+			max_mana = 275;
+		textures:0	= b_c_edm_crg-01;
+			material = ice;
+			[voice]
+				{
+					[die]			{ priority = high;	* = s_e_die_rector;		}
+			[enemy_spotted]	{ priority = high; * = s_e_attack_rock_beast; }
+				}
+		}
+	[attack]
+		{
+			attack_range = 0.5;
+			damage_max = 100;
+			damage_min = 100;
+			reload_delay = 0;
+		}
+	[common] { screen_name="Diamond Golem"; }
+	[defend] { defense=275; }
 	[mind]
-	{
-		jat_guard = world\ai\jobs\common\job_guard.skrit;
-		melee_engage_range = 14;
-		personal_space_range = 0.7;
-		ranged_engage_range = 14.0;
-		sight_range = 14.0;
-	}
+		{
+			jat_guard = world\ai\jobs\common\job_guard.skrit;
+			melee_engage_range = 14;
+			personal_space_range = 0.7;
+			ranged_engage_range = 14.0;
+			sight_range = 14.0;
+		}
 	[physics]
     {
 		explode_when_killed = true;
@@ -114,11 +219,14 @@
     }
 }
 
-[t:template,n:eos_golem_crystal_two]
+[t:template,n:eos_golem_crystal_two] { specializes = eos_golem_crystal_two_base; }
+[t:template,n:eos_golem_crystal_two_base]
 {
-	category_name = "1W_evil_d";
+	specializes = dsx_golem_crystal_two_base;
+
 	doc = "eos_golem_crystal_two";
-	specializes = dsx_golem_base;
+
+    // stats from rock_golem
 	[actor]
 	{
 		[skills]
@@ -136,14 +244,6 @@
 		max_life = 1040;
 		mana = 990;
         max_mana = 990;
-		textures:0	= b_c_edm_crg-01;
-		material = ice;
-		scale_base = 0.9;
-		[voice]
-		{
-			[die]			{ priority = high;	* = s_e_die_rector;		}
-			[enemy_spotted]	{ priority = high; * = s_e_attack_rock_beast; }
-		}
 	}
 	[attack]
 	{
@@ -152,33 +252,5 @@
 		damage_min = 200;
 		reload_delay = 0;
 	}
-	[common] { screen_name="Diamond Golem"; }
 	[defend] { defense=548; }
-	[mind]
-	{
-		jat_guard = world\ai\jobs\common\job_guard.skrit;
-		melee_engage_range = 14;
-		personal_space_range = 0.7;
-		ranged_engage_range = 14.0;
-		sight_range = 14.0;
-	}
-	[physics]
-    {
-		explode_when_killed = true;
-		explosion_magnitude = .25;
-		gib_gore_good = false;
-
-		[break_particulate]
-		{
-			frag_glb_frag_crg2_01 = 1;
-			frag_glb_frag_crg2_02 = 1;
-			frag_glb_frag_crg2_03 = 1;
-			frag_glb_frag_crg2_04 = 1;
-			frag_glb_frag_crg2_05 = 1;
-			frag_glb_frag_crg2_06 = 1;
-			frag_glb_frag_crg2_07 = 1;
-			frag_glb_frag_crg2_08 = 1;
-			frag_glb_frag_crg2_09 = 1;
-		}
-    }
 }

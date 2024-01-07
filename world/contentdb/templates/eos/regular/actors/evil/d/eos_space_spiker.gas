@@ -1,5 +1,6 @@
 // spiked maw & boss, smaller, different sounds
-[t:template,n:eos_space_spiker]
+
+[t:template,n:spiked_maw_base]  // = spiked_maw
 {
 	category_name = "1W_evil_d";
 	doc = "spiked_maw";
@@ -21,14 +22,6 @@
 		max_life = 188;
 		mana = 10;
 		max_mana = 10;
-
-		// EDITED
-		scale_base = 0.5;
-		[voice]
-		{
-			[die] { * = s_e_die_lizard_SED; }
-			[hit_glance] { * = s_e_hit_lizard_SED; }
-		}
 	}
 	[attack]
 	{
@@ -38,7 +31,7 @@
 	}
 	[common]
 	{
-		screen_name="Space Spiker";  // EDITED
+		screen_name="Spiked Maw";
 		membership = party_spiked_maw_boss, monster;
 	}
 	[defend] { defense=90; }
@@ -106,7 +99,28 @@
 	}
 }
 
-[t:template,n:eos_space_spiker_boss_01]
+[t:template,n:eos_space_spiker] { specializes = eos_space_spiker_base; }
+[t:template,n:eos_space_spiker_base]
+{
+	specializes = spiked_maw_base;
+
+	[aspect]
+	{
+		scale_base = 0.5;
+		[voice]
+		{
+			[die] { * = s_e_die_lizard_SED; }
+			[hit_glance] { * = s_e_hit_lizard_SED; }
+		}
+	}
+	[common]
+	{
+		screen_name="Space Spiker";
+	}
+}
+
+
+[t:template,n:spiked_maw_boss_01_base]  // = spiked_maw_boss_01
 {
 	category_name = "1W_evil_d";
 	doc = "spiked_maw_boss_01";
@@ -130,14 +144,6 @@
 		max_life = 238;
 		mana = 10;
 		max_mana = 10;
-
-		// EDITED
-		scale_base = 0.5;
-		[voice]
-		{
-			[die] { * = s_e_die_lizard_SED; }
-			[hit_glance] { * = s_e_hit_lizard_SED; }
-		}
 	}
 	[attack]
 	{
@@ -147,7 +153,7 @@
 	}
 	[common]
 	{
-		screen_name="Rabid Space Spiker";  // EDITED
+		screen_name="Rabid Spiked Maw";
 		membership=monster,immune_charm,immune_control,immune_freeze,immune_polymorph,immune_align_change,immune_explode;
 		[template_triggers]
 		{
@@ -222,5 +228,25 @@
 			frag_glb_spiked_maw_04 = 6;
 			frag_glb_spiked_maw_05 = 8;
 		}
+	}
+}
+
+[t:template,n:eos_space_spiker_boss_01] { specializes = eos_space_spiker_boss_01_base; }
+[t:template,n:eos_space_spiker_boss_01_base]
+{
+	specializes = spiked_maw_boss_01_base;
+
+	[aspect]
+	{
+		scale_base = 0.5;
+		[voice]
+		{
+			[die] { * = s_e_die_lizard_SED; }
+			[hit_glance] { * = s_e_hit_lizard_SED; }
+		}
+	}
+	[common]
+	{
+		screen_name="Rabid Space Spiker";
 	}
 }

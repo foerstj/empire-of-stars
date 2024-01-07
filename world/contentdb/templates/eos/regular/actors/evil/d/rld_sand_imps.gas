@@ -1,12 +1,35 @@
 // Sand imps with stats somewhat below the eos_rld_droog
 
-[t:template,n:eos_rld_sand_ripper]
+[t:template,n:eos_rld_sand_ripper] { specializes = eos_rld_sand_ripper_base; }
+[t:template,n:eos_rld_sand_ripper_base]
 {
-    // stats from dsx_wasped
-	category_name = "1W_evil_d";
-	doc = "sand_ripper";
 	specializes = base_imp;
 
+	category_name = "1W_evil_d";
+	doc = "sand_ripper";
+	[aspect]
+	{
+		model = m_c_edm_li_pos_1;
+		[textures] { 0=b_c_edm_li-05; }
+		[voice]
+		{
+			[die]			{ priority = high; * = s_e_die_sand_ripper; }
+		}
+
+        scale_base = 1.1;
+	}
+	[common] { screen_name="Sand Ripper"; }
+	[mind]
+	{
+		jat_fidget = world\ai\jobs\common\job_fidget.skrit;
+
+		melee_engage_range = 14;
+		personal_space_range = 0.7;
+		ranged_engage_range = 14.0;
+		sight_range = 14;
+	}
+
+    // stats from dsx_wasped
 	[actor]
 	{
 		[skills]
@@ -24,15 +47,6 @@
 		max_life = 145;
 		mana = 12;
 		max_mana = 12;
-
-		model = m_c_edm_li_pos_1;
-		[textures] { 0=b_c_edm_li-05; }
-		[voice]
-		{
-			[die]			{ priority = high; * = s_e_die_sand_ripper; }
-		}
-
-        scale_base = 1.1;
 	}
 	[attack]
 	{
@@ -40,63 +54,29 @@
 		damage_max = 49;
 		damage_min = 43;
 	}
-	[common] { screen_name="Sand Ripper"; }
 	[defend] { defense=75; }
-    // no inventory as in dsx_wasped
-	[mind]
-	{
-		jat_fidget = world\ai\jobs\common\job_fidget.skrit;
-
-		melee_engage_range = 14;
-		personal_space_range = 0.7;
-		ranged_engage_range = 14.0;
-		sight_range = 14;
-	}
+    // no loot as in dsx_wasped
 }
 
+[t:template,n:eos_rld_sand_mage] { specializes = eos_rld_sand_mage_base; }
 [t:template,n:eos_rld_sand_mage_base]
 {
-    // stats from frostnid spitter
-	category_name = "1W_evil_d";
-	doc = "sand_mage";
 	specializes = base_imp;
 
-	[actor]
-	{
-		[skills]
-		{
-			strength =  10, 0;
-			intelligence =  5, 0;
-			dexterity =  16, 0;
-            combat_magic =  10,  0;
-		}
-	}
+	category_name = "1W_evil_d";
+	doc = "sand_mage";
 	[aspect]
 	{
-		experience_value = 198;
-		life = 108;
-        max_life = 108;
-        mana = 8;
-		max_mana = 8;
-
 		model = m_c_edm_li_pos_2;
 		[textures] { 0=b_c_edm_li-06; }
 
         scale_base = 1.1;
 	}
-	[attack]
-	{
-		attack_range = 0.5;
-		damage_max = 40;
-		damage_min = 38;
-	}
 	[common] { screen_name="Sand Mage"; }
-	[defend] { defense=58; }
    	[inventory]
 	{
     	selected_active_location = il_active_primary_spell;
 		[other] { il_active_primary_spell=spell_rld_sand_mage_blast; }
-        // no drops as in frostnid spitter
 	}
 	[mind]
 	{
@@ -116,21 +96,69 @@
 		ranged_engage_range = 14.0;
 		sight_range = 14;
 	}
-}
-[t:template,n:eos_rld_sand_mage]
-{
-	category_name = "1W_evil_d";
-	doc = "sand mage";
-	specializes = eos_rld_sand_mage_base;
+
+    // stats from frostnid spitter
+	[actor]
+	{
+		[skills]
+		{
+			strength =  10, 0;
+			intelligence =  5, 0;
+			dexterity =  16, 0;
+            combat_magic =  10,  0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 198;
+		life = 108;
+        max_life = 108;
+        mana = 8;
+		max_mana = 8;
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 40;
+		damage_min = 38;
+	}
+	[defend] { defense=58; }
+    // no loot as in frostnid spitter
 }
 
+[t:template,n:eos_rld_sand_basher] { specializes = eos_rld_sand_basher_base; }
 [t:template,n:eos_rld_sand_basher_base]
 {
-    // stats from frostnid
-	category_name = "1W_evil_d";
-	doc = "sand_basher";
 	specializes = base_imp;
 
+	category_name = "1W_evil_d";
+	doc = "sand_basher";
+	[aspect]
+	{
+		model = m_c_edm_li_pos_3;
+		[textures] { 0=b_c_edm_li-07; }
+
+        scale_base = 1.1;
+	}
+	[common]
+	{
+		screen_name="Sand Basher";
+		membership = monster, party_sand_mage;
+	}
+	[mind]
+	{
+		jat_brain							= world\ai\jobs\common\brain_hero.skrit
+			?actor_joins_existing_party		= true;
+
+		jat_fidget							= world\ai\jobs\common\job_fidget.skrit;
+
+		melee_engage_range = 14;
+		personal_space_range = 0.7;
+		ranged_engage_range = 14.0;
+		sight_range = 14;
+	}
+
+    // stats from frostnid
 	[actor]
 	{
 		[skills]
@@ -148,11 +176,6 @@
         max_life = 177;
         mana = 8;
 		max_mana = 8;
-
-		model = m_c_edm_li_pos_3;
-		[textures] { 0=b_c_edm_li-07; }
-
-        scale_base = 1.1;
 	}
 	[attack]
 	{
@@ -160,29 +183,6 @@
 		damage_max = 36;
 		damage_min = 30;
 	}
-	[common]
-	{
-		screen_name="Sand Basher";
-		membership = monster, party_sand_mage;
-	}
 	[defend] { defense=60; }
-   	// no inventory as in frostnid
-	[mind]
-	{
-		jat_brain							= world\ai\jobs\common\brain_hero.skrit
-			?actor_joins_existing_party		= true;
-
-		jat_fidget							= world\ai\jobs\common\job_fidget.skrit;
-
-		melee_engage_range = 14;
-		personal_space_range = 0.7;
-		ranged_engage_range = 14.0;
-		sight_range = 14;
-	}
-}
-[t:template,n:eos_rld_sand_basher]
-{
-	category_name = "1W_evil_d";
-	doc = "sand_basher";
-	specializes = eos_rld_sand_basher_base;
+   	// no loot as in frostnid
 }

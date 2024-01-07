@@ -1,9 +1,8 @@
-[t:template,n:eos_fleshrender_boss]
+[t:template,n:dsx_fleshrender_leaf_base]  // = dsx_fleshrender
 {
-    // Balanced to level 13, medium melee
-    // ...and then upped a bit
+// Balanced to level 13, medium melee
 	category_name = "1W_evil_d";
-	doc = "eos_fleshrender_boss";
+	doc = "dsx_fleshrender";
 	specializes = dsx_fleshrender_base;
 
 	[actor]
@@ -18,9 +17,9 @@
 	}
 	[aspect]
 	{
-		experience_value = 300;  // 258+42
-		life             = 300;  // 258+42
-		max_life         = 300;  // 258+42
+		experience_value = 258;
+		life             = 258;
+		max_life         = 258;
 		mana             = 45;
 		max_mana         = 45;
 
@@ -39,14 +38,28 @@
 	[attack]
 	{
 		attack_range = 0.5;
-		damage_max = 80;  // 68+12
-		damage_min = 60;  // 50+10
+		damage_max = 68;
+		damage_min = 50; 
 	}
 
 	[common]
+		{
+			screen_name = "Fleshrender"; //--
+			membership = monster; //--
+		}
+
+	[defend] { defense = 100; }
+
+}
+
+[t:template,n:eos_fleshrender_boss] { specializes = eos_fleshrender_boss_base; }
+[t:template,n:eos_fleshrender_boss_base]
+{
+	specializes = dsx_fleshrender_leaf_base;
+
+	doc = "eos_fleshrender_boss";
+	[common]
     {
-        screen_name = "Fleshrender";
-        
         // boss-ified
 		membership=monster,immune_charm,immune_control,immune_freeze,immune_polymorph,immune_align_change,immune_explode;
 		[template_triggers]
@@ -61,5 +74,30 @@
 		}
     }
 
+    // stats from dsx_fleshrender, EDITED
+	[actor]
+	{
+		[skills]
+		{
+			strength     = 13, 0;
+			intelligence = 8, 0;
+			dexterity    = 9, 0;
+			melee        = 10, 0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 300;  // 258+42
+		life             = 300;  // 258+42
+		max_life         = 300;  // 258+42
+		mana             = 45;
+		max_mana         = 45;
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 80;  // 68+12
+		damage_min = 60;  // 50+10
+	}
 	[defend] { defense = 100; }
 }

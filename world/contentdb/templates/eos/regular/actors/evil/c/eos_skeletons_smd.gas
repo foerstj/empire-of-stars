@@ -1,38 +1,17 @@
 // Skeletons from dsx just a bit higher stats
 
-[t:template,n:eos_smd_skeleton_melee_01]
+[t:template,n:eos_smd_skeleton_melee_01] { specializes = eos_smd_skeleton_melee_01_base; }
+[t:template,n:eos_smd_skeleton_melee_01_base]
 {
-	category_name = "1W_evil_c";
-	doc = "eos skeleton melee 01";
 	specializes = base_skeleton;
 
-	[actor]
-	{
-		[skills]
-		{
-			strength	= 15, 0;
-			intelligence= 10, 0;
-			dexterity	= 10, 0;
-			melee		= 13, 0;
-		}
-	}
-	[aspect]
-	{
-		experience_value = 500;
-		life = 500;
-		max_life = 500;
-		mana = 5;
-		max_mana = 5;
+	category_name = "1W_evil_c";
+	doc = "eos skeleton melee 01";
 
+    [aspect]
+    {
 		[textures]	{0 = b_c_ecm_sk-02;}
-	}
-	[attack]
-	{
-		damage_max = 100;
-		damage_min = 80;
-	}
-	[defend] { defense = 200; }
-
+    }
 	[common]
 	{
         screen_name="Skeleton";
@@ -50,7 +29,46 @@
             frag_glb_bone_dirty_06 = 1;
         }
 	}
+	[mind]
+	{
+		jat_brain				= world\ai\jobs\common\brain_hero.skrit
+			?actor_joins_existing_party	= true;
 
+		job_travel_distance_limit = 10;
+		melee_engage_range = 8.0;
+		on_job_reached_travel_distance_abort_attack = true;
+		ranged_engage_range			= 8.0;
+		sight_range				= 14.0;
+		jat_fidget				= world\ai\jobs\common\job_fidget.skrit;
+	}
+
+    // stats self-written
+	[actor]
+	{
+		[skills]
+		{
+			strength	= 15, 0;
+			intelligence= 10, 0;
+			dexterity	= 10, 0;
+			melee		= 13, 0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 500;
+		life = 500;
+		max_life = 500;
+		mana = 5;
+		max_mana = 5;
+	}
+	[attack]
+	{
+		damage_max = 100;
+		damage_min = 80;
+	}
+	[defend] { defense = 200; }
+
+    // loot from dsx_skeleton_02
 	[inventory]
 	{
 		[pcontent]
@@ -89,51 +107,15 @@
             }
         }
 	}
-	[mind]
-	{
-		jat_brain				= world\ai\jobs\common\brain_hero.skrit
-			?actor_joins_existing_party	= true;
-
-		job_travel_distance_limit = 10;
-		melee_engage_range = 8.0;
-		on_job_reached_travel_distance_abort_attack = true;
-		ranged_engage_range			= 8.0;
-		sight_range				= 14.0;
-		jat_fidget				= world\ai\jobs\common\job_fidget.skrit;
-	}
 }
 
-[t:template,n:eos_smd_skeleton_large]
+[t:template,n:eos_smd_skeleton_large] { specializes = eos_smd_skeleton_large_base; }
+[t:template,n:eos_smd_skeleton_large_base]
 {
-	category_name = "1W_evil_c";
-	doc = "DSX_Skeleton_Large";
 	specializes = base_skeleton;
 
-	[actor]
-	{
-		[skills]
-		{
-			strength        = 15, 0;
-			intelligence    = 10, 0;
-			dexterity       = 10, 0;
-			melee           = 15, 0;
-		}
-	}
-	[aspect]
-	{
-		experience_value = 800;
-		life = 1000;
-		max_life = 1000;
-		mana = 10;
-		max_mana = 10;
-		[textures]	{0=b_c_ecm_sk-02;}
-		scale_base = 1.5;
-	}
-	[attack]
-	{
-		damage_max = 181;
-		damage_min = 165;
-	}
+	category_name = "1W_evil_c";
+	doc = "DSX_Skeleton_Large";
 
 	[body]
     {
@@ -195,6 +177,11 @@
         }
     }
 
+	[aspect]
+	{
+		[textures]	{0=b_c_ecm_sk-02;}
+		scale_base = 1.5;
+	}
 	[physics]
 	{
 		[break_particulate]
@@ -212,17 +199,57 @@
 		screen_name="Giant Skeleton Stalker";
 		membership = skeleton, monster;
 	}
-	[defend] { defense=400; }
 	[inventory]
     {
         spew_equipped_kill_count = ;
-        [pcontent]
+        [equipment]
         {
             es_weapon_hand = sd_g_c_sd_1h_avg_dsx;
             es_shield_hand = sh_un_m_o_k_m_dermal_dsx;
-            // sh_un_m_o_c_m_parade
-            // sh_ra_w_g_o_k_m_fin
-            // sh_un_m_o_k_m_dermal
+        }
+	}
+	[mind]
+    {
+        jat_fidget		= world\ai\jobs\common\job_fidget.skrit
+            ?still			= false;
+
+        melee_engage_range = 14.0;
+        ranged_engage_range = 14.0;
+        sight_range = 14.0;
+        personal_space_range = 1.4;
+    }
+
+    // stats self-written
+	[actor]
+	{
+		[skills]
+		{
+			strength        = 15, 0;
+			intelligence    = 10, 0;
+			dexterity       = 10, 0;
+			melee           = 15, 0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 800;
+		life = 1000;
+		max_life = 1000;
+		mana = 10;
+		max_mana = 10;
+	}
+	[attack]
+	{
+		damage_max = 181;
+		damage_min = 165;
+	}
+	[defend] { defense=400; }
+
+    // loot from dsx_skeleton_large
+	[inventory]
+    {
+        [pcontent]
+        {
             /* Generated: Tue Jun 17 11:13:15 2003
                 Level 14, Strong */
             [oneof*]
@@ -263,24 +290,37 @@
             }
         }
     }
-	[mind]
-    {
-        jat_fidget		= world\ai\jobs\common\job_fidget.skrit
-            ?still			= false;
-
-        melee_engage_range = 14.0;
-        ranged_engage_range = 14.0;
-        sight_range = 14.0;
-        personal_space_range = 1.4;
-    }
 }
 
-[t:template,n:eos_smd_skeleton_archer]
+[t:template,n:eos_smd_skeleton_archer] { specializes = eos_smd_skeleton_archer_base; }
+[t:template,n:eos_smd_skeleton_archer_base]
 {
-	category_name = "1W_evil_c";
-	doc = "eos smd skeleton archer";
 	specializes = base_skeleton;
 
+	category_name = "1W_evil_c";
+	doc = "eos smd skeleton archer";
+
+	[common] { screen_name="Skeletal Archer"; }
+	[inventory]
+	{
+		selected_active_location = IL_ACTIVE_RANGED_WEAPON;
+		[equipment]
+		{
+			es_shield_hand = bw_g_c_s_s_r_avg_dsx;
+		}
+    }
+	[mind]
+    {
+        melee_engage_range = 10.0;
+        ranged_engage_range = 16.0;
+        sight_range = 16.0;
+        jat_fidget							= world\ai\jobs\common\job_fidget.skrit
+            ?social							= 0.5
+            &meander						= false
+            &still							= false;
+    }
+
+    // stats self-written
 	[actor]
 	{
 		[skills]
@@ -291,7 +331,6 @@
 			ranged       =	13, 0;
 		}
 	}
-
 	[aspect]
 	{
 		experience_value = 600;
@@ -305,15 +344,11 @@
 		damage_max = 110;
 		damage_min = 90;
 	}
-	[common] { screen_name="Skeletal Archer"; }
 	[defend] { defense=200; }
+
+    // loot from dsx_skeletal_archer
 	[inventory]
 	{
-		selected_active_location = IL_ACTIVE_RANGED_WEAPON;
-		[equipment]
-		{
-			es_shield_hand = bw_g_c_s_s_r_avg_dsx;
-		}
 		[pcontent]
         {
             /* Generated: Tue Jun 17 11:13:15 2003
@@ -350,52 +385,19 @@
             }
         }
 	}
-
-	[mind]
-    {
-        melee_engage_range = 10.0;
-        ranged_engage_range = 16.0;
-        sight_range = 16.0;
-        jat_fidget							= world\ai\jobs\common\job_fidget.skrit
-            ?social							= 0.5
-            &meander						= false
-            &still							= false;
-    }
 }
 
-[t:template,n:eos_smd_skeleton_melee_02]
+[t:template,n:eos_smd_skeleton_melee_02] { specializes = eos_smd_skeleton_melee_02_base; }
+[t:template,n:eos_smd_skeleton_melee_02_base]
 {
-	category_name = "1W_evil_c";
-	doc = "eos smd skeleton melee 02";
 	specializes = base_skeleton;
 
-	[actor]
-	{
-		[skills]
-		{
-			strength	    = 16, 0;
-			intelligence    = 10, 0;
-			dexterity	    = 10, 0;
-			melee		    = 14, 0;
-		}
-	}
+	category_name = "1W_evil_c";
+	doc = "eos smd skeleton melee 02";
 	[aspect]
 	{
-		experience_value = 600;
-		life = 600;
-		max_life = 600;
-		mana = 6;
-		max_mana = 6;
-
 		[textures]	{0 = b_c_ecm_sk-02;}
 	}
-	[attack]
-	{
-		damage_min = 120;
-		damage_max = 100;
-	}
-	[defend] { defense = 250; }
-
 	[common]
 	{
 		membership = skeleton, monster;
@@ -426,4 +428,30 @@
         sight_range									= 14.0;
         jat_fidget									= world\ai\jobs\common\job_fidget.skrit;
     }
+
+    // stats self-written
+	[actor]
+	{
+		[skills]
+		{
+			strength	    = 16, 0;
+			intelligence    = 10, 0;
+			dexterity	    = 10, 0;
+			melee		    = 14, 0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 600;
+		life = 600;
+		max_life = 600;
+		mana = 6;
+		max_mana = 6;
+	}
+	[attack]
+	{
+		damage_min = 120;
+		damage_max = 100;
+	}
+	[defend] { defense = 250; }
 }

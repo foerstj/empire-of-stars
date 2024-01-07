@@ -1,5 +1,4 @@
-// Googore with stats of rlw droog grunt
-[t:template,n:eos_rlw_googore]
+[t:template,n:googore_base]  // = googore
 {
 	doc = "googore";
 	specializes = actor_evil;
@@ -11,23 +10,22 @@
 
 		[skills]
 		{
-			strength =  13, 0;
+			strength =  	18, 0;
 			intelligence =  7, 0;
-			dexterity =  8, 0;
-            melee =  12,  0;
+			dexterity =  	10, 0;
+			melee =  		40, 0;
 		}
 	}
 
 	[aspect]
 	{
-		experience_value = 392;
-		life = 297;
-        max_life = 297;
-        mana = 14;
-		max_mana = 14;
-
 		draw_shadow 		= false;
 		model				= m_c_edm_gg_pos_1;
+		experience_value	= 17000;
+		life				= 1330;
+		max_life			= 1330;
+		mana				= 10;
+		max_mana			= 10;
 		[voice]
 		{
 			[enemy_spotted]	{ priority = high; * = s_e_call_googore_SED;  }
@@ -36,9 +34,9 @@
 
 	[attack]
 	{
-		attack_range = 0.5;
-		damage_max = 22;
-		damage_min = 18;
+		attack_range	= 0.5;
+		damage_min		= 160;
+		damage_max		= 180;
 	}
 
 	[body]
@@ -124,7 +122,7 @@
     [inventory]
 	{
 		selected_active_location = il_active_primary_spell;
-		[other] { il_active_primary_spell=spell_googore_spit_eos_rlw; }  // spell with stats of rlw droog mage
+		[other] { il_active_primary_spell=spell_googore_spit; }
 	}
 	[common]
 	{
@@ -145,7 +143,7 @@
 			}
 		}
 	}
-	[defend] { defense=78; }
+	[defend] { defense=380; }
 	[mind]
 	{
 		actor_weapon_preference					= WP_MAGIC;
@@ -175,4 +173,42 @@
 		sight_origin_height						= 2;
 	}
 
+}
+
+// Googore with stats of rlw droog grunt
+[t:template,n:eos_rlw_googore] { specializes = eos_rlw_googore_base; }
+[t:template,n:eos_rlw_googore_base]
+{
+	specializes = googore_base;
+
+	[actor]
+	{
+		[skills]
+		{
+			strength =  13, 0;
+			intelligence =  7, 0;
+			dexterity =  8, 0;
+            melee =  12,  0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 392;
+		life = 297;
+        max_life = 297;
+        mana = 14;
+		max_mana = 14;
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 22;
+		damage_min = 18;
+	}
+	[defend] { defense=78; }
+
+    [inventory]
+	{
+		[other] { il_active_primary_spell=spell_googore_spit_eos_rlw; }  // spell with stats of rlw droog mage
+	}
 }

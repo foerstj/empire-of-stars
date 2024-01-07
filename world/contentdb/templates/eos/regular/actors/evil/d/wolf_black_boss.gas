@@ -1,8 +1,7 @@
-// wolf_black_boss_01 but with normal (non-undead) texture
-[t:template,n:wolf_black_boss_01a]
+[t:template,n:wolf_black_boss_01_base]  // = wolf_black_boss_01
 {
 	category_name = "1W_evil_d";
-	doc = "wolf_black_boss_01a";
+	doc = "wolf_black_boss_01";
 	specializes = base_wolf;
 
 	[body]
@@ -27,7 +26,7 @@
         max_life = 433;
         mana = 16;
         max_mana = 16;
-        textures:0 = b_c_edm_wf-02; // EDITED: was b_c_edm_wf-05
+		textures:0 = b_c_edm_wf-05;
 	}
 	[attack]
 	{
@@ -105,5 +104,19 @@
 			&form_party_on_friend_entered_OCZ	= true
 			&form_party_on_friend_entered_ICZ	= true
 			&party_template						= "party_wolf_black_boss";
+	}
+}
+
+// wolf_black_boss_01 but with normal (non-undead) texture
+[t:template,n:wolf_black_boss_01a] { specializes = wolf_black_boss_01a_base; }
+[t:template,n:wolf_black_boss_01a_base]
+{
+	specializes = wolf_black_boss_01_base;
+
+	doc = "wolf_black_boss_01a";
+
+	[aspect]
+	{
+        textures:0 = b_c_edm_wf-02; // EDITED: was b_c_edm_wf-05
 	}
 }

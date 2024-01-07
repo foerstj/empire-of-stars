@@ -1,9 +1,24 @@
-[t:template,n:eos_fireheart_spirit]
+[t:template,n:eos_fireheart_spirit] { specializes = eos_fireheart_spirit_base; }
+[t:template,n:eos_fireheart_spirit_base]
 {
+	specializes = base_lava_spirit;
+
     // Lava Spirit with stats of Scorpion
 	category_name = "1W_evil_d";
 	doc = "lava_spirit";
-	specializes = base_lava_spirit;
+	[common]
+	{
+		screen_name="Fireheart Spirit";
+	}
+	[mind]
+	{
+		melee_engage_range = 14;
+		personal_space_range = 0.7;
+		ranged_engage_range = 14.0;
+		sight_range = 14;
+	}
+
+    // stats (but not loot) from scorpion
 	[actor]
 	{
 		[skills]
@@ -28,16 +43,5 @@
 		damage_max = 42;
 		damage_min = 40;
 	}
-	[common]
-	{
-		screen_name="Fireheart Spirit";
-	}
 	[defend] { defense=62; }
-	[mind]
-	{
-		melee_engage_range = 14;
-		personal_space_range = 0.7;
-		ranged_engage_range = 14.0;
-		sight_range = 14;
-	}
 }

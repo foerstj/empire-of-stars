@@ -1,10 +1,13 @@
 // krug dog skeleton slightly down-statted, using stats of black wolf
-[t:template,n:eos_smd_krug_dog_skeleton]
+[t:template,n:eos_smd_krug_dog_skeleton] { specializes = eos_smd_krug_dog_skeleton_base; }
+[t:template,n:eos_smd_krug_dog_skeleton_base]
 {
-	category_name = "1W_evil_d";
-	doc = "krug_dog_skeleton";
 	specializes = krug_dog_skeleton_base;
 
+	category_name = "1W_evil_d";
+	doc = "krug_dog_skeleton";
+
+    // stats from wolf_black
 	[actor]
 	{
 		[skills]

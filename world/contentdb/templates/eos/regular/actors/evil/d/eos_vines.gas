@@ -1,52 +1,49 @@
-// Vines with stats of Octodrak
-[t:template,n:eos_vines_killer]
+[t:template,n:dsx_vines_killer_base]  // = dsx_vines_killer
 {
-    category_name = "1W_evil_d";
-    doc = "eos vines_killer";
-    specializes = actor_evil;
-    [actor]
-    {
-        [skills]
-        {
-            strength =  15, 0;
-            intelligence =  8, 0;
-            dexterity =  11, 0;
-            melee =  13,  0;
-        }
-    }
-    [aspect]
-    {
-        experience_value = 623;
-        life = 369;
-        max_life = 369;
-        mana = 92;
-        max_mana = 92;
-
-        draw_shadow = false;
-        model = m_c_edm_ug_pos_1;
-        textures:0 = b_c_edm_vines;
-        [voice]
-        {
-            [attack]		{ priority = always;	* = s_e_attack_whip;	}
-            [die]			{ priority = high;	* = s_e_die_vines;		}
-            [enemy_spotted]	{ priority = high; * = s_e_ground_burst_SED;}
-        }
-        
-        scale_base = 2;  // doubled
-    }
-    [attack]
-    {
-        attack_range = 6;  // doubled
-        damage_max = 70;
-        damage_min = 64;
-    }
+  category_name = "1W_evil_d";
+  doc = "dsx_vines_killer";
+  specializes = actor_evil;
+	  [actor]
+	    {
+	      [skills]
+			{
+			  strength =     9, 0;
+			  intelligence = 7, 0;
+			  dexterity =    8, 0;
+			  melee =        4, 0;
+			}
+	    }
+	  [aspect]
+	    {
+	    	draw_shadow = false;
+	      	experience_value = 40;
+	      	life             = 175;
+	      	max_life         = 175;
+	      	mana             = 30;
+	      	max_mana         = 30;
+			model = m_c_edm_ug_pos_1;
+	    	textures:0 = b_c_edm_vines;
+	    	//material = flesh;
+	      	[voice]
+		    {
+		      		[attack]		{ priority = always;	* = s_e_attack_whip;	}
+				[die]			{ priority = high;	* = s_e_die_vines;		}
+				[enemy_spotted]	{ priority = high; * = s_e_ground_burst_SED;}
+			}
+	    }
+	  [attack]
+	    {
+	      attack_range = 2.5;
+	      damage_max = 32; 
+	      damage_min = 25; 
+	    }
 	
 	  [common]
 	    {
 	      screen_name = "Killer Vines"; //--
 	      membership = monster; //--
 	    }
-	  [defend] { defense = 148; }
+	  [defend] { defense = 53; }
 	
 	[body]
 	{
@@ -135,6 +132,31 @@
 		actor_auto_switches_to_karate	= false;
 		actor_auto_switches_to_melee	= true;
 		
+		melee_engage_range 			= 3;
+		ranged_engage_range 		= 3.0;
+		sight_range 				= 3.0;
+		inner_comfort_zone_range 	= 3.0;
+		outer_comfort_zone_range 	= 3.0;
+		com_range				 	= 3.0;
+	}
+}
+
+// Vines with stats of Octodrak
+[t:template,n:eos_vines_killer]
+{
+    specializes = dsx_vines_killer_base;
+
+    doc = "eos vines_killer";
+    [aspect]
+    {
+        scale_base = 2;  // doubled
+    }
+    [attack]
+    {
+        attack_range = 6;  // doubled
+    }
+	[mind]
+	{
         // doubled
 		melee_engage_range 			= 6;
 		ranged_engage_range 		= 6.0;
@@ -143,4 +165,30 @@
 		outer_comfort_zone_range 	= 6.0;
 		com_range				 	= 6.0;
 	}
+
+    // stats from dsx_octodrak
+    [actor]
+    {
+        [skills]
+        {
+            strength =  15, 0;
+            intelligence =  8, 0;
+            dexterity =  11, 0;
+            melee =  13,  0;
+        }
+    }
+    [aspect]
+    {
+        experience_value = 623;
+        life = 369;
+        max_life = 369;
+        mana = 92;
+        max_mana = 92;
+    }
+    [attack]
+    {
+        damage_max = 70;
+        damage_min = 64;
+    }
+    [defend] { defense = 148; }
 }

@@ -1,37 +1,35 @@
-[t:template,n:eos_kikclaw]
+[t:template,n:dsx_kikclaw_base]  // = dsx_kikclaw
 {
-    // values from yeti
 	category_name = "1W_evil_d";
-	doc = "eos kikclaw";
+	doc = "dsx_kikclaw";
 	specializes = kikclaw_base;
 	
-  [actor]
-    {
-      [skills]
+	[actor]
 	{
-	  strength =  8, 0;
-	  intelligence =  7, 0;
-	  dexterity =  7, 0;
-	  melee =  1,  0;
+		[skills]
+		{
+			strength 	 	=  15, 0;
+			intelligence   	=  8, 0;
+			dexterity 	 	=  10, 0;
+			melee 	 		=  13, 0;
+		}
 	}
-    }
 	
 	[attack]
 	{
 		attack_range = 0.5;
 		
-      damage_max = 17;
-      damage_min = 7;
+		damage_max = 82;
+		damage_min = 74;
 	}
-	[defend] { defense = 18; }
+	[defend] { defense = 140; }
 	[aspect] 
 	{
-      experience_value = 24;
-      life = 38;
-      max_life = 38;
-      mana = 0;
-      max_mana = 0;
-
+		experience_value = 520;
+		life = 337;
+		max_life = 337;
+		mana = 10;
+		max_mana = 10;
 		model = m_c_edm_kc_pos_1; 
 		[voice]
 		{
@@ -44,7 +42,7 @@
 		scale_base	= 0.7;
 	}
 	
-	[common] { screen_name = "Kikclaw"; }
+	[common] { screen_name = "Skitterclaw"; }
 	
 	[guts_manager]
 	{
@@ -52,21 +50,59 @@
 	}
 }
 
-[t:template,n:eos_kikclaw_sm]
+[t:template,n:eos_kikclaw] { specializes = eos_kikclaw_base; }
+[t:template,n:eos_kikclaw_base]
 {
-    // values from krug grunt
+	specializes = dsx_kikclaw_base;
+
+	doc = "eos kikclaw";
+	[common] { screen_name = "Kikclaw"; }
+
+    // stats from dsx_furok (Yeti)
+    [actor]
+    {
+        [skills]
+	    {
+            strength =  8, 0;
+            intelligence =  7, 0;
+            dexterity =  7, 0;
+            melee =  1,  0;
+        }
+    }
+	[aspect] 
+	{
+        experience_value = 24;
+        life = 38;
+        max_life = 38;
+        mana = 0;
+        max_mana = 0;
+    }
+	[attack]
+	{
+		attack_range = 0.5;
+        damage_max = 17;
+        damage_min = 7;
+	}
+	[defend] { defense = 18; }
+}
+
+
+[t:template,n:dsx_kikclaw_2_base]  // = dsx_kikclaw_2
+//roughly balanced to Level 154, but taken down a notch 
+//'cause they're smaller than the bigger Skitterclaw
+{
 	category_name = "1W_evil_d";
-	doc = "eos kikclaw sm";
+	doc = "dsx_kikclaw_2";
 	specializes = kikclaw_base;
 	
 	[actor]
 	{
 		[skills]
 		{
-			  dexterity = 6, 0;
-			  intelligence = 4, 0;
-			  melee = 4,  0;
-			  strength = 9, 0;
+			strength 	 	=  15, 0;
+			intelligence   	=  8, 0;
+			dexterity 	 	=  10, 0;
+			melee 	 		=  13, 0;
 		}
 	}
 	
@@ -75,11 +111,11 @@
 		textures: 0 = b_c_edm_klik-2;
 		scale_base	= 0.4;
 		
-		  experience_value = 19;
-		  life = 28;
-		  mana = 8;
-		  max_life = 28;
-		  max_mana = 8;
+		experience_value = 348;
+		life 			= 173;
+		max_life 		= 173;
+		mana 			= 10;
+		max_mana 		= 10;
 		
 		[voice]
 		{
@@ -94,8 +130,8 @@
 	[attack]
 	{
 		attack_range = 0.5;
-		  damage_max = 17;
-		  damage_min = 15;
+		damage_max = 73;
+		damage_min = 67;
 	}
 	[body]
 	{
@@ -104,10 +140,10 @@
 	
 	[common] 
 	{ 
-		screen_name = "Kikling";
+		screen_name = "Skitterling";
 	}
 	
-	[defend] { defense = 30; }
+	[defend] { defense = 101; }
 
 	[mind]  
 	{  
@@ -117,4 +153,43 @@
 		&delay_max                              = 10.0  
 		&still                                   = false;  
 	}
+}	
+
+[t:template,n:eos_kikclaw_sm] { specializes = eos_kikclaw_sm_base; }
+[t:template,n:eos_kikclaw_sm_base]
+{
+	specializes = dsx_kikclaw_2_base;
+
+	doc = "eos kikclaw sm";
+	[common] 
+	{ 
+		screen_name = "Kikling";
+	}
+
+    // stats from krug_grunt
+	[actor]
+	{
+		[skills]
+		{
+			  dexterity = 6, 0;
+			  intelligence = 4, 0;
+			  melee = 4,  0;
+			  strength = 9, 0;
+		}
+	}
+	[aspect] 
+	{
+        experience_value = 19;
+		life = 28;
+		mana = 8;
+		max_life = 28;
+		max_mana = 8;
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 17;
+		damage_min = 15;
+	}
+	[defend] { defense = 30; }
 }	
