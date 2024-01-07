@@ -1,13 +1,11 @@
-[t:template,n:half_giantess_ft] { specializes = half_giantess_ft_base; }
-[t:template,n:half_giantess_ft_base]
+[t:template,n:base_half_giantess]
 {
 	specializes = base_npc_ft;
 
-	category_name = "1W_character";
+	category_name = "1W_townsperson";
 	doc = "Half-Giantess";
 	[aspect]
 	{
-		[textures] { 0=b_c_gbn_ft; }
         scale_base = 1.5;
 	}
 	[common] { screen_name="Half-Giantess"; }
@@ -18,47 +16,38 @@
     {
 		jat_talk = world\ai\jobs\common\job_talk.skrit;
     }
+}
+
+[t:template,n:half_giantess_ft] { specializes = half_giantess_ft_base; }
+[t:template,n:half_giantess_ft_base]
+{
+	specializes = base_half_giantess;
+
+	[aspect]
+	{
+		[textures] { 0 = b_c_gbn_ft; }
+	}
 }
 
 [t:template,n:half_giantess_mz] { specializes = half_giantess_mz_base; }
 [t:template,n:half_giantess_mz_base]
 {
-	specializes = base_npc_ft;
+	specializes = base_half_giantess;
 
-	category_name = "1W_character";
-	doc = "Half-Giantess";
 	[actor] { portrait_icon = b_gui_ig_i_ic_c_zaod; }
 	[aspect]
 	{
 		[textures] { 0 = b_c_gbn_ft-02; }
-        scale_base = 1.5;
 	}
-	[common] { screen_name="Half-Giantess"; }
-	[conversation]{}
-    [mind]
-    {
-		jat_talk = world\ai\jobs\common\job_talk.skrit;
-    }
 }
 
 [t:template,n:half_giantess_pfb] { specializes = half_giantess_pfb_base; }
 [t:template,n:half_giantess_pfb_base]
 {
-	specializes = base_npc_ft;
+	specializes = base_half_giantess;
 
-	category_name = "1W_character";
-	doc = "Half-Giantess";
 	[aspect]
 	{
-		[textures] { 0=b_c_gbn_pfb; }
-        scale_base = 1.5;
+		[textures] { 0 = b_c_gbn_pfb; }
 	}
-	[common] { screen_name="Half-Giantess"; }
-	[conversation]
-	{
-	}
-    [mind]
-    {
-		jat_talk = world\ai\jobs\common\job_talk.skrit;
-    }
 }
