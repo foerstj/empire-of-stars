@@ -1,0 +1,86 @@
+[t:template,n:2W_base_npc_fg_mug_talkable]
+{
+	specializes = 2W_base_npc_fg;
+
+	category_name = "2W_townsperson";
+	doc = "Base template for non-hero actors designed to drink alcohol";
+
+	[body]
+	{
+		[chore_dictionary]
+		{
+			chore_prefix = a_c_gah_fg_fs;
+			[chore_default]
+			{
+				chore_stances = 0,1,2,3,4,5,6,7;
+				skrit = infinite_loop;
+				[anim_files]
+				{
+					00 = ds;
+				}
+			}
+			[chore_fidget]
+			{
+				chore_stances = 0,1;
+				skrit = select_fidget;
+				[anim_files]
+				{
+					//00 = mug-00;  // static
+					//01 = mug-01;  // talk
+					02 = mug-02;  // short idle
+					03 = mug-03;  // long idle
+					04 = mug-04;  // drink
+				}
+			}
+			[chore_misc]
+			{
+				chore_stances = ignore;
+				skrit = select_transition;
+				[anim_files]
+				{
+					talk = a_c_gah_fg_fs0_mug-01;  // talk
+				}
+			}
+			[chore_walk]
+			{
+				chore_stances = 0,1,2,3,4,5,6;
+				skrit = select_walk;
+				[anim_files]
+				{
+					00 = rl;
+				}
+			}
+		}
+	}
+}
+
+[t:template,n:2W_eos_utraean_female_a1_21a_l026_mug_talkable] { specializes = 2W_eos_utraean_female_a1_21a_l026_mug_talkable_base; }
+[t:template,n:2W_eos_utraean_female_a1_21a_l026_mug_talkable_base]
+{
+	specializes = 2W_base_npc_fg_mug_talkable;
+
+	doc = "eos utraean_female l026 mug talkable";
+
+	[aspect]
+	{
+		[textures]
+		{
+			0 = b_c_gan_utraean_skin-eos_f2_ta;
+			1 = b_c_pos_a1_ba-utraean_eos_f1_l026;
+		}
+	}
+
+    [conversation] {}
+	[mind]
+	{
+        jat_talk = world\ai\jobs\common\job_talk.skrit;
+	}
+
+	[inventory]
+	{
+		[equipment]
+		{
+			es_weapon_hand = mug_pewter;
+		}
+	}
+}
