@@ -1,22 +1,10 @@
 // Guards (actor skills based on non-dwarf guards)
 
-[t:template,n:dwarf_guard] { specializes = dwarf_guard_base; }
-[t:template,n:dwarf_guard_base]
+[t:template,n:base_dwarf_guard]
 {
 	specializes = base_dwarf;
 
 	category_name = "1W_character";
-	doc = "dwarf_legionnaire_guard";
-	[actor]
-	{
-		[skills]
-		{
-			dexterity = 14,  0;
-			intelligence = 13,  0;
-			melee = 10,  0;
-			strength = 17, 0;
-		}
-	}
 	[aspect]
 	{
 		draw_selection_indicator = true;
@@ -27,12 +15,30 @@
 			1 = b_c_pos_a1_006;
 		}
 	}
+	[conversation]
+	{
+	}
+	[guts_manager]
+	{
+		effect_name = melee_hit_2;
+	}
+	[mind]
+	{
+		actor_may_attack = true;
+        actor_may_be_attacked = true;
+		jat_talk = world\ai\jobs\common\job_talk.skrit;
+	}
+}
+
+[t:template,n:dwarf_guard] { specializes = dwarf_guard_base; }
+[t:template,n:dwarf_guard_base]
+{
+	specializes = base_dwarf_guard;
+
+	doc = "dwarf_legionnaire_guard";
 	[common]
 	{
 		screen_name = "Legionnaire Guard";
-	}
-	[conversation]
-	{
 	}
 	[inventory]
 	{
@@ -45,25 +51,8 @@
 			es_weapon_hand = ax_g_c_2h1b_avg;
 		}
 	}
-	[mind]
-	{
-		actor_may_attack = true;
-        actor_may_be_attacked = true;
-		jat_talk = world\ai\jobs\common\job_talk.skrit;
-	}
-	[guts_manager]
-	{
-		effect_name = melee_hit_2;
-	}
-}
 
-[t:template,n:dwarf_guard_ranged] { specializes = dwarf_guard_ranged_base; }
-[t:template,n:dwarf_guard_ranged_base]
-{
-	specializes = base_dwarf;
-
-	category_name = "1W_character";
-	doc = "dwarf_legionnaire_archer";
+    // stats from guard
 	[actor]
 	{
 		[skills]
@@ -74,26 +63,17 @@
 			strength = 17, 0;
 		}
 	}
-	[aspect]
-	{
-		draw_selection_indicator = true;
-		is_collidable = true;
-		[textures]
-		{
-			0 = b_c_gan_df_skin_03;
-			1 = b_c_pos_a1_006;
-		}
-	}
+}
+
+[t:template,n:dwarf_guard_ranged] { specializes = dwarf_guard_ranged_base; }
+[t:template,n:dwarf_guard_ranged_base]
+{
+	specializes = base_dwarf_guard;
+
+	doc = "dwarf_legionnaire_archer";
 	[common]
 	{
 		screen_name = "Legionnaire Archer";
-	}
-	[conversation]
-	{
-	}
-	[guts_manager]
-	{
-		effect_name = melee_hit_2;
 	}
 	[inventory]
 	{
@@ -107,51 +87,29 @@
 			es_shield_hand = bw_g_c_s_m_c_avg;
 		}
 	}
-	[mind]
+
+    // stats from guard_ranged = guard
+	[actor]
 	{
-		actor_may_attack = true;
-        actor_may_be_attacked = true;
-		jat_talk = world\ai\jobs\common\job_talk.skrit;
+		[skills]
+		{
+			dexterity = 14,  0;
+			intelligence = 13,  0;
+			melee = 10,  0;
+			strength = 17, 0;
+		}
 	}
 }
 
 [t:template,n:dwarf_guard_captain] { specializes = dwarf_guard_captain_base; }
 [t:template,n:dwarf_guard_captain_base]
 {
-	specializes = base_dwarf;
+	specializes = base_dwarf_guard;
 
-	category_name = "1W_character";
-	doc = "mp_dwarf_guard_captain_crystwind";
-	[actor]
-	{
-		[skills]
-		{
-			dexterity = 16,  0;
-			intelligence = 15,  0;
-			melee = 15,  0;
-			strength = 20, 0;
-		}
-	}
-	[aspect]
-	{
-		draw_selection_indicator = true;
-		is_collidable = true;
-		[textures]
-		{
-			0 = b_c_gan_df_skin_03;
-			1 = b_c_pos_a1_006;
-		}
-	}
+	doc = "dwarf_guard_captain";
 	[common]
 	{
 		screen_name = "Legionnaire Captain";
-	}
-	[conversation]
-	{
-	}
-	[guts_manager]
-	{
-		effect_name = melee_hit_2;
 	}
 	[inventory]
 	{
@@ -164,10 +122,16 @@
 			es_weapon_hand = ax_g_c_2h1b_avg;
 		}
 	}
-	[mind]
+
+    // stats from guard_captain
+	[actor]
 	{
-		actor_may_attack = true;
-        actor_may_be_attacked = true;
-		jat_talk = world\ai\jobs\common\job_talk.skrit;
+		[skills]
+		{
+			dexterity = 16,  0;
+			intelligence = 15,  0;
+			melee = 15,  0;
+			strength = 20, 0;
+		}
 	}
 }
