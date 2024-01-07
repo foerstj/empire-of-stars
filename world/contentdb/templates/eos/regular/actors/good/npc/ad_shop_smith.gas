@@ -1,162 +1,8 @@
-[t:template,n:ad_shop_magic] { specializes = ad_shop_magic; }
-[t:template,n:ad_shop_magic_base]
+[t:template,n:blacksmith_acha_base]  // = blacksmith_acha
 {
-	specializes = base_giant;
-
-	category_name = "1W_shopkeep";
-	doc = "potion-healer, tass (HG)";
-
-	[actor]
-	{
-		portrait_icon = b_gui_ig_i_ic_c_tass;
-	}
-	[aspect]
-	{
-		draw_selection_indicator = TRUE;
-		use_range = 1.0;
-		is_ghost_usable = TRUE;
-		[textures]
-		{
-			0 = b_c_gan_hg_skin_05;
-			1 = b_c_pos_a2_226;
-		}
-		model = m_c_gan_hg_pos_a2;
-	}
-	[common]
-	{
-		screen_name = "Magic Shop";
-	}
-	[conversation]
-	{
-	}
-	[inventory]
-	{
-		[store_pcontent]
-		{
-			full_ratio = 0;
-			
-			[magic]
-			{
-				[all*]
-				{
-					il_main = #spell/0-4;
-					max = 12;
-					min = 8;
-				}
-				[all*]
-				{
-					il_main = #spell/4-6;
-					max = 12;
-					min = 9;
-				}
-				[all*]
-				{
-					il_main = #spell/7-9;
-					max = 12;
-					min = 9;
-				}
-				[all*]
-				{
-					il_main = #spell/10-12;
-					max = 24;
-					min = 16;
-				}
-				[all*]
-				{
-					il_main = #spell/13-15;
-					max = 8;
-					min = 5;
-				}
-			}
-			[misc]
-			{
-				[all*]
-				{
-					il_main = DSX_backpack_empty;
-					max = 3;
-					min = 2;
-				}
-				[all*]
-				{
-					il_main = #spellbook/7-9;
-					max = 6;
-					min = 2;
-				}
-				[all*]
-				{
-					il_main = #spellbook/10-12;
-					max = 11;
-					min = 7;
-				}
-				[all*]
-				{
-					il_main = #spellbook/13-14;
-					max = 6;
-					min = 2;
-				}
-				[all*]
-				{
-					il_main = book_glb_magic_01;
-					max = 2;
-					min = 2;
-				}
-				[all*]
-				{
-					il_main = #ring/-mod(1)/25-33;
-					max = 3;
-					min = 1;
-				}
-				[all*]
-				{
-					il_main = #amulet/-mod(1)/25-33;
-					max = 3;
-					min = 1;
-				}
-			}
-		}
-	}
-	[mind]
-	{
-		jat_talk = world\ai\jobs\common\job_talk.skrit;
-		actor_may_attack = false;
-		actor_may_be_attacked = false;
-	}
-	[respawn_shrine]
-	{
-	}
-	[store]
-	{
-		item_markup = 2;
-		[item_restock]
-		{
-			potion_health_small = 5;
-			potion_mana_small = 5;
-
-			potion_health_medium = 15;
-			potion_mana_medium = 15;
-
-			potion_rejuvenation_small = 5;
-			potion_rejuvenation_medium = 5;
-			
-			scroll_resurrect = 4;
-			
-			spell_resurrect = 2;
-			spell_revive = 2;
-			spell_healing_hands = 1;
-			spell_healing_wind = 1;
-			spell_fireshot = 1;
-			spell_zap = 1;
-		}
-	}
-}
-
-[t:template,n:ad_shop_smith] { specializes = ad_shop_smith_base; }
-[t:template,n:ad_shop_smith_base]
-{
-	specializes = base_giant;
-
 	category_name = "1W_shopkeep";
 	doc = "blacksmith, acha (HG)";
+	specializes = base_giant;
 	[actor] { portrait_icon = b_gui_ig_i_ic_c_acha; }
 	[aspect]
 	{
@@ -165,13 +11,13 @@
 		is_ghost_usable = TRUE;
 		[textures]
 		{
-			0 = b_c_gan_hg_skin_06;
+			0 = b_c_gan_hg_skin_02;
 			1 = b_c_pos_a1_200;
 		}
 	}
 	[common]
 	{
-		screen_name = "Smith Shop";
+		screen_name = "Blacksmith Acha";
 	}
 	[conversation]
 	{
@@ -452,7 +298,6 @@
 	}
 	[mind]
 	{
-		jat_talk = world\ai\jobs\common\job_talk.skrit;
 		actor_may_attack = false;
 		actor_may_be_attacked = false;
 	}
@@ -462,5 +307,28 @@
 	[store]
 	{
 		item_markup = 2;
+	}
+}
+
+[t:template,n:ad_shop_smith] { specializes = ad_shop_smith_base; }
+[t:template,n:ad_shop_smith_base]
+{
+	specializes = blacksmith_acha_base;
+
+	[aspect]
+	{
+		[textures]
+		{
+			0 = b_c_gan_hg_skin_06;
+			1 = b_c_pos_a1_200;
+		}
+	}
+	[common]
+	{
+		screen_name = "Smith Shop";
+	}
+	[mind]
+	{
+		jat_talk = world\ai\jobs\common\job_talk.skrit;
 	}
 }

@@ -64,7 +64,7 @@
 {
     specializes = dsx_golem_clockwork_base;
 
-	category_name = "1W_character";
+	category_name = "1W_shopkeep";
     
     [actor]
     {
@@ -125,12 +125,16 @@
 	[inventory]
 	{
         drop_at_use_point = false;
+    }
+    [respawn_shrine] {}
+
+	[inventory]
+	{
 		[store_pcontent]
 		{
 			full_ratio = 0;
         }
     }
-    [respawn_shrine] {}
 	[store]
 	{
 		item_markup = 2;

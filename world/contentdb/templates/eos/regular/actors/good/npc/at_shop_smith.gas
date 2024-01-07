@@ -21,11 +21,21 @@
 	}
 	[common]
 	{
-		screen_name = "Blacksmith Wern Silverforge";
+		screen_name = "Smith Shop";
 	}
 	[conversation]
 	{
 	}
+	[mind]
+	{
+		jat_talk = world\ai\jobs\common\job_talk.skrit;
+		actor_may_attack = false;
+        actor_may_be_attacked = false;
+	}
+	[respawn_shrine]
+	{
+	}
+
 	[inventory]
 	{
 		[store_pcontent]
@@ -193,15 +203,6 @@
                 }
             }
 		}
-	}
-	[mind]
-	{
-		jat_talk = world\ai\jobs\common\job_talk.skrit;
-		actor_may_attack = false;
-        actor_may_be_attacked = false;
-	}
-	[respawn_shrine]
-	{
 	}
 	[store]
 	{
