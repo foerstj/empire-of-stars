@@ -1,0 +1,69 @@
+// A chest_cav_02 on the level of fd_r1
+[t:template,n:2W_chest_cav_02_fd_r1] { specializes = 2W_chest_cav_02_fd_r1_base; }
+[t:template,n:2W_chest_cav_02_fd_r1_base]
+{
+	specializes = base_chest;
+
+	category_name = "fd_r1";
+	doc = "2W_chest_cav_02_fd_r1";
+	[aspect]
+	{
+		model = m_i_glb_chest-03;
+		[textures]
+		{
+			0 = b_i_csl_chest-skull;
+		}
+	}
+
+    // damage & trap from 2W_chest_csl_08_fd_r1
+	[attack]
+	{
+		damage_max = 262;
+		damage_min = 174;
+	}
+	[trapped]
+	{
+		trap = trp_generator_fireball_explosive_chest;
+		fire_event = WE_REQ_USE;
+	}
+
+    // loot from 2W_chest_csl_08_fd_r1
+	[inventory]
+	{
+		[pcontent]
+		{
+			[all*]
+			{
+				[gold*]
+				{
+					chance = 0.4;
+					max = 121058;
+					min = 96846;
+					piles = 4 - 6;
+				}
+				[oneof*]
+				{
+					chance = 0.6;
+					il_main = #weapon/50-181;
+					il_main = #armor/71-607;
+					il_main = #*/50-181;
+					max = 2;
+					min = 1;
+				}
+				[oneof*]
+				{
+					chance = 0.004;
+					il_main = #weapon/-rare(1)/177-215;
+					il_main = #armor/-rare(1)/607-664;
+					il_main = #*/-rare(1)/177-215;
+				}
+				[oneof*]
+				{
+					il_main = #weapon/-unique(2)/177-215;
+					il_main = #armor/-unique(2)/607-664;
+					il_main = #*/-unique(2)/177-215;
+				}
+			}
+		}
+	}
+}
