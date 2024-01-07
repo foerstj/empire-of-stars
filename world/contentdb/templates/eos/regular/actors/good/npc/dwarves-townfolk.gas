@@ -1,0 +1,69 @@
+[t:template,n:dwarf_townfolk_01] { specializes = dwarf_townfolk_01_base; }
+[t:template,n:dwarf_townfolk_01_base]
+{
+	specializes = base_dwarf;
+
+	category_name = "1W_townsperson";
+	doc = "mp_dwarf";
+	[aspect]
+	{
+		[textures]
+		{
+			0 = b_c_gan_df_skin_01;
+			1 = b_c_pos_a1_005;
+		}
+	}
+	[common]
+	{
+		screen_name = "Dwarf";
+	}
+	[conversation]
+	{
+	}
+	[inventory]
+	{
+    	[equipment]
+		{
+			es_feet = bo_bo_le_light;
+		}
+	}
+	[mind]
+	{
+		jat_talk = world\ai\jobs\common\job_talk.skrit;
+	}
+}
+
+[t:template,n:dwarf_townfolk_02] { specializes = dwarf_townfolk_02_base; }
+[t:template,n:dwarf_townfolk_02_base]
+{
+	specializes = base_dwarf;
+
+	category_name = "1W_townsperson";
+	doc = "dwarf_worker";
+	[aspect]
+	{
+		[textures]
+		{
+			0 = b_c_gan_df_skin_03;
+			1 = b_c_pos_a1_006;
+		}
+	}
+	[common]
+	{
+		screen_name = "Dwarf";
+	}
+	[conversation]
+	{
+	}
+	[inventory]
+	{
+    	[equipment]
+		{
+			es_feet = bo_bo_le_light;
+		}
+	}
+	[mind]
+	{
+		jat_talk = world\ai\jobs\common\job_talk.skrit;
+	}
+}
