@@ -1,0 +1,237 @@
+[t:template,n:3W_eos_beetle_base]
+{
+	category_name = "3W_ambients";
+	specializes = 3W_dsx_chitterskrag_base;
+    [actor]
+    {
+        alignment = aa_neutral;
+    }
+    [mind]
+    {
+        jat_fidget				= world\ai\jobs\common\job_fidget.skrit
+        ?curious				= 0.1
+        &wander					= 0.1
+        &social					= 0.1
+        &interest				= interest
+        &delay_min				= 16
+        &delay_max				= 32
+        &still					= false;
+    }
+}
+
+[t:template,n:3W_eos_beetle_male] { specializes = 3W_eos_beetle_male_base; }
+[t:template,n:3W_eos_beetle_male_base]
+{
+    specializes = 3W_eos_beetle_base;
+
+	doc = "eos_beetle_male";
+	[aspect]
+	{
+		model = m_c_edm_chs_pos_1;
+		textures:0 = b_c_edm_chs;
+	}
+	[common]
+	{
+		screen_name = "Beetle (male)";
+		membership = monster;
+	}
+	[body]
+	{
+		avg_move_velocity = 1.5;
+	}
+
+    // stats (but not loot) from 3W_dsx_chitterskrag_one
+	[actor]
+	{
+		[skills]
+		{
+			strength =     45, 0;
+			intelligence = 12.4, 0;
+			dexterity =    23.2, 0;
+			melee =        82, 0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 1316658;
+		life             = 1687.8;
+		max_life         = 1687.8;
+		mana             = 268.8;
+		max_mana         = 268.8;
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max 	= 455.3; 
+		damage_min 	= 319.3;
+	}
+	[defend] { defense = 876.1; }
+}
+
+[t:template,n:3W_eos_beetle_baby] { specializes = 3W_eos_beetle_baby_base; }
+[t:template,n:3W_eos_beetle_baby_base]
+{
+    specializes = 3W_eos_beetle_base;
+
+	doc = "eos_beetle_baby";
+	[aspect]
+	{
+		model = m_c_edm_chs_pos_1;
+		scale_base = 0.35;
+		[voice]
+		{
+			[die]			{ priority = high;	* = s_e_die_baby_chitterskrag_SED;		}
+			[enemy_spotted]	{ priority = high; * = s_e_call_baby_chitterskrag_SED; }
+		}
+		textures:0 = b_c_edm_chs;
+	}
+	[common]
+	{
+		screen_name = "Beetle (baby)"; //--
+		membership = monster; //--
+	}
+	[body]
+	{
+		avg_move_velocity = 2;
+	}
+
+    // stats (but not loot) from 3W_dsx_chitterskrag_baby
+	[actor]
+	{
+		[skills]
+		{
+			strength =     45, 0;
+			intelligence = 12.4, 0;
+			dexterity =    23.2, 0;
+			melee =        81, 0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 1135246;
+		life             = 843.9;
+		max_life         = 843.9;
+		mana             = 268.8;
+		max_mana         = 268.8;
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 313.4;
+		damage_min = 227.4;
+	}
+	[defend] { defense = 532.1; }
+}
+ 
+[t:template,n:3W_eos_beetle_female] { specializes = 3W_eos_beetle_female_base; }
+[t:template,n:3W_eos_beetle_female_base]
+{
+    specializes = 3W_eos_beetle_base;
+
+	doc = "eos_beetle_female";
+	[aspect]
+	{
+		model = m_c_edm_chs_pos_2;
+		scale_base = 1.0;
+		textures:0 = b_c_edm_chs-03;
+	}
+	[common]
+	{
+		screen_name = "Beetle (female)"; //--
+		membership = monster; //--
+	}
+	[body]
+	{
+		avg_move_velocity = 1.5;
+		[chore_dictionary]
+		{
+			chore_prefix = a_c_edm_chs_fs;
+			[chore_attack]
+			{
+				chore_stances = 0;
+				skrit = select_attack;
+				[anim_files]
+				{
+					00 = at;
+					01 = at-02;
+				}
+			}
+			[chore_default]
+			{
+				chore_stances = 0;
+				skrit = infinite_loop;
+				[anim_files] { 00=ds; }
+			}
+			[chore_die]
+			{
+				chore_stances = 0;
+				skrit = select_transition;
+				[anim_files] { 00=di; }
+			}
+			[chore_fidget]
+			{
+				chore_stances = 0;
+				skrit = select_fidget;
+				[anim_files] { 00=dsf; }
+			}
+			[chore_walk]
+			{
+				chore_stances = 0;
+				skrit = select_walk;
+				[anim_files] 
+				{ 
+				00=rl; //alternate //01=wl;  
+				}
+			}
+			[chore_magic]
+			{
+				chore_stances = 0;
+				skrit = select_attack;
+				[anim_files]{ 00=mg; }
+			}
+		}
+	}
+	[mind]
+	{
+		jat_brain						= world\ai\jobs\common\brain_hero.skrit
+		?actor_joins_existing_party		= true;
+		
+		actor_weapon_preference			= WP_MAGIC;
+		actor_auto_switches_to_magic	= true;
+		actor_auto_switches_to_karate	= false;
+		actor_auto_switches_to_melee	= false;
+		
+		personal_space_range = 0.75;
+	}
+
+    // stats (but not loot) from 3W_dsx_chitterskrag_two
+	[actor]
+    {
+		[skills]
+		{
+			strength 		= 45, 0;
+			intelligence 	= 12.4, 0;
+			dexterity 		= 23.2, 0;
+			ranged 			= 81, 0;
+			combat_magic	= 81, 0;
+			nature_magic	= 81, 0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 1316658;
+		life             = 1682.4;
+		max_life         = 1682.4;
+		mana             = 268.8;
+		max_mana         = 268.8;
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 331.1; 
+		damage_min = 193.5;
+		damage_bonus_min_cmagic = 217;
+		damage_bonus_max_cmagic = 318;
+	}
+	[defend] { defense = 612.8; }
+}
