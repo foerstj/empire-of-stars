@@ -1,0 +1,172 @@
+[t:template,n:3W_tass_base]  // = 3W_tass
+{
+	category_name = "3W_shopkeep";
+	doc = "potion-healer, tass (HG)";
+	specializes = 3W_base_giant;
+	
+	[actor]
+	{ 
+		portrait_icon = b_gui_ig_i_ic_c_tass; 
+	}
+	[aspect]
+	{
+		draw_selection_indicator = TRUE;
+		use_range = 1.0;
+		is_ghost_usable = TRUE;
+		[textures]
+		{
+			0 = b_c_gan_hg_skin_04;
+			1 = b_c_pos_a2_226;
+		}
+		model = m_c_gan_hg_pos_a2;
+	}
+	[common]
+	{
+		screen_name = "Healer Tass";
+	}
+	[conversation]
+	{
+	}
+	[inventory]
+	{
+		[store_pcontent]
+		{
+			full_ratio = 0;
+			
+			[magic]
+			{
+				[all*]
+				{
+					il_main = #spell/0-30;
+					max = 12;
+					min = 8;
+				}
+				[all*]
+				{
+					il_main = #spell/30-46;
+					max = 12;
+					min = 9;
+				}
+				[all*]
+				{
+					il_main = #spell/53-68;
+					max = 12;
+					min = 9;
+				}
+				[all*]
+				{
+					il_main = #spell/76-91;
+					max = 24;
+					min = 16;
+				}
+				[all*]
+				{
+					il_main = #spell/99-114;
+					max = 8;
+					min = 5;
+				}
+			}
+			[misc]
+			{
+				[all*]
+				{
+					il_main = DSX_backpack_empty;
+					max = 3;
+					min = 2;
+				}
+				[all*]
+				{
+					il_main = #spellbook/;
+					max = 6;
+					min = 2;
+				}
+				[all*]
+				{
+					il_main = #spellbook/;
+					max = 11;
+					min = 7;
+				}
+				[all*]
+				{
+					il_main = #spellbook/;
+					max = 6;
+					min = 2;
+				}
+				[all*]
+				{
+					il_main = book_glb_magic_01;
+					max = 2;
+					min = 2;
+				}
+				[all*]
+				{
+					il_main = #ring/-mod(1)/180-238;
+					max = 3;
+					min = 1;
+				}
+				[all*]
+				{
+					il_main = #amulet/-mod(1)/180-238;
+					max = 3;
+					min = 1;
+				}
+			}
+		}
+	}
+	[mind]
+	{
+		actor_may_attack = false;
+		actor_may_be_attacked = false;
+	}
+	[respawn_shrine]
+	{
+	}
+	[store]
+	{
+		item_markup = 2;
+		[item_restock]
+		{
+			potion_health_large = 5;
+			potion_mana_large = 5;
+
+			potion_health_large = 15;
+			potion_mana_large = 15;
+
+			potion_rejuvenation_large = 5;
+			potion_rejuvenation_large = 5;
+			
+			scroll_resurrect = 4;
+			
+			spell_resurrect = 2;
+			spell_revive = 2;
+			spell_healing_hands = 1;
+			spell_healing_wind = 1;
+			spell_fireshot = 1;
+			spell_zap = 1;
+		}
+	}
+}
+
+[t:template,n:3W_ad_shop_magic] { specializes = 3W_ad_shop_magic_base; }
+[t:template,n:3W_ad_shop_magic_base]
+{
+	specializes = 3W_tass_base;
+
+	[aspect]
+	{
+		model = m_c_gan_hg_pos_a2;
+		[textures]
+		{
+			0 = b_c_gan_hg_skin_05;
+			1 = b_c_pos_a2_226;
+		}
+	}
+	[common]
+	{
+		screen_name = "Magic Shop";
+	}
+	[mind]
+	{
+		jat_talk = world\ai\jobs\common\job_talk.skrit;
+	}
+}

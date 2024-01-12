@@ -1,0 +1,334 @@
+[t:template,n:3W_blacksmith_acha_base]  // = 3W_blacksmith_acha
+{
+	category_name = "3W_shopkeep";
+	doc = "blacksmith, acha (HG)";
+	specializes = 3W_base_giant;
+	[actor] { portrait_icon = b_gui_ig_i_ic_c_acha; }
+	[aspect]
+	{
+		draw_selection_indicator = TRUE;
+		use_range = 1.0;
+		is_ghost_usable = TRUE;
+		[textures]
+		{
+			0 = b_c_gan_hg_skin_02;
+			1 = b_c_pos_a1_200;
+		}
+	}
+	[common]
+	{
+		screen_name = "Blacksmith Acha";
+	}
+	[conversation]
+	{
+	}
+	
+	// This store needs to be balanced for both 4-1 (level 12) and 4-3 (level 14)
+	[inventory]
+	{
+		[store_pcontent]
+		{
+			full_ratio = 0;
+			[armor]
+			{
+				// BODY
+				[all*]
+				{
+					il_main = #body,m/303-501;
+					max = 3;
+					min = 3;
+				}
+				[all*]
+				{
+					il_main = #body,r/303-501;
+					max = 3;
+					min = 3;
+				}
+				[all*]
+				{
+					il_main = #body,f/531-667;
+					max = 3;
+					min = 3;
+				}				
+				[all*]
+				{
+					il_main = #body/129-197;
+					max = 6;
+					min = 2;
+				}
+				[all*]
+				{
+					il_main = #body/212-463;
+					max = 15;
+					min = 10;
+				}
+				[all*]
+				{
+					il_main = #body/478-584;
+					max = 6;
+					min = 3;
+				}	
+				[all*]
+				{
+					il_main = #body/516-667;
+					max = 6;
+					min = 3;
+				}				
+				// HELMETS			
+				[all*]
+				{
+					il_main = #helm,m/;
+					max = 3;
+					min = 3;
+				}
+				[all*]
+				{
+					il_main = #helm,r/;
+					max = 3;
+					min = 3;
+				}
+				[all*]
+				{
+					il_main = #helm/129-273;
+					max = 6;
+					min = 3;
+				}
+				[all*]
+				{
+					il_main = #helm/288-463;
+					max = 10;
+					min = 6;
+				}
+				[all*]
+				{
+					il_main = #helm/478-584;
+					max = 6;
+					min = 4;
+				}
+				[all*]
+				{
+					il_main = #helm/516-667;
+					max = 6;
+					min = 4;
+				}				
+				// GLOVES
+				[all*]
+				{
+					il_main = #gloves,m/;
+					max = 3;
+					min = 3;
+				}
+				[all*]
+				{
+					il_main = #gloves,r/;
+					max = 3;
+					min = 3;
+				}
+				[all*]
+				{
+					il_main = #gloves/129-273;
+					max = 4;
+					min = 2;
+				}
+				[all*]
+				{
+					il_main = #gloves/288-463;
+					max = 12;
+					min = 8;
+				}
+				[all*]
+				{
+					il_main = #gloves/478-584;
+					max = 6;
+					min = 4;
+				}
+				[all*]
+				{
+					il_main = #gloves/516-667;
+					max = 6;
+					min = 4;
+				}				
+				// BOOTS			
+				[all*]
+				{
+					il_main = #boots,m/;
+					max = 3;
+					min = 3;
+				}
+				[all*]
+				{
+					il_main = #boots,r/;
+					max = 3;
+					min = 3;
+				}
+				[all*]
+				{
+					il_main = #boots/129-273;
+					max = 6;
+					min = 3;
+				}
+				[all*]
+				{
+					il_main = #boots/288-463;
+					max = 8;
+					min = 6;
+				}
+				[all*]
+				{
+					il_main = #boots/478-584;
+					max = 6;
+					min = 4;
+				}
+				[all*]
+				{
+					il_main = #boots/516-667;
+					max = 6;
+					min = 4;
+				}
+			}
+			[shields]
+			{
+				[all*]
+				{
+					il_main = #shield,m/;
+					max = 2;
+					min = 2;
+				}
+				[all*]
+				{
+					il_main = #shield,r/;
+					max = 2;
+					min = 2;
+				}
+				[all*]
+				{
+					il_main = #shield/129-197;
+					max = 6;
+					min = 2;
+				}
+				[all*]
+				{
+					il_main = #shield/212-463;
+					max = 6;
+					min = 4;
+				}
+				[all*]
+				{
+					il_main = #shield/478-584;
+					max = 4;
+					min = 2;
+				}
+				[all*]
+				{
+					il_main = #shield/516-667;
+					max = 4;
+					min = 2;
+				}
+			}
+			[weapons]
+			{
+				[all*]
+				{
+					il_main = #melee/65-94;
+					max = 4;
+					min = 2;
+				}
+				[all*]
+				{
+					il_main = #melee/101-216;
+					max = 6;
+					min = 4;
+				}
+				[all*]
+				{
+					il_main = #melee/224-281;
+					max = 8;
+					min = 4;
+				}
+				[all*]
+				{
+					il_main = #melee/303-390;
+					max = 8;
+					min = 4;
+				}
+				[all*]
+				{
+					il_main = #melee/303-390;
+					max = 8;
+					min = 4;
+				}				
+				[all*]
+				{
+					il_main = #melee/404-512;
+					max = 6;
+					min = 4;
+				}								
+				[all*]
+				{
+					il_main = #ranged/65-94;
+					max = 6;
+					min = 4;
+				}
+				[all*]
+				{
+					il_main = #ranged/101-216;
+					max = 8;
+					min = 4;
+				}
+				[all*]
+				{
+					il_main = #ranged/224-281;
+					max = 8;
+					min = 4;
+				}
+				[all*]
+				{
+					il_main = #ranged/303-390;
+					max = 8;
+					min = 4;
+				}
+				[all*]
+				{
+					il_main = #ranged/404-512;
+					max = 8;
+					min = 4;
+				}
+			}
+		}
+	}
+	[mind]
+	{
+		actor_may_attack = false;
+		actor_may_be_attacked = false;
+	}
+	[respawn_shrine]
+	{
+	}
+	[store]
+	{
+		item_markup = 2;
+	}
+}
+
+[t:template,n:3W_ad_shop_smith] { specializes = 3W_ad_shop_smith_base; }
+[t:template,n:3W_ad_shop_smith_base]
+{
+	specializes = 3W_blacksmith_acha_base;
+
+	[aspect]
+	{
+		[textures]
+		{
+			0 = b_c_gan_hg_skin_06;
+			1 = b_c_pos_a1_200;
+		}
+	}
+	[common]
+	{
+		screen_name = "Smith Shop";
+	}
+	[mind]
+	{
+		jat_talk = world\ai\jobs\common\job_talk.skrit;
+	}
+}
