@@ -1,0 +1,351 @@
+[t:template,n:2W_dsx_fury_base]  // = 2W_dsx_fury
+{
+	category_name = "2W_evil_b";
+	doc = "2W_dsx_fury";
+	specializes = 2W_dsx_base_fury;
+	[actor]
+	{
+		[skills]
+			{
+				strength 	 = 37.5, 0;
+				intelligence =  10.5, 0;
+				dexterity 	 = 18.7, 0;
+				melee 		 = 61, 0;
+				ranged 		 = 61, 0;
+				combat_magic = 61, 0;
+				nature_magic = 61, 0;
+			}
+	}
+	[aspect]
+	{
+		experience_value = 72540;
+		life 			 = 3489.6;
+		max_life 		 = 3489.6;
+		max_mana 		 = 2149.6;
+		mana 			 = 2149.6;
+	}
+	[attack]
+	{
+		attack_range = 10;
+		damage_max 	 = 460.6;
+		damage_min	 = 276.4;
+		damage_bonus_min_cmagic = 97;
+		damage_bonus_max_cmagic = 158;
+	}
+	[common]
+	{
+		screen_name="Fury";
+		membership=monster,immune_charm,immune_control,immune_freeze,immune_polymorph,immune_align_change,immune_explode;
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				single_shot = true;
+				no_trig_bits = true;
+				action* = call_sfx_script("unique_ray_red");
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				single_shot = true;
+				no_trig_bits = true;
+				action* = call_sfx_script("unique_light_red");
+			}
+		}
+	}
+	[defend] { defense=1291.1; }
+	[inventory]
+	{
+		drop_at_use_point = true;
+		[pcontent]
+		{
+			/* Generated: Tue Jun 17 11:13:15 2003
+			Level 24, Special */
+			[all*]
+			{
+				[gold*]
+				{
+					chance = 0.2;
+					min = 62780;
+					max = 124659;
+				}
+				[oneof*]
+				{
+					chance = 0.3;
+					il_main = potion_mana_large;
+					il_main = potion_health_large;
+				}
+				[oneof*]
+				{
+					chance = 0.3;
+					il_main = #weapon/142-186;
+					il_main = #armor/84-461;
+					il_main = #*/142-186;
+				}
+				[oneof*]
+				{
+					chance = 0.2;
+					il_main = #weapon/-rare(1)/186-211;
+					il_main = #armor/-rare(1)/357-642;
+					il_main = #*/-rare(1)/186-211;
+				}
+				[oneof*]
+				{
+					chance = 0.2;
+					il_main = #weapon/-unique(2)/186-211;
+					il_main = #armor/-unique(2)/357-642;
+					il_main = #*/-unique(2)/186-211;
+				}			
+			}
+		}
+		selected_active_location = il_active_primary_spell;
+		[other]
+		{
+			il_active_primary_spell= dsx_spell_fury_zap_1;
+			il_spell_2 = dsx_spell_fury_zap_2;
+			il_spell_3 = dsx_spell_fury_zap_3;
+			il_spell_4 = dsx_spell_fury_slam;
+			il_spell_5 = dsx_spell_fury_spin;
+			il_spell_6 = dsx_spell_fury_gas;
+			il_spell_7 = dsx_spell_fury_spit;
+		}		
+	}
+	[mind]
+	{
+		jat_cast 			= world\ai\jobs\common\job_cast.skrit
+			?rand_spell		= true
+			&check_range	= true
+			&spell_chances	= "0.15, 				0.14, 				 0.14, 				 0.15, 				  0.14, 				0.14,             	  0.14"
+			&spells			= "dsx_spell_fury_slam, dsx_spell_fury_spin, dsx_spell_fury_gas, dsx_spell_fury_spit, dsx_spell_fury_zap_1, dsx_spell_fury_zap_2, dsx_spell_fury_zap_3";
+
+		on_engaged_lost_consciousness_abort_attack = true;
+	}
+}
+
+[t:template,n:2W_eos_fury] { specializes = 2W_eos_fury_base; }
+[t:template,n:2W_eos_fury_base]
+{
+	specializes = 2W_dsx_fury_base;
+
+	[common]
+	{
+		[template_triggers]
+		{
+            // removed unique_ray_red & unique_light_red
+		}
+	}
+    [aspect]
+    {
+        scale_base = 0.4;
+    }
+	[inventory]
+	{
+		selected_active_location = il_active_primary_spell;
+		[other]
+		{
+            // removed zap spells (lasers)
+			il_active_primary_spell = dsx_spell_fury_slam;
+			il_spell_2 = dsx_spell_fury_spin;
+			il_spell_3 = dsx_spell_fury_gas;
+			il_spell_4 = dsx_spell_fury_spit;
+		}		
+	}
+	[mind]
+	{
+		jat_cast 			= world\ai\jobs\common\job_cast.skrit
+			?rand_spell		= true
+			&check_range	= true
+			&spell_chances	= "0.25, 				0.25, 				 0.25, 				 0.25"
+			&spells			= "dsx_spell_fury_slam, dsx_spell_fury_spin, dsx_spell_fury_gas, dsx_spell_fury_spit";
+
+		on_engaged_lost_consciousness_abort_attack = true;
+	}
+    // medium frags fitting to size
+	[physics]
+	{
+		[break_particulate]
+		{
+			frag_glb_fury_17	= 1;
+			frag_glb_fury_18	= 1;
+			frag_glb_fury_19	= 1;
+			frag_glb_fury_20	= 1;
+			frag_glb_fury_21	= 1;
+			frag_glb_fury_22	= 1;
+			frag_glb_fury_23	= 1;
+			frag_glb_fury_24	= 1;
+		}
+	}
+
+	[aspect]
+	{
+        // EDITED: doubled
+		life 			 = 3675;
+		max_life 		 = 3675;
+		max_mana 		 = 5230;
+		mana 			 = 5230;
+	}
+}
+
+
+[t:template,n:2W_fury_lesser_02_base]  // = 2W_fury_lesser_02
+{
+	category_name = "2W_evil_b";
+	doc = "2W_fury_pest";
+	specializes = 2W_base_fury;
+	[actor]
+	{
+		[skills]
+		{
+			strength =  	29.6, 0;
+			intelligence =  15.3, 0;
+			dexterity =  	38.5, 0;
+			melee =  		77, 0;
+			combat_magic = 	77, 0;
+
+		}
+	}
+	[aspect]
+	{
+		experience_value = 170000;
+		life = 3967.8;
+		max_life = 3967.8;
+		max_mana = 668;
+		mana = 668;
+		scale_base = 0.25;
+	}
+	[attack]
+	{
+		attack_range = 10;
+		damage_max = 376.3;
+		damage_min = 271.5;
+		damage_bonus_min_cmagic = 101;
+		damage_bonus_max_cmagic = 146;
+	}
+	[inventory]
+	{
+		selected_active_location = il_active_primary_spell;
+		[other]
+		{
+			il_active_primary_spell=spell_fury_zap_1;
+		}
+		[pcontent]
+		{
+			[all*]
+			{
+				[oneof*]
+				{
+					il_main = #weapon/207-231;
+					il_main = #armor/105-520;
+					max = 1;
+					min = 1;
+   	    		}
+    			[gold*]
+				{
+					max = 194632;
+					min = 134647;
+					min_pile = 1719;
+					piles = 1 - 3;
+				}
+				[oneof*]
+				{
+                    chance = 0.01;
+	            	il_main = #weapon/-rare(1)/207-231;
+	                il_main = #armor/-rare(1)/506-688;
+                    il_main = #*/-rare(1)/207-231;
+					max = 1;
+					min = 1;
+
+                }
+				[oneof*]
+                {
+                    chance = 0.01;
+	                il_main = #weapon/-unique(2)/207-231;
+	                il_main = #armor/-unique(2)/506-688;
+                    il_main = #*/-unique(2)/207-231;
+					max = 1;
+					min = 1;
+	            }
+
+			}
+		}
+	}
+	[common] { screen_name="Fury Pest"; }
+	[defend] { defense=650.8; }
+	[physics]
+	{
+		[break_particulate]
+		{
+			frag_glb_fury_17	= 1;
+			frag_glb_fury_18	= 1;
+			frag_glb_fury_19	= 1;
+			frag_glb_fury_20	= 1;
+			frag_glb_fury_21	= 1;
+			frag_glb_fury_22	= 1;
+			frag_glb_fury_23	= 1;
+			frag_glb_fury_24	= 1;
+		}
+	}
+}
+
+[t:template,n:2W_eos_fury_boss_01] { specializes = 2W_eos_fury_boss_01_base; }
+[t:template,n:2W_eos_fury_boss_01_base]
+{
+	specializes = 2W_fury_lesser_02_base;
+
+	[aspect]
+	{
+		scale_base = 0.9;  // EDITED (was 0.25)
+	}
+	[physics]
+	{
+        // EDITED: big frags fitting to size
+		[break_particulate]
+		{
+			frag_glb_fury_01	= 1;
+			frag_glb_fury_02	= 1;
+			frag_glb_fury_03	= 1;
+			frag_glb_fury_04	= 1;
+			frag_glb_fury_05	= 1;
+			frag_glb_fury_06	= 1;
+			frag_glb_fury_07	= 1;
+			frag_glb_fury_08	= 1;
+		}
+	}
+
+	[aspect]
+	{
+        // EDITED: doubled
+		life = 5300;
+		max_life = 5300;
+		max_mana = 2320;
+		mana = 2320;
+	}
+
+	[inventory]
+	{
+		selected_active_location = il_active_primary_spell;
+		[other]
+		{
+			il_active_primary_spell=spell_fury_zap_1;
+            // EDITED: added for attack variety
+			il_spell_2 = spell_fury_zap_2;
+			il_spell_3 = spell_fury_zap_3;
+			il_spell_4 = spell_fury_slam;
+			il_spell_5 = spell_fury_spin;
+			il_spell_6 = spell_fury_gas;
+			il_spell_7 = spell_fury_spit;
+		}
+	}
+    // EDITED: added for attack variety
+	[mind]
+	{
+		jat_cast 						= world\ai\jobs\common\job_cast.skrit
+			?rand_spell					= true
+			&check_range				= true
+			&spell_chances				= "0.15,            0.14,            0.14,           0.15, 			  0.14, 			0.14,             0.14"
+			&spells						= "spell_fury_slam, spell_fury_spin, spell_fury_gas, spell_fury_spit, spell_fury_zap_1, spell_fury_zap_2, spell_fury_zap_3";
+
+		on_engaged_lost_consciousness_abort_attack = true;
+	}
+}

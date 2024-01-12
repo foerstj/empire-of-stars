@@ -1,0 +1,250 @@
+[t:template,n:3W_krug_zombie_base]
+{
+    category_name = "3W_evil_a";
+    specializes = 3W_base_krug;
+
+	[aspect]
+	{
+        selection_indicator_scale = 0.85;
+    }
+	[common]
+	{
+		screen_name = "Krug Zombie";
+	}
+}
+
+[t:template,n:3W_krug_zombie_grunt_base]
+{
+    specializes = 3W_krug_zombie_base;
+
+	[common]
+    {
+        screen_name = "Krug Zombie Grunt";
+        membership = krug, party_krug_grunt_boss, monster, undead;
+    }
+	[mind]
+	{
+		on_enemy_spotted_alert_friends 		= true;
+		jat_brain							= world\ai\jobs\common\brain_hero.skrit
+			?actor_joins_existing_party			= true;
+		jat_fidget							= world\ai\jobs\common\job_fidget.skrit
+			?social								= 0.35
+			&still								= false;
+	}
+    
+    // stats, loot & equipment from 3W_goblin_guard
+	[actor]
+	{
+		[skills]
+		{
+			strength =  	24.6, 0;
+			intelligence =  	17.2, 0;
+			dexterity =  	24, 0;
+			melee =  		91,  0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 2084000;
+		life = 1598.7;
+		max_life = 1598.7;
+		mana = 79.9;
+		max_mana = 79.9;
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 438.6;
+		damage_min = 306.5;
+	}
+	[defend] { defense=735.8; }
+	[inventory]
+	{
+    	[pcontent]
+		{
+			[oneof*]
+			{
+				es_weapon_hand = ss_g_c_bl_1h_avg;
+               	es_weapon_hand = mc_g_c_s_1h_avg;
+               	es_weapon_hand = sd_g_c_gl_1h_avg;
+               	es_weapon_hand = ax_g_c_1h2b_avg;
+			}
+
+            [oneof*]
+			{
+				[oneof*]
+				{
+					chance = 0.2;
+					il_main = #*/179-293;
+					il_main = #armor/134-672;
+                	il_main = #nmagic/18-55;
+                	il_main = #cmagic/18-55;
+				}
+            	[oneof*]
+				{
+	        		chance = 0.004;
+	            	il_main = #weapon/-rare(1)/175-286;
+	            	il_main = #armor/-rare(1)/480-832;
+                	il_main = #*/-rare(1)/175-286;
+            	}
+				[oneof*]
+				{
+            		chance = 0.002;
+	            	il_main = #weapon/-unique(2)/175-286;
+	            	il_main = #armor/-unique(2)/480-832;
+                	il_main = #*/-unique(2)/175-286;
+                }
+	        }
+		}
+    }
+}
+[t:template,n:3W_krug_zombie_grunt_01]
+{
+    doc = "krug zombie grunt 01";
+    specializes = 3W_krug_zombie_grunt_base;
+
+	[aspect]
+	{
+		[textures]
+		{
+			  0 = b_c_eam_kg-dk-01;
+		}
+	}
+}
+[t:template,n:3W_krug_zombie_grunt_02]
+{
+    doc = "krug zombie grunt 02";
+    specializes = 3W_krug_zombie_grunt_base;
+
+	[aspect]
+	{
+		[textures]
+		{
+			  0 = b_c_eam_kg-dk-02;
+		}
+	}
+}
+
+[t:template,n:3W_krug_zombie_scavenger_base]
+{
+    specializes = 3W_krug_zombie_base;
+
+	[common]
+	{
+		screen_name = "Krug Zombie Scavenger";
+		membership = krug, party_krug_shaman, monster;
+	}
+	[mind]
+	{
+		jat_fidget						= world\ai\jobs\common\job_fidget.skrit
+			?destructive					= 0.29
+			&still							= false;
+
+		jat_brain							= world\ai\jobs\common\brain_hero.skrit
+			?actor_joins_existing_party		= true;
+
+		on_enemy_spotted_alert_friends = true;
+	}
+	[physics]
+	{
+		break_sound = s_e_meat_explosion;
+		explosion_magnitude = 1.5;
+		[break_particulate]
+		{
+			frag_glb_krug_scavenger_01 = 1;
+			frag_glb_krug_scavenger_02 = 1;
+			frag_glb_krug_scavenger_03 = 1;
+			frag_glb_krug_scavenger_04 = 1;
+			frag_glb_krug_scavenger_05 = 1;
+			frag_glb_krug_scavenger_06 = 1;
+			frag_glb_krug_scavenger_07 = 1;
+			frag_glb_krug_scavenger_08 = 1;
+		}
+	}
+    
+    // stats, loot & equipment from 3W_goblin_grunt
+	[actor]
+	{
+		[skills]
+		{
+			strength =  	19.1, 0;
+			intelligence =  	18.7, 0;
+			dexterity =  	24, 0;
+			melee =  		88,  0;
+		}
+	}
+	[aspect]
+	{{
+		experience_value = 1299900;
+		life = 1162.7;
+		max_life = 1162.7;
+		mana = 87.2;
+		max_mana = 87.2;
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 203.8;
+		damage_min = 141.9;
+	}
+	[defend] { defense=554.1; }
+	[inventory]
+	{
+    	[pcontent]
+		{
+            [oneof*] { es_weapon_hand = hm_g_c_1h1m_low; }
+
+			[oneof*]
+			{
+				[oneof*]
+				{
+					chance = 0.2;
+					il_main = #*/179-286;
+					il_main = #armor/134-672;
+                	il_main = #nmagic/18-55;
+					il_main = #cmagic/18-55;
+                }
+                [oneof*]
+				{
+	            	chance = 0.004;
+	                il_main = #weapon/-rare(1)/200-314;
+	                il_main = #armor/-rare(1)/480-796;
+                    il_main = #*/-rare(1)/200-314;
+                }
+				[oneof*]
+				{
+                	chance = 0.002;
+	                il_main = #weapon/-unique(2)/200-314;
+	                il_main = #armor/-unique(2)/480-796;
+                    il_main = #*/-unique(2)/200-314;
+	            }
+			}
+		}
+    }
+}
+[t:template,n:3W_krug_zombie_scavenger_01]
+{
+    doc = "krug zombie scavenger 01";
+    specializes = 3W_krug_zombie_scavenger_base;
+
+	[aspect]
+	{
+		[textures]
+		{
+			  0 = b_c_eam_ksc-dk-01;
+		}
+	}
+}
+[t:template,n:3W_krug_zombie_scavenger_02]
+{
+    doc = "krug zombie scavenger 02";
+    specializes = 3W_krug_zombie_scavenger_base;
+
+	[aspect]
+	{
+		[textures]
+		{
+			  0 = b_c_eam_ksc-dk-02;
+		}
+	}
+}
