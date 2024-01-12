@@ -1,0 +1,54 @@
+[t:template,n:3W_little_green_man] { specializes = 3W_little_green_man_base; }
+[t:template,n:3W_little_green_man_base]
+{
+	specializes = 3W_base_goblin;
+
+	category_name = "3W_townsperson";
+	doc = "little green man";
+	[actor]
+	{
+		alignment			= aa_good;
+    }
+	[aspect]
+	{
+		model = m_c_eam_ggt_pos_1;
+		scale_base = 1.2;
+	}
+	[common] { screen_name="Little Green Man"; }
+    [conversation] {}
+	[mind]
+	{
+        jat_talk = world\ai\jobs\common\job_talk.skrit;
+		melee_engage_range = 10;
+		personal_space_range = 0.7;
+		ranged_engage_range = 10.0;
+		sight_range = 10.0;
+	}
+
+    // stats from 3W_goblin_grunt
+	[actor]
+	{
+		[skills]
+		{
+			strength =  	19.1, 0;
+			intelligence =  	18.7, 0;
+			dexterity =  	24, 0;
+			melee =  		88,  0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 1299900;
+		life = 1162.7;
+		max_life = 1162.7;
+		mana = 87.2;
+		max_mana = 87.2;
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 203.8;
+		damage_min = 141.9;
+	}
+	[defend] { defense=554.1; }
+}
