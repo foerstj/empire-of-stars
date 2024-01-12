@@ -1,0 +1,61 @@
+[t:template,n:3W_base_half_giant_townfolk]
+{
+	specializes = 3W_base_giant;
+
+	category_name = "3W_townsperson";
+	doc = "half_giant_townfolk";
+
+	[aspect]
+	{
+		draw_selection_indicator = TRUE;
+	}
+	[common]
+	{
+		screen_name = "Half-Giant";
+	}
+	[conversation]
+	{
+	}
+	[inventory]
+	{
+		[equipment]
+		{
+		}
+	}
+    [mind]
+    {
+		jat_talk = world\ai\jobs\common\job_talk.skrit;
+		actor_may_attack = false;
+        actor_may_be_attacked = false;
+ 	}
+}
+
+[t:template,n:3W_half_giant_townfolk_01] { specializes = 3W_half_giant_townfolk_01_base; }
+[t:template,n:3W_half_giant_townfolk_01_base]
+{
+	specializes = 3W_base_half_giant_townfolk;
+	
+	[aspect]
+	{
+		[textures]
+		{
+			0 = b_c_gan_hg_skin_03;
+			1 = b_c_pos_a1_300;
+		}
+	}
+}
+
+[t:template,n:3W_half_giant_townfolk_02] { specializes = 3W_half_giant_townfolk_02_base; }
+[t:template,n:3W_half_giant_townfolk_02_base]
+{
+	specializes = 3W_base_half_giant_townfolk;
+
+	[aspect]
+	{
+		[textures]
+		{
+			0 = b_c_gan_hg_skin_07;
+			1 = b_c_pos_a1_102;
+		}
+	}
+}
