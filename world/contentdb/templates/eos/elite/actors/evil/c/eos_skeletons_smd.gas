@@ -1,11 +1,11 @@
 // Skeletons from dsx just a bit higher stats
 
-[t:template,n:eos_smd_skeleton_melee_01] { specializes = eos_smd_skeleton_melee_01_base; }
-[t:template,n:eos_smd_skeleton_melee_01_base]
+[t:template,n:3W_eos_smd_skeleton_melee_01] { specializes = 3W_eos_smd_skeleton_melee_01_base; }
+[t:template,n:3W_eos_smd_skeleton_melee_01_base]
 {
-	specializes = base_skeleton;
+	specializes = 3W_base_skeleton;
 
-	category_name = "1W_evil_c";
+	category_name = "3W_evil_c";
 	doc = "eos skeleton melee 01";
 
     [aspect]
@@ -47,28 +47,31 @@
 	{
 		[skills]
 		{
-			strength	= 15, 0;
-			intelligence= 10, 0;
-			dexterity	= 10, 0;
-			melee		= 13, 0;
+			strength = 45, 0;
+			intelligence = 15, 0;
+			dexterity = 22, 0;
+			melee = 87, 0;
 		}
 	}
 	[aspect]
 	{
-		experience_value = 500;
-		life = 500;
-		max_life = 500;
-		mana = 5;
-		max_mana = 5;
+		experience_value = 1165040;
+		life = 1989;
+		max_life = 2027;
+		mana = 211;
+		max_mana = 215;
 	}
 	[attack]
 	{
-		damage_max = 100;
-		damage_min = 80;
+		damage_max = 537;
+		damage_min = 364;
 	}
-	[defend] { defense = 200; }
+	[defend]
+	{
+		defense = 1116;
+	}
 
-    // loot from dsx_skeleton_02
+    // loot from 3W_dsx_skeleton_02
 	[inventory]
 	{
 		[pcontent]
@@ -80,40 +83,40 @@
                 [gold*]
                 {
                     chance = 0.2;
-                    min = 153;
-                    max = 305;
+                    min = 101055;
+                    max = 201449;
                 }
                 [oneof*]
                 {
                     chance = 0.2;
-                    il_main = potion_mana_small;
-                    il_main = potion_health_small;
+                    il_main = potion_mana_super;
+                    il_main = potion_health_super;
                 }
                 [oneof*]
                 {
                     chance = 0.15;
-                    il_main = #weapon/25-36;
-                    il_main = #armor/9-71;
-                    il_main = #*/25-36;
+                    il_main = #weapon/153-220;
+                    il_main = #armor/57-453;
+                    il_main = #*/153-220;
                 }
                 [oneof*]
                 {
                     chance = 0.0075;
-                    il_main = #weapon/-rare(1)/28-41;
-                    il_main = #armor/-rare(1)/53-118;
-                    il_main = #*/-rare(1)/28-41;
+                    il_main = #weapon/-rare(1)/171-250;
+                    il_main = #armor/-rare(1)/338-753;
+                    il_main = #*/-rare(1)/171-250;
                 }
             }
         }
 	}
 }
 
-[t:template,n:eos_smd_skeleton_large] { specializes = eos_smd_skeleton_large_base; }
-[t:template,n:eos_smd_skeleton_large_base]
+[t:template,n:3W_eos_smd_skeleton_large] { specializes = 3W_eos_smd_skeleton_large_base; }
+[t:template,n:3W_eos_smd_skeleton_large_base]
 {
-	specializes = base_skeleton;
+	specializes = 3W_base_skeleton;
 
-	category_name = "1W_evil_c";
+	category_name = "3W_evil_c";
 	doc = "DSX_Skeleton_Large";
 
 	[body]
@@ -223,28 +226,31 @@
 	{
 		[skills]
 		{
-			strength        = 15, 0;
-			intelligence    = 10, 0;
-			dexterity       = 10, 0;
-			melee           = 15, 0;
+			strength = 45, 0;
+			intelligence = 15, 0;
+			dexterity = 22, 0;
+			melee = 88, 0;
 		}
 	}
 	[aspect]
 	{
-		experience_value = 800;
-		life = 1000;
-		max_life = 1000;
-		mana = 10;
-		max_mana = 10;
+		experience_value = 1190864;
+		life = 2643;
+		max_life = 2679;
+		mana = 235;
+		max_mana = 239;
 	}
 	[attack]
 	{
-		damage_max = 181;
-		damage_min = 165;
+		damage_max = 676;
+		damage_min = 502;
 	}
-	[defend] { defense=400; }
+	[defend]
+	{
+		defense = 1418;
+	}
 
-    // loot from dsx_skeleton_large
+    // loot from 3W_dsx_skeleton_large
 	[inventory]
     {
         [pcontent]
@@ -256,47 +262,47 @@
                 [gold*]
                 {
                     chance = 0.2;
-                    min = 200;
-                    max = 398;
+                    min = 107470;
+                    max = 213866;
                 }
                 [oneof*]
                 {
                     chance = 0.2;
-                    il_main = potion_mana_small;
-                    il_main = potion_health_small;
+                    il_main = potion_mana_super;
+                    il_main = potion_health_super;
                 }
                 [oneof*]
                 {
                     chance = 0.2;
-                    il_main = #weapon/30-41;
-                    il_main = #armor/15-90;
-                    il_main = #*/30-41;
+                    il_main = #weapon/173-236;
+                    il_main = #armor/90-540;
+                    il_main = #*/173-236;
                 }
                 [oneof*]
                 {
                     chance = 0.01;
-                    il_main = #weapon/-rare(1)/41-49;
-                    il_main = #armor/-rare(1)/62-137;
-                    il_main = #*/-rare(1)/41-49;
+                    il_main = #weapon/-rare(1)/236-282;
+                    il_main = #armor/-rare(1)/372-822;
+                    il_main = #*/-rare(1)/236-282;
                 }
                 [oneof*]
                 {
                     chance = 0.005;
-                    il_main = #weapon/-unique(2)/41-49;
-                    il_main = #armor/-unique(2)/62-137;
-                    il_main = #*/-unique(2)/41-49;
+                    il_main = #weapon/-unique(2)/236-282;
+                    il_main = #armor/-unique(2)/372-822;
+                    il_main = #*/-unique(2)/236-282;
                 }			
             }
         }
     }
 }
 
-[t:template,n:eos_smd_skeleton_archer] { specializes = eos_smd_skeleton_archer_base; }
-[t:template,n:eos_smd_skeleton_archer_base]
+[t:template,n:3W_eos_smd_skeleton_archer] { specializes = 3W_eos_smd_skeleton_archer_base; }
+[t:template,n:3W_eos_smd_skeleton_archer_base]
 {
-	specializes = base_skeleton;
+	specializes = 3W_base_skeleton;
 
-	category_name = "1W_evil_c";
+	category_name = "3W_evil_c";
 	doc = "eos smd skeleton archer";
 
 	[common] { screen_name="Skeletal Archer"; }
@@ -324,28 +330,31 @@
 	{
 		[skills]
 		{
-			strength     =	15, 0;
-			intelligence =	10, 0;
-			dexterity    =	10, 0;
-			ranged       =	13, 0;
+			strength = 45, 0;
+			intelligence = 15, 0;
+			dexterity = 22, 0;
+			ranged = 87, 0;
 		}
 	}
 	[aspect]
 	{
-		experience_value = 600;
-		life = 500;
-		max_life = 500;
-		mana = 5;
-		max_mana = 5;
+		experience_value = 1173648;
+		life = 1989;
+		max_life = 2027;
+		mana = 211;
+		max_mana = 215;
 	}
 	[attack]
 	{
-		damage_max = 110;
-		damage_min = 90;
+		damage_max = 554;
+		damage_min = 380;
 	}
-	[defend] { defense=200; }
+	[defend]
+	{
+		defense = 1116;
+	}
 
-    // loot from dsx_skeletal_archer
+    // loot from 3W_dsx_skeletal_archer
 	[inventory]
 	{
 		[pcontent]
@@ -357,41 +366,41 @@
                 [gold*]
                 {
                     chance = 0.2;
-                    min = 200;
-                    max = 398;
+                    min = 107470;
+                    max = 213866;
                 }
                 [oneof*]
                 {
                     chance = 0.2;
-                    il_main = potion_mana_small;
-                    il_main = potion_health_small;
+                    il_main = potion_mana_super;
+                    il_main = potion_health_super;
                 }
                 [oneof*]
                 {
                     es_shield_hand = bw_g_c_s_s_r_avg_dsx;
                     chance = 0.15;
-                    il_main = #weapon/28-39;
-                    il_main = #armor/10-81;
-                    il_main = #*/28-39;
+                    il_main = #weapon/161-225;
+                    il_main = #armor/60-486;
+                    il_main = #*/161-225;
                 }
                 [oneof*]
                 {
                     chance = 0.0075;
-                    il_main = #weapon/-rare(1)/30-44;
-                    il_main = #armor/-rare(1)/53-128;
-                    il_main = #*/-rare(1)/30-44;
+                    il_main = #weapon/-rare(1)/173-253;
+                    il_main = #armor/-rare(1)/318-768;
+                    il_main = #*/-rare(1)/173-253;
                 }
             }
         }
 	}
 }
 
-[t:template,n:eos_smd_skeleton_melee_02] { specializes = eos_smd_skeleton_melee_02_base; }
-[t:template,n:eos_smd_skeleton_melee_02_base]
+[t:template,n:3W_eos_smd_skeleton_melee_02] { specializes = 3W_eos_smd_skeleton_melee_02_base; }
+[t:template,n:3W_eos_smd_skeleton_melee_02_base]
 {
-	specializes = base_skeleton;
+	specializes = 3W_base_skeleton;
 
-	category_name = "1W_evil_c";
+	category_name = "3W_evil_c";
 	doc = "eos smd skeleton melee 02";
 	[aspect]
 	{
@@ -433,24 +442,27 @@
 	{
 		[skills]
 		{
-			strength	    = 16, 0;
-			intelligence    = 10, 0;
-			dexterity	    = 10, 0;
-			melee		    = 14, 0;
+			strength = 48, 0;
+			intelligence = 15, 0;
+			dexterity = 22, 0;
+			melee = 88, 0;
 		}
 	}
 	[aspect]
 	{
-		experience_value = 600;
-		life = 600;
-		max_life = 600;
-		mana = 6;
-		max_mana = 6;
+		experience_value = 1173648;
+		life = 2120;
+		max_life = 2157;
+		mana = 215;
+		max_mana = 220;
 	}
 	[attack]
 	{
-		damage_min = 120;
-		damage_max = 100;
+		damage_min = 429;
+		damage_max = 537;
 	}
-	[defend] { defense = 250; }
+	[defend]
+	{
+		defense = 1191;
+	}
 }
