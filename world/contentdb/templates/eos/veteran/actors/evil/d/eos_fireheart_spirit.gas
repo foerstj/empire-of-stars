@@ -1,0 +1,50 @@
+[t:template,n:2W_eos_fireheart_spirit] { specializes = 2W_eos_fireheart_spirit_base; }
+[t:template,n:2W_eos_fireheart_spirit_base]
+{
+	specializes = 2W_base_lava_spirit;
+
+    // Lava Spirit with stats of Scorpion
+	category_name = "2W_evil_d";
+	doc = "lava_spirit";
+	[common]
+	{
+		screen_name="Fireheart Spirit";
+	}
+	[mind]
+	{
+		melee_engage_range = 14;
+		personal_space_range = 0.7;
+		ranged_engage_range = 14.0;
+		sight_range = 14;
+	}
+
+    // stats (but not loot) from 2W_scorpion
+	[actor]
+	{
+		[skills]
+		{
+			strength =  39.9, 0;
+			intelligence =  4.3, 0;
+			dexterity =  19.1, 0;
+			melee =  58,  0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 34675;
+		life = 459.9;
+		max_life = 459.9;
+		mana = 37.8;
+		max_mana = 37.8;
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 263.1;
+		damage_min = 199.8;
+	}
+	[defend] 
+	{ 
+		defense=409.5; 
+	}
+}

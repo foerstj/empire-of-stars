@@ -1,0 +1,122 @@
+[t:template,n:2W_wolf_black_boss_01_base]  // = 2W_wolf_black_boss_01
+{
+	category_name = "2W_evil_d";
+	doc = "2W_wolf_black_boss_01";
+	specializes = 2W_base_wolf;
+
+	[body]
+	{
+		max_move_velocity = 4.3;
+	}
+
+	[actor]
+	{
+		[skills]
+		{
+			strength =  43.6, 0;
+			intelligence =  11, 0;
+			dexterity =  27.5, 0;
+            melee =  66,  0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 72124;
+		life = 1374.3;
+        max_life = 1374.3;
+        mana = 50.8;
+        max_mana = 50.8;
+		textures:0 = b_c_edm_wf-05;
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 331.7;
+		damage_min = 242.8;
+	}
+
+	[defend] { defense=712.5; }
+	[common]
+	{
+		screen_name="Dark Wolf";
+		membership=monster,immune_charm,immune_control,immune_freeze,immune_polymorph,immune_align_change,immune_explode;
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				single_shot = true;
+				no_trig_bits = true;
+				action* = call_sfx_script("unique_ray_purple(sgx)");
+			}
+		}
+	}
+	[inventory]
+	{
+		[pcontent]
+		{
+   			[oneof*]
+			{
+				[oneof*]
+				{
+					chance = 0.494;
+					il_main = #*/202-211;
+					il_main = #armor/619-667;
+				}
+				[oneof*]
+				{
+	            	chance = 0.004;
+	                il_main = #weapon/-rare(1)/242-274;
+	                il_main = #armor/-rare(1)/667-714;
+                    il_main = #*/-rare(1)/242-274;
+                }
+				[oneof*]
+				{
+                	chance = 0.002;
+	                il_main = #weapon/-unique(2)/242-274;
+	                il_main = #armor/-unique(2)/667-714;
+                    il_main = #*/-unique(2)/242-274;
+	            }
+				[gold*]
+				{
+					chance = 0.5;
+					max = 229225;
+					min = 177405;
+					min_pile = 515;
+					piles = 2 - 4;
+				}
+			}
+		}
+	}
+	[mind]
+	{
+		jat_fidget						= world\ai\jobs\common\job_fidget.skrit
+			?social							= 0.8
+			&friend_template				= false
+			&friends						= party_wolf_black_boss
+			&still							= false;
+
+		jat_attack_object_melee 		= world\ai\jobs\common\job_attack_object_melee.skrit
+			?run_chance 					= 1.0;
+
+		jat_brain						= world\ai\jobs\common\brain_hero.skrit
+			?actor_creates_own_party			= true
+			&form_party_on_friend_entered_OCZ	= true
+			&form_party_on_friend_entered_ICZ	= true
+			&party_template						= "party_wolf_black_boss";
+	}
+}
+
+// wolf_black_boss_01 but with normal (non-undead) texture
+[t:template,n:2W_wolf_black_boss_01a] { specializes = 2W_wolf_black_boss_01a_base; }
+[t:template,n:2W_wolf_black_boss_01a_base]
+{
+	specializes = 2W_wolf_black_boss_01_base;
+
+	doc = "wolf_black_boss_01a";
+
+	[aspect]
+	{
+        textures:0 = b_c_edm_wf-02; // EDITED: was b_c_edm_wf-05
+	}
+}

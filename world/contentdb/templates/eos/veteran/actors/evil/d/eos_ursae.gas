@@ -1,0 +1,35 @@
+// Balanced for level 32, hard melee
+// dsx ursae with stats of swamp creature
+[t:template,n:2W_eos_ursae_demonic] { specializes = 2W_eos_ursae_demonic_base; }
+[t:template,n:2W_eos_ursae_demonic_base]
+{
+	specializes = 2W_bear_brown_zombie_base;
+
+    // stats from 2W_swamp_creature
+	[actor]
+	{
+		[skills]
+		{
+			strength =  46.8, 0;
+			intelligence =  10.8, 0;
+			dexterity =  12.2, 0;
+            melee =  	60,  0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 72500;
+		life = 2888.9;
+		max_life = 2888.9;
+		mana = 27.8;
+		max_mana = 27.8;
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 443.1;
+		damage_min = 337.5;
+		reload_delay = 0;
+	}
+   	[defend] { defense=395.4; }
+}

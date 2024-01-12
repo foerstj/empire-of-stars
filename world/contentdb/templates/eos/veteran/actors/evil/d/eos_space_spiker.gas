@@ -1,0 +1,257 @@
+// spiked maw & boss, smaller, different sounds
+
+[t:template,n:2W_spiked_maw_base]  // = 2W_spiked_maw
+{
+	category_name = "2W_evil_d";
+	doc = "2W_spiked_maw";
+	specializes = 2W_base_maw;
+	[actor]
+	{
+		[skills]
+		{
+			strength =  36.5, 0;
+			intelligence =  8.3, 0;
+			dexterity =  20.8, 0;
+			melee =  61,  0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 46683;
+		life = 667.4;
+		max_life = 667.4;
+		mana = 35.5;
+		max_mana = 35.5;
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 269.4;
+		damage_min = 191.7;
+		damage_bonus_min_cmagic = 172;
+		damage_bonus_max_cmagic = 224;
+	}
+	[common]
+	{
+		screen_name="Spiked Maw";
+		membership = party_spiked_maw_boss, monster;
+	}
+	[defend] { defense=363.9; }
+	[inventory]
+	{
+		selected_active_location = il_active_primary_spell;
+		[other] { il_active_primary_spell=spell_spiked_maw_spikes; }
+
+    	[pcontent]
+		{
+			[oneof*]
+			{
+				[oneof*]
+				{
+				   chance = 0.05;
+				   il_main = potion_health_large;
+				   il_main = potion_mana_large;
+				}
+				[all*]
+				{
+       				chance = 0.02;
+	                il_main = #nmagic/18-53;
+	                il_main = #cmagic/18-53;
+				}
+				[oneof*]
+				{
+					chance = 0.2;
+					il_main = #*/135-180;
+					il_main = #armor/89-433;
+				}
+				[oneof*]
+				{
+	            	chance = 0.004;
+	                il_main = #weapon/-rare(1)/159-211;
+	                il_main = #armor/-rare(1)/437-635;
+                    il_main = #*/-rare(1)/159-211;
+                }
+				[oneof*]
+				{
+                	chance = 0.002;
+	                il_main = #weapon/-unique(2)/159-211;
+	                il_main = #armor/-unique(2)/437-635;
+                    il_main = #*/-unique(2)/159-211;
+				}
+            }
+		}
+	}
+	[mind]
+	{
+		jat_brain							= world\ai\jobs\common\brain_hero.skrit
+			?actor_joins_existing_party			= true;
+	}
+	[physics]
+	{
+		explode_when_killed = true;
+		break_effect = blood_mist;
+		[break_particulate]
+		{
+			frag_glb_spiked_maw_01 = 1;
+			frag_glb_spiked_maw_02 = 1;
+			frag_glb_spiked_maw_03 = 1;
+			frag_glb_spiked_maw_04 = 6;
+			frag_glb_spiked_maw_05 = 8;
+		}
+	}
+}
+
+[t:template,n:2W_eos_space_spiker] { specializes = 2W_eos_space_spiker_base; }
+[t:template,n:2W_eos_space_spiker_base]
+{
+	specializes = 2W_spiked_maw_base;
+
+	[aspect]
+	{
+		scale_base = 0.5;
+		[voice]
+		{
+			[die] { * = s_e_die_lizard_SED; }
+			[hit_glance] { * = s_e_hit_lizard_SED; }
+		}
+	}
+	[common]
+	{
+		screen_name="Space Spiker";
+	}
+}
+
+
+[t:template,n:2W_spiked_maw_boss_01_base]  // = 2W_spiked_maw_boss_01
+{
+	category_name = "2W_evil_d";
+	doc = "2W_spiked_maw_boss_01";
+	specializes = 2W_base_maw;
+	[actor]
+	{
+		[skills]
+		{
+			strength =  36.5, 0;
+			intelligence =  11.1, 0;
+			dexterity =  20.8, 0;
+			melee =  64,  0;
+			ranged =  62,  0;
+		}
+	}
+	[aspect]
+	{
+		textures:0 = b_c_edm_sm-03;
+		experience_value = 68862;
+		life = 844.9;
+		max_life = 844.9;
+		mana = 35.5;
+		max_mana = 35.5;
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 269.4;
+		damage_min = 191.7;
+		damage_bonus_min_cmagic = 172;
+		damage_bonus_max_cmagic = 224;
+	}
+	[common]
+	{
+		screen_name="Rabid Spiked Maw";
+		membership=monster,immune_charm,immune_control,immune_freeze,immune_polymorph,immune_align_change,immune_explode;
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				single_shot = true;
+				no_trig_bits = true;
+				action* = call_sfx_script("unique_ray_yellow(sgx)");
+			}
+		}
+	}
+	[defend] { defense=899.9; }
+	[inventory]
+	{
+		selected_active_location = il_active_primary_spell;
+		[other] { il_active_primary_spell=spell_spiked_maw_spikes; }
+
+    	[pcontent]
+		{
+			[oneof*]
+			{
+				[all*]
+				{
+       				chance = 0.2;
+	                il_main = #nmagic/64-67;
+	                il_main = #cmagic/64-67;
+				}
+				[oneof*]
+				{
+					chance = 0.794;
+					il_main = #*/180-190;
+					il_main = #armor/639-675;
+				}
+                [oneof*]
+				{
+	            	chance = 0.004;
+	                il_main = #weapon/-rare(1)/208-239;
+	                il_main = #armor/-rare(1)/671-746;
+                    il_main = #*/-rare(1)/208-239;
+                }
+				[oneof*]
+				{
+                	chance = 0.002;
+	                il_main = #weapon/-unique(2)/208-239;
+	                il_main = #armor/-unique(2)/671-746;
+                    il_main = #*/-unique(2)/208-239;
+	            }
+            }
+		}
+	}
+	[mind]
+	{
+		jat_brain							= world\ai\jobs\common\brain_hero.skrit
+			?actor_creates_own_party			= true
+			&party_template						= "party_spiked_maw_boss";
+
+		jat_fidget = world\ai\jobs\common\job_fidget.skrit
+			?social				= 0.8
+			&approach_dist		= 1.75
+			&friends			= party_spiked_maw_boss
+			&still				= false;
+	}
+	[physics]
+	{
+		explode_when_killed = true;
+		break_effect = blood_mist;
+		[break_particulate]
+		{
+			frag_glb_spiked_maw_01 = 1;
+			frag_glb_spiked_maw_02 = 1;
+			frag_glb_spiked_maw_03 = 1;
+			frag_glb_spiked_maw_04 = 6;
+			frag_glb_spiked_maw_05 = 8;
+		}
+	}
+}
+
+[t:template,n:2W_eos_space_spiker_boss_01] { specializes = 2W_eos_space_spiker_boss_01_base; }
+[t:template,n:2W_eos_space_spiker_boss_01_base]
+{
+	specializes = 2W_spiked_maw_boss_01_base;
+
+	[aspect]
+	{
+		scale_base = 0.5;
+		[voice]
+		{
+			[die] { * = s_e_die_lizard_SED; }
+			[hit_glance] { * = s_e_hit_lizard_SED; }
+		}
+	}
+	[common]
+	{
+		screen_name="Rabid Space Spiker";
+	}
+}

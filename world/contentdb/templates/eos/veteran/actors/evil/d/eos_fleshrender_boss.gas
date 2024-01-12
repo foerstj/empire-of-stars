@@ -1,0 +1,106 @@
+[t:template,n:2W_dsx_fleshrender_leaf_base]  // = 2W_dsx_fleshrender
+{
+// Balanced to level 13, medium melee
+	category_name = "2W_evil_d";
+	doc = "2W_dsx_fleshrender";
+	specializes = 2W_dsx_fleshrender_base;
+
+	[actor]
+	{
+		[skills]
+		{
+			strength     = 32.8, 0;
+			intelligence = 10.7, 0;
+			dexterity    = 16.7, 0;
+			melee        = 52, 0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 41796;
+		life             = 1161;
+		max_life         = 1161;
+		mana             = 202.5;
+		max_mana         = 202.5;
+
+		material = flesh;
+		draw_shadow = false;
+		[voice]
+		{
+			[die] 			{ priority = high;	* = s_e_call_wraith_SED;			}
+			[enemy_spotted] { priority = high;	* = s_e_call_zombie_ground_SED;	}
+			[hit_critical]	{ priority = low;	* = s_e_hit_dead_SED;			}
+			[hit_glance]	{ priority = low;	* = s_e_hit_dead_SED;			}
+			[hit_solid]		{ priority = low;	* = s_e_hit_dead_SED;			}
+		}
+
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 336.6;
+		damage_min = 202.5; 
+	}
+
+	[common]
+		{
+			screen_name = "Fleshrender"; //--
+			membership = monster; //--
+		}
+
+	[defend] { defense = 463.5; }
+
+}
+
+[t:template,n:2W_eos_fleshrender_boss] { specializes = 2W_eos_fleshrender_boss_base; }
+[t:template,n:2W_eos_fleshrender_boss_base]
+{
+	specializes = 2W_dsx_fleshrender_leaf_base;
+
+	doc = "eos_fleshrender_boss";
+	[common]
+    {
+        // boss-ified
+		membership=monster,immune_charm,immune_control,immune_freeze,immune_polymorph,immune_align_change,immune_explode;
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				single_shot = true;
+				no_trig_bits = true;
+				action* = call_sfx_script("unique_ray_red(sgx)");
+			}
+		}
+    }
+
+    // stats from 2W_dsx_fleshrender, EDITED
+	[actor]
+	{
+		[skills]
+		{
+			strength = 29, 0;
+			intelligence = 10, 0;
+			dexterity = 15, 0;
+			melee = 54, 0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 43361;
+		life = 1140;
+		max_life = 1163;
+		mana = 254;
+		max_mana = 257;
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 334;
+		damage_min = 219;
+	}
+	[defend]
+	{
+		defense = 622;
+	}
+}

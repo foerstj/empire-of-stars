@@ -1,0 +1,190 @@
+// Sand imps with stats somewhat below the eos_rld_droog
+
+[t:template,n:2W_eos_rld_sand_ripper] { specializes = 2W_eos_rld_sand_ripper_base; }
+[t:template,n:2W_eos_rld_sand_ripper_base]
+{
+	specializes = 2W_base_imp;
+
+	category_name = "2W_evil_d";
+	doc = "sand_ripper";
+	[aspect]
+	{
+		model = m_c_edm_li_pos_1;
+		[textures] { 0=b_c_edm_li-05; }
+		[voice]
+		{
+			[die]			{ priority = high; * = s_e_die_sand_ripper; }
+		}
+
+        scale_base = 1.1;
+	}
+	[common] { screen_name="Sand Ripper"; }
+	[mind]
+	{
+		jat_fidget = world\ai\jobs\common\job_fidget.skrit;
+
+		melee_engage_range = 14;
+		personal_space_range = 0.7;
+		ranged_engage_range = 14.0;
+		sight_range = 14;
+	}
+
+    // stats from 2W_dsx_wasped
+	[actor]
+	{
+		[skills]
+		{
+			strength =  	30.8, 0;
+			intelligence =  10.7, 0;
+			dexterity =  	18.1, 0;
+			melee =  	53, 0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 48832;
+		life = 551;
+		max_life = 551;
+		mana = 45.6;
+		max_mana = 45.6;
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 204.8;
+		damage_min = 147.1;
+	}
+	[defend] { defense=319.2; }
+    // no loot as in dsx_wasped
+}
+
+[t:template,n:2W_eos_rld_sand_mage] { specializes = 2W_eos_rld_sand_mage_base; }
+[t:template,n:2W_eos_rld_sand_mage_base]
+{
+	specializes = 2W_base_imp;
+
+	category_name = "2W_evil_d";
+	doc = "sand_mage";
+	[aspect]
+	{
+		model = m_c_edm_li_pos_2;
+		[textures] { 0=b_c_edm_li-06; }
+
+        scale_base = 1.1;
+	}
+	[common] { screen_name="Sand Mage"; }
+   	[inventory]
+	{
+    	selected_active_location = il_active_primary_spell;
+		[other] { il_active_primary_spell=spell_rld_sand_mage_blast; }
+	}
+	[mind]
+	{
+		jat_brain					 = world\ai\jobs\common\brain_hero.skrit
+			?actor_creates_own_party = true
+			&party_template			 = "party_sand_mage";
+
+		jat_fidget					 = world\ai\jobs\common\job_fidget.skrit;
+
+		actor_weapon_preference			= WP_MAGIC;
+		actor_auto_switches_to_magic	= true;
+		actor_auto_switches_to_karate	= false;
+		actor_auto_switches_to_melee	= false;
+
+		melee_engage_range = 14;
+		personal_space_range = 0.7;
+		ranged_engage_range = 14.0;
+		sight_range = 14;
+	}
+
+    // stats from 2W_spider_frostnid_ranged
+	[actor]
+	{
+		[skills]
+		{
+			strength =  28.9, 0;
+			intelligence =  7.2, 0;
+			dexterity =  33.3, 0;
+            ranged =  64,  0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 43164;
+		life = 556.6;
+        max_life = 556.6;
+        mana = 41.2;
+		max_mana = 41.2;
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 226.8;
+		damage_min = 176.3;
+		damage_bonus_min_cmagic = 150;
+		damage_bonus_max_cmagic = 201;
+	}
+    [defend] { defense=453.5; }
+    // no loot as in 2W_spider_frostnid_ranged
+}
+
+[t:template,n:2W_eos_rld_sand_basher] { specializes = 2W_eos_rld_sand_basher_base; }
+[t:template,n:2W_eos_rld_sand_basher_base]
+{
+	specializes = 2W_base_imp;
+
+	category_name = "2W_evil_d";
+	doc = "sand_basher";
+	[aspect]
+	{
+		model = m_c_edm_li_pos_3;
+		[textures] { 0=b_c_edm_li-07; }
+
+        scale_base = 1.1;
+	}
+	[common]
+	{
+		screen_name="Sand Basher";
+		membership = monster, party_sand_mage;
+	}
+	[mind]
+	{
+		jat_brain							= world\ai\jobs\common\brain_hero.skrit
+			?actor_joins_existing_party		= true;
+
+		jat_fidget							= world\ai\jobs\common\job_fidget.skrit;
+
+		melee_engage_range = 14;
+		personal_space_range = 0.7;
+		ranged_engage_range = 14.0;
+		sight_range = 14;
+	}
+
+    // stats from 2W_spider_frostnid
+	[actor]
+	{
+		[skills]
+		{
+			strength =  27.9, 0;
+			intelligence =  5.7, 0;
+			dexterity =  30.6, 0;
+            melee =  61,  0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 36936;
+		life = 847.1;
+        max_life = 847.1;
+        mana = 38.3;
+		max_mana = 38.3;
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 189.5;
+		damage_min = 129.2;
+	}
+    [defend] { defense=414; }
+   	// no loot as in 2W_spider_frostnid
+}

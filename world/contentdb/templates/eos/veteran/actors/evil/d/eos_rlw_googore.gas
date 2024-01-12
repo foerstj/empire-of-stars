@@ -1,0 +1,224 @@
+[t:template,n:2W_googore_base]  // = 2W_googore
+{
+	doc = "2W_googore";
+	specializes = actor_evil;
+    category_name = "2W_evil_d";
+
+	[actor]
+	{
+		race	= other;
+
+		[skills]
+		{
+			strength =  	31.4, 0;
+			intelligence =  8.9, 0;
+			dexterity =  	15.4, 0;
+			melee =  		82, 0;
+		}
+	}
+
+	[aspect]
+	{
+		draw_shadow 		= false;
+		model				= m_c_edm_gg_pos_1;
+		experience_value	= 170000;
+		life				= 2692.4;
+		max_life			= 2692.4;
+		mana				= 20.2;
+		max_mana			= 20.2;
+		[voice]
+		{
+			[enemy_spotted]	{ priority = high; * = s_e_call_googore_SED;  }
+		}
+	}
+
+	[attack]
+	{
+		attack_range	= 0.5;
+		damage_min		= 291.5;
+		damage_max		= 400.8;
+		damage_bonus_min_cmagic = 157;
+		damage_bonus_max_cmagic = 203;
+	}
+
+	[body]
+	{
+		avg_move_velocity = 1.0;
+        [bone_translator]
+		{
+			 kill_bone			= bone16;
+			 weapon_bone		= bone07;
+			 shield_bone		= bone07;
+			 body_anterior		= bone07;
+			 body_mid			= bone16;
+			 body_posterior		= bone01;
+		}
+		[chore_dictionary]
+		{
+			chore_prefix = a_c_edm_gg_fs;
+
+			[chore_attack]
+			{
+				skrit = select_attack;
+				chore_stances = 0;
+
+				anim_files:00 = at;
+			}
+			[chore_magic]
+			{
+				skrit = select_attack;
+				chore_stances = 0;
+
+				anim_files:00 = at-02;
+			}
+			[chore_die]
+			{
+				skrit = select_transition;
+				chore_stances = 0;
+
+				anim_files:00 = di;
+			}
+
+			[chore_default]
+			{
+				skrit = infinite_loop;
+				chore_stances = 0;
+
+				anim_files:00 = dfs;
+			}
+			[chore_misc]
+			{
+				chore_stances = 0;
+				skrit = select_transition;
+				[anim_files]
+				{
+					slep = ds;
+					wake = rv;
+				}
+			}
+			[chore_fidget]
+			{
+				skrit = select_fidget;
+				chore_stances = 0;
+
+				anim_files:00 = dff;
+			}
+
+			[chore_walk]
+			{
+				skrit = select_walk;
+				chore_stances = 0;
+
+				anim_files:00 = rv;
+			}
+		}
+	}
+	[generator_in_object]
+	{
+		child_template_name = hole_cav_01;
+		spawn_event = WE_ENEMY_SPOTTED;
+		spawn_chance = 1.0;
+		spawn_delay = 0.5;
+		fade_kid = true;
+	}
+    [inventory]
+	{
+		selected_active_location = il_active_primary_spell;
+		[other] { il_active_primary_spell=spell_googore_spit; }
+	}
+	[common]
+	{
+		screen_name="Googore";
+		membership=monster,immune_freeze;
+		[template_triggers]
+		{
+			[*]
+			{
+				action* = call_sfx_script("googore_goo");
+				condition* = receive_world_message("we_anim_sfx",1);
+			}
+
+			[*]
+			{
+				action* = call_sfx_script("googore_goo");
+				condition* = receive_world_message("we_anim_die");
+			}
+		}
+	}
+	[defend] { defense=787.5; }
+	[mind]
+	{
+		actor_weapon_preference					= WP_MAGIC;
+		actor_auto_switches_to_magic			= true;
+		actor_auto_switches_to_karate			= true;
+		actor_auto_switches_to_melee			= true;
+
+		jat_startup 							= world\ai\jobs\common\job_startup_reveal.skrit
+			?invisible 							= true;
+
+		jat_die 								= world\ai\jobs\actors\evil\job_die_delete.skrit;
+
+		jat_flee_from_object					= jat_none;
+		jat_guard         						= jat_none;
+		jat_move          						= jat_none;
+		jat_patrol         						= jat_none;
+
+		on_enemy_entered_icz_switch_to_melee	= true;
+
+		actor_auto_fidgets 						= false;
+		movement_orders							= mo_hold;
+		inner_comfort_zone_range				= 1.9;
+		melee_engage_range 						= 2.0;
+		personal_space_range					= 1.5;
+		ranged_engage_range 					= 14.0;
+		sight_range								= 14.0;
+		sight_origin_height						= 2;
+	}
+
+}
+
+// Googore with stats of rlw droog grunt
+[t:template,n:2W_eos_rlw_googore] { specializes = 2W_eos_rlw_googore_base; }
+[t:template,n:2W_eos_rlw_googore_base]
+{
+	specializes = 2W_googore_base;
+
+    // stats (but not loot) from 2W_trog
+	[actor]
+	{
+		[skills]
+		{
+			strength =  34.4, 0;
+			intelligence =  9.9, 0;
+			dexterity =  15.8, 0;
+            melee =  64,  0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 47432;
+		life = 1262.3;
+        max_life = 1262.3;
+        mana = 59.5;
+		max_mana = 59.5;
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 312.3;
+		damage_min = 156.4;
+	}
+    [defend] { defense=342.8; }
+
+    // cmagic bonus from 2W_ice_mage
+	[attack]
+	{
+		damage_bonus_min_cmagic = 84;
+		damage_bonus_max_cmagic = 111;
+	}
+
+    [inventory]
+	{
+		[other] { il_active_primary_spell=spell_googore_spit_eos_rlw; }  // spell with stats of rlw droog mage
+	}
+}

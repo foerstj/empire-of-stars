@@ -1,0 +1,49 @@
+[t:template,n:2W_krug_dog_zombie] { specializes = 2W_krug_dog_zombie_base; }
+[t:template,n:2W_krug_dog_zombie_base]
+{
+	specializes = 2W_base_krug_dog;
+
+	category_name = "2W_evil_d";
+	doc = "krug dog zombie";
+	[aspect]
+	{
+		model = m_c_edm_kd_pos_1;
+        textures:0 = b_i_cav_carcass-02;
+	}
+	[common] { screen_name="Krug Dog Zombie"; }
+	[mind]
+	{
+		on_enemy_spotted_alert_friends = true;
+		melee_engage_range = 14.0;
+		personal_space_range = 0.7;
+		ranged_engage_range = 14.0;
+		sight_range = 14.0;
+	}
+    
+    // stats from 2W_hell_boar
+	[actor]
+	{
+		[skills]
+		{
+			strength =  40.7, 0;
+			intelligence =  8.3, 0;
+			dexterity =  22.5, 0;
+            melee =  59,  0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 52716;
+		life = 1080;
+        max_life = 1080;
+        mana = 27.4;
+		max_mana = 27.4;
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 233.8;
+		damage_min = 185.1;
+	}
+   	[defend] { defense=637.7; }
+}
