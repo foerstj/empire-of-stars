@@ -1,11 +1,11 @@
 // Smith shop on Altair.
 // Good clothes from Jeriah, bad weapons from Bodrus
-[t:template,n:at_shop_smith] { specializes = at_shop_smith_base; }
-[t:template,n:at_shop_smith_base]
+[t:template,n:2W_at_shop_smith] { specializes = 2W_at_shop_smith_base; }
+[t:template,n:2W_at_shop_smith_base]
 {
-	specializes = base_dwarf;
+	specializes = 2W_base_dwarf;
 
-	category_name = "1W_shopkeep";
+	category_name = "2W_shopkeep";
 	doc = "Altair Shop Smith";
 	[actor] { portrait_icon = b_gui_ig_i_ic_c_go; }
 	[aspect]
@@ -47,26 +47,26 @@
 			{
 				[all*]
 				{
-					il_main = #body,ro/45-135;
+					il_main = #body,ro/201-603;
 					max = 4;
 					min = 4;
 				}
 
 				[all*]
 				{
-					il_main = #body/45-55;
+					il_main = #body/201-246;
 					max = 7;
 					min = 7;
 				}
 				[all*]
 				{
-					il_main = #body/60-104;
+					il_main = #body/268-465;
 					max = 16;
 					min = 16;
 				}
 				[all*]
 				{
-					il_main = #body/105-135;
+					il_main = #body/469-603;
 					max = 3;
 					min = 3;
 				}
@@ -74,19 +74,19 @@
 
 				[all*]
 				{
-					il_main = #gloves/6-40;
+					il_main = #gloves/27-179;
 					max = 8;
 					min = 8;
 				}
 				[all*]
 				{
-					il_main = #gloves/50-104;
+					il_main = #gloves/223-465;
 					max = 8;
 					min = 8;
 				}
 				[all*]
 				{
-					il_main = #gloves/110-135;
+					il_main = #gloves/491-603;
 					max = 4;
 					min = 4;
 				}
@@ -94,38 +94,38 @@
 
 				[all*]
 				{
-					il_main = #helm/20-54;
+					il_main = #helm/89-241;
 					max = 8;
 					min = 8;
 				}
 				[all*]
 				{
-					il_main = #helm/55-104;
+					il_main = #helm/246-465;
 					max = 8;
 					min = 8;
 				}
 				[all*]
 				{
-					il_main = #helm/110-130;
+					il_main = #helm/491-581;
 					max = 4;
 					min = 4;
 				}
 
 				[all*]
 				{
-					il_main = #boots/6-40;
+					il_main = #boots/27-179;
 					max = 8;
 					min = 8;
 				}
 				[all*]
 				{
-					il_main = #boots/50-104;
+					il_main = #boots/223-465;
 					max = 8;
 					min = 8;
 				}
 				[all*]
 				{
-					il_main = #boots/110-135;
+					il_main = #boots/491-603;
 					max = 4;
 					min = 4;
 				}
@@ -134,19 +134,19 @@
 			{
 				[all*]
 				{
-					il_main = #shield/10-50;
+					il_main = #shield/45-223;
 					max = 5;
 					min = 5;
 				}
 				[all*]
 				{
-					il_main = #shield/55-104;
+					il_main = #shield/246-465;
 					max = 6;
 					min = 6;
 				}
 				[all*]
 				{
-					il_main = #shield/110-135;
+					il_main = #shield/491-603;
 					max = 4;
 					min = 4;
 				}
@@ -157,37 +157,37 @@
 			{
 				[all*]
 				{
-					il_main = #melee/10-11;
+					il_main = #melee/72-79;
 					max = 8;
 					min = 8;
 				}
 				[all*]
 				{
-					il_main = #melee/12-27;
+					il_main = #melee/86-194;
 					max = 18;
 					min = 18;
 				}
 				[all*]
 				{
-					il_main = #melee/28-35;
+					il_main = #melee/202-252;
 					max = 6;
 					min = 6;
 				}
 				[all*]
 				{
-					il_main = #ranged/10-11;
+					il_main = #ranged/72-79;
 					max = 8;
 					min = 8;
 				}
 				[all*]
 				{
-					il_main = #ranged/12-27;
+					il_main = #ranged/86-194;
 					max = 18;
 					min = 18;
 				}
 				[all*]
 				{
-					il_main = #ranged/28-35;
+					il_main = #ranged/202-252;
 					max = 6;
 					min = 6;
 				}
