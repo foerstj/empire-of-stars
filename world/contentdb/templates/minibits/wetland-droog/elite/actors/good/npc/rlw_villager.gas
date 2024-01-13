@@ -1,0 +1,38 @@
+[t:template,n:3W_eos_base_rlw_villager]
+{
+	specializes = 3W_base_npc_dg;
+
+	category_name = "3W_townsperson";
+	doc = "RLW droog villager";
+	[aspect]
+	{
+        scale_base = 0.9;
+	}
+	[common] { screen_name="Droog Villager"; }
+	[conversation] {}
+	[mind]
+	{
+		jat_talk = world\ai\jobs\common\job_talk.skrit;
+	}
+}
+
+[t:template,n:3W_eos_rlw_villager] { specializes = 3W_eos_rlw_villager_base; }
+[t:template,n:3W_eos_rlw_villager_base]
+{
+    specializes = 3W_eos_base_rlw_villager;
+
+	[aspect]
+	{
+		[textures] { 0=b_c_eam_dgg-eos; }
+	}
+}
+
+[t:template,n:3W_eos_rlw_villager_b] { specializes = 3W_eos_rlw_villager_b_base; }
+[t:template,n:3W_eos_rlw_villager_b_base]
+{
+    specializes = 3W_eos_base_rlw_villager;
+	[aspect]
+	{
+		[textures] { 0 = b_c_eam_dg-04-eos; }
+	}
+}

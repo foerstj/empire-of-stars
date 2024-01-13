@@ -1,27 +1,27 @@
-[t:template,n:dragon_base]  // = dragon
+[t:template,n:3W_dragon_base]  // = 3W_dragon
 {
-	category_name = "1W_evil_b";
-	doc = "dragon";
+	category_name = "3W_evil_b";
+	doc = "3W_dragon";
 	specializes = actor_custom;
 	[actor]
 	{
 		[skills]
 		{
-			strength =  	120, 0;
-			intelligence =  40, 0;
-			dexterity =  	45, 0;
-			melee =  		52, 0;
-            combat_magic =  65, 0;
+			strength =  	259.9, 0;
+			intelligence =  58.5, 0;
+			dexterity =  	84.1, 0;
+			melee =  		125, 0;
+            combat_magic =  138, 0;
 		}
 	}
 	[aspect]
 	{
-        draw_selection_indicator = false;
-		experience_value = 200000;
-		life = 20260;
-		max_life = 20260;
-		mana = 15050;
-		max_mana = 15050;
+		draw_selection_indicator = false;
+		experience_value = 18600000;
+		life = 51727.7;
+		max_life = 51727.7;
+		mana = 38425.5;
+		max_mana = 38425.5;
 		model = m_c_ebb_dg_pos_1;
 		rollover_highlight = false;
 		[voice]
@@ -32,8 +32,10 @@
 	[attack]
 	{
 		attack_range = 0.0;
-		damage_max = 320;
-		damage_min = 280;
+		damage_max = 898.7;
+		damage_min = 643.4;
+		damage_bonus_min_cmagic = 475;
+		damage_bonus_max_cmagic = 683;
 	}
 	[body]
 	{
@@ -112,7 +114,7 @@
 
 		}
 	}
-	[defend] { defense=900; }
+	[defend] { defense=2633.6; }
 	[follower] {}
 	[inventory]
 	{
@@ -163,38 +165,41 @@
 	}
 }
 
-[t:template,n:eos_dragon] { specializes = eos_dragon_base; }
-[t:template,n:eos_dragon_base]
+[t:template,n:3W_eos_dragon] { specializes = 3W_eos_dragon_base; }
+[t:template,n:3W_eos_dragon_base]
 {
-    specializes = dragon_base;
+    specializes = 3W_dragon_base;
 
     // stats self-written (reduced)
 	[actor]
 	{
 		[skills]
 		{
-			strength =  	110, 0;
-			intelligence =  37, 0;
-			dexterity =  	41, 0;
-			melee =  		48, 0;
-            combat_magic =  59, 0;
+			strength = 262, 0;
+			intelligence = 53, 0;
+			dexterity = 84, 0;
+			melee = 116, 0;
+			combat_magic = 129, 0;
 		}
 	}
-    [aspect]
-    {
-		experience_value = 131072;
-		life = 16384;
-		max_life = 16384;
-		mana = 16384;
-		max_mana = 16384;
-    }
+	[aspect]
+	{
+		experience_value = 12404677;
+		life = 22749;
+		max_life = 22739;
+		mana = 80140;
+		max_mana = 80144;
+	}
 	[attack]
 	{
 		attack_range = 0.0;
-		damage_max = 320;
-		damage_min = 280;
+		damage_max = 914;
+		damage_min = 687;
 	}
-	[defend] { defense=900; }
+	[defend]
+	{
+		defense = 2172;
+	}
 
 	[inventory]
 	{

@@ -1,8 +1,10 @@
-[t:template,n:eos_rld_shop_ranged]
+[t:template,n:eos_rld_shop_ranged] { specializes = eos_rld_shop_ranged_base; }
+[t:template,n:eos_rld_shop_ranged_base]
 {
-    category_name = "1W_shopkeep";
-	doc = "craftsman, quillrabe (MP)";
 	specializes = base_npc_dg;
+
+    category_name = "1W_shopkeep";
+	doc = "RLD ranged shop";
 	[actor] { portrait_icon = b_gui_ig_i_ic_c_orellean; }
 	[aspect]
 	{
@@ -12,6 +14,14 @@
         scale_base = 1.1;
 	}
 	[conversation] { }
+	[mind]
+	{
+		jat_talk = world\ai\jobs\common\job_talk.skrit;
+	}
+    [respawn_shrine]
+	{
+	}
+
 	[inventory]
 	{
 		[store_pcontent]
@@ -40,13 +50,6 @@
 				}
 			}
 		}
-	}
-	[mind]
-	{
-		jat_talk = world\ai\jobs\common\job_talk.skrit;
-	}
-    [respawn_shrine]
-	{
 	}
 	[store]
 	{

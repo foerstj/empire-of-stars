@@ -1,0 +1,461 @@
+// Droog archer with stats of ice archer increased
+[t:template,n:3W_eos_rlw_droog_archer_base]
+{
+	specializes = 3W_base_droog;
+
+	category_name = "3W_evil_a";
+	doc = "droog archer";
+	[aspect]
+	{
+		[textures] { 0=b_c_eam_dga-eos; }
+        
+        scale_base = 1.1;  // bigger
+	}
+	[common] { screen_name="Droog Archer"; }
+	[guts_manager]
+	{
+		effect_name = melee_hit_2;
+	}
+	[inventory]
+	{
+		selected_active_location = IL_ACTIVE_RANGED_WEAPON;
+    	[equipment]
+		{
+			es_shield_hand = bw_un_droog_avg_eos_rlw;
+        }
+    }
+	[mind]
+	{
+		actor_auto_switches_to_melee         = false;
+		actor_auto_switches_to_ranged        = true;
+		actor_auto_uses_stored_items		 = true;
+
+		actor_weapon_preference				 = WP_RANGED;
+
+		on_enemy_entered_icz_switch_to_melee = false;
+		inner_comfort_zone_range             = 2;
+		outer_comfort_zone_range             = 4.0;
+		melee_engage_range                   = 2;
+		ranged_engage_range                  = 13.5;
+		sight_range                          = 14.0;
+
+		jat_brain						= world\ai\jobs\common\brain_hero.skrit
+			?actor_joins_existing_party		= true
+			&actor_creates_own_party		= true
+			&party_template					= "party_droog";
+		jat_fidget						= world\ai\jobs\common\job_fidget.skrit
+			?social							= 0.45
+			&delay_min						= 7.0
+			&still							= false;
+	}
+
+    // stats from ice_archer, EDITED
+	[actor]
+	{
+		[skills]
+		{
+			strength = 41, 0;
+			intelligence = 8, 0;
+			dexterity = 34, 0;
+			ranged = 84,  0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 1147824;
+		life = 1653;
+		max_life = 1691;
+		mana = 235;
+		max_mana = 239;
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 453;
+		damage_min = 313;
+	}
+	[defend]
+	{
+		defense = 965;
+	}
+
+    // loot from 3W_trog
+	[inventory]
+	{
+    	[pcontent]
+		{
+			[oneof*]
+			{
+				[oneof*]
+				{
+					chance = 0.2;
+					il_main = #*/246-289;
+				}
+				[oneof*]
+				{
+				   chance = 0.2;
+				   il_main = potion_health_super;
+				   il_main = potion_mana_super;
+				}
+			}
+		}
+	}
+}
+[t:template,n:3W_eos_rlw_droog_archer]
+{
+	category_name = "3W_evil_a";
+	doc = "droog archer";
+	specializes = 3W_eos_rlw_droog_archer_base;
+}
+[t:template,n:3W_eos_rlw_droog_archer_reveal]
+{
+	category_name = "3W_evil_a";
+	doc = "droog archer reveal";
+	specializes = 3W_eos_rlw_droog_archer_base;
+	[mind]
+	{
+		jat_startup = world\ai\jobs\common\job_startup_reveal.skrit
+			?invisible = true;
+		sight_origin_height = 1;
+		actor_auto_fidgets = false;
+	}
+	[common]
+	{
+		[template_triggers]
+		{
+			[*]
+			{
+				single_shot = true;
+				action* = call_sfx_script("droog_reveal");
+				condition* = receive_world_message("we_enemy_spotted");
+			}
+		}
+	}
+}
+
+// Droog grunt with stats of trog
+[t:template,n:3W_eos_rlw_droog_grunt_base]
+{
+	specializes = 3W_base_droog;
+
+	category_name = "3W_evil_a";
+	doc = "droog grunt";
+	[aspect]
+	{
+		[textures] { 0=b_c_eam_dgg-eos; }
+        
+        scale_base = 1.1;  // bigger
+	}
+	[common] { screen_name="Droog Grunt"; }
+	[guts_manager]
+	{
+		effect_name = melee_hit_2;
+	}
+    [inventory]
+    {
+        [equipment]
+        {
+            es_weapon_hand = sd_un_droog_1h_avg_eos_rlw;
+        }
+    }
+
+    // stats & loot from 3W_trog
+	[actor]
+	{
+		[skills]
+		{
+			strength =  48.4, 0;
+			intelligence =  11.7, 0;
+			dexterity =  21, 0;
+            melee =  98,  0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 1271256;
+		life = 1893.4;
+        max_life = 1893.4;
+        mana = 89.3;
+		max_mana = 89.3;
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 497;
+		damage_min = 250.1;
+	}
+    [defend] { defense=514.3; }
+	[inventory]
+	{
+		[pcontent]
+		{
+			[oneof*]
+			{
+				[oneof*]
+				{
+					chance = 0.2;
+					il_main = #*/246-289;
+				}
+				[oneof*]
+				{
+				   chance = 0.2;
+				   il_main = potion_health_super;
+				   il_main = potion_mana_super;
+				}
+			}
+		}
+	}
+	[mind]
+	{
+		jat_brain							 = world\ai\jobs\common\brain_hero.skrit
+			?actor_joins_existing_party		 = true
+			&actor_creates_own_party		 = false
+			&party_template					 = "party_droog";
+	}
+}
+[t:template,n:3W_eos_rlw_droog_grunt]
+{
+	category_name = "3W_evil_a";
+	doc = "droog grunt";
+	specializes = 3W_eos_rlw_droog_grunt_base;
+}
+[t:template,n:3W_eos_rlw_droog_grunt_reveal]
+{
+	category_name = "3W_evil_a";
+	doc = "droog grunt reveal";
+	specializes = 3W_eos_rlw_droog_grunt_base;
+	[mind]
+	{
+		jat_startup = world\ai\jobs\common\job_startup_reveal.skrit
+			?invisible = true;
+		sight_origin_height = 1;
+		actor_auto_fidgets = false;
+	}
+
+	[common]
+	{
+		[template_triggers]
+		{
+			[*]
+			{
+				single_shot = true;
+				action* = call_sfx_script("droog_reveal");
+				condition* = receive_world_message("we_enemy_spotted");
+			}
+		}
+	}
+}
+
+// Droog grunt boss with stats of trog warrior
+[t:template,n:3W_eos_rlw_droog_grunt_boss_01]
+{
+	specializes = 3W_eos_rlw_droog_grunt_base;
+
+	category_name = "3W_evil_a";
+	doc = "droog grunt boss 01";
+	[aspect]
+	{
+		[textures] { 0=b_c_eam_dgg-02-eos; }
+	}
+	[common]
+	{
+		screen_name="Droog Captain";
+		membership=monster,droog,immune_charm,immune_control,immune_freeze,immune_polymorph,immune_align_change,immune_explode;
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				single_shot = true;
+				no_trig_bits = true;
+				action* = call_sfx_script("unique_light_blue(sgx)");
+			}
+		}
+	}
+    [inventory]
+    {
+        [equipment]
+        {
+            es_weapon_hand = sd_un_droog_1h_avg_eos_rlw;
+        }
+    }
+    [mind]
+    {
+		jat_brain							 = world\ai\jobs\common\brain_hero.skrit
+			?actor_creates_own_party		 = true
+			&form_party_on_friend_entered_OCZ	= true
+			&form_party_on_friend_entered_ICZ	= true
+			&party_template					 = "party_droog";
+	}
+
+    // stats & loot from 3W_trog_warrior
+	[actor]
+	{
+		[skills]
+		{
+			strength 	 =  56.9, 0;
+			intelligence =  11.7, 0;
+			dexterity 	 =  23.1, 0;
+            melee 		 =  100,  0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 1412300;
+		life = 1877.8;
+        max_life = 1877.8;
+        mana = 80.9;
+		max_mana = 80.9;
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 506.6;
+		damage_min = 272;
+	}
+    [defend] { defense=373.3; }
+	[inventory]
+	{
+		[pcontent]
+		{
+   			[oneof*]
+			{
+				[oneof*]
+				{
+					chance = 0.2;
+				   	il_main = potion_health_super;
+				   	il_main = potion_mana_super;
+				}
+				[oneof*]
+				{
+					chance = 0.2;
+					il_main = #*/224-302;
+				}
+			}
+		}
+    }
+}
+
+// Droog mage with stats of ice mage increased
+[t:template,n:3W_eos_rlw_droog_mage_base]
+{
+	specializes = 3W_base_droog;
+
+	category_name = "3W_evil_a";
+	doc = "droog mage";
+	[aspect]
+	{
+		[textures] { 0=b_c_eam_dgm-eos; }
+        
+        scale_base = 1.1;  // bigger
+	}
+	[common] { screen_name="Droog Mage"; }
+	[guts_manager]
+	{
+		effect_name = melee_hit_2;
+	}
+    [inventory]
+    {
+        selected_active_location = il_active_primary_spell;
+		[other]
+		{
+			il_active_primary_spell = spell_droog_starburst_eos_rlw;
+		}
+    }
+    [mind]
+	{
+		jat_brain						 = world\ai\jobs\common\brain_hero.skrit
+			?actor_joins_existing_party		 = true
+			&actor_creates_own_party		 = true
+			&party_template					 = "party_droog";
+
+		actor_weapon_preference			= WP_MAGIC;
+		actor_auto_switches_to_magic	= true;
+		actor_auto_switches_to_karate	= false;
+		actor_auto_switches_to_melee	= false;
+	}
+
+    // stats from ice_mage, EDITED
+	[actor]
+	{
+		[skills]
+		{
+			strength = 29, 0;
+			intelligence = 22, 0;
+			dexterity = 20, 0;
+			combat_magic = 83,  0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 1147824;
+		life = 1466;
+		max_life = 1505;
+		mana = 459;
+		max_mana = 464;
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 468;
+		damage_min = 324;
+	}
+	[defend]
+	{
+		defense = 965;
+	}
+
+    // loot from trog
+	[inventory]
+	{
+		[pcontent]
+		{
+			[oneof*]
+			{
+				[oneof*]
+				{
+					chance = 0.2;
+					il_main = #*/246-289;
+				}
+				[oneof*]
+				{
+				   chance = 0.2;
+				   il_main = potion_health_super;
+				   il_main = potion_mana_super;
+				}
+			}
+		}
+	}
+}
+[t:template,n:3W_eos_rlw_droog_mage]
+{
+	category_name = "3W_evil_a";
+	doc = "droog mage";
+	specializes = 3W_eos_rlw_droog_mage_base;
+}
+[t:template,n:3W_eos_rlw_droog_mage_reveal]
+{
+	category_name = "3W_evil_a";
+	doc = "droog mage reveal";
+	specializes = 3W_eos_rlw_droog_mage_base;
+	[mind]
+	{
+		jat_startup = world\ai\jobs\common\job_startup_reveal.skrit
+			?invisible = true;
+		sight_origin_height = 1;
+		actor_auto_fidgets = false;
+	}
+
+	[common]
+	{
+		[template_triggers]
+		{
+			[*]
+			{
+				single_shot = true;
+				action* = call_sfx_script("droog_reveal");
+				condition* = receive_world_message("we_enemy_spotted");
+			}
+		}
+	}
+}

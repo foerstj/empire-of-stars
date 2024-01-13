@@ -1,10 +1,10 @@
-[t:template,n:eos_rld_shop_melee] { specializes = eos_rld_shop_melee_base; }
-[t:template,n:eos_rld_shop_melee_base]
+[t:template,n:2W_eos_rld_shop_ranged] { specializes = 2W_eos_rld_shop_ranged_base; }
+[t:template,n:2W_eos_rld_shop_ranged_base]
 {
-	specializes = base_npc_dg;
+	specializes = 2W_base_npc_dg;
 
-    category_name = "1W_shopkeep";
-	doc = "RLD melee shop";
+    category_name = "2W_shopkeep";
+	doc = "RLD ranged shop";
 	[actor] { portrait_icon = b_gui_ig_i_ic_c_orellean; }
 	[aspect]
 	{
@@ -29,22 +29,22 @@
 			full_ratio = 0;
 			[weapons]
 			{
-                // melee from verma, balanced
+                // ranged from verma, balanced
 				[all*]
 				{
-					il_main = #melee/0-50;
+					il_main = #ranged/0-167;
 					max = 20;
 					min = 15;
 				}
 				[all*]
 				{
-					il_main = #melee/50-75;
+					il_main = #ranged/167-193;
 					max = 20;
 					min = 15;
 				}
 				[all*]
 				{
-					il_main = #melee/75-100;
+					il_main = #ranged/193-220;
 					max = 10;
 					min = 5;
 				}

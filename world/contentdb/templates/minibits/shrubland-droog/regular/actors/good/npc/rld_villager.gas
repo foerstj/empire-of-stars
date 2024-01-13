@@ -1,52 +1,39 @@
-[t:template,n:eos_rld_villager]
+[t:template,n:eos_base_rld_villager]
 {
-	category_name = "1W_good";
-	doc = "droog villager standing";
-	specializes = base_droog;
-	[actor]
-	{
-		alignment			= aa_good;
-	}
-	[aspect]
-	{
-		is_invincible     = true;
-      is_collidable   = false;
-		life             = 40;
-		max_life         = 40;
-		mana             = 26;
-		max_mana         = 26;
-		[textures] { 0=b_c_eam_dgg; }
-        scale_base = 1.1; // edited
-	}
-	[common] { screen_name="Droog Villager"; }
-	[conversation] { } // edited
-	[defend] { defense=65; }
-	[mind]
-	{
-		jat_talk = world\ai\jobs\common\job_talk.skrit;
-		actor_may_attack = false;
-        actor_may_be_attacked = false;
-	}
-}
-
-[t:template,n:eos_rld_villager_b]
-{
-    category_name = "1W_good";
-	doc = "nonataya";
 	specializes = base_npc_dg;
-	[actor] { portrait_icon = b_gui_ig_i_ic_c_no; }
+
+	category_name = "1W_townsperson";
+	doc = "RLD droog villager";
 	[aspect]
 	{
-		use_range = 1.0;
-		is_ghost_usable = TRUE;
-		[textures] { 0 = b_c_eam_dg-04; }
         scale_base = 1.1;
 	}
-	[common] { screen_name="Droog Villager B"; }
+	[common] { screen_name="Droog Villager"; }
 	[conversation] {}
 	[mind]
 	{
 		jat_talk = world\ai\jobs\common\job_talk.skrit;
 	}
-	[respawn_shrine] {}
+}
+
+[t:template,n:eos_rld_villager] { specializes = eos_rld_villager_base; }
+[t:template,n:eos_rld_villager_base]
+{
+	specializes = eos_base_rld_villager;
+
+	[aspect]
+	{
+		[textures] { 0=b_c_eam_dgg; }
+	}
+}
+
+[t:template,n:eos_rld_villager_b] { specializes = eos_rld_villager_b_base; }
+[t:template,n:eos_rld_villager_b_base]
+{
+	specializes = eos_base_rld_villager;
+
+	[aspect]
+	{
+		[textures] { 0 = b_c_eam_dg-04; }
+	}
 }

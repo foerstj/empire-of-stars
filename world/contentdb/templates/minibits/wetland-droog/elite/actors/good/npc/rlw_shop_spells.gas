@@ -1,9 +1,9 @@
-[t:template,n:eos_rlw_shop_spells] { specializes = eos_rlw_shop_spells_base; }
-[t:template,n:eos_rlw_shop_spells_base]
+[t:template,n:3W_eos_rlw_shop_spells] { specializes = 3W_eos_rlw_shop_spells_base; }
+[t:template,n:3W_eos_rlw_shop_spells_base]
 {
-	specializes = base_npc_dg;
+	specializes = 3W_base_npc_dg;
 
-    category_name = "1W_shopkeep";
+    category_name = "3W_shopkeep";
 	doc = "RLW spells shop";
 	[actor] { portrait_icon = b_gui_ig_i_ic_c_orellean-eos; }
 	[aspect]
@@ -33,19 +33,19 @@
 			{
 				[all*]
 				{
-					il_main = #spell/0-14;
+					il_main = #spell/0-66;
 					max = 20;
 					min = 15;
 				}
 				[all*]
 				{
-					il_main = #spell/15-24;
+					il_main = #spell/67-80;
 					max = 20;
 					min = 15;
 				}
 				[all*]
 				{
-					il_main = #spell/25-34;
+					il_main = #spell/81-94;
 					max = 20;
 					min = 15;
 				}
@@ -54,24 +54,24 @@
             // spellbooks from Lhuk Torath (Demlock's Cut LoA)
 			[misc]
 			{
-                [all*]
-                {
-                    il_main = #spellbook/30-45;
-                    max = 6;
-                    min = 2;
-                }
-                [all*]
-                {
-                    il_main = #spellbook/36-49;
-                    max = 10;
-                    min = 6;
-                }
-                [all*]
-                {
-                    il_main = #spellbook/39-52;
-                    max = 5;
-                    min = 2;
-                }
+				[all*]
+				{
+					il_main = #spellbook/198-202;
+					max = 6;
+					min = 2;
+				}
+				[all*]
+				{
+					il_main = #spellbook/199-204;
+					max = 10;
+					min = 6;
+				}
+				[all*]
+				{
+					il_main = #spellbook/200-205;
+					max = 5;
+					min = 2;
+				}
 				[all*]
 				{
 					il_main = book_glb_magic_01;
