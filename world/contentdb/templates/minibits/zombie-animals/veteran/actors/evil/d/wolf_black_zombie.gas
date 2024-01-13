@@ -1,0 +1,16 @@
+// 2W_wolf_black but with zombie texture
+[t:template,n:2W_wolf_black_zombie] { specializes = 2W_wolf_black_zombie_base; }
+[t:template,n:2W_wolf_black_zombie_base]
+{
+	specializes = 2W_wolf_black_base;
+	doc = "2W_wolf_black_zombie";
+
+	[aspect]
+	{
+		textures:0 = b_c_edm_wf-05;
+	}
+	[common]
+	{
+		screen_name="Undead Black Wolf";
+	}
+}

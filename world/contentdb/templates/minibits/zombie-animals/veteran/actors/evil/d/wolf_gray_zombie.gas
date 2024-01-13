@@ -1,0 +1,70 @@
+[t:template,n:2W_wolf_gray_base]  // = 2W_wolf_gray
+{
+	category_name = "2W_evil_d";
+	doc = "2W_wolf_gray";
+	specializes = 2W_base_wolf;
+	[actor]
+	{
+		[skills]
+		{
+			strength =  15.8, 0;
+			intelligence =  1.5, 0;
+			dexterity =  11.7, 0;
+            melee =  55,  0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 13236;
+		life = 286;
+        max_life = 286;
+        mana = 54;
+        max_mana = 54;
+        textures:0 = b_c_edm_wf;
+        scale_base = 0.65;
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 172.7;
+		damage_min = 134.4;
+	}
+
+	[defend] { defense=508; }
+	[common]
+	{
+		screen_name="Gray Wolf";
+		membership = monster, party_wolf_gray_boss;
+	}
+	[mind]
+	{
+		jat_brain						= world\ai\jobs\common\brain_hero.skrit
+			?actor_joins_existing_party	= true
+			&actor_creates_own_party	= true
+			&party_template				= "party_wolf_gray_boss";
+
+		jat_attack_object_melee	= world\ai\jobs\common\job_attack_object_melee.skrit
+			?cautious_chance	= 0.9
+			&min_cautious_distance = 2.00
+			&cautious_approach_distance = 1.25;
+
+	}
+
+}
+
+// 2W_wolf_gray but with gray zombie texture
+[t:template,n:2W_wolf_gray_zombie] { specializes = 2W_wolf_gray_zombie_base; }
+[t:template,n:2W_wolf_gray_zombie_base]
+{
+	specializes = 2W_wolf_gray_base;
+	doc = "2W_wolf_gray_zombie";
+
+	[aspect]
+	{
+		textures:0 = b_c_edm_wf-05_gz;
+	}
+	[common]
+	{
+		screen_name="Undead Gray Wolf";
+	}
+}
