@@ -1,9 +1,9 @@
-[t:template,n:ice_beast] { specializes = ice_beast_base; }
-[t:template,n:ice_beast_base]
+[t:template,n:2W_ice_beast] { specializes = 2W_ice_beast_base; }
+[t:template,n:2W_ice_beast_base]
 {
-	specializes = rock_beast_base;
+	specializes = 2W_rock_beast_base;
 
-	category_name = "1W_evil_d";
+	category_name = "2W_evil_d";
 	doc = "ice beast";
     [aspect]
     {
@@ -86,29 +86,32 @@
 		}
 	}
 
-    // stats (but not loot) from rock_beast, EDITED
+    // stats (but not loot) from 2W_rock_beast, EDITED
 	[actor]
 	{
 		[skills]
 		{
-			strength =  22, 0;
-			intelligence =  3, 0;
-			dexterity =  9, 0;
-            melee =  	5,  0;
+			strength = 45, 0;
+			intelligence = 4, 0;
+			dexterity = 15, 0;
+			melee = 50,  0;
 		}
 	}
-    [aspect]
-    {
-		experience_value = 256; // rock beast: 113
-        life = 321; // rock beast: 132
-        max_life = 321;
-		mana = 10;
-		max_mana = 10;
-    }
+	[aspect]
+	{
+		experience_value = 43239;
+		life = 1164;
+		max_life = 1187;
+		mana = 137;
+		max_mana = 140;
+	}
 	[attack]
 	{
-		damage_max = 100; // rock beast: 69
-		damage_min = 90; // rock beast: 65
+		damage_max = 362;
+		damage_min = 257;
 	}
-	[defend] { defense=115; }
+	[defend]
+	{
+		defense = 641;
+	}
 }

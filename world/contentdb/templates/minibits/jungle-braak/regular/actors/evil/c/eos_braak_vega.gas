@@ -3,8 +3,6 @@
 {
 	specializes = base_braak;
 
-	category_name = "1W_evil_c";
-	doc = "braak, melee (desert)";
 	[common]
 	{
 		screen_name="Jungle Braak";
@@ -14,6 +12,11 @@
 	{
         scale_base = 0.8;  // smaller
 		[textures] { 0 = b_c_ecm_bk-04; }  // edited
+	}
+	[mind]
+	{
+		jat_brain							= world\ai\jobs\common\brain_hero.skrit
+			?actor_joins_existing_party			= true;
 	}
 
     // stats from dsx_kikclaw_2
@@ -43,7 +46,7 @@
 	}
 	[defend] { defense = 101; }
 
-    // loot from normal snow braak
+    // loot from braak_magic
 	[inventory]
 	{
 		[pcontent]
@@ -85,12 +88,6 @@
 			}
 		}
 	}
-
-	[mind]
-	{
-		jat_brain							= world\ai\jobs\common\brain_hero.skrit
-			?actor_joins_existing_party			= true;
-	}
 }
 
 [t:template,n:eos_braak_vega_boss_01] { specializes = eos_braak_vega_boss_01_base; }
@@ -98,8 +95,6 @@
 {
 	specializes = base_braak;
 
-	category_name = "1W_evil_c";
-	doc = "braak, melee (desert)boss 01";
 	[aspect]
 	{
         scale_base = 0.9;  // smaller
@@ -165,7 +160,7 @@
 	}
 	[defend] { defense=202; }
 
-    // loot of snow braak boss (pitiful braak)
+    // loot of braak_boss_01 (pitiful braak)
 	[inventory]
 	{
 		[pcontent]
@@ -212,8 +207,6 @@
 {
 	specializes = base_braak;
 
-	category_name = "1W_evil_c";
-	doc = "braak, melee (desert)";
 	[common]
 	{
 		screen_name="Jungle Braak";
@@ -270,7 +263,7 @@
 	}
 	[defend] { defense = 101; }
 
-    // loot from snow braak mage
+    // loot from braak_magic
 	[inventory]
 	{
 		[pcontent]

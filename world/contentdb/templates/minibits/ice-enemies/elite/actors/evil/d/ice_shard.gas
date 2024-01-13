@@ -1,0 +1,79 @@
+// teal shard adapted
+// can't name ice_shard cause such a template already exists (projectile or sth)
+[t:template,n:3W_ice_shard_enemy] { specializes = 3W_ice_shard_enemy_base; }
+[t:template,n:3W_ice_shard_enemy_base]
+{
+	specializes = 3W_base_shard;
+
+	category_name = "3W_evil_d";
+	doc = "shard_ice";
+  	[common]
+    {
+        screen_name = "Ice Shard";
+		membership = monster,immune_freeze;
+		[template_triggers]
+		{
+            // from ice fly - shiny sparkles
+			[*]
+			{
+				action* = call_sfx_script("ice_fly");
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				single_shot = true;
+			}
+        }
+    }
+	[aspect]
+	{
+		scale_base = 0.15;
+		textures:0 = b_c_edm_iw;  // from ice warrior
+	}
+	[inventory]
+	{
+		selected_active_location = il_active_primary_spell;
+		[other] { il_active_primary_spell=spell_shard_zap_ice; }
+	}
+    [physics]
+    {
+		[break_particulate]
+		{
+            // from ice fly
+			frag_glb_ice_01 = 1;
+			frag_glb_ice_02 = 2;
+			frag_glb_ice_03 = 1;
+			frag_glb_ice_04 = 2;
+			frag_glb_ice_05 = 1;
+			frag_glb_ice_06 = 2;
+			frag_glb_ice_07 = 1;
+			frag_glb_ice_08 = 2;
+		}
+    }
+
+    // stats from 3W_shard_teal
+	[actor]
+	{
+		[skills]
+		{
+			strength =  43.6, 0;
+			intelligence =  6.7, 0;
+			dexterity =  13, 0;
+            nature_magic =  94,  0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 1109106;
+		life = 690.7;
+        max_life = 690.7;
+        mana = 181.8;
+        max_mana = 181.8;
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 299.9;
+		damage_min = 207.2;
+		damage_bonus_min_cmagic = 187;
+		damage_bonus_max_cmagic = 250;
+	}
+	[defend] { defense=1070.4; }
+}

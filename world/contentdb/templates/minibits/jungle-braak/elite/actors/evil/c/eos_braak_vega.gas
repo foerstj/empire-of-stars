@@ -1,0 +1,324 @@
+[t:template,n:3W_eos_braak_vega] { specializes = 3W_eos_braak_vega_base; }
+[t:template,n:3W_eos_braak_vega_base]
+{
+	specializes = 3W_base_braak;
+
+	[common]
+	{
+		screen_name="Jungle Braak";
+		membership = party_braak_boss, monster;
+	}
+	[aspect]
+	{
+        scale_base = 0.8;  // smaller
+		[textures] { 0 = b_c_ecm_bk-04; }  // edited
+	}
+	[mind]
+	{
+		jat_brain							= world\ai\jobs\common\brain_hero.skrit
+			?actor_joins_existing_party			= true;
+	}
+
+    // stats from 3W_dsx_kikclaw_2
+	[actor]
+	{
+		[skills]
+		{
+			strength 	 	=  46.2, 0;
+			intelligence   	=  12.3, 0;
+			dexterity 	 	=  22.7, 0;
+			melee 	 		=  83, 0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 1128564;
+		life 			= 845.8;
+		max_life 		= 845.8;
+		mana 			= 48.9;
+		max_mana 		= 48.9;
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 392.6;
+		damage_min = 294.8;
+	}
+	[defend] { defense = 537.8; }
+
+    // loot from 3W_braak_magic
+	[inventory]
+	{
+		[pcontent]
+		{
+			[oneof*]
+			{
+				[oneof*]
+				{
+				   chance = 0.05;
+				   il_main = potion_health_super;
+				   il_main = potion_mana_super;
+				}
+				[all*]
+				{
+       				chance = 0.02;
+	                il_main = #spell/72-126;
+				}
+				[oneof*]
+				{
+					chance = 0.25;
+					il_main = #*/213-272;
+					il_main = #armor/117-594;
+                    il_main = #body,ro/317-594;
+	                il_main = #weapon/213-272;
+                }
+                [oneof*]
+				{
+	                   chance = 0.004;
+	                   il_main = #weapon/-rare(1)/247-323;
+	                   il_main = #armor/-rare(1)/468-819;
+                       il_main = #*/-rare(1)/247-323;
+                }
+				[oneof*]
+				{
+                       chance = 0.002;
+	                   il_main = #weapon/-unique(2)/247-323;
+	                   il_main = #armor/-unique(2)/468-819;
+                       il_main = #*/-unique(2)/247-323;
+				}
+				[gold*]
+				{
+					chance = 0.125;
+					max = 316782;
+					min = 189638;
+				}
+			}
+		}
+	}
+}
+
+[t:template,n:3W_eos_braak_vega_boss_01] { specializes = 3W_eos_braak_vega_boss_01_base; }
+[t:template,n:3W_eos_braak_vega_boss_01_base]
+{
+	specializes = 3W_base_braak;
+
+	[aspect]
+	{
+        scale_base = 0.9;  // smaller
+		[textures] { 0 = b_c_ecm_bk-04; }
+	}
+	[body]
+	{
+		max_move_velocity = 7.0;
+	}
+	[common]
+	{
+		screen_name="Jungle Braak Chieftain";
+		membership=monster,immune_charm,immune_control,immune_freeze,immune_polymorph,immune_align_change,immune_explode;
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				single_shot = true;
+				no_trig_bits = true;
+				action* = call_sfx_script("unique_ray_yellow(sgx)");
+			}
+		}
+	}
+	[mind]
+	{
+		jat_fidget			= world\ai\jobs\common\job_fidget.skrit
+			?social				= 0.75
+			&friend_template 	= false
+			&friends			= party_braak_boss
+			&still				= false;
+
+		jat_brain							= world\ai\jobs\common\brain_hero.skrit
+			?actor_creates_own_party			= true
+			&party_template						= "party_braak_boss";
+	}
+
+    // stats from 3W_ice_warrior_boss_01
+	[actor]
+	{
+		[skills]
+		{
+			strength 	=  68.5, 0;
+			intelligence =  8.4, 0;
+			dexterity 	=  29.2, 0;
+            melee 		=  99,  0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 1339250;
+		life = 2201.8;
+        max_life = 2201.8;
+        mana = 53.9;
+		max_mana = 53.9;
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 551.9;
+		damage_min = 378.1;
+	}
+    [defend] { defense=1444.3; }
+
+    // loot of 3W_braak_boss_01 (pitiful braak)
+	[inventory]
+	{
+		[pcontent]
+		{
+			[oneof*]
+			{
+				[all*]
+				{
+       				chance = 0.1;
+	                il_main = #spell/100-117;
+				}
+				[oneof*]
+				{
+					chance = 0.6;
+					il_main = #body,f/790-859;
+	                il_main = #weapon/277-301;
+				}
+				[oneof*]
+				{
+	            	chance = 0.004;
+	                il_main = #weapon/-rare(1)/325-412;
+	                il_main = #armor/-rare(1)/908-1058;
+                    il_main = #*/-rare(1)/325-412;
+                }
+				[oneof*]
+				{
+                	chance = 0.002;
+	                il_main = #weapon/-unique(2)/325-412;
+	                il_main = #armor/-unique(2)/908-1058;
+                    il_main = #*/-unique(2)/325-412;
+	            }
+				[gold*]
+				{
+					chance = 0.294;
+					max = 610636;
+					min = 370743;
+					min_pile = 57;
+					piles = 2 - 3;
+				}
+			}
+		}
+	}
+}
+
+[t:template,n:3W_eos_braak_vega_mage] { specializes = 3W_eos_braak_vega_mage_base; }
+[t:template,n:3W_eos_braak_vega_mage_base]
+{
+	specializes = 3W_base_braak;
+
+	[common]
+	{
+		screen_name="Jungle Braak";
+		membership = party_braak_desert_boss, monster;
+	}
+	[aspect]
+	{
+        scale_base = 0.7;  // smaller
+		[textures] { 0 = b_c_ecm_bk-04; }  // edited
+	}
+	[inventory]
+	{
+    	selected_active_location = il_active_primary_spell;
+		[other] { il_active_primary_spell=spell_braak_vega_boulder; }
+    }
+	[mind]
+	{
+		jat_brain							= world\ai\jobs\common\brain_hero.skrit
+			?actor_joins_existing_party			= true;
+
+		jat_attack_object_melee 			= world\ai\jobs\common\job_attack_object_melee.skrit
+			?run_chance 					= 1.0;
+
+		actor_weapon_preference			= WP_MAGIC;
+		actor_auto_switches_to_magic	= true;
+		actor_auto_switches_to_karate	= false;
+		actor_auto_switches_to_melee	= false;
+	}
+
+    // stats from 3W_dsx_kikclaw_2
+	[actor]
+	{
+		[skills]
+		{
+			strength 	 	=  46.2, 0;
+			intelligence   	=  12.3, 0;
+			dexterity 	 	=  22.7, 0;
+			melee 	 		=  83, 0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 1128564;
+		life 			= 845.8;
+		max_life 		= 845.8;
+		mana 			= 48.9;
+		max_mana 		= 48.9;
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 392.6;
+		damage_min = 294.8;
+	}
+	[defend] { defense = 537.8; }
+
+    // loot from 3W_braak_magic
+	[inventory]
+	{
+		[pcontent]
+		{
+			[oneof*]
+			{
+				[oneof*]
+				{
+				   chance = 0.05;
+				   il_main = potion_health_super;
+				   il_main = potion_mana_super;
+				}
+				[all*]
+				{
+       				chance = 0.02;
+	                il_main = #spell/72-126;
+				}
+				[oneof*]
+				{
+					chance = 0.25;
+					il_main = #*/213-272;
+					il_main = #armor/117-594;
+                    il_main = #body,ro/317-594;
+	                il_main = #weapon/213-272;
+                }
+                [oneof*]
+				{
+	                   chance = 0.004;
+	                   il_main = #weapon/-rare(1)/247-323;
+	                   il_main = #armor/-rare(1)/468-819;
+                       il_main = #*/-rare(1)/247-323;
+                }
+				[oneof*]
+				{
+                       chance = 0.002;
+	                   il_main = #weapon/-unique(2)/247-323;
+	                   il_main = #armor/-unique(2)/468-819;
+                       il_main = #*/-unique(2)/247-323;
+				}
+				[gold*]
+				{
+					chance = 0.125;
+					max = 316782;
+					min = 189638;
+				}
+			}
+		}
+	}
+}

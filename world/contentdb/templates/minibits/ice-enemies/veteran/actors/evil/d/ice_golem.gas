@@ -1,0 +1,70 @@
+[t:template,n:2W_ice_golem] { specializes = 2W_ice_golem_base; }
+[t:template,n:2W_ice_golem_base]
+{
+	specializes = 2W_golem_frost_base;
+
+	category_name = "2W_evil_d";
+	doc = "ice golem";
+	[aspect]
+	{
+		textures:0 = b_c_edm_iw;
+		material = ice;
+		[voice]
+		{
+			[die]			{ priority = high; * = s_e_die_ice_warrior; }
+		}
+	}
+    [common]
+    {
+        screen_name = "Ice Golem";
+		membership = monster,immune_freeze;
+		[template_triggers]
+		{
+            // from ice warrior - shiny sparkles
+			[*]
+			{
+				action* = call_sfx_script("ice_warrior");
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				single_shot = true;
+			}
+        }
+    }
+	[physics]
+	{
+		[break_particulate]
+		{
+            // from ice warrior
+			frag_glb_ice_01 = 2;
+			frag_glb_ice_02 = 1;
+			frag_glb_ice_03 = 3;
+			frag_glb_ice_04 = 1;
+			frag_glb_ice_05 = 2;
+			frag_glb_ice_06 = 1;
+			frag_glb_ice_07 = 1;
+			frag_glb_ice_08 = 3;
+		}
+	}
+
+	[inventory] 
+	{	
+		selected_active_location = il_active_primary_spell;
+		[other] 
+		{ 
+			il_active_primary_spell=spell_ice_golem_blast; 
+		}
+	}
+	[mind]
+	{
+        // switching ad lib between melee & ranged attacks
+		actor_weapon_preference			= WP_MAGIC;
+		actor_auto_switches_to_magic	= true;
+		actor_auto_switches_to_karate	= true;
+		actor_auto_switches_to_melee	= true;
+		on_enemy_entered_icz_switch_to_melee = true;
+		inner_comfort_zone_range 		= 4.0;
+		outer_comfort_zone_range  		= 9.0;
+		jat_attack_object_melee	 		= world\ai\jobs\common\job_attack_object_melee.skrit
+			?persistence				= 0.0
+			&hit_multiple				= true;
+	}
+}
