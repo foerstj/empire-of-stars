@@ -1,0 +1,75 @@
+[t:template,n:2W_eos_phrak_betelgeuse] { specializes = 2W_eos_phrak_betelgeuse_base; }
+[t:template,n:2W_eos_phrak_betelgeuse_base]
+{
+	specializes = base_phrak;
+
+	category_name = "2W_evil_d";
+	doc = "eos phrak betelgeuse";
+	[aspect]
+	{
+		scale_base = 0.55;
+		textures:0 = b_c_edm_ph-03;
+	}
+	[common]
+	{
+		membership = phrak,monster;
+		screen_name="Pink Phrak";
+	}
+	[inventory]
+	{
+		selected_active_location = il_active_primary_spell;
+		[other] { il_active_primary_spell=spell_phrak_dart; }
+	}
+	[mind]
+	{
+		actor_weapon_preference			= WP_MAGIC;
+		actor_auto_switches_to_magic	= true;
+		actor_auto_switches_to_karate	= false;
+		actor_auto_switches_to_melee	= false;
+
+		jat_brain							= world\ai\jobs\common\brain_hero.skrit
+			?actor_joins_existing_party		= true
+			&guard							= true
+			&friends						= phrak;
+	}
+	[physics]
+	{
+		[break_particulate]
+		{
+			frag_glb_pink_phrak_01 = 1;
+			frag_glb_pink_phrak_02 = 2;
+			frag_glb_pink_phrak_03 = 2;
+			frag_glb_pink_phrak_04 = 1;
+			frag_glb_pink_phrak_05 = 2;
+		}
+	}
+
+    // stats (but not loot) from 2W_phrak_piercer_boss_01
+	[actor]
+	{
+		[skills]
+		{
+			strength =  16.8, 0;
+			intelligence =  1.5, 0;
+			dexterity =  45.5, 0;
+			ranged =  55, 0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 11030;
+		life = 310;
+        max_life = 310;
+        mana = 108;
+		max_mana = 108;
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 256.4;
+		damage_min = 194.4;
+		damage_bonus_min_cmagic = 143;
+		damage_bonus_max_cmagic = 202;
+	}
+	[defend] { defense=1297; }
+}

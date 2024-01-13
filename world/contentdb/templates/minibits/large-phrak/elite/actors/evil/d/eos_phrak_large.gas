@@ -1,0 +1,67 @@
+[t:template,n:3W_phrak_large_base]  // = 3W_phrak_large
+{
+	category_name = "3W_evil_d";
+	doc = "3W_phrak_large";
+	specializes = 3W_base_phrak;
+	[actor]
+	{
+		[skills]
+		{
+			strength =  2.7, 0;
+			intelligence =  1.6, 0;
+			dexterity =  6.5, 0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 322840;
+		life = 7.3;
+        max_life = 7.3;
+        mana = 7.3;
+		max_mana = 7.3;
+		scale_base = 1.05;
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 4;
+		damage_min = 3.3;
+	}
+	[common] { screen_name="Large Phrak"; }
+}
+
+[t:template,n:3W_eos_phrak_large] { specializes = 3W_eos_phrak_large_base; }
+[t:template,n:3W_eos_phrak_large_base]
+{
+	specializes = 3W_phrak_large_base;
+
+	doc = "eos phrak_large";
+
+    // stats self-written
+	[actor]
+	{
+		[skills]
+		{
+			strength = 13, 0;
+			intelligence = 2, 0;
+			dexterity = 22, 0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 1122516;
+		life = 1351;
+		max_life = 1390;
+		mana = 196;
+		max_mana = 200;
+	}
+	[attack]
+	{
+		damage_max = 386;
+		damage_min = 248;
+	}
+	[defend]
+	{
+		defense = 816;
+	}
+}

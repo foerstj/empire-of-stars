@@ -1,0 +1,146 @@
+[t:template,n:3W_pb_base_sheep]
+{
+	specializes = 3W_actor_ambient;
+
+	doc = "Sheep";
+	category_name = "3W_ambients";
+
+	[actor] { race=other; }
+	[aspect]
+	{
+		model = m_c_na_sheep_pos_1;
+		is_selectable = true;
+		is_usable = true;
+		life=25;
+		max_life=25;
+		[voice]
+		{
+			[die]			{ * = s_e_env_sheep_die; }
+			[hit_critical]	{ * = s_e_env_sheep; }
+			[hit_glance]	{ * = s_e_env_sheep; }
+			[hit_solid]		{ * = s_e_env_sheep; }
+ 		}
+		[textures]
+		{
+			0=b_c_na_sheep;
+		}
+	}
+	[body]
+	{
+		avg_move_velocity = 0.2500000;
+		[bone_translator]
+		{
+			body_anterior = Bip01_Head;
+			body_mid = Bip01_Spine02;
+			body_posterior = Bip01_Tail;
+			kill_bone = Bip01_Spine03;
+			shield_bone = Bip01_Spine03;
+			weapon_bone = Bip01_Spine03;
+		}
+		[chore_dictionary]
+		{
+			chore_prefix = a_c_na_sheep_fs;
+			[chore_attack]
+			{
+				chore_stances = 0;
+				skrit = select_attack;
+				[anim_files] { 00=dsf; }
+			}
+			[chore_default]
+			{
+				chore_stances = 0;
+				skrit = infinite_loop;
+				[anim_files] { 00=ds; }
+			}
+			[chore_die]
+			{
+				chore_stances = 0;
+				skrit = select_transition;
+				[anim_files] { 00=di; }
+			}
+			[chore_fidget]
+			{
+				chore_stances = 0;
+				skrit = select_fidget;
+				[anim_files] { 00 = dsf; }
+			}
+			[chore_walk]
+			{
+				chore_stances = 0;
+				skrit = select_walk;
+				[anim_files] { 00=wl; }
+			}
+		}
+	}
+	[common]
+	{
+		screen_name="Sheep";
+		rollover_help_key = left_blank;
+		membership = sheep,ambient;
+        [template_triggers]
+        {
+            [*]
+            {
+                condition* = receive_world_message("WE_FRIEND_ENTERED_INNER_COMFORT_ZONE");
+                action* = call_sfx_script("pb_sheep_baa_maybe");
+            }
+            [*]
+            {
+                condition* = receive_world_message("WE_REQ_USE");
+                action* = call_sfx_script("pb_sheep_baa");
+            }
+        }
+	}
+	[mind]
+	{
+		flee_count = 100;
+
+		on_enemy_spotted_alert_friends = false;
+		on_enemy_spotted_attack = false;
+		on_enemy_entered_ocz_flee = true;
+		on_friend_entered_ocz_flee = false;
+
+		inner_comfort_zone_range = 0.1;
+		melee_engage_range = 0.1;
+		ranged_engage_range = 6;
+		outer_comfort_zone_range = 3;
+		personal_space_range = 0.4;
+		sight_range = 6;
+		jat_fidget = world\ai\jobs\common\job_fidget.skrit
+			?social			= 0.8
+			&social_limit		= 2
+			&move_distance		= 3.00
+			&delay_min			= 7.0
+			&delay_max			= 17.0
+			&approach_dist		= 1.75
+			&friends			= "sheep"
+			&still			= false;
+	}
+	[inventory]
+	{
+	}
+}
+
+[t:template,n:3W_pb_sheep] { specializes = 3W_pb_sheep_base; }
+[t:template,n:3W_pb_sheep_base]
+{
+	specializes = 3W_pb_base_sheep;
+
+	doc = "Sheep";
+	[common] { screen_name="Sheep";}
+}
+
+[t:template,n:3W_pb_lamb] { specializes = 3W_pb_lamb_base; }
+[t:template,n:3W_pb_lamb_base]
+{
+	specializes = 3W_pb_base_sheep;
+
+	doc = "Lamb";
+	[aspect]
+	{
+		scale_base = .6;
+		life=10;
+		max_life=10;
+	}
+	[common] { screen_name="Lamb";}
+}

@@ -1,24 +1,24 @@
-[t:template,n:spider_base]  // = spider
+[t:template,n:3W_spider_base]  // = 3W_spider
 {
-	category_name = "1W_evil_d";
-	doc = "spider_red_blck";
+	category_name = "3W_evil_d";
+	doc = "3W_spider_red_blck";
 	specializes = actor_evil;
 	[actor]
 	{
 		[skills]
 		{
-			strength =  5, 0;
-			intelligence =  5, 0;
-			dexterity =  5, 0;
+			strength =  25.1, 0;
+			intelligence =  8.7, 0;
+			dexterity =  15.1, 0;
 		}
 	}
 	[aspect]
 	{
-		experience_value = 1;
-		life = 1;
-		max_life = 1;
-		mana = 10;
-		max_mana = 10;
+		experience_value = 159258;
+		life = 15.5;
+		max_life = 15.5;
+		mana = 155;
+		max_mana = 155;
 		model = m_c_edm_sp_pos_1;
 		[voice]
 		{
@@ -29,8 +29,8 @@
 	[attack]
 	{
 		attack_range = 1;
-		damage_max = 1;
-		damage_min = 1;
+		damage_max = 17.1;
+		damage_min = 14;
 		reload_delay = 1;
 	}
 	[body]
@@ -106,9 +106,9 @@
 }
 
 // widow spider (spider_red_blck) with white texture
-[t:template,n:base_spider_white]
+[t:template,n:3W_base_spider_white]
 {
-    specializes = spider_base;
+    specializes = 3W_spider_base;
 
 	doc = "spider_white";
 	[common] { screen_name="White Spider"; }
@@ -130,34 +130,34 @@
 }
 
 // widow spider (spider_red_blck) with white texture and stats of stalagnid
-[t:template,n:spider_white] { specializes = spider_white_base; }
-[t:template,n:spider_white_base]
+[t:template,n:3W_spider_white] { specializes = 3W_spider_white_base; }
+[t:template,n:3W_spider_white_base]
 {
-    specializes = base_spider_white;
+    specializes = 3W_base_spider_white;
 
-    // stats of spider_stalagnid
+    // stats of 3W_spider_stalagnid
 	[actor]
 	{
 		[skills]
 		{
-			strength =  10, 0;
-			intelligence =  6, 0;
-			dexterity =  18, 0;
-			melee =  3,  0;
+			strength =  34.5, 0;
+			intelligence =  9.9, 0;
+			dexterity =  45.3, 0;
+			melee =  88,  0;
 		}
 	}
 	[aspect]
 	{
-		experience_value = 391;
-		life = 294;
-		max_life = 294;
-		mana = 12;
-		max_mana = 12;
+		experience_value = 1268013;
+		life = 1609.3;
+		max_life = 1609.3;
+		mana = 65.7;
+		max_mana = 65.7;
 	}
 	[attack]
 	{
-		damage_max = 62;
-		damage_min = 54;
+		damage_max = 373.3;
+		damage_min = 266;
 	}
-	[defend] { defense=85; }
+	[defend] { defense=667.8; }
 }
