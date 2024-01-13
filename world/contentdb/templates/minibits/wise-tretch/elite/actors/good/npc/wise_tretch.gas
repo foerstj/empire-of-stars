@@ -1,27 +1,27 @@
-[t:template,n:tretch_base]  // = tretch
+[t:template,n:3W_tretch_base]  // = 3W_tretch
 {
-	category_name = "1W_evil_d";
-	doc = "tretch";
+	category_name = "3W_evil_d";
+	doc = "3W_tretch";
 	specializes = actor_evil;
 	[actor]
 	{
 		[skills]
 		{
-			strength = 		16, 0;
-			intelligence = 	6, 0;
-			dexterity = 	5, 0;
-			melee =  		18,  0;
+			strength = 		46.4, 0;
+			intelligence = 	9.5, 0;
+			dexterity = 	11.3, 0;
+			melee =  		99,  0;
 		}
 	}
 	[aspect]
 	{
 		draw_shadow = false;
-		experience_value = 1450;
-		life = 480;
+		experience_value = 2002450;
+		life = 1920;
         material = wood;
-		max_life = 480;
-		mana = 12;
-		max_mana = 12;
+		max_life = 1920;
+		mana = 48;
+		max_mana = 48;
 		model = m_c_edm_tr_pos_1;
 		[voice]
 		{
@@ -31,8 +31,8 @@
 	[attack]
 	{
 		attack_range = 3;
-		damage_max = 144;
-		damage_min = 140;
+		damage_max = 633.6;
+		damage_min = 504;
 	}
 	[body]
 	{
@@ -86,7 +86,7 @@
 		screen_name="Tretch"; 
 		membership=monster,immune_freeze;
 	}
-	[defend] { defense=260; }
+	[defend] { defense=1046.7; }
 	[inventory]
 	{
     	[pcontent]
@@ -94,7 +94,7 @@
 			[oneof*]
 			{
 				chance = 0.2;
-				il_main = #*/50-75;
+				il_main = #*/196-294;
 			}
 		}
 	}
@@ -124,12 +124,12 @@
 }
 
 // A good-aligned npc that can talk
-[t:template,n:wise_tretch] { specializes = wise_tretch_base; }
-[t:template,n:wise_tretch_base]
+[t:template,n:3W_wise_tretch] { specializes = 3W_wise_tretch_base; }
+[t:template,n:3W_wise_tretch_base]
 {
-	specializes = tretch_base;
+	specializes = 3W_tretch_base;
 
-	category_name = "1W_character";
+	category_name = "3W_character";
 	doc = "wise tretch";
 
 	[actor]

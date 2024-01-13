@@ -1,0 +1,38 @@
+[t:template,n:2W_eos_utraean_female_b1_base]
+{
+	specializes = 2W_dsx_base_npc_fg_multiplayer;
+
+	category_name = "2W_townsperson";
+	[aspect]
+	{
+		model = m_c_gah_fg_pos_b1;
+	}
+	[inventory]
+	{
+		[equipment]
+		{
+			// remove boots
+		}
+	}
+	[mind]
+	{
+        jat_talk = world\ai\jobs\common\job_talk.skrit;
+	}	
+}
+
+[t:template,n:2W_eos_utraean_female_b1_dress] { specializes = 2W_eos_utraean_female_b1_dress_base; }
+[t:template,n:2W_eos_utraean_female_b1_dress_base]
+{
+    // Utraean woman wearing dress by kathycf
+	specializes = 2W_eos_utraean_female_b1_base;
+
+	doc = "eos utraean female kathycf dress";
+	[aspect]
+	{
+		[textures]
+		{
+			0 = b_c_gan_utraean_skin_04;
+			1 = b_c_pos_b1_utdress;
+		}
+	}
+}

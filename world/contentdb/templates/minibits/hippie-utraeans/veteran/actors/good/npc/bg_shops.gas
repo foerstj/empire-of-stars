@@ -1,10 +1,10 @@
 // Mix from Laeta and Bodrus
-[t:template,n:eos_bg_shop_f] { specializes = eos_bg_shop_f_base; }
-[t:template,n:eos_bg_shop_f_base]
+[t:template,n:2W_eos_bg_shop_f] { specializes = 2W_eos_bg_shop_f_base; }
+[t:template,n:2W_eos_bg_shop_f_base]
 {
-	specializes = base_npc_fg;
+	specializes = 2W_base_npc_fg;
 
-	category_name = "1W_shopkeep";
+	category_name = "2W_shopkeep";
 	doc = "eos bg shop";
 
 	[actor]
@@ -52,88 +52,90 @@
 		{
 			full_ratio = 0;
 
-            // armor, shields, weapons & magic from bodrus
+            // armor, shields, weapons & magic from 2W_bodrus
 			[armor]
 			{
 				[all*]
 				{
-					il_main = #body,ro/16-73;
+					il_main = #body,ro/124-566;
 					max = 4;
 					min = 4;
 				}
 
 				[all*]
 				{
-					il_main = #body/16-22;
+					il_main = #body/124-171;
 					max = 7;
 					min = 7;
 				}
 				[all*]
 				{
-					il_main = #body/23-54;
+					il_main = #body/178-419;
 					max = 16;
 					min = 16;
 				}
 				[all*]
 				{
-					il_main = #body/55-73;
+					il_main = #body/426-566;
 					max = 3;
 					min = 3;
 				}
 
+
 				[all*]
 				{
-					il_main = #gloves/2-22;
+					il_main = #gloves/16-171;
 					max = 8;
 					min = 8;
 				}
 				[all*]
 				{
-					il_main = #gloves/23-54;
+					il_main = #gloves/178-419;
 					max = 8;
 					min = 8;
 				}
 				[all*]
 				{
-					il_main = #gloves/55-73;
+					il_main = #gloves/426-566;
+					max = 4;
+					min = 4;
+				}
+
+
+				[all*]
+				{
+					il_main = #helm/16-171;
+					max = 8;
+					min = 8;
+				}
+				[all*]
+				{
+					il_main = #helm/178-419;
+					max = 8;
+					min = 8;
+				}
+				[all*]
+				{
+					il_main = #helm/426-566;
 					max = 4;
 					min = 4;
 				}
 
 				[all*]
 				{
-					il_main = #helm/2-22;
+					il_main = #boots/16-171;
 					max = 8;
 					min = 8;
 				}
 				[all*]
 				{
-					il_main = #helm/23-54;
+					il_main = #boots/178-419;
 					max = 8;
 					min = 8;
 				}
 				[all*]
 				{
-					il_main = #helm/55-73;
-					max = 4;
-					min = 4;
-				}
-
-				[all*]
-				{
-					il_main = #boots/2-22;
-					max = 8;
-					min = 8;
-				}
-				[all*]
-				{
-					il_main = #boots/23-54;
-					max = 8;
-					min = 8;
-				}
-				[all*]
-				{
-					il_main = #boots/55-73;
+					il_main = #boots/426-566;
 					max = 4;
 					min = 4;
 				}
@@ -142,19 +144,19 @@
 			{
 				[all*]
 				{
-					il_main = #shield/2-22;
+					il_main = #shield/16-171;
 					max = 5;
 					min = 5;
 				}
 				[all*]
 				{
-					il_main = #shield/23-54;
+					il_main = #shield/178-419;
 					max = 6;
 					min = 6;
 				}
 				[all*]
 				{
-					il_main = #shield/55-73;
+					il_main = #shield/426-566;
 					max = 4;
 					min = 4;
 				}
@@ -163,37 +165,37 @@
 			{
 				[all*]
 				{
-					il_main = #melee/10-11;
+					il_main = #melee/72-79;
 					max = 8;
 					min = 8;
 				}
 				[all*]
 				{
-					il_main = #melee/12-27;
+					il_main = #melee/86-194;
 					max = 18;
 					min = 18;
 				}
 				[all*]
 				{
-					il_main = #melee/28-35;
+					il_main = #melee/202-252;
 					max = 6;
 					min = 6;
 				}
 				[all*]
 				{
-					il_main = #ranged/10-11;
+					il_main = #ranged/72-79;
 					max = 8;
 					min = 8;
 				}
 				[all*]
 				{
-					il_main = #ranged/12-27;
+					il_main = #ranged/86-194;
 					max = 18;
 					min = 18;
 				}
 				[all*]
 				{
-					il_main = #ranged/28-35;
+					il_main = #ranged/202-252;
 					max = 6;
 					min = 6;
 				}
@@ -202,19 +204,19 @@
 			{
 				[all*]
 				{
-					il_main = #spell/3-12;
+					il_main = #spell/23-93;
 					max = 25;
 					min = 25;
 				}
 				[all*]
 				{
-					il_main = #spell/0-2;
+					il_main = #spell/0-16;
 					max = 5;
 					min = 5;
 				}
 			}
 
-            // misc from dsx_laeta but only the lowest selection of spellbooks
+            // misc from 2W_dsx_laeta but only the lowest selection of spellbooks
 			[misc]
 			{
 				[all*]
@@ -225,25 +227,25 @@
 				}
 				[all*]
 				{
-					il_main = #spellbook/16-21;
+					il_main = #spellbook/120-127;
 					max = 4;
 					min = 4;
 				}
 				[all*]
 				{
 					il_main = book_glb_magic_01;
-					max = 3;
-					min = 3;
+					max = 2;
+					min = 1;
 				}
 				[all*]
 				{
-					il_main = #ring/-mod(1)/22-25;
+					il_main = #ring/-mod(1)/128-153;
 					max = 3;
 					min = 1;
 				}
 				[all*]
 				{
-					il_main = #amulet/-mod(1)/22-25;
+					il_main = #amulet/-mod(1)/128-153;
 					max = 3;
 					min = 1;
 				}
@@ -254,12 +256,12 @@
 	{
 		item_markup = 2;
 
-        // from bodrus
+        // from 2W_bodrus
 		[item_restock]
 		{
-			potion_health_small = 18;
-			potion_mana_small = 18;
-			potion_rejuvenation_small = 4;
+			potion_health_small = 19;
+			potion_mana_small = 19;
+			potion_rejuvenation_small = 2;
 
 			scroll_resurrect = 2;
             spell_resurrect = 2;
@@ -273,12 +275,12 @@
 }
 
 // Same as above, just with male base model
-[t:template,n:eos_bg_shop_m] { specializes = eos_bg_shop_m_base; }
-[t:template,n:eos_bg_shop_m_base]
+[t:template,n:2W_eos_bg_shop_m] { specializes = 2W_eos_bg_shop_m_base; }
+[t:template,n:2W_eos_bg_shop_m_base]
 {
-	specializes = base_npc_fb;
+	specializes = 2W_base_npc_fb;
 
-	category_name = "1W_shopkeep";
+	category_name = "2W_shopkeep";
 	doc = "eos bg shop";
 
 	[actor]
@@ -326,88 +328,90 @@
 		{
 			full_ratio = 0;
 
-            // armor, shields, weapons & magic from bodrus
+            // armor, shields, weapons & magic from 2W_bodrus
 			[armor]
 			{
 				[all*]
 				{
-					il_main = #body,ro/16-73;
+					il_main = #body,ro/124-566;
 					max = 4;
 					min = 4;
 				}
 
 				[all*]
 				{
-					il_main = #body/16-22;
+					il_main = #body/124-171;
 					max = 7;
 					min = 7;
 				}
 				[all*]
 				{
-					il_main = #body/23-54;
+					il_main = #body/178-419;
 					max = 16;
 					min = 16;
 				}
 				[all*]
 				{
-					il_main = #body/55-73;
+					il_main = #body/426-566;
 					max = 3;
 					min = 3;
 				}
 
+
 				[all*]
 				{
-					il_main = #gloves/2-22;
+					il_main = #gloves/16-171;
 					max = 8;
 					min = 8;
 				}
 				[all*]
 				{
-					il_main = #gloves/23-54;
+					il_main = #gloves/178-419;
 					max = 8;
 					min = 8;
 				}
 				[all*]
 				{
-					il_main = #gloves/55-73;
+					il_main = #gloves/426-566;
+					max = 4;
+					min = 4;
+				}
+
+
+				[all*]
+				{
+					il_main = #helm/16-171;
+					max = 8;
+					min = 8;
+				}
+				[all*]
+				{
+					il_main = #helm/178-419;
+					max = 8;
+					min = 8;
+				}
+				[all*]
+				{
+					il_main = #helm/426-566;
 					max = 4;
 					min = 4;
 				}
 
 				[all*]
 				{
-					il_main = #helm/2-22;
+					il_main = #boots/16-171;
 					max = 8;
 					min = 8;
 				}
 				[all*]
 				{
-					il_main = #helm/23-54;
+					il_main = #boots/178-419;
 					max = 8;
 					min = 8;
 				}
 				[all*]
 				{
-					il_main = #helm/55-73;
-					max = 4;
-					min = 4;
-				}
-
-				[all*]
-				{
-					il_main = #boots/2-22;
-					max = 8;
-					min = 8;
-				}
-				[all*]
-				{
-					il_main = #boots/23-54;
-					max = 8;
-					min = 8;
-				}
-				[all*]
-				{
-					il_main = #boots/55-73;
+					il_main = #boots/426-566;
 					max = 4;
 					min = 4;
 				}
@@ -416,19 +420,19 @@
 			{
 				[all*]
 				{
-					il_main = #shield/2-22;
+					il_main = #shield/16-171;
 					max = 5;
 					min = 5;
 				}
 				[all*]
 				{
-					il_main = #shield/23-54;
+					il_main = #shield/178-419;
 					max = 6;
 					min = 6;
 				}
 				[all*]
 				{
-					il_main = #shield/55-73;
+					il_main = #shield/426-566;
 					max = 4;
 					min = 4;
 				}
@@ -437,37 +441,37 @@
 			{
 				[all*]
 				{
-					il_main = #melee/10-11;
+					il_main = #melee/72-79;
 					max = 8;
 					min = 8;
 				}
 				[all*]
 				{
-					il_main = #melee/12-27;
+					il_main = #melee/86-194;
 					max = 18;
 					min = 18;
 				}
 				[all*]
 				{
-					il_main = #melee/28-35;
+					il_main = #melee/202-252;
 					max = 6;
 					min = 6;
 				}
 				[all*]
 				{
-					il_main = #ranged/10-11;
+					il_main = #ranged/72-79;
 					max = 8;
 					min = 8;
 				}
 				[all*]
 				{
-					il_main = #ranged/12-27;
+					il_main = #ranged/86-194;
 					max = 18;
 					min = 18;
 				}
 				[all*]
 				{
-					il_main = #ranged/28-35;
+					il_main = #ranged/202-252;
 					max = 6;
 					min = 6;
 				}
@@ -476,19 +480,19 @@
 			{
 				[all*]
 				{
-					il_main = #spell/3-12;
+					il_main = #spell/23-93;
 					max = 25;
 					min = 25;
 				}
 				[all*]
 				{
-					il_main = #spell/0-2;
+					il_main = #spell/0-16;
 					max = 5;
 					min = 5;
 				}
 			}
 
-            // misc from dsx_laeta but only the lowest selection of spellbooks
+            // misc from 2W_dsx_laeta but only the lowest selection of spellbooks
 			[misc]
 			{
 				[all*]
@@ -499,25 +503,25 @@
 				}
 				[all*]
 				{
-					il_main = #spellbook/16-21;
+					il_main = #spellbook/120-127;
 					max = 4;
 					min = 4;
 				}
 				[all*]
 				{
 					il_main = book_glb_magic_01;
-					max = 3;
-					min = 3;
+					max = 2;
+					min = 1;
 				}
 				[all*]
 				{
-					il_main = #ring/-mod(1)/22-25;
+					il_main = #ring/-mod(1)/128-153;
 					max = 3;
 					min = 1;
 				}
 				[all*]
 				{
-					il_main = #amulet/-mod(1)/22-25;
+					il_main = #amulet/-mod(1)/128-153;
 					max = 3;
 					min = 1;
 				}
@@ -528,12 +532,12 @@
 	{
 		item_markup = 2;
 
-        // from bodrus
+        // from 2W_bodrus
 		[item_restock]
 		{
-			potion_health_small = 18;
-			potion_mana_small = 18;
-			potion_rejuvenation_small = 4;
+			potion_health_small = 19;
+			potion_mana_small = 19;
+			potion_rejuvenation_small = 2;
 
 			scroll_resurrect = 2;
             spell_resurrect = 2;
