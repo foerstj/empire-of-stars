@@ -1,0 +1,170 @@
+[t:template,n:2W_dsx_moth_base]  // = 2W_dsx_moth
+{
+	category_name = "2W_evil_d";
+	doc = "2W_dsx_moth";
+	specializes = actor_evil;
+	[actor]
+	{
+		[skills]
+		{
+			strength     =  24.7, 0;
+			intelligence =  9.6, 0;
+			dexterity    = 14.7, 0;
+			nature_magic =  43, 0;
+		}
+	}
+	[aspect]
+	{
+		[textures]	{ 0 = b_c_edm_dsx_moth; }
+		experience_value = 8088;
+		life = 430;
+		max_life = 430;
+		mana = 215;
+		max_mana = 215;
+		model = m_c_edm_mo_pos_1;
+		[voice]
+		{
+			[cast]		{ * = s_e_attack_moth_SED; }
+			[die]			{ priority = high; * = s_e_die_moth_SED; }
+			[enemy_spotted]	{ priority = high; * = s_e_call_insectoid_SED;  }
+			[hit_glance]	        { priority = low; * = s_e_hit_moth_SED; }
+		}
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 283.8;
+		damage_min = 116.1;
+		damage_bonus_min_cmagic = 151;
+		damage_bonus_max_cmagic = 370;
+	}
+	[body]
+	{
+		avg_move_velocity = 3.5;
+		[bone_translator]
+		{
+			body_anterior = Bone01;
+			body_mid = Bone01;
+			body_posterior = Bone01;
+			kill_bone = Bone01;
+			shield_bone = Bone01;
+			weapon_bone = Bone01;
+		}
+		[chore_dictionary]
+		{
+			chore_prefix = a_c_edm_mo_fs;
+			[chore_attack]
+			{
+				chore_stances = 0;
+				skrit = select_attack;
+				[anim_files] { 00=at; }
+			}
+			[chore_magic]
+			{
+				chore_stances = 0;
+				skrit = select_attack;
+				[anim_files] { 00=at; }
+			}
+			[chore_default]
+			{
+				chore_stances = 0;
+				skrit = infinite_loop;
+				[anim_files] { 00=dfs; }
+			}
+			[chore_die]
+			{
+				chore_stances = 0;
+				skrit = select_transition;
+				[anim_files] { 00=di; }
+			}
+			[chore_fidget]
+			{
+				chore_stances = 0;
+				skrit = select_fidget;
+				[anim_files] { 00=dff; }
+			}
+			[chore_walk]
+			{
+				chore_stances = 0;
+				skrit = select_walk;
+				[anim_files] { 00=fl; }
+			}
+		}
+	}
+
+	[common]
+	{
+		screen_name="Ice Moth";
+	}
+
+	[defend] { defense = 315.3; }
+
+	[inventory]
+	{
+		selected_active_location = il_active_primary_spell;
+		[other] { il_active_primary_spell = dsx_spell_ice_moth_dust; }
+		
+		
+	}
+
+	[mind]
+	{
+		jat_fidget		= world\ai\jobs\common\job_fidget.skrit
+		?curious		= 0.75
+		&interest		= interest
+		&meander		= false
+		&still		= false;
+		
+		actor_weapon_preference			= WP_MELEE;
+		actor_auto_switches_to_magic	= false;
+		actor_auto_switches_to_karate	= true;
+		actor_auto_switches_to_melee	= true;
+		
+		melee_engage_range = 14;
+		personal_space_range = 0.7;
+		ranged_engage_range = 14.0;
+		sight_range = 14.0;
+	}
+
+	[physics]
+	{
+		explode_when_killed = true;
+		[break_particulate]
+		{
+			frag_glb_dsx_moth_01 = 1;
+			frag_glb_dsx_moth_02 = 2;
+			frag_glb_dsx_moth_03 = 1;
+			frag_glb_dsx_moth_04 = 1;
+			frag_glb_dsx_moth_05 = 1;
+		}
+	}
+}
+
+// Basically 2W_dsx_moth just not called Ice Moth... and with colorful texture
+[t:template,n:2W_eos_butterfly] { specializes = 2W_eos_butterfly_base; }
+[t:template,n:2W_eos_butterfly_base]
+{
+    specializes = 2W_dsx_moth_base;
+	doc = "eos moth";
+
+	[common]
+	{
+		screen_name="Butterfly";
+	}
+
+	[aspect]
+	{
+		[textures]	{ 0 = b_c_edm_eos_butterfly; }
+	}
+	[physics]
+	{
+		[break_particulate]
+		{
+			frag_glb_eos_butterfly_01 = 1;
+			frag_glb_eos_butterfly_02 = 2;
+			frag_glb_eos_butterfly_03 = 1;
+			frag_glb_eos_butterfly_04 = 1;
+			frag_glb_eos_butterfly_05 = 1;
+		}
+	}
+}

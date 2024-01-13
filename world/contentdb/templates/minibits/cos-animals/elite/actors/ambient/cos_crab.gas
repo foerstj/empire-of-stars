@@ -1,7 +1,7 @@
-[t:template,n:crab_base]  // = crab
+[t:template,n:3W_crab_base]  // = 3W_crab
 {
-	category_name = "1W_ambients";
-	doc = "crab";
+	category_name = "3W_ambients";
+	doc = "3W_crab";
 	specializes = actor_ambient;
 	[actor] { race=other; }
 	[aspect]
@@ -78,10 +78,10 @@
 	}
 }
 
-[t:template,n:cos_crab] { specializes = cos_crab_base; }
-[t:template,n:cos_crab_base]
+[t:template,n:3W_cos_crab] { specializes = 3W_cos_crab_base; }
+[t:template,n:3W_cos_crab_base]
 {
-    specializes = crab_base;
+    specializes = 3W_crab_base;
 
 	[aspect]
 	{

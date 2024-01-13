@@ -34,17 +34,32 @@
 		}
 	}
 
-    // stats from TBD
+    // stats self-written
+	[actor]
+	{
+		[skills]
+		{
+			strength =  1, 0;
+			intelligence =  1, 0;
+			dexterity =  10, 0;
+		}
+	}
     [aspect]
     {
 		experience_value = 10;
 		life = 12;
         max_life = 12;
+        mana = 2;
+		max_mana = 2;
     }
 	[attack]
 	{
 		attack_range = 0.5;
 		damage_max = 20;
 		damage_min = 12;
+	}
+	[defend]
+	{
+		  defense = 1;
 	}
 }
