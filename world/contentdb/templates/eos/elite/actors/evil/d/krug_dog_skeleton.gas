@@ -1,0 +1,36 @@
+// krug dog skeleton slightly down-statted, using stats of black wolf
+[t:template,n:3W_eos_smd_krug_dog_skeleton] { specializes = 3W_eos_smd_krug_dog_skeleton_base; }
+[t:template,n:3W_eos_smd_krug_dog_skeleton_base]
+{
+	specializes = 3W_krug_dog_skeleton_base;
+
+	category_name = "3W_evil_d";
+	doc = "krug_dog_skeleton";
+
+    // stats from 3W_wolf_black
+	[actor]
+	{
+		[skills]
+		{
+			strength =  44.1, 0;
+			intelligence =  13, 0;
+			dexterity =  35.7, 0;
+            melee =  94,  0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 1388656;
+		life = 1244.3;
+        max_life = 1244.3;
+        mana = 73.7;
+        max_mana = 73.7;
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 375.1;
+		damage_min = 290.3;
+	}
+	[defend] { defense=813.4; }
+}

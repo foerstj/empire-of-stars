@@ -1,0 +1,256 @@
+// LoA crystal golems with stats of LoA marble/rock golem
+
+[t:template,n:3W_dsx_golem_crystal_one_base]  // = 3W_dsx_golem_crystal_one
+{
+	category_name = "3W_evil_d";
+	doc = "3W_dsx_golem_crystal_one";
+	specializes = 3W_dsx_golem_base;
+	[actor]
+		{
+			[skills]
+				{
+					strength = 		468.9, 0;
+					intelligence = 	146.2, 0;
+					dexterity = 	255.6, 0;
+					melee =         160, 0;
+				}
+		}
+	[aspect]
+		{
+			experience_value = 2165824;
+			life = 19525;
+			max_life = 19525;
+			mana = 19525;
+			max_mana = 19525;
+		textures:0 = b_c_edm_crg-02;
+			material = ice;
+			[voice]
+				{
+					[die]			{ priority = high;	* = s_e_die_rector;		}
+			[enemy_spotted]	{ priority = high; * = s_e_attack_rock_beast; }
+
+				}
+		}
+	[attack]
+		{
+			attack_range = 0.5;
+			damage_max = 7810;
+			damage_min = 6390;
+			reload_delay = 0;
+		}
+	[common] { screen_name="Crystal Golem"; }
+	[defend] { defense=40044; }
+	[mind]
+		{
+			jat_guard = world\ai\jobs\common\job_guard.skrit;
+			melee_engage_range = 14;
+			personal_space_range = 0.7;
+			ranged_engage_range = 14.0;
+			sight_range = 14.0;
+		}
+	[physics]
+    {
+		explode_when_killed = true;
+		explosion_magnitude = .25;
+		gib_gore_good = false;
+
+		[break_particulate]
+		{
+			frag_glb_frag_crg2_01 = 1;
+			frag_glb_frag_crg2_02 = 1;
+			frag_glb_frag_crg2_03 = 1;
+			frag_glb_frag_crg2_04 = 1;
+			frag_glb_frag_crg2_05 = 1;
+			frag_glb_frag_crg2_06 = 1;
+			frag_glb_frag_crg2_07 = 1;
+			frag_glb_frag_crg2_08 = 1;
+			frag_glb_frag_crg2_09 = 1;
+		}
+    }
+}
+
+[t:template,n:3W_eos_golem_crystal_one] { specializes = 3W_eos_golem_crystal_one_base; }
+[t:template,n:3W_eos_golem_crystal_one_base]
+{
+	specializes = 3W_dsx_golem_crystal_one_base;
+
+	doc = "eos_golem_crystal_one";
+
+    // stats & loot from 3W_dsx_golem_marble
+	[actor]
+	{
+		[skills]
+		{
+			strength 		= 44, 0;
+			intelligence 	=  12.4, 0;
+			dexterity 		= 23, 0;
+			melee 			= 83, 0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 1470740;
+		life = 2405.3;
+		max_life = 2405.3;
+		mana = 255.9;
+		max_mana = 255.9;
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max 	= 608;
+		damage_min 	= 460.6;
+		reload_delay = 0;
+	}
+	[defend] { defense=844.4; }
+	[inventory]
+	{
+		drop_at_use_point = true;
+		[pcontent]
+		{
+			/* Generated: Tue Jun 17 11:13:15 2003
+			Level 17, Strong */
+			[oneof*]
+			{
+				[gold*]
+				{
+					chance = 0.2;
+					min = 129923;
+					max = 258273;
+				}
+				[oneof*]
+				{
+					chance = 0.2;
+					il_main = potion_mana_super;
+					il_main = potion_health_super;
+				}
+				[oneof*]
+				{
+					chance = 0.2;
+					il_main = #weapon/178-243;
+					il_main = #armor/97-558;
+					il_main = #*/178-243;
+				}
+				[oneof*]
+				{
+					chance = 0.01;
+					il_main = #weapon/-rare(1)/243-287;
+					il_main = #armor/-rare(1)/415-844;
+					il_main = #*/-rare(1)/243-287;
+				}
+				[oneof*]
+				{
+					chance = 0.005;
+					il_main = #weapon/-unique(2)/243-287;
+					il_main = #armor/-unique(2)/415-844;
+					il_main = #*/-unique(2)/243-287;
+				}			
+			}
+		}
+	}
+}
+
+
+[t:template,n:3W_dsx_golem_crystal_two_base]  // = 3W_dsx_golem_crystal_two
+{
+	category_name = "3W_evil_d";
+	doc = "3W_dsx_golem_crystal_two";
+	specializes = 3W_dsx_golem_base;
+	[actor]
+		{
+			[skills]
+				{
+					strength = 		468.9, 0;
+					intelligence = 	146.2, 0;
+					dexterity = 	255.6, 0;
+					melee =         160, 0;
+				}
+		}
+	[aspect]
+		{
+			experience_value = 2165824;
+			life = 19525;
+			max_life = 19525;
+			mana = 19525;
+			max_mana = 19525;
+		textures:0	= b_c_edm_crg-01;
+			material = ice;
+			[voice]
+				{
+					[die]			{ priority = high;	* = s_e_die_rector;		}
+			[enemy_spotted]	{ priority = high; * = s_e_attack_rock_beast; }
+				}
+		}
+	[attack]
+		{
+			attack_range = 0.5;
+			damage_max = 7810;
+			damage_min = 6390;
+			reload_delay = 0;
+		}
+	[common] { screen_name="Diamond Golem"; }
+	[defend] { defense=40044; }
+	[mind]
+		{
+			jat_guard = world\ai\jobs\common\job_guard.skrit;
+			melee_engage_range = 14;
+			personal_space_range = 0.7;
+			ranged_engage_range = 14.0;
+			sight_range = 14.0;
+		}
+	[physics]
+    {
+		explode_when_killed = true;
+		explosion_magnitude = .25;
+		gib_gore_good = false;
+
+		[break_particulate]
+		{
+			frag_glb_frag_crg2_01 = 1;
+			frag_glb_frag_crg2_02 = 1;
+			frag_glb_frag_crg2_03 = 1;
+			frag_glb_frag_crg2_04 = 1;
+			frag_glb_frag_crg2_05 = 1;
+			frag_glb_frag_crg2_06 = 1;
+			frag_glb_frag_crg2_07 = 1;
+			frag_glb_frag_crg2_08 = 1;
+			frag_glb_frag_crg2_09 = 1;
+		}
+    }
+}
+
+[t:template,n:3W_eos_golem_crystal_two] { specializes = 3W_eos_golem_crystal_two_base; }
+[t:template,n:3W_eos_golem_crystal_two_base]
+{
+	specializes = 3W_dsx_golem_crystal_two_base;
+
+	doc = "eos_golem_crystal_two";
+
+    // stats from 3W_rock_golem
+	[actor]
+	{
+		[skills]
+		{
+			strength = 		92.9, 0;
+			intelligence = 	17, 0;
+			dexterity = 		28, 0;
+            melee =         117, 0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 1832000;
+		life = 2344.7;
+		max_life = 2344.7;
+		mana = 2232;
+        max_mana = 2232;
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 570.4;
+		damage_min = 405.8;
+		reload_delay = 0;
+	}
+    [defend] { defense=1303.1; }
+}

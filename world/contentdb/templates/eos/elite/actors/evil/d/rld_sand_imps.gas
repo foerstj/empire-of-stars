@@ -1,11 +1,11 @@
 // Sand imps with stats somewhat below the eos_rld_droog
 
-[t:template,n:2W_eos_rld_sand_ripper] { specializes = 2W_eos_rld_sand_ripper_base; }
-[t:template,n:2W_eos_rld_sand_ripper_base]
+[t:template,n:3W_eos_rld_sand_ripper] { specializes = 3W_eos_rld_sand_ripper_base; }
+[t:template,n:3W_eos_rld_sand_ripper_base]
 {
-	specializes = 2W_base_imp;
+	specializes = 3W_base_imp;
 
-	category_name = "2W_evil_d";
+	category_name = "3W_evil_d";
 	doc = "sand_ripper";
 	[aspect]
 	{
@@ -29,41 +29,41 @@
 		sight_range = 14;
 	}
 
-    // stats from 2W_dsx_wasped
+    // stats from 3W_dsx_wasped
 	[actor]
 	{
 		[skills]
 		{
-			strength =  	30.8, 0;
-			intelligence =  10.7, 0;
-			dexterity =  	18.1, 0;
-			melee =  	53, 0;
+			strength =  	42.7, 0;
+			intelligence =  12.4, 0;
+			dexterity =  	23.5, 0;
+			melee =  	81, 0;
 		}
 	}
 	[aspect]
 	{
-		experience_value = 48832;
-		life = 551;
-		max_life = 551;
-		mana = 45.6;
-		max_mana = 45.6;
+		experience_value = 1303680;
+		life = 821.7;
+		max_life = 821.7;
+		mana = 68;
+		max_mana = 68;
 	}
 	[attack]
 	{
 		attack_range = 0.5;
-		damage_max = 204.8;
-		damage_min = 147.1;
+		damage_max = 305.4;
+		damage_min = 219.3;
 	}
-	[defend] { defense=319.2; }
-    // no loot as in 2W_dsx_wasped
+	[defend] { defense=476; }
+    // no loot as in 3W_dsx_wasped
 }
 
-[t:template,n:2W_eos_rld_sand_mage] { specializes = 2W_eos_rld_sand_mage_base; }
-[t:template,n:2W_eos_rld_sand_mage_base]
+[t:template,n:3W_eos_rld_sand_mage] { specializes = 3W_eos_rld_sand_mage_base; }
+[t:template,n:3W_eos_rld_sand_mage_base]
 {
-	specializes = 2W_base_imp;
+	specializes = 3W_base_imp;
 
-	category_name = "2W_evil_d";
+	category_name = "3W_evil_d";
 	doc = "sand_mage";
 	[aspect]
 	{
@@ -97,43 +97,43 @@
 		sight_range = 14;
 	}
 
-    // stats from 2W_spider_frostnid_ranged
+    // stats from 3W_spider_frostnid_ranged
 	[actor]
 	{
 		[skills]
 		{
-			strength =  28.9, 0;
-			intelligence =  7.2, 0;
-			dexterity =  33.3, 0;
-            ranged =  64,  0;
+			strength =  40.4, 0;
+			intelligence =  8.5, 0;
+			dexterity =  43.8, 0;
+            ranged =  97,  0;
 		}
 	}
 	[aspect]
 	{
-		experience_value = 43164;
-		life = 556.6;
-        max_life = 556.6;
-        mana = 41.2;
-		max_mana = 41.2;
+		experience_value = 1152360;
+		life = 830.8;
+        max_life = 830.8;
+        mana = 61.5;
+		max_mana = 61.5;
 	}
 	[attack]
 	{
 		attack_range = 0.5;
-		damage_max = 226.8;
-		damage_min = 176.3;
-		damage_bonus_min_cmagic = 150;
-		damage_bonus_max_cmagic = 201;
+		damage_max = 338.5;
+		damage_min = 263.1;
+		damage_bonus_min_cmagic = 241;
+		damage_bonus_max_cmagic = 324;
 	}
-    [defend] { defense=453.5; }
-    // no loot as in 2W_spider_frostnid_ranged
+    [defend] { defense=676.9; }
+    // no loot as in 3W_spider_frostnid_ranged
 }
 
-[t:template,n:2W_eos_rld_sand_basher] { specializes = 2W_eos_rld_sand_basher_base; }
-[t:template,n:2W_eos_rld_sand_basher_base]
+[t:template,n:3W_eos_rld_sand_basher] { specializes = 3W_eos_rld_sand_basher_base; }
+[t:template,n:3W_eos_rld_sand_basher_base]
 {
-	specializes = 2W_base_imp;
+	specializes = 3W_base_imp;
 
-	category_name = "2W_evil_d";
+	category_name = "3W_evil_d";
 	doc = "sand_basher";
 	[aspect]
 	{
@@ -160,31 +160,31 @@
 		sight_range = 14;
 	}
 
-    // stats from 2W_spider_frostnid
+    // stats from 3W_spider_frostnid
 	[actor]
 	{
 		[skills]
 		{
-			strength =  27.9, 0;
-			intelligence =  5.7, 0;
-			dexterity =  30.6, 0;
-            melee =  61,  0;
+			strength =  39.4, 0;
+			intelligence =  6.8, 0;
+			dexterity =  40.6, 0;
+            melee =  95,  0;
 		}
 	}
 	[aspect]
 	{
-		experience_value = 36936;
-		life = 847.1;
-        max_life = 847.1;
-        mana = 38.3;
-		max_mana = 38.3;
+		experience_value = 987924;
+		life = 1276.9;
+        max_life = 1276.9;
+        mana = 57.7;
+		max_mana = 57.7;
 	}
 	[attack]
 	{
 		attack_range = 0.5;
-		damage_max = 189.5;
-		damage_min = 129.2;
+		damage_max = 285.7;
+		damage_min = 194.8;
 	}
-    [defend] { defense=414; }
-   	// no loot as in 2W_spider_frostnid
+    [defend] { defense=624; }
+   	// no loot as in 3W_spider_frostnid
 }

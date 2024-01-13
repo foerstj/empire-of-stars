@@ -1,0 +1,183 @@
+[t:template,n:3W_eos_fireheart_imp_melee] { specializes = 3W_eos_fireheart_imp_melee_base; }
+[t:template,n:3W_eos_fireheart_imp_melee_base]
+{
+	specializes = 3W_base_imp;
+
+	category_name = "3W_evil_d";
+	doc = "lava_imp_01";
+	[aspect]
+	{
+		model = m_c_edm_li_pos_1;
+		[textures] { 0=b_c_edm_li; }
+		scale_base = 0.85;  // make smaller than original lava imps
+	}
+	[common]
+	{
+		screen_name="Fireheart Imp";
+		membership = monster, party_lava_imp_02;
+	}
+	[mind]
+	{
+		jat_brain							 = world\ai\jobs\common\brain_hero.skrit
+			?actor_joins_existing_party		 = true;
+
+		melee_engage_range = 14;
+		personal_space_range = 0.7;
+		ranged_engage_range = 14.0;
+		sight_range = 14;
+	}
+
+    // stats self-written
+	[actor]
+	{
+		[skills]
+		{
+			strength = 18, 0;
+			intelligence = 2, 0;
+			dexterity = 4, 0;
+			melee = 79, 0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 1129488;
+		life = 1456;
+		max_life = 1494;
+		mana = 191;
+		max_mana = 195;
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 399;
+		damage_min = 261;
+	}
+	[defend]
+	{
+		defense = 859;
+	}
+}
+
+[t:template,n:3W_eos_fireheart_imp_bullets] { specializes = 3W_eos_fireheart_imp_bullets_base; }
+[t:template,n:3W_eos_fireheart_imp_bullets_base]
+{
+	specializes = 3W_lava_imp_02_base;
+
+	category_name = "3W_evil_d";
+	doc = "lava_imp_02";
+	[aspect]
+	{
+		model = m_c_edm_li_pos_2;
+		[textures] { 0=b_c_edm_li-02; }
+		scale_base = 0.85;  // make smaller than original lava imps
+	}
+	[common]
+	{
+        screen_name = "Fireheart Imp Runner";
+		membership = monster, party_lava_imp_02;
+	}
+   	[inventory]
+	{
+		[other] { il_active_primary_spell=spell_fireheart_imp_bullets; }
+        [pcontent] {} // delete too-high pcontent
+    }
+	[mind]
+	{
+		jat_brain					= world\ai\jobs\common\brain_hero.skrit
+			?actor_creates_own_party	= true
+			&actor_joins_existing_party	= true
+			&party_template				= "party_lava_imp_02";
+	}
+
+    // stats self-written
+	[actor]
+	{
+		[skills]
+		{
+			strength = 18, 0;
+			intelligence = 2, 0;
+			dexterity = 4, 0;
+			combat_magic = 75, 0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 1129488;
+		life = 1456;
+		max_life = 1494;
+		mana = 191;
+		max_mana = 195;
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 398;
+		damage_min = 262;
+	}
+	[defend]
+	{
+		defense = 859;
+	}
+}
+
+[t:template,n:3W_eos_fireheart_imp_ball] { specializes = 3W_eos_fireheart_imp_ball_base; }
+[t:template,n:3W_eos_fireheart_imp_ball_base]
+{
+	specializes = 3W_lava_imp_03_base;
+
+	category_name = "3W_evil_d";
+	doc = "lava_imp_03";
+	[aspect]
+	{
+		model = m_c_edm_li_pos_3;
+		[textures] { 0=b_c_edm_li-03; }
+		scale_base = 0.85;  // make smaller than original lava imps
+	}
+	[inventory]
+	{
+		[other] { il_active_primary_spell=spell_fireheart_imp_ball; }
+        [pcontent] {} // delete too-high pcontent
+    }
+	[common]
+	{
+		membership = monster, party_lava_imp_03;
+		screen_name="Fireheart Imp Mage";
+	}
+	[mind]
+	{
+		jat_brain					= world\ai\jobs\common\brain_hero.skrit
+			?actor_creates_own_party	= true
+			&actor_joins_existing_party	= true
+			&party_template				= "party_lava_imp_03";
+	}
+
+    // stats self-written
+	[actor]
+	{
+		[skills]
+		{
+			strength = 20, 0;
+			intelligence = 2, 0;
+			dexterity = 6, 0;
+			combat_magic = 75, 0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 1130608;
+		life = 1462;
+		max_life = 1501;
+		mana = 191;
+		max_mana = 195;
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 399;
+		damage_min = 261;
+	}
+	[defend]
+	{
+		defense = 859;
+	}
+}

@@ -1,0 +1,197 @@
+[t:template,n:3W_dsx_kikclaw_base]  // = 3W_dsx_kikclaw
+{
+	category_name = "3W_evil_d";
+	doc = "3W_dsx_kikclaw";
+	specializes = 3W_kikclaw_base;
+	
+	[actor]
+	{
+		[skills]
+		{
+			strength 	 	=  46.2, 0;
+			intelligence   	=  12.3, 0;
+			dexterity 	 	=  22.7, 0;
+			melee 	 		=  83, 0;
+		}
+	}
+	
+	[attack]
+	{
+		attack_range = 0.5;
+		
+		damage_max = 441;
+		damage_min = 325.6;
+	}
+	[defend] { defense = 728.4; }
+	[aspect] 
+	{
+		experience_value = 1266200;
+		life = 1647.6;
+		max_life = 1647.6;
+		mana = 48.9;
+		max_mana = 48.9;
+		model = m_c_edm_kc_pos_1; 
+		[voice]
+		{
+			[die]			{ priority = high; * = s_e_die_kikclaw;  }
+			[enemy_spotted]	{ priority = high; * = s_e_call_kikclaw_SED; }
+			[hit_critical]	{ priority = low; * = s_e_hit_kikclaw_SED;  }
+			[hit_glance]	{ priority = low; * = s_e_hit_kikclaw_SED;  }
+			[hit_solid]		{ priority = low; * = s_e_hit_kikclaw_SED;  }
+		}	
+		scale_base	= 0.7;
+	}
+	
+	[common] { screen_name = "Skitterclaw"; }
+	
+	[guts_manager]
+	{
+		effect_name = melee_hit_2;
+	}
+}
+
+[t:template,n:3W_eos_kikclaw] { specializes = 3W_eos_kikclaw_base; }
+[t:template,n:3W_eos_kikclaw_base]
+{
+	specializes = 3W_dsx_kikclaw_base;
+
+	doc = "eos kikclaw";
+	[common] { screen_name = "Kikclaw"; }
+
+    // stats from 3W_dsx_furok (Yeti)
+    [actor]
+    {
+        [skills]
+	    {
+            strength =  39.8, 0;
+            intelligence =  11.3, 0;
+            dexterity =  19.6, 0;
+            melee =  71,  0;
+        }
+    }
+	[aspect] 
+	{
+        experience_value = 659568;
+        life = 1368;
+        max_life = 1368;
+        mana = 0;
+        max_mana = 0;
+    }
+	[attack]
+	{
+        attack_range = 0.5;
+        damage_max = 673.2;
+        damage_min = 226.8;
+	}
+    [defend] { defense = 732; }
+}
+
+
+[t:template,n:3W_dsx_kikclaw_2_base]  // = dsx_kikclaw_2
+//roughly balanced to Level 154, but taken down a notch 
+//'cause they're smaller than the bigger Skitterclaw
+{
+	category_name = "3W_evil_d";
+	doc = "3W_dsx_kikclaw_2";
+	specializes = 3W_kikclaw_base;
+	
+	[actor]
+	{
+		[skills]
+		{
+			strength 	 	=  46.2, 0;
+			intelligence   	=  12.3, 0;
+			dexterity 	 	=  22.7, 0;
+			melee 	 		=  83, 0;
+		}
+	}
+	
+	[aspect] 
+	{
+		textures: 0 = b_c_edm_klik-2;
+		scale_base	= 0.4;
+		
+		experience_value = 1128564;
+		life 			= 845.8;
+		max_life 		= 845.8;
+		mana 			= 48.9;
+		max_mana 		= 48.9;
+		
+		[voice]
+		{
+			[die]			{ priority = high; * = s_e_die_kikclaw_baby;  }
+			[enemy_spotted]	{ priority = high; * = s_e_call_kikclaw_baby_SED; }
+			[hit_critical]	{ priority = low; * = s_e_hit_kikclaw__baby_SED;  }
+			[hit_glance]	{ priority = low; * = s_e_hit_kikclaw_baby_SED;  }
+			[hit_solid]		{ priority = low; * = s_e_hit_kikclaw_baby_SED;  }
+		}
+	}
+	
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 392.6;
+		damage_min = 294.8;
+	}
+	[body]
+	{
+		avg_move_velocity = 5.00000;
+	}
+	
+	[common] 
+	{ 
+		screen_name = "Skitterling";
+	}
+	
+	[defend] { defense = 537.8; }
+
+	[mind]  
+	{  
+		jat_fidget                              = world\ai\jobs\common\job_fidget.skrit  
+		?social                                   = 0.5  
+		&delay_min                              = 4.0  
+		&delay_max                              = 10.0  
+		&still                                   = false;  
+	}
+}	
+
+[t:template,n:3W_eos_kikclaw_sm] { specializes = 3W_eos_kikclaw_sm_base; }
+[t:template,n:3W_eos_kikclaw_sm_base]
+{
+	specializes = 3W_dsx_kikclaw_2_base;
+
+	doc = "eos kikclaw sm";
+	[common] 
+	{ 
+		screen_name = "Kikling";
+	}
+
+    // stats from 3W_krug_grunt
+	[actor]
+	{
+		[skills]
+		{
+			  dexterity = 18.3, 0;
+			  intelligence = 7, 0;
+			  melee = 90,  0;
+			  strength = 46.5, 0;
+		}
+	}
+	[aspect] 
+	{
+		  experience_value = 622158;
+		  life = 409.6;
+		  mana = 145.6;
+		  max_life = 409.6;
+		  max_mana = 145.6;
+	}
+	[attack]
+	{
+		  damage_max = 330.5;
+		  damage_min = 251.8;
+	}
+	[defend]
+	{
+		  defense = 582.4;
+	}
+}	
