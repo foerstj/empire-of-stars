@@ -8,6 +8,8 @@ Goid		m_Target$;
 #include "k_job_c_talk_utils"
 
 
+property    string  namespace$      = "book0"               doc = "Namespace for conversations and flags";
+property    string  object_template$ = "book_glb_lore_altair_0" doc = "Object to give";
 property    bool    face_player$    = true                  doc = "Face player when starting to talk";
 property    bool    face_back$      = false                 doc = "Face back when talk is finished";
 
@@ -106,15 +108,15 @@ state Talk$
 	{
 		#only( game )
 		[[
-			if( ( Goid.InValidGoid != UIPartyManager.DoesActivePartyHaveTemplate( "book_glb_lore_altair_3", m_Target$ ) ) && !GameAuditor.GetDb.GetBool( "gave_book1" ) )
+			if( ( Goid.InValidGoid != UIPartyManager.DoesActivePartyHaveTemplate( "book_glb_lore_altair_3", m_Target$ ) ) && !GameAuditor.GetDb.GetBool( MakeStringF( "gave_%s", namespace$ ) ) )
 			{
-                GameAuditor.GetDb.SetBool( "gave_book1", true );
-                give_object$( m_Target$, "book_glb_lore_altair_1" );
-				m_Go$.GetConversation.RSSelectConversation( "conversation_book1_give" );
+                GameAuditor.GetDb.SetBool( MakeStringF( "gave_%s", namespace$ ), true );
+                give_object$( m_Target$, object_template$ );
+				m_Go$.GetConversation.RSSelectConversation( MakeStringF( "conversation_%s_give", namespace$ ) );
 			}
             else
             {
-				m_Go$.GetConversation.RSSelectConversation( "conversation_book1_no_quest" );
+				m_Go$.GetConversation.RSSelectConversation( MakeStringF( "conversation_%s_no_quest", namespace$ ) );
 			}
 		]]
 
