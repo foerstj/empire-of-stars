@@ -11,6 +11,10 @@
 			* = conversation_gate_archer_guard;
 		}
 	}
+	[mind]
+	{
+		jat_talk = world\ai\jobs\minibits\generic-talk-skrits\job_talk_npc.skrit?face_back=true;
+	}
 	[placement]
 	{
 	  q orientation = 0,0.983255,0,0.182235;
@@ -29,6 +33,10 @@
 		{
 			* = conversation_gate_guard_a;
 		}
+	}
+	[mind]
+	{
+		jat_talk = world\ai\jobs\minibits\generic-talk-skrits\job_talk_npc.skrit?face_back=true;
 	}
 	[placement]
 	{
@@ -105,7 +113,7 @@
 	[mind]
 	{
 	  b actor_auto_fidgets = false;
-		jat_face = jat_none;
+		jat_talk = world\ai\jobs\minibits\generic-talk-skrits\job_talk_npc.skrit?face_back=true;
 	}
 	[placement]
 	{
@@ -142,6 +150,10 @@
 			il_shield = sh_m_g_c_r_s_avg;
 		}
 	}
+	[mind]
+	{
+		jat_talk = world\ai\jobs\minibits\generic-talk-skrits\job_talk_npc.skrit?face_back=true;
+	}
 	[placement]
 	{
 	  q orientation = 0,0.707107,0,0.707107;
@@ -164,7 +176,7 @@
 	}
 	[mind]
 	{
-		jat_talk = world\ai\jobs\eos\job_talk_at_book1.skrit;
+		jat_talk = world\ai\jobs\eos\job_talk_at_book1.skrit?face_player=false;
 	}
 	[placement]
 	{
@@ -219,7 +231,7 @@
 	[mind]
 	{
 	  b actor_auto_fidgets = false;
-		jat_talk = world\ai\jobs\actors\good\job_talk_ibsen.skrit;
+		jat_talk = world\ai\jobs\eos\job_talk_at_king.skrit?face_back=true;
 	}
 	[placement]
 	{
@@ -244,6 +256,10 @@
 			* = conversation_jewlynna;
 		}
 	}
+	[mind]
+	{
+		jat_talk = world\ai\jobs\minibits\generic-talk-skrits\job_talk_npc.skrit;
+	}
 	[placement]
 	{
 	  q orientation = 0,0.953717,0,0.300705;
@@ -267,14 +283,14 @@
 			* = conversation_lorun_disband;
 			* = conversation_lorun_disband_rejoin;
 			* = conversation_lorun_join;
-			* = conversation_lorun_overseer;
+			* = conversation_lorun_before_condition;
 			* = conversation_lorun_reject;
 			* = conversation_lorun_rejoin;
 		}
 	}
 	[mind]
 	{
-		jat_talk = world\ai\jobs\actors\good\job_talk_goquua.skrit;
+		jat_talk = world\ai\jobs\minibits\generic-talk-skrits\job_talk_companion.skrit?namespace=conversation_lorun&oid=0x27001ee&condition=talked_to_overseer;
 	}
 	[placement]
 	{
@@ -304,7 +320,7 @@
 	}
 	[mind]
 	{
-		jat_talk = world\ai\jobs\actors\good\job_talk_kroduk.skrit;
+		jat_talk = world\ai\jobs\minibits\generic-talk-skrits\job_talk_companion.skrit?namespace=conversation_kroduk&oid=0x27001ef;
 	}
 	[placement]
 	{
@@ -340,6 +356,7 @@
 	[mind]
 	{
 	  b actor_auto_fidgets = false;
+		jat_talk = world\ai\jobs\minibits\generic-talk-skrits\job_talk_npc.skrit?face_back=true;
 	}
 	[placement]
 	{
@@ -367,6 +384,7 @@
 	[mind]
 	{
 	  b actor_auto_fidgets = false;
+		jat_talk = world\ai\jobs\minibits\generic-talk-skrits\job_talk_npc.skrit?face_back=true;
 	}
 	[placement]
 	{
@@ -405,9 +423,7 @@
 	[mind]
 	{
 	  b actor_auto_fidgets = false;
-	  b actor_may_attack = false;
-	  b actor_may_be_attacked = false;
-		jat_face = jat_none;
+		jat_talk = world\ai\jobs\minibits\generic-talk-skrits\job_talk_npc.skrit?face_back=true;
 	}
 	[placement]
 	{
@@ -435,7 +451,7 @@
 	[mind]
 	{
 	  b actor_auto_fidgets = false;
-		jat_face = jat_none;
+		jat_talk = world\ai\jobs\minibits\generic-talk-skrits\job_talk_npc.skrit?face_back=true;
 	}
 	[placement]
 	{
@@ -469,6 +485,7 @@
 	[mind]
 	{
 	  b actor_auto_fidgets = false;
+		jat_talk = world\ai\jobs\minibits\generic-talk-skrits\job_talk_npc.skrit?face_back=true;
 	}
 	[placement]
 	{
@@ -495,6 +512,10 @@
 			* = conversation_kroduk_mp;
 		}
 	}
+	[mind]
+	{
+		jat_talk = world\ai\jobs\minibits\generic-talk-skrits\job_talk_npc.skrit;
+	}
 	[placement]
 	{
 	  q orientation = 0,0.382683,0,0.923879;
@@ -518,8 +539,12 @@
 	{
 		[conversations]
 		{
-			* = conversation_lorun_overseer;
+			* = conversation_lorun_mp;
 		}
+	}
+	[mind]
+	{
+		jat_talk = world\ai\jobs\minibits\generic-talk-skrits\job_talk_npc.skrit;
 	}
 	[placement]
 	{
@@ -553,6 +578,10 @@
 		{
 			il_shield = sh_w_g_c_r_m_avg;
 		}
+	}
+	[mind]
+	{
+		jat_talk = world\ai\jobs\minibits\generic-talk-skrits\job_talk_npc.skrit;
 	}
 	[placement]
 	{
@@ -713,6 +742,10 @@
 	{
 	  b actor_auto_fidgets = false;
 	}
+	[mind]
+	{
+		jat_talk = world\ai\jobs\minibits\generic-talk-skrits\job_talk_npc.skrit?face_back=true;
+	}
 	[placement]
 	{
 	  q orientation = 0,-0.793354,0,0.608761;
@@ -752,6 +785,7 @@
 	{
 	  b actor_auto_fidgets = false;
 		jat_face = jat_none;
+		jat_talk = world\ai\jobs\minibits\generic-talk-skrits\job_talk_npc.skrit?face_player=false&talk_anim=;
 	}
 	[placement]
 	{
@@ -786,6 +820,10 @@
 			il_active_ranged_weapon = bw_g_d_s_l_c_avg;
 		}
 	}
+	[mind]
+	{
+		jat_talk = world\ai\jobs\minibits\generic-talk-skrits\job_talk_npc.skrit;
+	}
 	[placement]
 	{
 	  q orientation = 0,-0.843392,0,0.537299;
@@ -807,7 +845,7 @@
 	}
 	[mind]
 	{
-		jat_talk = world\ai\jobs\actors\good\job_talk_merchant_blacksmith;
+		jat_talk = world\ai\jobs\minibits\generic-talk-skrits\job_talk_npc.skrit;
 	}
 	[placement]
 	{
@@ -829,13 +867,13 @@
 	{
 		[conversations]
 		{
-			* = conversation_orlov;
-			* = conversation_orlov_2;
+			* = conversation_orlov_activate;
+			* = conversation_orlov_complete;
 		}
 	}
 	[mind]
 	{
-		jat_talk = world\ai\jobs\actors\good\job_talk_orlov.skrit;
+		jat_talk = world\ai\jobs\minibits\generic-talk-skrits\job_talk_quest.skrit?namespace=conversation_orlov&quest=altair_aurora_shrine;
 	}
 	[placement]
 	{
@@ -873,6 +911,10 @@
 			il_shield = sh_w_g_c_r_m_avg;
 		}
 	}
+	[mind]
+	{
+		jat_talk = world\ai\jobs\minibits\generic-talk-skrits\job_talk_npc.skrit;
+	}
 	[placement]
 	{
 	  q orientation = 0,-0.92388,0,-0.382683;
@@ -891,6 +933,10 @@
 		{
 			* = conversation_onoc;
 		}
+	}
+	[mind]
+	{
+		jat_talk = world\ai\jobs\minibits\generic-talk-skrits\job_talk_npc.skrit;
 	}
 	[placement]
 	{
@@ -914,6 +960,10 @@
 		{
 			* = conversation_marelle;
 		}
+	}
+	[mind]
+	{
+		jat_talk = world\ai\jobs\minibits\generic-talk-skrits\job_talk_npc.skrit;
 	}
 	[placement]
 	{
@@ -1013,7 +1063,7 @@
 	}
 	[mind]
 	{
-		jat_talk = world\ai\jobs\actors\good\job_talk_ghilbertnor.skrit;
+		jat_talk = world\ai\jobs\minibits\generic-talk-skrits\job_talk_mule_merchant.skrit?namespace=conversation_ghilbertnor&first=true;
 	}
 	[placement]
 	{
@@ -1079,6 +1129,10 @@
 			es_feet = bo_bo_le_light;
 		}
 	}
+	[mind]
+	{
+		jat_talk = world\ai\jobs\minibits\generic-talk-skrits\job_talk_npc.skrit;
+	}
 	[placement]
 	{
 	  q orientation = 0,0.608762,0,0.793354;
@@ -1097,6 +1151,10 @@
 		{
 			* = conversation_guard_f;
 		}
+	}
+	[mind]
+	{
+		jat_talk = world\ai\jobs\minibits\generic-talk-skrits\job_talk_npc.skrit;
 	}
 	[placement]
 	{
@@ -1137,9 +1195,7 @@
 	[mind]
 	{
 	  b actor_auto_fidgets = false;
-	  b actor_may_attack = false;
-	  b actor_may_be_attacked = false;
-		jat_face = jat_none;
+		jat_talk = world\ai\jobs\minibits\generic-talk-skrits\job_talk_npc.skrit?talk_anim=&face_back=true;
 	}
 	[placement]
 	{
@@ -1163,6 +1219,10 @@
 		{
 			* = conversation_inn_f;
 		}
+	}
+	[mind]
+	{
+		jat_talk = world\ai\jobs\minibits\generic-talk-skrits\job_talk_npc.skrit?face_back=true;
 	}
 	[placement]
 	{

@@ -1,19 +1,3 @@
-/*
-  ============================================================================
-  ----------------------------------------------------------------------------
-
-	File		: 	job_talk_ardun.skrit
-
-	Author(s)	: 	Eric Tams, Chad Queen, Bartosz Kijanka
-
-	Purpose		: 	Custom talk job for Apprentice Ardun, da man with da books.
-
-	(C)opyright 2001 Gas Powered Games, Inc.
-
-  ----------------------------------------------------------------------------
-  ============================================================================
-*/
-
 Go		m_Go$;
 GoMind	m_Mind$;
 GoBody  m_Body$;
@@ -23,12 +7,14 @@ Goid	m_Target$;
 #include "k_job_c_mcp_fidget_utils"
 #include "k_job_c_talk_utils"
 
+
+property    bool    face_player$    = true  doc = "Face player when starting to talk";
+
+
 startup state STARTUP$
 {
 }
 
-////////////////////////////////////////////////////////////////////////////////
-//	init
 event OnJobInitPointers$( Job job$ )
 {
 	m_Job$		= job$;
@@ -37,44 +23,61 @@ event OnJobInitPointers$( Job job$ )
 	m_Body$		= job$.Go.Body;
 }
 
-
 event OnJobInit$( Job job$ )
 {
 	OnJobInitPointers$( job$ );
 
 	m_Target$	= job$.GoalObject;
 
-	SetState Talk$;
+    if ( face_player$ )
+    {
+        SetState Face$;
+    }
+    else
+    {
+        SetState Talk$;
+    }
 }
 
-////////////////////////////////////////////////////////////////////////////////
-//	blab blab away... pretend you're Lee on coffee
+state Face$
+{
+	transition
+	{
+		-> Talk$:	OnWorldMessage( WE_MCP_FACING_LOCKEDON );
+	}
+
+	event OnEnterState$
+	{
+		MCPManager.MakeRequest( m_Go$.Goid, PL_FACE, m_Target$ );
+	}
+}
+
 state Talk$
 {
 	transition
 	{
-		-> Exiting$:	OnWorldMessage( WE_REQ_TALK_END ) = 
+		-> Exiting$:	OnWorldMessage( WE_REQ_TALK_END ) =
 		{
 			if( !GameAuditor.GetDb.GetBool( "ardun_gave_book" ) )
 			{
-				if( m_Target$.IsValid() ) 
-				{	
+				if( m_Target$.IsValid() )
+				{
 					GameAuditor.GetDb.SetBool( "ardun_gave_book", true );
-					
+
 					SiegePos SpawnPos$;
-					
+
 					GoCloneReq cloneReq$ = MakeGoCloneReq( "book_glb_lore_altair_3" );
-					
+
 					SpawnPos$ = m_Target$.go.placement.position;
 					cloneReq$.StartingPos	= SpawnPos$;
-				    
+
 					If( m_Target$.Go.Hasmind )
 					{
 						if( AIQuery.FindSpotRelativeToSource( m_Target$.Go, .25, .5, 2.0, m_Target$.Go.Mind.TempPos1 ) )
 				   		{
 				   			cloneReq$.StartingPos = m_Target$.Go.Mind.TempPos1;
 				   		}
-				   	}	
+				   	}
 					cloneReq$.SnapToTerrain = true;
 			        GoDb.SCloneGo( cloneReq$ );
 				}
@@ -87,49 +90,49 @@ state Talk$
 		#only( game )
 		[[
 			int books$ = 0;
-			
+
 			if ( Goid.InValidGoid != UIPartyManager.DoesActivePartyHaveTemplate( "book_glb_lore_altair_1", m_Target$ ) )
 			{
-				books$ += 1;	
+				books$ += 1;
 			}	
 				
 			if ( Goid.InValidGoid != UIPartyManager.DoesActivePartyHaveTemplate( "book_glb_lore_altair_2", m_Target$ ) )
 			{
-				books$ += 1;	
+				books$ += 1;
 			}
 				
 			if ( Goid.InValidGoid != UIPartyManager.DoesActivePartyHaveTemplate( "book_glb_lore_altair_3", m_Target$ ) )
 			{
-				books$ += 1;	
+				books$ += 1;
 			}
-				
+
 			if( books$ == 2 ) {
 				m_Go$.GetConversation.RSSelectConversation( "conversation_apprentice_one_book" );
 				TryAnim$('talk');
 			} else if( books$ == 3 ) {
 				// delete books here.
-				
+
 				goid temp_book$ = UIPartyManager.DoesActivePartyHaveTemplate( "book_glb_lore_altair_1", m_Target$ );
 				temp_book$.Go.Parent.Mind.SDoJob( MakeJobReq( JAT_DROP, JQ_ACTION, QP_FRONT, AO_REFLEX, temp_book$ ) );
 				PostWorldMessage( WE_REQ_DELETE, temp_book$, temp_book$, .1 );
-				
+
 				temp_book$ = UIPartyManager.DoesActivePartyHaveTemplate( "book_glb_lore_altair_2", m_Target$ );
 				temp_book$.Go.Parent.Mind.SDoJob( MakeJobReq( JAT_DROP, JQ_ACTION, QP_FRONT, AO_REFLEX, temp_book$ ) );
 				PostWorldMessage( WE_REQ_DELETE, temp_book$, temp_book$, .1 );
-				
+
 				temp_book$ = UIPartyManager.DoesActivePartyHaveTemplate( "book_glb_lore_altair_3", m_Target$ );
 				temp_book$.Go.Parent.Mind.SDoJob( MakeJobReq( JAT_DROP, JQ_ACTION, QP_FRONT, AO_REFLEX, temp_book$ ) );
 				PostWorldMessage( WE_REQ_DELETE, temp_book$, temp_book$, .1 );
-				
+
 				// reward the player
-				
+
 				SiegePos SpawnPos$;
-					
+
 				GoCloneReq cloneReq$ = MakeGoCloneReq( "gold" );
-				
+
 				SpawnPos$ = m_Target$.go.placement.position;
 				cloneReq$.StartingPos	= SpawnPos$;
-			    
+
 				If( m_Target$.Go.Hasmind )
 				{
 					if( AIQuery.FindSpotRelativeToSource( m_Target$.Go, 1, 1.5, 2.0, m_Target$.Go.Mind.TempPos1 ) )
@@ -138,10 +141,10 @@ state Talk$
 			   		}
 			   	}	
 				cloneReq$.SnapToTerrain = true;
-				
+
 		        Goid gold$ = GoDb.SCloneGo( cloneReq$ );
 		        gold$.Go.Aspect.SetGoldValue(200);
-				
+
 				m_Go$.GetConversation.RSSelectConversation( "conversation_apprentice_two_books" );
 				TryAnim$('talk');
 			} else if ( Victory.IsQuestCompleted( "altair_apprentice_books" ) ) {
@@ -151,19 +154,21 @@ state Talk$
 				m_Go$.GetConversation.RSSelectConversation( "conversation_apprentice" );
 				TryAnim$('talk');
 			}
-		]]		
+		]]
 
 		m_Go$.GetConversation.RSActivateDialogue();
 	}
 }
 
-
-////////////////////////////////////////////////////////////////////////////////
-//	finish blabbing
 state Exiting$
 {
 	event OnEnterState$
 	{
+        if ( face_player$ )
+        {
+            MCPManager.MakeRequest( m_Go$.Goid, PL_FACE );
+        }
+
 		m_Job$.MarkForDeletion();
 	}
 }
