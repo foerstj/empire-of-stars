@@ -53,13 +53,6 @@
 		screen_text = "Fire and brimstone! Thank you, friend! You have saved my job, and maybe my life. Take this gold and my gratitude for your help.";
 	}
 }
-[conversation_archer_guard2]
-{
-	[text*]
-	{
-		screen_text = "Gobbledygook! I hate this shift. I swear that old statue is staring at me. It's named after Thawhorn our founder, but they say it was already up here all by itself when he arrived.";
-	}
-}
 [conversation_bar_f]
 {
 	[text*]
@@ -78,7 +71,7 @@ Here, have some Krug blood wine!";
 	  f scroll_rate = 10.000000;
 	}
 }
-[conversation_book1]
+[conversation_book1_give]
 {
 	[text*]
 	{
@@ -90,7 +83,14 @@ Here, have some Krug blood wine!";
 		screen_text = "Sure is warm up here.";
 	}
 }
-[conversation_book2]
+[conversation_book1_no_quest]
+{
+	[text*]
+	{
+		screen_text = "Gobbledygook! I hate this shift. I swear that old statue is staring at me. It's named after Thawhorn our founder, but they say it was already up here all by itself when he arrived.";
+	}
+}
+[conversation_book2_give]
 {
 	[text*]
 	{
@@ -102,7 +102,7 @@ Here, have some Krug blood wine!";
 		screen_text = "Don't let the door hit you on your way out.";
 	}
 }
-[conversation_book_no_quest]
+[conversation_book2_no_quest]
 {
 	[text*]
 	{
