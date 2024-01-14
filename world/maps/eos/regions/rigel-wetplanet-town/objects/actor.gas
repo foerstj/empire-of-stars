@@ -614,8 +614,8 @@
 	{
 		[conversations]
 		{
-			* = guardsman_after_townsafety;
-			* = guardsman_during_townsafety;
+			* = guardsman_activate;
+			* = guardsman_complete;
 		}
 	}
 	[inventory]
@@ -627,7 +627,7 @@
 	}
 	[mind]
 	{
-		jat_talk = world\ai\jobs\eos\job_talk_rlw_guardsman.skrit;
+		jat_talk = world\ai\jobs\minibits\generic-talk-skrits\job_talk_quest.skrit?talk_anim=tak2&namespace=guardsman&quest=rigel_wet_1_townsafety;
 	}
 	[placement]
 	{
