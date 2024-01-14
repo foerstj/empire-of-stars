@@ -176,7 +176,7 @@
 	}
 	[mind]
 	{
-		jat_talk = world\ai\jobs\eos\job_talk_at_book1.skrit?face_player=false;
+		jat_talk = world\ai\jobs\eos\job_talk_at_book1.skrit?face_back=true;
 	}
 	[placement]
 	{
@@ -280,10 +280,10 @@
 		{
 			* = conversation_lorun_accept_have_money;
 			* = conversation_lorun_accept_no_money;
+			* = conversation_lorun_before_condition;
 			* = conversation_lorun_disband;
 			* = conversation_lorun_disband_rejoin;
 			* = conversation_lorun_join;
-			* = conversation_lorun_before_condition;
 			* = conversation_lorun_reject;
 			* = conversation_lorun_rejoin;
 		}
@@ -741,9 +741,6 @@
 	[mind]
 	{
 	  b actor_auto_fidgets = false;
-	}
-	[mind]
-	{
 		jat_talk = world\ai\jobs\minibits\generic-talk-skrits\job_talk_npc.skrit?face_back=true;
 	}
 	[placement]

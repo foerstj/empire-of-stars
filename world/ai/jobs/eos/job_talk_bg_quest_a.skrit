@@ -12,7 +12,7 @@ property    bool    face_player$    = true  doc = "Face player when starting to 
 
 bool give_stone$( goid target$ )
 {
-	// see if the person we are tying to reward alread has the object in their inventory.
+	// see if the person we are tying to reward already has the object in their inventory.
 	Go item$ = m_Target$.Go.Inventory.GetItemFromTemplate( "starstone_rigel" );
 	if( item$ == null )
 	{

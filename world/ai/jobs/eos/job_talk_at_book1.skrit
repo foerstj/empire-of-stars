@@ -11,6 +11,33 @@ Goid	m_Target$;
 property    bool    face_player$    = true  doc = "Face player when starting to talk";
 
 
+bool give_book$( goid target$ )
+{
+	// see if the person we are tying to reward already has the object in their inventory.
+	Go item$ = m_Target$.Go.Inventory.GetItemFromTemplate( "book_glb_lore_altair_1" );
+	if( item$ == null )
+	{
+		SiegePos SpawnPos$;
+		GoCloneReq cloneReq$ = MakeGoCloneReq( "book_glb_lore_altair_1" );
+		
+		SpawnPos$ = target$.go.placement.position;
+		cloneReq$.StartingPos	= SpawnPos$;
+	    
+		if( target$.Go.Hasmind )
+		{
+			if( AIQuery.FindSpotRelativeToSource( target$.Go, .25, .5, 2.0, target$.Go.Mind.TempPos1 ) )
+	   		{
+	   			cloneReq$.StartingPos = target$.Go.Mind.TempPos1;
+	   		}
+	   	}	
+		cloneReq$.SnapToTerrain = true;
+	    GoDb.SCloneGo( cloneReq$ );
+	    
+	    return true;
+	}
+	return false; 
+}
+
 startup state STARTUP$
 {
 }
@@ -76,35 +103,20 @@ state Talk$
 		[[
 			if( ( Goid.InValidGoid != UIPartyManager.DoesActivePartyHaveTemplate( "book_glb_lore_altair_3", m_Target$ ) ) && !GameAuditor.GetDb.GetBool( "gave_book1" ) )
 			{
+                GameAuditor.GetDb.SetBool( "gave_book1", true );
 				if( m_Target$.IsValid() )
 				{
-					GameAuditor.GetDb.SetBool( "gave_book1", true );
-
-					SiegePos SpawnPos$;
-
-					// make an amulet
-					GoCloneReq cloneReq$ = MakeGoCloneReq( "book_glb_lore_altair_1" );
-
-					SpawnPos$ = m_Target$.go.placement.position;
-					cloneReq$.StartingPos	= SpawnPos$;
-
-					If( m_Target$.Go.Hasmind )
-					{
-						if( AIQuery.FindSpotRelativeToSource( m_Target$.Go, 1, 1.5, 2.0, m_Target$.Go.Mind.TempPos1 ) )
-				   		{
-				   			cloneReq$.StartingPos = m_Target$.Go.Mind.TempPos1;
-				   		}
-				   	}
-					cloneReq$.SnapToTerrain = true;
-			        GoDb.SCloneGo( cloneReq$ );
+                    give_book$( m_Target$ );
 				}
 				m_Go$.GetConversation.RSSelectConversation( "conversation_book1" );
-			} else {
+			}
+            else
+            {
 				m_Go$.GetConversation.RSSelectConversation( "conversation_archer_guard2" );
 			}
-			TryAnim$('talk');
 		]]
 
+        TryAnim$('talk');
 		m_Go$.GetConversation.RSActivateDialogue();
 	}
 }
