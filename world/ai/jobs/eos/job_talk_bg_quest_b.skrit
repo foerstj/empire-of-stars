@@ -7,6 +7,9 @@ Goid	m_Target$;
 #include "k_job_c_mcp_fidget_utils"
 #include "k_job_c_talk_utils"
 
+property    bool    face_player$    = true  doc = "Face player when starting to talk";
+
+
 bool give_stone$( goid target$ )
 {
 	// see if the person we are tying to reward alread has the object in their inventory.
@@ -38,8 +41,6 @@ startup state STARTUP$
 {
 }
 
-////////////////////////////////////////////////////////////////////////////////
-//	init
 event OnJobInitPointers$( Job job$ )
 {
 	m_Job$		= job$;
@@ -54,29 +55,45 @@ event OnJobInit$( Job job$ )
 
 	m_Target$	= job$.GoalObject;
 
-	SetState Talk$;
+    if ( face_player$ )
+    {
+        SetState Face$;
+    }
+    else
+    {
+        SetState Talk$;
+    }
 }
 
-////////////////////////////////////////////////////////////////////////////////
-//	blab blab away... pretend you're Lee on coffee
+state Face$
+{
+	transition
+	{
+		-> Talk$:	OnWorldMessage( WE_MCP_FACING_LOCKEDON );
+	}
+
+	event OnEnterState$
+	{
+		MCPManager.MakeRequest( m_Go$.Goid, PL_FACE, m_Target$ );
+	}
+}
+
 state Talk$
 {
 	transition
 	{
-		-> Exiting$:	OnWorldMessage( WE_REQ_TALK_END ) = 
+		-> Exiting$:	OnWorldMessage( WE_REQ_TALK_END ) =
 		{
 			if( m_Go$.Mind.ActorAutoFidgets )
 			{
 				StartFidgetIfRequired$();
 			}
 		}
-		-> Exiting$:	OnWorldMessage( WE_ANIM_DONE ) =
-		{
-			if( m_Go$.Mind.ActorAutoFidgets )
-			{
-				StartFidgetIfRequired$();
-			}
-		}
+	}
+	
+	trigger OnWorldMessage$( WE_ANIM_DONE )
+	{
+		TryAnim$('talk');
 	}
 
 	event OnEnterState$
@@ -87,10 +104,10 @@ state Talk$
             {
                 m_Go$.GetConversation.RSSelectConversation("quest_b");
 
-				GameAuditor.GetDb.SetBool( "quest_bg_starstone_b_given", true );
+                GameAuditor.GetDb.SetBool( "quest_bg_starstone_b_given", true );
                 // give starstone
-                if( m_Target$.IsValid() ) 
-                {	
+                if( m_Target$.IsValid() )
+                {
                     give_stone$( m_Target$ );
                 }
             }
@@ -98,20 +115,22 @@ state Talk$
             {
                 m_Go$.GetConversation.RSSelectConversation("quest_b_post");
             }
-		]]		
+		]]
 
 		TryAnim$('talk');
 		m_Go$.GetConversation.RSActivateDialogue();
 	}
 }
 
-
-////////////////////////////////////////////////////////////////////////////////
-//	finish blabbing
 state Exiting$
 {
 	event OnEnterState$
 	{
+        if ( face_player$ )
+        {
+            MCPManager.MakeRequest( m_Go$.Goid, PL_FACE );
+        }
+
 		m_Job$.MarkForDeletion();
 	}
 }
