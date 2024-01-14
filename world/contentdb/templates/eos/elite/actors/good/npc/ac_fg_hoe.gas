@@ -1,0 +1,28 @@
+[t:template,n:3W_eos_ac_fg_hoe] { specializes = 3W_eos_ac_fg_hoe_base; }
+[t:template,n:3W_eos_ac_fg_hoe_base]
+{
+	specializes = 3W_base_npc_fg_talk;
+
+	category_name = "3W_townsperson";
+	doc = "mp_townfolk_f_06";
+	[aspect]
+	{
+		[textures]
+		{
+			0 = b_c_gah_fg_skin_07;
+			1 = b_c_pos_a1_061;
+		}
+	}
+	[common]
+	{
+		screen_name = "Townsperson";
+	}
+	[inventory]
+	{
+		custom_head = m_c_gah_fg_hlmt_head-04;
+		[equipment]
+		{
+			es_feet = bo_bo_le_light;
+		}
+	}
+}
