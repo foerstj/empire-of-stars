@@ -109,10 +109,7 @@ state Talk$
 			if( ( Goid.InValidGoid != UIPartyManager.DoesActivePartyHaveTemplate( "book_glb_lore_altair_3", m_Target$ ) ) && !GameAuditor.GetDb.GetBool( "gave_book1" ) )
 			{
                 GameAuditor.GetDb.SetBool( "gave_book1", true );
-				if( m_Target$.IsValid() )
-				{
-                    give_object$( m_Target$, "book_glb_lore_altair_1" );
-				}
+                give_object$( m_Target$, "book_glb_lore_altair_1" );
 				m_Go$.GetConversation.RSSelectConversation( "conversation_book1_give" );
 			}
             else
