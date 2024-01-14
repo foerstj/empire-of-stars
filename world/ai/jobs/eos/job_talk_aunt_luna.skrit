@@ -7,23 +7,17 @@ Goid		m_Target$;
 #include "k_job_c_mcp_fidget_utils"
 #include "k_job_c_talk_utils"
 
+
 startup state STARTUP$
 {
 }
 
-event OnJobInitPointers$( Job job$ )
+event OnJobInit$( Job job$ )
 {
 	m_Job$		= job$;
 	m_Go$		= job$.Go;
 	m_Mind$		= job$.Go.Mind;
 	m_Body$		= job$.Go.Body;
-}
-
-
-event OnJobInit$( Job job$ )
-{
-	OnJobInitPointers$( job$ );
-
 	m_Target$	= job$.GoalObject;
 
 	SetState Face$;
@@ -49,7 +43,6 @@ state Face$
 	}
 }
 
-
 state Talk$
 {
 	transition
@@ -62,7 +55,7 @@ state Talk$
 			}
 		}
 	}
-	
+
 	trigger OnWorldMessage$( WE_ANIM_DONE )
 	{
 		TryAnim$('talk');
@@ -73,24 +66,24 @@ state Talk$
 		m_Go$.GetConversation.RSSelectConversation( "aunt_luna" );
 
 		if ( GameAuditor.GetDb.GetBool( "party_accept_0x4c00080" ) ) {
-			m_Go$.GetConversation.RSSelectConversation( "pm_accept" );
+			m_Go$.GetConversation.RSSelectConversation( "aunt_luna_accept" );
 			GameAuditor.GetDb.SetBool( "party_accept_0x4c00080", false );
 			TryAnim$('talk');
 		} else if ( GameAuditor.GetDb.GetBool( "party_decline_0x4c00080" ) ) {
-			m_Go$.GetConversation.RSSelectConversation( "pm_reject" );
+			m_Go$.GetConversation.RSSelectConversation( "aunt_luna_reject" );
 			GameAuditor.GetDb.SetBool( "party_decline_0x4c00080", false );
 			GameAuditor.GetDb.SetBool( "party_allow_rejoin_0x4c00080", true );
 			TryAnim$('talk');
 		} else if ( GameAuditor.GetDb.GetBool( "party_disband_0x4c00080" ) ) {
-			m_Go$.GetConversation.RSSelectConversation( "pm_disband" );
+			m_Go$.GetConversation.RSSelectConversation( "aunt_luna_disband" );
 			GameAuditor.GetDb.SetBool( "party_disband_0x4c00080", false );
 			GameAuditor.GetDb.SetBool( "party_disbanded_0x4c00080", true );
 			TryAnim$('talk');
 		} else if ( GameAuditor.GetDb.GetBool( "party_disbanded_0x4c00080" ) ) {
-			m_Go$.GetConversation.RSSelectConversation( "pm_rejoin" );			
+			m_Go$.GetConversation.RSSelectConversation( "aunt_luna_disband_rejoin" );
 			TryAnim$('talk');
 		} else if ( GameAuditor.GetDb.GetBool( "party_allow_rejoin_0x4c00080" ) ) {
-			m_Go$.GetConversation.RSSelectConversation( "pm_rejoin" );
+			m_Go$.GetConversation.RSSelectConversation( "aunt_luna_rejoin" );
 			GameAuditor.GetDb.SetBool( "party_allow_rejoin_0x4c00080", false );
 			TryAnim$('talk');
 		}  else {
@@ -109,5 +102,3 @@ state Exiting$
 		m_Job$.MarkForDeletion();
 	}
 }
-
-
