@@ -1,86 +1,105 @@
 // Half-giant hireable soldiers of Aldebaran.
 
-[t:template,n:eos_base_pm_hg]  // = base_pm_giant but with different base class
+[t:template,n:eos_base_pm_hg]
 {
-	specializes = eos_base_hg;
+	specializes = base_pm_giant;
 
-	category_name = "1W_character";
-	doc = "Base template for  giant party members based on the giant.";
-	[actor]
+	[body]
 	{
-		can_level_up = true;
-		race = human;
-	}
-	[aspect]
-	{
-		is_collidable		= true;
-		is_invincible		= false;
-		life_recovery_period = 4;
-		life_recovery_unit = 1;
-		mana_recovery_period = 3;
-		mana_recovery_unit = 1;
+        // override chore dict to have a proper talk animation.
+		[chore_dictionary]
+		{
+			chore_prefix = a_c_gan_hg_fs;
+			[chore_attack]
+			{
+				chore_stances = 0,1,2,3,4,5,6,7,8;
+				skrit = select_attack;
+				[anim_files]
+				{
+					0mid = at;
+					high = at-02;
+					loww = at-03;
+					extr = at-04;
+					qffg = dff;
+				}
 
-		is_collidable		= true;
-		is_invincible		= false;
-		draw_selection_indicator = true;
-	}
-	[attack]
-	{
-		attack_range = 0.5;
-		reload_delay = 0;
-   		damage_max = 0;
-		damage_min = 0;
+		 	  	[anim_durations]
+				{
+					fs0 = 1.250;
+					fs1 = 0.830;
+					fs2 = 0.830;
+					fs3 = 1.250;
+					fs4 = 1.250;
+					fs5 = 1.250;
+					fs6 = 1.000;
+					fs7 = 0.125;
+					fs8 = 1.000;
+				}
 
+			}
+			[chore_default]
+			{
+				chore_stances = 0,1,2,3,4,5,6,7,8;
+				skrit = simple_loop;
+				[anim_files]
+				{
+					00 = dfs;
+				}
+			}
+			[chore_die]
+			{
+				chore_stances = 0,1,2,3,4,5,6,7,8;
+				skrit = select_transition;
+				[anim_files]
+				{
+					00 = di;
+				}
+			}
+			[chore_fidget]
+			{
+				chore_stances = 0,1,2,3,4,5,6,7,8;
+				skrit = select_fidget;
+				[anim_files]
+				{
+					00 = dff;
+					01 = dff-02;
+				}
+			}
+			[chore_magic]
+			{
+				chore_stances = 0,5;
+				skrit = select_attack;
+				[anim_files]
+				{
+					00 = mg;
+					01 = mg-02;
+				}
+			}
+			[chore_misc]
+			{
+				chore_stances = ignore;
+				skrit = select_transition;
+				[anim_files]
+				{
+					drnk = a_c_gan_hg_fs1_dk;
+					frtd = a_c_gan_hg_fs0_dsf;
+					glrn = a_c_gan_hg_fs1_dsf;
+					gtup = a_c_gan_hg_fs0_up;
+					look = a_c_gan_hg_fs1_dsf-02;  // EDITED
+					talk = a_c_gan_hg_fs0_dsf-03;  // EDITED
+				}
+			}
+			[chore_walk]
+			{
+				chore_stances = 0,1,2,3,4,5,6,7,8;
+				skrit = select_walk;
+				[anim_files]
+				{
+					00 = rl;
+				}
+			}
+		}
 	}
-	[common]
-	{
-		auto_expiration_class = never;
-		forced_expiration_class = never;
-		membership = hero;
-	}
-	[inventory]
-	{
-		grid_height = 13;
-		grid_width = 4;
-	}
-	[mind]
-	{
-		actor_auto_defends_others = true;
-		actor_auto_heals_others_life = true;
-		actor_auto_switches_to_karate              = false;
-        actor_auto_switches_to_melee               = false;
-		actor_weapon_preference         = WP_NONE;
-
-		actor_life_ratio_high_threshold = 0.8;
-		actor_life_ratio_low_threshold = 0.5;
-		actor_mana_ratio_high_threshold = 0.8;
-		actor_mana_ratio_low_threshold = 0.5;
-
-		actor_may_attack = true;
-        actor_may_be_attacked = true;
-
-		jat_brain = world\ai\jobs\common\brain_hero.skrit;
-		jat_listen = world\ai\jobs\common\job_listen.skrit;
-		melee_engage_range = 0.9;
-
-		movement_orders = mo_limited;
-		on_enemy_entered_icz_switch_to_melee = false;
-		on_engaged_lost_consciousness_abort_attack = false;
-
-		ranged_engage_range = 5.5;
-		sensor_scan_period = 0.25;
-		sight_range = 12.0;
-	}
-	[physics]
-	{
-		fire_burn_threshold = 9999;
-		fire_effect = human_physics_fire;
-		fire_resistance = 0.0;
-	}
-	[water_effects]
-	{
-	}
-	[store] { can_sell_self = true; }
 }
 
 [t:template,n:ad_hg_hire_base]
