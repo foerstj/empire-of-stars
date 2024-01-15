@@ -1,19 +1,3 @@
-/*
-  ============================================================================
-  ----------------------------------------------------------------------------
-
-	File		: 	job_talk_scholar.skrit
-
-	Author(s)	: 	Eric Tams
-
-	Purpose		: 	Just stand there and talk at anyone we're told to.
-
-	(C)opyright 2000 Gas Powered Games, Inc.
-
-  ----------------------------------------------------------------------------
-  ============================================================================
-*/
-
 Go			m_Go$;
 GoMind		m_Mind$;
 GoBody  	m_Body$;
@@ -23,31 +7,57 @@ Goid		m_Target$;
 #include "k_job_c_mcp_fidget_utils"
 #include "k_job_c_talk_utils"
 
+
+property    bool    face_player$    = true                  doc = "Face player when starting to talk";
+property    bool    face_back$      = false                 doc = "Face back when talk is finished";
+
+
+float actor_X$;
+float actor_Y$;
+float actor_Z$;
+float actor_W$;
+
+
 startup state STARTUP$
 {
 }
 
-////////////////////////////////////////////////////////////////////////////////
-//	init
-event OnJobInitPointers$( Job job$ )
+event OnJobInit$( Job job$ )
 {
 	m_Job$		= job$;
 	m_Go$		= job$.Go;
 	m_Mind$		= job$.Go.Mind;
 	m_Body$		= job$.Go.Body;
-}
-
-event OnJobInit$( Job job$ )
-{
-	OnJobInitPointers$( job$ );
-
 	m_Target$	= job$.GoalObject;
 
-	SetState Talk$;
+    if ( face_player$ )
+    {
+        actor_X$ = m_go$.Placement.Orientation.x;
+		actor_Y$ = m_go$.Placement.Orientation.y;
+		actor_Z$ = m_go$.Placement.Orientation.z;
+		actor_W$ = m_go$.Placement.Orientation.w;
+
+		SetState Face$;
+    }
+    else
+    {
+        SetState Talk$;
+    }
 }
 
-////////////////////////////////////////////////////////////////////////////////
-//	blab blab away... pretend you're Lee
+state Face$
+{
+	transition
+	{
+		-> Talk$:	OnWorldMessage( WE_MCP_FACING_LOCKEDON );
+	}
+
+	event OnEnterState$
+	{
+		MCPManager.MakeRequest( m_Go$.Goid, PL_FACE, m_Target$ );
+	}
+}
+
 state Talk$
 {
 	transition
@@ -60,13 +70,13 @@ state Talk$
 			}
 		}
 	}
-	
+
 	trigger OnWorldMessage$( WE_ANIM_DONE )
 	{
-			if( m_Go$.Mind.ActorAutoFidgets )
-			{
-				StartFidgetIfRequired$();
-			}
+		if( m_Go$.Mind.ActorAutoFidgets )
+		{
+			StartFidgetIfRequired$();
+		}
 	}
 
 	event OnEnterState$
@@ -76,27 +86,30 @@ state Talk$
 			PostWorldMessage( WE_REQ_ACTIVATE, m_Go$.Goid, m_Go$.Goid, 4.0 );
 		}
 		GameAuditor.GetDb.SetBool( "talked_smd_ghost", true);
-		
+
+		m_Go$.GetConversation.RSActivateDialogue();
+
         if( m_Go$.Mind.ActorAutoFidgets )
         {
             StartFidgetIfRequired$();
         }
-		
-		m_Go$.GetConversation.RSActivateDialogue();
 	}
 }
 
-
-////////////////////////////////////////////////////////////////////////////////
-//	finish blabbing
 state Exiting$
 {
 	event OnEnterState$
 	{
-		// $$$ close up any dialogs here...
+        if ( face_player$ )
+        {
+            MCPManager.MakeRequest( m_Go$.Goid, PL_FACE );
+
+            if ( face_back$ )
+            {
+                m_go$.Placement.SSetOrientation( MakeQuat( actor_X$, actor_Y$, actor_Z$, actor_W$));
+            }
+        }
 
 		m_Job$.MarkForDeletion();
 	}
 }
-
-
