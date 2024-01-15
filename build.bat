@@ -45,7 +45,7 @@ if not "%mode%"=="light" (
 )
 if "%mode%"=="light" (
   robocopy "%doc_dsloa%\Bits\world\maps\%map%" "%tmp%\Bits\world\maps\%map%" /E /xd regions
-  for %%r in (betelgeuse-planet-lake betelgeuse-planet-flowerforest2) do (
+  for %%r in (aranna-planet-island) do (
     robocopy "%doc_dsloa%\Bits\world\maps\%map%\regions\%%r" "%tmp%\Bits\world\maps\%map%\regions\%%r" /E
   )
 )
