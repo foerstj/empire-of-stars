@@ -1,32 +1,49 @@
-[t:template,n:tass_base]  // = tass
+[t:template,n:ad_shop_magic] { specializes = ad_shop_magic_base; }
+[t:template,n:ad_shop_magic_base]
 {
+	specializes = eos_base_hg;
+
+    // shop stuff
 	category_name = "1W_shopkeep";
-	doc = "potion-healer, tass (HG)";
-	specializes = base_giant;
-	
+	[aspect]
+	{
+		draw_selection_indicator = TRUE;
+		use_range = 1.0;
+		is_ghost_usable = TRUE;
+	}
+	[conversation]
+	{
+	}
+	[mind]
+	{
+		actor_may_attack = false;
+		actor_may_be_attacked = false;
+		jat_talk = world\ai\jobs\common\job_talk.skrit;
+	}
+	[respawn_shrine]
+	{
+	}
+
+    // looks
 	[actor]
 	{ 
 		portrait_icon = b_gui_ig_i_ic_c_tass; 
 	}
 	[aspect]
 	{
-		draw_selection_indicator = TRUE;
-		use_range = 1.0;
-		is_ghost_usable = TRUE;
+		model = m_c_gan_hg_pos_a2;
 		[textures]
 		{
-			0 = b_c_gan_hg_skin_04;
+			0 = b_c_gan_hg_skin_05;
 			1 = b_c_pos_a2_226;
 		}
-		model = m_c_gan_hg_pos_a2;
 	}
 	[common]
 	{
-		screen_name = "Healer Tass";
+		screen_name = "Magic Shop";
 	}
-	[conversation]
-	{
-	}
+
+    // store content from tass
 	[inventory]
 	{
 		[store_pcontent]
@@ -113,14 +130,6 @@
 			}
 		}
 	}
-	[mind]
-	{
-		actor_may_attack = false;
-		actor_may_be_attacked = false;
-	}
-	[respawn_shrine]
-	{
-	}
 	[store]
 	{
 		item_markup = 2;
@@ -144,29 +153,5 @@
 			spell_fireshot = 1;
 			spell_zap = 1;
 		}
-	}
-}
-
-[t:template,n:ad_shop_magic] { specializes = ad_shop_magic_base; }
-[t:template,n:ad_shop_magic_base]
-{
-	specializes = tass_base;
-
-	[aspect]
-	{
-		model = m_c_gan_hg_pos_a2;
-		[textures]
-		{
-			0 = b_c_gan_hg_skin_05;
-			1 = b_c_pos_a2_226;
-		}
-	}
-	[common]
-	{
-		screen_name = "Magic Shop";
-	}
-	[mind]
-	{
-		jat_talk = world\ai\jobs\common\job_talk.skrit;
 	}
 }

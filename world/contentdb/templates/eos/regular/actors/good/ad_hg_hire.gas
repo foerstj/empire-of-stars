@@ -1,10 +1,93 @@
 // Half-giant hireable soldiers of Aldebaran.
 
+[t:template,n:eos_base_pm_hg]  // = base_pm_giant but with different base class
+{
+	specializes = eos_base_hg;
+
+	category_name = "1W_character";
+	doc = "Base template for  giant party members based on the giant.";
+	[actor]
+	{
+		can_level_up = true;
+		race = human;
+	}
+	[aspect]
+	{
+		is_collidable		= true;
+		is_invincible		= false;
+		life_recovery_period = 4;
+		life_recovery_unit = 1;
+		mana_recovery_period = 3;
+		mana_recovery_unit = 1;
+
+		is_collidable		= true;
+		is_invincible		= false;
+		draw_selection_indicator = true;
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		reload_delay = 0;
+   		damage_max = 0;
+		damage_min = 0;
+
+	}
+	[common]
+	{
+		auto_expiration_class = never;
+		forced_expiration_class = never;
+		membership = hero;
+	}
+	[inventory]
+	{
+		grid_height = 13;
+		grid_width = 4;
+	}
+	[mind]
+	{
+		actor_auto_defends_others = true;
+		actor_auto_heals_others_life = true;
+		actor_auto_switches_to_karate              = false;
+        actor_auto_switches_to_melee               = false;
+		actor_weapon_preference         = WP_NONE;
+
+		actor_life_ratio_high_threshold = 0.8;
+		actor_life_ratio_low_threshold = 0.5;
+		actor_mana_ratio_high_threshold = 0.8;
+		actor_mana_ratio_low_threshold = 0.5;
+
+		actor_may_attack = true;
+        actor_may_be_attacked = true;
+
+		jat_brain = world\ai\jobs\common\brain_hero.skrit;
+		jat_listen = world\ai\jobs\common\job_listen.skrit;
+		melee_engage_range = 0.9;
+
+		movement_orders = mo_limited;
+		on_enemy_entered_icz_switch_to_melee = false;
+		on_engaged_lost_consciousness_abort_attack = false;
+
+		ranged_engage_range = 5.5;
+		sensor_scan_period = 0.25;
+		sight_range = 12.0;
+	}
+	[physics]
+	{
+		fire_burn_threshold = 9999;
+		fire_effect = human_physics_fire;
+		fire_resistance = 0.0;
+	}
+	[water_effects]
+	{
+	}
+	[store] { can_sell_self = true; }
+}
+
 [t:template,n:ad_hg_hire_base]
 {
 	category_name = "1W_character";
 	doc = "Hireable Half-Giant";
-	specializes = base_pm_giant;
+	specializes = eos_base_pm_hg;
 
 	[actor]
 	{
@@ -28,8 +111,6 @@
         {
             [die]		{ priority = high; * = s_v_najj_die; }
         }
-
-        gold_value = 200000;
     }
 	[common]
 	{
@@ -80,9 +161,20 @@
 	}
 }
 
+[t:template,n:ad_hg_hire_base1]
+{
+    specializes = ad_hg_hire_base;
+
+    [aspect]
+    {
+        gold_value = 200000;
+        scale_base = 1;
+    }
+}
+
 [t:template,n:ad_hg_hire_m1]
 {
-	specializes = ad_hg_hire_base;
+	specializes = ad_hg_hire_base1;
 	doc = "Hireable Half-Giant Melee 1";
 
 	[actor]
@@ -117,7 +209,7 @@
 }
 [t:template,n:ad_hg_hire_r1]
 {
-	specializes = ad_hg_hire_base;
+	specializes = ad_hg_hire_base1;
 	doc = "Hireable Half-Giant Ranged 1";
 
 	[actor]
@@ -152,7 +244,7 @@
 }
 [t:template,n:ad_hg_hire_c1]
 {
-	specializes = ad_hg_hire_base;
+	specializes = ad_hg_hire_base1;
 	doc = "Hireable Half-Giant CombatMagic 1";
 
 	[actor]
@@ -198,7 +290,7 @@
 }
 [t:template,n:ad_hg_hire_n1]
 {
-	specializes = ad_hg_hire_base;
+	specializes = ad_hg_hire_base1;
 	doc = "Hireable Half-Giant NatureMagic 1";
 
 	[actor]
@@ -240,6 +332,7 @@
 [t:template,n:ad_hg_hire_base2]
 {
 	specializes = ad_hg_hire_base;
+
     [aspect]
     {
         gold_value = 500000;

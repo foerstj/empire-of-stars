@@ -1,29 +1,45 @@
-[t:template,n:blacksmith_acha_base]  // = blacksmith_acha
+[t:template,n:ad_shop_smith] { specializes = ad_shop_smith_base; }
+[t:template,n:ad_shop_smith_base]
 {
+	specializes = eos_base_hg;
+
+    // shop stuff
 	category_name = "1W_shopkeep";
-	doc = "blacksmith, acha (HG)";
-	specializes = base_giant;
-	[actor] { portrait_icon = b_gui_ig_i_ic_c_acha; }
 	[aspect]
 	{
 		draw_selection_indicator = TRUE;
 		use_range = 1.0;
 		is_ghost_usable = TRUE;
+	}
+	[conversation]
+	{
+	}
+	[mind]
+	{
+		actor_may_attack = false;
+		actor_may_be_attacked = false;
+		jat_talk = world\ai\jobs\common\job_talk.skrit;
+	}
+	[respawn_shrine]
+	{
+	}
+
+    // looks
+	[actor] { portrait_icon = b_gui_ig_i_ic_c_acha; }
+	[aspect]
+	{
 		[textures]
 		{
-			0 = b_c_gan_hg_skin_02;
+			0 = b_c_gan_hg_skin_06;
 			1 = b_c_pos_a1_200;
 		}
 	}
 	[common]
 	{
-		screen_name = "Blacksmith Acha";
+		screen_name = "Smith Shop";
 	}
-	[conversation]
-	{
-	}
-	
-	// This store needs to be balanced for both 4-1 (level 12) and 4-3 (level 14)
+
+    // store content from blacksmith_acha
 	[inventory]
 	{
 		[store_pcontent]
@@ -296,39 +312,8 @@
 			}
 		}
 	}
-	[mind]
-	{
-		actor_may_attack = false;
-		actor_may_be_attacked = false;
-	}
-	[respawn_shrine]
-	{
-	}
 	[store]
 	{
 		item_markup = 2;
-	}
-}
-
-[t:template,n:ad_shop_smith] { specializes = ad_shop_smith_base; }
-[t:template,n:ad_shop_smith_base]
-{
-	specializes = blacksmith_acha_base;
-
-	[aspect]
-	{
-		[textures]
-		{
-			0 = b_c_gan_hg_skin_06;
-			1 = b_c_pos_a1_200;
-		}
-	}
-	[common]
-	{
-		screen_name = "Smith Shop";
-	}
-	[mind]
-	{
-		jat_talk = world\ai\jobs\common\job_talk.skrit;
 	}
 }
