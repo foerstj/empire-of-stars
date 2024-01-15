@@ -10,6 +10,14 @@ Goid		m_Target$;
 
 property    string  namespace$  = "companion"   doc = "Namespace for conversations and flags";
 property    string  oid$                        doc = "Object ID, lower-case hex, no leading zeroes, e.g. 0x17001af";
+property    bool    face_player$    = true                  doc = "Face player when starting to talk";
+property    bool    face_back$      = false                 doc = "Face back when talk is finished";
+
+
+float actor_X$;
+float actor_Y$;
+float actor_Z$;
+float actor_W$;
 
 
 startup state STARTUP$
@@ -24,7 +32,19 @@ event OnJobInit$( Job job$ )
 	m_Body$		= job$.Go.Body;
 	m_Target$	= job$.GoalObject;
 
-	SetState Face$;
+    if ( face_player$ )
+    {
+        actor_X$ = m_go$.Placement.Orientation.x;
+		actor_Y$ = m_go$.Placement.Orientation.y;
+		actor_Z$ = m_go$.Placement.Orientation.z;
+		actor_W$ = m_go$.Placement.Orientation.w;
+
+		SetState Face$;
+    }
+    else
+    {
+        SetState Talk$;
+    }
 }
 
 state Face$
@@ -36,13 +56,6 @@ state Face$
 
 	event OnEnterState$
 	{
-		if( !m_Go$.HasConversation )
-		{
-			report.errorf( "Actor '%s', scid:0x%08x was told to run job_talk but he doesn't have a conversation component.",
-							m_Go$.GetTemplateName,
-							m_Go$.Goid );
-			SetState Exiting$;
-		}
 		MCPManager.MakeRequest( m_Go$.Goid, PL_FACE, m_Target$ );
 	}
 }
@@ -59,7 +72,7 @@ state Talk$
 			}
 		}
 	}
-	
+
 	trigger OnWorldMessage$( WE_ANIM_DONE )
 	{
 		TryAnim$('talk');
@@ -112,10 +125,16 @@ state Exiting$
 {
 	event OnEnterState$
 	{
-		MCPManager.MakeRequest( m_Go$.Goid, PL_FACE );
+        if ( face_player$ )
+        {
+            MCPManager.MakeRequest( m_Go$.Goid, PL_FACE );
+
+            if ( face_back$ )
+            {
+                m_go$.Placement.SSetOrientation( MakeQuat( actor_X$, actor_Y$, actor_Z$, actor_W$));
+            }
+        }
 
 		m_Job$.MarkForDeletion();
 	}
 }
-
-
