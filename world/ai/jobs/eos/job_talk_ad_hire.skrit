@@ -94,9 +94,9 @@ state Talk$
 			GameAuditor.GetDb.SetBool(  MakeStringF( "party_accept_%s", oid$ ), false );
 			m_Go$.GetConversation.RSSelectConversation( "hire_accept_have_money" );
 		}
-		else if ( GameAuditor.GetDb.GetBool( MakeStringF( "%s_accept_no_money", namespace$ ) ) )
+		else if ( GameAuditor.GetDb.GetBool( MakeStringF( "party_accept_no_money_%s", oid$ ) ) )
 		{
-			GameAuditor.GetDb.SetBool( MakeStringF( "%s_accept_no_money", namespace$ ), false );
+			GameAuditor.GetDb.SetBool( MakeStringF( "party_accept_no_money_%s", oid$ ), false );
 			m_Go$.GetConversation.RSSelectConversation( "hire_accept_no_money" );
 		}
 		else if ( GameAuditor.GetDb.GetBool( MakeStringF( "party_decline_%s", oid$ ) ) )
