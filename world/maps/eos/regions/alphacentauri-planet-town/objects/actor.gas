@@ -44,8 +44,8 @@
 	}
 	[mind]
 	{
-		jat_face = jat_none;
 	  b actor_auto_fidgets = false;
+		jat_face = jat_none;
 		jat_talk = world\ai\jobs\minibits\generic-talk-skrits\job_talk_npc.skrit?talk_anim=&face_player=false;
 	}
 	[placement]
@@ -94,6 +94,10 @@
 		{
 			* = mule_merchant_mp;
 		}
+	}
+	[mind]
+	{
+		jat_talk = world\ai\jobs\minibits\generic-talk-skrits\job_talk_npc.skrit?talk_anim=;
 	}
 	[placement]
 	{
@@ -235,8 +239,8 @@
 	}
 	[mind]
 	{
-		jat_face = jat_none;
 	  b actor_auto_fidgets = false;
+		jat_face = jat_none;
 		jat_talk = world\ai\jobs\minibits\generic-talk-skrits\job_talk_npc.skrit?talk_anim=&face_player=false;
 	}
 	[placement]
@@ -466,6 +470,8 @@
 	[aspect]
 	{
 	  i gold_value = 100;
+	  f life = 49;
+	  f mana = 30;
 	  f max_life = 49;
 	  f max_mana = 30;
 	}
@@ -479,13 +485,13 @@
 	{
 		[conversations]
 		{
-			* = laura_join;
-			* = laura_rejoin;
-			* = laura_reject;
-			* = laura_accept_no_money;
 			* = laura_accept_have_money;
+			* = laura_accept_no_money;
 			* = laura_disband;
 			* = laura_disband_rejoin;
+			* = laura_join;
+			* = laura_reject;
+			* = laura_rejoin;
 		}
 	}
 	[mind]
@@ -503,6 +509,8 @@
 	[aspect]
 	{
 	  i gold_value = 100;
+	  f life = 49;
+	  f mana = 30;
 	  f max_life = 49;
 	  f max_mana = 30;
 	}
@@ -518,6 +526,10 @@
 		{
 			* = laura_mp;
 		}
+	}
+	[mind]
+	{
+		jat_talk = world\ai\jobs\minibits\generic-talk-skrits\job_talk_npc.skrit;
 	}
 	[placement]
 	{
