@@ -7,7 +7,8 @@
 		{
 			[*]
 			{
-				action* = send_world_message("we_req_talk_end",0x002001AD,0f,"default","",0), doc("make gom evil");
+				action* = send_world_message("we_req_activate",0x002001AD,0f,"default","",0), doc("wake boss up");
+				action* = send_world_message("we_req_talk_end",0x002001AD,0f,"default","",0), doc("make boss evil");
 			  b can_self_destruct = true;
 				condition* = party_member_within_bounding_box(15.000000,3.000000,15.000000,"on_first_enter"), doc("[*one-shot check (trigger is one-shot)*]");
 			  f delay = 0.000000;
