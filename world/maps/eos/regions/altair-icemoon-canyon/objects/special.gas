@@ -173,18 +173,6 @@
 		bool_variable = "a1_bear_dead_0x3000db";
 	}
 }
-[t:chunks_ice_spire_05,n:0x003000f4]
-{
-	[aspect]
-	{
-	  f scale_multiplier = 0.855129;
-	}
-	[placement]
-	{
-	  q orientation = 0,0.956305,0,-0.292372;
-	  p position = -3.70606,0,-1.62027,0x053c633a;
-	}
-}
 [t:trigger_change_mood_box,n:0x0030019b]
 {
 	[common]
@@ -211,8 +199,19 @@
 	}
 	[placement]
 	{
-	  q orientation = 0,0,0,1;
 	  p position = 0.0567627,4,0.879719,0x4836c119;
+	}
+}
+[t:chunks_ice_spire_05,n:0x003000f4]
+{
+	[aspect]
+	{
+	  f scale_multiplier = 0.855129;
+	}
+	[placement]
+	{
+	  q orientation = 0,0.956305,0,-0.292372;
+	  p position = -3.70606,0,-1.62027,0x053c633a;
 	}
 }
 [t:chunks_ice_spire_03,n:0x003002f5]
@@ -452,6 +451,35 @@
 	  p position = 1.51059,0,2.09359,0xc879b6da;
 	}
 }
+[t:trigger_fade_nodes_box,n:0x00300086]
+{
+	[common]
+	{
+		dev_instance_text = "FADE LIGHT-BLOCKS";
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = fade_nodes(0x00000003,1,99,-1,"out:black");
+			  b can_self_destruct = true;
+				condition* = party_member_within_bounding_box(32.000000,32.000000,8.000000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = true;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  p position = 0.502986,-11.5794,-7.55806,0x094e90ad;
+	}
+}
 [t:trigger_change_mood_box,n:0x0030019c]
 {
 	[common]
@@ -554,34 +582,6 @@
 	  p position = 3.87053,-4,-4.97998,0x8fcb37e1;
 	}
 }
-[t:trigger_change_mood_box,n:0x0030007d]
-{
-	[common]
-	{
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = mood_change("eos_altair_moon_snow_heavy");
-			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(7.000000,2.100000,1.000000,"on_every_enter");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  p position = 1.69974,0,-0.358198,0x031bf4c7;
-	}
-}
 [t:trigger_change_mood_box,n:0x0030017d]
 {
 	[common]
@@ -610,6 +610,34 @@
 	{
 	  q orientation = 0,-0.707107,0,0.707107;
 	  p position = -0.799637,0,1.78238,0x77f735e8;
+	}
+}
+[t:trigger_change_mood_box,n:0x0030007d]
+{
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = mood_change("eos_altair_moon_snow_heavy");
+			  b can_self_destruct = true;
+				condition* = party_member_within_bounding_box(7.000000,2.100000,1.000000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  p position = 1.69974,0,-0.358198,0x031bf4c7;
 	}
 }
 [t:trigger_generic,n:0x003001d3]
