@@ -1,8 +1,32 @@
+[t:template,n:3W_eos_base_krug_dog_skeleton]
+{
+	specializes = 3W_krug_dog_skeleton_base;
+
+    // gotta fix the original krug dog skeleton before using it...
+    [aspect]
+    {
+		material = stone;
+    }
+	[guts_manager]
+	{
+		effect_name = melee_hit_1;
+	}
+    [physics]
+    {
+		fire_effect = human_physics_fire;
+		fire_resistance = 0.0;
+		fire_burn_threshold = 20;
+
+		gib_gore_good = true;
+		break_effect = ;  // no blood_mist thanks
+    }
+}
+
 // krug dog skeleton slightly down-statted, using stats of black wolf
 [t:template,n:3W_eos_smd_krug_dog_skeleton] { specializes = 3W_eos_smd_krug_dog_skeleton_base; }
 [t:template,n:3W_eos_smd_krug_dog_skeleton_base]
 {
-	specializes = 3W_krug_dog_skeleton_base;
+	specializes = 3W_eos_base_krug_dog_skeleton;
 
 	category_name = "3W_evil_d";
 	doc = "krug_dog_skeleton";
