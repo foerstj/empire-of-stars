@@ -52,3 +52,4 @@ A few notes:
 - Ivy-brick keep terrain carpet fixes: Eksevis
 - Black seashore terrain: Eksevis
 - Bookcases in lore library: Sadowson (Eden's End)
+- Mug & mug-drinking animation: Sadowson
