@@ -1,13 +1,13 @@
 # Empire of Stars
-
 A map for Dungeon Siege: Legends of Aranna.
 
+FOSS, CC-BY-SA.
+
+## About
 \- ANCIENT ALIENS -\
 Discover the Real Truth about the Empire of *STARS*!
 
 On this map, you discover that the ancient Empire of Stars was actually an interstellar civilization, connecting distant star systems with powerful teleporters. Travel to other planets, meet lost parts of the Empire, find your missing aunt, and search for a way back home!
-
-FOSS, CC-BY-SA.
 
 With help & content from:
 - Eksevis, Sadowson, Tristanzz, Starfall & Orix from DS Discord,
@@ -15,16 +15,17 @@ With help & content from:
 - Antonio R. (Hi-Res mod),
 - Maps & resources from the original game and Project Britannia.
 
-## Installation
-
-Copy the files into your DS installation folder.\
-Optional resources:
-- DSLOA/EoS-de.dsres: Will be used by German versions of DS to translate texts.
-- DSLOA/EoS-nn.dsres: Non-nude overlay for people irritated by Utraean polygon nudity.
-- Resources/DS_HRT_a_*_fix.dsres: Recommended fixes if you play with HRT mod.
+## Installation & Compatibility
+- This map requires LoA.
+- To install, copy the files into your DSLOA folder.
+- Optional resources:
+  - DSLOA/EoS-de.dsres: Will be used by German versions of DS to translate texts.
+  - DSLOA/EoS-nn.dsres: Non-nude overlay for people irritated by Utraean polygon nudity.
+  - Resources/DS_HRT_a_*_fix.dsres: Recommended fixes if you play with HRT mod.
+- To uninstall, simply remove the files again :)
+- No known incompatibilities. Fix for HRT mod is included.
 
 ## Gameplay
-
 Welcome to the map, and thanks for playing!
 
 A few notes:
@@ -36,7 +37,6 @@ A few notes:
   The middle of the map (after you found Aunt Luna on Betelgeuse) is a bit of a treasure hunt where you search for starstones until you find the one that brings the storyline forward again. So if you feel a bit disoriented after Betelgeuse - don't worry, you're not lost ;)
 
 ## Attribution
-
 - Cats & sheep: Project Britannia
 - Dress of the seeress: Kathy CF
 - Utraeans in white dresses/nude: based on GirlArmor textures
