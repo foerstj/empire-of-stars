@@ -296,6 +296,7 @@ Sadly there are no True Agallans here currently; well, it's off-season, of cours
 	[text*]
 	{
 		activate_quest* = aldebaran_overseer;
+        quest_dialog = true;
 		screen_text = "Welcome to Agalla. Please talk to our Decurio immediately - he must currently be in the Inn.";
 	  f scroll_rate = 10.000000;
 	}
@@ -334,6 +335,7 @@ I'm sure others can tell you more about the history. And if you're really intere
 	[text*]
 	{
 		activate_quest* = find_way_home,2;
+      b quest_dialog = true;
 		choice = more;
 	  i order = 3;
 		screen_text = "Unfortunately, we do not possess the Aranna Starstone. The only Starstone we have is that of Sirius, and our wise Empress has decided not to venture thither anymore after the last battle - too great was the risk of releasing the evil breed of this star to the world again. You see, it basically went like this: During the last Sirian battle, the Reptiloids managed to steal all of our Starstones except that one, but we managed to break their side of the Teleporter. Since then both our worlds are stuck in a stalemate, and all we could do is pray for Ashtar to return.
