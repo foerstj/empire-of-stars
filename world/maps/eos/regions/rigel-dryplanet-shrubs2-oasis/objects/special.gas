@@ -511,7 +511,7 @@
 			[*]
 			{
 				action* = send_world_message("we_req_activate",0x61100957,0f,"default","every",0);
-				action* = send_world_message("we_req_activate",0x07F00050,0f,"default","every",0);
+				action* = send_world_message("we_req_activate",0x00100050,0f,"default","every",0);
 			  b can_self_destruct = true;
 				condition* = receive_world_message("we_req_activate",0,"on_every_message");
 			  f delay = 0.000000;
