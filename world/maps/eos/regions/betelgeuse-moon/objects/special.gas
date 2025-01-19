@@ -497,7 +497,7 @@
 			[*]
 			{
 				action* = send_world_message("we_req_activate",0x07B0000B,0f,"default","every",0);
-				action* = send_world_message("we_req_activate",0x04C002D6,0f,"default","every",0);
+				action* = send_world_message("we_req_activate",0x041002D6,0f,"default","every",0);
 			  b can_self_destruct = true;
 				condition* = receive_world_message("we_req_activate",0,"on_every_message");
 				condition* = has_go_in_inventory("local",0x00000000,"starstone_betelgeuse");
