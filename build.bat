@@ -28,7 +28,7 @@ if not "%mode%"=="light" (
   if "%mode%"=="release" (
     set checks=all
   )
-  venv\Scripts\python -m build.pre_build_checks %map% --check !checks!
+  venv\Scripts\python -m build.pre_build_checks %map% --check !checks! --bits "%bits%"
   if !errorlevel! neq 0 pause
 )
 endlocal
@@ -46,11 +46,11 @@ if "%mode%"=="light" (
   )
 )
 pushd %gaspy%
-venv\Scripts\python -m build.fix_start_positions_required_levels %map% "%tmp%\Bits"
+venv\Scripts\python -m build.fix_start_positions_required_levels %map% --bits "%tmp%\Bits"
 if %errorlevel% neq 0 pause
 setlocal EnableDelayedExpansion
 if "%mode%"=="release" (
-  venv\Scripts\python -m build.add_world_levels %map% "%tmp%\Bits" "%bits%"
+  venv\Scripts\python -m build.add_world_levels %map% --bits "%tmp%\Bits" --template-bits "%bits%"
   if !errorlevel! neq 0 pause
 )
 endlocal
