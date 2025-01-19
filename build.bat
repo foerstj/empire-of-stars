@@ -85,10 +85,21 @@ if not "%mode%"=="light" (
 )
 endlocal
 
+setlocal EnableDelayedExpansion
 if "%mode%"=="release" (
   :: Compile non-nude overlay resource file
-  call "%bits%\build-nn.bat"
+  rmdir /S /Q "%tmp%\Bits"
+  robocopy "%bits%\art" "%tmp%\Bits\art" *-nn.raw /S
+  pushd "%tmp%\Bits\art\bitmaps\characters\body_armor\type1"
+  for %%F in (*-nn.raw) do (
+    set "name=%%F"
+    ren "!name!" "!name:-nn=!"
+  )
+  popd
+  "%tc%\RTC.exe" -source "%tmp%\Bits" -out "%ds%\DSLOA\%map_cs%-nn.dsres" -copyright "%copyright%" -title "%title%" -author "%author%"
+  if !errorlevel! neq 0 pause
 )
+endlocal
 
 :: Cleanup
 rmdir /S /Q "%tmp%\Bits"
