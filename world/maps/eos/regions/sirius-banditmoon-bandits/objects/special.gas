@@ -354,6 +354,35 @@
 	  p position = 2.60143,0,-1.5068,0x9e5d86ef;
 	}
 }
+[t:trigger_generic,n:0x8210015b]
+{
+	[common]
+	{
+		dev_instance_text = "Fade shadow nodes";
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = fade_nodes(0x00000821,0,-1,-1,"out:instant");
+			  b can_self_destruct = true;
+				condition* = party_member_within_sphere(32.000000,"on_every_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  p position = -1.22143,0,0.945529,0x63c8fd64;
+	}
+}
 [t:use_point,n:0x821008f1]
 {
 	[placement]
