@@ -75,10 +75,16 @@ robocopy "%bits%\world\global\effects" "%tmp%\Bits\world\global\effects" minibit
 "%tc%\RTC.exe" -source "%tmp%\Bits" -out "%ds%\DSLOA\%map_cs%.dsres" -copyright "%copyright%" -title "%title%" -author "%author%"
 if %errorlevel% neq 0 pause
 
+setlocal EnableDelayedExpansion
 if not "%mode%"=="light" (
   :: Compile German language resource file
-  call "%bits%\build-de.bat"
+  rmdir /S /Q "%tmp%\Bits"
+  robocopy "%bits%\language" "%tmp%\Bits\language" %res%-*.de.gas minibits-*.de.gas /S
+  "%tc%\RTC.exe" -source "%tmp%\Bits" -out "%ds%\DSLOA\%map_cs%-de.dsres" -copyright "%copyright%" -title "%title%" -author "%author%"
+  if !errorlevel! neq 0 pause
 )
+endlocal
+
 if "%mode%"=="release" (
   :: Compile non-nude overlay resource file
   call "%bits%\build-nn.bat"
