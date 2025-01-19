@@ -1,4 +1,4 @@
-[t:trigger_change_mood_box,n:0x0070000c]
+[t:trigger_change_mood_box,n:0x8110000c]
 {
 	[common]
 	{
@@ -26,14 +26,14 @@
 	  p position = -1.97488,0,0.811456,0x9304933c;
 	}
 }
-[t:use_point,n:0x00700267]
+[t:use_point,n:0x81100267]
 {
 	[placement]
 	{
 	  p position = 11.708,-4.6,-4.21536,0x9590a564;
 	}
 }
-[t:trigger_fade_nodes_global_box,n:0x007002d7]
+[t:trigger_fade_nodes_global_box,n:0x811002d7]
 {
 	[common]
 	{
@@ -41,7 +41,7 @@
 		{
 			[*]
 			{
-				action* = fade_nodes(0xCB9E5310,1,-1,-1,"in"), doc("ce_r1a fadein");
+				action* = fade_nodes(0x00000812,1,-1,-1,"in"), doc("ce_r1a fadein");
 			  b can_self_destruct = true;
 				condition* = party_member_within_bounding_box(1.000000,2.000000,4.000000,"on_every_enter");
 			  f delay = 0.000000;
@@ -62,7 +62,7 @@
 	  p position = 7.40614,-3.121,1.4771,0x9590a564;
 	}
 }
-[t:trigger_fade_nodes_global_box,n:0x007002d8]
+[t:trigger_fade_nodes_global_box,n:0x811002d8]
 {
 	[common]
 	{
@@ -70,7 +70,7 @@
 		{
 			[*]
 			{
-				action* = fade_nodes(0xCB9E5310,1,-1,-1,"out:black"), doc("ce_r1a fadeout");
+				action* = fade_nodes(0x00000812,1,-1,-1,"out:black"), doc("ce_r1a fadeout");
 			  b can_self_destruct = true;
 				condition* = party_member_within_bounding_box(1.000000,2.000000,4.000000,"on_every_enter");
 			  f delay = 0.000000;
@@ -91,7 +91,7 @@
 	  p position = 4.65966,-2.70079,2.43071,0x9590a564;
 	}
 }
-[t:use_point,n:0x007002ad]
+[t:use_point,n:0x811002ad]
 {
 	[placement]
 	{
@@ -99,7 +99,7 @@
 	  p position = -0.252435,-1.04904e-005,-1.65757,0xbd3873f5;
 	}
 }
-[t:trigger_change_mood_box,n:0x0070004e]
+[t:trigger_change_mood_box,n:0x8110004e]
 {
 	[common]
 	{
@@ -128,7 +128,7 @@
 	  p position = -0.184561,2,1.77344,0x6721d37c;
 	}
 }
-[t:trigger_generic,n:0x00700026]
+[t:trigger_generic,n:0x81100026]
 {
 	[common]
 	{
@@ -156,7 +156,7 @@
 	  p position = 0.0160842,0,-1.42166,0xf9e3d3fa;
 	}
 }
-[t:trigger_generic,n:0x00700050]
+[t:trigger_generic,n:0x81100050]
 {
 	[common]
 	{
@@ -164,7 +164,7 @@
 		{
 			[*]
 			{
-				action* = send_world_message("we_req_activate",0x00700057,0f,"default","every",0);
+				action* = send_world_message("we_req_activate",0x81100057,0f,"default","every",0);
 				action* = send_world_message("we_req_activate",0x80100035,0f,"default","every",0);
 			  b can_self_destruct = true;
 				condition* = receive_world_message("we_req_activate",0,"on_every_message");
@@ -186,7 +186,7 @@
 	  p position = 1.43384,0.199999,-1.36168,0xa70662ce;
 	}
 }
-[t:use_point,n:0x007002af]
+[t:use_point,n:0x811002af]
 {
 	[placement]
 	{
@@ -194,7 +194,7 @@
 	  p position = -1.79711,-9.53674e-007,-1.58913,0xb382d28d;
 	}
 }
-[t:use_point,n:0x007002b0]
+[t:use_point,n:0x811002b0]
 {
 	[placement]
 	{
@@ -202,7 +202,7 @@
 	  p position = -1.56874,-9.53674e-007,-0.02951,0xb382d28d;
 	}
 }
-[t:trigger_generic,n:0x0070022b]
+[t:trigger_generic,n:0x8110022b]
 {
 	[common]
 	{
@@ -224,10 +224,10 @@
 			}
 			[*]
 			{
-				action* = fade_nodes(0xCB9E5310,1,1,-1,"out:black"), group(1);
-				action* = fade_nodes(0xAAA90100,1,4,-1,"out:black"), group(1);
-				action* = fade_nodes(0xCB9E5310,1,1,-1,"in"), group(2);
-				action* = fade_nodes(0xAAA90100,1,4,-1,"in"), group(2);
+				action* = fade_nodes(0x00000812,1,1,-1,"out:black"), group(1);
+				action* = fade_nodes(0x00000811,1,4,-1,"out:black"), group(1);
+				action* = fade_nodes(0x00000812,1,1,-1,"in"), group(2);
+				action* = fade_nodes(0x00000811,1,4,-1,"in"), group(2);
 			  b can_self_destruct = true;
 				condition* = party_member_entered_trigger_group("ce_r1_fade_2","on_every_enter"), group(1);
 				condition* = party_member_left_trigger_group("ce_r1_fade_2","on_every_leave"), group(2);
@@ -248,7 +248,7 @@
 	  p position = 0.103812,-11.7008,-4.64928,0xbd285c1e;
 	}
 }
-[t:trigger_change_mood_box,n:0x0070022c]
+[t:trigger_change_mood_box,n:0x8110022c]
 {
 	[common]
 	{
@@ -277,7 +277,7 @@
 	  p position = 0.622065,-11.103,-9.41959,0xbd285c1e;
 	}
 }
-[t:trigger_change_mood_box,n:0x0070022d]
+[t:trigger_change_mood_box,n:0x8110022d]
 {
 	[common]
 	{
@@ -306,7 +306,7 @@
 	  p position = 0.66826,-11.5218,-11.4908,0xbd285c1e;
 	}
 }
-[t:trigger_change_mood_box,n:0x0070022e]
+[t:trigger_change_mood_box,n:0x8110022e]
 {
 	[common]
 	{
@@ -335,7 +335,7 @@
 	  p position = -3.92895,-11.1012,-10.5456,0xbd285c1e;
 	}
 }
-[t:use_point,n:0x0070004f]
+[t:use_point,n:0x8110004f]
 {
 	[placement]
 	{
