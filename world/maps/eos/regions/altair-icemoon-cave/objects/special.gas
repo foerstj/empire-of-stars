@@ -1,4 +1,4 @@
-[t:chunks_ice_02,n:0x00400098]
+[t:chunks_ice_02,n:0x52300098]
 {
 	[placement]
 	{
@@ -6,7 +6,7 @@
 	  p position = 3.7605,9.53674e-007,-0.254763,0xba4e9622;
 	}
 }
-[t:trigger_generic,n:0x0040011c]
+[t:trigger_generic,n:0x5230011c]
 {
 	[common]
 	{
@@ -14,7 +14,7 @@
 		{
 			[*]
 			{
-				action* = send_world_message("we_req_activate",0x0040011B,0f,"default","every",0);
+				action* = send_world_message("we_req_activate",0x5230011B,0f,"default","every",0);
 			  b can_self_destruct = true;
 				condition* = party_member_within_bounding_box(25.000000,5.000000,3.000000,"on_first_enter");
 			  f delay = 0.000000;
@@ -35,7 +35,7 @@
 	  p position = -0.397064,0.811314,1.51334,0x991a42f6;
 	}
 }
-[t:trigger_change_mood_box,n:0x0040002f]
+[t:trigger_change_mood_box,n:0x5230002f]
 {
 	[common]
 	{
@@ -64,7 +64,7 @@
 	  p position = 0.152763,-11.5613,-5.28392,0x42b6c1ae;
 	}
 }
-[t:trigger_generic,n:0x00400118]
+[t:trigger_generic,n:0x52300118]
 {
 	[common]
 	{
@@ -73,7 +73,7 @@
 		{
 			[*]
 			{
-				action* = send_world_message("we_req_activate",0x00400117,0f,"default","every",0);
+				action* = send_world_message("we_req_activate",0x52300117,0f,"default","every",0);
 				action* = change_quest_state("altair_moon","active",0);
 			  b can_self_destruct = true;
 				condition* = party_member_within_bounding_box(3.000000,5.000000,3.000000,"on_first_enter");
@@ -94,7 +94,7 @@
 	  p position = 0.546211,-11.5439,-6.98052,0x42b6c1ae;
 	}
 }
-[t:trigger_generic,n:0x00400119]
+[t:trigger_generic,n:0x52300119]
 {
 	[common]
 	{
@@ -102,7 +102,7 @@
 		{
 			[*]
 			{
-				action* = send_world_message("we_req_activate",0x00400116,0f,"default","every",0);
+				action* = send_world_message("we_req_activate",0x52300116,0f,"default","every",0);
 			  b can_self_destruct = true;
 				condition* = party_member_within_bounding_box(10.000000,5.000000,3.000000,"on_first_enter");
 			  f delay = 0.000000;
@@ -123,14 +123,14 @@
 	  p position = 1.76996,-0.884979,2.17324,0xcc3224f3;
 	}
 }
-[t:chunks_ice_03,n:0x0040009c]
+[t:chunks_ice_03,n:0x5230009c]
 {
 	[placement]
 	{
 	  p position = 0.46735,-4,-0.926815,0xb7f6e2ca;
 	}
 }
-[t:chunks_ice_03,n:0x0040009d]
+[t:chunks_ice_03,n:0x5230009d]
 {
 	[placement]
 	{
@@ -138,7 +138,7 @@
 	  p position = -1.79065,-3.92171,-1.3614,0xb7f6e2ca;
 	}
 }
-[t:chunks_ice_04,n:0x0040009f]
+[t:chunks_ice_04,n:0x5230009f]
 {
 	[placement]
 	{
@@ -146,14 +146,14 @@
 	  p position = 0.987597,-4,-0.0421331,0xb7f6e2ca;
 	}
 }
-[t:chunks_ice_01,n:0x004000a0]
+[t:chunks_ice_01,n:0x523000a0]
 {
 	[placement]
 	{
 	  p position = 0.366008,-4,-1.3691,0xb7f6e2ca;
 	}
 }
-[t:chunks_ice_01,n:0x004000a1]
+[t:chunks_ice_01,n:0x523000a1]
 {
 	[placement]
 	{
@@ -161,21 +161,21 @@
 	  p position = -1.93392,-4,-1.70827,0xb7f6e2ca;
 	}
 }
-[t:chunks_ice_02,n:0x004000a2]
+[t:chunks_ice_02,n:0x523000a2]
 {
 	[placement]
 	{
 	  p position = 0.808888,-4,-1.27528,0xb7f6e2ca;
 	}
 }
-[t:chunks_ice_spire_02,n:0x004000a3]
+[t:chunks_ice_spire_02,n:0x523000a3]
 {
 	[placement]
 	{
 	  p position = -0.0656104,-4,-0.448734,0xb7f6e2ca;
 	}
 }
-[t:chunks_ice_spire_03,n:0x004000a4]
+[t:chunks_ice_spire_03,n:0x523000a4]
 {
 	[placement]
 	{
@@ -183,7 +183,7 @@
 	  p position = -0.8325,-3.96698,-0.759388,0xb7f6e2ca;
 	}
 }
-[t:chunks_ice_spire_04,n:0x004000a5]
+[t:chunks_ice_spire_04,n:0x523000a5]
 {
 	[placement]
 	{
@@ -191,7 +191,7 @@
 	  p position = -0.300384,-4,-1.08659,0xb7f6e2ca;
 	}
 }
-[t:chunks_ice_spire_05,n:0x004000a6]
+[t:chunks_ice_spire_05,n:0x523000a6]
 {
 	[placement]
 	{
@@ -199,7 +199,7 @@
 	  p position = -2.15812,-3.85462,-1.15726,0xb7f6e2ca;
 	}
 }
-[t:chunks_ice_01,n:0x004000af]
+[t:chunks_ice_01,n:0x523000af]
 {
 	[placement]
 	{
@@ -207,7 +207,7 @@
 	  p position = 3.32257,-3.9566,1.19204,0xb7f6e2ca;
 	}
 }
-[t:chunks_ice_01,n:0x004000b0]
+[t:chunks_ice_01,n:0x523000b0]
 {
 	[placement]
 	{
@@ -215,7 +215,7 @@
 	  p position = 2.19511,-3.61045,0.545266,0xb7f6e2ca;
 	}
 }
-[t:chunks_ice_01,n:0x004000b1]
+[t:chunks_ice_01,n:0x523000b1]
 {
 	[placement]
 	{
@@ -223,7 +223,7 @@
 	  p position = 2.56723,-3.6973,0.257306,0xb7f6e2ca;
 	}
 }
-[t:chunks_ice_02,n:0x004000b2]
+[t:chunks_ice_02,n:0x523000b2]
 {
 	[placement]
 	{
@@ -231,7 +231,7 @@
 	  p position = 3.20517,-3.85971,-0.0115578,0xb7f6e2ca;
 	}
 }
-[t:chunks_ice_spire_05,n:0x004000b4]
+[t:chunks_ice_spire_05,n:0x523000b4]
 {
 	[placement]
 	{
@@ -239,7 +239,7 @@
 	  p position = 2.62285,-3.73186,0.11996,0xb7f6e2ca;
 	}
 }
-[t:chunks_ice_spire_04,n:0x004000b5]
+[t:chunks_ice_spire_04,n:0x523000b5]
 {
 	[placement]
 	{
@@ -247,7 +247,7 @@
 	  p position = 3.55716,-4,1.48096,0xb7f6e2ca;
 	}
 }
-[t:chunks_ice_03,n:0x0040009b]
+[t:chunks_ice_03,n:0x5230009b]
 {
 	[placement]
 	{
@@ -255,7 +255,7 @@
 	  p position = -2.46389,3.85,0.130801,0x495749a5;
 	}
 }
-[t:chunks_ice_03,n:0x0040009e]
+[t:chunks_ice_03,n:0x5230009e]
 {
 	[placement]
 	{
@@ -263,7 +263,7 @@
 	  p position = -2.91208,3.85,-2.17118,0x495749a5;
 	}
 }
-[t:chunks_ice_05,n:0x00400095]
+[t:chunks_ice_05,n:0x52300095]
 {
 	[placement]
 	{
@@ -271,7 +271,7 @@
 	  p position = 1.45373,0.268019,1.59608,0x3b4f3733;
 	}
 }
-[t:chunks_ice_05,n:0x00400096]
+[t:chunks_ice_05,n:0x52300096]
 {
 	[placement]
 	{
@@ -279,7 +279,7 @@
 	  p position = 2.32033,-0.649999,1.83801,0x3b4f3733;
 	}
 }
-[t:chunks_ice_04,n:0x00400097]
+[t:chunks_ice_04,n:0x52300097]
 {
 	[placement]
 	{
@@ -287,7 +287,7 @@
 	  p position = 1.05202,-0.650001,1.97613,0x3b4f3733;
 	}
 }
-[t:chunks_ice_01,n:0x00400099]
+[t:chunks_ice_01,n:0x52300099]
 {
 	[placement]
 	{
@@ -295,7 +295,7 @@
 	  p position = -1.57446,-0.649998,3.90108,0x3b4f3733;
 	}
 }
-[t:chunks_ice_03,n:0x0040009a]
+[t:chunks_ice_03,n:0x5230009a]
 {
 	[placement]
 	{
@@ -303,21 +303,21 @@
 	  p position = -2.12736,-0.649998,3.89053,0x3b4f3733;
 	}
 }
-[t:chunks_ice_spire_05,n:0x00400091]
+[t:chunks_ice_spire_05,n:0x52300091]
 {
 	[placement]
 	{
 	  p position = -0.474072,-1,-2.37462,0xaad9f7ad;
 	}
 }
-[t:chunks_ice_spire_03,n:0x00400094]
+[t:chunks_ice_spire_03,n:0x52300094]
 {
 	[placement]
 	{
 	  p position = 0.827439,-0.999999,-3.4078,0xaad9f7ad;
 	}
 }
-[t:chunks_ice_spire_01,n:0x0040008f]
+[t:chunks_ice_spire_01,n:0x5230008f]
 {
 	[placement]
 	{
@@ -325,7 +325,7 @@
 	  p position = 1.70597,0.0354404,-0.207855,0xe00b824c;
 	}
 }
-[t:chunks_ice_spire_04,n:0x00400093]
+[t:chunks_ice_spire_04,n:0x52300093]
 {
 	[placement]
 	{
