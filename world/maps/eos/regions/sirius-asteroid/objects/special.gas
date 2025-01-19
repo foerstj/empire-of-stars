@@ -358,7 +358,7 @@
 			[*]
 			{
 				action* = send_world_message("we_req_activate",0x80100030,0f,"default","every",0);
-				action* = send_world_message("we_req_activate",0x052000CB,0f,"default","every",0);
+				action* = send_world_message("we_req_activate",0x841000CB,0f,"default","every",0);
 			  b can_self_destruct = true;
 				condition* = receive_world_message("we_req_activate",0,"on_every_message");
 				condition* = has_go_in_inventory("local",0x00000000,"starstone_sirius");
@@ -388,7 +388,7 @@
 			[*]
 			{
 				action* = send_world_message("we_req_activate",0x8010002F,0f,"default","every",0);
-				action* = send_world_message("we_req_activate",0x05900068,0f,"default","every",0);
+				action* = send_world_message("we_req_activate",0x82100068,0f,"default","every",0);
 			  b can_self_destruct = true;
 				condition* = receive_world_message("we_req_activate",0,"on_every_message");
 				condition* = has_go_in_inventory("local",0x00000000,"starstone_sirius");
@@ -529,7 +529,7 @@
 			[*]
 			{
 				action* = send_world_message("we_req_activate",0x80100031,0f,"default","every",0);
-				action* = send_world_message("we_req_activate",0x00200954,0f,"default","every",0);
+				action* = send_world_message("we_req_activate",0x83100954,0f,"default","every",0);
 			  b can_self_destruct = true;
 				condition* = receive_world_message("we_req_activate",0,"on_every_message");
 				condition* = has_go_in_inventory("local",0x00000000,"starstone_sirius");

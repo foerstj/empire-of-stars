@@ -1,4 +1,4 @@
-[t:trigger_generic,n:0x05200008]
+[t:trigger_generic,n:0x84100008]
 {
 	[common]
 	{
@@ -7,11 +7,11 @@
 		{
 			[*]
 			{
-				action* = send_world_message("we_req_activate",0x0520012F,0f,"default","",0);
-				action* = send_world_message("we_req_activate",0x05200131,0f,"default","",0);
-				action* = send_world_message("we_req_activate",0x05200133,0f,"default","",0);
-				action* = send_world_message("we_req_activate",0x05200132,0f,"default","",0);
-				action* = send_world_message("we_req_activate",0x05200130,0f,"default","",0);
+				action* = send_world_message("we_req_activate",0x8410012F,0f,"default","",0);
+				action* = send_world_message("we_req_activate",0x84100131,0f,"default","",0);
+				action* = send_world_message("we_req_activate",0x84100133,0f,"default","",0);
+				action* = send_world_message("we_req_activate",0x84100132,0f,"default","",0);
+				action* = send_world_message("we_req_activate",0x84100130,0f,"default","",0);
 			  b can_self_destruct = true;
 				condition* = party_member_within_bounding_box(7.000000,1.000000,1.000000,"on_first_enter"), doc("[*one-shot check (trigger is one-shot)*]");
 			  f delay = 0.000000;
@@ -32,7 +32,7 @@
 	  p position = 1.90312,5.72205e-006,-0.648248,0x028227b0;
 	}
 }
-[t:trigger_generic,n:0x0520010a]
+[t:trigger_generic,n:0x8410010a]
 {
 	[common]
 	{
@@ -41,10 +41,10 @@
 		{
 			[*]
 			{
-				action* = send_world_message("we_req_activate",0x05200068,0f,"default","",0), doc("door1");
-				action* = send_world_message("we_req_activate",0x05200069,0f,"default","",0), delay(0.25), doc("door2");
-				action* = send_world_message("we_req_activate",0x05200111,0f,"default","",0);
-				action* = send_world_message("we_req_activate",0x05200112,0f,"default","",0);
+				action* = send_world_message("we_req_activate",0x84100068,0f,"default","",0), doc("door1");
+				action* = send_world_message("we_req_activate",0x84100069,0f,"default","",0), delay(0.25), doc("door2");
+				action* = send_world_message("we_req_activate",0x84100111,0f,"default","",0);
+				action* = send_world_message("we_req_activate",0x84100112,0f,"default","",0);
 			  b can_self_destruct = true;
 				condition* = party_member_within_bounding_box(10.000000,1.000000,1.000000,"on_first_enter"), doc("[*one-shot check (trigger is one-shot)*]");
 			  f delay = 0.000000;
@@ -64,7 +64,7 @@
 	  p position = 0.21577,0,-0.807597,0x2f379fe6;
 	}
 }
-[t:trigger_generic,n:0x0520006b]
+[t:trigger_generic,n:0x8410006b]
 {
 	[common]
 	{
@@ -73,14 +73,14 @@
 		{
 			[*]
 			{
-				action* = send_world_message("we_req_activate",0x0520012B,0f,"default","",0);
-				action* = send_world_message("we_req_activate",0x0520012A,0f,"default","",0);
-				action* = send_world_message("we_req_activate",0x0520010B,0f,"default","",0);
-				action* = send_world_message("we_req_activate",0x0520010C,0f,"default","",0);
-				action* = send_world_message("we_req_activate",0x0520010D,0f,"default","",0);
-				action* = send_world_message("we_req_activate",0x0520010E,0f,"default","",0);
-				action* = send_world_message("we_req_activate",0x0520010F,0f,"default","",0);
-				action* = send_world_message("we_req_activate",0x05200110,0f,"default","",0);
+				action* = send_world_message("we_req_activate",0x8410012B,0f,"default","",0);
+				action* = send_world_message("we_req_activate",0x8410012A,0f,"default","",0);
+				action* = send_world_message("we_req_activate",0x8410010B,0f,"default","",0);
+				action* = send_world_message("we_req_activate",0x8410010C,0f,"default","",0);
+				action* = send_world_message("we_req_activate",0x8410010D,0f,"default","",0);
+				action* = send_world_message("we_req_activate",0x8410010E,0f,"default","",0);
+				action* = send_world_message("we_req_activate",0x8410010F,0f,"default","",0);
+				action* = send_world_message("we_req_activate",0x84100110,0f,"default","",0);
 			  b can_self_destruct = true;
 				condition* = party_member_within_bounding_box(9.000000,0.500000,1.000000,"on_first_enter"), doc("[*one-shot check (trigger is one-shot)*]");
 			  f delay = 0.000000;
@@ -101,7 +101,7 @@
 	  p position = 0.496693,0,1.53178,0xefa61e45;
 	}
 }
-[t:trigger_generic,n:0x05200190]
+[t:trigger_generic,n:0x84100190]
 {
 	[common]
 	{
@@ -129,21 +129,21 @@
 	  p position = -2.06195,-4,-3.35266,0xc91703b8;
 	}
 }
-[t:use_point,n:0x052000ce]
+[t:use_point,n:0x841000ce]
 {
 	[placement]
 	{
 	  p position = 2.61157,9.53674e-007,-1.91627,0x3ba743c8;
 	}
 }
-[t:use_point,n:0x0520014a]
+[t:use_point,n:0x8410014a]
 {
 	[placement]
 	{
 	  p position = -0.97271,0,1.97658,0x3ba743c8;
 	}
 }
-[t:trigger_generic,n:0x05200049]
+[t:trigger_generic,n:0x84100049]
 {
 	[common]
 	{
@@ -152,7 +152,7 @@
 		{
 			[*]
 			{
-				action* = send_world_message("we_req_activate",0x05200063,0f,"default","",0);
+				action* = send_world_message("we_req_activate",0x84100063,0f,"default","",0);
 			  b can_self_destruct = true;
 				condition* = party_member_within_bounding_box(1.000000,1.000000,5.000000,"on_first_enter"), doc("[*one-shot check (trigger is one-shot)*]");
 			  f delay = 0.000000;
@@ -173,7 +173,7 @@
 	  p position = -3.9701,4,-1.96684,0x1d704884;
 	}
 }
-[t:event_manager,n:0x0520007b]
+[t:event_manager,n:0x8410007b]
 {
 	[common]
 	{
@@ -182,9 +182,9 @@
 		{
 			[*]
 			{
-				action* = send_world_message("we_req_activate",0x0520012C,0f,"default","",0);
-				action* = send_world_message("we_req_activate",0x0520012D,0f,"default","",0);
-				action* = send_world_message("we_req_activate",0x0520012E,0f,"default","",0);
+				action* = send_world_message("we_req_activate",0x8410012C,0f,"default","",0);
+				action* = send_world_message("we_req_activate",0x8410012D,0f,"default","",0);
+				action* = send_world_message("we_req_activate",0x8410012E,0f,"default","",0);
 			  b can_self_destruct = true;
 				condition* = receive_world_message("we_req_activate",0,"on_first_message"), doc("[*one-shot check (trigger is one-shot)*]");
 			  f delay = 0.000000;
@@ -205,7 +205,7 @@
 	  p position = -0.706745,0,0.640869,0xf22a4704;
 	}
 }
-[t:trigger_generic,n:0x052000ca]
+[t:trigger_generic,n:0x841000ca]
 {
 	[common]
 	{
@@ -213,7 +213,7 @@
 		{
 			[*]
 			{
-				action* = send_world_message("we_req_activate",0x052000CB,0f,"default","every",0);
+				action* = send_world_message("we_req_activate",0x841000CB,0f,"default","every",0);
 				action* = send_world_message("we_req_activate",0x80100030,0f,"default","every",0);
 			  b can_self_destruct = true;
 				condition* = receive_world_message("we_req_activate",0,"on_every_message");
@@ -235,14 +235,14 @@
 	  p position = -0.00212288,0.199999,-1.63438,0xb2b4c9cd;
 	}
 }
-[t:use_point,n:0x05200076]
+[t:use_point,n:0x84100076]
 {
 	[placement]
 	{
 	  p position = -0.402678,0.200001,-0.412758,0x1fe29358;
 	}
 }
-[t:trigger_change_mood_box,n:0x0520002a]
+[t:trigger_change_mood_box,n:0x8410002a]
 {
 	[common]
 	{
@@ -271,14 +271,14 @@
 	  p position = 1.28072,0,0.8661,0xae570525;
 	}
 }
-[t:use_point,n:0x0520014b]
+[t:use_point,n:0x8410014b]
 {
 	[placement]
 	{
 	  p position = -0.750448,0,0.363052,0x1d6e5ec1;
 	}
 }
-[t:use_point,n:0x052001a2]
+[t:use_point,n:0x841001a2]
 {
 	[placement]
 	{
@@ -286,28 +286,28 @@
 	  p position = 1.01043,-2,-2.71704,0x73339ea8;
 	}
 }
-[t:use_point,n:0x052001a3]
+[t:use_point,n:0x841001a3]
 {
 	[placement]
 	{
 	  p position = 2.45457,-2,-1.51659,0x73339ea8;
 	}
 }
-[t:use_point,n:0x052001b0]
+[t:use_point,n:0x841001b0]
 {
 	[placement]
 	{
 	  p position = 3.54259,-2,-1.41691,0x73339ea8;
 	}
 }
-[t:use_point,n:0x052002f7]
+[t:use_point,n:0x841002f7]
 {
 	[placement]
 	{
 	  p position = -0.348562,0,0.312508,0xcda0ce26;
 	}
 }
-[t:trigger_generic,n:0x0520011c]
+[t:trigger_generic,n:0x8410011c]
 {
 	[common]
 	{
@@ -316,12 +316,12 @@
 		{
 			[*]
 			{
-				action* = send_world_message("we_req_activate",0x0520011D,0f,"default","",0);
-				action* = send_world_message("we_req_activate",0x0520011E,0f,"default","",0);
-				action* = send_world_message("we_req_activate",0x0520011F,0f,"default","",0);
-				action* = send_world_message("we_req_activate",0x05200120,0f,"default","",0);
-				action* = send_world_message("we_req_activate",0x05200121,0f,"default","",0);
-				action* = send_world_message("we_req_activate",0x05200122,0f,"default","",0);
+				action* = send_world_message("we_req_activate",0x8410011D,0f,"default","",0);
+				action* = send_world_message("we_req_activate",0x8410011E,0f,"default","",0);
+				action* = send_world_message("we_req_activate",0x8410011F,0f,"default","",0);
+				action* = send_world_message("we_req_activate",0x84100120,0f,"default","",0);
+				action* = send_world_message("we_req_activate",0x84100121,0f,"default","",0);
+				action* = send_world_message("we_req_activate",0x84100122,0f,"default","",0);
 			  b can_self_destruct = true;
 				condition* = party_member_within_bounding_box(1.000000,2.000000,5.000000,"on_first_enter"), doc("[*one-shot check (trigger is one-shot)*]");
 			  f delay = 0.000000;
@@ -342,28 +342,28 @@
 	  p position = -0.966583,6,1.95254,0x11346ec4;
 	}
 }
-[t:use_point,n:0x05200230]
+[t:use_point,n:0x84100230]
 {
 	[placement]
 	{
 	  p position = 2.47545,6,-0.660469,0x4a0d7df3;
 	}
 }
-[t:use_point,n:0x05200209]
+[t:use_point,n:0x84100209]
 {
 	[placement]
 	{
 	  p position = -0.658031,6,-1.44894,0x4e57e226;
 	}
 }
-[t:use_point,n:0x0520022f]
+[t:use_point,n:0x8410022f]
 {
 	[placement]
 	{
 	  p position = -0.783378,6,-3.66309,0x4e57e226;
 	}
 }
-[t:trigger_generic,n:0x05200071]
+[t:trigger_generic,n:0x84100071]
 {
 	[common]
 	{
@@ -372,12 +372,12 @@
 		{
 			[*]
 			{
-				action* = send_world_message("we_req_activate",0x0520006A,0f,"default","",0), doc("door1");
-				action* = send_world_message("we_req_activate",0x0520006C,0f,"default","",0), delay(0.25), doc("door2");
-				action* = send_world_message("we_req_activate",0x05200064,0f,"default","",0), doc("door3");
-				action* = send_world_message("we_req_activate",0x05200065,0f,"default","",0), delay(0.25), doc("door4");
-				action* = send_world_message("we_req_activate",0x0520006D,0f,"default","",0);
-				action* = send_world_message("we_req_activate",0x0520006E,0f,"default","",0), delay(0.25);
+				action* = send_world_message("we_req_activate",0x8410006A,0f,"default","",0), doc("door1");
+				action* = send_world_message("we_req_activate",0x8410006C,0f,"default","",0), delay(0.25), doc("door2");
+				action* = send_world_message("we_req_activate",0x84100064,0f,"default","",0), doc("door3");
+				action* = send_world_message("we_req_activate",0x84100065,0f,"default","",0), delay(0.25), doc("door4");
+				action* = send_world_message("we_req_activate",0x8410006D,0f,"default","",0);
+				action* = send_world_message("we_req_activate",0x8410006E,0f,"default","",0), delay(0.25);
 			  b can_self_destruct = true;
 				condition* = party_member_within_bounding_box(5.000000,1.000000,1.000000,"on_first_enter"), doc("[*one-shot check (trigger is one-shot)*]");
 			  f delay = 0.000000;
@@ -392,11 +392,11 @@
 			}
 			[*]
 			{
-				action* = send_world_message("we_req_activate",0x05200136,0f,"default","",0);
-				action* = send_world_message("we_req_activate",0x0520014F,0f,"default","",0);
-				action* = send_world_message("we_req_activate",0x05200150,0f,"default","",0);
-				action* = send_world_message("we_req_activate",0x0520015A,0f,"default","",0);
-				action* = send_world_message("we_req_activate",0x0520015B,0f,"default","",0);
+				action* = send_world_message("we_req_activate",0x84100136,0f,"default","",0);
+				action* = send_world_message("we_req_activate",0x8410014F,0f,"default","",0);
+				action* = send_world_message("we_req_activate",0x84100150,0f,"default","",0);
+				action* = send_world_message("we_req_activate",0x8410015A,0f,"default","",0);
+				action* = send_world_message("we_req_activate",0x8410015B,0f,"default","",0);
 			  b can_self_destruct = true;
 				condition* = party_member_within_bounding_box(5.000000,1.000000,1.000000,"on_first_enter"), doc("[*one-shot check (trigger is one-shot)*]");
 			  f delay = 0.000000;
@@ -417,7 +417,7 @@
 	  p position = -3.96494,4,-0.950783,0xc6eadef8;
 	}
 }
-[t:trigger_generic,n:0x05200169]
+[t:trigger_generic,n:0x84100169]
 {
 	[common]
 	{
@@ -426,8 +426,8 @@
 		{
 			[*]
 			{
-				action* = send_world_message("we_req_activate",0x0520018E,0f,"default","",0);
-				action* = send_world_message("we_req_activate",0x0520018F,0f,"default","",0);
+				action* = send_world_message("we_req_activate",0x8410018E,0f,"default","",0);
+				action* = send_world_message("we_req_activate",0x8410018F,0f,"default","",0);
 			  b can_self_destruct = true;
 				condition* = party_member_within_bounding_box(10.000000,1.000000,1.000000,"on_first_enter"), doc("[*one-shot check (trigger is one-shot)*]");
 			  f delay = 0.000000;
@@ -448,7 +448,7 @@
 	  p position = -1.71396,0,-0.719381,0x7dabdfc1;
 	}
 }
-[t:trigger_generic,n:0x05200119]
+[t:trigger_generic,n:0x84100119]
 {
 	[common]
 	{
@@ -457,14 +457,14 @@
 		{
 			[*]
 			{
-				action* = send_world_message("we_req_activate",0x05200113,0f,"default","",0);
-				action* = send_world_message("we_req_activate",0x05200114,0f,"default","",0);
-				action* = send_world_message("we_req_activate",0x05200115,0f,"default","",0);
-				action* = send_world_message("we_req_activate",0x05200116,0f,"default","",0);
-				action* = send_world_message("we_req_activate",0x05200117,0f,"default","",0);
-				action* = send_world_message("we_req_activate",0x05200118,0f,"default","",0);
-				action* = send_world_message("we_req_activate",0x0520011B,0f,"default","",0);
-				action* = send_world_message("we_req_activate",0x0520011A,0f,"default","",0);
+				action* = send_world_message("we_req_activate",0x84100113,0f,"default","",0);
+				action* = send_world_message("we_req_activate",0x84100114,0f,"default","",0);
+				action* = send_world_message("we_req_activate",0x84100115,0f,"default","",0);
+				action* = send_world_message("we_req_activate",0x84100116,0f,"default","",0);
+				action* = send_world_message("we_req_activate",0x84100117,0f,"default","",0);
+				action* = send_world_message("we_req_activate",0x84100118,0f,"default","",0);
+				action* = send_world_message("we_req_activate",0x8410011B,0f,"default","",0);
+				action* = send_world_message("we_req_activate",0x8410011A,0f,"default","",0);
 			  b can_self_destruct = true;
 				condition* = party_member_within_bounding_box(14.000000,1.000000,1.000000,"on_first_enter"), doc("[*one-shot check (trigger is one-shot)*]");
 			  f delay = 0.000000;
