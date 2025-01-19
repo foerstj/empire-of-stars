@@ -80,7 +80,7 @@ if not "%mode%"=="light" (
   :: Compile German language resource file
   rmdir /S /Q "%tmp%\Bits"
   robocopy "%bits%\language" "%tmp%\Bits\language" %res%-*.de.gas minibits-*.de.gas /S
-  "%tc%\RTC.exe" -source "%tmp%\Bits" -out "%ds%\DSLOA\%map_cs%-de.dsres" -copyright "%copyright%" -title "%title%" -author "%author%"
+  "%tc%\RTC.exe" -source "%tmp%\Bits" -out "%ds%\DSLOA\%map_cs%.de.dsres" -copyright "%copyright%" -title "%title%" -author "%author%"
   if !errorlevel! neq 0 pause
 )
 endlocal
@@ -96,7 +96,7 @@ if "%mode%"=="release" (
     ren "!name!" "!name:-nn=!"
   )
   popd
-  "%tc%\RTC.exe" -source "%tmp%\Bits" -out "%ds%\DSLOA\%map_cs%-nn.dsres" -copyright "%copyright%" -title "%title%" -author "%author%"
+  "%tc%\RTC.exe" -source "%tmp%\Bits" -out "%ds%\DSLOA\%map_cs% non-nude.dsres" -copyright "%copyright%" -title "%title%" -author "%author%"
   if !errorlevel! neq 0 pause
 )
 endlocal

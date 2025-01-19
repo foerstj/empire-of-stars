@@ -19,8 +19,8 @@ With help & content from:
 - This map requires LoA.
 - To install, copy the files into your DSLOA folder.
 - Optional resources:
-  - DSLOA/EoS-de.dsres: Will be used by German versions of DS to translate texts.
-  - DSLOA/EoS-nn.dsres: Non-nude overlay for people irritated by Utraean polygon nudity.
+  - DSLOA/EoS.de.dsres: Will be used by German versions of DS to translate texts.
+  - DSLOA/EoS non-nude.dsres: Non-nude overlay for people irritated by Utraean polygon nudity.
   - Resources/DS_HRT_a_*_fix.dsres: Recommended fixes if you play with HRT mod.
 - To uninstall, simply remove the files again :)
 - No known incompatibilities. Fix for HRT mod is included.
