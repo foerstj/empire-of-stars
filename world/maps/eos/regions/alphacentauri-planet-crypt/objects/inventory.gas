@@ -1,4 +1,4 @@
-[t:potion_health_medium,n:0x06000273]
+[t:potion_health_medium,n:0x21600273]
 {
 	[placement]
 	{
@@ -6,7 +6,7 @@
 	  p position = 0.0230571,-1.3113e-006,0.0486178,0xbbe21764;
 	}
 }
-[t:bo_bo_le_f_g_c_healthy,n:0x06000274]
+[t:bo_bo_le_f_g_c_healthy,n:0x21600274]
 {
 	[placement]
 	{
@@ -14,7 +14,7 @@
 	  p position = -0.041895,-1.2,-0.0670617,0x04e0033f;
 	}
 }
-[t:hm_g_c_1h1m_fun,n:0x06000270]
+[t:hm_g_c_1h1m_fun,n:0x21600270]
 {
 	[placement]
 	{
@@ -22,7 +22,7 @@
 	  p position = 0.002741,-5,-0.411247,0x751a5a45;
 	}
 }
-[t:dg_g_c_1h_fun,n:0x06000271]
+[t:dg_g_c_1h_fun,n:0x21600271]
 {
 	[placement]
 	{
@@ -30,21 +30,21 @@
 	  p position = -0.2958,-5,-0.147876,0x45dc4d7c;
 	}
 }
-[t:potion_health_medium,n:0x0600026b]
+[t:potion_health_medium,n:0x2160026b]
 {
 	[placement]
 	{
 	  p position = -0.202285,0,1.75628,0x6a643324;
 	}
 }
-[t:potion_mana_medium,n:0x0600026c]
+[t:potion_mana_medium,n:0x2160026c]
 {
 	[placement]
 	{
 	  p position = 0.016895,1e-006,-1.65751,0xb37ddae2;
 	}
 }
-[t:book_glb_magic_01,n:0x0600021f]
+[t:book_glb_magic_01,n:0x2160021f]
 {
 	[common]
 	{
@@ -52,7 +52,7 @@
 		{
 			[*]
 			{
-				action* = send_world_message("we_req_activate",0x06000068,0f,"default","",0);
+				action* = send_world_message("we_req_activate",0x21600068,0f,"default","",0);
 			  b can_self_destruct = true;
 				condition* = receive_world_message("we_picked_up",0,"on_first_message"), doc("[*one-shot check (trigger is one-shot)*]");
 			  f delay = 0.000000;
@@ -71,10 +71,10 @@
 	{
 	  q orientation = 0,-0.62932,0,0.777146;
 	  p position = -0.00794963,1.00158,0.00917833,0x1014abcc;
-		use_point_scids = 0x060003ae,0x060003b7,0x060003d8,0x060003d9;
+		use_point_scids = 0x216003ae,0x216003b7,0x216003d8,0x216003d9;
 	}
 }
-[t:hm_g_c_1h1m_avg,n:0x06000263]
+[t:hm_g_c_1h1m_avg,n:0x21600263]
 {
 	[common]
 	{
@@ -82,7 +82,7 @@
 		{
 			[*]
 			{
-				action* = send_world_message("we_req_activate",0x06000028,0f,"default","",0);
+				action* = send_world_message("we_req_activate",0x21600028,0f,"default","",0);
 			  b can_self_destruct = true;
 				condition* = receive_world_message("we_picked_up",0,"on_first_message"), doc("[*one-shot check (trigger is one-shot)*]");
 			  f delay = 0.000000;
@@ -103,14 +103,14 @@
 	  p position = -0.206055,0.1,-0.192749,0x716869ca;
 	}
 }
-[t:potion_health_medium,n:0x0600026d]
+[t:potion_health_medium,n:0x2160026d]
 {
 	[placement]
 	{
 	  p position = -0.003319,0.1,0.06184,0xfc916cda;
 	}
 }
-[t:potion_mana_medium,n:0x0600026e]
+[t:potion_mana_medium,n:0x2160026e]
 {
 	[placement]
 	{
@@ -118,7 +118,7 @@
 	  p position = -0.0150427,-1.3,0.503929,0x2ed088f0;
 	}
 }
-[t:potion_mana_medium,n:0x0600026a]
+[t:potion_mana_medium,n:0x2160026a]
 {
 	[common]
 	{
@@ -126,7 +126,7 @@
 		{
 			[*]
 			{
-				action* = send_world_message("we_req_activate",0x06000059,0f,"default","",0);
+				action* = send_world_message("we_req_activate",0x21600059,0f,"default","",0);
 			  b can_self_destruct = true;
 				condition* = receive_world_message("we_picked_up",0,"on_first_message"), doc("[*one-shot check (trigger is one-shot)*]");
 			  f delay = 0.000000;
@@ -147,7 +147,7 @@
 	  p position = -0.06041,0.1,-0.008679,0x75b2425e;
 	}
 }
-[t:potion_health_medium,n:0x06000269]
+[t:potion_health_medium,n:0x21600269]
 {
 	[common]
 	{
@@ -155,7 +155,7 @@
 		{
 			[*]
 			{
-				action* = send_world_message("we_req_activate",0x06000063,0f,"default","",0);
+				action* = send_world_message("we_req_activate",0x21600063,0f,"default","",0);
 			  b can_self_destruct = true;
 				condition* = receive_world_message("we_picked_up",0,"on_first_message"), doc("[*one-shot check (trigger is one-shot)*]");
 			  f delay = 0.000000;
@@ -176,7 +176,7 @@
 	  p position = -0.069681,0.1,-0.068291,0xc1d51e6b;
 	}
 }
-[t:gold,n:0x0600023e]
+[t:gold,n:0x2160023e]
 {
 	[aspect]
 	{
@@ -189,7 +189,7 @@
 		{
 			[*]
 			{
-				action* = send_world_message("we_req_activate",0x06000188,0f,"default","",0);
+				action* = send_world_message("we_req_activate",0x21600188,0f,"default","",0);
 			  b can_self_destruct = true;
 				condition* = receive_world_message("we_picked_up",0,"on_first_message"), doc("[*one-shot check (trigger is one-shot)*]");
 			  f delay = 0.000000;

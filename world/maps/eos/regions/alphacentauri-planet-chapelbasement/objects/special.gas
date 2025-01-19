@@ -1,4 +1,4 @@
-[t:trigger_generic,n:0x06a0002a]
+[t:trigger_generic,n:0x2130002a]
 {
 	[common]
 	{
@@ -28,7 +28,7 @@
 	  p position = -1.68502,-0.415448,-1.98192,0xa5831284;
 	}
 }
-[t:set_bool,n:0x06a00171]
+[t:set_bool,n:0x21300171]
 {
 	[common]
 	{
@@ -43,7 +43,7 @@
 		bool_variable = "krug_in_hc_r1_dead";
 	}
 }
-[t:trigger_generic,n:0x06a0011d]
+[t:trigger_generic,n:0x2130011d]
 {
 	[common]
 	{
@@ -52,7 +52,7 @@
 		{
 			[*]
 			{
-				action* = send_world_message("we_req_activate",0x06A00171,0f,"default","",0), doc("set bool true");
+				action* = send_world_message("we_req_activate",0x21300171,0f,"default","",0), doc("set bool true");
 				action* = change_quest_state("alphacentauri_chapel","completed",0);
 			  b can_self_destruct = true;
 				condition* = receive_world_message("we_req_activate",0,"on_first_message"), doc("[*one-shot check (trigger is one-shot)*]");
@@ -73,19 +73,19 @@
 	  p position = -1.57662,0,-1.35234,0x489d0983;
 	}
 }
-[t:accumulate_trigger,n:0x06a0011c]
+[t:accumulate_trigger,n:0x2130011c]
 {
 	[generic_accumtrigger]
 	{
 	  i num_til_send = 6;
-	  x send_to_scid = 0x06A0011D;
+	  x send_to_scid = 0x2130011D;
 	}
 	[placement]
 	{
 	  p position = 1.25682,0,0.240712,0xf9a3230e;
 	}
 }
-[t:use_point,n:0x06a0017e]
+[t:use_point,n:0x2130017e]
 {
 	[placement]
 	{
@@ -93,7 +93,7 @@
 	  p position = -4.09078,-1.5,-0.738754,0xa1f4741b;
 	}
 }
-[t:trigger_snd_msg_activate,n:0x06a00038]
+[t:trigger_snd_msg_activate,n:0x21300038]
 {
 	[common]
 	{
@@ -102,7 +102,7 @@
 		{
 			[*]
 			{
-				action* = send_world_message("we_req_activate",0x06A00036,0f,"default","",0);
+				action* = send_world_message("we_req_activate",0x21300036,0f,"default","",0);
 			  b can_self_destruct = true;
 				condition* = party_member_within_bounding_box(0.700000,0.500000,0.700000,"on_every_enter");
 			  f delay = 0.000000;
@@ -117,7 +117,7 @@
 			}
 			[*]
 			{
-				action* = fade_nodes_global(0xACA70000,4,2,-1,"out:black");
+				action* = fade_nodes_global(0x00000213,4,2,-1,"out:black");
 			  b can_self_destruct = true;
 				condition* = receive_world_message("we_req_activate",0,"on_first_message"), doc("[*one-shot check (trigger is one-shot)*]");
 			  f delay = 0.000000;
@@ -137,14 +137,14 @@
 	  p position = 0,6.05,0,0x4c3c2a32;
 	}
 }
-[t:use_point,n:0x06a0017d]
+[t:use_point,n:0x2130017d]
 {
 	[placement]
 	{
 	  p position = -0.387972,6.05,0.0556087,0x4c3c2a32;
 	}
 }
-[t:trigger_snd_msg_activate,n:0x06a0005d]
+[t:trigger_snd_msg_activate,n:0x2130005d]
 {
 	[common]
 	{
@@ -153,10 +153,10 @@
 		{
 			[*]
 			{
-				action* = send_world_message("we_req_activate",0x06A00043,0f,"default","",0);
-				action* = send_world_message("we_req_activate",0x06A0004E,0.5f,"default","",0);
-				action* = send_world_message("we_req_activate",0x06A0004F,0f,"default","",0);
-				action* = send_world_message("we_req_activate",0x06A00042,0f,"default","",0);
+				action* = send_world_message("we_req_activate",0x21300043,0f,"default","",0);
+				action* = send_world_message("we_req_activate",0x2130004E,0.5f,"default","",0);
+				action* = send_world_message("we_req_activate",0x2130004F,0f,"default","",0);
+				action* = send_world_message("we_req_activate",0x21300042,0f,"default","",0);
 			  b can_self_destruct = true;
 				condition* = receive_world_message("we_req_activate",0,"on_first_message"), doc("[*one-shot check (trigger is one-shot)*]");
 			  f delay = 0.000000;
@@ -177,7 +177,7 @@
 	  p position = -0.321912,0,0.701179,0x36bc2f34;
 	}
 }
-[t:use_point,n:0x06a00169]
+[t:use_point,n:0x21300169]
 {
 	[placement]
 	{
@@ -185,21 +185,21 @@
 	  p position = -0.0304012,-1.5,-1.60995,0xfe49fa0b;
 	}
 }
-[t:use_point,n:0x06a0011b]
+[t:use_point,n:0x2130011b]
 {
 	[placement]
 	{
 	  p position = 6.78137,-2,4.53105,0x038e18c0;
 	}
 }
-[t:use_point,n:0x06a00177]
+[t:use_point,n:0x21300177]
 {
 	[placement]
 	{
 	  p position = 2.54754,-2,-1.81959,0x038e18c0;
 	}
 }
-[t:use_point,n:0x06a00172]
+[t:use_point,n:0x21300172]
 {
 	[placement]
 	{
