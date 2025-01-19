@@ -1,4 +1,4 @@
-[t:trigger_generic,n:0x03700829]
+[t:trigger_generic,n:0x41400829]
 {
 	[common]
 	{
@@ -28,7 +28,7 @@
 	  p position = -2.68728,2.98023e-008,-0.129622,0xa316c029;
 	}
 }
-[t:use_point,n:0x03700993]
+[t:use_point,n:0x41400993]
 {
 	[placement]
 	{
@@ -36,7 +36,7 @@
 	  p position = -0.189951,0.118719,-3.25629,0x8dcbc309;
 	}
 }
-[t:use_point,n:0x037008b3]
+[t:use_point,n:0x414008b3]
 {
 	[placement]
 	{
@@ -44,7 +44,7 @@
 	  p position = -0.704681,0.937484,0.615067,0x1a5f6f88;
 	}
 }
-[t:trigger_generic,n:0x03700056]
+[t:trigger_generic,n:0x41400056]
 {
 	[common]
 	{
@@ -72,7 +72,7 @@
 	  p position = 0.0128403,0,-0.616333,0xe285b9cb;
 	}
 }
-[t:trigger_generic,n:0x03700043]
+[t:trigger_generic,n:0x41400043]
 {
 	[common]
 	{
@@ -100,7 +100,7 @@
 	  p position = 0.210274,0,0.191101,0x5f6c318d;
 	}
 }
-[t:trigger_mana_shrine,n:0x0370081d]
+[t:trigger_mana_shrine,n:0x4140081d]
 {
 	[common]
 	{
@@ -108,7 +108,7 @@
 		{
 			[*]
 			{
-				action* = send_world_message("we_req_activate",0x0370085E,0f,"16386","party_member_within_sphere",0), doc("[*labelled condition (party_member_within_sphere)*]");
+				action* = send_world_message("we_req_activate",0x4140085E,0f,"16386","party_member_within_sphere",0), doc("[*labelled condition (party_member_within_sphere)*]");
 			  b can_self_destruct = true;
 				condition* = party_member_within_sphere(1.800000,"on_every_enter");
 			  f delay = 0.000000;
@@ -123,9 +123,9 @@
 			}
 			[*]
 			{
-				action* = when_false send_world_message("we_req_deactivate",0x0370085E,0f,"default","",0);
-				action* = send_world_message("we_req_activate",0x03700826,0f,"default","",0);
-				action* = when_false send_world_message("we_req_deactivate",0x03700826,0f,"default","",0);
+				action* = when_false send_world_message("we_req_deactivate",0x4140085E,0f,"default","",0);
+				action* = send_world_message("we_req_activate",0x41400826,0f,"default","",0);
+				action* = when_false send_world_message("we_req_deactivate",0x41400826,0f,"default","",0);
 			  b can_self_destruct = true;
 				condition* = party_member_within_sphere(1.800000,"while_inside");
 			  f delay = 0.000000;
@@ -145,7 +145,7 @@
 	  p position = 0.0316162,-0.75,-0.0813141,0x8bf94bf6;
 	}
 }
-[t:mana_shrine,n:0x0370085e]
+[t:mana_shrine,n:0x4140085e]
 {
 	[fountain]
 	{
@@ -158,7 +158,7 @@
 	  p position = 0.0241394,-0.0400233,-0.134464,0x8bf94bf6;
 	}
 }
-[t:trigger_generic,n:0x03700054]
+[t:trigger_generic,n:0x41400054]
 {
 	[common]
 	{
@@ -186,7 +186,7 @@
 	  p position = -0.0438309,1.21884,2.45893,0xeb536ccd;
 	}
 }
-[t:trigger_generic,n:0x03700055]
+[t:trigger_generic,n:0x41400055]
 {
 	[common]
 	{

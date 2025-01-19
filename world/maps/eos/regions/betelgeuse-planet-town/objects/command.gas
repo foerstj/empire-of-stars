@@ -1,4 +1,4 @@
-[t:cmd_auto_save,n:0x0410006a]
+[t:cmd_auto_save,n:0x4110006a]
 {
 	[common]
 	{
@@ -7,7 +7,7 @@
 		{
 			[*]
 			{
-				action* = send_world_message("we_req_activate",0x0410006A,0f,"default","every",0);
+				action* = send_world_message("we_req_activate",0x4110006A,0f,"default","every",0);
 			  b can_self_destruct = true;
 				condition* = party_member_within_sphere(10.000000,"on_first_enter");
 			  f delay = 0.000000;

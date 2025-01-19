@@ -1,4 +1,4 @@
-[t:trigger_change_mood_box,n:0x038000b8]
+[t:trigger_change_mood_box,n:0x412000b8]
 {
 	[common]
 	{
@@ -26,7 +26,7 @@
 	  p position = 1.53606,0,-3.12126,0xceb73cf6;
 	}
 }
-[t:trigger_change_mood_box,n:0x038000b9]
+[t:trigger_change_mood_box,n:0x412000b9]
 {
 	[common]
 	{
@@ -54,14 +54,14 @@
 	  p position = 2.45717,0,0.206929,0xceb73cf6;
 	}
 }
-[t:check_quest,n:0x03800014]
+[t:check_quest,n:0x41200014]
 {
 	[check_quest]
 	{
 	  b check_state_greater_than = true;
 		quest_name = "betelgeuse_wiseoldman";
 	  i quest_state = 0;
-	  x send_to_scid = 0x03800018;
+	  x send_to_scid = 0x41200018;
 	}
 	[common]
 	{
@@ -69,7 +69,7 @@
 		{
 			[*]
 			{
-				action* = send_world_message("we_req_activate",0x03800014,0f,"default","every",0);
+				action* = send_world_message("we_req_activate",0x41200014,0f,"default","every",0);
 			  b can_self_destruct = true;
 				condition* = party_member_within_sphere(30.000000,"on_every_enter");
 			  f delay = 0.000000;
@@ -90,7 +90,7 @@
 	  p position = -2.65837,0,-0.291252,0x25dcc5b4;
 	}
 }
-[t:trigger_generic,n:0x03800018]
+[t:trigger_generic,n:0x41200018]
 {
 	[common]
 	{
@@ -98,10 +98,10 @@
 		{
 			[*]
 			{
-				action* = send_world_message("we_req_activate",0x03800017,0f,"default","every",0);
-				action* = send_world_message("we_req_use",0x0380000B,0f,"default","every",0);
-				action* = send_world_message("we_req_activate",0x03800238,0f,"default","every",0);
-				action* = send_world_message("we_req_activate",0x03800239,0f,"default","every",0);
+				action* = send_world_message("we_req_activate",0x41200017,0f,"default","every",0);
+				action* = send_world_message("we_req_use",0x4120000B,0f,"default","every",0);
+				action* = send_world_message("we_req_activate",0x41200238,0f,"default","every",0);
+				action* = send_world_message("we_req_activate",0x41200239,0f,"default","every",0);
 			  b can_self_destruct = true;
 				condition* = receive_world_message("we_req_activate",0,"on_every_message");
 			  f delay = 0.000000;
@@ -122,7 +122,7 @@
 	  p position = -1.66605,0,-1.16956,0x25dcc5b4;
 	}
 }
-[t:trigger_change_mood_box,n:0x038000ad]
+[t:trigger_change_mood_box,n:0x412000ad]
 {
 	[common]
 	{
@@ -151,7 +151,7 @@
 	  p position = 0.630267,-11.6936,-4.59399,0x0cfc0b38;
 	}
 }
-[t:trigger_change_mood_box,n:0x038000b2]
+[t:trigger_change_mood_box,n:0x412000b2]
 {
 	[common]
 	{
@@ -195,7 +195,7 @@
 	  p position = 0.600501,-11.459,-11.4,0x0cfc0b38;
 	}
 }
-[t:use_point,n:0x03800059]
+[t:use_point,n:0x41200059]
 {
 	[placement]
 	{

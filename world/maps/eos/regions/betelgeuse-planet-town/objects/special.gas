@@ -1,4 +1,4 @@
-[t:trigger_fade_node_box,n:0x0410045b]
+[t:trigger_fade_node_box,n:0x4110045b]
 {
 	[common]
 	{
@@ -8,8 +8,8 @@
 			[*]
 			{
 				action* = mood_change("eos_betelgeuse_1");
-				action* = fade_nodes(0xADA20101,3,-1,-1,"in");
-				action* = fade_nodes(0xADA20101,4,-1,-1,"in");
+				action* = fade_nodes(0x00000411,3,-1,-1,"in");
+				action* = fade_nodes(0x00000411,4,-1,-1,"in");
 			  b can_self_destruct = true;
 				condition* = party_member_within_bounding_box(13.000000,1.500000,0.250000,"on_every_enter");
 			  f delay = 0.000000;
@@ -30,7 +30,7 @@
 	  p position = -3.31977,0,1.50765,0xc8d1d0dd;
 	}
 }
-[t:trigger_fade_node_box,n:0x0410045a]
+[t:trigger_fade_node_box,n:0x4110045a]
 {
 	[common]
 	{
@@ -40,8 +40,8 @@
 			[*]
 			{
 				action* = mood_change("eos_betelgeuse_1");
-				action* = fade_nodes(0xADA20101,3,-1,-1,"in");
-				action* = fade_nodes(0xADA20101,4,-1,-1,"in");
+				action* = fade_nodes(0x00000411,3,-1,-1,"in");
+				action* = fade_nodes(0x00000411,4,-1,-1,"in");
 			  b can_self_destruct = true;
 				condition* = party_member_within_bounding_box(13.000000,1.500000,0.250000,"on_every_enter");
 			  f delay = 0.000000;
@@ -62,7 +62,7 @@
 	  p position = 1.24443,0,0.753455,0x69074614;
 	}
 }
-[t:trigger_generic,n:0x041002ab]
+[t:trigger_generic,n:0x411002ab]
 {
 	[common]
 	{
@@ -71,8 +71,8 @@
 		{
 			[*]
 			{
-				action* = send_world_message("we_req_activate",0x041002D6,0f,"default","every",0);
-				action* = send_world_message("we_req_activate",0x07B0000B,0f,"default","every",0);
+				action* = send_world_message("we_req_activate",0x411002D6,0f,"default","every",0);
+				action* = send_world_message("we_req_activate",0x4210000B,0f,"default","every",0);
 			  b can_self_destruct = true;
 				condition* = receive_world_message("we_req_activate",0,"on_every_message");
 				condition* = has_go_in_inventory("local",0x00000000,"starstone_betelgeuse");
@@ -93,14 +93,14 @@
 	  p position = 0.0159628,0.2,-1.588,0x8afaecaf;
 	}
 }
-[t:use_point,n:0x041002df]
+[t:use_point,n:0x411002df]
 {
 	[placement]
 	{
 	  p position = -0.438671,0.2,-0.460969,0x67de5474;
 	}
 }
-[t:trigger_generic,n:0x04100380]
+[t:trigger_generic,n:0x41100380]
 {
 	[common]
 	{
@@ -128,7 +128,7 @@
 	  p position = 1.92778,0,-1.24481,0x6f2fb712;
 	}
 }
-[t:trigger_fade_node_box,n:0x0410045c]
+[t:trigger_fade_node_box,n:0x4110045c]
 {
 	[common]
 	{
@@ -138,8 +138,8 @@
 			[*]
 			{
 				action* = mood_change("eos_betelgeuse_1");
-				action* = fade_nodes(0xADA20101,3,-1,-1,"in");
-				action* = fade_nodes(0xADA20101,4,-1,-1,"in");
+				action* = fade_nodes(0x00000411,3,-1,-1,"in");
+				action* = fade_nodes(0x00000411,4,-1,-1,"in");
 			  b can_self_destruct = true;
 				condition* = party_member_within_bounding_box(6.000000,1.500000,0.250000,"on_every_enter");
 			  f delay = 0.000000;
@@ -160,7 +160,7 @@
 	  p position = -1.12505,-0.107803,1.46099,0x6a7d86ba;
 	}
 }
-[t:trigger_generic,n:0x0410035b]
+[t:trigger_generic,n:0x4110035b]
 {
 	[common]
 	{
@@ -169,7 +169,7 @@
 		{
 			[*]
 			{
-				action* = send_world_message("we_req_activate",0x04100379,0f,"default","every",0);
+				action* = send_world_message("we_req_activate",0x41100379,0f,"default","every",0);
 			  b can_self_destruct = true;
 				condition* = receive_world_message("we_req_activate",0,"on_every_message");
 			  f delay = 0.000000;
@@ -184,7 +184,7 @@
 			}
 			[*]
 			{
-				action* = send_world_message("we_req_activate",0x04100365,0f,"0x4004","party_member_within_sphere",0);
+				action* = send_world_message("we_req_activate",0x41100365,0f,"0x4004","party_member_within_sphere",0);
 				action* = mood_change("eos_betelgeuse_victory");
 			  b can_self_destruct = true;
 				condition* = receive_world_message("we_req_activate",0,"on_every_message");
@@ -206,27 +206,27 @@
 	  p position = 1.55315,0,0.0510559,0x5b2ca1cf;
 	}
 }
-[t:check_bool,n:0x0410035c]
+[t:check_bool,n:0x4110035c]
 {
 	[check_bool]
 	{
 		bool_variable = "eos_victory";
 		message_if_false = we_req_activate;
 		message_if_true = we_req_deactivate;
-	  x send_to_scid = 0x0410035B;
+	  x send_to_scid = 0x4110035B;
 	}
 	[placement]
 	{
 	  p position = 0.761326,0,0.0458777,0x5b2ca1cf;
 	}
 }
-[t:check_quest,n:0x0410035d]
+[t:check_quest,n:0x4110035d]
 {
 	[check_quest]
 	{
 	  b check_complete = true;
 		quest_name = "find_aunt_luna";
-	  x send_to_scid = 0x0410035E;
+	  x send_to_scid = 0x4110035E;
 	}
 	[common]
 	{
@@ -237,13 +237,13 @@
 	  p position = -0.904348,0,0.106911,0x5b2ca1cf;
 	}
 }
-[t:check_quest,n:0x0410035e]
+[t:check_quest,n:0x4110035e]
 {
 	[check_quest]
 	{
 	  b check_complete = true;
 		quest_name = "find_way_home";
-	  x send_to_scid = 0x0410035C;
+	  x send_to_scid = 0x4110035C;
 	}
 	[common]
 	{
@@ -254,7 +254,7 @@
 	  p position = -0.00106621,0,0.123764,0x5b2ca1cf;
 	}
 }
-[t:tutorial_tip,n:0x04100365]
+[t:tutorial_tip,n:0x41100365]
 {
 	[placement]
 	{
@@ -265,7 +265,7 @@
 		tip = "victory";
 	}
 }
-[t:set_bool,n:0x04100379]
+[t:set_bool,n:0x41100379]
 {
 	[placement]
 	{
@@ -276,7 +276,7 @@
 		bool_variable = "eos_victory";
 	}
 }
-[t:trigger_generic,n:0x04100036]
+[t:trigger_generic,n:0x41100036]
 {
 	[common]
 	{
@@ -321,14 +321,14 @@
 	  p position = 1.13165,-1.90735e-006,-0.782204,0xf1671d2a;
 	}
 }
-[t:party_humanoid,n:0x041000bb]
+[t:party_humanoid,n:0x411000bb]
 {
 	[party]
 	{
 		[add_members]
 		{
-		  x * = 0x041000A1;
-		  x * = 0x041000A8;
+		  x * = 0x411000A1;
+		  x * = 0x411000A8;
 		}
 	}
 	[placement]
@@ -337,7 +337,7 @@
 	  p position = 4.21775,-0.05,-2.53806,0x92ad36da;
 	}
 }
-[t:trigger_change_mood_box,n:0x0410037e]
+[t:trigger_change_mood_box,n:0x4110037e]
 {
 	[common]
 	{
@@ -366,7 +366,7 @@
 	  p position = -1.73708,0,-1.84751,0x60460915;
 	}
 }
-[t:trigger_generic,n:0x04100381]
+[t:trigger_generic,n:0x41100381]
 {
 	[common]
 	{
@@ -395,7 +395,7 @@
 	  p position = 1.88354,0,0.128983,0xe9cfbf38;
 	}
 }
-[t:trigger_generic,n:0x04100382]
+[t:trigger_generic,n:0x41100382]
 {
 	[common]
 	{
@@ -425,7 +425,7 @@
 	  p position = -0.372555,2,3.91228,0x846ddd4b;
 	}
 }
-[t:trigger_fade_node_box,n:0x04100360]
+[t:trigger_fade_node_box,n:0x41100360]
 {
 	[common]
 	{
@@ -435,8 +435,8 @@
 			[*]
 			{
 				action* = mood_change("eos_betelgeuse_1");
-				action* = fade_nodes(0xADA20101,3,-1,-1,"in");
-				action* = fade_nodes(0xADA20101,4,-1,-1,"in");
+				action* = fade_nodes(0x00000411,3,-1,-1,"in");
+				action* = fade_nodes(0x00000411,4,-1,-1,"in");
 			  b can_self_destruct = true;
 				condition* = party_member_within_bounding_box(5.000000,1.500000,0.250000,"on_every_enter");
 			  f delay = 0.000000;
@@ -457,7 +457,7 @@
 	  p position = -3.30804,0,-0.0397606,0x1f977cf8;
 	}
 }
-[t:trigger_generic,n:0x0410037f]
+[t:trigger_generic,n:0x4110037f]
 {
 	[common]
 	{
@@ -486,7 +486,7 @@
 	  p position = 1.08159,-0.249998,-1.42303,0x36513d21;
 	}
 }
-[t:trigger_generic,n:0x04100009]
+[t:trigger_generic,n:0x41100009]
 {
 	[common]
 	{
@@ -495,7 +495,7 @@
 		{
 			[*]
 			{
-				action* = send_world_message("we_req_activate",0x0410000F,0f,"default","every",0);
+				action* = send_world_message("we_req_activate",0x4110000F,0f,"default","every",0);
 			  b can_self_destruct = true;
 				condition* = receive_world_message("we_req_activate",0,"on_every_message");
 				condition* = has_go_in_inventory("local",0x00000000,"starstone_aranna");
@@ -511,7 +511,7 @@
 			}
 			[*]
 			{
-				action* = send_world_message("we_req_activate",0x0410000F,0f,"default","every",0);
+				action* = send_world_message("we_req_activate",0x4110000F,0f,"default","every",0);
 			  b can_self_destruct = true;
 				condition* = receive_world_message("we_req_activate",0,"on_every_message");
 				condition* = has_go_in_inventory("local",0x00000000,"starstone_alphacentauri");
@@ -527,7 +527,7 @@
 			}
 			[*]
 			{
-				action* = send_world_message("we_req_activate",0x0410000F,0f,"default","every",0);
+				action* = send_world_message("we_req_activate",0x4110000F,0f,"default","every",0);
 			  b can_self_destruct = true;
 				condition* = receive_world_message("we_req_activate",0,"on_every_message");
 				condition* = has_go_in_inventory("local",0x00000000,"starstone_vega");
@@ -543,7 +543,7 @@
 			}
 			[*]
 			{
-				action* = send_world_message("we_req_activate",0x0410000F,0f,"default","every",0);
+				action* = send_world_message("we_req_activate",0x4110000F,0f,"default","every",0);
 			  b can_self_destruct = true;
 				condition* = receive_world_message("we_req_activate",0,"on_every_message");
 				condition* = has_go_in_inventory("local",0x00000000,"starstone_betelgeuse");
@@ -559,7 +559,7 @@
 			}
 			[*]
 			{
-				action* = send_world_message("we_req_activate",0x0410000F,0f,"default","every",0);
+				action* = send_world_message("we_req_activate",0x4110000F,0f,"default","every",0);
 			  b can_self_destruct = true;
 				condition* = receive_world_message("we_req_activate",0,"on_every_message");
 				condition* = has_go_in_inventory("local",0x00000000,"starstone_altair");
@@ -575,7 +575,7 @@
 			}
 			[*]
 			{
-				action* = send_world_message("we_req_activate",0x0410000F,0f,"default","every",0);
+				action* = send_world_message("we_req_activate",0x4110000F,0f,"default","every",0);
 			  b can_self_destruct = true;
 				condition* = receive_world_message("we_req_activate",0,"on_every_message");
 				condition* = has_go_in_inventory("local",0x00000000,"starstone_rigel");
@@ -591,7 +591,7 @@
 			}
 			[*]
 			{
-				action* = send_world_message("we_req_activate",0x0410000F,0f,"default","every",0);
+				action* = send_world_message("we_req_activate",0x4110000F,0f,"default","every",0);
 			  b can_self_destruct = true;
 				condition* = receive_world_message("we_req_activate",0,"on_every_message");
 				condition* = has_go_in_inventory("local",0x00000000,"starstone_aldebaran");
@@ -607,7 +607,7 @@
 			}
 			[*]
 			{
-				action* = send_world_message("we_req_activate",0x0410000F,0f,"default","every",0);
+				action* = send_world_message("we_req_activate",0x4110000F,0f,"default","every",0);
 			  b can_self_destruct = true;
 				condition* = receive_world_message("we_req_activate",0,"on_every_message");
 				condition* = has_go_in_inventory("local",0x00000000,"starstone_sirius");
@@ -628,7 +628,7 @@
 	  p position = 21.5421,0.299999,-5.90308,0x924a6f5b;
 	}
 }
-[t:trigger_generic,n:0x0410000f]
+[t:trigger_generic,n:0x4110000f]
 {
 	[common]
 	{
@@ -637,7 +637,7 @@
 		{
 			[*]
 			{
-				action* = send_world_message("we_req_activate",0x0410002F,0f,"default","",0);
+				action* = send_world_message("we_req_activate",0x4110002F,0f,"default","",0);
 				action* = send_world_message("we_req_activate",0x07F00065,0f,"default","",0);
 			  b can_self_destruct = true;
 				condition* = receive_world_message("we_req_activate",0,"on_every_message");
@@ -658,7 +658,7 @@
 	  p position = 18.764,0.299997,-5.96303,0x924a6f5b;
 	}
 }
-[t:use_point,n:0x041002cc]
+[t:use_point,n:0x411002cc]
 {
 	[placement]
 	{
@@ -666,7 +666,7 @@
 	  p position = -2.5108,0,1.2154,0x5282ca87;
 	}
 }
-[t:life_shrine,n:0x0410027a]
+[t:life_shrine,n:0x4110027a]
 {
 	[fountain]
 	{
@@ -680,7 +680,7 @@
 	  p position = 0.0421171,-0.514546,0.0247498,0x7d1ab6c7;
 	}
 }
-[t:trigger_health_shrine,n:0x0410044a]
+[t:trigger_health_shrine,n:0x4110044a]
 {
 	[common]
 	{
@@ -688,7 +688,7 @@
 		{
 			[*]
 			{
-				action* = send_world_message("we_req_activate",0x0410027A,0f,"16386","party_member_within_sphere",0), doc("[*labelled condition (party_member_within_sphere)*]");
+				action* = send_world_message("we_req_activate",0x4110027A,0f,"16386","party_member_within_sphere",0), doc("[*labelled condition (party_member_within_sphere)*]");
 			  b can_self_destruct = true;
 				condition* = party_member_within_sphere(1.400000,"on_every_enter");
 			  f delay = 0.000000;
@@ -703,9 +703,9 @@
 			}
 			[*]
 			{
-				action* = when_false send_world_message("we_req_deactivate",0x0410027A,0f,"default","",0);
-				action* = send_world_message("we_req_activate",0x04100279,0f,"default","",0);
-				action* = when_false send_world_message("we_req_deactivate",0x04100279,0f,"default","",0);
+				action* = when_false send_world_message("we_req_deactivate",0x4110027A,0f,"default","",0);
+				action* = send_world_message("we_req_activate",0x41100279,0f,"default","",0);
+				action* = when_false send_world_message("we_req_deactivate",0x41100279,0f,"default","",0);
 			  b can_self_destruct = true;
 				condition* = party_member_within_sphere(1.400000,"while_inside");
 			  f delay = 0.000000;
@@ -725,7 +725,7 @@
 	  p position = 0.00796986,-1.16218,0.0472317,0x7d1ab6c7;
 	}
 }
-[t:trigger_generic,n:0x04100383]
+[t:trigger_generic,n:0x41100383]
 {
 	[common]
 	{
@@ -755,7 +755,7 @@
 	  p position = -7.93665,4,2.08989,0x59bebbac;
 	}
 }
-[t:trigger_generic,n:0x04100384]
+[t:trigger_generic,n:0x41100384]
 {
 	[common]
 	{
@@ -785,7 +785,7 @@
 	  p position = 7.40269,-4,-2.05259,0x59bebbac;
 	}
 }
-[t:trigger_change_mood_box,n:0x04100388]
+[t:trigger_change_mood_box,n:0x41100388]
 {
 	[common]
 	{
@@ -814,7 +814,7 @@
 	  p position = 1.70553,-1.84709,-5.36875,0xf6585b3a;
 	}
 }
-[t:trigger_change_mood_box,n:0x04100449]
+[t:trigger_change_mood_box,n:0x41100449]
 {
 	[common]
 	{
@@ -843,14 +843,14 @@
 	  p position = -1.62684,1.29994,0.0763149,0xf6585b3a;
 	}
 }
-[t:use_point,n:0x0410029a]
+[t:use_point,n:0x4110029a]
 {
 	[placement]
 	{
 	  p position = -0.536598,0,0.957863,0x2b7854bf;
 	}
 }
-[t:trigger_fade_node_box,n:0x04100459]
+[t:trigger_fade_node_box,n:0x41100459]
 {
 	[common]
 	{
@@ -860,8 +860,8 @@
 			[*]
 			{
 				action* = mood_change("eos_betelgeuse_1");
-				action* = fade_nodes(0xADA20101,3,-1,-1,"in");
-				action* = fade_nodes(0xADA20101,4,-1,-1,"in");
+				action* = fade_nodes(0x00000411,3,-1,-1,"in");
+				action* = fade_nodes(0x00000411,4,-1,-1,"in");
 			  b can_self_destruct = true;
 				condition* = party_member_within_bounding_box(4.000000,1.500000,0.250000,"on_every_enter");
 			  f delay = 0.000000;
@@ -882,14 +882,14 @@
 	  p position = 0.537902,0,-0.219093,0xf8ee7839;
 	}
 }
-[t:use_point,n:0x04100007]
+[t:use_point,n:0x41100007]
 {
 	[placement]
 	{
 	  p position = 1.20289,0.0999994,0.390825,0x6acff027;
 	}
 }
-[t:use_point,n:0x04100008]
+[t:use_point,n:0x41100008]
 {
 	[placement]
 	{

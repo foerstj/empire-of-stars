@@ -1,4 +1,4 @@
-[t:trigger_generic,n:0x04d00736]
+[t:trigger_generic,n:0x41500736]
 {
 	[common]
 	{
@@ -27,7 +27,7 @@
 	  p position = 2.89643,0,-1.10654,0x55d40e47;
 	}
 }
-[t:trigger_generic,n:0x04d00130]
+[t:trigger_generic,n:0x41500130]
 {
 	[common]
 	{
@@ -56,7 +56,7 @@
 	  p position = 0.232424,0,0.830837,0x1f529eb0;
 	}
 }
-[t:use_point,n:0x04d004c5]
+[t:use_point,n:0x415004c5]
 {
 	[placement]
 	{
@@ -64,7 +64,7 @@
 	  p position = -1.89584,0,3.60837,0xac545aee;
 	}
 }
-[t:use_point,n:0x04d004c7]
+[t:use_point,n:0x415004c7]
 {
 	[placement]
 	{
@@ -72,7 +72,7 @@
 	  p position = -0.00955772,-0.95,0.504333,0xafbdaa35;
 	}
 }
-[t:trigger_generic,n:0x04d0077c]
+[t:trigger_generic,n:0x4150077c]
 {
 	[common]
 	{
@@ -102,7 +102,7 @@
 	  p position = -3.08452,0,1.53849,0xadcf134b;
 	}
 }
-[t:trigger_health_shrine,n:0x04d004d2]
+[t:trigger_health_shrine,n:0x415004d2]
 {
 	[common]
 	{
@@ -110,7 +110,7 @@
 		{
 			[*]
 			{
-				action* = send_world_message("we_req_activate",0x04D004D5,0f,"16386","party_member_within_sphere",0), doc("[*labelled condition (party_member_within_sphere)*]");
+				action* = send_world_message("we_req_activate",0x415004D5,0f,"16386","party_member_within_sphere",0), doc("[*labelled condition (party_member_within_sphere)*]");
 			  b can_self_destruct = true;
 				condition* = party_member_within_sphere(1.300000,"on_every_enter");
 			  f delay = 0.000000;
@@ -125,9 +125,9 @@
 			}
 			[*]
 			{
-				action* = when_false send_world_message("we_req_deactivate",0x04D004D5,0f,"default","",0);
-				action* = send_world_message("we_req_activate",0x04D004D4,0f,"default","",0);
-				action* = when_false send_world_message("we_req_deactivate",0x04D004D4,0f,"default","",0);
+				action* = when_false send_world_message("we_req_deactivate",0x415004D5,0f,"default","",0);
+				action* = send_world_message("we_req_activate",0x415004D4,0f,"default","",0);
+				action* = when_false send_world_message("we_req_deactivate",0x415004D4,0f,"default","",0);
 			  b can_self_destruct = true;
 				condition* = party_member_within_sphere(1.300000,"while_inside");
 			  f delay = 0.000000;
@@ -147,7 +147,7 @@
 	  p position = 0.0401688,-1.16517,-0.0083847,0x744c06d5;
 	}
 }
-[t:life_shrine,n:0x04d004d5]
+[t:life_shrine,n:0x415004d5]
 {
 	[fountain]
 	{
@@ -161,7 +161,7 @@
 	  p position = -0.00757217,-0.404982,-0.0164261,0x744c06d5;
 	}
 }
-[t:trigger_generic,n:0x04d00723]
+[t:trigger_generic,n:0x41500723]
 {
 	[common]
 	{
@@ -190,7 +190,7 @@
 	  p position = -3.95282,-0.472583,1.13944,0x5ece8e8b;
 	}
 }
-[t:trigger_generic,n:0x04d00735]
+[t:trigger_generic,n:0x41500735]
 {
 	[common]
 	{
@@ -219,7 +219,7 @@
 	  p position = 3.79284,-1.54494,-1.06399,0x8e179a1f;
 	}
 }
-[t:trigger_generic,n:0x04d00724]
+[t:trigger_generic,n:0x41500724]
 {
 	[common]
 	{
@@ -248,7 +248,7 @@
 	  p position = -2.51935,0.80387,-3.62347,0xde618e48;
 	}
 }
-[t:trigger_generic,n:0x04d0072d]
+[t:trigger_generic,n:0x4150072d]
 {
 	[common]
 	{
@@ -277,7 +277,7 @@
 	  p position = -0.509092,0.263868,-3.83221,0xde618e48;
 	}
 }
-[t:trigger_generic,n:0x04d0011d]
+[t:trigger_generic,n:0x4150011d]
 {
 	[common]
 	{
@@ -306,7 +306,7 @@
 	  p position = 2.87859,-1,2.0358,0xec7023ae;
 	}
 }
-[t:trigger_generic,n:0x04d00209]
+[t:trigger_generic,n:0x41500209]
 {
 	[common]
 	{
@@ -334,7 +334,7 @@
 	  p position = 3.82009,0,0.874233,0x3f0306ac;
 	}
 }
-[t:blocking_object,n:0x04d000eb]
+[t:blocking_object,n:0x415000eb]
 {
 	[placement]
 	{
@@ -342,7 +342,7 @@
 	  p position = 6.79259,-17.85,-1.34977,0x359392e8;
 	}
 }
-[t:blocking_object,n:0x04d0001a]
+[t:blocking_object,n:0x4150001a]
 {
 	[placement]
 	{
@@ -350,7 +350,7 @@
 	  p position = -1.43031,0,0.952587,0x1b7fe444;
 	}
 }
-[t:trigger_generic,n:0x04d00208]
+[t:trigger_generic,n:0x41500208]
 {
 	[common]
 	{
@@ -379,7 +379,7 @@
 	  p position = 1.48276,0.651879,1.7594,0x4ac8b15f;
 	}
 }
-[t:trigger_generic,n:0x04d004c9]
+[t:trigger_generic,n:0x415004c9]
 {
 	[common]
 	{
@@ -423,7 +423,7 @@
 	  p position = -1.16731,0,0.887802,0x14f96e15;
 	}
 }
-[t:use_point,n:0x04d004c6]
+[t:use_point,n:0x415004c6]
 {
 	[placement]
 	{
@@ -431,14 +431,14 @@
 	  p position = 0.0553741,-0.95,0.482721,0x387a8ad3;
 	}
 }
-[t:party_humanoid,n:0x04d0011c]
+[t:party_humanoid,n:0x4150011c]
 {
 	[party]
 	{
 		[add_members]
 		{
-		  x * = 0x04D005FE;
-		  x * = 0x04D00200;
+		  x * = 0x415005FE;
+		  x * = 0x41500200;
 		}
 	}
 	[placement]
@@ -447,7 +447,7 @@
 	  p position = 0.189628,0,1.90099,0x1b0f5416;
 	}
 }
-[t:use_point,n:0x04d004d1]
+[t:use_point,n:0x415004d1]
 {
 	[placement]
 	{
