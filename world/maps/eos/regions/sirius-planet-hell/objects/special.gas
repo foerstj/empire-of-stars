@@ -1,4 +1,4 @@
-[t:trigger_generic,n:0x00200228]
+[t:trigger_generic,n:0x00500228]
 {
 	[common]
 	{
@@ -7,8 +7,8 @@
 		{
 			[*]
 			{
-				action* = send_world_message("we_req_activate",0x002001AD,0f,"default","",0), doc("wake boss up");
-				action* = send_world_message("we_req_talk_end",0x002001AD,0f,"default","",0), doc("make boss evil");
+				action* = send_world_message("we_req_activate",0x005001AD,0f,"default","",0), doc("wake boss up");
+				action* = send_world_message("we_req_talk_end",0x005001AD,0f,"default","",0), doc("make boss evil");
 			  b can_self_destruct = true;
 				condition* = party_member_within_bounding_box(15.000000,3.000000,15.000000,"on_first_enter"), doc("[*one-shot check (trigger is one-shot)*]");
 			  f delay = 0.000000;
@@ -43,14 +43,14 @@
 	  p position = -0.88652,4.73779,-10.8285,0x02355ebf;
 	}
 }
-[t:interest_point,n:0x00200230]
+[t:interest_point,n:0x00500230]
 {
 	[placement]
 	{
 	  p position = 0.218353,2.66341,3.77518,0x02355ebf;
 	}
 }
-[t:blocking_object,n:0x0020002c]
+[t:blocking_object,n:0x0050002c]
 {
 	[aspect]
 	{
@@ -62,7 +62,7 @@
 	  p position = 2.46559,-2.27895,0.563213,0xc9bc7ba4;
 	}
 }
-[t:blocking_object,n:0x0020002e]
+[t:blocking_object,n:0x0050002e]
 {
 	[aspect]
 	{
@@ -74,7 +74,7 @@
 	  p position = -2.26545,-2.28379,0.386786,0xc9bc7ba4;
 	}
 }
-[t:trigger_generic,n:0x0020009c]
+[t:trigger_generic,n:0x0050009c]
 {
 	[common]
 	{
@@ -82,11 +82,11 @@
 		{
 			[*]
 			{
-				action* = send_world_message("we_req_activate",0x00200099,0f,"default","every",0);
-				action* = send_world_message("we_req_activate",0x0020009A,0f,"default","every",0);
-				action* = send_world_message("we_req_activate",0x0020002F,0f,"default","every",0);
-				action* = send_world_message("we_req_activate",0x00200030,0f,"default","every",0);
-				action* = send_world_message("we_req_activate",0x00200031,0f,"default","every",0);
+				action* = send_world_message("we_req_activate",0x00500099,0f,"default","every",0);
+				action* = send_world_message("we_req_activate",0x0050009A,0f,"default","every",0);
+				action* = send_world_message("we_req_activate",0x0050002F,0f,"default","every",0);
+				action* = send_world_message("we_req_activate",0x00500030,0f,"default","every",0);
+				action* = send_world_message("we_req_activate",0x00500031,0f,"default","every",0);
 			  b can_self_destruct = true;
 				condition* = receive_world_message("we_req_activate",0,"on_every_message");
 			  f delay = 0.000000;
@@ -106,7 +106,7 @@
 	  p position = -0.0893684,-2.3,-1.55089,0xc9bc7ba4;
 	}
 }
-[t:blocking_object,n:0x002001ef]
+[t:blocking_object,n:0x005001ef]
 {
 	[common]
 	{
@@ -118,7 +118,7 @@
 	  p position = -6.62822,-3.6,-9.63496,0xc9bc7ba4;
 	}
 }
-[t:blocking_object,n:0x00200208]
+[t:blocking_object,n:0x00500208]
 {
 	[common]
 	{
@@ -130,7 +130,7 @@
 	  p position = 5.20754,-3.6,-10.182,0xc9bc7ba4;
 	}
 }
-[t:trigger_generic,n:0x0020021a]
+[t:trigger_generic,n:0x0050021a]
 {
 	[common]
 	{
@@ -139,9 +139,9 @@
 		{
 			[*]
 			{
-				action* = send_world_message("we_req_activate",0x00200219,0f,"default","",0), doc("quake");
-				action* = send_world_message("we_req_activate",0x0020021C,0f,"default","",0), doc("flares on");
-				action* = send_world_message("we_req_activate",0x00200221,0f,"default","",0), delay(2), doc("flares off");
+				action* = send_world_message("we_req_activate",0x00500219,0f,"default","",0), doc("quake");
+				action* = send_world_message("we_req_activate",0x0050021C,0f,"default","",0), doc("flares on");
+				action* = send_world_message("we_req_activate",0x00500221,0f,"default","",0), delay(2), doc("flares off");
 			  b can_self_destruct = true;
 				condition* = receive_world_message("we_req_activate",0,"on_every_message"), doc("[*one-shot check (trigger is one-shot)*]");
 			  f delay = 0.000000;
@@ -165,7 +165,7 @@
 	  p position = 7.80905,-3.59045,-4.52933,0xc9bc7ba4;
 	}
 }
-[t:trigger_generic,n:0x0020021c]
+[t:trigger_generic,n:0x0050021c]
 {
 	[common]
 	{
@@ -175,12 +175,12 @@
 		{
 			[*]
 			{
-				action* = send_world_message("we_req_activate",0x0020021B,0f,"default","",0), doc("geyser 1");
-				action* = send_world_message("we_req_activate",0x0020021E,0f,"default","",0), doc("geyser 2");
-				action* = send_world_message("we_req_activate",0x0020021F,0f,"default","",0), doc("geyser 3");
-				action* = send_world_message("we_req_activate",0x00200220,0f,"default","",0), doc("geyser 4");
-				action* = send_world_message("we_req_activate",0x00200222,0f,"default","",0), doc("light 1");
-				action* = send_world_message("we_req_activate",0x00200224,0f,"default","",0), doc("light 2");
+				action* = send_world_message("we_req_activate",0x0050021B,0f,"default","",0), doc("geyser 1");
+				action* = send_world_message("we_req_activate",0x0050021E,0f,"default","",0), doc("geyser 2");
+				action* = send_world_message("we_req_activate",0x0050021F,0f,"default","",0), doc("geyser 3");
+				action* = send_world_message("we_req_activate",0x00500220,0f,"default","",0), doc("geyser 4");
+				action* = send_world_message("we_req_activate",0x00500222,0f,"default","",0), doc("light 1");
+				action* = send_world_message("we_req_activate",0x00500224,0f,"default","",0), doc("light 2");
 			  b can_self_destruct = true;
 				condition* = receive_world_message("we_req_activate",0,"on_every_message"), doc("[*one-shot check (trigger is one-shot)*]");
 			  f delay = 0.000000;
@@ -205,7 +205,7 @@
 	  p position = 7.86868,-3.60001,-2.41835,0xc9bc7ba4;
 	}
 }
-[t:trigger_generic,n:0x00200221]
+[t:trigger_generic,n:0x00500221]
 {
 	[common]
 	{
@@ -215,12 +215,12 @@
 		{
 			[*]
 			{
-				action* = send_world_message("we_req_deactivate",0x0020021B,0f,"default","",0), doc("geyser 1");
-				action* = send_world_message("we_req_deactivate",0x0020021E,0f,"default","",0), doc("geyser 2");
-				action* = send_world_message("we_req_deactivate",0x0020021F,0f,"default","",0), doc("geyser 3");
-				action* = send_world_message("we_req_deactivate",0x00200220,0f,"default","",0), doc("geyser 4");
-				action* = send_world_message("we_req_deactivate",0x00200222,0f,"default","",0), doc("light 1 off");
-				action* = send_world_message("we_req_deactivate",0x00200224,0f,"default","",0), doc("light 2 off");
+				action* = send_world_message("we_req_deactivate",0x0050021B,0f,"default","",0), doc("geyser 1");
+				action* = send_world_message("we_req_deactivate",0x0050021E,0f,"default","",0), doc("geyser 2");
+				action* = send_world_message("we_req_deactivate",0x0050021F,0f,"default","",0), doc("geyser 3");
+				action* = send_world_message("we_req_deactivate",0x00500220,0f,"default","",0), doc("geyser 4");
+				action* = send_world_message("we_req_deactivate",0x00500222,0f,"default","",0), doc("light 1 off");
+				action* = send_world_message("we_req_deactivate",0x00500224,0f,"default","",0), doc("light 2 off");
 			  b can_self_destruct = true;
 				condition* = receive_world_message("we_req_activate",0,"on_every_message"), doc("[*one-shot check (trigger is one-shot)*]");
 			  f delay = 0.000000;
@@ -245,7 +245,7 @@
 	  p position = 6.86762,-3.44698,-2.53223,0xc9bc7ba4;
 	}
 }
-[t:blocking_object,n:0x00200225]
+[t:blocking_object,n:0x00500225]
 {
 	[common]
 	{
@@ -256,7 +256,7 @@
 	  p position = -5.4848,-3.60001,8.37309,0xc9bc7ba4;
 	}
 }
-[t:blocking_object,n:0x00200226]
+[t:blocking_object,n:0x00500226]
 {
 	[common]
 	{
@@ -267,7 +267,7 @@
 	  p position = 6.78164,-3.60001,8.69774,0xc9bc7ba4;
 	}
 }
-[t:trigger_fade_nodes_box,n:0x00200028]
+[t:trigger_fade_nodes_box,n:0x00500028]
 {
 	[common]
 	{
@@ -295,7 +295,7 @@
 	  p position = 0.075264,9.53674e-007,-3.58556,0x81920dea;
 	}
 }
-[t:trigger_change_mood_box,n:0x0020009b]
+[t:trigger_change_mood_box,n:0x0050009b]
 {
 	[common]
 	{
@@ -324,7 +324,7 @@
 	  p position = -0.218364,0,-2.34554,0x81920dea;
 	}
 }
-[t:trigger_generic,n:0x00200045]
+[t:trigger_generic,n:0x00500045]
 {
 	[common]
 	{
@@ -353,14 +353,14 @@
 	  p position = 0.0829868,-16.4,-3.21771,0x8771d60f;
 	}
 }
-[t:interest_point,n:0x00200238]
+[t:interest_point,n:0x00500238]
 {
 	[placement]
 	{
 	  p position = 0.869972,0,0.893219,0x3f2fa67d;
 	}
 }
-[t:interest_point,n:0x0020022c]
+[t:interest_point,n:0x0050022c]
 {
 	[placement]
 	{
@@ -368,21 +368,21 @@
 	  p position = -1.10004,0,-0.178741,0x98fbcf84;
 	}
 }
-[t:interest_point,n:0x00200237]
+[t:interest_point,n:0x00500237]
 {
 	[placement]
 	{
 	  p position = 1.40048,0,-0.0698013,0x93b38ee4;
 	}
 }
-[t:interest_point,n:0x00200236]
+[t:interest_point,n:0x00500236]
 {
 	[placement]
 	{
 	  p position = 0.990749,0,-1.11052,0xfaf26c1f;
 	}
 }
-[t:interest_point,n:0x0020022b]
+[t:interest_point,n:0x0050022b]
 {
 	[placement]
 	{
@@ -390,21 +390,21 @@
 	  p position = -0.7146,0,1.93219,0x7ee0afcc;
 	}
 }
-[t:interest_point,n:0x00200233]
+[t:interest_point,n:0x00500233]
 {
 	[placement]
 	{
 	  p position = 1.27914,0,1.84543,0x3e976114;
 	}
 }
-[t:interest_point,n:0x0020022e]
+[t:interest_point,n:0x0050022e]
 {
 	[placement]
 	{
 	  p position = -1.34661,0,-0.615036,0x242a41dc;
 	}
 }
-[t:trigger_generic,n:0x002001ba]
+[t:trigger_generic,n:0x005001ba]
 {
 	[common]
 	{
@@ -414,7 +414,7 @@
 			[*]
 			{
 				action* = mood_change("eos_sirius_planet_dragon_6"), delay(8), doc("super gom dead mood");
-				action* = send_world_message("we_req_activate",0x00200229,0f,"default","every",0), doc("update journal");
+				action* = send_world_message("we_req_activate",0x00500229,0f,"default","every",0), doc("update journal");
 				action* = mood_change("eos_sirius_planet_dragon_4"), doc("no music while he dies");
 				action* = mood_change("eos_sirius_planet_dragon_2"), delay(29), doc("back to normal");
 			  b can_self_destruct = true;
@@ -441,7 +441,7 @@
 	  p position = 0.833878,0,0.306374,0x44edf23a;
 	}
 }
-[t:activate_chapter,n:0x00200229]
+[t:activate_chapter,n:0x00500229]
 {
 	[activate_chapter]
 	{
@@ -454,14 +454,14 @@
 	  p position = 0.81601,0,1.73367,0x44edf23a;
 	}
 }
-[t:interest_point,n:0x00200239]
+[t:interest_point,n:0x00500239]
 {
 	[placement]
 	{
 	  p position = 0.838326,0,-0.597076,0x66e7f1c4;
 	}
 }
-[t:interest_point,n:0x0020023b]
+[t:interest_point,n:0x0050023b]
 {
 	[placement]
 	{
@@ -469,7 +469,7 @@
 	  p position = 0.0979767,0,-1.77119,0xad44dbc8;
 	}
 }
-[t:interest_point,n:0x0020023a]
+[t:interest_point,n:0x0050023a]
 {
 	[placement]
 	{
@@ -477,7 +477,7 @@
 	  p position = 1.38147,0,1.02995,0x861677d1;
 	}
 }
-[t:trigger_generic,n:0x00200240]
+[t:trigger_generic,n:0x00500240]
 {
 	[common]
 	{
@@ -512,21 +512,21 @@
 	  p position = -0.825974,0,0.355072,0x861677d1;
 	}
 }
-[t:interest_point,n:0x0020021d]
+[t:interest_point,n:0x0050021d]
 {
 	[placement]
 	{
 	  p position = -0.228733,0,0.135025,0x2f9c23da;
 	}
 }
-[t:interest_point,n:0x0020022d]
+[t:interest_point,n:0x0050022d]
 {
 	[placement]
 	{
 	  p position = -0.342377,0,1.58522,0x659ac0be;
 	}
 }
-[t:trigger_generic,n:0x002001bd]
+[t:trigger_generic,n:0x005001bd]
 {
 	[common]
 	{
@@ -535,12 +535,12 @@
 		{
 			[*]
 			{
-				action* = send_world_message("we_req_activate",0x00200102,0f,"0x4007","",0), doc("start nis");
-				action* = send_world_message("we_req_activate",0x002001EA,0f,"0x4007","every",0), delay(0.2), doc("move party");
-				action* = send_world_message("we_req_activate",0x0020000A,0f,"default","",0), delay(6), doc("start elevator sequence");
-				action* = send_world_message("we_trigger_activate",0x00200227,0f,"0x4007","",0), delay(30), doc("move party again for vator exit");
-				action* = send_world_message("we_req_activate",0x00200234,0f,"default","every",0), doc("gom nis music");
-				action* = send_world_message("we_trigger_activate",0x00200251,0f,"default","every",0), delay(0.1), doc("activate party move failsafe");
+				action* = send_world_message("we_req_activate",0x00500102,0f,"0x4007","",0), doc("start nis");
+				action* = send_world_message("we_req_activate",0x005001EA,0f,"0x4007","every",0), delay(0.2), doc("move party");
+				action* = send_world_message("we_req_activate",0x0050000A,0f,"default","",0), delay(6), doc("start elevator sequence");
+				action* = send_world_message("we_trigger_activate",0x00500227,0f,"0x4007","",0), delay(30), doc("move party again for vator exit");
+				action* = send_world_message("we_req_activate",0x00500234,0f,"default","every",0), doc("gom nis music");
+				action* = send_world_message("we_trigger_activate",0x00500251,0f,"default","every",0), delay(0.1), doc("activate party move failsafe");
 			  b can_self_destruct = true;
 				condition* = party_member_within_bounding_box(6.000000,0.500000,1.000000,"on_first_enter"), doc("sp only[*one-shot check (trigger is one-shot)*]");
 			  f delay = 0.000000;
@@ -555,8 +555,8 @@
 			}
 			[*]
 			{
-				action* = send_world_message("we_req_activate",0x0020000A,0f,"default","",0), delay(1), doc("start elevator sequence");
-				action* = send_world_message("we_trigger_activate",0x00200228,0f,"default","every",0), doc("activate fight mood trigger below");
+				action* = send_world_message("we_req_activate",0x0050000A,0f,"default","",0), delay(1), doc("start elevator sequence");
+				action* = send_world_message("we_trigger_activate",0x00500228,0f,"default","every",0), doc("activate fight mood trigger below");
 			  b can_self_destruct = true;
 				condition* = party_member_within_bounding_box(6.000000,0.500000,1.000000,"on_first_enter"), doc("sp only [*one-shot check (trigger is one-shot)*]");
 			  f delay = 0.000000;
@@ -576,7 +576,7 @@
 	  p position = -2.10349,71.0181,3.40501,0xb9f57f40;
 	}
 }
-[t:trigger_change_mood_box,n:0x00200234]
+[t:trigger_change_mood_box,n:0x00500234]
 {
 	[common]
 	{
@@ -607,7 +607,7 @@
 	  p position = -0.498627,70.65,3.2905,0xb9f57f40;
 	}
 }
-[t:trigger_generic,n:0x00200251]
+[t:trigger_generic,n:0x00500251]
 {
 	[common]
 	{
@@ -617,7 +617,7 @@
 		{
 			[*]
 			{
-				action* = send_world_message("we_req_activate",0x002001EA,0f,"0x4002","every",0), doc("move party failsafe");
+				action* = send_world_message("we_req_activate",0x005001EA,0f,"0x4002","every",0), doc("move party failsafe");
 			  b can_self_destruct = true;
 				condition* = party_member_within_bounding_box(6.000000,1.000000,4.000000,"while_inside"), doc("sp only[*one-shot check (trigger is one-shot)*]");
 			  f delay = 0.000000;
@@ -637,7 +637,7 @@
 	  p position = -2.18398,70.65,2.39416,0xb9f57f40;
 	}
 }
-[t:trigger_change_mood_box,n:0x002000f5]
+[t:trigger_change_mood_box,n:0x005000f5]
 {
 	[common]
 	{
@@ -666,7 +666,7 @@
 	  p position = -0.0888138,9.53674e-007,-2.84857,0x06880eb8;
 	}
 }
-[t:trigger_generic,n:0x0020000a]
+[t:trigger_generic,n:0x0050000a]
 {
 	[common]
 	{
@@ -675,26 +675,26 @@
 		{
 			[*]
 			{
-				action* = send_world_message("we_req_activate",0x00200018,0f,"default","",0), delay(18.7), doc("elevator down");
-				action* = send_world_message("we_req_activate",0x0020001C,0f,"default","",0), delay(18), doc("level quake");
-				action* = send_world_message("we_req_activate",0x0020003E,0f,"default","",0), delay(3), doc("fire1");
-				action* = send_world_message("we_req_activate",0x00200042,0f,"default","",0), delay(3.3), doc("flicker1");
-				action* = send_world_message("we_req_activate",0x0020003F,0f,"default","",0), delay(6), doc("fire2");
-				action* = send_world_message("we_req_activate",0x00200043,0f,"default","",0), delay(6.3), doc("flicker2");
-				action* = send_world_message("we_req_activate",0x0020003A,0f,"default","",0), delay(9), doc("fire3");
-				action* = send_world_message("we_req_activate",0x0020003B,0f,"default","",0), delay(9.3), doc("flicker3");
-				action* = send_world_message("we_req_activate",0x0020003C,0f,"default","",0), delay(12), doc("fire4");
-				action* = send_world_message("we_req_activate",0x00200040,0f,"default","",0), delay(12.3), doc("flicker4");
-				action* = send_world_message("we_req_activate",0x0020003D,0f,"default","",0), delay(15), doc("fire5");
-				action* = send_world_message("we_req_activate",0x00200041,0f,"default","",0), delay(15.3), doc("flicker5");
-				action* = send_world_message("we_req_activate",0x00200048,0f,"default","",0), delay(3), doc("enable1");
-				action* = send_world_message("we_req_activate",0x00200049,0f,"default","",0), delay(6), doc("enable2");
-				action* = send_world_message("we_req_activate",0x00200044,0f,"default","",0), delay(9), doc("enable3");
-				action* = send_world_message("we_req_activate",0x00200046,0f,"default","",0), delay(12), doc("enable4");
-				action* = send_world_message("we_req_activate",0x00200047,0f,"default","",0), delay(15), doc("enable5");
-				action* = send_world_message("we_req_activate",0x002001F0,0f,"default","every",0), delay(18), doc("vator sound for nis");
-				action* = send_world_message("we_trigger_deactivate",0x00200251,0f,"default","every",0), delay(18), doc("turn off failsafe trigger");
-				action* = send_world_message("we_trigger_activate",0x002000F5,0f,"default","every",0), doc("turn on pre-vator mood trigger");
+				action* = send_world_message("we_req_activate",0x00500018,0f,"default","",0), delay(18.7), doc("elevator down");
+				action* = send_world_message("we_req_activate",0x0050001C,0f,"default","",0), delay(18), doc("level quake");
+				action* = send_world_message("we_req_activate",0x0050003E,0f,"default","",0), delay(3), doc("fire1");
+				action* = send_world_message("we_req_activate",0x00500042,0f,"default","",0), delay(3.3), doc("flicker1");
+				action* = send_world_message("we_req_activate",0x0050003F,0f,"default","",0), delay(6), doc("fire2");
+				action* = send_world_message("we_req_activate",0x00500043,0f,"default","",0), delay(6.3), doc("flicker2");
+				action* = send_world_message("we_req_activate",0x0050003A,0f,"default","",0), delay(9), doc("fire3");
+				action* = send_world_message("we_req_activate",0x0050003B,0f,"default","",0), delay(9.3), doc("flicker3");
+				action* = send_world_message("we_req_activate",0x0050003C,0f,"default","",0), delay(12), doc("fire4");
+				action* = send_world_message("we_req_activate",0x00500040,0f,"default","",0), delay(12.3), doc("flicker4");
+				action* = send_world_message("we_req_activate",0x0050003D,0f,"default","",0), delay(15), doc("fire5");
+				action* = send_world_message("we_req_activate",0x00500041,0f,"default","",0), delay(15.3), doc("flicker5");
+				action* = send_world_message("we_req_activate",0x00500048,0f,"default","",0), delay(3), doc("enable1");
+				action* = send_world_message("we_req_activate",0x00500049,0f,"default","",0), delay(6), doc("enable2");
+				action* = send_world_message("we_req_activate",0x00500044,0f,"default","",0), delay(9), doc("enable3");
+				action* = send_world_message("we_req_activate",0x00500046,0f,"default","",0), delay(12), doc("enable4");
+				action* = send_world_message("we_req_activate",0x00500047,0f,"default","",0), delay(15), doc("enable5");
+				action* = send_world_message("we_req_activate",0x005001F0,0f,"default","every",0), delay(18), doc("vator sound for nis");
+				action* = send_world_message("we_trigger_deactivate",0x00500251,0f,"default","every",0), delay(18), doc("turn off failsafe trigger");
+				action* = send_world_message("we_trigger_activate",0x005000F5,0f,"default","every",0), doc("turn on pre-vator mood trigger");
 			  b can_self_destruct = true;
 				condition* = receive_world_message("we_req_activate",0,"on_first_message"), doc("[*one-shot check (trigger is one-shot)*]");
 			  f delay = 0.000000;
@@ -718,7 +718,7 @@
 	  p position = -5.61585,1.17643,-1.06604,0x8daa367b;
 	}
 }
-[t:trigger_rec_msg_activate,n:0x002000f4]
+[t:trigger_rec_msg_activate,n:0x005000f4]
 {
 	[common]
 	{
@@ -728,7 +728,7 @@
 		{
 			[*]
 			{
-				action* = send_world_message("we_req_activate",0x002000F3,0f,"0x4002","every",0), doc("move party off elevator");
+				action* = send_world_message("we_req_activate",0x005000F3,0f,"0x4002","every",0), doc("move party off elevator");
 			  b can_self_destruct = true;
 				condition* = party_member_within_node(0x5A6BE416,2,50,-1,"on_first_enter"), doc("on elevator?[*message checker (trigger is non-pure )*][*one-shot check (trigger is one-shot)*]");
 			  f delay = 0.000000;
@@ -752,7 +752,7 @@
 	  p position = -0.101501,0.114865,8.35605,0x8daa367b;
 	}
 }
-[t:trigger_rec_msg_activate,n:0x002000f8]
+[t:trigger_rec_msg_activate,n:0x005000f8]
 {
 	[common]
 	{
@@ -761,7 +761,7 @@
 		{
 			[*]
 			{
-				action* = send_world_message("we_req_activate",0x002000FA,0f,"default","",0), doc("go up when last guy leaves elevator");
+				action* = send_world_message("we_req_activate",0x005000FA,0f,"default","",0), doc("go up when last guy leaves elevator");
 			  b can_self_destruct = true;
 				condition* = party_member_within_node(0x5A6BE416,2,50,-1,"on_every_last_leave"), doc("check to see if party member is within node");
 			  f delay = 0.000000;
@@ -785,7 +785,7 @@
 	  p position = 4.6992,1.29699,4.22145,0x8daa367b;
 	}
 }
-[t:trigger_rec_msg_activate,n:0x002000fa]
+[t:trigger_rec_msg_activate,n:0x005000fa]
 {
 	[common]
 	{
@@ -794,23 +794,23 @@
 		{
 			[*]
 			{
-				action* = send_world_message("we_req_activate",0x00200018,0f,"default","",0), delay(5), doc("move elevator up");
-				action* = send_world_message("we_trigger_deactivate",0x002000F8,0f,"default","",0), delay(0.1), doc("turn off nobody on elevator trigger");
-				action* = send_world_message("we_req_deactivate",0x0020003F,0f,"default","",0), doc("fire off");
-				action* = send_world_message("we_req_deactivate",0x00200043,0f,"default","",0), doc("fire off");
-				action* = send_world_message("we_req_deactivate",0x00200049,0f,"default","",0), doc("fire off");
-				action* = send_world_message("we_req_deactivate",0x0020003A,0f,"default","",0), delay(0.6), doc("fire off");
-				action* = send_world_message("we_req_deactivate",0x00200044,0f,"default","",0), delay(0.6), doc("fire off");
-				action* = send_world_message("we_req_deactivate",0x0020003B,0f,"default","",0), delay(0.6), doc("fire off");
-				action* = send_world_message("we_req_deactivate",0x0020003C,0f,"default","",0), delay(1.2), doc("fire off");
-				action* = send_world_message("we_req_deactivate",0x00200046,0f,"default","",0), delay(1.2), doc("fire off");
-				action* = send_world_message("we_req_deactivate",0x00200040,0f,"default","",0), delay(1.2), doc("fire off");
-				action* = send_world_message("we_req_deactivate",0x0020003D,0f,"default","",0), delay(1.8), doc("fire off");
-				action* = send_world_message("we_req_deactivate",0x00200047,0f,"default","",0), delay(1.8), doc("fire off");
-				action* = send_world_message("we_req_deactivate",0x00200041,0f,"default","",0), delay(1.8), doc("fire off");
-				action* = send_world_message("we_req_deactivate",0x0020003E,0f,"default","",0), delay(2.4), doc("fire off");
-				action* = send_world_message("we_req_deactivate",0x00200048,0f,"default","",0), delay(2.4), doc("fire off");
-				action* = send_world_message("we_req_deactivate",0x00200042,0f,"default","",0), delay(2.4), doc("fire off");
+				action* = send_world_message("we_req_activate",0x00500018,0f,"default","",0), delay(5), doc("move elevator up");
+				action* = send_world_message("we_trigger_deactivate",0x005000F8,0f,"default","",0), delay(0.1), doc("turn off nobody on elevator trigger");
+				action* = send_world_message("we_req_deactivate",0x0050003F,0f,"default","",0), doc("fire off");
+				action* = send_world_message("we_req_deactivate",0x00500043,0f,"default","",0), doc("fire off");
+				action* = send_world_message("we_req_deactivate",0x00500049,0f,"default","",0), doc("fire off");
+				action* = send_world_message("we_req_deactivate",0x0050003A,0f,"default","",0), delay(0.6), doc("fire off");
+				action* = send_world_message("we_req_deactivate",0x00500044,0f,"default","",0), delay(0.6), doc("fire off");
+				action* = send_world_message("we_req_deactivate",0x0050003B,0f,"default","",0), delay(0.6), doc("fire off");
+				action* = send_world_message("we_req_deactivate",0x0050003C,0f,"default","",0), delay(1.2), doc("fire off");
+				action* = send_world_message("we_req_deactivate",0x00500046,0f,"default","",0), delay(1.2), doc("fire off");
+				action* = send_world_message("we_req_deactivate",0x00500040,0f,"default","",0), delay(1.2), doc("fire off");
+				action* = send_world_message("we_req_deactivate",0x0050003D,0f,"default","",0), delay(1.8), doc("fire off");
+				action* = send_world_message("we_req_deactivate",0x00500047,0f,"default","",0), delay(1.8), doc("fire off");
+				action* = send_world_message("we_req_deactivate",0x00500041,0f,"default","",0), delay(1.8), doc("fire off");
+				action* = send_world_message("we_req_deactivate",0x0050003E,0f,"default","",0), delay(2.4), doc("fire off");
+				action* = send_world_message("we_req_deactivate",0x00500048,0f,"default","",0), delay(2.4), doc("fire off");
+				action* = send_world_message("we_req_deactivate",0x00500042,0f,"default","",0), delay(2.4), doc("fire off");
 			  b can_self_destruct = true;
 				condition* = receive_world_message("we_req_activate",0,"on_every_message");
 			  f delay = 0.000000;
@@ -834,7 +834,7 @@
 	  p position = -4.29601,1.04697,0.0874023,0x8daa367b;
 	}
 }
-[t:trigger_rec_msg_activate,n:0x002000fb]
+[t:trigger_rec_msg_activate,n:0x005000fb]
 {
 	[common]
 	{
@@ -843,8 +843,8 @@
 		{
 			[*]
 			{
-				action* = send_world_message("we_req_activate",0x002000FF,0f,"default","",0), doc("camera shake");
-				action* = send_world_message("we_trigger_activate",0x002000FC,0f,"default","",0), delay(15), doc("check if someone is on elevator before lowering again (give time to disembark)");
+				action* = send_world_message("we_req_activate",0x005000FF,0f,"default","",0), doc("camera shake");
+				action* = send_world_message("we_trigger_activate",0x005000FC,0f,"default","",0), delay(15), doc("check if someone is on elevator before lowering again (give time to disembark)");
 			  b can_self_destruct = true;
 				condition* = receive_world_message("we_req_activate",0,"on_every_message"), doc("from elevator l1");
 			  f delay = 0.000000;
@@ -859,7 +859,7 @@
 			}
 			[*]
 			{
-				action* = send_world_message("we_req_activate",0x002000FD,0f,"default","every",0), delay(15), doc("go down automatically (forever) once gom is destroyed instead of waiting for someone to be there");
+				action* = send_world_message("we_req_activate",0x005000FD,0f,"default","every",0), delay(15), doc("go down automatically (forever) once gom is destroyed instead of waiting for someone to be there");
 			  b can_self_destruct = true;
 				condition* = receive_world_message("we_req_activate",0,"on_every_message"), doc("from elevator l1 (after gom is dead)");
 			  f delay = 0.000000;
@@ -883,7 +883,7 @@
 	  p position = 0.131729,1.28137,4.13536,0x8daa367b;
 	}
 }
-[t:trigger_rec_msg_activate,n:0x002000fc]
+[t:trigger_rec_msg_activate,n:0x005000fc]
 {
 	[common]
 	{
@@ -892,7 +892,7 @@
 		{
 			[*]
 			{
-				action* = send_world_message("we_req_activate",0x002000FD,0f,"default","",0), doc("send elevator down if someone is on it");
+				action* = send_world_message("we_req_activate",0x005000FD,0f,"default","",0), doc("send elevator down if someone is on it");
 			  b can_self_destruct = true;
 				condition* = party_member_within_node(0x5A6BE416,2,50,-1,"on_every_enter");
 			  f delay = 0.000000;
@@ -916,7 +916,7 @@
 	  p position = -1.16696,0.950001,3.9451,0x8daa367b;
 	}
 }
-[t:trigger_rec_msg_activate,n:0x002000fd]
+[t:trigger_rec_msg_activate,n:0x005000fd]
 {
 	[common]
 	{
@@ -925,24 +925,24 @@
 		{
 			[*]
 			{
-				action* = send_world_message("we_req_activate",0x00200018,0f,"default","",0), delay(10), doc("move elevator down");
-				action* = send_world_message("we_trigger_deactivate",0x002000FC,0f,"default","",0), delay(0.1), doc("turn off detection of someone on elevator");
-				action* = send_world_message("we_req_activate",0x0020003F,0f,"default","",0), doc("fire on");
-				action* = send_world_message("we_req_activate",0x00200043,0f,"default","",0), doc("fire on");
-				action* = send_world_message("we_req_activate",0x00200049,0f,"default","",0), doc("fire on");
-				action* = send_world_message("we_req_activate",0x0020003A,0f,"default","",0), delay(2), doc("fire on");
-				action* = send_world_message("we_req_activate",0x00200044,0f,"default","",0), delay(2), doc("fire on");
-				action* = send_world_message("we_req_activate",0x0020003B,0f,"default","",0), delay(2), doc("fire on");
-				action* = send_world_message("we_req_activate",0x0020003C,0f,"default","",0), delay(4), doc("fire on");
-				action* = send_world_message("we_req_activate",0x00200046,0f,"default","",0), delay(4), doc("fire on");
-				action* = send_world_message("we_req_activate",0x00200040,0f,"default","",0), delay(4), doc("fire on");
-				action* = send_world_message("we_req_activate",0x0020003D,0f,"default","",0), delay(6), doc("fire on");
-				action* = send_world_message("we_req_activate",0x00200047,0f,"default","",0), delay(6), doc("fire on");
-				action* = send_world_message("we_req_activate",0x00200041,0f,"default","",0), delay(6), doc("fire on");
-				action* = send_world_message("we_req_activate",0x0020003E,0f,"default","",0), delay(8), doc("fire on");
-				action* = send_world_message("we_req_activate",0x00200048,0f,"default","",0), delay(8), doc("fire on");
-				action* = send_world_message("we_req_activate",0x00200042,0f,"default","",0), delay(8), doc("fire on");
-				action* = send_world_message("we_req_activate",0x002000FF,0f,"default","",0), delay(10), doc("quake");
+				action* = send_world_message("we_req_activate",0x00500018,0f,"default","",0), delay(10), doc("move elevator down");
+				action* = send_world_message("we_trigger_deactivate",0x005000FC,0f,"default","",0), delay(0.1), doc("turn off detection of someone on elevator");
+				action* = send_world_message("we_req_activate",0x0050003F,0f,"default","",0), doc("fire on");
+				action* = send_world_message("we_req_activate",0x00500043,0f,"default","",0), doc("fire on");
+				action* = send_world_message("we_req_activate",0x00500049,0f,"default","",0), doc("fire on");
+				action* = send_world_message("we_req_activate",0x0050003A,0f,"default","",0), delay(2), doc("fire on");
+				action* = send_world_message("we_req_activate",0x00500044,0f,"default","",0), delay(2), doc("fire on");
+				action* = send_world_message("we_req_activate",0x0050003B,0f,"default","",0), delay(2), doc("fire on");
+				action* = send_world_message("we_req_activate",0x0050003C,0f,"default","",0), delay(4), doc("fire on");
+				action* = send_world_message("we_req_activate",0x00500046,0f,"default","",0), delay(4), doc("fire on");
+				action* = send_world_message("we_req_activate",0x00500040,0f,"default","",0), delay(4), doc("fire on");
+				action* = send_world_message("we_req_activate",0x0050003D,0f,"default","",0), delay(6), doc("fire on");
+				action* = send_world_message("we_req_activate",0x00500047,0f,"default","",0), delay(6), doc("fire on");
+				action* = send_world_message("we_req_activate",0x00500041,0f,"default","",0), delay(6), doc("fire on");
+				action* = send_world_message("we_req_activate",0x0050003E,0f,"default","",0), delay(8), doc("fire on");
+				action* = send_world_message("we_req_activate",0x00500048,0f,"default","",0), delay(8), doc("fire on");
+				action* = send_world_message("we_req_activate",0x00500042,0f,"default","",0), delay(8), doc("fire on");
+				action* = send_world_message("we_req_activate",0x005000FF,0f,"default","",0), delay(10), doc("quake");
 			  b can_self_destruct = true;
 				condition* = receive_world_message("we_req_activate",0,"on_every_message");
 			  f delay = 0.000000;
@@ -966,7 +966,7 @@
 	  p position = -4.39827,1.20087,-1.05104,0x8daa367b;
 	}
 }
-[t:trigger_generic,n:0x00200162]
+[t:trigger_generic,n:0x00500162]
 {
 	[common]
 	{
@@ -975,8 +975,8 @@
 		{
 			[*]
 			{
-				action* = send_world_message("we_req_activate",0x0020001C,0f,"default","",0), doc("shake screen");
-				action* = send_world_message("we_req_activate",0x002001B9,0f,"default","every",0), doc("raise elevator when nobody is on it");
+				action* = send_world_message("we_req_activate",0x0050001C,0f,"default","",0), doc("shake screen");
+				action* = send_world_message("we_req_activate",0x005001B9,0f,"default","every",0), doc("raise elevator when nobody is on it");
 			  b can_self_destruct = true;
 				condition* = receive_world_message("we_req_activate",0,"on_every_message"), doc("from elevator l2");
 			  f delay = 0.000000;
@@ -991,8 +991,8 @@
 			}
 			[*]
 			{
-				action* = send_world_message("we_trigger_activate",0x002000F4,0f,"default","",0), delay(0.3), doc("detect party for move");
-				action* = send_world_message("we_req_activate",0x00200235,0f,"default","every",0), doc("play elevator stop sound for nis");
+				action* = send_world_message("we_trigger_activate",0x005000F4,0f,"default","",0), delay(0.3), doc("detect party for move");
+				action* = send_world_message("we_req_activate",0x00500235,0f,"default","every",0), doc("play elevator stop sound for nis");
 			  b can_self_destruct = true;
 				condition* = receive_world_message("we_req_activate",0,"on_first_message"), doc("sp only when elevator lowers");
 			  f delay = 0.000000;
@@ -1007,7 +1007,7 @@
 			}
 			[*]
 			{
-				action* = send_world_message("we_req_activate",0x002000FA,0f,"default","every",0), delay(15), doc("raise elevator on timer after gom is dead");
+				action* = send_world_message("we_req_activate",0x005000FA,0f,"default","every",0), delay(15), doc("raise elevator on timer after gom is dead");
 			  b can_self_destruct = true;
 				condition* = receive_world_message("we_req_activate",0,"on_every_message"), doc("after gom is dead");
 			  f delay = 0.000000;
@@ -1027,7 +1027,7 @@
 	  p position = 1.35291,1.05871,3.91757,0x8daa367b;
 	}
 }
-[t:trigger_generic,n:0x002001b9]
+[t:trigger_generic,n:0x005001b9]
 {
 	[common]
 	{
@@ -1036,9 +1036,9 @@
 		{
 			[*]
 			{
-				action* = send_world_message("we_req_activate",0x0020024D,0f,"default","every",0), doc("check if anyone is on elevator");
-				action* = send_world_message("we_req_activate",0x0020024E,0f,"default","every",0), delay(1), doc("send elevator up by default");
-				action* = send_world_message("we_trigger_activate",0x0020024E,0f,"default","every",0), doc("turn on default trigger");
+				action* = send_world_message("we_req_activate",0x0050024D,0f,"default","every",0), doc("check if anyone is on elevator");
+				action* = send_world_message("we_req_activate",0x0050024E,0f,"default","every",0), delay(1), doc("send elevator up by default");
+				action* = send_world_message("we_trigger_activate",0x0050024E,0f,"default","every",0), doc("turn on default trigger");
 			  b can_self_destruct = true;
 				condition* = receive_world_message("we_req_activate",0,"on_every_message"), doc("from l2 trigger");
 			  f delay = 0.000000;
@@ -1062,7 +1062,7 @@
 	  p position = 2.53638,1.10933,3.91551,0x8daa367b;
 	}
 }
-[t:trigger_generic,n:0x00200227]
+[t:trigger_generic,n:0x00500227]
 {
 	[common]
 	{
@@ -1072,7 +1072,7 @@
 		{
 			[*]
 			{
-				action* = send_world_message("we_req_activate",0x00200243,0f,"0x4002","every",0), doc("move");
+				action* = send_world_message("we_req_activate",0x00500243,0f,"0x4002","every",0), doc("move");
 			  b can_self_destruct = true;
 				condition* = party_member_within_node(0x5A6BE416,2,50,-1,"on_first_enter"), doc("activated by nis trigger[*one-shot check (trigger is one-shot)*]");
 			  f delay = 0.000000;
@@ -1092,7 +1092,7 @@
 	  p position = 1.13819,0.093133,7.01292,0x8daa367b;
 	}
 }
-[t:trigger_generic,n:0x0020024d]
+[t:trigger_generic,n:0x0050024d]
 {
 	[common]
 	{
@@ -1101,8 +1101,8 @@
 		{
 			[*]
 			{
-				action* = send_world_message("we_trigger_deactivate",0x0020024E,0f,"default","every",0), delay(0.5), doc("stop elevator from going up if someone is on it");
-				action* = send_world_message("we_trigger_activate",0x002000F8,0f,"default","every",0), doc("enable *go up after last guy leaves* trigger");
+				action* = send_world_message("we_trigger_deactivate",0x0050024E,0f,"default","every",0), delay(0.5), doc("stop elevator from going up if someone is on it");
+				action* = send_world_message("we_trigger_activate",0x005000F8,0f,"default","every",0), doc("enable *go up after last guy leaves* trigger");
 			  b can_self_destruct = true;
 				condition* = receive_world_message("we_req_activate",0,"on_every_message");
 				condition* = party_member_within_node(0x5A6BE416,2,50,-1,"wait_for_every_message");
@@ -1127,7 +1127,7 @@
 	  p position = 3.82438,1.09527,3.87193,0x8daa367b;
 	}
 }
-[t:trigger_generic,n:0x0020024e]
+[t:trigger_generic,n:0x0050024e]
 {
 	[common]
 	{
@@ -1136,7 +1136,7 @@
 		{
 			[*]
 			{
-				action* = send_world_message("we_req_activate",0x002000FA,0f,"default","every",0), doc("send elevator up");
+				action* = send_world_message("we_req_activate",0x005000FA,0f,"default","every",0), doc("send elevator up");
 			  b can_self_destruct = true;
 				condition* = receive_world_message("we_req_activate",0,"on_every_message");
 			  f delay = 0.000000;
@@ -1160,7 +1160,7 @@
 	  p position = 3.80145,1.09527,5.00897,0x8daa367b;
 	}
 }
-[t:trigger_generic,n:0x00200250]
+[t:trigger_generic,n:0x00500250]
 {
 	[common]
 	{
@@ -1170,7 +1170,7 @@
 		{
 			[*]
 			{
-				action* = send_world_message("we_trigger_deactivate",0x00200251,0f,"default","every",0), doc("turn off failsafe trigger");
+				action* = send_world_message("we_trigger_deactivate",0x00500251,0f,"default","every",0), doc("turn off failsafe trigger");
 			  b can_self_destruct = true;
 				condition* = party_member_within_node(0x5A6BE416,2,50,-1,"on_first_enter");
 			  f delay = 0.000000;
@@ -1190,7 +1190,7 @@
 	  p position = 1.39111,-0.0500059,-6.31609,0x8daa367b;
 	}
 }
-[t:trigger_generic,n:0x00200100]
+[t:trigger_generic,n:0x00500100]
 {
 	[common]
 	{
@@ -1200,7 +1200,7 @@
 		{
 			[*]
 			{
-				action* = send_world_message("we_req_activate",0x00200101,0f,"default","",0);
+				action* = send_world_message("we_req_activate",0x00500101,0f,"default","",0);
 			  b can_self_destruct = true;
 				condition* = party_member_within_bounding_box(8.000000,2.000000,4.000000,"on_first_enter"), doc("[*one-shot check (trigger is one-shot)*]");
 			  f delay = 0.000000;
@@ -1220,7 +1220,7 @@
 	  p position = 0.0305252,2.65,0.0895767,0x07861e46;
 	}
 }
-[t:trigger_change_mood_box,n:0x00200024]
+[t:trigger_change_mood_box,n:0x00500024]
 {
 	[common]
 	{
@@ -1249,28 +1249,28 @@
 	  p position = 2.02219,4,-0.810112,0x2acdde88;
 	}
 }
-[t:use_point,n:0x00200164]
+[t:use_point,n:0x00500164]
 {
 	[placement]
 	{
 	  p position = -0.622447,-4.76837e-007,-1.70684,0x5c744514;
 	}
 }
-[t:use_point,n:0x00200166]
+[t:use_point,n:0x00500166]
 {
 	[placement]
 	{
 	  p position = -0.466621,9.53674e-007,-1.35975,0x5c744514;
 	}
 }
-[t:use_point,n:0x00200168]
+[t:use_point,n:0x00500168]
 {
 	[placement]
 	{
 	  p position = 1.4003,-4.76837e-007,-0.623807,0x5c744514;
 	}
 }
-[t:trigger_change_mood_box,n:0x0020012e]
+[t:trigger_change_mood_box,n:0x0050012e]
 {
 	[common]
 	{
@@ -1299,7 +1299,7 @@
 	  p position = 0.773815,4,1.81037,0x30924138;
 	}
 }
-[t:trigger_change_mood_box,n:0x00200019]
+[t:trigger_change_mood_box,n:0x00500019]
 {
 	[common]
 	{
@@ -1328,7 +1328,7 @@
 	  p position = -3.03867,1,6.05344,0x8a126d3a;
 	}
 }
-[t:trigger_change_mood_box,n:0x0020001e]
+[t:trigger_change_mood_box,n:0x0050001e]
 {
 	[common]
 	{
@@ -1357,7 +1357,7 @@
 	  p position = 0.618275,1.40234,3.96944,0x8a126d3a;
 	}
 }
-[t:trigger_change_mood_box,n:0x00200027]
+[t:trigger_change_mood_box,n:0x00500027]
 {
 	[common]
 	{
@@ -1386,7 +1386,7 @@
 	  p position = -0.177029,0.336666,-1.92148,0x1d842437;
 	}
 }
-[t:trigger_change_mood_box,n:0x00200029]
+[t:trigger_change_mood_box,n:0x00500029]
 {
 	[common]
 	{
@@ -1415,7 +1415,7 @@
 	  p position = 0.0567903,-5.92736,5.74586,0x32152bc8;
 	}
 }
-[t:trigger_generic,n:0x0020004b]
+[t:trigger_generic,n:0x0050004b]
 {
 	[common]
 	{
@@ -1443,7 +1443,7 @@
 	  p position = 0.0428009,-6.05,6.89831,0x32152bc8;
 	}
 }
-[t:trigger_fade_nodes_global_box,n:0x00200160]
+[t:trigger_fade_nodes_global_box,n:0x00500160]
 {
 	[common]
 	{
@@ -1472,63 +1472,63 @@
 	  p position = -0.149902,1.85,5.39395,0xb25b96c7;
 	}
 }
-[t:use_point,n:0x0020009d]
+[t:use_point,n:0x0050009d]
 {
 	[placement]
 	{
 	  p position = 0.0305745,9.53674e-007,1.71588,0xbe50fb90;
 	}
 }
-[t:use_point,n:0x0020009e]
+[t:use_point,n:0x0050009e]
 {
 	[placement]
 	{
 	  p position = 1.29158,9.53674e-007,1.78817,0xbe50fb90;
 	}
 }
-[t:use_point,n:0x0020009f]
+[t:use_point,n:0x0050009f]
 {
 	[placement]
 	{
 	  p position = -1.27471,-9.53674e-007,1.71171,0xbe50fb90;
 	}
 }
-[t:use_point,n:0x002000a0]
+[t:use_point,n:0x005000a0]
 {
 	[placement]
 	{
 	  p position = 2.42814,-9.53674e-007,1.9429,0xbe50fb90;
 	}
 }
-[t:use_point,n:0x002000a1]
+[t:use_point,n:0x005000a1]
 {
 	[placement]
 	{
 	  p position = -2.41368,0,1.80691,0xbe50fb90;
 	}
 }
-[t:use_point,n:0x002000a2]
+[t:use_point,n:0x005000a2]
 {
 	[placement]
 	{
 	  p position = 1.83028,-0.101009,0.922808,0xbe50fb90;
 	}
 }
-[t:use_point,n:0x002000a3]
+[t:use_point,n:0x005000a3]
 {
 	[placement]
 	{
 	  p position = 0.560778,-0.113042,0.854043,0xbe50fb90;
 	}
 }
-[t:use_point,n:0x002000a4]
+[t:use_point,n:0x005000a4]
 {
 	[placement]
 	{
 	  p position = -0.706471,-0.111772,0.861307,0xbe50fb90;
 	}
 }
-[t:use_point,n:0x002000a5]
+[t:use_point,n:0x005000a5]
 {
 	[placement]
 	{
