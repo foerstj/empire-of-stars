@@ -1,4 +1,4 @@
-[t:light_flicker,n:0x0160028f]
+[t:light_flicker,n:0x6230028f]
 {
 	[light_flicker]
 	{
@@ -12,14 +12,14 @@
 	  p position = -2.18681,1e-006,3.06498,0x400c2a88;
 	}
 }
-[t:cmd_ai_c_patrol,n:0x016001a5]
+[t:cmd_ai_c_patrol,n:0x623001a5]
 {
 	[placement]
 	{
 	  p position = -2.18089,0,0.650085,0x07a92293;
 	}
 }
-[t:cmd_ai_c_patrol,n:0x016001a6]
+[t:cmd_ai_c_patrol,n:0x623001a6]
 {
 	[placement]
 	{
@@ -27,11 +27,11 @@
 	  p position = 2.82617,1.19209e-007,-1.8824,0x7d5853c3;
 	}
 }
-[t:cmd_selection_toggle,n:0x01601220]
+[t:cmd_selection_toggle,n:0x62301220]
 {
 	[cmd_selection_toggle]
 	{
-	  x object_scid = 0x0160121F;
+	  x object_scid = 0x6230121F;
 	  i start_state = 1;
 	  b toggle_selection = false;
 	  b toggle_visability = true;
@@ -46,7 +46,7 @@
 	  p position = -0.587265,0.4,1.34462,0x1613a230;
 	}
 }
-[t:light_enable,n:0x01601223]
+[t:light_enable,n:0x62301223]
 {
 	[light_enable]
 	{
@@ -62,12 +62,12 @@
 	  p position = -2.54755,-0.25,0.261627,0x1613a230;
 	}
 }
-[t:cmd_inventory_changer,n:0x01601219]
+[t:cmd_inventory_changer,n:0x62301219]
 {
 	[cmd_inv_changer]
 	{
 	  b go_within_sphere = true;
-	  x msg_scid = 0x01601221;
+	  x msg_scid = 0x62301221;
 		template_name = "azunite_scholar_artifact_01";
 	}
 	[placement]
@@ -76,11 +76,11 @@
 	  p position = 0.30864,-0.599721,0.250397,0xb589d824;
 	}
 }
-[t:cmd_selection_toggle,n:0x01601210]
+[t:cmd_selection_toggle,n:0x62301210]
 {
 	[cmd_selection_toggle]
 	{
-	  x object_scid = 0x0160120D;
+	  x object_scid = 0x6230120D;
 	  i start_state = 1;
 	}
 	[common]
@@ -93,7 +93,7 @@
 	  p position = -1.03758,0.4,1.91695,0x79638a70;
 	}
 }
-[t:cmd_ai_c_patrol,n:0x01600049]
+[t:cmd_ai_c_patrol,n:0x62300049]
 {
 	[placement]
 	{
@@ -101,14 +101,14 @@
 	  p position = -3.99877,0.4,1.83676,0x9a324347;
 	}
 }
-[t:cmd_ai_c_patrol,n:0x016001ae]
+[t:cmd_ai_c_patrol,n:0x623001ae]
 {
 	[placement]
 	{
 	  p position = -0.444221,-1.55,4.04973,0x7561334d;
 	}
 }
-[t:cmd_ai_c_patrol,n:0x016001ad]
+[t:cmd_ai_c_patrol,n:0x623001ad]
 {
 	[placement]
 	{
@@ -116,14 +116,14 @@
 	  p position = 3.74393,0,2.78931,0x379d60f9;
 	}
 }
-[t:cmd_ai_c_patrol,n:0x016001b0]
+[t:cmd_ai_c_patrol,n:0x623001b0]
 {
 	[placement]
 	{
 	  p position = 3.94601,4.05312e-006,-0.437271,0x5680cb2a;
 	}
 }
-[t:cmd_ai_c_patrol,n:0x016001af]
+[t:cmd_ai_c_patrol,n:0x623001af]
 {
 	[common]
 	{
@@ -131,7 +131,7 @@
 		{
 			[*]
 			{
-				action* = send_world_message("we_req_activate",0x01600034,0f,"default","",0);
+				action* = send_world_message("we_req_activate",0x62300034,0f,"default","",0);
 			  b can_self_destruct = true;
 				condition* = party_member_within_sphere(8.000000,"on_every_enter");
 			  f delay = 0.000000;
@@ -151,28 +151,28 @@
 	  p position = 2.48131,-4.05312e-006,1.82382,0x0b83a246;
 	}
 }
-[t:cmd_ai_c_move,n:0x016000b9]
+[t:cmd_ai_c_move,n:0x623000b9]
 {
 	[placement]
 	{
 	  p position = -2.5018,1e-006,0.045975,0x4b6abd3e;
 	}
 }
-[t:cmd_ai_c_patrol,n:0x016000a6]
+[t:cmd_ai_c_patrol,n:0x623000a6]
 {
 	[placement]
 	{
 	  p position = 1.15028,0.656929,-1.44597,0xf11687ea;
 	}
 }
-[t:cmd_ai_c_move,n:0x01600030]
+[t:cmd_ai_c_move,n:0x62300030]
 {
 	[placement]
 	{
 	  p position = 0.958328,1e-006,3.37756,0x70799eca;
 	}
 }
-[t:light_flicker,n:0x01600290]
+[t:light_flicker,n:0x62300290]
 {
 	[light_flicker]
 	{
@@ -186,7 +186,7 @@
 	  p position = 2.31418,0,-0.309303,0xdf838e82;
 	}
 }
-[t:cmd_ai_c_patrol,n:0x01600177]
+[t:cmd_ai_c_patrol,n:0x62300177]
 {
 	[placement]
 	{
@@ -194,7 +194,7 @@
 	  p position = 0.172798,0,-1.05228,0x793e5df6;
 	}
 }
-[t:cmd_ai_c_patrol,n:0x0160016c]
+[t:cmd_ai_c_patrol,n:0x6230016c]
 {
 	[placement]
 	{
@@ -202,14 +202,14 @@
 	  p position = 0.077446,0,-0.667877,0x4d961120;
 	}
 }
-[t:cmd_ai_c_patrol,n:0x01600176]
+[t:cmd_ai_c_patrol,n:0x62300176]
 {
 	[placement]
 	{
 	  p position = 0.0201187,0.4,1.86137,0xf8bc3317;
 	}
 }
-[t:light_enable,n:0x01601225]
+[t:light_enable,n:0x62301225]
 {
 	[light_enable]
 	{
@@ -224,7 +224,7 @@
 	  p position = -3.8839,-1.6,2.90051,0xdc2d03bd;
 	}
 }
-[t:light_enable,n:0x01601226]
+[t:light_enable,n:0x62301226]
 {
 	[light_enable]
 	{

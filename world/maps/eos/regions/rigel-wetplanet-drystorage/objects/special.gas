@@ -1,11 +1,11 @@
-[t:use_point,n:0x08700128]
+[t:use_point,n:0x62500128]
 {
 	[placement]
 	{
 	  p position = 5.6634,-2.5,5.74916,0x646b85e3;
 	}
 }
-[t:use_point,n:0x08700127]
+[t:use_point,n:0x62500127]
 {
 	[placement]
 	{
@@ -13,7 +13,7 @@
 	  p position = -0.124708,-1.5,-0.931998,0xfa9b7856;
 	}
 }
-[t:use_point,n:0x08700126]
+[t:use_point,n:0x62500126]
 {
 	[placement]
 	{
@@ -21,7 +21,7 @@
 	  p position = -0.788174,-1.5,-1.89282,0x44467bb5;
 	}
 }
-[t:use_point,n:0x08700125]
+[t:use_point,n:0x62500125]
 {
 	[placement]
 	{
@@ -29,7 +29,7 @@
 	  p position = -1.0722,-4.76837e-007,-1.84697,0x4c0baec2;
 	}
 }
-[t:trigger_generic,n:0x08700016]
+[t:trigger_generic,n:0x62500016]
 {
 	[common]
 	{
@@ -38,7 +38,7 @@
 		{
 			[*]
 			{
-				action* = fade_nodes(0x00000019,1,-1,-1,"in");
+				action* = fade_nodes(0x00000621,1,-1,-1,"in");
 			  b can_self_destruct = true;
 				condition* = party_member_within_bounding_box(4.000000,0.500000,1.000000,"on_every_enter");
 			  f delay = 0.000000;
@@ -59,7 +59,7 @@
 	  p position = 0.132782,0,-0.0835514,0x9d82aa7d;
 	}
 }
-[t:trigger_generic,n:0x08700028]
+[t:trigger_generic,n:0x62500028]
 {
 	[common]
 	{
@@ -87,7 +87,7 @@
 	  p position = -0.0611451,0.5,4.56996,0xcc2cdec5;
 	}
 }
-[t:trigger_generic,n:0x0870001e]
+[t:trigger_generic,n:0x6250001e]
 {
 	[common]
 	{
@@ -96,7 +96,7 @@
 		{
 			[*]
 			{
-				action* = fade_nodes(0x00000019,1,-1,-1,"out:black");
+				action* = fade_nodes(0x00000621,1,-1,-1,"out:black");
 			  b can_self_destruct = true;
 				condition* = party_member_within_bounding_box(4.000000,0.500000,1.000000,"on_every_enter");
 			  f delay = 0.000000;
@@ -117,7 +117,7 @@
 	  p position = -0.0184345,-2.9,-2.98295,0xaf7c626b;
 	}
 }
-[t:trigger_generic,n:0x08700029]
+[t:trigger_generic,n:0x62500029]
 {
 	[common]
 	{
@@ -145,7 +145,7 @@
 	  p position = -0.0990181,0.5,4.48761,0xc9afe952;
 	}
 }
-[t:trigger_generic,n:0x0870002a]
+[t:trigger_generic,n:0x6250002a]
 {
 	[common]
 	{
@@ -173,7 +173,7 @@
 	  p position = 1.67092,0.299998,-0.118397,0xd722c952;
 	}
 }
-[t:trigger_generic,n:0x08700110]
+[t:trigger_generic,n:0x62500110]
 {
 	[common]
 	{
@@ -182,10 +182,10 @@
 		{
 			[*]
 			{
-				action* = fade_nodes(0xAAB20200,4,-1,-1,"in"), doc("sinkhole plate in when falling");
+				action* = fade_nodes(0x00000624,4,-1,-1,"in"), doc("sinkhole plate in when falling");
 			  b can_self_destruct = true;
 				condition* = receive_world_message("we_req_activate",0,"on_every_message");
-				condition* = party_member_within_node(0x4F8CE910,-1,-1,-1,"wait_for_every_message"), doc("[*message checker (trigger is non-pure )*]");
+				condition* = party_member_within_node(0x00000625,-1,-1,-1,"wait_for_every_message"), doc("[*message checker (trigger is non-pure )*]");
 			  f delay = 0.000000;
 			  b flip_flop = false;
 			  b multi_player = true;
@@ -198,10 +198,10 @@
 			}
 			[*]
 			{
-				action* = fade_nodes(0xAAB20200,4,-1,-1,"in"), doc("sinkhole plate in when falling failsafe");
+				action* = fade_nodes(0x00000624,4,-1,-1,"in"), doc("sinkhole plate in when falling failsafe");
 			  b can_self_destruct = true;
 				condition* = receive_world_message("we_req_activate",0,"on_every_message");
-				condition* = party_member_within_node(0xAAB20200,-1,-1,-1,"wait_for_every_message");
+				condition* = party_member_within_node(0x00000624,-1,-1,-1,"wait_for_every_message");
 			  f delay = 0.000000;
 			  b flip_flop = false;
 			  b multi_player = true;
@@ -220,7 +220,7 @@
 	  p position = 2.19963,0.796816,4.73422,0xd722c952;
 	}
 }
-[t:event_manager,n:0x08700120]
+[t:event_manager,n:0x62500120]
 {
 	[common]
 	{
@@ -228,15 +228,15 @@
 		{
 			[*]
 			{
-				action* = send_world_message("we_req_activate",0x0870011E,0f,"default","",0);
-				action* = send_world_message("we_req_activate",0x08700111,0.2f,"default","",0);
-				action* = send_world_message("we_req_activate",0x0870011F,0.2f,"default","",0);
-				action* = send_world_message("we_req_activate",0x08700117,0.2f,"default","",0);
-				action* = send_world_message("we_req_activate",0x0870011D,0.2f,"default","",0);
-				action* = send_world_message("we_req_activate",0x08700112,0.2f,"default","",0);
-				action* = send_world_message("we_req_activate",0x08700119,0.2f,"default","",0);
-				action* = send_world_message("we_req_activate",0x08700118,0.2f,"default","",0);
-				action* = send_world_message("we_req_activate",0x087000EF,0f,"default","",0);
+				action* = send_world_message("we_req_activate",0x6250011E,0f,"default","",0);
+				action* = send_world_message("we_req_activate",0x62500111,0.2f,"default","",0);
+				action* = send_world_message("we_req_activate",0x6250011F,0.2f,"default","",0);
+				action* = send_world_message("we_req_activate",0x62500117,0.2f,"default","",0);
+				action* = send_world_message("we_req_activate",0x6250011D,0.2f,"default","",0);
+				action* = send_world_message("we_req_activate",0x62500112,0.2f,"default","",0);
+				action* = send_world_message("we_req_activate",0x62500119,0.2f,"default","",0);
+				action* = send_world_message("we_req_activate",0x62500118,0.2f,"default","",0);
+				action* = send_world_message("we_req_activate",0x625000EF,0f,"default","",0);
 			  b can_self_destruct = true;
 				condition* = receive_world_message("we_req_activate",0,"on_every_message");
 			  f delay = 0.000000;
@@ -256,7 +256,7 @@
 	  p position = 0.187034,0.799995,1.93356,0xd722c952;
 	}
 }
-[t:trigger_generic,n:0x08700018]
+[t:trigger_generic,n:0x62500018]
 {
 	[common]
 	{
@@ -285,7 +285,7 @@
 	  p position = 1.98653,0.2,0.726431,0xc0c5c501;
 	}
 }
-[t:use_point,n:0x0870012c]
+[t:use_point,n:0x6250012c]
 {
 	[placement]
 	{
@@ -293,7 +293,7 @@
 	  p position = -1.97446,-1.5,-0.82521,0x31a968a8;
 	}
 }
-[t:use_point,n:0x08700129]
+[t:use_point,n:0x62500129]
 {
 	[placement]
 	{
