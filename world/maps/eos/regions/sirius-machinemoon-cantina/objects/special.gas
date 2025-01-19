@@ -214,7 +214,7 @@
 			[*]
 			{
 				action* = send_world_message("we_req_activate",0x052000CB,0f,"default","every",0);
-				action* = send_world_message("we_req_activate",0x0E000030,0f,"default","every",0);
+				action* = send_world_message("we_req_activate",0x80100030,0f,"default","every",0);
 			  b can_self_destruct = true;
 				condition* = receive_world_message("we_req_activate",0,"on_every_message");
 				condition* = has_go_in_inventory("local",0x00000000,"starstone_sirius");

@@ -1,4 +1,4 @@
-[t:trigger_generic,n:0x0e00001b]
+[t:trigger_generic,n:0x8010001b]
 {
 	[common]
 	{
@@ -7,7 +7,7 @@
 		{
 			[*]
 			{
-				action* = send_world_message("we_req_activate",0x0E00001C,0f,"default","every",0);
+				action* = send_world_message("we_req_activate",0x8010001C,0f,"default","every",0);
 			  b can_self_destruct = true;
 				condition* = receive_world_message("we_req_activate",0,"on_every_message");
 				condition* = has_go_in_inventory("local",0x00000000,"starstone_aranna");
@@ -23,7 +23,7 @@
 			}
 			[*]
 			{
-				action* = send_world_message("we_req_activate",0x0E00001C,0f,"default","every",0);
+				action* = send_world_message("we_req_activate",0x8010001C,0f,"default","every",0);
 			  b can_self_destruct = true;
 				condition* = receive_world_message("we_req_activate",0,"on_every_message");
 				condition* = has_go_in_inventory("local",0x00000000,"starstone_alphacentauri");
@@ -39,7 +39,7 @@
 			}
 			[*]
 			{
-				action* = send_world_message("we_req_activate",0x0E00001C,0f,"default","every",0);
+				action* = send_world_message("we_req_activate",0x8010001C,0f,"default","every",0);
 			  b can_self_destruct = true;
 				condition* = receive_world_message("we_req_activate",0,"on_every_message");
 				condition* = has_go_in_inventory("local",0x00000000,"starstone_vega");
@@ -55,7 +55,7 @@
 			}
 			[*]
 			{
-				action* = send_world_message("we_req_activate",0x0E00001C,0f,"default","every",0);
+				action* = send_world_message("we_req_activate",0x8010001C,0f,"default","every",0);
 			  b can_self_destruct = true;
 				condition* = receive_world_message("we_req_activate",0,"on_every_message");
 				condition* = has_go_in_inventory("local",0x00000000,"starstone_betelgeuse");
@@ -71,7 +71,7 @@
 			}
 			[*]
 			{
-				action* = send_world_message("we_req_activate",0x0E00001C,0f,"default","every",0);
+				action* = send_world_message("we_req_activate",0x8010001C,0f,"default","every",0);
 			  b can_self_destruct = true;
 				condition* = receive_world_message("we_req_activate",0,"on_every_message");
 				condition* = has_go_in_inventory("local",0x00000000,"starstone_altair");
@@ -87,7 +87,7 @@
 			}
 			[*]
 			{
-				action* = send_world_message("we_req_activate",0x0E00001C,0f,"default","every",0);
+				action* = send_world_message("we_req_activate",0x8010001C,0f,"default","every",0);
 			  b can_self_destruct = true;
 				condition* = receive_world_message("we_req_activate",0,"on_every_message");
 				condition* = has_go_in_inventory("local",0x00000000,"starstone_rigel");
@@ -103,7 +103,7 @@
 			}
 			[*]
 			{
-				action* = send_world_message("we_req_activate",0x0E00001C,0f,"default","every",0);
+				action* = send_world_message("we_req_activate",0x8010001C,0f,"default","every",0);
 			  b can_self_destruct = true;
 				condition* = receive_world_message("we_req_activate",0,"on_every_message");
 				condition* = has_go_in_inventory("local",0x00000000,"starstone_aldebaran");
@@ -119,7 +119,7 @@
 			}
 			[*]
 			{
-				action* = send_world_message("we_req_activate",0x0E00001C,0f,"default","every",0);
+				action* = send_world_message("we_req_activate",0x8010001C,0f,"default","every",0);
 			  b can_self_destruct = true;
 				condition* = receive_world_message("we_req_activate",0,"on_every_message");
 				condition* = has_go_in_inventory("local",0x00000000,"starstone_sirius");
@@ -140,7 +140,7 @@
 	  p position = 21.4425,0.399999,-5.85837,0x8673e970;
 	}
 }
-[t:trigger_generic,n:0x0e00001c]
+[t:trigger_generic,n:0x8010001c]
 {
 	[common]
 	{
@@ -149,7 +149,7 @@
 		{
 			[*]
 			{
-				action* = send_world_message("we_req_activate",0x0E000004,0f,"default","every",0);
+				action* = send_world_message("we_req_activate",0x80100004,0f,"default","every",0);
 				action* = send_world_message("we_req_activate",0x07F00F40,0f,"default","every",0);
 			  b can_self_destruct = true;
 				condition* = receive_world_message("we_req_activate",0,"on_every_message");
@@ -170,21 +170,21 @@
 	  p position = 18.7706,0.300001,-5.83484,0x8673e970;
 	}
 }
-[t:use_point,n:0x0e000000]
+[t:use_point,n:0x80100000]
 {
 	[placement]
 	{
 	  p position = 1.37969,0.1,0.238325,0xb7b17ef8;
 	}
 }
-[t:use_point,n:0x0e000001]
+[t:use_point,n:0x80100001]
 {
 	[placement]
 	{
 	  p position = -1.48593,0.1,0.410723,0xb7b17ef8;
 	}
 }
-[t:trigger_generic,n:0x0e000087]
+[t:trigger_generic,n:0x80100087]
 {
 	[common]
 	{
@@ -218,7 +218,7 @@
 	  p position = -0.0937805,-0.3,0.397491,0x26986d71;
 	}
 }
-[t:trigger_generic,n:0x0e000086]
+[t:trigger_generic,n:0x80100086]
 {
 	[common]
 	{
@@ -252,7 +252,7 @@
 	  p position = -0.0125518,-0.0282657,-0.905781,0xc2053303;
 	}
 }
-[t:trigger_generic,n:0x0e00001e]
+[t:trigger_generic,n:0x8010001e]
 {
 	[common]
 	{
@@ -286,7 +286,7 @@
 	  p position = -0.0775375,-0.0702965,-0.765678,0x6a89ca76;
 	}
 }
-[t:trigger_generic,n:0x0e00004f]
+[t:trigger_generic,n:0x8010004f]
 {
 	[common]
 	{
@@ -315,7 +315,7 @@
 	  p position = -0.158526,-0.3,-3.99182,0x6b2023c4;
 	}
 }
-[t:trigger_generic,n:0x0e000088]
+[t:trigger_generic,n:0x80100088]
 {
 	[common]
 	{
@@ -349,7 +349,7 @@
 	  p position = 0.129731,-0.3,0.916468,0x6b2023c4;
 	}
 }
-[t:trigger_generic,n:0x0e000037]
+[t:trigger_generic,n:0x80100037]
 {
 	[common]
 	{
@@ -357,7 +357,7 @@
 		{
 			[*]
 			{
-				action* = send_world_message("we_req_activate",0x0E000030,0f,"default","every",0);
+				action* = send_world_message("we_req_activate",0x80100030,0f,"default","every",0);
 				action* = send_world_message("we_req_activate",0x052000CB,0f,"default","every",0);
 			  b can_self_destruct = true;
 				condition* = receive_world_message("we_req_activate",0,"on_every_message");
@@ -379,7 +379,7 @@
 	  p position = -1.42716,0.200001,-1.45143,0x8a78827d;
 	}
 }
-[t:trigger_generic,n:0x0e000036]
+[t:trigger_generic,n:0x80100036]
 {
 	[common]
 	{
@@ -387,7 +387,7 @@
 		{
 			[*]
 			{
-				action* = send_world_message("we_req_activate",0x0E00002F,0f,"default","every",0);
+				action* = send_world_message("we_req_activate",0x8010002F,0f,"default","every",0);
 				action* = send_world_message("we_req_activate",0x05900068,0f,"default","every",0);
 			  b can_self_destruct = true;
 				condition* = receive_world_message("we_req_activate",0,"on_every_message");
@@ -409,14 +409,14 @@
 	  p position = -1.41031,0.200001,-1.34822,0xe1820e0d;
 	}
 }
-[t:use_point,n:0x0e00003b]
+[t:use_point,n:0x8010003b]
 {
 	[placement]
 	{
 	  p position = -0.544635,0.2,-0.519871,0xac57897c;
 	}
 }
-[t:trigger_generic,n:0x0e000039]
+[t:trigger_generic,n:0x80100039]
 {
 	[common]
 	{
@@ -424,7 +424,7 @@
 		{
 			[*]
 			{
-				action* = send_world_message("we_req_activate",0x0E000042,0f,"default","every",0);
+				action* = send_world_message("we_req_activate",0x80100042,0f,"default","every",0);
 			  b can_self_destruct = true;
 				condition* = receive_world_message("we_req_activate",0,"on_every_message");
 				condition* = has_go_in_inventory("local",0x00000000,"starstone_sirius");
@@ -445,20 +445,20 @@
 	  p position = -1.39132,0.200001,-1.34902,0x0c07a402;
 	}
 }
-[t:check_quest,n:0x0e000042]
+[t:check_quest,n:0x80100042]
 {
 	[check_quest]
 	{
 	  b check_complete = true;
 		quest_name = "sirius_darkgen_banditmoon";
-	  x send_to_scid = 0x0E000045;
+	  x send_to_scid = 0x80100045;
 	}
 	[placement]
 	{
 	  p position = -1.39762,0.2,-0.649201,0x0c07a402;
 	}
 }
-[t:trigger_generic,n:0x0e000043]
+[t:trigger_generic,n:0x80100043]
 {
 	[common]
 	{
@@ -466,7 +466,7 @@
 		{
 			[*]
 			{
-				action* = send_world_message("we_req_activate",0x0E000035,0f,"default","every",0);
+				action* = send_world_message("we_req_activate",0x80100035,0f,"default","every",0);
 				action* = send_world_message("we_req_activate",0x00700057,0f,"default","every",0);
 			  b can_self_destruct = true;
 				condition* = receive_world_message("we_req_activate",0,"on_every_message");
@@ -487,40 +487,40 @@
 	  p position = -1.36513,0.200001,1.39944,0x0c07a402;
 	}
 }
-[t:check_quest,n:0x0e000045]
+[t:check_quest,n:0x80100045]
 {
 	[check_quest]
 	{
 	  b check_complete = true;
 		quest_name = "sirius_darkgen_machinemoon";
-	  x send_to_scid = 0x0E000047;
+	  x send_to_scid = 0x80100047;
 	}
 	[placement]
 	{
 	  p position = -1.39883,0.2,0.0333376,0x0c07a402;
 	}
 }
-[t:check_quest,n:0x0e000047]
+[t:check_quest,n:0x80100047]
 {
 	[check_quest]
 	{
 	  b check_complete = true;
 		quest_name = "sirius_darkgen_deathmoon";
-	  x send_to_scid = 0x0E000043;
+	  x send_to_scid = 0x80100043;
 	}
 	[placement]
 	{
 	  p position = -1.39766,0.2,0.655155,0x0c07a402;
 	}
 }
-[t:use_point,n:0x0e000041]
+[t:use_point,n:0x80100041]
 {
 	[placement]
 	{
 	  p position = -0.513336,0.2,-0.524112,0x771c1dc3;
 	}
 }
-[t:trigger_generic,n:0x0e000038]
+[t:trigger_generic,n:0x80100038]
 {
 	[common]
 	{
@@ -528,7 +528,7 @@
 		{
 			[*]
 			{
-				action* = send_world_message("we_req_activate",0x0E000031,0f,"default","every",0);
+				action* = send_world_message("we_req_activate",0x80100031,0f,"default","every",0);
 				action* = send_world_message("we_req_activate",0x00200954,0f,"default","every",0);
 			  b can_self_destruct = true;
 				condition* = receive_world_message("we_req_activate",0,"on_every_message");
@@ -550,14 +550,14 @@
 	  p position = -1.33403,0.199997,-1.34032,0x24a490c1;
 	}
 }
-[t:use_point,n:0x0e000040]
+[t:use_point,n:0x80100040]
 {
 	[placement]
 	{
 	  p position = -0.533329,0.2,-0.528557,0xa9b9e242;
 	}
 }
-[t:use_point,n:0x0e00003f]
+[t:use_point,n:0x8010003f]
 {
 	[placement]
 	{
