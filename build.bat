@@ -1,7 +1,7 @@
 :: name of map
 set map=eos
 :: name of map, case-sensitive
-set map_cs=EoS
+set map_cs=Empire of Stars
 :: namespace of resources
 set res=eos
 :: path of Bits dir
@@ -96,7 +96,7 @@ if "%mode%"=="release" (
     ren "!name!" "!name:-nn=!"
   )
   popd
-  "%tc%\RTC.exe" -source "%tmp%\Bits" -out "%ds%\DSLOA\%map_cs% non-nude.dsres" -copyright "%copyright%" -title "%title%" -author "%author%"
+  "%tc%\RTC.exe" -source "%tmp%\Bits" -out "%ds%\DSLOA\%map_cs% - non-nude.dsres" -copyright "%copyright%" -title "%title%" -author "%author%"
   if !errorlevel! neq 0 pause
 )
 endlocal

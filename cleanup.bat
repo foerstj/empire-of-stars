@@ -1,5 +1,5 @@
 :: name of map, case-sensitive
-set map_cs=EoS
+set map_cs=Empire of Stars
 :: path of DS installation
 set ds=%DungeonSiege%
 
