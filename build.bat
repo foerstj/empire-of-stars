@@ -41,12 +41,16 @@ if not "%mode%"=="light" (
 )
 if "%mode%"=="light" (
   robocopy "%bits%\world\maps\%map%" "%tmp%\Bits\world\maps\%map%" /E /xd regions
-  for %%r in (aranna-planet-island) do (
+  for %%r in (aldebaran-planet-town aldebaran-planet-palace interstellar-hub) do (
     robocopy "%bits%\world\maps\%map%\regions\%%r" "%tmp%\Bits\world\maps\%map%\regions\%%r" /E
   )
 )
 pushd %gaspy%
-venv\Scripts\python -m build.fix_start_positions_required_levels %map% --bits "%tmp%\Bits"
+set dev_only=
+if "%mode%"=="light" (
+  set dev_only=--dev-only-false
+)
+venv\Scripts\python -m build.fix_start_positions_required_levels %map% %dev_only% --bits "%tmp%\Bits"
 if %errorlevel% neq 0 pause
 setlocal EnableDelayedExpansion
 if "%mode%"=="release" (
