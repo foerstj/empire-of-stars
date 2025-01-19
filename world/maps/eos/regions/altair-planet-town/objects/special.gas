@@ -1522,8 +1522,6 @@
 			{
 				action* = fade_nodes(0xABA20100,1,-1,-1,"out:black"), group(1), doc("nt_r1");
 				action* = fade_nodes(0xABA20100,1,-1,-1,"in"), group(2), doc("nt_r1");
-				action* = fade_nodes(0xADA30100,1,-1,-1,"out:black"), group(1), doc("path2ac");
-				action* = fade_nodes(0xADA30100,1,-1,-1,"in"), group(2), doc("path2ac");
 			  b can_self_destruct = true;
 				condition* = party_member_entered_trigger_group("nt_r1_basement_fade","on_every_enter"), group(1);
 				condition* = party_member_left_trigger_group("nt_r1_basement_fade","on_every_leave"), group(2);
