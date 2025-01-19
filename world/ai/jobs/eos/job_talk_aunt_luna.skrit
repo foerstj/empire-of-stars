@@ -8,6 +8,9 @@ Goid		m_Target$;
 #include "k_job_c_talk_utils"
 
 
+property    string  oid$                        doc = "Object ID, lower-case hex, no leading zeroes, e.g. 0x17001af";
+
+
 startup state STARTUP$
 {
 }
@@ -65,26 +68,26 @@ state Talk$
 	{
 		m_Go$.GetConversation.RSSelectConversation( "aunt_luna" );
 
-		if ( GameAuditor.GetDb.GetBool( "party_accept_0x4c00080" ) ) {
+		if ( GameAuditor.GetDb.GetBool( MakeStringF( "party_accept_%s", oid$ ) ) ) {
 			m_Go$.GetConversation.RSSelectConversation( "aunt_luna_accept" );
-			GameAuditor.GetDb.SetBool( "party_accept_0x4c00080", false );
+			GameAuditor.GetDb.SetBool( MakeStringF( "party_accept_%s", oid$ ), false );
 			TryAnim$('talk');
-		} else if ( GameAuditor.GetDb.GetBool( "party_decline_0x4c00080" ) ) {
+		} else if ( GameAuditor.GetDb.GetBool( MakeStringF( "party_decline_%s", oid$ ) ) ) {
 			m_Go$.GetConversation.RSSelectConversation( "aunt_luna_reject" );
-			GameAuditor.GetDb.SetBool( "party_decline_0x4c00080", false );
-			GameAuditor.GetDb.SetBool( "party_allow_rejoin_0x4c00080", true );
+			GameAuditor.GetDb.SetBool( MakeStringF( "party_decline_%s", oid$ ), false );
+			GameAuditor.GetDb.SetBool( MakeStringF( "party_allow_rejoin_%s", oid$ ), true );
 			TryAnim$('talk');
-		} else if ( GameAuditor.GetDb.GetBool( "party_disband_0x4c00080" ) ) {
+		} else if ( GameAuditor.GetDb.GetBool( MakeStringF( "party_disband_%s", oid$ ) ) ) {
 			m_Go$.GetConversation.RSSelectConversation( "aunt_luna_disband" );
-			GameAuditor.GetDb.SetBool( "party_disband_0x4c00080", false );
-			GameAuditor.GetDb.SetBool( "party_disbanded_0x4c00080", true );
+			GameAuditor.GetDb.SetBool( MakeStringF( "party_disband_%s", oid$ ), false );
+			GameAuditor.GetDb.SetBool( MakeStringF( "party_disbanded_%s", oid$ ), true );
 			TryAnim$('talk');
-		} else if ( GameAuditor.GetDb.GetBool( "party_disbanded_0x4c00080" ) ) {
+		} else if ( GameAuditor.GetDb.GetBool( MakeStringF( "party_disbanded_%s", oid$ ) ) ) {
 			m_Go$.GetConversation.RSSelectConversation( "aunt_luna_disband_rejoin" );
 			TryAnim$('talk');
-		} else if ( GameAuditor.GetDb.GetBool( "party_allow_rejoin_0x4c00080" ) ) {
+		} else if ( GameAuditor.GetDb.GetBool( MakeStringF( "party_allow_rejoin_%s", oid$ ) ) ) {
 			m_Go$.GetConversation.RSSelectConversation( "aunt_luna_rejoin" );
-			GameAuditor.GetDb.SetBool( "party_allow_rejoin_0x4c00080", false );
+			GameAuditor.GetDb.SetBool( MakeStringF( "party_allow_rejoin_%s", oid$ ), false );
 			TryAnim$('talk');
 		}  else {
 			TryAnim$('ulo1');
