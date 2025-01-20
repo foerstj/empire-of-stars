@@ -565,7 +565,7 @@
 				action* = send_world_message("we_req_talk_begin",0x814001AD,0f,"0x4003","single",0), doc("sp gresh speech[*labelled condition (party_member_within_node)*]");
 			  b can_self_destruct = true;
 				condition* = receive_world_message("we_camera_command_done",0,"on_first_message"), doc("[*one-shot check (trigger is one-shot)*]");
-				condition* = party_member_within_node(0x5A6BE416,1,99,-1,"wait_for_every_message"), doc("send to trigger[*message checker (trigger is non-pure )*]");
+				condition* = party_member_within_node(0x00000814,1,99,-1,"wait_for_every_message"), doc("send to trigger[*message checker (trigger is non-pure )*]");
 			  f delay = 0.000000;
 			  b flip_flop = false;
 			  b multi_player = false;
