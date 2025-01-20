@@ -27,11 +27,11 @@
 	  p position = -14.3214,6.52533,-21.8201,0x5a3615de;
 	}
 }
-[t:trigger_generic,n:0x61102784]
+[t:trigger_generic,n:0x6110271b]
 {
 	[common]
 	{
-		dev_instance_text = "TIP";
+		dev_instance_text = "STARTPOS TIP";
 		[instance_triggers]
 		{
 			[*]
@@ -54,7 +54,7 @@
 	[placement]
 	{
 	  q orientation = 0,-0.707107,0,0.707107;
-	  p position = -35.3528,5.41766,-15.625,0x5a3615de;
+	  p position = -19.207,5.08758,-21.0483,0x5a3615de;
 	}
 }
 [t:trigger_generic,n:0x61106843]
@@ -150,6 +150,28 @@
 }
 [t:tutorial_tip,n:0x61102782]
 {
+	[common]
+	{
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_trigger_deactivate",0x6110271B,0f,"default","every",0);
+				action* = send_world_message("we_trigger_deactivate",0x61102784,0f,"default","every",0);
+			  b can_self_destruct = true;
+				condition* = receive_world_message("we_req_activate",0,"on_every_message");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = false;
+			  b start_active = true;
+			}
+		}
+	}
 	[placement]
 	{
 	  p position = 0.971605,-0.70064,22.5038,0x2857115c;
@@ -529,6 +551,36 @@
 	[placement]
 	{
 	  p position = 18.7718,0.299999,0.467626,0x346775ed;
+	}
+}
+[t:trigger_generic,n:0x61102784]
+{
+	[common]
+	{
+		dev_instance_text = "TELEPORT TIP";
+		[instance_triggers]
+		{
+			[*]
+			{
+				action* = send_world_message("we_req_activate",0x61102782,0f,"0x4002","party_member_within_bounding_box",0);
+			  b can_self_destruct = true;
+				condition* = party_member_within_bounding_box(10.000000,0.200000,10.000000,"on_first_enter");
+			  f delay = 0.000000;
+			  b flip_flop = false;
+			  b multi_player = true;
+			  b no_trig_bits = false;
+				occupants_group = ;
+			  f reset_duration = 0.000000;
+			  b single_player = true;
+			  b single_shot = true;
+			  b start_active = true;
+			}
+		}
+	}
+	[placement]
+	{
+	  q orientation = 0,0.92388,0,0.382683;
+	  p position = 17.7507,0.1,-0.424084,0x346775ed;
 	}
 }
 [t:trigger_generic,n:0x61101486]
