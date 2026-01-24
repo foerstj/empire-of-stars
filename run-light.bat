@@ -1,1 +1,1 @@
-.\run.bat light
+call .\run.bat light
