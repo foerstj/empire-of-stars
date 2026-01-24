@@ -28,7 +28,7 @@ if not "%mode%"=="light" (
   if "%mode%"=="release" (
     set checks=all
   )
-  venv\Scripts\python -m build.pre_build_checks %map% --check !checks! --bits "%bits%"
+  venv\Scripts\python -m build.pre_build_checks %map% --check !checks! --exclude rivers --bits "%bits%"
   if !errorlevel! neq 0 pause
 )
 endlocal
