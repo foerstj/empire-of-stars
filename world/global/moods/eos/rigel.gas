@@ -472,7 +472,7 @@
     // no rain, no wind
 	mood_name = eos_rigel_wet_town_indoor;
   f transition_time = 1.000000;
-  b interior = true;
+  b interior = false;
 
 	[frustum]
 	{
@@ -689,9 +689,9 @@
 }
 [mood_setting*]  // wetlands r1 1
 {
-  b interior = false;
 	mood_name = eos_rigel_wet_wetlands_r1_1;
   f transition_time = 5.000000;
+  b interior = false;
 
 	[frustum]
 	{
