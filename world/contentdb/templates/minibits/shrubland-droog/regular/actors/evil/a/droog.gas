@@ -20,10 +20,6 @@
     [inventory]
     {
 		selected_active_location = IL_ACTIVE_RANGED_WEAPON;
-        [equipment]
-        {
-            es_shield_hand = bw_un_droog_avg_eos_rld;
-        }
     }
 	[mind]
 	{
@@ -80,6 +76,13 @@
 	{
     	[pcontent]
 		{
+			// ADDED - equipment
+			[all*]
+			{
+				es_shield_hand = bw_un_droog_avg_eos_rld;
+			}
+
+			// loot
 			[oneof*]
 			{
 				[oneof*]
@@ -175,13 +178,6 @@
 	{
 		effect_name = melee_hit_2;
 	}
-    [inventory]
-    {
-        [equipment]
-        {
-            es_weapon_hand = sd_un_droog_1h_avg_eos_rld;
-        }
-    }
 	[mind]
 	{
 		jat_brain							 = world\ai\jobs\common\brain_hero.skrit
@@ -220,6 +216,13 @@
 	{
 		[pcontent]
 		{
+			// ADDED - equipment
+			[all*]
+			{
+				es_weapon_hand = sd_un_droog_1h_avg_eos_rld;
+			}
+
+			// loot
 			[oneof*]
 			{
 				[oneof*]

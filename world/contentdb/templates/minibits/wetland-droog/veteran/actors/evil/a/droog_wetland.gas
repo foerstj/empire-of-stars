@@ -19,10 +19,6 @@
 	[inventory]
 	{
 		selected_active_location = IL_ACTIVE_RANGED_WEAPON;
-    	[equipment]
-		{
-			es_shield_hand = bw_un_droog_avg_eos_rlw;
-        }
     }
 	[mind]
 	{
@@ -84,6 +80,13 @@
 	{
     	[pcontent]
 		{
+			// ADDED - equipment
+			[all*]
+			{
+				es_shield_hand = bw_un_droog_avg_eos_rlw;
+			}
+
+			// loot
 			[oneof*]
 			{
 				[oneof*]
@@ -151,13 +154,6 @@
 	{
 		effect_name = melee_hit_2;
 	}
-    [inventory]
-    {
-        [equipment]
-        {
-            es_weapon_hand = sd_un_droog_1h_avg_eos_rlw;
-        }
-    }
 
     // stats & loot from 2W_trog
 	[actor]
@@ -189,6 +185,13 @@
 	{
 		[pcontent]
 		{
+			// ADDED - equipment
+			[all*]
+			{
+				es_weapon_hand = sd_un_droog_1h_avg_eos_rlw;
+			}
+
+			// loot
 			[oneof*]
 			{
 				[oneof*]
