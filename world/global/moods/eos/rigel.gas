@@ -796,7 +796,7 @@
 [mood_setting*]  // wetlands r1 shack
 {
 	mood_name = eos_rigel_wet_wetlands_r1_shack;
-  f transition_time = 5.000000;
+  f transition_time = 1.000000;
   b interior = false;
 
 	[frustum]
@@ -896,7 +896,7 @@
 [mood_setting*]  // wetlands r2 shack
 {
 	mood_name = eos_rigel_wet_wetlands_r2_shack;
-  f transition_time = 5.000000;
+  f transition_time = 1.000000;
   b interior = false;
 
 	[frustum]
@@ -907,7 +907,7 @@
 
 	[fog]
 	{
-	  x fog_color = 0xFF70B0E0;
+	  x fog_color = 0xFF6096BE;  // 85% of 0xFF70B0E0 (mood manager will auto reduce brightness due to heavy rain)
 	  f fog_density = 1.000000;
 	  f fog_near_dist = 20.000000;
 	  f fog_far_dist = 40.000000;
