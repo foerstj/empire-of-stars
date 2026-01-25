@@ -1,0 +1,280 @@
+// The first Crystal Guardian you encounter.
+[t:template,n:dsx_shard_teal_base]  // = dsx_shard_teal
+{
+	category_name = "1W_evil_d";
+	doc = "dsx_shard_teal";
+	specializes = dsx_shard_base;
+	[aspect]
+	{
+		scale_base = 0.6;
+		[textures] { 0 = b_c_edm_shard-01-static; }
+		experience_value = 1826;
+		life 			= 652;
+		max_life 		= 652;
+		mana			= 30;
+		max_mana 		= 30;
+	}
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 125;
+		damage_min = 122;
+	}
+	[common]
+	{
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				single_shot = true;
+				no_trig_bits = true;
+				action* = call_sfx_script("unique_ray_purple");
+			}
+		}
+	}
+	[defend] { defense=350; }
+	[inventory]
+	{
+		selected_active_location = il_active_primary_spell;
+		[other] { il_active_primary_spell=dsx_spell_shard_zap_teal; }
+	}
+}
+[t:template,n:dsx_shard_teal_fixed]
+{
+	specializes = dsx_shard_teal_base;
+
+	[physics]
+	{
+		[break_particulate]
+		{
+			frag_glb_dsx_shard_teal_01 = 1;
+			frag_glb_dsx_shard_teal_02 = 1;
+			frag_glb_dsx_shard_teal_03 = 2;
+			frag_glb_dsx_shard_teal_04 = 3;
+			frag_glb_dsx_shard_teal_05 = 3;
+		}
+	}
+}
+
+// The second guardian you encounter
+[t:template,n:dsx_shard_blue_base]  // = dsx_shard_blue
+{
+	category_name = "1W_evil_d";
+	doc = "dsx_shard_blue";
+	specializes = dsx_shard_base;
+	[aspect]
+    {
+		scale_base = 0.7;
+		[textures] { 0 = b_c_edm_shard-04-static; }
+		experience_value = 1826;
+		life 			= 680;
+		max_life 		= 680;
+		mana 			= 40;
+		max_mana 		= 40;
+    }
+	[attack]
+    {
+		attack_range = 0.5;
+		damage_max = 115;
+		damage_min = 102;
+    }
+	[common]
+	{
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				single_shot = true;
+				no_trig_bits = true;
+				action* = call_sfx_script("unique_ray_yellow");
+			}
+		}
+	}
+	[defend] { defense=375; }
+	[inventory]
+    {
+		selected_active_location = il_active_primary_spell;
+		[other] { il_active_primary_spell=dsx_spell_shard_zap_blue; }
+    }
+	[physics]
+    {
+	[break_particulate]
+		{
+			frag_glb_shard_blue_01 = 1;
+			frag_glb_shard_blue_02 = 1;
+			frag_glb_shard_blue_03 = 2;
+			frag_glb_shard_blue_04 = 3;
+			frag_glb_shard_blue_05 = 3;
+		}
+    }
+}
+[t:template,n:dsx_shard_blue_fixed]
+{
+	specializes = dsx_shard_blue_base;
+
+	[physics]
+	{
+		[break_particulate]
+		{
+			frag_glb_dsx_shard_blue_01 = 1;
+			frag_glb_dsx_shard_blue_02 = 1;
+			frag_glb_dsx_shard_blue_03 = 2;
+			frag_glb_dsx_shard_blue_04 = 3;
+			frag_glb_dsx_shard_blue_05 = 3;
+		}
+	}
+}
+
+// The third guardian you encounter
+[t:template,n:dsx_shard_green_base]  // = dsx_shard_green
+{
+	category_name = "1W_evil_d";
+	doc = "dsx_shard_green";
+	specializes = dsx_shard_base;
+	[aspect]
+    {
+		scale_base = 0.8;
+		[textures] { 0 = b_c_edm_shard-03-static; }
+		experience_value = 1826;
+		life 			= 717;
+		max_life 		= 717;
+		mana 			= 100;
+		max_mana 		= 100;
+    }
+	[attack]
+    {
+		attack_range = 0.5;
+		damage_max = 135;
+		damage_min = 122;
+    }
+	[common]
+	{
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				single_shot = true;
+				no_trig_bits = true;
+				action* = call_sfx_script("unique_ray_yellow");
+			}
+		}
+	}
+	[defend] { defense=400; }
+	[inventory]
+    {
+		selected_active_location = il_active_primary_spell;
+		[other] { il_active_primary_spell=dsx_spell_shard_zap_green; }
+    }
+	[physics]
+    {
+		[break_particulate]
+		{
+			frag_glb_shard_green_01 = 1;
+			frag_glb_shard_green_02 = 1;
+			frag_glb_shard_green_03 = 2;
+			frag_glb_shard_green_04 = 3;
+			frag_glb_shard_green_05 = 3;
+		}
+    }
+}
+[t:template,n:dsx_shard_green_fixed]
+{
+	specializes = dsx_shard_green_base;
+
+	[physics]
+	{
+		[break_particulate]
+		{
+			frag_glb_dsx_shard_green_01 = 1;
+			frag_glb_dsx_shard_green_02 = 1;
+			frag_glb_dsx_shard_green_03 = 2;
+			frag_glb_dsx_shard_green_04 = 3;
+			frag_glb_dsx_shard_green_05 = 3;
+		}
+	}
+}
+
+
+// the final guardian you encounter
+[t:template,n:dsx_shard_purple_base]  // = dsx_shard_purple
+{
+	category_name = "1W_evil_d";
+	doc = "dsx_shard_purple";
+	specializes = dsx_shard_base;
+	[actor]
+	{
+		[skills]
+		{
+			strength 		= 20, 0;
+			intelligence 	= 12, 0;
+			dexterity 		= 12, 0;
+			nature_magic 	= 20, 0;
+			combat_magic 	= 20, 0;
+		}
+    }
+	[aspect]
+    {
+		scale_base = 1.0;
+		[textures] { 0 = b_c_edm_shard-02-static; }
+		experience_value = 1826;
+		life 			= 1000;
+		max_life 		= 1000;
+		mana 			= 300;
+		max_mana 		= 300;
+    }
+	[attack]
+	{
+		attack_range = 0.5;
+		damage_max 	= 150;
+		damage_min 	= 120;
+	}
+	[common]
+	{
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				single_shot = true;
+				no_trig_bits = true;
+				action* = call_sfx_script("unique_ray_red");
+			}
+		}
+	}
+	[defend] { defense=500; }
+	[inventory]
+    {
+		selected_active_location = il_active_primary_spell;
+		[other] { il_active_primary_spell=dsx_spell_shard_zap_purple; }
+    }
+	[physics]
+    {
+		[break_particulate]
+		{
+		frag_glb_shard_purple_01 = 1;
+		frag_glb_shard_purple_02 = 1;
+		frag_glb_shard_purple_03 = 2;
+		frag_glb_shard_purple_04 = 3;
+		frag_glb_shard_purple_05 = 3;
+		}
+	}
+}
+[t:template,n:dsx_shard_purple_fixed]
+{
+	specializes = dsx_shard_purple_base;
+
+	[physics]
+	{
+		[break_particulate]
+		{
+			frag_glb_dsx_shard_purple_01 = 1;
+			frag_glb_dsx_shard_purple_02 = 1;
+			frag_glb_dsx_shard_purple_03 = 2;
+			frag_glb_dsx_shard_purple_04 = 3;
+			frag_glb_dsx_shard_purple_05 = 3;
+		}
+	}
+}
