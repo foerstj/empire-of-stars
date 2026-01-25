@@ -756,6 +756,8 @@
 			{
 				action* = fade_nodes(0x00000623,1,5,-1,"out:black"), group(1);
 				action* = fade_nodes(0x00000623,1,5,-1,"in"), group(2);
+				action* = mood_change("eos_rigel_wet_wetlands_r1_shack"), group(1);
+				action* = mood_change("eos_rigel_wet_wetlands_r1_2"), group(2);
 			  b can_self_destruct = true;
 				condition* = party_member_entered_trigger_group("ds_r1_house_5","on_every_enter"), group(1);
 				condition* = party_member_left_trigger_group("ds_r1_house_5","on_every_leave"), group(2);
@@ -2607,6 +2609,8 @@
 			{
 				action* = fade_nodes(0x00000623,1,1,-1,"out:black"), group(1);
 				action* = fade_nodes(0x00000623,1,1,-1,"in"), group(2);
+				action* = mood_change("eos_rigel_wet_wetlands_r1_shack"), group(1);
+				action* = mood_change("eos_rigel_wet_wetlands_r1_1"), group(2);
 			  b can_self_destruct = true;
 				condition* = party_member_entered_trigger_group("ds_r1_house_1","on_every_enter"), group(1);
 				condition* = party_member_left_trigger_group("ds_r1_house_1","on_every_leave"), group(2);
@@ -3058,6 +3062,8 @@
 			{
 				action* = fade_nodes(0x00000623,1,2,-1,"out:black"), group(1);
 				action* = fade_nodes(0x00000623,1,2,-1,"in"), group(2);
+				action* = mood_change("eos_rigel_wet_wetlands_r1_shack"), group(1);
+				action* = mood_change("eos_rigel_wet_wetlands_r1_1"), group(2);
 			  b can_self_destruct = true;
 				condition* = party_member_entered_trigger_group("ds_r1_house_2","on_every_enter"), group(1);
 				condition* = party_member_left_trigger_group("ds_r1_house_2","on_every_leave"), group(2);
@@ -3381,6 +3387,8 @@
 			{
 				action* = fade_nodes(0x00000623,1,3,-1,"out:black"), group(1);
 				action* = fade_nodes(0x00000623,1,3,-1,"in"), group(2);
+				action* = mood_change("eos_rigel_wet_wetlands_r1_shack"), group(1);
+				action* = mood_change("eos_rigel_wet_wetlands_r1_1"), group(2);
 			  b can_self_destruct = true;
 				condition* = party_member_entered_trigger_group("ds_r1_house_3","on_every_enter"), group(1);
 				condition* = party_member_left_trigger_group("ds_r1_house_3","on_every_leave"), group(2);
