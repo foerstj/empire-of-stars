@@ -41,7 +41,7 @@ if not "%mode%"=="light" (
 )
 if "%mode%"=="light" (
   robocopy "%bits%\world\maps\%map%" "%tmp%\Bits\world\maps\%map%" /E /xd regions
-  for %%r in (aldebaran-planet-town aldebaran-planet-palace interstellar-hub) do (
+  for %%r in (aranna-planet-island) do (
     robocopy "%bits%\world\maps\%map%\regions\%%r" "%tmp%\Bits\world\maps\%map%\regions\%%r" /E
   )
 )
