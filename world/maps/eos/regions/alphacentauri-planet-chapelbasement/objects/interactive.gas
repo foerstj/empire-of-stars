@@ -55,7 +55,7 @@
 		{
 			[*]
 			{
-				action* = fade_nodes_global(0xACA70000,4,1,-1,"out:black");
+				action* = fade_nodes_global(0x00000213,4,1,-1,"out:black");
 			  b can_self_destruct = true;
 				condition* = receive_world_message("we_killed",0,"on_every_message");
 			  f delay = 0.000000;
