@@ -4,6 +4,7 @@
 	{
 		choice = more;
 	  i order = 0;
+		sample = s_v_xp_rigel_dryplanet_shrubs_oasis_amenamen_1;
 		screen_text = "Welcome to Rigel, human! It's been many years since our world has seen beings like you - some of us already believed the ancient hieroglyphs of the Empire of Stars to be a myth! Well met.";
 	  f scroll_rate = 10.000000;
 	}
@@ -11,6 +12,7 @@
 	{
 		choice = more;
 	  i order = 1;
+		sample = s_v_xp_rigel_dryplanet_shrubs_oasis_amenamen_2;
 		screen_text = "Rigel is the home star of us Droog. We have two planets: this is Geb, the other is Ixchel. Ixchel was settled millennia ago, long before the Empire of Stars, and due to the different climate there the Droog evolved a bit differently. Mudheads we call them, lovingly. While Geb is blessed with eternal sunshine, and bright stars at night, Ixchel is always shrouded in clouds that rain almost constantly. A rather unpleasant planet, if you ask me.";
 	  f scroll_rate = 10.000000;
 	}
@@ -18,6 +20,7 @@
 	{
 		choice = more;
 	  i order = 2;
+		sample = s_v_xp_rigel_dryplanet_shrubs_oasis_amenamen_3;
 		screen_text = "According to our hieroglyph records, the Droog were one of the founding races of the Empire of Stars, but we always stayed a little apart and kept a certain autonomy. Maybe the other races got along a bit better because they were all humans in various shapes and sizes - from dwarves to giants.
 When the Empire crumbled we were also the first ones to withdraw from the whole thing and let the humans fight their internecine wars among themselves.";
 	  f scroll_rate = 10.000000;
@@ -26,6 +29,7 @@ When the Empire crumbled we were also the first ones to withdraw from the whole 
 	{
 		choice = more;
 	  i order = 3;
+		sample = s_v_xp_rigel_dryplanet_shrubs_oasis_amenamen_4;
 		screen_text = "What are you saying, there are still Droog living in your world, Aranna? Amazing! Do bring them here!
 One of our ancient sagas tell about a Droog colony in an Arannan province. To be honest it seems like it was a sort of prison - wrongdoers were expelled from Geb for a while, and of course they didn't want to serve their time on Ixchel. When we broke off from the Empire, it seems they were simply left to their own fate. The saga spends a hundred verses singing about how reckless that was and how much guilt the ancient rulers have laden upon all of us...";
 	  f scroll_rate = 10.000000;
@@ -34,6 +38,7 @@ One of our ancient sagas tell about a Droog colony in an Arannan province. To be
 	{
 		activate_quest* = rigel_dry_pyramid,0;
 		quest_dialog = true;
+		sample = s_v_xp_rigel_dryplanet_shrubs_oasis_amenamen_5;
 		screen_text = "So you are looking for a sort of key for the ancient interstellar teleporter? We have none here. The smaller pad connects us to Ixchel, and it doesn't require any Starstone - when the system was built, the Droog insisted on this. We don't use it often - sometimes young Mudheads come looking around, be amazed by the stars at night, get a sunburn the next day, and return home, haha.
 If you want to search for this ancient Starstone artifact, I can recommend you where to look: in the Pyramid. It's far out in the shrubs, however, and the shrubs are endless and wayless. The easiest way to find the Pyramid would be by finding the Golden Lion first. It's straight to the south from here - you can't miss it - go south, and then follow the eyes of the black cats. The eyes of the Lion will then point you directly to the Pyramid to the east.
 Good luck! And beware of the Sand Imps, and especially of the savage Droog living out there! They will not like you strange creatures invading their territory. They'll most probably attack you. Buy some good weapons in our stores before you go.";
@@ -45,6 +50,7 @@ Good luck! And beware of the Sand Imps, and especially of the savage Droog livin
 	[text*]
 	{
 		choice = shop;
+		sample = s_v_xp_rigel_dryplanet_shrubs_oasis_shop_ranged_1;
 		screen_text = "Welcome, stranger. Here in my shop I sell the best bows you can find anywhere in the endless shrubland.";
 	  f scroll_rate = 10.000000;
 	}
@@ -54,6 +60,7 @@ Good luck! And beware of the Sand Imps, and especially of the savage Droog livin
 	[text*]
 	{
 		choice = shop;
+		sample = s_v_xp_rigel_dryplanet_shrubs_oasis_shop_shields_1;
 		screen_text = "Good day, human. Would you like to purchase a shield from me? Or maybe a magic ring or amulet to protect you from the wild beasts and imps? Have a look at my shop!";
 	  f scroll_rate = 10.000000;
 	}
@@ -62,16 +69,19 @@ Good luck! And beware of the Sand Imps, and especially of the savage Droog livin
 {
 	[text*]
 	{
+		sample = s_v_xp_rigel_dryplanet_shrubs_oasis_villager_1;
 		screen_text = "Welcome to Rigel! Have you noticed Rigel is a blue star? The most beautiful color a sun can have.";
 	  f scroll_rate = 10.000000;
 	}
 	[text*]
 	{
+		sample = s_v_xp_rigel_dryplanet_shrubs_oasis_villager_2;
 		screen_text = "Welcome to planet Geb of Rigel! Our planet is blessed with eternal sunshine. Unlike Ixchel, haha, always cloudy there.";
 	  f scroll_rate = 10.000000;
 	}
 	[text*]
 	{
+		sample = s_v_xp_rigel_dryplanet_shrubs_oasis_villager_3;
 		screen_text = "Welcome to Oasis True Alpha! Rigel is the true Alpha Orionis, in case you didn't know.";
 	  f scroll_rate = 10.000000;
 	}
@@ -81,6 +91,7 @@ Good luck! And beware of the Sand Imps, and especially of the savage Droog livin
 	[text*]
 	{
 		choice = shop;
+		sample = s_v_xp_rigel_dryplanet_shrubs_oasis_shop_melee_1;
 		screen_text = "Greetings, dear alien, may the Goddess of the Sun always shine Her blessings upon you.
 Would you be interested in a good sword or axe? Please have a look at my supplies.";
 	  f scroll_rate = 10.000000;
