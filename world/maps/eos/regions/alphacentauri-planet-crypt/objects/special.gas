@@ -2102,14 +2102,14 @@
 	}
 	[placement]
 	{
-	  p position = -0.004173,-1.49999,0.545109,0xab7e535a;
+	  p position = -0.00417055,-1.49999,0.545109,0xab7e535a;
 	}
 }
 [t:use_point,n:0x21600320]
 {
 	[placement]
 	{
-	  p position = 1.26947,-1.5,-0.366602,0xab7e535a;
+	  p position = 1.26947,-1.5,-0.366603,0xab7e535a;
 	}
 }
 [t:use_point,n:0x21600321]
@@ -2117,7 +2117,7 @@
 	[placement]
 	{
 	  q orientation = 0,1,0,-2.68555e-006;
-	  p position = -1.20855,-1.5,-0.395892,0xab7e535a;
+	  p position = -1.20855,-1.5,-0.395893,0xab7e535a;
 	}
 }
 [t:use_point,n:0x2160038a]
@@ -2347,7 +2347,7 @@
 	[placement]
 	{
 	  q orientation = 0,-0.707107,0,0.707107;
-	  p position = -0.001592,-1.49999,1.03732,0x9e0927bc;
+	  p position = -0.00158935,-1.49999,1.03732,0x9e0927bc;
 	}
 }
 [t:use_point,n:0x2160038e]
@@ -2376,50 +2376,6 @@
 	[placement]
 	{
 	  p position = -1.41307,-2.5,-4.67284,0x950e2151;
-	}
-}
-[t:trigger_generic,n:0x216000a2]
-{
-	[common]
-	{
-		dev_instance_text = "FADE";
-		[instance_triggers]
-		{
-			[*]
-			{
-				action* = fade_nodes(0xAAA10200,1,-1,-1,"out:black");
-			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(4.000000,4.000000,4.000000,"on_every_enter");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = false;
-			  b start_active = true;
-			}
-			[*]
-			{
-				action* = fade_nodes_global(0xAAA10200,2,-1,-1,"out:black");
-			  b can_self_destruct = true;
-				condition* = party_member_within_bounding_box(4.000000,4.000000,4.000000,"on_first_enter"), doc("[*one-shot check (trigger is one-shot)*]");
-			  f delay = 0.000000;
-			  b flip_flop = false;
-			  b multi_player = true;
-			  b no_trig_bits = false;
-				occupants_group = ;
-			  f reset_duration = 0.000000;
-			  b single_player = true;
-			  b single_shot = true;
-			  b start_active = true;
-			}
-		}
-	}
-	[placement]
-	{
-	  p position = 0.33946,-2.5,-1.86923,0x1b839f6e;
 	}
 }
 [t:trigger_fade_node_offonly_box,n:0x21600199]
