@@ -464,7 +464,7 @@
 			set $height2  4,0,-8;
 
 			sfx create orbiter #TARGET
-				"offset(0,0,0)radius(0)invisible()dur(8)";
+				"offset(0,-5,0)radius(0)invisible()dur(8)";
 			set $orb #PEEK;
 			sfx start #POP;
 
@@ -504,7 +504,7 @@
 			sfx start #POP;
 
 			sfx create fire #SOURCE 
-				"min_displace(0)max_displace(0)dur(3)offset(0,-2,0)
+				"min_displace(0)max_displace(0)dur(3)offset(0,-6.5,0)
 				texture(b_sfx_sparkle01)count(120)color0(.25,.5,1)color1(0,.3,.3)
 				velocity(0,-40,0)accel(0,-40,0)scale(1)max_radius(8)texture(b_sfx_fireball-01)
 				alphafade(1)ts(2)";
