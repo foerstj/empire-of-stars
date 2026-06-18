@@ -318,6 +318,7 @@
 
 			camerashake camera_stomp s<frequency=14&magnitude_x=0&magnitude_y=.4&magnitude_z=0&falloff=5&duration=2&epicenter=#TARGET_GOID>;
 
+
 			sound play s_e_spell_acid_cloud_cast at #TARGET_POSITION dist 5 35;
 
 			sfx create explosion #TARGET 
@@ -342,15 +343,16 @@
 
 			pause .1;
 
-			sound play s_e_spell_acid_cloud_cast at #TARGET_POSITION dist 5 35;
-
 			sfx create cylinder #TARGET
 				"offset(0,-6.5,0)must_update()tin(.1)tout(.4)texture(b_sfx_cyl_03)
 				alpha(1)hp0($height)hp1($height)spin(16)rp0($radius1)
 				rp1($radius2)dur(.5)color0(.7,.8,1)segments(24)";
 			sfx start #POP;
 
+
 			pause .1;
+
+			sound play s_e_spell_acid_cloud_cast at #TARGET_POSITION dist 5 35;
 
 			sfx create explosion #TARGET 
 				"offset(0,-4,0)must_update()texture(b_sfx_sparkle01)
@@ -366,8 +368,6 @@
 
 			pause .1;
 
-			sound play s_e_spell_acid_cloud_cast at #TARGET_POSITION dist 5 35;
-
 			sfx create cylinder #TARGET
 				"offset(0,-6.5,0)must_update()tin(.1)tout(.4)texture(b_sfx_cyl_03)
 				alpha(1)hp0($height)hp1($height)spin(16)rp0($radius1)
@@ -381,6 +381,7 @@
 				alpha(1)hp0($height)hp1($height)spin(16)rp0($radius1)
 				rp1($radius2)dur(.5)color0(.7,.8,1)segments(24)";
 			sfx start #POP;
+
 
 			pause .1;
 
@@ -408,15 +409,16 @@
 
 			pause .1;
 
-			sound play s_e_spell_acid_cloud_cast at #TARGET_POSITION dist 5 35;
-
 			sfx create cylinder #TARGET
 				"offset(0,-6.5,0)must_update()tin(.1)tout(.4)texture(b_sfx_cyl_03)
 				alpha(1)hp0($height)hp1($height)spin(16)rp0($radius1)
 				rp1($radius2)dur(.5)color0(.7,.8,1)segments(24)";
 			sfx start #POP;
 
+
 			pause .1;
+
+			sound play s_e_spell_acid_cloud_cast at #TARGET_POSITION dist 5 35;
 
 			sfx create explosion #TARGET 
 				"offset(0,-4,0)must_update()texture(b_sfx_sparkle01)
