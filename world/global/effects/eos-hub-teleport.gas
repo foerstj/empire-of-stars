@@ -330,7 +330,7 @@
 			sfx create cylinder #TARGET
 				"offset(0,-6.5,0)must_update()tin(.1)tout(.4)texture(b_sfx_cyl_03)
 				alpha(1)hp0($height)hp1($height)spin(16)rp0($radius1)
-				rp1($radius2)dur(.5)color0(.4,.5,1)segments(24)";
+				rp1($radius2)dur(.5)color0(.0,.5,1)segments(24)";
 			sfx start #POP;
 
 			pause .1;
@@ -338,15 +338,7 @@
 			sfx create cylinder #TARGET
 				"offset(0,-6.5,0)must_update()tin(.1)tout(.4)texture(b_sfx_cyl_03)
 				alpha(1)hp0($height)hp1($height)spin(16)rp0($radius1)
-				rp1($radius2)dur(.5)color0(.5,.6,1)segments(24)";
-			sfx start #POP;
-
-			pause .1;
-
-			sfx create cylinder #TARGET
-				"offset(0,-6.5,0)must_update()tin(.1)tout(.4)texture(b_sfx_cyl_03)
-				alpha(1)hp0($height)hp1($height)spin(16)rp0($radius1)
-				rp1($radius2)dur(.5)color0(.7,.8,1)segments(24)";
+				rp1($radius2)dur(.5)color0(.1,.55,1)segments(24)";
 			sfx start #POP;
 
 
@@ -363,7 +355,7 @@
 			sfx create cylinder #TARGET
 				"offset(0,-6.5,0)must_update()tin(.1)tout(.4)texture(b_sfx_cyl_03)
 				alpha(1)hp0($height)hp1($height)spin(16)rp0($radius1)
-				rp1($radius2)dur(.5)color0(.4,.5,1)segments(24)";
+				rp1($radius2)dur(.5)color0(.2,.6,1)segments(24)";
 			sfx start #POP;
 
 			pause .1;
@@ -371,15 +363,7 @@
 			sfx create cylinder #TARGET
 				"offset(0,-6.5,0)must_update()tin(.1)tout(.4)texture(b_sfx_cyl_03)
 				alpha(1)hp0($height)hp1($height)spin(16)rp0($radius1)
-				rp1($radius2)dur(.5)color0(.5,.6,1)segments(24)";
-			sfx start #POP;
-
-			pause .1;
-
-			sfx create cylinder #TARGET
-				"offset(0,-6.5,0)must_update()tin(.1)tout(.4)texture(b_sfx_cyl_03)
-				alpha(1)hp0($height)hp1($height)spin(16)rp0($radius1)
-				rp1($radius2)dur(.5)color0(.7,.8,1)segments(24)";
+				rp1($radius2)dur(.5)color0(.3,.65,1)segments(24)";
 			sfx start #POP;
 
 
@@ -396,7 +380,7 @@
 			sfx create cylinder #TARGET
 				"offset(0,-6.5,0)must_update()tin(.1)tout(.4)texture(b_sfx_cyl_03)
 				alpha(1)hp0($height)hp1($height)spin(16)rp0($radius1)
-				rp1($radius2)dur(.5)color0(.4,.5,1)segments(24)";
+				rp1($radius2)dur(.5)color0(.4,.7,1)segments(24)";
 			sfx start #POP;
 
 			pause .1;
@@ -404,15 +388,7 @@
 			sfx create cylinder #TARGET
 				"offset(0,-6.5,0)must_update()tin(.1)tout(.4)texture(b_sfx_cyl_03)
 				alpha(1)hp0($height)hp1($height)spin(16)rp0($radius1)
-				rp1($radius2)dur(.5)color0(.5,.6,1)segments(24)";
-			sfx start #POP;
-
-			pause .1;
-
-			sfx create cylinder #TARGET
-				"offset(0,-6.5,0)must_update()tin(.1)tout(.4)texture(b_sfx_cyl_03)
-				alpha(1)hp0($height)hp1($height)spin(16)rp0($radius1)
-				rp1($radius2)dur(.5)color0(.7,.8,1)segments(24)";
+				rp1($radius2)dur(.5)color0(.5,.75,1)segments(24)";
 			sfx start #POP;
 
 
@@ -429,7 +405,7 @@
 			sfx create cylinder #TARGET
 				"offset(0,-6.5,0)must_update()tin(.1)tout(.4)texture(b_sfx_cyl_03)
 				alpha(1)hp0($height)hp1($height)spin(16)rp0($radius1)
-				rp1($radius2)dur(.5)color0(.4,.5,1)segments(24)";
+				rp1($radius2)dur(.5)color0(.6,.8,1)segments(24)";
 			sfx start #POP;
 
 			pause .1;
@@ -437,7 +413,24 @@
 			sfx create cylinder #TARGET
 				"offset(0,-6.5,0)must_update()tin(.1)tout(.4)texture(b_sfx_cyl_03)
 				alpha(1)hp0($height)hp1($height)spin(16)rp0($radius1)
-				rp1($radius2)dur(.5)color0(.5,.6,1)segments(24)";
+				rp1($radius2)dur(.5)color0(.7,.85,1)segments(24)";
+			sfx start #POP;
+
+
+			pause .1;
+
+			sound play s_e_spell_acid_cloud_cast at #TARGET_POSITION dist 5 35;
+
+			sfx create explosion #TARGET 
+				"offset(0,-4,0)must_update()texture(b_sfx_sparkle01)
+				omni_dir()vmin(10)vmax(12)ts(.5)count(50)dur(5)scale(2)
+				color0(.6,.6,1)color1(.4,.4,0)rvel(0,2,0)ivel(0,0,0)radius(4)";
+			sfx start #POP
+
+			sfx create cylinder #TARGET
+				"offset(0,-6.5,0)must_update()tin(.1)tout(.4)texture(b_sfx_cyl_03)
+				alpha(1)hp0($height)hp1($height)spin(16)rp0($radius1)
+				rp1($radius2)dur(.5)color0(.8,.9,1)segments(24)";
 			sfx start #POP;
 
 			pause .1;
@@ -445,8 +438,9 @@
 			sfx create cylinder #TARGET
 				"offset(0,-6.5,0)must_update()tin(.1)tout(.4)texture(b_sfx_cyl_03)
 				alpha(1)hp0($height)hp1($height)spin(16)rp0($radius1)
-				rp1($radius2)dur(.5)color0(.7,.8,1)segments(24)";
+				rp1($radius2)dur(.5)color0(.9,.95,1)segments(24)";
 			sfx start #POP;
+
 		]];
 }
 [effect_script*] // displacer plate up
@@ -469,13 +463,6 @@
 			sfx start #POP;
 
 			sfx create spe #TARGET
-				"index0(0,0,1.57)speed0(0,2.5,0)speed1(0,2.5,0)radius(2.5)
-				color0(.3,.6,1)offset(0,0,0)dur(2)texture(b_sfx_fireball-01)";
-			sfx rat #PEEK;
-			sfx target #PEEK $orb;
-			sfx start #POP;
-
-			sfx create spe #TARGET
 				"index0(0,0,1.57)speed0(0,5,0)speed1(0,5,0)radius(2.5)
 				color0(.3,.6,1)offset(0,0,0)dur(2)texture(b_sfx_fireball-01)";
 			sfx rat #PEEK;
@@ -483,7 +470,28 @@
 			sfx start #POP;
 
 			sfx create spe #TARGET
-				"index0(0,0,1.57)speed0(0,0,0)speed1(0,0,0)radius(2.5)
+				"index0(0,0,1.57)speed0(0,3,0)speed1(0,3,0)radius(2.5)
+				color0(.3,.6,1)offset(0,0,0)dur(2)texture(b_sfx_fireball-01)";
+			sfx rat #PEEK;
+			sfx target #PEEK $orb;
+			sfx start #POP;
+
+			sfx create spe #TARGET
+				"index0(0,0,1.57)speed0(0,1,0)speed1(0,1,0)radius(2.5)
+				color0(.3,.6,1)offset(0,0,0)dur(2)texture(b_sfx_fireball-01)";
+			sfx rat #PEEK;
+			sfx target #PEEK $orb;
+			sfx start #POP;
+
+			sfx create spe #TARGET
+				"index0(0,0,1.57)speed0(0,-1,0)speed1(0,-1,0)radius(2.5)
+				color0(.3,.6,1)offset(0,0,0)dur(2)texture(b_sfx_fireball-01)";
+			sfx rat #PEEK;
+			sfx target #PEEK $orb;
+			sfx start #POP;
+
+			sfx create spe #TARGET
+				"index0(0,0,1.57)speed0(0,-3,0)speed1(0,-3,0)radius(2.5)
 				color0(.3,.6,1)offset(0,0,0)dur(2)texture(b_sfx_fireball-01)";
 			sfx rat #PEEK;
 			sfx target #PEEK $orb;
@@ -491,13 +499,6 @@
 
 			sfx create spe #TARGET
 				"index0(0,0,1.57)speed0(0,-5,0)speed1(0,-5,0)radius(2.5)
-				color0(.3,.6,1)offset(0,0,0)dur(2)texture(b_sfx_fireball-01)";
-			sfx rat #PEEK;
-			sfx target #PEEK $orb;
-			sfx start #POP;
-
-			sfx create spe #TARGET
-				"index0(0,0,1.57)speed0(0,-2.5,0)speed1(0,-2.5,0)radius(2.5)
 				color0(.3,.6,1)offset(0,0,0)dur(2)texture(b_sfx_fireball-01)";
 			sfx rat #PEEK;
 			sfx target #PEEK $orb;
