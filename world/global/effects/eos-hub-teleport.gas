@@ -268,7 +268,7 @@
 	name	= eos_hub_plate_up;
 
 	script =[[
-			
+
 			sound play s_e_spell_animate_dead_cast at #TARGET_POSITION dist 5 35;
 
 			set $radius1 5,0,-3;
@@ -279,7 +279,7 @@
 
 
 			sfx create flurry #TARGET
-				"tin(0)tout(0)dur(3)offset(0,-1,0)texture(b_sfx_sparkle01)
+				"tin(0)tout(0)dur(3)offset(0,-3.5,0)texture(b_sfx_sparkle01)
 				color0(.5,.75,1)scale(2)radius(3)grow_params(.6,.7,.8)";
 			sfx start #POP;
 
@@ -293,7 +293,7 @@
 			pause 0.5;
 
 			sfx create flurry #TARGET
-				"tin(0)tout(.2)dur(1)offset(0,-1,0)texture(b_sfx_sparkle01)
+				"tin(0)tout(.2)dur(1)offset(0,-3.5,0)texture(b_sfx_sparkle01)
 				color0(.5,.75,1)scale(2)radius(3)grow_params(.8,0,1)";
 			sfx start #POP;
 
